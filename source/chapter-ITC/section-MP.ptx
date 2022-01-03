@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-MP">
+    <title>Motivational Problems</title>
+
+    <subsection>
+        <title>Motivational Problem: Area of a Circle</title>
+    </subsection>
+    <p>
+        Recall that the area <m>A</m> of a circle of radius <m>r</m> is given by,
+    </p>
+    <me>
+        A = \pi r^2
+    </me>
+    <p>
+        This formula must be proven; it is not true by definition. Euclid, ancient Greek mathematician, proved that for any circle, the ratio of its circumference divided by its diameter was the same constant, and today this constant is called <m>\pi</m>. The ancient Greek mathematician <term>Archimedes</term> (287-212 BC) was the first to develop the formula for the area of a circle, in his treatise <q>Measurement of a Circle</q>. The idea is to approximate a region's area by inscribed polygons. These isolated computations in ancient Greece use the core concepts of calculus, but were done millennia before calculus, limits, and integration were developed.
+    </p>
+
+    <example>
+        Area of a circle using slices of pizza, rectangle with length <m>\pi r</m> and height <m>r</m>. The more slices, the more accurate the approximation, and in the limit, the area is <m>\pi r^2</m>. Archimedes used an argument similar to this.
+    </example>
+
+    <p>
+        We can intuitively derive this formula. Consider a circle of radius <m>r</m>, and consider a regular polygon with <m>n</m> sides (<m>n \geq 3</m>) inscribed inside this circle. For example, for <m>n = 3</m>, the polygon is a equilateral triangle. For <m>n = 4</m> is a square. For <m>n = 5</m>, it is a pentagon. In general, the area <m>A_n</m> of the polygon is an approximation of the area of the circle. In particular, since the line segments are shorter than the curved arcs, <m>A_n</m> is an underestimate of <m>A</m>. As <m>n</m> increases, the polygon forms more of a circle-like shape, and <m>A_n</m> becomes a better and better approximation to the area of the circle.
+    </p>
+    <p>
+        A regular polygon with <m>n</m> sides can be broken up into triangles. In particular, <m>n</m> non-overlapping, <em>congruent</em>, isosceles triangles, each having a common vertex of the center of the circle. For each of these triangles, the central angle is <m>\frac{2\pi}{n}</m>, as the total angle around the circle is <m>2\pi</m>, and there are <m>n</m> triangles. Also, the length of the two isosceles sides are the radius of the circle <m>r</m>. Then, the height of the triangle is,
+    </p>
+    <me>
+        h = r\cos{\brac{\frac{\frac{2\pi}{n}}{2}}} = r\cos{\brac{\frac{\pi}{n}}}
+    </me>
+    <p>
+        The base of the triangle has length,
+    </p>
+    <me>
+        b = 2r \sin{\brac{\frac{\pi}{n}}}
+    </me>
+    <p>
+        Then, the area of each triangle is,
+    </p>
+    <md>
+        <mrow>\Area{\text{triangle}} \amp = \frac{1}{2} \brac{r\cos{\brac{\frac{\pi}{n}}}} \brac{2r \sin{\brac{\frac{\pi}{n}}}}</mrow>
+        <mrow>\amp = r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}</mrow>
+    </md>
+    <p>
+        Then, the area <m>A_n</m> of the entire <m>n</m>-gon is <m>n</m> times this, or,
+    </p>
+    <me>
+        A_n = n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}
+    </me>
+    <p>
+        This forms a sequence <m>\set{A_n}</m> that approximates the area of a circle of radius <m>r</m>, in terms of <m>r</m>. In particular, for some <m>n</m>, it is a multiple of $r^2$. Then, as $n$ increases, we expect the approximation to improve. Consider <url href="https://www.desmos.com/calculator/sgjezkp21f">this Desmos applet</url>, which considers the case <m>r = 1</m>.
+    </p>
+    <p>
+        Notice that as <m>n</m> increases, the sequence <m>A_n</m> approaches <m>\pi</m>. Then, if we increase <m>n</m> indefinitely, as <m>n</m> increases to <q>to infinity</q>, we say that the sequence converges to exactly <m>\pi</m>. This means that the area of a circle of radius 1 is <em>equal to</em> <m>\pi</m>. This technique is now called the <term>method of exhaustion</term>, intuitively because increasing the number of sides exhausts all of the area of the circle. Then, more generally,
+    </p>
+    <md>
+        <mrow>A_n \amp = \underbrace{n \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}}_{\to \pi} \cdot r^2</mrow>
+        <mrow>\amp = \pi r^2</mrow>
+    </md>
+    <p>
+        More precisely, as <m>n \to \infty</m>,
+    </p>
+    <md>
+        <mrow>\lim_{n \to \infty} A_n = \lim_{n \to \infty} n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}} \amp = \lim_{n \to \infty} \pi r^2 \underbrace{\cos{\brac{\frac{\pi}{n}}}}_{\to \cos{0} = 1} \cdot \underbrace{\frac{\sin{\brac{\frac{\pi}{n}}}}{\frac{\pi}{n}}}_{\to 1}</mrow>
+        <mrow>\amp = \pi r^2</mrow>
+    </md>    
+    <p>
+        as desired. For every <m>n</m>, the shape is a polygon with sides that are straight line segments. But, in some sense, for infinitely many sides, the polygon <q>becomes</q> a circle.
+    </p>
+</section>

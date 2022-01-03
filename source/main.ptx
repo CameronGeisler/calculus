@@ -11,13 +11,13 @@
 
     <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
     <!-- to some short (non-spaced) description of your book         -->
-    <book xml:id="book" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <book xml:id="book-calculus" xmlns:xi="http://www.w3.org/2001/XInclude">
         <!-- The book needs a title and can have a subtitle  -->
-        <title>Book</title>
-        <subtitle>Subtitle</subtitle>
+        <title>Calculus</title>
+        <subtitle></subtitle>
 
         <introduction>
-
+            My calculus notes.
         </introduction>
         <!-- Now we include files containing each main devision.       -->
 
@@ -29,7 +29,7 @@
         <!-- possible structure of the book.  Once you know what the   -->
         <!-- title of the chapter is, rename the file something based  -->
         <!-- on the title (ch-shorttitle.ptx) both here and on disk    -->
-        <xi:include href="./chapter/section.xml"/>
+        <xi:include href="./chapter-ITC.ptx"/>
         <!-- Of course you will want to add more chapters as you proceed-->
     </book>
 </pretext>
