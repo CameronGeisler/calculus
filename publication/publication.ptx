@@ -4,4 +4,8 @@
     <source webwork-problems="../generated-assets/webwork/webwork-representations.ptx">
         <directories external="../assets" generated="../generated-assets"/>
     </source>
+
+    <html>
+        <index-page ref="main"></index-page>
+    </html>
 </publication>

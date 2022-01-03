@@ -11,7 +11,7 @@
 
     <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
     <!-- to some short (non-spaced) description of your book         -->
-    <book xml:id="book-calculus" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <book xml:id="main" xmlns:xi="http://www.w3.org/2001/XInclude">
         <!-- The book needs a title and can have a subtitle  -->
         <title>Calculus</title>
         <subtitle></subtitle>

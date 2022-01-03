@@ -5,7 +5,6 @@
 
     <subsection>
         <title>Motivational Problem: Area of a Circle</title>
-    </subsection>
     <p>
         Recall that the area <m>A</m> of a circle of radius <m>r</m> is given by,
     </p>
@@ -68,4 +67,5 @@
     <p>
         as desired. For every <m>n</m>, the shape is a polygon with sides that are straight line segments. But, in some sense, for infinitely many sides, the polygon <q>becomes</q> a circle.
     </p>
+    </subsection>
 </section>
