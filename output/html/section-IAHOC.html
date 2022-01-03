@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-03T13:18:10-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introduction and History of Calculus</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="main.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-ITC.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-MP.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-ITC.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-MP.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul><li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
+<li><a href="section-IAHOC.html" data-scroll="section-IAHOC" class="active">Introduction and History of Calculus</a></li>
+<li><a href="section-MP.html" data-scroll="section-MP">Motivational Problems</a></li>
+</ul>
+</li></ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-IAHOC"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Introduction and History of Calculus</span>
+</h2>
+<section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Introduction to Calculus</span>
+</h3>
+<p id="p-1">Calculus involves two main problems:</p>
+<ul class="disc">
+<li id="li-1"><p id="p-derived-li-1">Finding the slope of a curve, or the tangent line to a curve.</p></li>
+<li id="li-2"><p id="p-derived-li-2">Finding the areas of regions under a curve in the plane, or more generally volumes.</p></li>
+</ul>
+<p id="p-2">The very first calculus-like ideas were formulated by <dfn class="terminology">Archimedes</dfn>, ancient Greek mathematician (among other things). Archimedes used some of the foundational ideas of calculus to determine areas of curved regions, such as the area of a parabolic segment. However, the methods used by Archimedes were very ad-hoc, requiring subtle arguments for each specific situation.</p>
+<p id="p-3">In the 1600s, developments in mathematics were introduced to the European world. First, algebra, developed in the middle east by Arab mathematicians, were introduced to Europe. Also, Cartesian geometry (also called analytic geometry), named after French philosopher and mathematician <dfn class="terminology">Rene Descartes</dfn> (1596-1650), allowed for geometric curves to be studied with a coordinate system (Cartesian coordinates), rather than the synthetic geometry of previous civilizations such as the ancient Greeks. The combination of algebra and Cartesian geometry led to the modern conceptualization of functions, graphs of functions, and calculus on these functions.</p>
+<p id="p-4">By themselves, algebra and geometry only allow for the study of relationships between static objects. Calculus provides tools to measure and describe how a quantity changes. The two operations for this are the <dfn class="terminology">derivative</dfn> and the <dfn class="terminology">integral</dfn>, which correspond to the solutions to the two main problems, respectively. Calculus, broadly, is the study of change. It is the study of how quantities change, with respect to time and each other.</p>
+<p id="p-5">Calculus was invented in the 17th century by both <dfn class="terminology">Isaac Newton</dfn> (1643-1727, English mathematician, physicist, and astronomer) and by <dfn class="terminology">Gottfried Leibniz</dfn> (German mathematician). Newton's motivation was to describe the motion of moving objects, forming what is now called <em class="emphasis">classical mechanics</em> (or <em class="emphasis">Newtonian mechanics</em>).</p>
+<p id="p-6">Initially, calculus was revered because its techniques were so useful, in that it worked well to describe phenomena in the world and for solving problems, and it produced many results. In 1673, when Leibniz first introduced the term calculus, he called it “a calculus” or “my calculus”, where in this context, “calculus” meant “method of calculation”, i.e. a system of rules and algorithms for performing computations. After calculus gained popularity, it was called “the calculus”, meaning “<em class="emphasis">the</em> method of calculation”. The algebraic framework of calculus allowed for systematic techniques for computing areas. In some sense, the calculus developed in the 17th century was an extension or generalization of the computations done by Archimedes. It provided routine steps for calculating many results, rather than long and subtle arguments for particular results.</p>
+<p id="p-7">Newton and Leibniz miraculously developed calculus independently of each other, at around the same time. Both accused the other of plagiarism, but their approaches were quite different, and it is currently believed that they truly did discover calculus independently. They built on some minor developments from other mathematicians.</p>
+<p id="p-8">Over the centuries since then, calculus has been refined and build on by many future mathematicians. Today, both differentiation and integration are defined in terms of another mathematical operation called a <dfn class="terminology">limit</dfn>. Basically, limits capture the idea of going to infinity.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">The Usefullness of Calculus</span>
+</h3>
+<p id="p-9">In the 16th century, the idea that nature was controlled by mathematical laws gained popularity. In 1623, <dfn class="terminology">Galileo Galilei</dfn> (1564-1642), Italian astronomer, physicist, and engineer, wrote in his book “The Assayer”, about “natural philosophy” (the study of the physical universe, what today we would refer to as science),</p>
+<blockquote class="blockquote" id="blockquote-1">“Philosophy is written in this grand book - I mean the Universe - which stands continually open to our gaze, but it cannot be understood unless one first learns to comprehend the language and interpret the characters in which it is written. It is written in the language of mathematics, and its characters are triangles, circles, and other geometrical figures, without which it is humanly impossible to understand a single word of it; without these, one is wandering around in a dark labyrinth.”<cite class="attribution">―Galileo Galilei</cite>
+</blockquote>
+<p id="p-10">In short, nature is deeply mathematical. Even still, Galileo pre-dated the development of calculus.</p>
+<p id="p-11">In 1960, Eugene Wigner, Hungarian physicist, wrote in his article ``The Unreasonable Effectiveness of Mathematics in the Natural Sciences",</p>
+<blockquote class="blockquote" id="blockquote-2">“The miracle of the appropriateness of the language of mathematics for the formulation of the laws of physics is a wonderful gift which we neither understand nor deserve. We should be grateful for it and hope that it will remain valid in future research and that it will extend, for better or for worse, to our pleasure, even though perhaps also to our bafflement, to wide branches of learning.”<cite class="attribution">―Eugene Wigner</cite>
+</blockquote>
+<p id="p-12">In particular, the laws of nature are written in the language of calculus. Richard Feynman (1918-1988) described calculus as “the language that God talks” to Herman Wouk, which led to his 2010 book titled “The Language God Talks”.</p>
+<p id="p-13">On the other hand, while calculus led to many developments in math and science, calculus is <em class="emphasis">not</em> used by almost all people in everyday life.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Learning Calculus</span>
+</h3>
+<p id="p-14">Calculus is more than just formulas and methods of computations. Calculus is a system of reasoning, and these ideas of calculus are accessible to most people.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">The People of Calculus</span>
+</h3>
+<ul class="disc">
+<li id="li-3"><p id="p-derived-li-3"><dfn class="terminology">Archimedes</dfn> (287-212 BC), ancient Greek mathematician, physicist, engineer, and astronomer.</p></li>
+<li id="li-4"><p id="p-derived-li-4"><dfn class="terminology">Rene Descartes</dfn> (1596-1650), French philosopher and mathematician.</p></li>
+<li id="li-5"><p id="p-derived-li-5"><dfn class="terminology">Pierre Fermat</dfn> (1607-1665), French mathematician.</p></li>
+<li id="li-6"><p id="p-derived-li-6"><dfn class="terminology">John Wallis</dfn> (1616-1703), English mathematician. Introduced the infinity symbol \(\infty\text{.}\)</p></li>
+<li id="li-7"><p id="p-derived-li-7"><dfn class="terminology">Issac Barrow</dfn> (1630-1677), Scottish mathematician. Teacher to Isaac Newton.</p></li>
+<li id="li-8"><p id="p-derived-li-8"><dfn class="terminology">James Gregory</dfn> (1638-1675), Scottish mathematician. Published the first proof of the fundamental theorem of calculus, although from a geometric perspective, and only for certain types of functions. Developed power series representation for trigonometric functions.</p></li>
+<li id="li-9"><p id="p-derived-li-9"><dfn class="terminology">Isaac Newton</dfn> (1643-1727), English mathematician, physicist, and astronomer.</p></li>
+<li id="li-10"><p id="p-derived-li-10"><dfn class="terminology">Gottfried Leibniz</dfn> (1646-1716), German mathematician. Proved the fundamental theorem of calculus, introduced the modern integral sign $\int$, and introduced the term ``function".</p></li>
+<li id="li-11"><p id="p-derived-li-11"><dfn class="terminology">Michel Rolle</dfn> (1652-1719).</p></li>
+<li id="li-12"><p id="p-derived-li-12"><dfn class="terminology">Jacob Bernoulli</dfn> (1655-1705). Helped develop the integral. Differential equations.</p></li>
+<li id="li-13"><p id="p-derived-li-13"><dfn class="terminology">Leonard Euler</dfn> (1707-1783). Perhaps the greatest mathematician of all-time, with the possible exception of Archimedes. The analysis text \textit{Introductio in analysin infinitorum} (1748).</p></li>
+<li id="li-14"><p id="p-derived-li-14"><dfn class="terminology">Joseph-Louis Lagrange</dfn> (1736-1813). Introduced the prime \(f'\) notation for derivatives.</p></li>
+<li id="li-15"><p id="p-derived-li-15"><dfn class="terminology">Karl Freidrick Gauss</dfn> (1777-1855).</p></li>
+<li id="li-16"><p id="p-derived-li-16"><dfn class="terminology">Bernhard Riemann</dfn> (1826-1866), German mathematician.</p></li>
+</ul></section></section></div></main>
+</div>
+</body>
+</html>
