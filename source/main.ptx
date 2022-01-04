@@ -5,7 +5,7 @@
 <!-- just imports other .ptx files which contain content. Open   -->
 <!-- those files to see more pretext features                    -->
 
-<pretext xml:lang="en-US" xml:id="main" xmlns:xi="http://www.w3.org/2001/XInclude">
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
     <!-- we first include a file which contains the docinfo element: -->
     <xi:include href="./docinfo.ptx" />
 

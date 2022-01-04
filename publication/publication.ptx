@@ -6,6 +6,6 @@
     </source>
 
     <html>
-        <index-page ref="main"></index-page>
+        <index-page ref="book"></index-page>
     </html>
 </publication>

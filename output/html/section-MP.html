@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-04T09:37:30-08:00       *-->
+<!--*       on 2022-01-04T12:34:00-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -71,16 +71,16 @@
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="main.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-IAHOC.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-IAHOC.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-TFSC.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-IAHOC.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-IAHOC.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-TFSC.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -88,6 +88,7 @@
 <a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
 <li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
 <li><a href="section-MP.html" data-scroll="section-MP" class="active">Motivational Problems</a></li>
+<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
 </ul>
 </li></ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
@@ -148,7 +149,119 @@ A_n \amp = \underbrace{n \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}}_
 \amp = \pi r^2
 \end{align*}
 </div>
-<p id="p-25">as desired. For every \(n\text{,}\) the shape is a polygon with sides that are straight line segments. But, in some sense, for infinitely many sides, the polygon “becomes” a circle.</p></section></section></div></main>
+<p id="p-25">as desired. For every \(n\text{,}\) the shape is a polygon with sides that are straight line segments. But, in some sense, for infinitely many sides, the polygon “becomes” a circle.</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">The Tangent Line Problem (Tangent of a Parabola)</span>
+</h3>
+<p id="p-26">Consider the parabola \(f(x) = x^2\text{,}\) and consider the tangent line to the graph at \(x = 1\) (i.e. at the point \((1,1)\)). Recall that to define a line, we need its slope and a point on the line. Of course, the tangent line must pass through the point \((1,1)\text{.}\)</p>
+<p id="p-27">To determine the slope of this tangent line, consider an approximation of the slope, by considering a nearby point $(1 + h, (1 + h)^2)$ where $h &gt; 0$ is some small non-zero number. Then, the slope of the tangent line can be approximated by the slope of the line between these two points,</p>
+<div class="displaymath">
+\begin{equation*}
+m_{sec} = \frac{(1 + h)^2 - 1}{(1 + h) - 1} = \frac{(1 + h)^2 - 1}{h}
+\end{equation*}
+</div>
+<p id="p-28">This line is called a <em class="emphasis">secant line</em>. For different values of \(h\) (that are non-zero), we can determine approximations to the slope of the tangent line at \(x = 1\text{.}\) For smaller values of \(h\text{,}\) we intuitively expect that the approximation is more accurate. Consider <a class="external" href="https://www.desmos.com/calculator/aoin6kjf1g" target="_blank">this Desmos applet</a>.</p>
+<p id="p-29">However, for \(h = 0\text{,}\) this slope expression is undefined, because it becomes \(m_{sec} = \frac{0}{0}\text{.}\) However, if we make \(h\) smaller and smaller, but non-zero, the slope seems to be numerically approaching 2.</p>
+<p id="p-30">Intuitively, if we make the two points “infinitely close” together (equivalently, make $h$ ``infinitely" small), then the slope of the secant line becomes exactly equal to the slope of the tangent line. In this case, notice that the expression can be simplified by algebraically manipulating,</p>
+<div class="displaymath">
+\begin{align*}
+m_{sec} = \frac{(1 + h)^2 - 1}{h} \amp = \frac{(1 + 2h + h^2) - 1}{h}\\
+\amp = \frac{2h + h^2}{h}\\
+\amp = 2 + h
+\end{align*}
+</div>
+<p id="p-31">That is, \(m_{sec} = 2 + h\) (as long as \(h \neq 0\text{,}\) since we cancelled out a factor of \(h\)), i.e. for various values of \(h\text{,}\) the slope of the resulting secant line is \(2 + h\text{.}\) Then, we can see that as \(h\) gets closer and closer to 0, \(m_{sec} = 2 + h\) gets closer and closer to 2. Then, in calculus, we say the slope of the tangent line is exactly 2. Then, in calculus, we say the slope of the tangent line is <em class="emphasis">exactly 2</em>. This seems somewhat contradictory, because by,</p>
+<div class="displaymath">
+\begin{equation*}
+m_{sec} = \frac{2h + h^2}{h} = 2 + h
+\end{equation*}
+</div>we are assuming that \(h \neq 0\text{,}\) but then also disregarding \(h\) by essentially letting \(h = 0\text{.}\)</section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">The Area Problem (Area Under a Parabola)</span>
+</h3>
+<p id="p-32">Consider the area under the parabola \(y = x^2\) and above the \(x\)-axis, from \(x = 0\) to \(x = 1\text{.}\) This region is not a polygon, so its area can't be obtained by the usual area formulas. However, its area can be approximated by the area of rectangles. Divide the interval \([0,1]\) into \(n\) equal pieces. For the rectangles, the width will be the length of the interval \([0,1]\text{,}\) divided by the number of pieces, or \(\frac{1}{n}\text{.}\) The height of rectangle can be considered the $y$-coordinate of the parabola. To determine this, we can determine a general formula for the \(x\)-coordinate of the \(k\)th piece. The starting point is \(x_0 = 0\text{,}\) and the width of each rectangle is \(\frac{1}{n}\text{,}\) so the next point is \(x_1 = \frac{1}{n}\text{,}\) then \(x_2 = \frac{2}{n}\text{,}\) then \(x_3 = \frac{3}{n}\text{,}\) up to \(x_n = \frac{n}{n} = 1\text{.}\) That is, in general, \(x_k = \frac{k}{n}\text{.}\) Then, in the \(k\)th piece, the left endpoint is \(x_{k-1} = \frac{k-1}{n}\text{,}\) and its right endpoint is \(x_k = \frac{k}{n}\text{.}\) If we use the right endpoint, then the associated \(y\)-coordinate is,</p>
+<div class="displaymath">
+\begin{equation*}
+f(x_k) = \brac{\frac{k}{n}}^2 = \frac{k^2}{n^2}
+\end{equation*}
+</div>
+<p id="p-33">Then, the total area, say denoted by \(\Area{R}\text{,}\) is approximately equation to the sum of the areas of the \(n\) rectangles. That is, using summation notation,</p>
+<div class="displaymath">
+\begin{align*}
+\Area{R} \approx \sum_{k=1}^n f(x_k) \Delta x_k \amp = \sum_{k=1}^n \frac{k^2}{n^2} \cdot \frac{1}{n}\\
+\amp = \sum_{k=1}^n \frac{k^2}{n^3}
+\end{align*}
+</div>
+<p id="p-34">Then, given a particular $n$, evaluating this summation gives an approximation for the desired area. To determine a closed-form formula for this summation, first notice that \(n^3\) is constant with respect to the summation, so it can be factored out,</p>
+<div class="displaymath">
+\begin{equation*}
+\Area{R} \approx \frac{1}{n^3} \sum_{k=1}^n k^2
+\end{equation*}
+</div>
+<p id="p-35">Then, notice that this area summation will depend on the summation of the first \(n\) squares, \(\sum_{k=1}^n k^2\text{.}\) From algebra, this sum has a closed-form formula given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=1}^n k^2 = \frac{n(n + 1)(2n + 1)}{6}
+\end{equation*}
+</div>
+<p id="p-36">Then,</p>
+<div class="displaymath">
+\begin{align*}
+\Area{R} \approx \frac{1}{n^3} \sum_{k=1}^n k^2 \amp = \frac{1}{n^3} \cdot \frac{n(n + 1)(2n + 1)}{6}\\
+\amp = \frac{(n + 1)(2n + 1)}{6n^2}
+\end{align*}
+</div>
+<p id="p-37">Intuitively, we expect that as \(n\) increases, the approximation is more and more accurate in estimating the ``exact" area \(\Area{R}\text{.}\) In the language of calculus, we say that in the limit as \(n \to \infty\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n \to \infty} \frac{(n - 1)(2n - 1)}{6n^2} = \lim_{n \to \infty} \frac{1}{6} \brac{1 - \frac{1}{n}} \brac{2 - \frac{1}{n}} = \frac{1}{6} \cdot 1 \cdot 2 = \frac{1}{3}
+\end{equation*}
+</div>
+<p id="p-38">That is, as \(n\) increases without bound, the area approximation becomes closer and closer to \(\frac{1}{3}\text{.}\) Then, in the language of calculus, we say that the area is exactly equal to \(\frac{1}{3}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\Area{R} = \frac{1}{3}
+\end{equation*}
+</div>
+<p id="p-39">This can be thought of as a discovery of the area of a region. Or, equivalently, a \textit{definition} of the area of the region.</p>
+<p id="p-40">In fact, this idea of determining the area of a region by splitting it up into smaller and smaller pieces, was known to the ancient Greeks, in particular Archimedes and Eudoxus of Cnidus. Of course, this was well before algebra was invented.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">The Calculus Principle, and Infinity</span>
+</h3>
+<p id="p-41">The above examples illustrate the overarching principle of calculus.</p>
+<ol class="decimal">
+<li id="li-17"><p id="p-derived-li-17">First, we start with some quantity which seems difficult to compute exactly.</p></li>
+<li id="li-18"><p id="p-derived-li-18">Then, we develop an approximation to that exact quantity, a method of slicing that difficult problem into smaller pieces, that we can compute exactly.</p></li>
+<li id="li-19"><p id="p-derived-li-19">Then, improve the approximation.</p></li>
+<li id="li-20"><p id="p-derived-li-20">Then, continue improving the approximation indefinitely, or “to infinity”, and observe what fixed number the approximation approaches.</p></li>
+</ol>
+<p id="p-42">This number, called a <em class="emphasis">limit</em>, is said to be the exact value of the quantity. A fundamental difference between pre-calculus and calculus is that calculus deals with infinity. In particular, quantities which are “infinitely large” or “infinitely small”. The structure of calculus is almost all simply variations on this idea. Also, this system of reasoning reflects how the universe works. For objects or phenomenon which are “continuous”, or “infinitely divisible”, such as curves, motion, etc.</p>
+<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Computer graphics and animation.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-43">In computer graphics, real-world objects and their surfaces, which are continuous and smooth, are approximated by models made up of polygons, most commonly triangles. By using many triangles, the approximation is accurate enough to be realistic to human perception. This technique is used in animated movies.</p></article></div>
+<article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Circles.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-44">In fact, computers generate circles in a similar way as the Archimedes method above, by drawing a regular polygon with large number of sides (say, 180 or more sides), which is sufficient to give the visual impression that the polygon is a circle.</p></article></div>
+<article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Curves.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-45">Curves in the plane can be approximated by straight line segments. In fact, this is how graphing calculators graph functions. They plot a large number of points, and connect those points with straight line segments. Because there are so many points, and the line segments are so small, this gives the visual impression of a curve.</p></article></div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.5</span> <span class="title">Archimedes Quadrature of the Parabola (Area of a Parabolic Segment)</span>
+</h3>
+<p id="p-46">Archimedes used the method of exhaustion to determine the area of a region bounded by a parabola and a line, called a parabolic segment. This was in his treatise called <em class="emphasis">Quadrature of the Parabola</em>. In Archimedes's time, area was called quadrature. Also, Archimedes thought of a parabola not as a quadratic equation (\(y = ax^2 + bx + c\)), because he did not have analytic geometry.</p>
+<p id="p-47">Archimedes used triangle shapes to make up the parabolic region. First, he formed a sequence of triangles which make up the area of the region. Each triangle has a vertex that where the tangent to the parabola is parallel to the base of the triangle. He proved that the first triangle is 8 times the area of the 2nd triangles, and more generally, at each step, the area of the \(n\)th triangle is 8 times the area of each of the 2 smaller triangles. Then, the area of the triangles at each next step is \(\frac{1}{4}\)th the area at the previous step. Then, if the area of the first triangle is 1 unit, then the area of the parabolic segment is equal to the infinite sum of the areas of the triangles,</p>
+<div class="displaymath">
+\begin{equation*}
+A = 1 + \frac{1}{4} + \frac{1}{16} + \frac{1}{64} + \dots
+\end{equation*}
+</div>
+<p id="p-48">Archimedes did not use this “infinite” sum. Instead, he proved, using strictly geometric means, that the area was not less than \(\frac{4}{3}\text{,}\) and also not greater than \(\frac{4}{3}\text{,}\) and so by conclusion must be equal to \(\frac{4}{3}\text{.}\)</p>
+<p id="p-49">You may recall that the infinite sum is an infinite geometric series, and has sum,</p>
+<div class="displaymath">
+\begin{equation*}
+A = \frac{1}{1 - \frac{1}{4}} = \boxed{\frac{4}{3}}
+\end{equation*}
+</div>
+<p id="p-50">That is, the ratio between the area of the parabolic segment to the big triangle is \(\frac{4}{3}\text{.}\)</p></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.6</span> <span class="title">Circumference of a Circle (Approximating Pi)</span>
+</h3>
+<p id="p-51">Even though \(\pi\) is defined to be the ratio of circumference to diameter, its precise value is elusive. You may recall that \(\pi\) is an irrational number, meaning that its decimal expansion has infinitely many digits, and its digits are non-repeating, and have no describable pattern. In fact, \(\pi\) is the limit of an unattainable process, i.e. defined by calculus.</p></section></section></div></main>
 </div>
 </body>
 </html>
