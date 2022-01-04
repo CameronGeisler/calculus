@@ -5,67 +5,227 @@
 
     <subsection>
         <title>Motivational Problem: Area of a Circle</title>
-    <p>
-        Recall that the area <m>A</m> of a circle of radius <m>r</m> is given by,
-    </p>
-    <me>
-        A = \pi r^2
-    </me>
-    <p>
-        This formula must be proven; it is not true by definition. Euclid, ancient Greek mathematician, proved that for any circle, the ratio of its circumference divided by its diameter was the same constant, and today this constant is called <m>\pi</m>. The ancient Greek mathematician <term>Archimedes</term> (287-212 BC) was the first to develop the formula for the area of a circle, in his treatise <q>Measurement of a Circle</q>. The idea is to approximate a region's area by inscribed polygons. These isolated computations in ancient Greece use the core concepts of calculus, but were done millennia before calculus, limits, and integration were developed.
-    </p>
+        <p>
+            Recall that the area <m>A</m> of a circle of radius <m>r</m> is given by,
+        </p>
+        <me>
+            A = \pi r^2
+        </me>
+        <p>
+            This formula must be proven; it is not true by definition. Euclid, ancient Greek mathematician, proved that for any circle, the ratio of its circumference divided by its diameter was the same constant, and today this constant is called <m>\pi</m>. The ancient Greek mathematician <term>Archimedes</term> (287-212 BC) was the first to develop the formula for the area of a circle, in his treatise <q>Measurement of a Circle</q>. The idea is to approximate a region's area by inscribed polygons. These isolated computations in ancient Greece use the core concepts of calculus, but were done millennia before calculus, limits, and integration were developed.
+        </p>
 
-    <example>
-        Area of a circle using slices of pizza, rectangle with length <m>\pi r</m> and height <m>r</m>. The more slices, the more accurate the approximation, and in the limit, the area is <m>\pi r^2</m>. Archimedes used an argument similar to this.
-    </example>
+        <example>
+            Area of a circle using slices of pizza, rectangle with length <m>\pi r</m> and height <m>r</m>. The more slices, the more accurate the approximation, and in the limit, the area is <m>\pi r^2</m>. Archimedes used an argument similar to this.
+        </example>
 
-    <p>
-        We can intuitively derive this formula. Consider a circle of radius <m>r</m>, and consider a regular polygon with <m>n</m> sides (<m>n \geq 3</m>) inscribed inside this circle. For example, for <m>n = 3</m>, the polygon is a equilateral triangle. For <m>n = 4</m> is a square. For <m>n = 5</m>, it is a pentagon. In general, the area <m>A_n</m> of the polygon is an approximation of the area of the circle. In particular, since the line segments are shorter than the curved arcs, <m>A_n</m> is an underestimate of <m>A</m>. As <m>n</m> increases, the polygon forms more of a circle-like shape, and <m>A_n</m> becomes a better and better approximation to the area of the circle.
-    </p>
-    <p>
-        A regular polygon with <m>n</m> sides can be broken up into triangles. In particular, <m>n</m> non-overlapping, <em>congruent</em>, isosceles triangles, each having a common vertex of the center of the circle. For each of these triangles, the central angle is <m>\frac{2\pi}{n}</m>, as the total angle around the circle is <m>2\pi</m>, and there are <m>n</m> triangles. Also, the length of the two isosceles sides are the radius of the circle <m>r</m>. Then, the height of the triangle is,
-    </p>
-    <me>
-        h = r\cos{\brac{\frac{\frac{2\pi}{n}}{2}}} = r\cos{\brac{\frac{\pi}{n}}}
-    </me>
-    <p>
-        The base of the triangle has length,
-    </p>
-    <me>
-        b = 2r \sin{\brac{\frac{\pi}{n}}}
-    </me>
-    <p>
-        Then, the area of each triangle is,
-    </p>
-    <md>
-        <mrow>\Area{\text{triangle}} \amp = \frac{1}{2} \brac{r\cos{\brac{\frac{\pi}{n}}}} \brac{2r \sin{\brac{\frac{\pi}{n}}}}</mrow>
-        <mrow>\amp = r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}</mrow>
-    </md>
-    <p>
-        Then, the area <m>A_n</m> of the entire <m>n</m>-gon is <m>n</m> times this, or,
-    </p>
-    <me>
-        A_n = n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}
-    </me>
-    <p>
-        This forms a sequence <m>\set{A_n}</m> that approximates the area of a circle of radius <m>r</m>, in terms of <m>r</m>. In particular, for some <m>n</m>, it is a multiple of $r^2$. Then, as $n$ increases, we expect the approximation to improve. Consider <url href="https://www.desmos.com/calculator/sgjezkp21f">this Desmos applet</url>, which considers the case <m>r = 1</m>.
-    </p>
-    <p>
-        Notice that as <m>n</m> increases, the sequence <m>A_n</m> approaches <m>\pi</m>. Then, if we increase <m>n</m> indefinitely, as <m>n</m> increases to <q>to infinity</q>, we say that the sequence converges to exactly <m>\pi</m>. This means that the area of a circle of radius 1 is <em>equal to</em> <m>\pi</m>. This technique is now called the <term>method of exhaustion</term>, intuitively because increasing the number of sides exhausts all of the area of the circle. Then, more generally,
-    </p>
-    <md>
-        <mrow>A_n \amp = \underbrace{n \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}}_{\to \pi} \cdot r^2</mrow>
-        <mrow>\amp = \pi r^2</mrow>
-    </md>
-    <p>
-        More precisely, as <m>n \to \infty</m>,
-    </p>
-    <md>
-        <mrow>\lim_{n \to \infty} A_n = \lim_{n \to \infty} n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}} \amp = \lim_{n \to \infty} \pi r^2 \underbrace{\cos{\brac{\frac{\pi}{n}}}}_{\to \cos{0} = 1} \cdot \underbrace{\frac{\sin{\brac{\frac{\pi}{n}}}}{\frac{\pi}{n}}}_{\to 1}</mrow>
-        <mrow>\amp = \pi r^2</mrow>
-    </md>    
-    <p>
-        as desired. For every <m>n</m>, the shape is a polygon with sides that are straight line segments. But, in some sense, for infinitely many sides, the polygon <q>becomes</q> a circle.
-    </p>
+        <p>
+            We can intuitively derive this formula. Consider a circle of radius <m>r</m>, and consider a regular polygon with <m>n</m> sides (<m>n \geq 3</m>) inscribed inside this circle. For example, for <m>n = 3</m>, the polygon is a equilateral triangle. For <m>n = 4</m> is a square. For <m>n = 5</m>, it is a pentagon. In general, the area <m>A_n</m> of the polygon is an approximation of the area of the circle. In particular, since the line segments are shorter than the curved arcs, <m>A_n</m> is an underestimate of <m>A</m>. As <m>n</m> increases, the polygon forms more of a circle-like shape, and <m>A_n</m> becomes a better and better approximation to the area of the circle.
+        </p>
+        <p>
+            A regular polygon with <m>n</m> sides can be broken up into triangles. In particular, <m>n</m> non-overlapping, <em>congruent</em>, isosceles triangles, each having a common vertex of the center of the circle. For each of these triangles, the central angle is <m>\frac{2\pi}{n}</m>, as the total angle around the circle is <m>2\pi</m>, and there are <m>n</m> triangles. Also, the length of the two isosceles sides are the radius of the circle <m>r</m>. Then, the height of the triangle is,
+        </p>
+        <me>
+            h = r\cos{\brac{\frac{\frac{2\pi}{n}}{2}}} = r\cos{\brac{\frac{\pi}{n}}}
+        </me>
+        <p>
+            The base of the triangle has length,
+        </p>
+        <me>
+            b = 2r \sin{\brac{\frac{\pi}{n}}}
+        </me>
+        <p>
+            Then, the area of each triangle is,
+        </p>
+        <md>
+            <mrow>\Area{\text{triangle}} \amp = \frac{1}{2} \brac{r\cos{\brac{\frac{\pi}{n}}}} \brac{2r \sin{\brac{\frac{\pi}{n}}}}</mrow>
+            <mrow>\amp = r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}</mrow>
+        </md>
+        <p>
+            Then, the area <m>A_n</m> of the entire <m>n</m>-gon is <m>n</m> times this, or,
+        </p>
+        <me>
+            A_n = n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}
+        </me>
+        <p>
+            This forms a sequence <m>\set{A_n}</m> that approximates the area of a circle of radius <m>r</m>, in terms of <m>r</m>. In particular, for some <m>n</m>, it is a multiple of $r^2$. Then, as $n$ increases, we expect the approximation to improve. Consider <url href="https://www.desmos.com/calculator/sgjezkp21f">this Desmos applet</url>, which considers the case <m>r = 1</m>.
+        </p>
+        <p>
+            Notice that as <m>n</m> increases, the sequence <m>A_n</m> approaches <m>\pi</m>. Then, if we increase <m>n</m> indefinitely, as <m>n</m> increases to <q>to infinity</q>, we say that the sequence converges to exactly <m>\pi</m>. This means that the area of a circle of radius 1 is <em>equal to</em> <m>\pi</m>. This technique is now called the <term>method of exhaustion</term>, intuitively because increasing the number of sides exhausts all of the area of the circle. Then, more generally,
+        </p>
+        <md>
+            <mrow>A_n \amp = \underbrace{n \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}}_{\to \pi} \cdot r^2</mrow>
+            <mrow>\amp = \pi r^2</mrow>
+        </md>
+        <p>
+            More precisely, as <m>n \to \infty</m>,
+        </p>
+        <md>
+            <mrow>\lim_{n \to \infty} A_n = \lim_{n \to \infty} n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}} \amp = \lim_{n \to \infty} \pi r^2 \underbrace{\cos{\brac{\frac{\pi}{n}}}}_{\to \cos{0} = 1} \cdot \underbrace{\frac{\sin{\brac{\frac{\pi}{n}}}}{\frac{\pi}{n}}}_{\to 1}</mrow>
+            <mrow>\amp = \pi r^2</mrow>
+        </md>    
+        <p>
+            as desired. For every <m>n</m>, the shape is a polygon with sides that are straight line segments. But, in some sense, for infinitely many sides, the polygon <q>becomes</q> a circle.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>The Tangent Line Problem (Tangent of a Parabola)</title>
+        <p>
+            Consider the parabola <m>f(x) = x^2</m>, and consider the tangent line to the graph at <m>x = 1</m> (i.e. at the point <m>(1,1)</m>). Recall that to define a line, we need its slope and a point on the line. Of course, the tangent line must pass through the point <m>(1,1)</m>.
+        </p>
+        <p>
+            To determine the slope of this tangent line, consider an approximation of the slope, by considering a nearby point $(1 + h, (1 + h)^2)$ where $h > 0$ is some small non-zero number. Then, the slope of the tangent line can be approximated by the slope of the line between these two points,
+        </p>
+        <me>
+            m_{sec} = \frac{(1 + h)^2 - 1}{(1 + h) - 1} = \frac{(1 + h)^2 - 1}{h}
+        </me>
+        <p>
+            This line is called a <em>secant line</em>. For different values of <m>h</m> (that are non-zero), we can determine approximations to the slope of the tangent line at <m>x = 1</m>. For smaller values of <m>h</m>, we intuitively expect that the approximation is more accurate. Consider <url href="https://www.desmos.com/calculator/aoin6kjf1g">this Desmos applet</url>.
+        </p>
+        <p>
+            However, for <m>h = 0</m>, this slope expression is undefined, because it becomes <m>m_{sec} = \frac{0}{0}</m>. However, if we make <m>h</m> smaller and smaller, but non-zero, the slope seems to be numerically approaching 2.
+        </p>
+        <p>
+            Intuitively, if we make the two points <q>infinitely close</q> together (equivalently, make $h$ ``infinitely" small), then the slope of the secant line becomes exactly equal to the slope of the tangent line. In this case, notice that the expression can be simplified by algebraically manipulating,
+        </p>
+        <md>
+            <mrow>m_{sec} = \frac{(1 + h)^2 - 1}{h} \amp = \frac{(1 + 2h + h^2) - 1}{h}</mrow>
+            <mrow>\amp = \frac{2h + h^2}{h}</mrow>
+            <mrow>\amp = 2 + h</mrow>
+        </md>
+        <p>
+            That is, <m>m_{sec} = 2 + h</m> (as long as <m>h \neq 0</m>, since we cancelled out a factor of <m>h</m>), i.e. for various values of <m>h</m>, the slope of the resulting secant line is <m>2 + h</m>. Then, we can see that as <m>h</m> gets closer and closer to 0, <m>m_{sec} = 2 + h</m> gets closer and closer to 2. Then, in calculus, we say the slope of the tangent line is exactly 2. Then, in calculus, we say the slope of the tangent line is <em>exactly 2</em>. This seems somewhat contradictory, because by,
+        </p>
+        <me>
+            m_{sec} = \frac{2h + h^2}{h} = 2 + h
+        </me>
+        we are assuming that <m>h \neq 0</m>, but then also disregarding <m>h</m> by essentially letting <m>h = 0</m>.
+        </subsection>
+
+        <subsection>
+            <title>
+                The Area Problem (Area Under a Parabola)
+            </title>
+        <p>
+            Consider the area under the parabola <m>y = x^2</m> and above the <m>x</m>-axis, from <m>x = 0</m> to <m>x = 1</m>. This region is not a polygon, so its area can't be obtained by the usual area formulas. However, its area can be approximated by the area of rectangles. Divide the interval <m>[0,1]</m> into <m>n</m> equal pieces. For the rectangles, the width will be the length of the interval <m>[0,1]</m>, divided by the number of pieces, or <m>\frac{1}{n}</m>. The height of rectangle can be considered the $y$-coordinate of the parabola. To determine this, we can determine a general formula for the <m>x</m>-coordinate of the <m>k</m>th piece. The starting point is <m>x_0 = 0</m>, and the width of each rectangle is <m>\frac{1}{n}</m>, so the next point is <m>x_1 = \frac{1}{n}</m>, then <m>x_2 = \frac{2}{n}</m>, then <m>x_3 = \frac{3}{n}</m>, up to <m>x_n = \frac{n}{n} = 1</m>. That is, in general, <m>x_k = \frac{k}{n}</m>. Then, in the <m>k</m>th piece, the left endpoint is <m>x_{k-1} = \frac{k-1}{n}</m>, and its right endpoint is <m>x_k = \frac{k}{n}</m>. If we use the right endpoint, then the associated <m>y</m>-coordinate is,
+        </p>
+        <me>
+            f(x_k) = \brac{\frac{k}{n}}^2 = \frac{k^2}{n^2}
+        </me>
+        <p>
+            Then, the total area, say denoted by <m>\Area{R}</m>, is approximately equation to the sum of the areas of the <m>n</m> rectangles. That is, using summation notation,
+        </p>
+        <md>
+            <mrow>\Area{R} \approx \sum_{k=1}^n f(x_k) \Delta x_k \amp = \sum_{k=1}^n \frac{k^2}{n^2} \cdot \frac{1}{n}</mrow>
+            <mrow>\amp = \sum_{k=1}^n \frac{k^2}{n^3}</mrow>
+        </md>
+        <p>
+            Then, given a particular $n$, evaluating this summation gives an approximation for the desired area. To determine a closed-form formula for this summation, first notice that <m>n^3</m> is constant with respect to the summation, so it can be factored out,
+        </p>
+        <me>
+            \Area{R} \approx \frac{1}{n^3} \sum_{k=1}^n k^2
+        </me>
+        <p>
+            Then, notice that this area summation will depend on the summation of the first <m>n</m> squares, <m>\sum_{k=1}^n k^2</m>. From algebra, this sum has a closed-form formula given by,
+        </p>
+        <me>
+            \sum_{k=1}^n k^2 = \frac{n(n + 1)(2n + 1)}{6}
+        </me>
+        <p>
+            Then,
+        </p>
+        <md>
+            <mrow>\Area{R} \approx \frac{1}{n^3} \sum_{k=1}^n k^2 \amp = \frac{1}{n^3} \cdot \frac{n(n + 1)(2n + 1)}{6}</mrow>
+            <mrow>\amp = \frac{(n + 1)(2n + 1)}{6n^2}</mrow>
+        </md>
+        <p>
+            Intuitively, we expect that as <m>n</m> increases, the approximation is more and more accurate in estimating the ``exact" area <m>\Area{R}</m>. In the language of calculus, we say that in the limit as <m>n \to \infty</m>,
+        </p>
+        <me>
+            \lim_{n \to \infty} \frac{(n - 1)(2n - 1)}{6n^2} = \lim_{n \to \infty} \frac{1}{6} \brac{1 - \frac{1}{n}} \brac{2 - \frac{1}{n}} = \frac{1}{6} \cdot 1 \cdot 2 = \frac{1}{3}
+        </me>
+        <p>
+            That is, as <m>n</m> increases without bound, the area approximation becomes closer and closer to <m>\frac{1}{3}</m>. Then, in the language of calculus, we say that the area is exactly equal to <m>\frac{1}{3}</m>,
+        </p>
+        <me>
+            \Area{R} = \frac{1}{3}
+        </me>
+        <p>
+            This can be thought of as a discovery of the area of a region. Or, equivalently, a \textit{definition} of the area of the region.
+        </p>
+        <p>
+            In fact, this idea of determining the area of a region by splitting it up into smaller and smaller pieces, was known to the ancient Greeks, in particular Archimedes and Eudoxus of Cnidus. Of course, this was well before algebra was invented.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>The Calculus Principle, and Infinity</title>
+        <p>
+            The above examples illustrate the overarching principle of calculus.
+        </p>
+        <ol>
+            <li>First, we start with some quantity which seems difficult to compute exactly.</li>
+            <li>Then, we develop an approximation to that exact quantity, a method of slicing that difficult problem into smaller pieces, that we can compute exactly.</li>
+            <li>Then, improve the approximation.</li>
+            <li>Then, continue improving the approximation indefinitely, or <q>to infinity</q>, and observe what fixed number the approximation approaches.</li>
+        </ol>
+        <p>
+            This number, called a <em>limit</em>, is said to be the exact value of the quantity. A fundamental difference between pre-calculus and calculus is that calculus deals with infinity. In particular, quantities which are <q>infinitely large</q> or <q>infinitely small</q>. The structure of calculus is almost all simply variations on this idea. Also, this system of reasoning reflects how the universe works. For objects or phenomenon which are <q>continuous</q>, or <q>infinitely divisible</q>, such as curves, motion, etc.
+        </p>
+
+        <example>
+            <title>Computer graphics and animation</title>
+            <p>
+                In computer graphics, real-world objects and their surfaces, which are continuous and smooth, are approximated by models made up of polygons, most commonly triangles. By using many triangles, the approximation is accurate enough to be realistic to human perception. This technique is used in animated movies.
+            </p>
+        </example>
+
+        <example>
+            <title>Circles</title>
+            <p>
+                In fact, computers generate circles in a similar way as the Archimedes method above, by drawing a regular polygon with large number of sides (say, 180 or more sides), which is sufficient to give the visual impression that the polygon is a circle.
+            </p>
+        </example>
+
+        <example>
+            <title>Curves</title>
+            <p>
+                Curves in the plane can be approximated by straight line segments. In fact, this is how graphing calculators graph functions. They plot a large number of points, and connect those points with straight line segments. Because there are so many points, and the line segments are so small, this gives the visual impression of a curve.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Archimedes Quadrature of the Parabola (Area of a Parabolic Segment)</title>
+        <p>
+            Archimedes used the method of exhaustion to determine the area of a region bounded by a parabola and a line, called a parabolic segment. This was in his treatise called <em>Quadrature of the Parabola</em>. In Archimedes's time, area was called quadrature. Also, Archimedes thought of a parabola not as a quadratic equation (<m>y = ax^2 + bx + c</m>), because he did not have analytic geometry.
+        </p>
+        <p>
+            Archimedes used triangle shapes to make up the parabolic region. First, he formed a sequence of triangles which make up the area of the region. Each triangle has a vertex that where the tangent to the parabola is parallel to the base of the triangle. He proved that the first triangle is 8 times the area of the 2nd triangles, and more generally, at each step, the area of the <m>n</m>th triangle is 8 times the area of each of the 2 smaller triangles. Then, the area of the triangles at each next step is <m>\frac{1}{4}</m>th the area at the previous step. Then, if the area of the first triangle is 1 unit, then the area of the parabolic segment is equal to the infinite sum of the areas of the triangles,
+        </p>
+        <me>
+            A = 1 + \frac{1}{4} + \frac{1}{16} + \frac{1}{64} + \dots
+        </me>
+        <p>
+            Archimedes did not use this <q>infinite</q> sum. Instead, he proved, using strictly geometric means, that the area was not less than <m>\frac{4}{3}</m>, and also not greater than <m>\frac{4}{3}</m>, and so by conclusion must be equal to <m>\frac{4}{3}</m>.
+        </p>
+        <p>
+            You may recall that the infinite sum is an infinite geometric series, and has sum,
+        </p>
+        <me>
+            A = \frac{1}{1 - \frac{1}{4}} = \boxed{\frac{4}{3}}
+        </me>
+        <p>
+            That is, the ratio between the area of the parabolic segment to the big triangle is <m>\frac{4}{3}</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Circumference of a Circle (Approximating Pi)</title>
+        <p>
+            Even though <m>\pi</m> is defined to be the ratio of circumference to diameter, its precise value is elusive. You may recall that <m>\pi</m> is an irrational number, meaning that its decimal expansion has infinitely many digits, and its digits are non-repeating, and have no describable pattern. In fact, <m>\pi</m> is the limit of an unattainable process, i.e. defined by calculus.
+        </p>
+        
     </subsection>
 </section>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TFSC">
+    <title>Misc Applications of Calculus (WIP)</title>
+
+    <subsection>
+        <title>Applications of Calculus</title>
+        <p>
+            Broadly, calculus is a supporting player that works in the background of science.
+        </p>
+    </subsection>
+
+    <ul>
+        <li>Mathematical physics.</li>
+        <li>Engineering.</li>
+        <li>Chemistry.</li>
+        <li>Astronomy.</li>
+        <li>Economics. Finance. Business.</li>
+        <li>Statistics.</li>
+        <li>Medicine. Physician, how small changes in dosage affect body's response to a drug.</li>
+    </ul>
+
+    <ul>
+        <li>Newton's laws of motion.</li>
+        <li>Planetary motion. Why do the planets move in elliptical orbits. Deriving the fact that the planets move around the sun in elliptical orbits. In the 17th century, Johannes Kepler, German mathematician, studied the motion of the planets, and discovered that they follow mathematical patterns. Kepler was motivated by the religious belief that God created the world (in particular the planets, or the ``heavens") to have some kind of order. He spent decades observing the position of plants, recording data, and looking for patterns. He was helped by Tycho Brahe, Danish astronomer, who was skilled at recording accurate astrological observations, which Kepler analyzed. At first, he proposed a model for the 6 known planets (Earth, Mercury, Venus, Mars, Jupiter, and Saturn), which involved the 5 platonic solids nested in one another with inscribed and circumscribed spheres, and the 6 planets being in between them. Of course, we now know this is simply a coincidence, but in fact, this theory fit the observations pretty well, but not perfectly. Later, Kepler realized that the orbits were not quite circular but some kind of ovoid. Eventually, in 1609, Kepler concluded that the planets move around the sun in elliptical orbits. This fact is now known as Kepler's first law. Ellipses were studied by the ancient Greeks as a conic section, and this again illustrated the connection between nature and geometry.
+        \\ \\ Kepler's second law is that a line from the sun to the planet sweeps out equal areas in equal intervals of time. This is known as Kepler's second law. Intuitively, if the line between the planet and the sun is thought of as a windshield wiper, its rate of area swept out is constant. For example, if you plot the position of the planet once per month, the area swept will be equal. Essentially, it means that planets do not move at a constant speed, but rather move faster when they are closer to the sun, and slower when they are further away. Also, Kepler used Archimedes method of exhaustion to calculate these areas, approximating the sector of the ellipse with triangles.
+        \\ \\ In 1619, Kepler discovered that the square of the period $T$ of a planet is proportional to the cube of its average distance $a$ from the sun. In other words, $T^3/a^2$ is constant for all planets. Roughly, this means that the further away a planet is, the longer it takes to complete its orbit. It turns out that instead of average distance, it is the length of the semi-major axis? Kepler viewed the discovery of his laws as signs of God's handiwork. Kepler deduced his laws from observations, but did not explain them theoretically.
+        \\ \\ In 1687, Newton used his laws of gravitation, written in the language of calculus i.e. differential equations, to derive the elliptical orbits of the planets, and Kepler's other laws, proposed in his work \textit{Principia}. The varying position of a planet gave information about its velocity and acceleration, which in turn gave information about the forces acting on the planet, in particular gravity. A planet revolving around the sun changes its speed and direction of motion. Later on, Newton realized that Kepler's 2nd law was essentially equivalent to the law of conservation of angular momentum.
+        \\ \\ Can we also derive the average distance of a planet from the sun?</li>
+        <li>Why do hurricane winds spiral counterclockwise in the northern hemisphere?</li>
+        <li>How can one predict the effect of interest rate changes on economies and stock markets?</li>
+        <li>When will radioactive material be sufficiently decayed to enable safe handling?</li>
+        <li>How do warm ocean currents in the equatorial Pacific affect the climate of eastern North America?</li>
+        <li>How long will the concentration of a drug in the bloodstream remain at effective levels? Rate of change in the amount of drug at a particular time (i.e. drug absorption).</li>
+        <li>Why does an epidemic spread faster and faster and then slow down?</li>
+        <li>How can I be sure that the bridge I designed won't be destroyed in a windstorm?</li>
+        <li>Calculus is the foundation of traffic flow.</li>
+        <li>Calculus is a hidden supporting player behind many modern technologies, including radio, TV, microwave ovens, computers, GPS, putting astronauts on the moon, ultrasound, splitting the atom, unraveling the human genome (Steven Strogatz).</li>
+        <li>Applications to electric fields and electric force, magnetic field, James Clerk Maxwell (1860s), Maxwell's equations in the language of differential equations (calculus). Led to the technologies of wireless communication. Michael Faraday and Andre-Marie Ampere (experimental physics).</li>
+        <li>Curves modelling stock prices, blood pressure, etc.</li>
+        <li>Predator-prey systems.</li>
+        <li>Harvesting of populations (sustainable harvesting?). Survival and renewal of resources.</li>
+        <li>Calculus describes the rhythm of the tides?</li>
+        <li>Calculus describes how the flow of air allows a hummingbird to fly.</li>
+        <li>Applications to listening to music on smartphones (waves?), and laser checkout scanner at the supermarket.</li>
+        <li>Applications to trajectory design for the space program, differential equations used to calculate trajectories.</li>
+        <li>Rosalind Franklin, used Fourier analysis to study the patterns that x-rays make after they bounce off of DNA molecules, which led to the structure of DNA.</li>
+        <li>Current is the rate of change in change with respect to time, at a particular time.</li>
+        <li>Geology.</li>
+        <li>Rate of change of temperature over time.</li>
+    </ul>
+</section>

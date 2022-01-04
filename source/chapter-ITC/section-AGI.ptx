@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TFSC">
+    <title>Misc Ancient Greek Mathematics (WIP)</title>
+
+    \begin{itemize}
+        \item Numbers like $\pi$ and $\sqrt{2}$ were not thought of as numbers but as magnitudes. Believed in numbers as proportions, either whole numbers or ratios of whole numbers (rational numbers).
+        \item Avoided negative numbers, because of their reliance on geometry (you can't have negative length, or area).
+        \item Infinity was thought of as potential infinity, not actual infinity. Infinity was a process of indefinite continuation, rather than eventual completion. For example, you could form the sequence of natural numbers $1, 2, 3, \dots$ by indefinitely adding 1. However, there was not an idea of the set of all natural numbers $\mathbb{N}$.
+        \item Believed infinity was problematic.
+        \item Their rejection of irrational numbers were due to their rejection of infinite processes.
+        \item Developed a theory of proportions, which has parallels with modern real analysis and Dedekind cuts.
+        \item The Greek perspective on infinity was believed by mathematicians up to Euler, Newton, Gauss, etc.
+        \item Only in the 1900s, did infinity have a modern treatment.
+        \item Used infinite series, but avoided actual infinity.
+    \end{itemize}
+</section>

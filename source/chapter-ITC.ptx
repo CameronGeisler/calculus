@@ -8,4 +8,7 @@
 
         <xi:include href="./chapter-ITC/section-IAHOC.ptx"/>
         <xi:include href="./chapter-ITC/section-MP.ptx"/>
+        <xi:include href="./chapter-ITC/section-TFSC.ptx"/>
+        <!-- <xi:include href="./chapter-ITC/section-MAOC.ptx"/>
+        <xi:include href="./chapter-ITC/section-AGI.ptx"/> -->
 </chapter>
