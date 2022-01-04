@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TLSOF">
+    <title>Tangent Lines, Slopes of Functions</title>
+
+    <introduction>
+        Recall that a line has a slope. In particular, a linear function of the form <m>f(x) = mx + b</m> has a slope of <m>m</m>. Linear functions have a constant slope, i.e. a single number. For more general functions <m>f(x)</m>, their slopes vary, or change, i.e. are different for different values of <m>x</m>. For a curved function, it isn't even immediately clear how to <em>define</em> slope. Using the ideas of calculus, we can generalize the concept of slope for functions that are not linear, i.e. that are changing at a changing rate.
+    </introduction>
+    <subsection>
+        <title>Slopes of Continuous Functions, Tangent Lines and Secant Lines</title>
+        <p>
+            Consider a curve <m>C</m> that is the graph of <m>y = f(x)</m> where <m>f</m> is a continuous function, and is intuitively <q>smooth</q>. Then, let <m>P = (x_0, y_0)</m> be a point on the graph so that <m>y_0 = f(x_0)</m>, and assume that <m>P</m> is not an endpoint of the graph.
+        </p>
+        <p>
+            Recall that the tangent line to a circle is a line which touches the circle at exactly one point. It has the property that it is perpendicular to a radius segment which extends out to the point where it intersects the tangent line.
+        </p>
+        <!-- \begin{figure}[H]
+            \centering
+            \def\svgwidth{0.4\linewidth}
+            \input{../images/circle-tangent-line.pdf_tex}
+        \end{figure} -->
+        <p>
+            Intuitively, the <term>tangent line</term> to a curve at a point passes through that point, and has the same slope, steepness, or <q>direction</q> as the curve, at the point of tangency. For example, consider <url href="https://www.geogebra.org/m/vfqavd4b">this Desmos applet</url>. The word tangent comes from the Latin word for <q>touching</q>, intuitively because a tangent touches the curve at a single point, barely grazing it, instead of cutting across a curve in two places.
+        </p>
+        <p>
+            To determine the slope of the tangent line at <m>(x_0, f(x_0))</m>, we will consider the slope of the line between <m>(x_0, f(x_0))</m> and some nearby point, say <m>(x_0 + h, f(x_0 + h))</m>, where <m>h</m> is a small, non-zero number. This line between two points on the graph of a function is called a <term>secant line</term>. Then, the slope of this line is,
+        </p>
+        <md>
+            <mrow>m_{\text{sec}} \amp = \frac{\Delta y}{\Delta x}</mrow>
+            <mrow>\amp = \frac{f(x_0 + h) - f(x_0)}{(x_0 + h) - x_0}</mrow>
+            <mrow>\amp = \frac{f(x_0 + h) - f(x_0)}{h}</mrow>
+        </md>
+        <p>
+            In summary,
+        </p>
+        <me>
+            \boxed{m_{\text{sec}} = \frac{f(x_0 + h) - f(x_0)}{h}}
+        </me>
+        <p>
+            The quantity <m>\frac{f(x_0 + h) - f(x_0)}{h}</m> is sometimes called a <term>difference quotient</term>, because the numerator represents the difference in <m>y</m>-values, the denominator represents a difference in <m>x</m>-values, so it represents a quotient of differences. As <m>h</m> approaches 0, this approximate slope will be closer and closer to the slope of the tangent line. However, notice that if $h = 0$, then the expression becomes,
+        </p>
+        <me>
+            \frac{f(x_0 + 0) - f(x_0)}{0} = \frac{f(x_0) - f(x_0)}{0} = \frac{0}{0}
+        </me>
+        <p>
+            An expression of the form <m>\frac{0}{0}</m> is called <term>indeterminate</term>. However, we can still consider the behavior of this expression as <m>h \to 0</m>. In calculus, we \textit{define} the slope of the graph as the limit of the slope of the secant line, as <m>h \to 0</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>The Tangent Line</title>
+        <definition>
+            <p>Let <m>f</m> be continuous at <m>a</m>, such that the limit,
+                <me>
+                    \boxed{\lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} = m}
+                </me>
+                exists. Then, the <term>tangent line</term> to <m>f</m> at <m>a</m> is the line with slope <m>m</m> and that passes through the point <m>(x_0, f(x_0))</m>. An equation of this tangent line is,
+                <me>
+                    \boxed{y = m(x - x_0) + f(x_0)}
+                </me>
+                We sometimes also say that the line is <term>tangent</term> to <m>f</m> at <m>x_0</m>.
+            </p>
+        </definition>
+
+        Intuitively, if you zoom in on the graph, the graph will resemble a straight line. Then, the slope of this straight line is the slope of the tangent. Difference quotients were first written by Fermat in 1629, who applied it to polynomials. However, different quotients can be applied to any continuous function.
+    </subsection>
+
+    <subsection>
+        <title>Equivalent Formulation of the Tangent Slope</title>
+        <p>
+            An equivalent limit is,
+        </p>
+        <me>
+            \boxed{\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = m}
+        </me>
+        <p>
+            For this limit, <m>\frac{f(x) - f(x_0)}{x - x_0}</m> represents the slope of the secant line between the fixed point <m>(x_0,f(x_0))</m> and the arbitrary point <m>(x,f(x))</m>. The slope <m>m</m> of the tangent line is the limit of this slope as the arbitrary point approaches the fixed point. Taking the limit as the difference <m>h</m> between the two points approaches 0, is equivalent to taking the limit as one point <m>x</m> approaches the other point <m>a</m>. More precisely, the limits are equivalent in that substituting <m>h = x - x_0</m> into the first limit, we have that as <m>h \to 0</m>, <m>x \to x_0</m>, which results in the second limit.
+        </p>
+    </subsection>    
+</section>
