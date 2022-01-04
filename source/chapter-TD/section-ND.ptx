@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-ND">
+    <title>Numerical Differentiation</title>
+
+    <p>
+        Python program to evaluate difference quotients, using a program to evaluate limits numerically.
+    </p>
+
+</section>

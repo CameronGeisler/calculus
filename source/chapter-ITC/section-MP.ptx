@@ -69,7 +69,7 @@
         </p>
     </subsection>
 
-    <subsection>
+    <subsection xml:id="tangent-line-problem">
         <title>The Tangent Line Problem (Tangent of a Parabola)</title>
         <p>
             Consider the parabola <m>f(x) = x^2</m>, and consider the tangent line to the graph at <m>x = 1</m> (i.e. at the point <m>(1,1)</m>). Recall that to define a line, we need its slope and a point on the line. Of course, the tangent line must pass through the point <m>(1,1)</m>.

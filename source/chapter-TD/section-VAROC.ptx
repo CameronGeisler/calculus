@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-VAROC">
+    <title>Velocity and Rates of Change</title>
+
+    <introduction>
+        <p>
+            Recall that the initial interpretation of the derivative was as a \textit{slope} of a tangent line. There is an alternate and arguable more useful interpretation of a derivative: as a \textbf{rate of change}. First, we will consider possibly the most natural rate of change, which is velocity (the rate of change of position).
+        </p>
+        <p>
+            Calculus is often considered to be the mathematics of motion. Newton was a mathematician and physicist, and had a dynamic view of the world, and regarded functions <m>f(t)</m> as representing the amount of a quantity changing over time. Also, one initial motivation for the invention of calculus was Newton's study of the motion in physics, and of planets and other celestial bodies.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Motion and Velocity</title>
+        <p>
+            Consider the motion of a moving object. For simplicity, consider an object that is moving along a straight line, which is said to be in <term>rectilinear motion</term>. In particular, the position <m>x</m> of an object is given by <m>x = x(t)</m>. Recall that if the velocity of the object is constant, then this velocity <m>v</m> is given by,
+        </p>
+        <me>
+            v = \frac{\Delta x}{\Delta t}
+        </me>
+        <p>
+            However, motion is often dynamic, i.e. not static, where the velocity of an object changes continuously over time. Then, velocity is not just a number, but a function of <m>t</m>. In this case, things are more difficult. First, recall that we can still consider the <term>average velocity</term> of an object between times <m>t = a</m> and <m>t = b</m>, which is given by,
+        </p>
+        <me>
+            \boxed{v_{\text{avg}} = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1} = \frac{x(b) - x(a)}{b - a}}
+        </me>
+        <p>
+            Using calculus, we can define the so-called instantaneous velocity of an object.
+        </p>
+        <definition>
+            Broadly, the <term>instantaneous velocity</term> of an object (or simply its <em>velocity</em>) is its velocity at a single specific point in time.
+        </definition>
+        <p>
+            Instantaneous velocity is a subtle concept, since intuitively, any rate of change must involve two points to compare. If you only consider a <q>snapshot</q> in time, it doesn't seem to make sense to define a velocity at that single point. However, with the concepts of calculus, we can make this precise. Intuitively, <em>instantaneous velocity</em> is like the reading on a perfect speedometer. If the speedometer on a car says <q>50 km/h</q> this is interpreted as going 50 km/h at that specific point in time, not as an average velocity over a time period. Of course, an actual speedometer measures velocity over a very small time interval, to give a very good approximation of the (theoretical) instantaneous velocity.
+        </p>
+        <p>
+            More precisely, let <m>v(t)</m> be the instantaneous velocity of an object at a time <m>t</m>. Then, if <m>\Delta t</m> is a small change in <m>t</m>, then <m>v(t)</m> is approximately given by,
+        </p>
+        <me>
+            v(t) \approx \frac{\Delta x}{\Delta t} = \frac{x(t + \Delta t) - x(t)}{\Delta t}
+        </me>
+        <p>
+            Then, we expect that this approximation improves as <m>\Delta t \to 0</m>. Then, in the limit as <m>\Delta t \to 0</m>, we intuitively expect the right hand side to be <em>exactly equal</em> to the instantaneous velocity at <m>t</m>. Then, this the derivative of the position function <m>x(t)</m>,
+        </p>
+        <me>
+            \boxed{v(t) = \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t} = x'(t)}
+        </me>
+        <p>
+            That is, if we make <m>\Delta t</m> an infinitely small positive or negative number, and from both sides the difference quotient <m>\frac{x(t + \Delta t) - x(t)}{\Delta t}</m> approaches the same value, then we define that that to be the instantaneous velocity at <m>t</m>. In this way, instantaneous velocity at a time <m>t</m> is the <em>best constant approximation</em> for the velocity <em>around</em> <m>t</m>.
+        </p>
+
+        <theorem>
+            <title>Velocity is the derivative of position</title>
+            <p>
+                For an object with position given (in 1 dimension) given by <m>x(t)</m>, its velocity <m>v(t)</m> is given by the derivative of <m>x(t)</m>, i.e. <m>v(t) = x'(t)</m>.
+            </p>
+        </theorem>
+        <p>
+            Note that this models motion in 1 dimension, so the graph of the position function has its position on the vertical axis, and time on the horizontal axis. In this way, the object does not travel along the curve, but rather along the vertical axis.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Acceleration</title>
+        <p>
+            A similar analysis can be done with acceleration. If an object has velocity given by <m>v = v(t)</m>, then the <term>average acceleration</term> between times <m>t = a</m> and <m>t = b</m> is,
+        </p>
+        <me>
+            \boxed{a_{\text{avg}} = \frac{\Delta v}{\Delta t} = \frac{v(b) - v(a)}{b - a}}
+        </me>
+        <p>
+            In a similar way, the <term>instantaneous acceleration</term> (or simply <em>acceleration</em>) of an object is its acceleration at a single specific point in time. Let <m>a(t)</m> be the instantaneous velocity of an object at a time <m>t</m>. Then, similarly, if <m>\Delta t</m> is a small change in <m>t</m>, then we expect that <m>a(t)</m> is approximately,
+        </p>
+        <me>
+            a(t) \approx \frac{\Delta v}{\Delta t} = \frac{v(t + \Delta t) - v(t)}{\Delta t}
+        </me>
+        <p>
+            Then, similarly, as <m>\Delta t \to 0</m>,
+        </p>
+        <me>
+            \boxed{a(t) = \lim_{\Delta t \to 0} \frac{v(t + \Delta t) - v(t)}{\Delta t} = v'(t)}
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Motion of a Projectile (Freefall Motion)</title>
+        <p>
+            You may recall from high-school physics that an object in freefall motion (falling only under the force of gravity), has height <m>h(t)</m> given by,
+        </p>
+        <me>
+            h(t) = -\frac{1}{2} gt^2 + v_0 t + h_0
+        </me>
+        <p>
+            where <m>g</m> is the gravitational constant, <m>v_0</m> is its initial velocity of the object (up or down), and <m>h_0</m> is its initial height of the object. Then, the velocity function is,
+        </p>
+        <me>
+            v(t) = \frac{d}{dt} h(t) = -gt + v_0
+        </me>
+        <p>
+            This shows that the velocity of the object is a linear function (in <m>t</m>). Also, its acceleration is given by,
+        </p>
+        <me>
+            a(t) = \frac{d}{dt} v(t) = \frac{d}{dt} (-gt + v_0) = -g
+        </me>
+        <p>
+            This shows that the acceleration of the object is constant, and is solely due to gravity.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>More General Rates of Change</title>
+        <p>
+            More generally, given a differentiable function <m>y = f(x)</m>, we can interpret the number <m>f'(x_0)</m> as the rate of change of <m>y</m> with respect to <m>x</m>, as <m>x</m> passes through the value <m>x_0</m>. Or, the rate of change of <m>f</m> at the point <m>x_0</m>.
+        </p>
+        <p>
+            First, recall that for a function that is linear, for example, <m>y = 2x - 1</m>, the slope of this line is 2. We often also say that the rate of change in <m>y</m> per change in <m>x</m> is two units. This is because, for any increment <m>\Delta x = h</m> in <m>x</m>, the corresponding change in <m>y</m>, <m>\Delta y = f(x + h) - f(x)</m>, is given by,
+        </p>
+        <md>
+            <mrow>\Delta y = f(x + \Delta x) - f(x) \amp = 2(x + \Delta x) + 1 - \brac{2x + 1}</mrow>
+            <mrow>\amp = 2x + 2 \Delta x + 1 - 2x - 1</mrow>
+            <mrow>\amp = 2 \Delta x</mrow>
+        </md>
+        <p>
+            In other words, <m>\Delta y = 2 \Delta x</m>. That is, for any change is <m>x</m>, the corresponding change in <m>y</m> is always twice that amount. Sometimes, we say that <m>y</m> changes twice as fast as <m>x</m> changes. We also say that 2 is the constant rate of change of <m>y</m> with respect to <m>x</m>. More generally, for a linear function,
+        </p>
+        <me>
+            y = mx + b
+        </me>
+        <p>
+            We have, similarly,
+        </p>
+        <me>
+            \Delta y = m \Delta x
+        </me>
+        <p>
+            so <m>m</m> is the constant rate of change of <m>y</m> with respect to <m>x</m>. For a line, the relationship <m>\Delta y = m \Delta x</m> holds for all values of <m>\Delta x</m>. Dividing by <m>\Delta x</m> on both sides (if <m>\Delta x \neq 0</m>), 
+        </p>
+        <me>
+            \frac{\Delta y}{\Delta x} = m
+        </me>
+        <p>
+            More generally, if <m>f</m> is a general function, the different quotient,
+        </p>
+        <me>
+            \frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x}
+        </me>
+        <p>
+            depends on <m>x</m> and <m>\Delta x</m> (i.e. is not constant). If its value is <m>r</m> for some value of <m>x</m> and <m>\Delta x</m>, then the equation,
+        </p>
+        <me>
+            \Delta y = r \Delta x
+        </me>
+        <p>
+            holds, and says that the total change in <m>y</m> is exactly <m>r</m> times the total change in <m>x</m> over the interval <m>[x, x+\Delta x]</m>. Then, we can say that over this interval <m>y</m> changes on average <m>r</m> times as fast as <m>x</m>, and <m>r</m> is the average rate of change of <m>y</m> with respect to <m>x</m>.
+        </p>
+        <definition>
+            <p>
+                Let <m>y = f(x)</m>. The <term>average rate of change</term> of <m>y</m> with respect to <m>x</m> over the interval <m>[x_0, x_0 + \Delta x]</m>, is,
+                <me>
+                    \frac{\Delta y}{\Delta x} = \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}
+                </me>
+            </p>
+        </definition>
+        <p>
+            Then, the derivative is the limit as <m>\Delta x \to 0</m> of this expression. Then,
+        </p>
+        <definition>
+            <p>
+                Let <m>y = f(x)</m>. Then, the derivative,
+                <me>
+                    \eval{\frac{dy}{dx}}_{x=x_0} = f'(x_0)
+                </me>
+                represents the <term>instantaneous rate of change</term> of <m>y</m> with respect to <m>x</m> at the point <m>x_0</m>.
+            </p>
+        </definition>
+        <p>
+            Again, the instantaneous rate of change of a quantity <m>y</m> at a point <m>x_0</m> can be thought of as the best numerical approximation of the rate of change of <m>y</m> <em>around</em> <m>x_0</m>.
+        </p>
+        <p>
+            Then, average velocity and instantaneous velocity are a special case of this, when <m>y</m> represents distance (or displacement) and <m>x</m> represents time. 
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Geometry: Area of a Circle</title>
+        <p>
+            Recall that the area <m>A</m> of a circle is a function of its radius <m>r</m>, <m>A = \pi r^2</m>. Differentiating <m>A</m> with respect to <m>r</m>, we get,
+        </p>
+        <me>
+            \frac{dA}{dr} = 2 \pi r
+        </me>
+        <p>
+            Interestingly, this rate of change of area is exactly equal to the circumference of the circle. Also, for small <m>\Delta r</m>,
+        </p>
+        <me>
+            \Delta A \approx 2\pi r \Delta r
+        </me>
+        <p>
+            An intuitive way to see why this is true, is that when <m>r</m> increases by <m>\Delta r</m>, the added area forms a thin band around the existing circle. The area added by this thin band can be approximated by the area of a rectangle of width equal to the circumference of a circle, <m>2\pi r</m>, and height equal to <m>\Delta r</m>.
+        </p>
+        <p>
+            A similar analysis can be done for a sphere (intuitvely, the 3D analogue of a circle). Recall that the volume <m>V</m> of a sphere of radius <m>r</m> is given by,
+        </p>
+        <me>
+            V = \frac{4}{3} \pi r^3
+        </me>
+        <p>
+            Differentiating <m>V</m> with respect to <m>r</m>,
+        </p>
+        <me>
+            \frac{dV}{dr} = 4 \pi r^2
+        </me>
+        <p>
+            Notice that this is precisely the formula for the surface area of a sphere.
+        </p>
+    </subsection>
+
+</section>

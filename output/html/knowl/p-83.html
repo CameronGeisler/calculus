@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-04T14:50:27-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Consider the derivative of \(f(x) = \sqrt{x}\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\\
+\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h}
+\end{align*}
+</div>
+<p class="continuation">Then, it turns out that we can cancel the factor of \(h\) in the denominator by rationalizing the numerator,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}\\
+\amp = \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})}\\
+\amp = \lim_{h \to 0} \frac{h}{h(\sqrt{x + h} + \sqrt{x})}\\
+\amp = \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt{x}} \amp\amp \text{cancelling the common factor of }\\
+\amp = \frac{1}{\sqrt{x} + \sqrt{x}}\\
+\amp = \frac{1}{2\sqrt{x}}
+\end{align*}
+</div>
+<p class="continuation">Notice that while \(f(x) = \sqrt{x}\) is defined on \([0,\infty)\text{,}\) its derivative \(f'(x)\) is only differentiable on \((0,\infty)\text{,}\) in particular not differentiable at \(x = 0\text{.}\)</p>
+<span class="incontext"><a href="section-TLSOF.html#p-83">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-04T14:50:27-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Velocity and Rates of Change</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-TLSOF.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-TD.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-TLSOF.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-TD.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
+<li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
+<li><a href="section-MP.html" data-scroll="section-MP">Motivational Problems</a></li>
+<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-TD.html" data-scroll="chapter-TD"><span class="codenumber">2</span> <span class="title">The Derivative</span></a><ul>
+<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">Tangent Lines, Slopes of Functions</a></li>
+<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">The Derivative Function</a></li>
+<li><a href="section-VAROC.html" data-scroll="section-VAROC" class="active">Velocity and Rates of Change</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-VAROC"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Velocity and Rates of Change</span>
+</h2>
+<section class="introduction" id="introduction-6"><p id="p-103">Recall that the initial interpretation of the derivative was as a \textit{slope} of a tangent line. There is an alternate and arguable more useful interpretation of a derivative: as a \textbf{rate of change}. First, we will consider possibly the most natural rate of change, which is velocity (the rate of change of position).</p>
+<p id="p-104">Calculus is often considered to be the mathematics of motion. Newton was a mathematician and physicist, and had a dynamic view of the world, and regarded functions \(f(t)\) as representing the amount of a quantity changing over time. Also, one initial motivation for the invention of calculus was Newton's study of the motion in physics, and of planets and other celestial bodies.</p></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Motion and Velocity</span>
+</h3>
+<p id="p-105">Consider the motion of a moving object. For simplicity, consider an object that is moving along a straight line, which is said to be in <dfn class="terminology">rectilinear motion</dfn>. In particular, the position \(x\) of an object is given by \(x = x(t)\text{.}\) Recall that if the velocity of the object is constant, then this velocity \(v\) is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+v = \frac{\Delta x}{\Delta t}
+\end{equation*}
+</div>
+<p id="p-106">However, motion is often dynamic, i.e. not static, where the velocity of an object changes continuously over time. Then, velocity is not just a number, but a function of \(t\text{.}\) In this case, things are more difficult. First, recall that we can still consider the <dfn class="terminology">average velocity</dfn> of an object between times \(t = a\) and \(t = b\text{,}\) which is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{v_{\text{avg}} = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1} = \frac{x(b) - x(a)}{b - a}}
+\end{equation*}
+</div>
+<p id="p-107">Using calculus, we can define the so-called instantaneous velocity of an object.</p>
+<article class="definition definition-like" id="definition-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h4>Broadly, the <dfn class="terminology">instantaneous velocity</dfn> of an object (or simply its <em class="emphasis">velocity</em>) is its velocity at a single specific point in time.</article><p id="p-108">Instantaneous velocity is a subtle concept, since intuitively, any rate of change must involve two points to compare. If you only consider a “snapshot” in time, it doesn't seem to make sense to define a velocity at that single point. However, with the concepts of calculus, we can make this precise. Intuitively, <em class="emphasis">instantaneous velocity</em> is like the reading on a perfect speedometer. If the speedometer on a car says “50 km/h” this is interpreted as going 50 km/h at that specific point in time, not as an average velocity over a time period. Of course, an actual speedometer measures velocity over a very small time interval, to give a very good approximation of the (theoretical) instantaneous velocity.</p>
+<p id="p-109">More precisely, let \(v(t)\) be the instantaneous velocity of an object at a time \(t\text{.}\) Then, if \(\Delta t\) is a small change in \(t\text{,}\) then \(v(t)\) is approximately given by,</p>
+<div class="displaymath">
+\begin{equation*}
+v(t) \approx \frac{\Delta x}{\Delta t} = \frac{x(t + \Delta t) - x(t)}{\Delta t}
+\end{equation*}
+</div>
+<p id="p-110">Then, we expect that this approximation improves as \(\Delta t \to 0\text{.}\) Then, in the limit as \(\Delta t \to 0\text{,}\) we intuitively expect the right hand side to be <em class="emphasis">exactly equal</em> to the instantaneous velocity at \(t\text{.}\) Then, this the derivative of the position function \(x(t)\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{v(t) = \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t} = x'(t)}
+\end{equation*}
+</div>
+<p id="p-111">That is, if we make \(\Delta t\) an infinitely small positive or negative number, and from both sides the difference quotient \(\frac{x(t + \Delta t) - x(t)}{\Delta t}\) approaches the same value, then we define that that to be the instantaneous velocity at \(t\text{.}\) In this way, instantaneous velocity at a time \(t\) is the <em class="emphasis">best constant approximation</em> for the velocity <em class="emphasis">around</em> \(t\text{.}\)</p>
+<article class="theorem theorem-like" id="theorem-3"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Velocity is the derivative of position.</span>
+</h4>
+<p id="p-112">For an object with position given (in 1 dimension) given by \(x(t)\text{,}\) its velocity \(v(t)\) is given by the derivative of \(x(t)\text{,}\) i.e. \(v(t) = x'(t)\text{.}\)</p></article><p id="p-113">Note that this models motion in 1 dimension, so the graph of the position function has its position on the vertical axis, and time on the horizontal axis. In this way, the object does not travel along the curve, but rather along the vertical axis.</p></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Acceleration</span>
+</h3>
+<p id="p-114">A similar analysis can be done with acceleration. If an object has velocity given by \(v = v(t)\text{,}\) then the <dfn class="terminology">average acceleration</dfn> between times \(t = a\) and \(t = b\) is,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{a_{\text{avg}} = \frac{\Delta v}{\Delta t} = \frac{v(b) - v(a)}{b - a}}
+\end{equation*}
+</div>
+<p id="p-115">In a similar way, the <dfn class="terminology">instantaneous acceleration</dfn> (or simply <em class="emphasis">acceleration</em>) of an object is its acceleration at a single specific point in time. Let \(a(t)\) be the instantaneous velocity of an object at a time \(t\text{.}\) Then, similarly, if \(\Delta t\) is a small change in \(t\text{,}\) then we expect that \(a(t)\) is approximately,</p>
+<div class="displaymath">
+\begin{equation*}
+a(t) \approx \frac{\Delta v}{\Delta t} = \frac{v(t + \Delta t) - v(t)}{\Delta t}
+\end{equation*}
+</div>
+<p id="p-116">Then, similarly, as \(\Delta t \to 0\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{a(t) = \lim_{\Delta t \to 0} \frac{v(t + \Delta t) - v(t)}{\Delta t} = v'(t)}
+\end{equation*}
+</div></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Motion of a Projectile (Freefall Motion)</span>
+</h3>
+<p id="p-117">You may recall from high-school physics that an object in freefall motion (falling only under the force of gravity), has height \(h(t)\) given by,</p>
+<div class="displaymath">
+\begin{equation*}
+h(t) = -\frac{1}{2} gt^2 + v_0 t + h_0
+\end{equation*}
+</div>
+<p id="p-118">where \(g\) is the gravitational constant, \(v_0\) is its initial velocity of the object (up or down), and \(h_0\) is its initial height of the object. Then, the velocity function is,</p>
+<div class="displaymath">
+\begin{equation*}
+v(t) = \frac{d}{dt} h(t) = -gt + v_0
+\end{equation*}
+</div>
+<p id="p-119">This shows that the velocity of the object is a linear function (in \(t\)). Also, its acceleration is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+a(t) = \frac{d}{dt} v(t) = \frac{d}{dt} (-gt + v_0) = -g
+\end{equation*}
+</div>
+<p id="p-120">This shows that the acceleration of the object is constant, and is solely due to gravity.</p></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.4</span> <span class="title">More General Rates of Change</span>
+</h3>
+<p id="p-121">More generally, given a differentiable function \(y = f(x)\text{,}\) we can interpret the number \(f'(x_0)\) as the rate of change of \(y\) with respect to \(x\text{,}\) as \(x\) passes through the value \(x_0\text{.}\) Or, the rate of change of \(f\) at the point \(x_0\text{.}\)</p>
+<p id="p-122">First, recall that for a function that is linear, for example, \(y = 2x - 1\text{,}\) the slope of this line is 2. We often also say that the rate of change in \(y\) per change in \(x\) is two units. This is because, for any increment \(\Delta x = h\) in \(x\text{,}\) the corresponding change in \(y\text{,}\) \(\Delta y = f(x + h) - f(x)\text{,}\) is given by,</p>
+<div class="displaymath">
+\begin{align*}
+\Delta y = f(x + \Delta x) - f(x) \amp = 2(x + \Delta x) + 1 - \brac{2x + 1}\\
+\amp = 2x + 2 \Delta x + 1 - 2x - 1\\
+\amp = 2 \Delta x
+\end{align*}
+</div>
+<p id="p-123">In other words, \(\Delta y = 2 \Delta x\text{.}\) That is, for any change is \(x\text{,}\) the corresponding change in \(y\) is always twice that amount. Sometimes, we say that \(y\) changes twice as fast as \(x\) changes. We also say that 2 is the constant rate of change of \(y\) with respect to \(x\text{.}\) More generally, for a linear function,</p>
+<div class="displaymath">
+\begin{equation*}
+y = mx + b
+\end{equation*}
+</div>
+<p id="p-124">We have, similarly,</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta y = m \Delta x
+\end{equation*}
+</div>
+<p id="p-125">so \(m\) is the constant rate of change of \(y\) with respect to \(x\text{.}\) For a line, the relationship \(\Delta y = m \Delta x\) holds for all values of \(\Delta x\text{.}\) Dividing by \(\Delta x\) on both sides (if \(\Delta x \neq 0\)),</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\Delta y}{\Delta x} = m
+\end{equation*}
+</div>
+<p id="p-126">More generally, if \(f\) is a general function, the different quotient,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x}
+\end{equation*}
+</div>
+<p id="p-127">depends on \(x\) and \(\Delta x\) (i.e. is not constant). If its value is \(r\) for some value of \(x\) and \(\Delta x\text{,}\) then the equation,</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta y = r \Delta x
+\end{equation*}
+</div>
+<p id="p-128">holds, and says that the total change in \(y\) is exactly \(r\) times the total change in \(x\) over the interval \([x, x+\Delta x]\text{.}\) Then, we can say that over this interval \(y\) changes on average \(r\) times as fast as \(x\text{,}\) and \(r\) is the average rate of change of \(y\) with respect to \(x\text{.}\)</p>
+<article class="definition definition-like" id="definition-4"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h4>
+<p id="p-129">Let \(y = f(x)\text{.}\) The <dfn class="terminology">average rate of change</dfn> of \(y\) with respect to \(x\) over the interval \([x_0, x_0 + \Delta x]\text{,}\) is,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\Delta y}{\Delta x} = \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}
+\end{equation*}
+</div></article><p id="p-130">Then, the derivative is the limit as \(\Delta x \to 0\) of this expression. Then,</p>
+<article class="definition definition-like" id="definition-5"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h4>
+<p id="p-131">Let \(y = f(x)\text{.}\) Then, the derivative,</p>
+<div class="displaymath">
+\begin{equation*}
+\eval{\frac{dy}{dx}}_{x=x_0} = f'(x_0)
+\end{equation*}
+</div>
+<p class="continuation">represents the <dfn class="terminology">instantaneous rate of change</dfn> of \(y\) with respect to \(x\) at the point \(x_0\text{.}\)</p></article><p id="p-132">Again, the instantaneous rate of change of a quantity \(y\) at a point \(x_0\) can be thought of as the best numerical approximation of the rate of change of \(y\) <em class="emphasis">around</em> \(x_0\text{.}\)</p>
+<p id="p-133">Then, average velocity and instantaneous velocity are a special case of this, when \(y\) represents distance (or displacement) and \(x\) represents time.</p></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.5</span> <span class="title">Geometry: Area of a Circle</span>
+</h3>
+<p id="p-134">Recall that the area \(A\) of a circle is a function of its radius \(r\text{,}\) \(A = \pi r^2\text{.}\) Differentiating \(A\) with respect to \(r\text{,}\) we get,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dA}{dr} = 2 \pi r
+\end{equation*}
+</div>
+<p id="p-135">Interestingly, this rate of change of area is exactly equal to the circumference of the circle. Also, for small \(\Delta r\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta A \approx 2\pi r \Delta r
+\end{equation*}
+</div>
+<p id="p-136">An intuitive way to see why this is true, is that when \(r\) increases by \(\Delta r\text{,}\) the added area forms a thin band around the existing circle. The area added by this thin band can be approximated by the area of a rectangle of width equal to the circumference of a circle, \(2\pi r\text{,}\) and height equal to \(\Delta r\text{.}\)</p>
+<p id="p-137">A similar analysis can be done for a sphere (intuitvely, the 3D analogue of a circle). Recall that the volume \(V\) of a sphere of radius \(r\) is given by,</p>
+<div class="displaymath">
+\begin{equation*}
+V = \frac{4}{3} \pi r^3
+\end{equation*}
+</div>
+<p id="p-138">Differentiating \(V\) with respect to \(r\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dV}{dr} = 4 \pi r^2
+\end{equation*}
+</div>
+<p id="p-139">Notice that this is precisely the formula for the surface area of a sphere.</p></section></section></div></main>
+</div>
+</body>
+</html>

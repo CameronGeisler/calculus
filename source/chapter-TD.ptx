@@ -7,4 +7,8 @@
         </introduction>
 
         <xi:include href="./chapter-TD/section-TLSOF.ptx"/>
+        <xi:include href="./chapter-TD/section-TDF.ptx"/>
+        <xi:include href="./chapter-TD/section-VAROC.ptx"/>
+        <!-- <xi:include href="./chapter-TD/section-ND.ptx"/> -->
+
 </chapter>

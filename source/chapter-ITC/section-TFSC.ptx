@@ -3,10 +3,8 @@
 <section xml:id="section-TFSC">
     <title>Tips for Studying Calculus</title>
 
-    <subsection>
-        <title>Tips for Studying Calculus</title>
     <p>
-        Calculus is an infamously challenging subject for many students. This is because calculus requires a very solid foundation of algebra and pre-calculus. In particular, doing calculus by-hand, in an academic setting. This includes:
+        Calculus is an infamously challenging subject for many students. This is because calculus, traditionally done by-hand in an academic setting requires a very solid foundation of algebra and pre-calculus. This includes:
     </p>
     <ul>
         <li>Being skilled at algebraic manipulations.</li>
@@ -17,5 +15,4 @@
     <p>
         Often, 75-90% of a calculus problem will depend on pre-calculus skills. Often, the <q>calculus</q> part just involves a simple rule or procedure, and the rest might include solving an equation, or doing some algebraic manipulation, both of which are pre-calculus skills. There is a saying that <q>students learn pre-calculus in calculus, and calculus in differential equations</q>. Focusing on the first half, this means that many students studying calculus, they have to spend a large focus on learning and mastering pre-calculus.
     </p>
-    </subsection>
 </section>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TLSOF">
+    <title>The Derivative Function</title>
+
+    <introduction>
+        Recall that a line has constant slope, and for a general function, its slope can vary at different points. In this way, the slope of a function <m>f</m> is itself a function of <m>x</m>, called the <em>derivative</em> of <m>f</m>.
+    </introduction>
+
+    <subsection>
+        <title>The Derivative</title>
+        <definition>
+            <p>
+                Let <m>f</m> be a function. The <term>derivative</term> of <m>f</m>, denoted by <m>f'</m>, is another function, defined by,
+            <me>
+                \boxed{f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}}
+            </me>
+                The domain of <m>f'</m> is all values of <m>x</m> where the limit in <m>h</m> exists (as a real number). If <m>f'(x)</m> exists, then we say that <m>f</m> is <term>differentiable</term> at <m>x</m>. Otherwise, <m>f</m> is <term>non-differentiable</term> at <m>x</m>.
+            </p>
+            <ul>
+                <li>The action of determining the derivative of a function is often called <q>taking the derivative</q> or <q>differentiating</q>.</li>
+                <li>The derivative <m>f'</m> is read as <q><m>f</m> prime</q> and <q><m>f'(x)</m></q> as <q><m>f</m> prime of <m>x</m></q>.</li>
+            </ul>
+        </definition>
+
+        <p>
+            The derivative of <m>f</m> is a function whose outputs are the slopes of <m>f</m>. Intuitively, the outputs for the derivative of a function come from evaluating the associated limit <m>\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</m> for each value of <m>x</m> in the domain of <m>f</m>, and plotting the results. Consider <url href="https://www.geogebra.org/m/DH4BpjGP">this Desmos applet for the derivative</url>. In other words,
+        </p>
+        <me>
+            \boxed{\text{The output $f'(x)$ at a particular value of $x$ is the slope of the tangent line of $f$ at $x$}}
+        </me>
+        <p>
+            There is an alternate notation that is equivalent, which is,
+        </p>
+        <me>
+            \boxed{f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}}
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Graphical Differentiation</title>
+        <p>
+            Consider <url href="https://www.geogebra.org/m/BDYnGhbt">this GeoGebra applet</url>, which helps to visualize the graph of the derivative as a function which is derived from the original function.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Tangent Line and Derivatives</title>
+        <p>
+            The value of the derivative function <m>f'</m> at a point <m>x_0</m> is the number <m>f'(x_0)</m>, given by,
+        </p>
+        <me>
+            f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}
+        </me>
+        <p>
+            which represents the slope of the graph at <m>x_0</m>, i.e. the slope of the tangent line of the graph <m>y = f(x)</m> at <m>x_0</m>. In other words, the derivative is a function whose outputs are slopes. Using derivative notation, the tangent line to the graph <m>y = f(x)</m> at <m>(x_0, f(x_0))</m> is,
+        </p>
+        <me>
+            y = f'(x_0)(x - x_0) + f(x_0)
+        </me>
+        <p>
+            In particular, notice that <m>f'(x) = 0</m> precisely when $f$ has a horizontal tangent line at <m>x</m>. The equation of this line can be written in the familiar slope-intercept form,
+        </p>
+        <me>
+            y = \underbrace{f'(x_0)}_m x + \underbrace{f(x_0) - x_0 f'(x_0)}_{b}
+        </me>
+        <p>
+            and so is of the form <m>y = mx + b</m> where <m>m = f'(x_0)</m> and <m>b = f(x_0) - x_0 f'(x_0)</m>. The key question here is how to determine the derivative <m>f'(x_0)</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Derivative of a Constant Function</title>
+        <p>
+            A constant function <m>f(x) = k</m> is a horizontal line, which has slope 0, so we would expect that its derivative would be 0.
+        </p>
+        <theorem>
+            <p>If <m>f(x) = k</m> for some <m>k \in \mathbb{R}</m>, then <m>f'(x) = 0</m>.</p>
+        </theorem>
+        <proof>
+            <md>
+                <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \amp\amp \text{by definition of derivative</mrow>
+                <mrow>\amp = \lim_{h \to 0} \frac{k - k}{h} \amp\amp \text{as $f(x + k) = f(x) = k$}</mrow>
+                <mrow>\amp = \lim_{h \to 0} \frac{0}{h}</mrow>
+                <mrow>\amp = \lim_{h \to 0} 0</mrow>
+                <mrow>\amp = 0</mrow>
+            </md>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Derivative of a Linear Function</title>
+        <p>
+            Recall that linear functions have constant slope. In this way we expect that the derivative of a line is constant. In particular, the slope of a line <m>f(x) = mx + b</m> is <m>m</m>.
+        </p>
+        <theorem>
+            <p>If <m>f(x) = mx + b</m> for some <m>b, m \in \mathbb{R}</m>, then <m>f'(x) = m</m>.</p>
+        </theorem>
+        <proof>
+            <md>
+                <mrow>f'(x) \amp = \lim_{h \to 0} \frac{m(x + h) + b - (mx + b)}{h}</mrow>
+                <mrow>\amp = \lim_{h \to 0} \frac{mh}{h}</mrow>
+                <mrow>\amp = \lim_{h \to 0} m</mrow>
+                <mrow>\amp = m</mrow>
+            </md>
+            <p>
+                Again, here, the difference quotient simplifies to <m>m</m>, because the slope does not depend on <m>h</m>.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Determining Derivatives Using the Definition</title>
+        <p>
+            Consider the limit involved in the definition of the derivative,
+        </p>
+        <me>
+            \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+        </me>
+        <p>
+            This limit cannot be evaluated immediately, because substituting <m>h = 0</m> results in an expression of the form <m>\frac{0}{0}</m>, which is an indeterminate form. In this way, evaluating the limit requires manipulating the difference quotient into a different form. This is the most important step, and it can be easy or challenging depending on the function <m>f</m>. In summary, to determine the derivative using the limit definition,
+        </p>
+        <ol>
+            <li>Write down and evaluate the definition,
+                <me>
+                    \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+                </me>
+                for the particular function <m>f</m>.
+            </li>
+            <li>Manipulate the difference quotient to a form which allows the limit to be evaluated.</li>
+            <li>Evaluate the limit as <m>h \to 0</m>.</li>
+        </ol>
+        <p>
+            For the first few examples, it will involve cancelling a common factor of <m>h</m> from the numerator and denominator.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Derivative of Some Basic Functions</title>
+
+        <p>
+            The previous examples were somewhat trivial, because the functions were linear, and so their derivatives are simply results from pre-calculus. For functions which are non-linear, the definition of derivative becomes more clear.
+        </p>
+
+        <example>
+            <title>Squaring function</title>
+            <p>
+                Consider the derivative of <m>f(x) = x^2</m>. Recall that we previously computed the slope of the tangent line of this function at <m>x = 1</m>, in <xref ref="tangent-line-problem"/>. Here, we can compute the slope at an arbitrary value of <m>x</m>, which is the derivative.
+                <md>
+                    <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{(x^2 + 2xh + h^2) - x^2}{h}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{2xh + h^2}{h}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} (2x + h)</mrow>
+                    <mrow>f'(x) \amp = 2x</mrow>
+                </md>
+                There is a nice visualization for this derivative. Let <m>y = x^2</m> represent the area of a square with side length <m>x</m>. Then, for some small increment <m>\Delta x</m>, the added area is <m>\Delta y = 2x \Delta x + (\Delta x)^2</m>. Then,
+                <md>
+                    <mrow>\frac{\Delta y}{\Delta x} \amp = \frac{2x \Delta x + (\Delta x)^2}{\Delta x}</mrow>
+                    <mrow>\amp = 2x + \Delta x</mrow>
+                </md>
+                Then, as <m>\Delta x \to 0</m>, we get,
+                <me>
+                    \frac{dy}{dx} = 2x
+                </me>
+            </p>
+        </example>
+
+        <example>
+            <title>Reciprocal function</title>
+            <p>
+                Consider the derivative of <m>f(x) = \frac{1}{x}</m>,
+                <md>
+                    <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{h}</mrow>
+                </md>
+                To simplify this difference quotient, we first write this complex fraction as a single fraction, by multiplying numerator and denominator by <m>x(x+h)</m>,
+                <md>
+                    <mrow>\amp = \lim_{h \to 0} \frac{x - (x + h)}{hx(x + h)}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} -\frac{h}{hx(x + h)}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} -\frac{1}{x(x + h)}</mrow>
+                    <mrow>\amp = -\frac{1}{x^2}</mrow>
+                </md>
+                In particular, notice that <m>f'(x) \le 0</m> for all <m>x \neq 0</m>, and as <m>x \to \infty</m>, <m>f'(x) \to 0</m>, the slope of the tangents becomes less steep.
+            </p>
+        </example>
+        
+        <example>
+            <title>Square root function</title>
+            <p>
+                Consider the derivative of <m>f(x) = \sqrt{x}</m>,
+                <md>
+                    <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h}</mrow>
+                </md>
+                Then, it turns out that we can cancel the factor of <m>h</m> in the denominator by rationalizing the numerator,
+                <md>
+                    <mrow>\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{h}{h(\sqrt{x + h} + \sqrt{x})}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt{x}} \amp\amp \text{cancelling the common factor of <m>h</m>}</mrow>
+                    <mrow>\amp = \frac{1}{\sqrt{x} + \sqrt{x}}</mrow>
+                    <mrow>\amp = \frac{1}{2\sqrt{x}}</mrow>
+                </md>
+                Notice that while <m>f(x) = \sqrt{x}</m> is defined on <m>[0,\infty)</m>, its derivative <m>f'(x)</m> is only differentiable on <m>(0,\infty)</m>, in particular not differentiable at <m>x = 0</m>.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Derivative Notation</title>
+        <p>
+            The notation <m>f'</m> to denote the derivative, called <term>prime notation</term>, was developed by <term>Joseph-Louis Lagrange</term> (1736-1813), Italian mathematician. An alternate notation was used by Leibniz, called <term>Leibniz notation</term>. If <m>y</m> is a function of <m>x</m>, then Leibniz denoted the derivative as,
+        </p>
+        <me>
+            \frac{dy}{dx}
+        </me>
+        <p>
+            read as <q>the derivative of <m>y</m> with respect to <m>x</m></q>, or sometimes simply by reading the letters (i.e. <q>dee-why dee-ex</q>). Note that just as <m>\Delta x</m> is not a product of <m>\Delta</m> with <m>x</m>, <m>dx</m> (and <m>dy</m>) does not represent the product of <m>d</m> with <m>x</m>. The advantage of this notation is that it enables us to consider derivatives without reference to a dependent variable, as we can write,
+        </p>
+        <me>
+            \frac{d}{dx} f(x) = f'(x)
+        </me>
+        <p>
+            In this notation, intuitively the symbol <m>\frac{d}{dx}</m> can be thought of as an operator which is <em>applied</em> to <m>f(x)</m> and whose result is the derivative of <m>f'(x)</m>. In other words,
+        </p>
+        <me>
+            y = f(x) \quad \implies \quad \frac{dy}{dx} = f'(x)
+        </me>
+        <p>
+            Also, we can consider derivatives of expressions without defining a function, for example,
+        </p>
+        <me>
+            \frac{d}{dx} x^2 = 2x
+        </me>
+        <p>
+            However, it is important to note that only a function can have a derivative. One downside to Leibniz notation is that evaluating derivatives is a bit clunky. The derivative of <m>y</m> when <m>x = a</m> is denoted by,
+        </p>
+        <me>
+            \eval{\frac{dy}{dx}}_{x=a}
+        </me>
+        <p>
+            Prime notation and Leibniz notation are mostly interchangeable. Leibniz notation tends to be used more in applications, where <m>y</m> and <m>x</m> represent physical quantities.
+        </p>
+        <p>
+            Prime notation and Leibniz notation are mostly interchangeable. Leibniz notation tends to be used more in applications, where <m>y</m> and <m>x</m> represent physical quantities.
+        </p>
+        <p>
+            There are also alternative notations which are used less often, or are used for other more advanced areas of mathematics which use calculus. For a function <m>y = f(x)</m>, these include,
+        </p>
+        <me>
+            \frac{df}{dx} \quad \frac{d}{dx} f \quad \frac{d}{dx} f(x) \quad D_x f
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Leibniz Notation, Derivative as a Limit of a Ratio, Differentials, Infinitesimals</title>
+        <p>
+            Notice that Leibniz notation <m>\frac{dy}{dx}</m> suggests that the derivative is a quotient of two quantities <m>dy</m> and <m>dx</m>. When calculus was first developed in the 17th century, derivatives <em>were</em> treated as a quotient of infinitely small quantities. These quantities were called <term>infinitesimals</term>, which are positive quantities that are smaller in magnitude than any real number, but are not zero. Leibniz focused on this perspective of the derivative.
+        </p>
+        <p>
+            However, infinitesimals are somewhat problematic logically, because a real number with these properties does not exist. This problem created logical difficulties for the mathematicians at that time (what are infinitesimals? do they <q>exist</q>?). However, using infinitesimals often provided correct results. Later on, calculus was reformulated into the limit definition used today.
+        </p>
+        <p>
+            It is possible to assign meaningful interpretations to <m>dy</m> and <m>dx</m>, however, for now, we will treat <m>\frac{dy}{dx}</m> as an indivisible symbol which represents the derivative of <m>y</m>, which is a function of <m>x</m>. In any case, it is helpful to think of the derivative <m>\frac{dy}{dx}</m> conceptually as a quotient or ratio of infinitesimals. That is, the ratio of an infinitely small change in <m>y</m> to an infinitely small change in <m>x</m>. Just as <m>\Delta x</m> and <m>\Delta y</m> represent a small change in <m>x</m> and <m>y</m>, <m>dx</m> and <m>dy</m> intuitively represent an infinitesimal change in <m>x</m> and <m>y</m>. Put another way, <m>dx</m> and <m>dy</m> represent infinitely small <em>differences</em> between two values of <m>x</m> and <m>y</m>. Quite literally, the reason it is called <em>differential</em> calculus is because <q>differentiating</q> literally means <q>identifying differences</q>. 
+        </p>
+        <!-- Leibniz developed the introductory theory of differentials, which are small changes in time. -->
+        <p>
+            More concretely, suppose that <m>y = f(x)</m>, and suppose that <m>x</m> is changed by a small increment <m>\Delta x</m>, and consider the resulting change in <m>\Delta y</m> in <m>y</m>. In particular, a change from <m>x</m> to <m>x</m> will result in a change of <m>y</m> from <m>f(x)</m> to <m>f(x + \Delta x)</m>, or,
+        </p>
+        <me>
+            \boxed{\Delta y = \underbrace{f(x + \Delta x)}_{\text{new $y$}} - \underbrace{f(x)}_{\text{old $y$}}}
+        </me>
+        <p>
+            Then, the ratio of these changes is,
+        </p>
+        <me>
+            \frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x}
+        </me>
+        <p>
+            The right-hand side is a difference quotient, except with <m>\Delta x</m> as the increment instead of the previously-used <m>h</m>. In this way, if <m>\Delta x</m> is small, then,
+        </p>
+        <me>
+            \frac{\Delta y}{\Delta x} \approx f'(x)
+        </me>
+        <p>
+            Then, as the increment <m>\Delta x</m> becomes smaller and smaller, this approximation becomes more accurate. In the limit as <m>\Delta x \to 0</m>,
+        </p>
+        <me>
+            \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+        </me>
+        <p>
+            This expression is simply the derivative of <m>f</m>, with <m>\Delta x</m> instead of <m>h</m>. However, the labelling of the symbols is irrelevant, so,
+        </p>
+        <me>
+            \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \frac{dy}{dx} = f'(x)
+        </me>
+        <p>
+            In other words,
+        </p>
+        <me>
+            \boxed{\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \frac{dy}{dx}}
+        </me>
+        <p>
+            Note that this <m>\Delta</m> notation now makes Leibniz's notation <m>\frac{dy}{dx}</m> more suitable. Also, in this way, <m>\frac{dy}{dx}</m> is not a ratio, but rather the limit of a ratio.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Summary</title>
+        <p>
+            Derivative calculations involve a particular kind of limit calculation, and notice that these limit calculations, like before, rely crucially on algebra, not calculus. The only part where calculus is involved is for the limit calculation, which simply involves substituting in a value of a variable.
+        </p>
+    </subsection>
+</section>
