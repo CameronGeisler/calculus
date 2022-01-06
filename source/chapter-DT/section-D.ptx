@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-D">
+    <title>Differentiability</title>
+
+    <subsection>
+        <title>Differentiability on an Interval</title>
+        <definition>
+            If a function is defined on an open interval <m>(a,b)</m>, then <m>f</m> is <term>differentiable</term> on <m>(a,b)</m> if <m>f</m> is differentiable for all <m>x \in (a,b)</m>.
+        </definition>
+        <p>
+            Functions that are differentiable are intuitively <q>smooth</q>. Values of <m>x</m> in <m>D(f)</m> where <m>f</m> is non-differentiable and are not endpoints are called <term>singular points</term> of <m>f</m>.
+        </p>
+        <p>
+            Note that we used an open interval <m>(a,b)</m> and did not include the endpoints. This is because if <m>f</m> is defined on a closed interval <m>[a,b]</m>, then it cannot be differentiable at the endpoints <m>x = a</m> or <m>x = b</m>, because the (two-sided) limit cannot exist if the function is only defined on one side.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Continuous But Not Differentiable</title>
+        <example>
+            <title>Derivative of absolute value function</title>
+            <p>
+                Consider the derivative of the absolute value function,
+                <me>
+                    f(x) = \abs{x} = \begin{cases} x \amp x \geq 0 \\ -x \amp x \lt 0 \end{cases}
+                </me>
+                For <m>x \neq 0</m>, <m>f</m> is differentiable. In particular, for <m>x > 0</m>, <m>f'(x) = \frac{d}{dx} x = 1</m>, and for <m>x \lt 0</m>, <m>f'(x) = \frac{d}{dx} (-x) = -1</m>. However, at <m>x = 0</m>,
+                <md>
+                    <mrow>f'(0) \amp = \lim_{h \to 0} \frac{\abs{0 + h} - \abs{0}}{h}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{\abs{h}}{h}</mrow>
+                </md>
+                <ul>
+                    <li>
+                        From the right, as <m>h \to 0+</m>, <m>\abs{h} = h</m>, and so,
+                        <me>
+                            \lim_{h \to 0+} \frac{\abs{h}}{h} = \lim_{h \to 0} \frac{h}{h} = \lim_{h \to 0} 1 = 1
+                        </me>
+                        Thus, from the right, the slopes approach 1 (this can be confirmed graphically).
+                    </li>
+                    <li>
+                        However, from the left, as <m>h \to 0-</m>, <m>\abs{h} = -h</m>, and so,
+                        <me>
+                            \lim_{h \to 0-} \frac{\abs{h}}{h} = \lim_{h \to 0-} \frac{-h}{h} = \lim_{h \to 0} -1 = -1
+                        </me>
+                        From the left, the slopes approach -1.
+                    </li>
+                </ul>
+                Since these one sided limits are unequal, <m>\lim_{h \to 0} \frac{\abs{h}}{h}</m> does not exist, and so <m>f</m> is not differentiable at <m>x = 0</m>. In summary,
+                <me>
+                    \frac{d}{dx} \abs{x} = \begin{cases} 1 \amp x > 0 \\ -1 \amp x \lt 0 \end{cases}
+                </me>
+                This can be summarized as,
+                <me>
+                    \boxed{\frac{d}{dx} \abs{x} = \frac{\abs{x}}{x} \qquad x \neq 0}
+                </me>
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <p>
+            If a function <m>f</m> is continuous at <m>x</m>, it may or may not be differentiable at <m>x</m>. For example, <m>f(x) = \abs{x}</m> is continuous but not differentiable at <m>x = 0</m>. However, the converse is true, in that differentiability implies continuity.
+        </p>
+        <theorem>
+            Let <m>f</m> be a function. If <m>f</m> is differentiable at <m>x = a</m>, then it is continuous at <m>x = a</m>.
+        </theorem>
+        <p>
+            Intuitively, this theorem says that if a function is smooth at a point <m>a</m>, then it can't have a discontinuity there. Alternatively, it is more intuitive to consider the contrapositive, that if <m>x</m> is not continuous at <m>a</m> (i.e. it has a break or jump), then it is not differentiable at <m>a</m> (the slope of a tangent line cannot be found).
+        </p>
+        <corollary>
+            <p>
+                If <m>f</m> is discontinuous at <m>a</m>, then <m>f</m> is not differentiable at <m>a</m>.
+            </p>
+        </corollary>
+    </subsection>
+</section>

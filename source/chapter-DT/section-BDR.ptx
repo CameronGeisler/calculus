@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-BDR">
+    <title>Basic Differentiation Rules</title>
+
+    <subsection>
+        <title>Differentiation Rules and Systematic Differentiation</title>
+        <p>
+            Calculating derivatives using the limit definition can be tedious and sometimes difficult, especially for more complicated functions. Instead, we can develop <term>differentiation rules</term>,
+        </p>
+        <ol>
+            <li>First, rules to differentiate general families of functions (e.g. polynomials, trigonometric functions, exponential and logarithmic functions, etc.)</li>
+            <li>Then, develop rules to differentiate combinations of those general functions (sums, differences, products, quotients, compositions) in terms of the derivatives of the original functions.</li>
+        </ol>
+        <p>
+            Combining these two collections of rules will allow for computing derivatives of every elementary function covered in pre-calculus.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Derivative of Power Functions, General Power Rule</title>
+        <p>
+            For power functions, where the variable is raised to a constant power, there is a simple rule for differentiation.
+        </p>
+        <theorem>
+            <title>Power rule for derivatives</title>
+            <p>
+                If <m>f(x) = x^r</m> for some <m>r \in \mathbb{R}</m>, then <m>f'(x) = rx^{r-1}</m>. In other words,
+                <me>
+                    \boxed{\frac{d}{dx} x^r = rx^{r-1}}
+                </me>
+            </p>
+        </theorem>
+        <p>
+            In other words, to differentiate a function that is some power of the variable <m>x</m>, <q>bring down</q> the exponent <m>r</m> into the <q>front</q> as a coefficient, and subtract 1 from the exponent.
+        </p>
+        <p>
+            This theorem is widely used, because it allows for differentiation of polynomials, but also radicals (i.e. expressions of the form <m>\sqrt[b]{x^a} = x^{a/b}</m>), and in general any term that can be represented as a power of the variable <m>x</m>. However, it is difficult to prove in full generality without using more advanced rules introduced later on.
+        </p>
+        <example>
+            <p>
+                Notice that the fact that,
+                <me>
+                    \frac{d}{dx} x = 1 \qquad \frac{d}{dx} x^2 = 2x \qquad \frac{d}{dx} x^3 = 3x^2 \qquad \frac{d}{dx} \brac{\frac{1}{x}} = -\frac{1}{x^2}
+                </me>
+                are special cases of this rule, with <m>r = 1, 2, 3</m> and <m>r = -1</m>, respectively.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Sum, Difference, and Constant Multiple Rules</title>
+        <theorem>
+            <p>
+                Let f, g$ be functions, differentiable at <m>x</m>, and let <m>k \in \mathbb{R}</m>. Then, the functions <m>f + g</m>, <m>f - g</m>, and <m>kf</m> are all differentiable at <m>x</m>, and,
+                <ul>
+                    <li><term>Sum/difference rule</term>.
+                        <me>
+                            \boxed{(f + g)'(x) = f'(x) + g'(x)}
+                        </me>
+                        The derivative of a sum/difference is the sum/difference of the derivatives of the individual functions.
+                    </li>
+                    <li>
+                        <term>Constant multiple rule</term>.
+                        <me>
+                            \boxed{(kf)'(x) = kf'(x)}
+                        </me>
+                        The derivative of a constant multiple times a function is that constant times the derivative of the function.
+                    </li>
+                </ul>
+            </p>
+        </theorem>
+        <p>
+            This theorem is about a single point <m>x</m>, but it of course can be generalized to all points in an interval <m>(a,b)</m>. Intuitively, the first statement means that the slope of a sum of functions is the sum of the slopes of the individual functions. The second says that scaling a function by a vertical stretch or compression applies the same scaling to the slopes of the function.
+        </p>
+        <p>
+            The sum rule can be naturally generalized to $n$ functions.
+        </p>
+        <corollary>
+            Let <m>f_1, \dots, f_n</m> be functions, differentiable at <m>x</m>. Then, <m>f_1 + \dots + f_n</m> is differentiable at <m>x</m>, and,
+            <me>
+                \boxed{(f_1 + \dots + f_n)'(x) = f_1'(x) + \dots + f_n'(x)}
+            </me>
+        </corollary>
+    </subsection>
+    
+    <subsection>
+        <title>Differentiation of Polynomials</title>
+        <p>
+            By combining all of the previous results, we can show that any polynomial is differentiable on <m>\mathbb{R}</m>, and determine its derivative. Recall that a polynomial is a function of the form,
+        </p>
+        <me>
+            f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+        </me>
+        <p>
+            where <m>a_n, \dots, a_0 \in \mathbb{R}</m>, <m>n \in \mathbb{N}</m>. In other words, it is a sum of monomials of the form <m>a_k x^k</m>. Using the power rule (for positive integers) and constant multiple rule, we can differentiate each monomial.
+        </p>
+        <me>
+            \frac{d}{dx} (a_k x^k) = a_k \frac{d}{dx} x^k = a_k k x^{k-1}
+        </me>
+        <p>
+            Then, using the sum rule, we can determine the derivative of a polynomial,
+        </p>
+        <md>
+            <mrow>f'(x) \amp = \frac{d}{dx} \brac{a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0}</mrow>
+            <mrow>\amp = \frac{d}{dx} (a_n x^n) + \frac{d}{dx} (a_{n-1} x^{n-1}) + \dots + \frac{d}{dx} (a_1 x) + \frac{d}{dx} a_0 \amp\amp \text{by the sum rule}</mrow>
+            <mrow>\amp = a_n n x^{n-1} + a_{n-1} (n - 1) x^{n-2} + \dots + a_1</mrow>
+        </md>
+        \begin{equation*}
+            f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+        \end{equation*}
+        where $a_n, \dots, a_0 \in \mathbb{R}$, $n \in \mathbb{N}$. In other words, it is a sum of monomials of the form $a_k x^k$. Using the power rule (for positive integers) and constant multiple rule, we can differentiate each monomial.
+        \begin{equation*}
+            \frac{d}{dx} (a_k x^k) = a_k \frac{d}{dx} x^k = a_k k x^{k-1}
+        \end{equation*}
+        Then, using the sum rule, we can determine the derivative of a polynomial,
+        \begin{align*}
+            f'(x) \amp = \frac{d}{dx} \brac{a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0} \\
+            \amp = \frac{d}{dx} (a_n x^n) + \frac{d}{dx} (a_{n-1} x^{n-1}) + \dots + \frac{d}{dx} (a_1 x) + \frac{d}{dx} a_0 \amp\amp \text{by the sum rule} \\
+            \amp = a_n n x^{n-1} + a_{n-1} (n - 1) x^{n-2} + \dots + a_1
+        \end{align*}
+    </subsection>
+    
+
+</section>

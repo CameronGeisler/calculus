@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TPR">
+    <title>The Product Rule</title>
+
+    <introduction>
+        The rule for differentiating a product of function is slightly more complicated than previous rules. One might at first glance believe that the derivative of a product of two functions is the product of the derivatives, however this is not true.
+    </introduction>
+
+    <subsection>
+        <title>The Product Rule</title>
+
+        <theorem>
+            Let <m>f, g</m> be functions differentiable at <m>x</m>. Then, <m>fg</m> is also differentiable at <m>x</m>, and,
+            <me>
+                \boxed{(fg)'(x) = f'(x)g(x) + f(x)g'(x)}
+            </me>
+        </theorem>
+        <p>
+            The formula can be more easily remembered by omitting the arguments, as,
+        </p>
+        <me>
+            \boxed{(fg)' = f'g + fg'} \qquad \text{<q><m>fg</m> prime equals <m>f</m> prime times <m>g</m> plus <m>f</m> times <m>g</m> prime</q>}
+        </me>
+
+        <proof>
+            <title>Proof using increments</title>
+            <p>
+                Let <m>u = f(x), v = g(x)</m>. Then, as <m>x</m> changes, both <m>f</m> and <m>g</m> change, and this causes <m>uv = f(x)g(x)</m> to change. The product rule shows how the product <m>uv</m> changes as <m>x</m> changes, in terms of <m>f</m> and <m>g</m>. Suppose that <m>x</m> is incremented by some <m>\Delta x</m>, and let <m>\Delta u, \Delta v</m> be the corresponding increments in <m>u</m> and <m>v</m>. Then, consider the change in the product, <m>\Delta(uv)</m>,
+                <me>
+                    \Delta(uv) = \underbrace{(u + \Delta u)(v + \Delta v)}_{\text{new <m>uv</m>}} - \underbrace{uv}_{\text{old <m>uv</m>}}
+                </me>
+                Then, expanding and simplifying,
+                <md>
+                    <mrow>\Delta(uv) \amp = uv + \Delta u v + u \Delta v + \Delta u \Delta v - uv</mrow>
+                    <mrow>\amp = \Delta u v + u \Delta v + \Delta u \Delta v</mrow>
+                </md>
+                Then, dividing both sides by <m>\Delta x</m>,
+                <md>
+                    <mrow>\frac{\Delta(uv)}{\Delta x} \amp = \frac{\Delta u v}{\Delta x} + \frac{u \Delta v}{\Delta x} + \frac{\Delta u \Delta v}{\Delta x}</mrow>
+                    <mrow>\amp = \frac{\Delta u}{\Delta x} v + u \frac{\Delta v}{\Delta x} + \Delta u \frac{\Delta v}{\Delta x}</mrow>
+                </md>
+                Then, as <m>\Delta x \to 0</m>,
+                <md>
+                    <mrow>\lim_{\Delta x \to 0} \frac{\Delta(uv)}{\Delta x} \amp = \lim_{\Delta x \to 0} \brac{\frac{\Delta u}{\Delta x} v + u \frac{\Delta v}{\Delta x} + \Delta u \frac{\Delta v}{\Delta x}}</mrow>
+                    <mrow>\frac{d(uv)}{dx} \amp = \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x} \cdot v + \lim_{\Delta x \to 0} u \cdot \frac{\Delta v}{\Delta x} + \lim_{\Delta x \to 0} \Delta u \frac{\Delta v}{\Delta x}</mrow>
+                </md>
+                The first term approaches <m>\frac{du}{dx} v</m>, the second approaches <m>u \frac{dv}{dx}</m>, and for the third, <m>\lim_{\Delta x \to 0} \frac{\Delta v}{\Delta x} = \frac{dv}{dx}</m>, however <m>\Delta u</m> also depends on <m>\Delta x</m>, and since <m>f</m> is continuous, as the change in <m>x</m> goes to 0, the change in <m>u</m> goes to 0 also. Thus,
+                <md>
+                    <mrow>\frac{d(uv)}{dx} \amp = \frac{du}{dx} v + u \frac{dv}{dx} + 0 \cdot \frac{dv}{dx}</mrow>
+                    <mrow>\amp = \frac{du}{dx} v + u \frac{dv}{dx}</mrow>
+                </md>
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Simplifying Before Using the Product Rule</title>
+        <p>
+            When a function can be differentiated using the product rule, sometimes it is simpler to simplify it first to avoid using the product rule.
+        </p>
+        <example>
+            <p>
+                For <m>f(x) = x^2(1 - 7x)</m>, it can be differentiated using the product rule,
+                <md>
+                    <mrow>f'(x) \amp = 2x (1 - 7x) + x^2 (-7)</mrow>
+                    <mrow>\amp = -21x^2 + 2x \amp\amp \text{simplifying}</mrow>
+                </md>
+                Alternatively, simplifying <m>f</m> first, <m>f(x) = x^2 - 7x^3</m>, and then using the power rule,
+                <me>
+                    f'(x) = 2x - 21x^2
+                </me>
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Product Rule Mnemonic</title>
+        <p>
+            The product rule isn't particularly difficult to remember, however, there's an interesting pattern that may help. Consider the product rule,
+        </p>
+        <me>
+            (fg)' = f'g + fg'
+        </me>
+        <p>
+            Dividing both sides by <m>f</m> and <m>g</m>, we get an interesting pattern,
+        </p>
+        <me>
+            \frac{(fg)'}{fg} = \frac{f'}{f} + \frac{g'}{g}
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Differential Intuition</title>
+        <p>
+            If <m>u,v</m> are quantities that are functions of <m>x</m>, then,
+        </p>
+        <me>
+            \frac{d(uv)}{dx} = u \cdot \frac{dv}{dx} + \frac{du}{dx} \cdot v
+        </me>
+        <p>
+            Or,
+        </p>
+        <me>
+            \boxed{d(uv) = u \,dv + du \,v}
+        </me>
+    </subsection>
+</section>

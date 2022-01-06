@@ -31,6 +31,7 @@
         <!-- on the title (ch-shorttitle.ptx) both here and on disk    -->
         <xi:include href="./chapter-ITC.ptx"/>
         <xi:include href="./chapter-TD.ptx"/>
+        <xi:include href="./chapter-DT.ptx"/>
         <!-- Of course you will want to add more chapters as you proceed-->
     </book>
 </pretext>
