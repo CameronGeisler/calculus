@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-05T17:16:11-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Derivative Function</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-TLSOF.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-TD.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-VAROC.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-TLSOF.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-TD.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-VAROC.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
+<li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
+<li><a href="section-MP.html" data-scroll="section-MP">Motivational Problems</a></li>
+<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-TD.html" data-scroll="chapter-TD"><span class="codenumber">2</span> <span class="title">The Derivative</span></a><ul>
+<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">Tangent Lines, Slopes of Functions</a></li>
+<li><a href="section-TDF.html" data-scroll="section-TDF" class="active">The Derivative Function</a></li>
+<li><a href="section-VAROC.html" data-scroll="section-VAROC">Velocity and Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-DT.html" data-scroll="chapter-DT"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a><ul>
+<li><a href="section-BDR.html" data-scroll="section-BDR">Basic Differentiation Rules</a></li>
+<li><a href="section-D.html" data-scroll="section-D">Differentiability</a></li>
+<li><a href="section-TPR.html" data-scroll="section-TPR">The Product Rule</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-TDF"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">The Derivative Function</span>
+</h2>
+<section class="introduction" id="introduction-5">Recall that a line has constant slope, and for a general function, its slope can vary at different points. In this way, the slope of a function \(f\) is itself a function of \(x\text{,}\) called the <em class="emphasis">derivative</em> of \(f\text{.}\)</section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">The Derivative</span>
+</h3>
+<article class="definition definition-like" id="definition-2"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h4>
+<p id="p-64">Let \(f\) be a function. The <dfn class="terminology">derivative</dfn> of \(f\text{,}\) denoted by \(f'\text{,}\) is another function, defined by,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}}
+\end{equation*}
+</div>
+<p class="continuation">The domain of \(f'\) is all values of \(x\) where the limit in \(h\) exists (as a real number). If \(f'(x)\) exists, then we say that \(f\) is <dfn class="terminology">differentiable</dfn> at \(x\text{.}\) Otherwise, \(f\) is <dfn class="terminology">non-differentiable</dfn> at \(x\text{.}\)</p>
+<ul class="disc">
+<li id="li-25"><p id="p-derived-li-25">The action of determining the derivative of a function is often called “taking the derivative” or “differentiating”.</p></li>
+<li id="li-26"><p id="p-derived-li-26">The derivative \(f'\) is read as “\(f\) prime” and “\(f'(x)\)” as “\(f\) prime of \(x\)”.</p></li>
+</ul></article><p id="p-65">The derivative of \(f\) is a function whose outputs are the slopes of \(f\text{.}\) Intuitively, the outputs for the derivative of a function come from evaluating the associated limit \(\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\) for each value of \(x\) in the domain of \(f\text{,}\) and plotting the results. Consider <a class="external" href="https://www.geogebra.org/m/DH4BpjGP" target="_blank">this Desmos applet for the derivative</a>. In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\text{The output $f'(x)$ at a particular value of $x$ is the slope of the tangent line of $f$ at $x$}}
+\end{equation*}
+</div>
+<p id="p-66">There is an alternate notation that is equivalent, which is,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}}
+\end{equation*}
+</div></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">Graphical Differentiation</span>
+</h3>
+<p id="p-67">Consider <a class="external" href="https://www.geogebra.org/m/BDYnGhbt" target="_blank">this GeoGebra applet</a>, which helps to visualize the graph of the derivative as a function which is derived from the original function.</p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">Tangent Line and Derivatives</span>
+</h3>
+<p id="p-68">The value of the derivative function \(f'\) at a point \(x_0\) is the number \(f'(x_0)\text{,}\) given by,</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}
+\end{equation*}
+</div>
+<p id="p-69">which represents the slope of the graph at \(x_0\text{,}\) i.e. the slope of the tangent line of the graph \(y = f(x)\) at \(x_0\text{.}\) In other words, the derivative is a function whose outputs are slopes. Using derivative notation, the tangent line to the graph \(y = f(x)\) at \((x_0, f(x_0))\) is,</p>
+<div class="displaymath">
+\begin{equation*}
+y = f'(x_0)(x - x_0) + f(x_0)
+\end{equation*}
+</div>
+<p id="p-70">In particular, notice that \(f'(x) = 0\) precisely when $f$ has a horizontal tangent line at \(x\text{.}\) The equation of this line can be written in the familiar slope-intercept form,</p>
+<div class="displaymath">
+\begin{equation*}
+y = \underbrace{f'(x_0)}_m x + \underbrace{f(x_0) - x_0 f'(x_0)}_{b}
+\end{equation*}
+</div>
+<p id="p-71">and so is of the form \(y = mx + b\) where \(m = f'(x_0)\) and \(b = f(x_0) - x_0 f'(x_0)\text{.}\) The key question here is how to determine the derivative \(f'(x_0)\text{.}\)</p></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.4</span> <span class="title">Derivative of a Constant Function</span>
+</h3>
+<p id="p-72">A constant function \(f(x) = k\) is a horizontal line, which has slope 0, so we would expect that its derivative would be 0.</p>
+<article class="theorem theorem-like" id="theorem-1"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
+</h4>
+<p id="p-73">If \(f(x) = k\) for some \(k \in \mathbb{R}\text{,}\) then \(f'(x) = 0\text{.}\)</p></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \amp\amp \text{by definition of derivative\\
+\amp = \lim_{h \to 0} \frac{k - k}{h} \amp\amp \text{as $f(x + k) = f(x) = k$}\\
+\amp = \lim_{h \to 0} \frac{0}{h}\\
+\amp = \lim_{h \to 0} 0\\
+\amp = 0
+\end{align*}
+</div></article></div></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.5</span> <span class="title">Derivative of a Linear Function</span>
+</h3>
+<p id="p-74">Recall that linear functions have constant slope. In this way we expect that the derivative of a line is constant. In particular, the slope of a line \(f(x) = mx + b\) is \(m\text{.}\)</p>
+<article class="theorem theorem-like" id="theorem-2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
+</h4>
+<p id="p-75">If \(f(x) = mx + b\) for some \(b, m \in \mathbb{R}\text{,}\) then \(f'(x) = m\text{.}\)</p></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{m(x + h) + b - (mx + b)}{h}\\
+\amp = \lim_{h \to 0} \frac{mh}{h}\\
+\amp = \lim_{h \to 0} m\\
+\amp = m
+\end{align*}
+</div>
+<p id="p-76">Again, here, the difference quotient simplifies to \(m\text{,}\) because the slope does not depend on \(h\text{.}\)</p></article></div></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.6</span> <span class="title">Determining Derivatives Using the Definition</span>
+</h3>
+<p id="p-77">Consider the limit involved in the definition of the derivative,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+\end{equation*}
+</div>
+<p id="p-78">This limit cannot be evaluated immediately, because substituting \(h = 0\) results in an expression of the form \(\frac{0}{0}\text{,}\) which is an indeterminate form. In this way, evaluating the limit requires manipulating the difference quotient into a different form. This is the most important step, and it can be easy or challenging depending on the function \(f\text{.}\) In summary, to determine the derivative using the limit definition,</p>
+<ol class="decimal">
+<li id="li-27"><p id="p-derived-li-27">Write down and evaluate the definition,<div class="displaymath">
+\begin{equation*}
+\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+\end{equation*}
+</div>for the particular function \(f\text{.}\)</p></li>
+<li id="li-28"><p id="p-derived-li-28">Manipulate the difference quotient to a form which allows the limit to be evaluated.</p></li>
+<li id="li-29"><p id="p-derived-li-29">Evaluate the limit as \(h \to 0\text{.}\)</p></li>
+</ol>
+<p id="p-79">For the first few examples, it will involve cancelling a common factor of \(h\) from the numerator and denominator.</p></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.7</span> <span class="title">Derivative of Some Basic Functions</span>
+</h3>
+<p id="p-80">The previous examples were somewhat trivial, because the functions were linear, and so their derivatives are simply results from pre-calculus. For functions which are non-linear, the definition of derivative becomes more clear.</p>
+<article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Squaring function.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-81">Consider the derivative of \(f(x) = x^2\text{.}\) Recall that we previously computed the slope of the tangent line of this function at \(x = 1\text{,}\) in <a href="section-MP.html#tangent-line-problem" class="internal" title="Subsection 1.2.2: The Tangent Line Problem (Tangent of a Parabola)">Subsection 1.2.2</a>. Here, we can compute the slope at an arbitrary value of \(x\text{,}\) which is the derivative.</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\\
+\amp = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h}\\
+\amp = \lim_{h \to 0} \frac{(x^2 + 2xh + h^2) - x^2}{h}\\
+\amp = \lim_{h \to 0} \frac{2xh + h^2}{h}\\
+\amp = \lim_{h \to 0} (2x + h)\\
+f'(x) \amp = 2x
+\end{align*}
+</div>
+<p class="continuation">There is a nice visualization for this derivative. Let \(y = x^2\) represent the area of a square with side length \(x\text{.}\) Then, for some small increment \(\Delta x\text{,}\) the added area is \(\Delta y = 2x \Delta x + (\Delta x)^2\text{.}\) Then,</p>
+<div class="displaymath">
+\begin{align*}
+\frac{\Delta y}{\Delta x} \amp = \frac{2x \Delta x + (\Delta x)^2}{\Delta x}\\
+\amp = 2x + \Delta x
+\end{align*}
+</div>
+<p class="continuation">Then, as \(\Delta x \to 0\text{,}\) we get,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dy}{dx} = 2x
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Reciprocal function.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-82">Consider the derivative of \(f(x) = \frac{1}{x}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\\
+\amp = \lim_{h \to 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{h}
+\end{align*}
+</div>
+<p class="continuation">To simplify this difference quotient, we first write this complex fraction as a single fraction, by multiplying numerator and denominator by \(x(x+h)\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp = \lim_{h \to 0} \frac{x - (x + h)}{hx(x + h)}\\
+\amp = \lim_{h \to 0} -\frac{h}{hx(x + h)}\\
+\amp = \lim_{h \to 0} -\frac{1}{x(x + h)}\\
+\amp = -\frac{1}{x^2}
+\end{align*}
+</div>
+<p class="continuation">In particular, notice that \(f'(x) \le 0\) for all \(x \neq 0\text{,}\) and as \(x \to \infty\text{,}\) \(f'(x) \to 0\text{,}\) the slope of the tangents becomes less steep.</p></article></div>
+<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Square root function.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-83">Consider the derivative of \(f(x) = \sqrt{x}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\\
+\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h}
+\end{align*}
+</div>
+<p class="continuation">Then, it turns out that we can cancel the factor of \(h\) in the denominator by rationalizing the numerator,</p>
+<div class="displaymath">
+\begin{align*}
+\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}\\
+\amp = \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})}\\
+\amp = \lim_{h \to 0} \frac{h}{h(\sqrt{x + h} + \sqrt{x})}\\
+\amp = \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt{x}} \amp\amp \text{cancelling the common factor of }\\
+\amp = \frac{1}{\sqrt{x} + \sqrt{x}}\\
+\amp = \frac{1}{2\sqrt{x}}
+\end{align*}
+</div>
+<p class="continuation">Notice that while \(f(x) = \sqrt{x}\) is defined on \([0,\infty)\text{,}\) its derivative \(f'(x)\) is only differentiable on \((0,\infty)\text{,}\) in particular not differentiable at \(x = 0\text{.}\)</p></article></div></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.8</span> <span class="title">Derivative Notation</span>
+</h3>
+<p id="p-84">The notation \(f'\) to denote the derivative, called <dfn class="terminology">prime notation</dfn>, was developed by <dfn class="terminology">Joseph-Louis Lagrange</dfn> (1736-1813), Italian mathematician. An alternate notation was used by Leibniz, called <dfn class="terminology">Leibniz notation</dfn>. If \(y\) is a function of \(x\text{,}\) then Leibniz denoted the derivative as,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dy}{dx}
+\end{equation*}
+</div>
+<p id="p-85">read as “the derivative of \(y\) with respect to \(x\)”, or sometimes simply by reading the letters (i.e. “dee-why dee-ex”). Note that just as \(\Delta x\) is not a product of \(\Delta\) with \(x\text{,}\) \(dx\) (and \(dy\)) does not represent the product of \(d\) with \(x\text{.}\) The advantage of this notation is that it enables us to consider derivatives without reference to a dependent variable, as we can write,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx} f(x) = f'(x)
+\end{equation*}
+</div>
+<p id="p-86">In this notation, intuitively the symbol \(\frac{d}{dx}\) can be thought of as an operator which is <em class="emphasis">applied</em> to \(f(x)\) and whose result is the derivative of \(f'(x)\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+y = f(x) \quad \implies \quad \frac{dy}{dx} = f'(x)
+\end{equation*}
+</div>
+<p id="p-87">Also, we can consider derivatives of expressions without defining a function, for example,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx} x^2 = 2x
+\end{equation*}
+</div>
+<p id="p-88">However, it is important to note that only a function can have a derivative. One downside to Leibniz notation is that evaluating derivatives is a bit clunky. The derivative of \(y\) when \(x = a\) is denoted by,</p>
+<div class="displaymath">
+\begin{equation*}
+\eval{\frac{dy}{dx}}_{x=a}
+\end{equation*}
+</div>
+<p id="p-89">Prime notation and Leibniz notation are mostly interchangeable. Leibniz notation tends to be used more in applications, where \(y\) and \(x\) represent physical quantities.</p>
+<p id="p-90">Prime notation and Leibniz notation are mostly interchangeable. Leibniz notation tends to be used more in applications, where \(y\) and \(x\) represent physical quantities.</p>
+<p id="p-91">There are also alternative notations which are used less often, or are used for other more advanced areas of mathematics which use calculus. For a function \(y = f(x)\text{,}\) these include,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{df}{dx} \quad \frac{d}{dx} f \quad \frac{d}{dx} f(x) \quad D_x f
+\end{equation*}
+</div></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.9</span> <span class="title">Leibniz Notation, Derivative as a Limit of a Ratio, Differentials, Infinitesimals</span>
+</h3>
+<p id="p-92">Notice that Leibniz notation \(\frac{dy}{dx}\) suggests that the derivative is a quotient of two quantities \(dy\) and \(dx\text{.}\) When calculus was first developed in the 17th century, derivatives <em class="emphasis">were</em> treated as a quotient of infinitely small quantities. These quantities were called <dfn class="terminology">infinitesimals</dfn>, which are positive quantities that are smaller in magnitude than any real number, but are not zero. Leibniz focused on this perspective of the derivative.</p>
+<p id="p-93">However, infinitesimals are somewhat problematic logically, because a real number with these properties does not exist. This problem created logical difficulties for the mathematicians at that time (what are infinitesimals? do they “exist”?). However, using infinitesimals often provided correct results. Later on, calculus was reformulated into the limit definition used today.</p>
+<p id="p-94">It is possible to assign meaningful interpretations to \(dy\) and \(dx\text{,}\) however, for now, we will treat \(\frac{dy}{dx}\) as an indivisible symbol which represents the derivative of \(y\text{,}\) which is a function of \(x\text{.}\) In any case, it is helpful to think of the derivative \(\frac{dy}{dx}\) conceptually as a quotient or ratio of infinitesimals. That is, the ratio of an infinitely small change in \(y\) to an infinitely small change in \(x\text{.}\) Just as \(\Delta x\) and \(\Delta y\) represent a small change in \(x\) and \(y\text{,}\) \(dx\) and \(dy\) intuitively represent an infinitesimal change in \(x\) and \(y\text{.}\) Put another way, \(dx\) and \(dy\) represent infinitely small <em class="emphasis">differences</em> between two values of \(x\) and \(y\text{.}\) Quite literally, the reason it is called <em class="emphasis">differential</em> calculus is because “differentiating” literally means “identifying differences”.</p>
+<p id="p-95">More concretely, suppose that \(y = f(x)\text{,}\) and suppose that \(x\) is changed by a small increment \(\Delta x\text{,}\) and consider the resulting change in \(\Delta y\) in \(y\text{.}\) In particular, a change from \(x\) to \(x\) will result in a change of \(y\) from \(f(x)\) to \(f(x + \Delta x)\text{,}\) or,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\Delta y = \underbrace{f(x + \Delta x)}_{\text{new $y$}} - \underbrace{f(x)}_{\text{old $y$}}}
+\end{equation*}
+</div>
+<p id="p-96">Then, the ratio of these changes is,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x}
+\end{equation*}
+</div>
+<p id="p-97">The right-hand side is a difference quotient, except with \(\Delta x\) as the increment instead of the previously-used \(h\text{.}\) In this way, if \(\Delta x\) is small, then,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\Delta y}{\Delta x} \approx f'(x)
+\end{equation*}
+</div>
+<p id="p-98">Then, as the increment \(\Delta x\) becomes smaller and smaller, this approximation becomes more accurate. In the limit as \(\Delta x \to 0\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+\end{equation*}
+</div>
+<p id="p-99">This expression is simply the derivative of \(f\text{,}\) with \(\Delta x\) instead of \(h\text{.}\) However, the labelling of the symbols is irrelevant, so,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \frac{dy}{dx} = f'(x)
+\end{equation*}
+</div>
+<p id="p-100">In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \frac{dy}{dx}}
+\end{equation*}
+</div>
+<p id="p-101">Note that this \(\Delta\) notation now makes Leibniz's notation \(\frac{dy}{dx}\) more suitable. Also, in this way, \(\frac{dy}{dx}\) is not a ratio, but rather the limit of a ratio.</p></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.10</span> <span class="title">Summary</span>
+</h3>
+<p id="p-102">Derivative calculations involve a particular kind of limit calculation, and notice that these limit calculations, like before, rely crucially on algebra, not calculus. The only part where calculus is involved is for the limit calculation, which simply involves substituting in a value of a variable.</p></section></section></div></main>
+</div>
+</body>
+</html>

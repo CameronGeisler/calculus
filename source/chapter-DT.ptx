@@ -6,6 +6,8 @@
 
         </introduction>
 
-        <xi:include href="./chapter-TD/section-BDR.ptx"/>
+        <xi:include href="./chapter-DT/section-BDR.ptx"/>
+        <xi:include href="./chapter-DT/section-D.ptx"/>
+        <xi:include href="./chapter-DT/section-TPR.ptx"/>
 
 </chapter>

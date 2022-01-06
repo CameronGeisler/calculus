@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-05T17:16:11-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Product Rule</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-D.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-DT.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-D.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-DT.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
+<li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
+<li><a href="section-MP.html" data-scroll="section-MP">Motivational Problems</a></li>
+<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-TD.html" data-scroll="chapter-TD"><span class="codenumber">2</span> <span class="title">The Derivative</span></a><ul>
+<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">Tangent Lines, Slopes of Functions</a></li>
+<li><a href="section-TDF.html" data-scroll="section-TDF">The Derivative Function</a></li>
+<li><a href="section-VAROC.html" data-scroll="section-VAROC">Velocity and Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-DT.html" data-scroll="chapter-DT"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a><ul>
+<li><a href="section-BDR.html" data-scroll="section-BDR">Basic Differentiation Rules</a></li>
+<li><a href="section-D.html" data-scroll="section-D">Differentiability</a></li>
+<li><a href="section-TPR.html" data-scroll="section-TPR" class="active">The Product Rule</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-TPR"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">The Product Rule</span>
+</h2>
+<section class="introduction" id="introduction-8">The rule for differentiating a product of function is slightly more complicated than previous rules. One might at first glance believe that the derivative of a product of two functions is the product of the derivatives, however this is not true.</section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">The Product Rule</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-7"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
+</h4>\(f, g\)\(x\text{.}\)\(fg\)\(x\text{,}\)<div class="displaymath">
+\begin{equation*}
+\boxed{(fg)'(x) = f'(x)g(x) + f(x)g'(x)}
+\end{equation*}
+</div></article><p id="p-160">The formula can be more easily remembered by omitting the arguments, as,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{(fg)' = f'g + fg'} \qquad \text{}
+\end{equation*}
+</div>
+<article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="title">Proof using increments.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-161">Let \(u = f(x), v = g(x)\text{.}\) Then, as \(x\) changes, both \(f\) and \(g\) change, and this causes \(uv = f(x)g(x)\) to change. The product rule shows how the product \(uv\) changes as \(x\) changes, in terms of \(f\) and \(g\text{.}\) Suppose that \(x\) is incremented by some \(\Delta x\text{,}\) and let \(\Delta u, \Delta v\) be the corresponding increments in \(u\) and \(v\text{.}\) Then, consider the change in the product, \(\Delta(uv)\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta(uv) = \underbrace{(u + \Delta u)(v + \Delta v)}_{\text{new }} - \underbrace{uv}_{\text{old }}
+\end{equation*}
+</div>
+<p class="continuation">Then, expanding and simplifying,</p>
+<div class="displaymath">
+\begin{align*}
+\Delta(uv) \amp = uv + \Delta u v + u \Delta v + \Delta u \Delta v - uv\\
+\amp = \Delta u v + u \Delta v + \Delta u \Delta v
+\end{align*}
+</div>
+<p class="continuation">Then, dividing both sides by \(\Delta x\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\frac{\Delta(uv)}{\Delta x} \amp = \frac{\Delta u v}{\Delta x} + \frac{u \Delta v}{\Delta x} + \frac{\Delta u \Delta v}{\Delta x}\\
+\amp = \frac{\Delta u}{\Delta x} v + u \frac{\Delta v}{\Delta x} + \Delta u \frac{\Delta v}{\Delta x}
+\end{align*}
+</div>
+<p class="continuation">Then, as \(\Delta x \to 0\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{\Delta x \to 0} \frac{\Delta(uv)}{\Delta x} \amp = \lim_{\Delta x \to 0} \brac{\frac{\Delta u}{\Delta x} v + u \frac{\Delta v}{\Delta x} + \Delta u \frac{\Delta v}{\Delta x}}\\
+\frac{d(uv)}{dx} \amp = \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x} \cdot v + \lim_{\Delta x \to 0} u \cdot \frac{\Delta v}{\Delta x} + \lim_{\Delta x \to 0} \Delta u \frac{\Delta v}{\Delta x}
+\end{align*}
+</div>
+<p class="continuation">The first term approaches \(\frac{du}{dx} v\text{,}\) the second approaches \(u \frac{dv}{dx}\text{,}\) and for the third, \(\lim_{\Delta x \to 0} \frac{\Delta v}{\Delta x} = \frac{dv}{dx}\text{,}\) however \(\Delta u\) also depends on \(\Delta x\text{,}\) and since \(f\) is continuous, as the change in \(x\) goes to 0, the change in \(u\) goes to 0 also. Thus,</p>
+<div class="displaymath">
+\begin{align*}
+\frac{d(uv)}{dx} \amp = \frac{du}{dx} v + u \frac{dv}{dx} + 0 \cdot \frac{dv}{dx}\\
+\amp = \frac{du}{dx} v + u \frac{dv}{dx}
+\end{align*}
+</div></article></div></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Simplifying Before Using the Product Rule</span>
+</h3>
+<p id="p-162">When a function can be differentiated using the product rule, sometimes it is simpler to simplify it first to avoid using the product rule.</p>
+<article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-163">For \(f(x) = x^2(1 - 7x)\text{,}\) it can be differentiated using the product rule,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = 2x (1 - 7x) + x^2 (-7)\\
+\amp = -21x^2 + 2x \amp\amp \text{simplifying}
+\end{align*}
+</div>
+<p class="continuation">Alternatively, simplifying \(f\) first, \(f(x) = x^2 - 7x^3\text{,}\) and then using the power rule,</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = 2x - 21x^2
+\end{equation*}
+</div></article></div></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">Product Rule Mnemonic</span>
+</h3>
+<p id="p-164">The product rule isn't particularly difficult to remember, however, there's an interesting pattern that may help. Consider the product rule,</p>
+<div class="displaymath">
+\begin{equation*}
+(fg)' = f'g + fg'
+\end{equation*}
+</div>
+<p id="p-165">Dividing both sides by \(f\) and \(g\text{,}\) we get an interesting pattern,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{(fg)'}{fg} = \frac{f'}{f} + \frac{g'}{g}
+\end{equation*}
+</div></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.4</span> <span class="title">Differential Intuition</span>
+</h3>
+<p id="p-166">If \(u,v\) are quantities that are functions of \(x\text{,}\) then,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d(uv)}{dx} = u \cdot \frac{dv}{dx} + \frac{du}{dx} \cdot v
+\end{equation*}
+</div>
+<p id="p-167">Or,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{d(uv) = u \,dv + du \,v}
+\end{equation*}
+</div></section></section></div></main>
+</div>
+</body>
+</html>

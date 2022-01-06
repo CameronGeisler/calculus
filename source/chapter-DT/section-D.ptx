@@ -59,11 +59,14 @@
     </subsection>
 
     <subsection>
+        <title>Differentiability and Continuity</title>
         <p>
             If a function <m>f</m> is continuous at <m>x</m>, it may or may not be differentiable at <m>x</m>. For example, <m>f(x) = \abs{x}</m> is continuous but not differentiable at <m>x = 0</m>. However, the converse is true, in that differentiability implies continuity.
         </p>
         <theorem>
-            Let <m>f</m> be a function. If <m>f</m> is differentiable at <m>x = a</m>, then it is continuous at <m>x = a</m>.
+            <p>
+                Let <m>f</m> be a function. If <m>f</m> is differentiable at <m>x = a</m>, then it is continuous at <m>x = a</m>.
+            </p>
         </theorem>
         <p>
             Intuitively, this theorem says that if a function is smooth at a point <m>a</m>, then it can't have a discontinuity there. Alternatively, it is more intuitive to consider the contrapositive, that if <m>x</m> is not continuous at <m>a</m> (i.e. it has a break or jump), then it is not differentiable at <m>a</m> (the slope of a tangent line cannot be found).

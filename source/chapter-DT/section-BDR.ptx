@@ -106,19 +106,6 @@
             <mrow>\amp = \frac{d}{dx} (a_n x^n) + \frac{d}{dx} (a_{n-1} x^{n-1}) + \dots + \frac{d}{dx} (a_1 x) + \frac{d}{dx} a_0 \amp\amp \text{by the sum rule}</mrow>
             <mrow>\amp = a_n n x^{n-1} + a_{n-1} (n - 1) x^{n-2} + \dots + a_1</mrow>
         </md>
-        \begin{equation*}
-            f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
-        \end{equation*}
-        where $a_n, \dots, a_0 \in \mathbb{R}$, $n \in \mathbb{N}$. In other words, it is a sum of monomials of the form $a_k x^k$. Using the power rule (for positive integers) and constant multiple rule, we can differentiate each monomial.
-        \begin{equation*}
-            \frac{d}{dx} (a_k x^k) = a_k \frac{d}{dx} x^k = a_k k x^{k-1}
-        \end{equation*}
-        Then, using the sum rule, we can determine the derivative of a polynomial,
-        \begin{align*}
-            f'(x) \amp = \frac{d}{dx} \brac{a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0} \\
-            \amp = \frac{d}{dx} (a_n x^n) + \frac{d}{dx} (a_{n-1} x^{n-1}) + \dots + \frac{d}{dx} (a_1 x) + \frac{d}{dx} a_0 \amp\amp \text{by the sum rule} \\
-            \amp = a_n n x^{n-1} + a_{n-1} (n - 1) x^{n-2} + \dots + a_1
-        \end{align*}
     </subsection>
     
 
