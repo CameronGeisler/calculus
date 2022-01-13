@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-ID">
+    <title>Implicit Differentiation</title>
+
+    <subsection>
+        <title>Curves Given by Implicitly-Defined Functions</title>
+
+        <p>
+            The slope of the curve <m>y = f(x)</m> is given by the derivative <m>f'(x)</m>. However, not all curves are defined by <term>explicit</term> functions, where <m>y</m> is isolated and is given as a function of <m>x</m>. Some functions are <term>implicit</term>, defined by a relation between <m>x</m> and <m>y</m>. More generally, curves in the plane are graphs of an equation in two variables, i.e. an equation of the form,
+        </p>
+        <me>
+            F(x,y) = 0
+        </me>
+        <p>
+            where <m>F(x,y)</m> is a function of <m>x</m> and <m>y</m>.
+        </p>
+        <p>
+            For example, the circle with radius 1 centered at the origin has equation,
+        </p>
+        <me>
+            x^2 + y^2 = 1
+        </me>
+        <p>
+            In some cases, it is possible to solve for <m>y</m> explicitly as an explicit function (or possibly multiple) of <m>x</m>. However, in other cases it is difficult or impossible to do so. In this case, it is not necessary to solve explicitly for <m>y</m> in order to determine the derivative of <m>y</m> with respect to <m>x</m>. Instead, we can use a technique called <term>implicit differentiation</term>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Implicit Differentiation</title>
+        <p>
+            The idea of implicit differentiation is to differentiate both sides of an equation with respect to <m>x</m>, regarding <m>y</m> as a function of <m>x</m> with derivative <m>\frac{dy}{dx} = y'</m>. In other words, apply the differentiation operator <m>\frac{d}{dx}</m> to both sides of the equation. Then, we can solve the equation for <m>\frac{dy}{dx}</m> to determine an equation for the derivative of the function.
+        </p>
+        <p>
+            When differentiating <m>y</m>, it is often necessary to use the chain rule.
+        </p>
+        <p>
+            When using implicit differentiation, <m>\frac{dy}{dx}</m> is usually in terms of both <m>x</m> and <m>y</m>, and so it is necessary to know both coordinates to determine the derivative at a point.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Circles</title>
+        <p>
+            Consider the unit circle <m>x^2 + y^2 = 1</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Horizontal Parabolas</title>
+        <p>
+            Find <m>\frac{dy}{dx}</m> if <m>y^2 = x</m>. This is a horizontal parabola. It defines two functions of <m>x</m>, <m>y_1(x) = \sqrt{x}</m> and <m>y_2(x) = -\sqrt{x}</m>. Then, for <m>x \neq 0</m>,
+            <me>
+                y_1'(x) = \frac{1}{2\sqrt{x}} \qquad \text{and} \qquad y_2'(x) = -\frac{1}{2\sqrt{x}}
+            </me>
+            Instead, differentiate both sides of the equation with respect to <m>x</m>,
+            <md>
+                <mrow>\frac{d}{dx}(y^2) \amp = \frac{d}{dx}(x)</mrow>
+                <mrow>2y \frac{dy}{dx} \amp = 1</mrow>
+                <mrow>\frac{dy}{dx} \amp = \frac{1}{2y} \amp\amp \text{solving for <m>\frac{dy}{dx}</m>}</mrow>
+            </md>
+            Notice that this covers derivatives for both the explicit solutions.
+        </p>
+    </subsection>
+    
+    <subsection>
+        <title>Folium of Descartes</title>
+        <p>
+            The equation <m>x^3 + y^3 - 3xy = 0</m> represents a curve called the <term>folium of Descartes</term>. Since <m>y</m> is a cubic polynomial in terms of <m>x</m>, it is possible to solve for <m>y</m> explicitly using the cubic formula, resulting in 3 explicit functions. However, the explicit expression is quite complicated, making the explicit derivative tedious to compute.
+        </p>
+    </subsection>
+    
+    <subsection>
+        <title>Hyperbolas</title>
+        <p>
+            Consider a hyperbola, with equation of the form,
+        </p>
+        <me>
+            \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+        </me>
+        <p>
+            This is a horizontal hyperbola. Differentiating implicitly,
+        </p>
+        <me>
+            \frac{2x}{a^2} + \frac{2y y'}{b^2} \amp = 0
+        </me>
+        <p>
+            Solving for <m>y'</m>,
+        </p>
+        <me>
+            y' = \frac{b^2 x}{a^2 y}
+        </me>
+        <p>
+            Then, the tangent line at a point <m>(x_0,y_0)</m> on the parabola is given by,
+        </p>
+        <me>
+            y - y_0 \amp = \frac{b^2 x_0}{a^2 y_0} (x - x_0)
+        </me>
+        <p>
+            It turns out that this can be simplified further. This comes from trying to rewrite the equation into the standard form of a line <m>Ax + By = C</m>. We have,
+        </p>
+        <md>
+            <mrow>(y - y_0) a^2 y_0 \amp = b^2 x_0 (x - x_0)</mrow>
+            <mrow>a^2 y_0 y - a^2 y_0^2 \amp = b^2 x_0 x - b^2 x_0^2</mrow>
+            <mrow>b^2 x_0 x - a^2 y_0 y \amp = b^2 x_0^2 - a^2 y_0^2</mrow>
+            <mrow>\frac{x_0 x}{a^2} - \frac{y_0 y}{b^2} \amp = \frac{x_0^2}{a^2} - \frac{y_0^2}{b^2}</mrow>
+        </md>
+        <p>
+            Then, since $(x_0, y_0)$ is a point on the hyperbola, it satisfies the equation $\frac{x_0^2}{a^2} - \frac{y_0^2}{b^2} = 1$. Thus, the equation of the tangent line simplifies to,
+        </p>
+        <me>
+            \frac{x_0 x}{a^2} - \frac{y_0 y}{b^2} = 1
+        </me>
+
+    </subsection>
+
+    <subsection>
+        <title>Remark on Where Implicit Differentiation Fails</title>
+        <p>
+            Implicit differentiation cannot always be applied. When using implicit differentiation, in particular when differentiating an equation involving <m>y</m>, it is <em>implicitly assumed</em> (see what I did there) that <m>y</m> is indeed a differentiable function with respect to <m>x</m>. However, this need not be the case. For example, the circle of radius <m>\sqrt{R}</m>,
+        </p>
+        <me>
+            x^2 + y^2 = R
+        </me>
+        <p>
+            Using implicit differentiation, like above we get,
+        </p>
+        <me>
+            \frac{dy}{dx} = -\frac{x}{y}
+        </me>
+        <p>
+            This determines the slope at any point on the curve, except when <m>y = 0</m>. However, if <m>R = 0</m>, then <m>x^2 + y^2 = 0</m> only represents a single point, the origin <m>(0,0)</m>, for which the concept of slope is meaningless. If <m>R \lt 0</m>, then <m>x^2 + y^2 = R</m> represents no points in the plane (much less a curve), so <m>\frac{dy}{dx}</m> is meaningless here also. In general, being able to calculate <m>\frac{dy}{dx}</m> using implicit differentiation does not guarantee that it represents the slope of anything.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Implicit Function Theorem</title>
+        <p>
+            The <term>implicit function theorem</term> gives sufficient conditions for implicit differentiation to find the slope of the graph of an implicit function.
+        </p>
+    </subsection>
+    
+    <subsection>
+        <title>Power Rule for Rational Exponents Proof</title>
+        <p>
+            Implicit differentiation, along with the power rule for integers, can be used to prove the power rule for rational exponents.
+        </p>
+        <theorem>
+            <p>
+                Let <m>f(x) = x^{p/q}</m> Then, <m>f'(x) = \frac{p}{q}x^{p/q-1}</m>.
+            </p>
+        </theorem>
+
+        <proof>
+            <p>
+                If <m>y = x^{p/q}</m>, then <m>y^q = x^p</m>. Then, using implicit differentiation,
+            </p>
+            <me>
+                \frac{d}{dx} y^q \amp = \frac{d}{dx} x^p
+            </me>
+            <p>
+                By the power rule (for integer powers),
+            </p>
+            <me>
+                qy^{q-1} \frac{dy}{dx} \amp = px^{p-1}
+            </me>
+            <p>
+                Then, solving for <m>\frac{dy}{dx}</m>,
+            </p>
+            <me>
+                \frac{dy}{dx} = \frac{px^{p-1}}{qy^{q-1}}
+            </me>
+            <p>
+                Finally, substituting back <m>y = x^{p/q}</m>,
+            </p>
+            <md>
+                <mrow>\frac{dy}{dx} \amp = \frac{px^{p-1}}{q(x^{p/q})^{q-1}}</mrow>
+                <mrow>\amp = \frac{p}{q} \frac{x^{p-1}}{x^{p-p/q}}</mrow>
+                <mrow>\amp = \frac{p}{q} x^{p/q-1} \amp\amp \text{laws of exponents}</mrow>
+            </md>
+        </proof>
+    </subsection>
+
+</section>

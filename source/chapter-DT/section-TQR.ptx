@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TQR">
+    <title>The Quotient Rule</title>
+
+    <subsection>
+        <title>The Quotient Rule</title>
+
+        <theorem>
+            <p>
+                Let <m>f, g</m> be functions, differentiable at <m>x</m> and <m>g(x) \neq 0</m>. Then, the quotient <m>f/g</m> is differentiable at <m>x</m>, and,
+                <me>
+                    \boxed{\brac{\frac{f}{g}}'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}}
+                </me>
+            </p>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Using the Quotient Rule</title>
+        <p>
+            The rule for differentiating polynomials, combined with the quotient rule, provides a method for differentiating any <em>rational function</em> (a quotient of polynomials).
+        </p>
+        <p>
+            Often, the quotient rule will result in fractions with numerators (and sometimes denominators) that can be simplified. This is often helpful, especially in applications, where we'd like to analyze derivatives.
+        </p>
+        <p>
+            Also, just like the quotient rule, sometimes it is easier to simplify a quotient first before trying to apply the quotient rule. This is particularly true if the denominator is a monomial (one term).
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Remembering the Quotient Rule</title>
+
+        <p>
+            This rule is more difficult to remember, so there are multiple techniques and mnemonics to help remember it. First, notice that the numerator of the quotient rule resembles the product rule, except with a negative sign between the terms. Also,
+        </p>
+        <ul>
+            <li>
+                Instead of using <m>f</m> and <m>g</m>, we can use <q>numerator</q> and <q>denominator</q>.
+                <me>
+                    (\text{quotient})' = \frac{(\text{denominator}) \times (\text{numerator})' - (\text{numerator}) \times (\text{denominator})'}{(\text{denominator})^2}
+                </me>
+                Alternatively, in short form,
+                <me>
+                    (\text{quotient})' = \frac{(\text{denom}) \times (\text{num})' - (\text{num}) \times (\text{denom})'}{(\text{denom})^2}
+                </me>
+            </li>
+            <li>
+                Omitting the arguments, we have,
+                <me>
+                    \boxed{\brac{\frac{f}{g}}' = \frac{gf' - fg'}{g^2}}
+                </me>
+            </li>
+            <li>
+                If we consider <m>f</m> to be the <q>high</q> function, <m>g</m> to be the <q>low</q> function, and <q>di</q> (pronounced <q>dee</q>) representing the derivative, we get,
+                <me>
+                    \boxed{(\text{quotient})' = \frac{\text{low <m>\times</m> di-high} - \text{high <m>\times</m> di-low}}{(\text{low})^2}}
+                </me>
+                which is read as <q>low di-high minus high di-low over low squared</q>.
+            </li>
+            <li>
+                For a Santa-themed mnemonics, if we take $f$ to be ``hi" (the ``high" function) and $g$ to be the ``ho" function (hi-ho), then we get,
+                <me>
+                    (\text{quotient})' = \frac{\text{ho <m>\times</m> di-hi} - \text{hi <m>\times</m> di-ho}}{(\text{ho})^2}
+                </me>
+                read as <q>ho di-hi minus hi di-ho over ho ho</q>.
+            </li>
+        </ul>
+    </subsection>
+
+</section>

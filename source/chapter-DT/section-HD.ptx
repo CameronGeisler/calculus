@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-HD">
+    <title>Higher Derivatives</title>
+
+    <subsection>
+        <title>Higher Derivatives</title>
+
+        <p>
+            For a function <m>f</m>, its derivative <m>f'</m> is itself a function, and so it itself can be differentiated, to form a new function (the <q>derivative of the derivative</q>). This function is called the <term>second derivative</term>. The second derivative of <m>f</m> is denoted by <m>f''</m> (with two primes). Similarly,
+        </p>
+        <ul>
+            <li>The <term>third derivative</term> is the derivative of the second derivative, and is denoted by <m>f'''</m>.</li>
+            <li>In general, the <term><m>n</m>th derivative</term> is the function which results from differentiating <m>f</m> <m>n</m> times, and is denoted by <m>f^{(n)}</m>. </li>
+        </ul>
+        <p>
+            Then, the derivatives of <m>f</m> are denoted by,
+        </p>
+        <me>
+            f', f'', f''', f^{(4)}, f^{(5)}, \dots, f^{(n)}, \dots
+        </me>
+        <p>
+            Typically, a number superscript is used for <m>n \geq 4</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Intuition for Higher Derivatives</title>
+        <p>
+            Given a function <m>f</m>, recall that the derivative of <m>f</m> can be thought of as the rate of change of <m>f</m>. Then, the derivative <m>f''</m> of <m>f'</m> can be thought of as the rate of change of <m>f'</m>, that is, measuring how fast the derivative changes. In terms of <m>f</m>, <m>f''</m> can be thought of as how fast the slope of <m>f</m> is changing.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Intuition for Leibniz Notation for Higher Derivatives</title>
+        <p>
+            In Leibniz notation, the second derivative is denoted by,
+        </p>
+        <me>
+            \frac{d^2 y}{dx^2}
+        </me>
+        <p>
+            Intuitively, the second derivative of <m>y</m> is the result of applying the derivative operator <m>\frac{d}{dx}</m> to <m>y</m> <em>twice</em>. In other words,
+        </p>
+        <me>
+            y'' = \frac{d}{dx} \frac{d}{dx} y
+        </me>
+        <p>
+            Then, in some sense, the operators can be <q>combined</q> as,
+        </p>
+        <me>
+            y'' = \brac{\frac{d}{dx}}^2 y
+        </me>
+        <p>
+            Or,
+        </p>
+        <me>
+            y'' = \frac{d^2}{(dx)^2} y = \frac{d^2 y}{(dx)^2}
+        </me>
+        <p>
+            Finally, Leibniz notation writes <m>dx^2</m> rather than <m>(dx)^2</m>, omitting the brackets but maintaining the intuition that the denominator is <m>(dx)^2</m> rather than <m>d(x^2)</m>.
+        </p>
+    </subsection>   
+
+</section>

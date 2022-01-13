@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-12T18:26:03-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rolle's Theorem, The Mean Value Theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-O.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-GBOF.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-SGOF.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-O.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-GBOF.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-SGOF.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
+<li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
+<li><a href="section-MP.html" data-scroll="section-MP">Motivational Problems</a></li>
+<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-TD.html" data-scroll="chapter-TD"><span class="codenumber">2</span> <span class="title">The Derivative</span></a><ul>
+<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">Tangent Lines, Slopes of Functions</a></li>
+<li><a href="section-TDF.html" data-scroll="section-TDF">The Derivative Function</a></li>
+<li><a href="section-VAROC.html" data-scroll="section-VAROC">Velocity and Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-DT.html" data-scroll="chapter-DT"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a><ul>
+<li><a href="section-BDR.html" data-scroll="section-BDR">Basic Differentiation Rules</a></li>
+<li><a href="section-D.html" data-scroll="section-D">Differentiability</a></li>
+<li><a href="section-TPR.html" data-scroll="section-TPR">The Product Rule</a></li>
+<li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
+<li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
+<li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-GBOF.html" data-scroll="chapter-GBOF"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a><ul>
+<li><a href="section-IADF.html" data-scroll="section-IADF">Increasing and Decreasing Functions</a></li>
+<li><a href="section-LEOF.html" data-scroll="section-LEOF">Local Extrema of Functions</a></li>
+<li><a href="section-AEOF.html" data-scroll="section-AEOF">Absolute Extrema of Functions</a></li>
+<li><a href="section-O.html" data-scroll="section-O">Optimization</a></li>
+<li><a href="section-RTTMVT.html" data-scroll="section-RTTMVT" class="active">Rolle's Theorem, The Mean Value Theorem</a></li>
+<li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-RTTMVT"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Rolle's Theorem, The Mean Value Theorem</span>
+</h2>
+<section class="introduction" id="introduction-13">The mean value theorem is a very important theorem for many results in calculus. First, we need a preliminary theorem, called Rolle's theorem, first developed by in 1691 by <dfn class="terminology">Michel Rolle</dfn>, French mathematician.</section><section class="subsection" id="subsection-72"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.1</span> <span class="title">Rolle's Theorem</span>
+</h3>
+<article class="theorem theorem-like" id="theorem-19"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span>
+</h4>
+<p id="p-272">Let \(f\) be a function, continuous on \([a,b]\text{,}\) differentiable on \((a,b)\text{.}\) Then, if \(f(a) = f(b)\text{,}\) then there exists \(c \in (a,b)\) such that \(f'(c) = 0\text{.}\)</p></article><p id="p-273">Intutitively, Rolle's theorem says that if a differentiable function is equal at two different points, then there must be a point in-between where the tangent is horizontal.</p>
+<p id="p-274">Rolle's theorem can be illustrated by first plotting two points which lie on the same horizontal line, and then attempting to connect them with a smooth curve (a curve that is continuous and has no sharp corners). However the curve is drawn, it will be impossible to do so without it having at least one point with a horizontal tangent. Intuitively, this is because if the curve goes upward, then it must eventually come back downward, in order to ``meet" the other point. By doing so, it will have a horizontal tangent along the way. Similarly, if it curve goes downward, it will eventually have to come back up, and will have a horizontal tangent. Finally, if the curve goes neither upward nor downward, then the function is constant, so of course its derivative is 0 everywhere.</p>
+<article class="example example-like" id="example-17"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-17"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Kinematics connection.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-275">Let \(x = x(t)\) represent the position of an object. If \(x(a) = x(b)\text{,}\) then the object is at the same position at two different time instants \(t = a\) and \(t = b\text{.}\) By Rolle's theorem, this means that \(x'(c) = v(c) = 0\) for some \(c \in (a,b)\text{,}\) i.e. the velocity of the object is 0 at some point between \(a\) and \(b\text{.}\) For example, when an object is thrown upwards and falls back down, it has 0 velocity at the top of its flight path.</p></article></div></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.2</span> <span class="title">The Mean Value Theorem</span>
+</h3>
+<p id="p-276">The mean value theorem is a generalization of Rolle's theorem.</p>
+<article class="theorem theorem-like" id="theorem-20"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Mean value theorem (MVT).</span>
+</h4>
+<p id="p-277">Let \(f\) be a function, continuous on \([a,b]\text{,}\) differentiable on \((a,b)\text{.}\) Then, there exists \(c \in (a,b)\) such that,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{f'(c) = \frac{f(b) - f(a)}{b - a}}
+\end{equation*}
+</div>
+<p class="continuation">or, equivalently, such that,</p>
+<div class="displaymath">
+\begin{equation*}
+f(b) - f(a) = f'(c)(b - a)
+\end{equation*}
+</div></article><p id="p-278">The first form intuitively says that on an interval \([a,b]\text{,}\) there exists some point \(c \in (a,b)\) such that the slope of the tangent line of \(f\) at \(x = c\) is equal to the slope of the secant line from \((a,f(a))\) to \((b,f(b))\text{.}\)</p>
+<p id="p-279">The MVT is the “slanted” version of Rolle's theorem (conversely, Rolle's theorem is the “horizontal” version of the MVT). If \(f(a) = f(b)\) in the MVT, the conclusion states that \(f'(c) = 0\) for some \(c \in (a,b)\text{,}\) which is precisely Rolle's theorem.</p>
+<p id="p-280">The MVT is an existence theorem, as it doesn't provide a method for determining \(c\) (if there is one, or multiple). <a class="external" href="https://www.geogebra.org/m/J5KMJQqC" target="_blank">This applet</a> determines the value of \(c\) for a given \(f\) and \([a,b]\text{,}\) and displays it graphically. Here is <a class="external" href="https://www.geogebra.org/m/YH8JxhSw" target="_blank">another applet</a>.</p>
+<p id="p-281">We can visualize moving the secant line parallel to itself, and see that it turns into the tangent line at its last point of contact with the graph of the curve.</p>
+<article class="example example-like" id="example-18"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-18"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Kinematics interpretation of the MVT.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-18"><article class="example example-like"><p id="p-282">If \(x = x(t)\) represents the position of an object, then recall that,</p>
+<div class="displaymath">
+\begin{equation*}
+v_{\text{avg}} = \frac{x(b) - x(a)}{b - a}
+\end{equation*}
+</div>
+<p class="continuation">represents the average velocity of the object from \(t = a\) to \(t = b\text{,}\) and \(x'(t)\) represents the instantaneous velocity at \(t\text{.}\) Then, the MVT says that if the average velocity of an object over \([a,b]\) is \(v_{\text{avg}}\text{,}\) then the object had an instantaneous velocity of \(v_{\text{avg}}\) for at least one point in time in \([a,b]\text{.}\) In other words, there exists \(t_0\) such that,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{x(b) - x(a)}{b - a} = x'(t_0)
+\end{equation*}
+</div>
+<p class="continuation">For example, if you drive 100km from point A to point B in 2 hours, then there is at least one point in that time where the instantaneous velocity of the car was \(\frac{100 \text{ km}}{2 \text{ hr}} = 50 \text{ km/hr}\text{.}\) This makes the natural assumption that the position function \(x(t)\) is continuous (objects can't “teleport”) and assumes that \(x\) is differentiable.</p></article></div>
+<p id="p-283">The MVT was first stated by <dfn class="terminology">Augustin Cauchy</dfn> in 1823.</p></section><section class="subsection" id="subsection-74"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.3</span> <span class="title">Remarks</span>
+</h3>
+<p id="p-284">Each of the hypotheses for the MVT are required. Consider a function \(f\) which is continuous on \([a,b]\) but non-differentiable for some point in \((a,b)\text{.}\) Also, consider $f$ which is continuous and differentiable on \((a,b)\) but not continuous at \(x = a\) (or \(x = b\text{,}\) or both). In these cases, the conclusion of the MVT fails.</p>
+<p id="p-285">On the other hand, if a function is continuous <em class="emphasis">and</em> differentiable on \([a,b]\text{,}\) then certainly it is differentiable on the smaller interval \((a,b)\text{,}\) and the conclusion of the MVT holds.</p>
+<p id="p-286">Also, there is another interpretation of the MVT relating to increments. Recall that for an interval \([x, x + \Delta x]\text{,}\) we have the approximation,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{f(x + \Delta x) - f(x)}{\Delta x} \approx f'(x)
+\end{equation*}
+</div>
+<p id="p-287">Then, the MVT says that for some \(c \in [x, x + \Delta x]\text{,}\) we have the equality,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{f(x + \Delta x) - f(x)}{\Delta x} = f'(c)
+\end{equation*}
+</div>
+<p id="p-288">In addition, the MVT implies the following intuitive fact, that the average slope is somewhere in between the maximum and minimum instantaneous slopes. More precisely,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\min_{x \in [a,b]} f'(x) \leq \frac{f(b) - f(a)}{b - a} \leq \max_{x \in [a,b]} f'(x)}
+\end{equation*}
+</div></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.5.4</span> <span class="title">Examples</span>
+</h3>
+<article class="example example-like" id="example-19"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-19"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-19"><article class="example example-like"><p id="p-289">Consider the reciprocal function,</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{x}
+\end{equation*}
+</div>
+<p class="continuation">for \(x &gt; 0\text{.}\) Consider any interval \([a,b]\text{,}\) where \(0 \lt a \lt b\text{.}\) Then, \(f\) is differentiable and continuous on this interval, where,</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = -\frac{1}{x^2}
+\end{equation*}
+</div>
+<p class="continuation">Then, by the MVT, there exists \(c \in (a,b)\) such that,</p>
+<div class="displaymath">
+\begin{align*}
+f'(c) \amp = \frac{f(b) - f(a)}{b - a}\\
+-\frac{1}{c^2} \amp = \frac{\frac{1}{b} - \frac{1}{a}}{b - a}\\
+-\frac{1}{c^2} \amp = -\frac{1}{ab}\\
+c^2 \amp = ab\\
+c \amp = \sqrt{ab}
+\end{align*}
+</div>
+<p class="continuation">In other words, the value of \(c\) which satisfies the MVT is the geometric mean of \(a\) and \(b\text{.}\) Note that we take the positive square root here because \(c \in (a,b)\) and so \(c &gt; 0\text{.}\)</p></article></div></section></section></div></main>
+</div>
+</body>
+</html>

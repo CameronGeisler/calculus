@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-05T17:16:11-08:00       *-->
+<!--*       on 2022-01-12T18:26:02-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -104,6 +104,20 @@
 <li><a href="section-BDR.html" data-scroll="section-BDR" class="active">Basic Differentiation Rules</a></li>
 <li><a href="section-D.html" data-scroll="section-D">Differentiability</a></li>
 <li><a href="section-TPR.html" data-scroll="section-TPR">The Product Rule</a></li>
+<li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
+<li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
+<li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-GBOF.html" data-scroll="chapter-GBOF"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a><ul>
+<li><a href="section-IADF.html" data-scroll="section-IADF">Increasing and Decreasing Functions</a></li>
+<li><a href="section-LEOF.html" data-scroll="section-LEOF">Local Extrema of Functions</a></li>
+<li><a href="section-AEOF.html" data-scroll="section-AEOF">Absolute Extrema of Functions</a></li>
+<li><a href="section-O.html" data-scroll="section-O">Optimization</a></li>
+<li><a href="section-RTTMVT.html" data-scroll="section-RTTMVT">Rolle's Theorem, The Mean Value Theorem</a></li>
+<li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -112,15 +126,7 @@
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Basic Differentiation Rules</span>
 </h2>
 <section class="subsection" id="subsection-29"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Differentiation Rules and Systematic Differentiation</span>
-</h3>
-<p id="p-140">Calculating derivatives using the limit definition can be tedious and sometimes difficult, especially for more complicated functions. Instead, we can develop <dfn class="terminology">differentiation rules</dfn>,</p>
-<ol class="decimal">
-<li id="li-30"><p id="p-derived-li-30">First, rules to differentiate general families of functions (e.g. polynomials, trigonometric functions, exponential and logarithmic functions, etc.)</p></li>
-<li id="li-31"><p id="p-derived-li-31">Then, develop rules to differentiate combinations of those general functions (sums, differences, products, quotients, compositions) in terms of the derivatives of the original functions.</p></li>
-</ol>
-<p id="p-141">Combining these two collections of rules will allow for computing derivatives of every elementary function covered in pre-calculus.</p></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">Derivative of Power Functions, General Power Rule</span>
+<span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Derivative of Power Functions, General Power Rule</span>
 </h3>
 <p id="p-142">For power functions, where the variable is raised to a constant power, there is a simple rule for differentiation.</p>
 <article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
@@ -141,8 +147,8 @@
 \frac{d}{dx} x = 1 \qquad \frac{d}{dx} x^2 = 2x \qquad \frac{d}{dx} x^3 = 3x^2 \qquad \frac{d}{dx} \brac{\frac{1}{x}} = -\frac{1}{x^2}
 \end{equation*}
 </div>
-<p class="continuation">are special cases of this rule, with \(r = 1, 2, 3\) and \(r = -1\text{,}\) respectively.</p></article></div></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">Sum, Difference, and Constant Multiple Rules</span>
+<p class="continuation">are special cases of this rule, with \(r = 1, 2, 3\) and \(r = -1\text{,}\) respectively.</p></article></div></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">Sum, Difference, and Constant Multiple Rules</span>
 </h3>
 <article class="theorem theorem-like" id="theorem-5"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
@@ -167,8 +173,8 @@
 \begin{equation*}
 \boxed{(f_1 + \dots + f_n)'(x) = f_1'(x) + \dots + f_n'(x)}
 \end{equation*}
-</div></article></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.1.4</span> <span class="title">Differentiation of Polynomials</span>
+</div></article></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">Differentiation of Polynomials</span>
 </h3>
 <p id="p-150">By combining all of the previous results, we can show that any polynomial is differentiable on \(\mathbb{R}\text{,}\) and determine its derivative. Recall that a polynomial is a function of the form,</p>
 <div class="displaymath">

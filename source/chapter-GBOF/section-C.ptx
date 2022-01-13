@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-C">
+    <title>Concavity</title>
+
+    <introduction>
+        The concavity of a graph describes the curvature of the graph, whether the graph is <q>bending</q> or <q>curving</q> upward or downward. Intuitively, a graph is concave up it looks to form a valley, and concave down if it looks to form a hill. More precisely, the graph of a function <m>f</m> is bending upward if its slope is increasing, and is bending downward if its slope is decreasing. This is a statement about the rate of change of the derivative of <m>f</m>, i.e. about the second derivative <m>f''</m>. 
+    </introduction>
+
+    <subsection>
+        <title>Concavity</title>
+        <definition>
+            <p>
+                Let <m>f</m> be a function, differentiable on <m>(a,b)</m>. Then, <m>f</m> is <term>concave up</term> on <m>(a,b)</m> if <m>f'</m> is increasing on <m>(a,b)</m>. Similarly, <m>f</m> is <term>concave down</term> on <m>(a,b)</m> if <m>f'</m> is decreasing on <m>(a,b)</m>.
+            </p>
+        </definition>
+
+        <p>
+            Note that concavity is both a property of a function <m>f</m> and of its graph. Note that if <m>f'</m> is constant, then <m>f</m> is neither concave up nor concave down, and we say that <m>f</m> has no concavity.
+        </p>
+        <p>
+            From this definition, and the connection between the sign of the derivative and increasing/decreasing, we get the following theorem.
+        </p>
+        <theorem>
+            <title>Concavity test</title>
+            <p>
+                Let <m>f</m> be twice-differentiable on <m>(a,b)</m>. Then,
+                <ul>
+                    <li>If <m>f''(x) > 0</m> for all <m>x \in (a,b)</m>, then <m>f</m> is concave up on <m>(a,b)</m>.</li>
+                    <li>If <m>f''(x) \lt 0</m> for all <m>x \in (a,b)</m>, then <m>f</m> is concave down on <m>(a,b)</m>.</li>
+                </ul>
+            </p>
+        </theorem>
+
+        <definition>
+            <p>
+                A point <m>(a,f(a))</m> is an <term>inflection point</term> of <m>f</m> (or of the graph <m>y = f(x)</m>) if <m>f</m> is continuous at <m>x = a</m>, and the concavity of <m>f</m> is opposite on opposite sides of <m>a</m>, i.e. it changes from concave up to concave down or from concave down to concave up, i.e. <m>f''</m> changes sign at <m>x = a</m>.
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Second Derivative Test for Extrema</title>
+        <theorem>
+            <title>Second derivative test</title>
+            <p>
+                Let <m>f</m> be a function, <m>f'(a) = 0</m>, and let <m>f''</m> be continuous at <m>x = a</m>. Then,
+                <ul>
+                    <li>If <m>f''(a) > 0</m>, then <m>f</m> has a local minimum at <m>a</m>.</li>
+                    <li>If <m>f''(a) \lt 0</m>, then <m>f</m> has a local maximum at <m>a</m>.</li>
+                    <li>If <m>f''(a) = 0</m>, then the test is inconclusive. In other words, <m>f</m> could have a local minimum, local maximum, or neither.</li>
+                </ul>
+            </p>
+        </theorem>
+
+        <p>
+            The graph of <m>f''(x)</m> intersects the <m>x</m>-axis at the inflection points of <m>f</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Concavity and Tangent Lines</title>
+        <p>
+            If <m>f</m> is concave up, then its tangent lines will be below the graph of <m>f</m>. If <m>f</m> is concave down, then its tangent lines will be above the graph of <m>f</m>.
+        </p>
+        <p>
+            Concavity can be combined with the intervals of increase/decrease to determine the shape of the graph.
+        </p>
+        <ul>
+            <li>Increasing at an increasing rate, if <m>f'(x) > 0</m> and <m>f''(x) > 0</m>.</li>
+            <li>Increasing at a decreasing rate, if <m>f'(x) > 0</m> and <m>f''(x) \lt 0</m>.</li>
+            <li>Decreasing at an increasing rate (faster), if <m>f'(x) \lt 0</m> and <m>f''(x) \lt 0</m>.</li>
+            <li>Decreasing at a decreasing rate (slower), if <m>f'(x) \lt 0</m> and <m>f''(x) > 0</m>.</li>
+        </ul>
+        <p>
+            Also, local extrema of <m>f'(x)</m> correspond to inflection points of <m>f(x)</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Application: Diminishing Returns</title>
+        <p>
+            Diminishing returns describes a function which is increasing, but doing so at a decreasing rate.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Advanced Examples</title>
+        <example>Inflection points of a cubic function</example>
+        <p>
+            A cubic polynomial function has exactly one inflection point. Also, if the function has 3 <m>x</m>-intercepts <m>a, b, c</m>, then the <m>x</m>-coordinate of the inflection point is,
+            <me>
+                x = \frac{a + b + c}{3}
+            </me>
+            If <m>f</m> is a cubic polynomial function, and has roots <m>a, b, c</m>, then it is of the form,
+            <me>
+                f(x) = A(x - a)(x - b)(x - c)
+            </me>
+            for some <m>A \in \mathbb{R}</m>. Then, to differentiate this function, we can first expand. Then,
+            <me>
+                f(x) = A\brac{x^3 - (a + b + c) x^2 + (ab + ac + bc)x - abc}
+            </me>
+            Then,
+            <me>
+                f'(x) = 3x^2 - 2(a + b + c)x + ab + ac + bc
+            </me>
+            Then,
+            <me>
+                f''(x) = 6x - 2(a + b + c)
+            </me>
+            Then, <m>6x - 2(a + b + c) = 0</m> when <m>x = \frac{a + b + c}{3}</m>. This shows that the inflection point of a cubic function occurs at the average of the three roots <m>a, b, c</m>.
+        </p>
+    </subsection>
+</section>

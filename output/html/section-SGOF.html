@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-12T18:26:03-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sketching Graphs of Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-RTTMVT.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-GBOF.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-RTTMVT.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-GBOF.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
+<li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
+<li><a href="section-MP.html" data-scroll="section-MP">Motivational Problems</a></li>
+<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-TD.html" data-scroll="chapter-TD"><span class="codenumber">2</span> <span class="title">The Derivative</span></a><ul>
+<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">Tangent Lines, Slopes of Functions</a></li>
+<li><a href="section-TDF.html" data-scroll="section-TDF">The Derivative Function</a></li>
+<li><a href="section-VAROC.html" data-scroll="section-VAROC">Velocity and Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-DT.html" data-scroll="chapter-DT"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a><ul>
+<li><a href="section-BDR.html" data-scroll="section-BDR">Basic Differentiation Rules</a></li>
+<li><a href="section-D.html" data-scroll="section-D">Differentiability</a></li>
+<li><a href="section-TPR.html" data-scroll="section-TPR">The Product Rule</a></li>
+<li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
+<li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
+<li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-GBOF.html" data-scroll="chapter-GBOF"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a><ul>
+<li><a href="section-IADF.html" data-scroll="section-IADF">Increasing and Decreasing Functions</a></li>
+<li><a href="section-LEOF.html" data-scroll="section-LEOF">Local Extrema of Functions</a></li>
+<li><a href="section-AEOF.html" data-scroll="section-AEOF">Absolute Extrema of Functions</a></li>
+<li><a href="section-O.html" data-scroll="section-O">Optimization</a></li>
+<li><a href="section-RTTMVT.html" data-scroll="section-RTTMVT">Rolle's Theorem, The Mean Value Theorem</a></li>
+<li><a href="section-SGOF.html" data-scroll="section-SGOF" class="active">Sketching Graphs of Functions</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-SGOF"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.6</span> <span class="title">Sketching Graphs of Functions</span>
+</h2>
+<section class="subsection" id="subsection-76"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.1</span> <span class="title">Curve Sketching</span>
+</h3>
+<p id="p-290">Consider a function \(f(x)\text{.}\) The function itself, and its first and second derivative, provide useful information about the graph of \(y = f(x)\text{.}\) From pre-calculus, we can determine,</p>
+<ul class="disc">
+<li id="li-62"><p id="p-derived-li-62">Points on the graph of \(y = f(x)\text{,}\) by evaluating \(f\text{.}\)</p></li>
+<li id="li-63"><p id="p-derived-li-63">The domain and range of \(f\text{.}\)</p></li>
+<li id="li-64"><p id="p-derived-li-64">The \(x\)-intercepts and \(y\)-intercepts.</p></li>
+<li id="li-65"><p id="p-derived-li-65">Symmetry, if the function is even or odd.</p></li>
+</ul>
+<p id="p-291">Using calculus, we can determine additional properties of a graph.</p>
+<ul class="disc">
+<li id="li-66"><p id="p-derived-li-66">Using limits, we can determine continuity (in particular, points of discontinuity), and any vertical or horizontal asymptotes.</p></li>
+<li id="li-67"><p id="p-derived-li-67">From the first derivative \(f'\text{,}\) we can determine intervals of increase and decrease, and any local extrema.</p></li>
+<li id="li-68"><p id="p-derived-li-68">From the second derivative \(f''\text{,}\) we can determine concavity and inflection points.</p></li>
+</ul>
+<p id="p-292">Notice the importance of algebra for solving the equations \(f(x) = 0\) (to determine the \(x\)-intercepts), \(f'(x) = 0\) (to determine the critical points), and \(f''(x) = 0\) (to determine the inflection points). In summary, calculus allows us to sketch graphs of functions more accurately.</p></section><section class="subsection" id="subsection-77"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.2</span> <span class="title">Sketching the Graph of a Polynomial Function</span>
+</h3>
+<p id="p-293">First, we will consider sketching the graph of a polynomial function \(y = f(x)\text{.}\) The following steps provide a good outline as to how to sketch the graph of \(y = f(x)\text{.}\)</p>
+<ol class="decimal">
+<li id="li-69"><p id="p-derived-li-69"><dfn class="terminology">Intercepts</dfn>. Determine any \(x\)-intercepts and/or the \(y\)-intercept, by solving the polynomial equation \(f(x) = 0\text{,}\) and by evaluating \(y = f(0)\text{,}\) respectively.</p></li>
+<li id="li-70"><p id="p-derived-li-70"><dfn class="terminology">Symmetry</dfn>. Determine any symmetry, i.e. if \(f\) is an even or odd function.</p></li>
+<li id="li-71"><p id="p-derived-li-71"><dfn class="terminology">Extrema and intervals of increase/decrease</dfn>. Determine \(f'(x)\text{,}\) and determine any critical points by solving \(f'(x) = 0\text{,}\) and determine any local extrema using the first or second derivative test. Determine the intervals where \(f\) is increasing and decreasing.</p></li>
+<li id="li-72"><p id="p-derived-li-72"><dfn class="terminology">Concavity and inflection points</dfn>. Determine \(f''(x)\text{,}\) and determine any potential inflection points by solving \(f''(x) = 0\text{.}\) Determine the intervals where \(f\) is concave up or down, and use this to determine the actual inflection points.</p></li>
+<li id="li-73"><p id="p-derived-li-73">Plot the intercepts, critical points, and inflection points. Recall that critical points indicate horizontal tangents, and inflection points indicate changing concavity.</p></li>
+<li id="li-74"><p id="p-derived-li-74"><dfn class="terminology">Polynomial end behavior</dfn>. Consider the end behavior of \(f\text{,}\) i.e. the behavior of \(f\) as \(x \to \infty\) and \(x \to -\infty\text{.}\)</p></li>
+<li id="li-75"><p id="p-derived-li-75">Use all preceding information to determine the overall shape of the graph. If necessary, plot additional points.</p></li>
+<li id="li-76"><p id="p-derived-li-76">Finally, connect the points with a smooth curve.</p></li>
+</ol></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.3</span> <span class="title">Quadratic Functions (Parabolas)</span>
+</h3>
+<p id="p-294">Consider a quadratic function \(f(x) = ax^2 + bx + c\text{.}\) You might recall from pre-calculus that the vertex of this parabola is \(\brac{-\frac{b}{2a}, f\brac{-\frac{b}{2a}}}\text{.}\) This is made clear using calculus.</p>
+<p id="p-295">Determining critical points, \(f'(x) = 2ax + b = 0\text{,}\) so \(x = -\frac{b}{2a}\text{.}\) Using the first derivative test, this is a maximum or minimum, depending on the sign of \(a\text{.}\)</p>
+<p id="p-296">Determining concavity, \(f''(x) = 2a\) which is constant. If \(a &gt; 0\text{,}\) then \(f''(x) &gt; 0\) for all \(x\text{,}\) and \(f\) is concave up. If \(a \lt 0\text{,}\) then \(f'' \lt 0\text{,}\) and \(f\) is concave down.</p></section><section class="subsection" id="subsection-79"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.4</span> <span class="title">Cubic Polynomials</span>
+</h3>
+<p id="p-297">Note that a cubic function always has exactly one point of inflection, because the second derivative is a linear function, which has one root.</p>
+<p id="p-298">Note that a polynomial function of degree \(n\) can have at most \(n-1\) relative extrema, and at most \(n-2\) inflection points.</p>
+<p id="p-299">If a polynomial has a double root, then it has a horizontal tangent there (like the function \(f(x) = x^3\)).</p></section><section class="subsection" id="subsection-80"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.5</span> <span class="title">Sketching the Graph of a Rational Function</span>
+</h3>
+<p id="p-300">The procedure for a rational function is somewhat similar to that of a polynomial function, except with rational functions we have a few extra characteristics.</p>
+<ol class="decimal">
+<li id="li-77"><p id="p-derived-li-77">Rational functions can have values of \(x\) where \(f'(x)\) does not exist (critical numbers), or where \(f''(x)\) does not exist.</p></li>
+<li id="li-78"><p id="p-derived-li-78">Rational functions have can have horizontal and vertical asymptotes, and may have holes.</p></li>
+</ol></section><section class="subsection" id="subsection-81"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.6</span> <span class="title">Sketching Functions with Cusps and Vertical Tangents</span>
+</h3></section><section class="subsection" id="subsection-82"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.7</span> <span class="title">Sketching a General Function</span>
+</h3></section><section class="subsection" id="subsection-83"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.8</span> <span class="title">Sketching a Function Given Properties</span>
+</h3></section></section></div></main>
+</div>
+</body>
+</html>

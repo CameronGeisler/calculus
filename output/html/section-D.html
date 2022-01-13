@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-05T17:16:11-08:00       *-->
+<!--*       on 2022-01-12T18:26:03-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -104,6 +104,20 @@
 <li><a href="section-BDR.html" data-scroll="section-BDR">Basic Differentiation Rules</a></li>
 <li><a href="section-D.html" data-scroll="section-D" class="active">Differentiability</a></li>
 <li><a href="section-TPR.html" data-scroll="section-TPR">The Product Rule</a></li>
+<li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
+<li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
+<li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-GBOF.html" data-scroll="chapter-GBOF"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a><ul>
+<li><a href="section-IADF.html" data-scroll="section-IADF">Increasing and Decreasing Functions</a></li>
+<li><a href="section-LEOF.html" data-scroll="section-LEOF">Local Extrema of Functions</a></li>
+<li><a href="section-AEOF.html" data-scroll="section-AEOF">Absolute Extrema of Functions</a></li>
+<li><a href="section-O.html" data-scroll="section-O">Optimization</a></li>
+<li><a href="section-RTTMVT.html" data-scroll="section-RTTMVT">Rolle's Theorem, The Mean Value Theorem</a></li>
+<li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -111,13 +125,13 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-D"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Differentiability</span>
 </h2>
-<section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-32"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Differentiability on an Interval</span>
 </h3>
 <article class="definition definition-like" id="definition-6"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
 </h4>If a function is defined on an open interval \((a,b)\text{,}\) then \(f\) is <dfn class="terminology">differentiable</dfn> on \((a,b)\) if \(f\) is differentiable for all \(x \in (a,b)\text{.}\)</article><p id="p-153">Functions that are differentiable are intuitively “smooth”. Values of \(x\) in \(D(f)\) where \(f\) is non-differentiable and are not endpoints are called <dfn class="terminology">singular points</dfn> of \(f\text{.}\)</p>
-<p id="p-154">Note that we used an open interval \((a,b)\) and did not include the endpoints. This is because if \(f\) is defined on a closed interval \([a,b]\text{,}\) then it cannot be differentiable at the endpoints \(x = a\) or \(x = b\text{,}\) because the (two-sided) limit cannot exist if the function is only defined on one side.</p></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<p id="p-154">Note that we used an open interval \((a,b)\) and did not include the endpoints. This is because if \(f\) is defined on a closed interval \([a,b]\text{,}\) then it cannot be differentiable at the endpoints \(x = a\) or \(x = b\text{,}\) because the (two-sided) limit cannot exist if the function is only defined on one side.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Continuous But Not Differentiable</span>
 </h3>
 <article class="example example-like" id="example-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h4 class="heading">
@@ -158,7 +172,7 @@ f'(0) \amp = \lim_{h \to 0} \frac{\abs{0 + h} - \abs{0}}{h}\\
 \begin{equation*}
 \boxed{\frac{d}{dx} \abs{x} = \frac{\abs{x}}{x} \qquad x \neq 0}
 \end{equation*}
-</div></article></div></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Differentiability and Continuity</span>
 </h3>
 <p id="p-156">If a function \(f\) is continuous at \(x\text{,}\) it may or may not be differentiable at \(x\text{.}\) For example, \(f(x) = \abs{x}\) is continuous but not differentiable at \(x = 0\text{.}\) However, the converse is true, in that differentiability implies continuity.</p>

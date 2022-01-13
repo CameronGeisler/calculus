@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TCR">
+    <title>The Chain Rule</title>
+
+    <introduction>
+        <p>
+            Consider the function <m>f(x) = \sqrt{x^2 + 1}</m>. Using only the power rule, we cannot differentiate <m>\sqrt{x^2 + 1} = (x^2 + 1)^{1/2}</m>, as the base of the power is not just <m>x</m> but a function of <m>x</m>, in particular <m>x^2 + 1</m>. The <em>chain rule</em> gives insight for differentiating composite functions. The chain rule is among the most powerful rules for differentiation functions.
+        </p>
+
+        <p>
+            If <m>y</m> is a function of <m>u</m>, and <m>u</m> is a function of <m>x</m>, then <m>y</m> is a function of <m>x</m>. In particular, if <m>y = f(u)</m> and <m>u = f(x)</m>, then <m>y = f(g(x))</m>, a composite function. In the above example, we have <m>y = \sqrt{u}</m>, and <m>u = x^2 + 1</m>. Then, <m>y = \sqrt{x^2 + 1}</m>. We want to consider the derivative of <m>y</m> with respect to <m>x</m>. That is, how fast does <m>y</m> change when <m>x</m> changes. In particular, how does this derivative <m>\frac{dy}{dx}</m> relate to the derivatives <m>\frac{dy}{du}</m> and <m>\frac{du}{dx}</m> (which, in this example, are <m>\frac{dy}{du} = \frac{1}{2\sqrt{u}}</m>, and <m>\frac{du}{dx} = 2x</m>)?
+        </p>
+
+        <p>
+            Consider the general case. If <m>y = f(u)</m> and <m>u = g(x)</m>, and if <m>y</m> is changing at a rate of <m>\frac{dy}{du}</m> with respect to <m>u</m>, and <m>u</m> is changing at a rate of <m>\frac{du}{dx}</m> with respect to <m>x</m>, then <m>y</m> is changing at a rate with respect to <m>x</m> of their product, <m>\frac{dy}{du} \cdot \frac{du}{dx}</m>.
+        </p>
+       
+    </introduction>
+
+    <subsection>
+        <title>The Chain Rule</title>
+        <p>
+            Let <m>f,g</m> be functions, and consider their composition <m>f \circ g</m>.
+        </p>
+        <theorem>
+            <p>
+                Let <m>f, g</m> be functions, with <m>R(g) \subseteq D(f)</m> so the composition <m>f \circ g</m> is defined. Then, if <m>g(x)</m> is differentiable at <m>x</m>, and <m>f</m> is differentiable at the point <m>g(x)</m>, then the composite function <m>f \circ g</m> is differentiable at <m>x</m>, and,
+                <me>
+                    \boxed{(f \circ g)'(x) = f'(g(x)) g'(x)}
+                </me>
+            </p>
+        </theorem>
+
+        <p>
+            Intuitively, the derivative of the composition <m>f \circ g</m> is the product of the derivatives of <m>f</m> and <m>g</m>, with the caveat that the derivative of <m>f</m> is evaluated at <m>g(x)</m>.
+        </p>
+        <p>
+            Using Leibniz notation, if <m>u = g(x)</m> and <m>y = f(u)</m>, then
+        </p>
+        <me>
+            \boxed{\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}}
+        </me>
+        <p>
+            where <m>\frac{dy}{du}</m> is evaluated at <m>u = g(x)</m>. This notation is particularly natural, because if <m>\frac{dy}{du}</m> and <m>\frac{du}{dx}</m> are treated as quotients, then <m>du</m> could be cancelled from the numerator and denominator to get <m>\frac{dy}{dx}</m>. However, recall that strictly speaking, <m>\frac{dy}{du}</m> is not the quotient of two quantities, but simply notation to represent the single quantity <q>the derivative of <m>y</m> with respect to <m>u</m></q>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Chain Rule for More Than Two Functions</title>
+        <p>
+            The chain rule can be naturally extended to 3 functions, or an arbitrary number of functions.
+        </p>
+        <corollary>
+            <p>
+                Let <m>f, g, h</m> be functions. If <m>h</m> is differentiable at <m>x</m>, <m>g</m> is differentiable at the point <m>h(x)</m>, and <m>f</m> is differentiable at <m>(g \circ h)(x)</m>, then <m>f \circ g \circ h</m> is differentiable at <m>x</m>, and,
+                <me>
+                    \boxed{(f \circ g \circ h)'(x) = f'(g(h(x))) g'(h(x)) h'(x)}
+                </me>
+            </p>
+        </corollary>
+        <p>
+            Intuitively, start from the outside and make your way inside, like layers of an onion.
+        </p>
+        <me>
+            (f \circ g)'(x) = \underbrace{f'(g(x))}_{\text{outer function}} \times \underbrace{g'(x)}_{\text{inner function}}
+        </me>
+        <p>
+            <q>The derivative of <m>f</m> of something is <m>f'</m> of that something, multiplied by the derivative of that something</q>. Also, note that the chain rule is in some sense a generalization of other derivative rules, as for <m>g(x) = x</m>, then <m>f(g(x)) = f(x)</m>, and the chain rule becomes,
+        </p>
+        <me>
+            (f \circ g)'(x) = f'(g(x)) g'(x) = f'(x) \cdot 1 = f'(x)
+        </me>
+        <p>
+            as expected.
+        </p>
+    </subsection>
+    
+    <subsection>
+        <title>Intuitive Proof of the Chain Rule</title>
+
+        <p>
+            The chain rule is actually quite a subtle rule to prove, unlike some of the rules previously shown. First, we give an intuitive proof that works for almost all functions.
+        </p>
+
+        <proof>
+            <title>Proof using increments</title>
+            <p>
+                With Leibniz notation, let <m>\Delta u = g(x + h) - g(x), \Delta y = f(x + h) - f(x)</m>. Then,
+            </p>
+            <md>
+                <mrow>\frac{dy}{dx} \amp = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}</mrow>
+                <mrow>\amp = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta u} \cdot \frac{\Delta u}{\Delta x} \amp\amp \text{multiplying and dividing by $\Delta u$, and rearranging}</mrow>
+                <mrow>\amp = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta u} \cdot \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x} \amp\amp \text{by the limit product rule}</mrow>
+            </md>
+            <p>
+                Then, the limit on the right is <m>\frac{du}{dx} = g'(x)</m>. Also, since <m>y = f(u)</m> is differentiable at <m>u = g(x)</m>, it is continuous, and so as <m>\Delta x \to 0</m>, <m>\Delta u \to 0</m> also. Thus,
+            </p>
+            <md>
+                <mrow>\frac{dy}{dx} \amp = \lim_{\Delta u \to 0} \frac{\Delta y}{\Delta u} \cdot \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x}</mrow>
+                <mrow>\amp = \frac{dy}{du} \cdot \frac{du}{dx}</mrow>
+            </md>
+        </proof>
+    </subsection>
+    
+    <subsection>
+        <title>Combining the Chain Rule with Other Differentiation Rules</title>
+        <p>
+            The chain rule can be <q>built-in</q> to other differentiation formulas, so that they apply to arbitrary functions of <m>x</m> rather than just <m>x</m>. For example, recall the power rule for derivatives,
+        </p>
+        <me>
+            \frac{d}{dx} x^r = r x^{r-1}
+        </me>
+        <p>
+            Then, for an arbitrary function <m>g(x)</m>,
+        </p>
+        <me>
+            \boxed{\frac{d}{dx} (g(x))^r = r (g(x))^{r-1} g'(x)}
+        </me>
+
+        <corollary>
+            <title>Generalized power rule</title>
+            <p>
+                If <m>u = u(x)</m> is differentiable, then,
+                <me>
+                    \boxed{\frac{d}{dx}(u(x))^n = n(u(x))^{n-1} u'(x)} \qquad \text{or} \qquad \boxed{\frac{d}{dx} u^n = n u^{n-1} \frac{du}{dx}}
+                </me>
+            </p>
+        </corollary>
+
+        <p>
+            The generalized power rule can be proved using the limit definition of derivative, independent of the chain rule. This can be done for integers and rational powers using similar techniques used to prove those derivatives.
+        </p>
+        <example>
+            <p>
+                For example, the derivative of <m>f(x) = (u(x))^3</m>, using the chain rule, is <m>f'(x) = 3(u(x))^2 u'(x)</m>. Using the limit definition of derivative,
+                <md>
+                    <mrow>f'(x) \amp = \lim_{h \to 0} \frac{(u(x + h))^3 - (u(x))^3}{h}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{(u(x + h) - u(x)) \brac{(u(x + h))^2 + u(x + h) u(x) + (u(x))^2}}{h}</mrow>
+                </md>
+                Using the limit product rule,
+                <md>
+                    <mrow>\amp = \lim_{h \to 0} \brac{(u(x + h))^2 + u(x + h) u(x) + (u(x))^2} \cdot \lim_{h \to 0} \frac{u(x + h) - u(x)}{h}</mrow>
+                    <mrow>\amp = 3(u(x))^2 \cdot u'(x)</mrow>
+                </md>
+                as desired.
+            </p>           
+        </example>
+    </subsection>
+</section>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-RTTMVT">
+    <title>Rolle's Theorem, The Mean Value Theorem</title>
+
+    <introduction>
+        The mean value theorem is a very important theorem for many results in calculus. First, we need a preliminary theorem, called Rolle's theorem, first developed by in 1691 by <term>Michel Rolle</term>, French mathematician. 
+    </introduction>
+
+    <subsection>
+        <title>Rolle's Theorem</title>
+        <theorem>
+            <p>
+                Let <m>f</m> be a function, continuous on <m>[a,b]</m>, differentiable on <m>(a,b)</m>. Then, if <m>f(a) = f(b)</m>, then there exists <m>c \in (a,b)</m> such that <m>f'(c) = 0</m>.
+            </p>
+        </theorem>
+
+        <p>
+            Intutitively, Rolle's theorem says that if a differentiable function is equal at two different points, then there must be a point in-between where the tangent is horizontal.
+        </p>
+        <p>
+            Rolle's theorem can be illustrated by first plotting two points which lie on the same horizontal line, and then attempting to connect them with a smooth curve (a curve that is continuous and has no sharp corners). However the curve is drawn, it will be impossible to do so without it having at least one point with a horizontal tangent. Intuitively, this is because if the curve goes upward, then it must eventually come back downward, in order to ``meet" the other point. By doing so, it will have a horizontal tangent along the way. Similarly, if it curve goes downward, it will eventually have to come back up, and will have a horizontal tangent. Finally, if the curve goes neither upward nor downward, then the function is constant, so of course its derivative is 0 everywhere.
+        </p>
+        
+        <example>
+            <title>Kinematics connection</title>
+            <p>
+                Let <m>x = x(t)</m> represent the position of an object. If <m>x(a) = x(b)</m>, then the object is at the same position at two different time instants <m>t = a</m> and <m>t = b</m>. By Rolle's theorem, this means that <m>x'(c) = v(c) = 0</m> for some <m>c \in (a,b)</m>, i.e. the velocity of the object is 0 at some point between <m>a</m> and <m>b</m>. For example, when an object is thrown upwards and falls back down, it has 0 velocity at the top of its flight path.
+            </p>
+        </example>
+
+    </subsection>
+
+    <subsection>
+        <title>The Mean Value Theorem</title>
+        <p>
+            The mean value theorem is a generalization of Rolle's theorem.
+        </p>
+        <theorem>
+            <title>Mean value theorem (MVT)</title>
+            <p>
+                Let <m>f</m> be a function, continuous on <m>[a,b]</m>, differentiable on <m>(a,b)</m>. Then, there exists <m>c \in (a,b)</m> such that,
+                <me>
+                    \boxed{f'(c) = \frac{f(b) - f(a)}{b - a}}
+                </me>
+                or, equivalently, such that,
+                <me>
+                    f(b) - f(a) = f'(c)(b - a)
+                </me>
+            </p>
+        </theorem>
+
+        <p>
+            The first form intuitively says that on an interval <m>[a,b]</m>, there exists some point <m>c \in (a,b)</m> such that the slope of the tangent line of <m>f</m> at <m>x = c</m> is equal to the slope of the secant line from <m>(a,f(a))</m> to <m>(b,f(b))</m>.
+        </p>
+        <p>
+            The MVT is the <q>slanted</q> version of Rolle's theorem (conversely, Rolle's theorem is the <q>horizontal</q> version of the MVT). If <m>f(a) = f(b)</m> in the MVT, the conclusion states that <m>f'(c) = 0</m> for some <m>c \in (a,b)</m>, which is precisely Rolle's theorem.
+        </p>
+        <p>
+            The MVT is an existence theorem, as it doesn't provide a method for determining <m>c</m> (if there is one, or multiple). <url href="https://www.geogebra.org/m/J5KMJQqC">This applet</url> determines the value of <m>c</m> for a given <m>f</m> and <m>[a,b]</m>, and displays it graphically. Here is <url href="https://www.geogebra.org/m/YH8JxhSw">another applet</url>.
+        </p>
+        <p>
+            We can visualize moving the secant line parallel to itself, and see that it turns into the tangent line at its last point of contact with the graph of the curve.
+        </p>
+        <example>
+            <title>Kinematics interpretation of the MVT</title>
+            <p>
+                If <m>x = x(t)</m> represents the position of an object, then recall that,
+                <me>
+                    v_{\text{avg}} = \frac{x(b) - x(a)}{b - a}
+                </me>
+                represents the average velocity of the object from <m>t = a</m> to <m>t = b</m>, and <m>x'(t)</m> represents the instantaneous velocity at <m>t</m>. Then, the MVT says that if the average velocity of an object over <m>[a,b]</m> is <m>v_{\text{avg}}</m>, then the object had an instantaneous velocity of <m>v_{\text{avg}}</m> for at least one point in time in <m>[a,b]</m>. In other words, there exists <m>t_0</m> such that,
+                <me>
+                    \frac{x(b) - x(a)}{b - a} = x'(t_0)
+                </me>
+                For example, if you drive 100km from point A to point B in 2 hours, then there is at least one point in that time where the instantaneous velocity of the car was <m>\frac{100 \text{ km}}{2 \text{ hr}} = 50 \text{ km/hr}</m>. This makes the natural assumption that the position function <m>x(t)</m> is continuous (objects can't <q>teleport</q>) and assumes that <m>x</m> is differentiable.
+            </p>
+        </example>
+        <p>
+            The MVT was first stated by <term>Augustin Cauchy</term> in 1823.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Remarks</title>
+        <p>
+            Each of the hypotheses for the MVT are required. Consider a function <m>f</m> which is continuous on <m>[a,b]</m> but non-differentiable for some point in <m>(a,b)</m>. Also, consider $f$ which is continuous and differentiable on <m>(a,b)</m> but not continuous at <m>x = a</m> (or <m>x = b</m>, or both). In these cases, the conclusion of the MVT fails.
+        </p>
+        <p>
+            On the other hand, if a function is continuous <em>and</em> differentiable on <m>[a,b]</m>, then certainly it is differentiable on the smaller interval <m>(a,b)</m>, and the conclusion of the MVT holds.
+        </p>
+        <p>
+            Also, there is another interpretation of the MVT relating to increments. Recall that for an interval <m>[x, x + \Delta x]</m>, we have the approximation,
+        </p>
+        <me>
+            \frac{f(x + \Delta x) - f(x)}{\Delta x} \approx f'(x)
+        </me>
+        <p>
+            Then, the MVT says that for some <m>c \in [x, x + \Delta x]</m>, we have the equality,
+        </p>
+        <me>
+            \frac{f(x + \Delta x) - f(x)}{\Delta x} = f'(c)
+        </me>
+        <p>
+            In addition, the MVT implies the following intuitive fact, that the average slope is somewhere in between the maximum and minimum instantaneous slopes. More precisely,
+        </p>
+        <me>
+            \boxed{\min_{x \in [a,b]} f'(x) \leq \frac{f(b) - f(a)}{b - a} \leq \max_{x \in [a,b]} f'(x)}
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Examples</title>
+        <example>
+            <p>
+                Consider the reciprocal function,
+                <me>
+                    f(x) = \frac{1}{x}
+                </me>
+                for <m>x > 0</m>. Consider any interval <m>[a,b]</m>, where <m>0 \lt a \lt b</m>. Then, <m>f</m> is differentiable and continuous on this interval, where,
+                <me>
+                    f'(x) = -\frac{1}{x^2}
+                </me>
+                Then, by the MVT, there exists <m>c \in (a,b)</m> such that,
+                <md>
+                    <mrow>f'(c) \amp = \frac{f(b) - f(a)}{b - a}</mrow>
+                    <mrow>-\frac{1}{c^2} \amp = \frac{\frac{1}{b} - \frac{1}{a}}{b - a}</mrow>
+                    <mrow>-\frac{1}{c^2} \amp = -\frac{1}{ab}</mrow>
+                    <mrow>c^2 \amp = ab</mrow>
+                    <mrow>c \amp = \sqrt{ab}</mrow>
+                </md>
+                In other words, the value of <m>c</m> which satisfies the MVT is the geometric mean of <m>a</m> and <m>b</m>. Note that we take the positive square root here because <m>c \in (a,b)</m> and so <m>c > 0</m>.
+            </p>
+        </example>
+    </subsection>
+</section>

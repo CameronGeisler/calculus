@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-O">
+    <title>Optimization</title>
+
+    <introduction>
+        A relatively simple but important application of the derivative is the problem of finding a maximum or minimum value of a varying quantity. Historically, this was one of the first successes of calculus.
+    </introduction>
+    
+    <subsection>
+        <title>Optimization Problems</title>
+        <ol>
+            <li>Sketch a diagram of the geometric situation. Try to sketch the most general situation. Label which quantities are given (fixed), and which quantities are varying (variables).</li>
+            <li>Determine the equation that involves the quantity which is to be maximized or minimized, in terms of the quantities labelled in the previous step, called the <term>objective function</term>.</li>
+            <li>Write the objective function in terms of only one independent variable, by determining relationships between the independent variables, solving for one of the variables, and substituting into the formula.</li>
+            <li>Determine the implied domain of the single independent variable, based on the specific problem.</li>
+            <li>Determine critical points, and determine the absolute maximum on the implied domain.</li>
+        </ol>
+
+        <p>
+            Note that there is a difference between a maximum <em>value</em> and the point at which it is achieved. The maximum is the output of the function which is largest; the location of the maximum is the input of the function at which the maximum occurs. Sometimes, <em>maximum point</em> refers to the coordinate pair <m>(x,y)</m> of the maximum. The terminology is somewhat mixed.
+        </p>
+
+        <example>
+            <p>
+                Find two positive numbers whose product is 64 and whose sum is a minimum. Let <m>x, y > 0</m> be the numbers, so <m>xy = 64</m>. We want to minimize <m>s = x + y</m> Then, <m>y = \frac{64}{x}</m>, so,
+            </p>
+            <me>
+                s = x + \frac{64}{x}
+            </me>
+            <p>
+                Then, <m>\frac{ds}{dx} = 1 - \frac{64}{x^2}</m>. Then, 
+            </p>
+            <md>
+                <mrow>1 - \frac{64}{x^2} \amp = 0</mrow>
+                <mrow>x^2 \amp = 64</mrow>
+                <mrow>x \amp = \pm 8</mrow>
+            </md>
+            <p>
+                Here, only the <m>x = 8</m> solution applies, because the numbers must be positive. Verifying with the second derivative, <m>s''(x) = \frac{128}{x^3}</m> which is positive for <m>x > 0</m>, so <m>x = 8</m> is a minimum.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Application: Snell's Law</title>
+        <p>
+            You may have noticed that light bends in water. When a ray of light passes from a thinner medium (like air) to a thicker medium (like water, or glass), the light ray bends towards the perpendicular between the two media. Similarly, when passing from denser to thinner, it bends away from the perpendicular. In 1621, <term>Willebrord Snell</term>, Dutch scientist, conducted experiments with refraction in various mediums, and varying the angle of the incoming ray. He discovered that for two given medium, if <m>\theta_1, \theta_2</m> are the angles between the incident ray and the perpendicular, and the refracted ray and the perpendicular, then the ratio of the sines of these angles were constant. In other words,
+        </p>
+        <me>
+            \frac{\sin{\theta_1}}{\sin{\theta_2}}
+        </me>
+        <p>
+            was constant. In fact, this property was discovered previously in 1602 by <term>Thomas Harriot</term>, English astronomer, and in 984 by <term>Ibn Sahl</term>, Persian mathematician. More precisely,
+        </p>
+        <theorem>
+            <title>Snell's law</title>
+            <p>
+                Let <m>v_1, v_2</m> be the velocities of light in the two mediums, and let <m>\theta_1, \theta_2</m> are the angles between the incident ray and the perpendicular. Then,
+            </p>
+            <me>
+                \frac{\sin{\theta_1}}{\sin{\theta_2}} = \frac{v_1}{v_2}
+            </me>
+        </theorem>
+        <p>
+            Fermat's principle of least time states that a ray takes the path from point A to point B which takes the <em>least time</em>. If we assume this principle is true, then using differential calculus and optimization, we can determine the conditions where this is satisfied, and derive this relationship. Let <m>L</m> be the horizontal distance from the source to the target, <m>a</m> be the vertical distance from the source to the change in medium, <m>b</m> be the vertical distance from the target to the change in medium. Let <m>\theta_1, \theta_2</m> be the angle between the normal and the ray. Then, the total travel time from source to target is,
+        </p>
+        <me>
+            T = \frac{\sqrt{x^2 + a^2}}{v_1} + \frac{\sqrt{(L - x)^2 + b^2}}{v_2}
+        </me>
+        <p>
+            Then, finding critical points,
+        </p>
+        <me>
+            \frac{dT}{dx} = \frac{x}{v_1 \sqrt{x^2 + a^2}} - \frac{L - x}{v_2 \sqrt{(L - x)^2 + b^2}} = 0
+        </me>
+        <p>
+            Then, notice that,
+        </p>
+        <me>
+            \frac{x}{\sqrt{x^2 + a^2}} = \sin{\theta_1} \qquad \text{and} \qquad \frac{L - x}{\sqrt{(L - x)^2 + b^2}} = \sin{\theta_2}
+        </me>
+        <p>
+            Then, the equation reduces to,
+        </p>
+        <me>
+            \frac{\sin{\theta_1}}{v_1} - \frac{\sin{\theta_2}}{v_2} = 0
+        </me>
+        <p>
+            This equation can be rearranged into the equivalent formulation,
+        </p>
+        <me>
+            \frac{\sin{\theta_2}}{\sin{\theta_1}} = \frac{v_2}{v_1}
+        </me>
+    </subsection>
+
+    <!-- \begin{example}
+    Determine the maximum vertical distance between the line $y = x + 20$ and the parabola $y = x^2$ for $-4 \leq x \leq 5$.
+    \\ \\ In general, the distance between $y = x + 20$ and $y = x^2$ is $d = \abs{(x + 20) - x^2}$. On $[-4,5]$, $x + 20 \geq x^2$, so the distance is simply $d(x) = x + 20 - x^2$. Then, $d'(x) = 1 - 2x$. Finding the critical numbers, $1 - 2x = 0$, so $x = 1/2$.
+    \begin{align*}
+        d(1/2) \amp = \frac{81}{4} \\
+        d(-4) \amp = 0 \\
+        d(5) \amp = 0
+    \end{align*}
+    Thus, the maximum distance is 81/4 units.
+    \end{example} -->
+
+</section>

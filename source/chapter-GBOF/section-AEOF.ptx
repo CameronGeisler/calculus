@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-AEOF">
+    <title>Absolute Extrema of Functions</title>
+    <p>
+        In most applications, the domain of the functions involved are restricted to numbers in a particular interval. Intuitively, an absolute maximum is the <em>highest</em> point <m>(c,f(c))</m> on the graph of <m>f</m> over the interval <m>[a,b]</m>. Similarly, an absolute minimum is the <em>lowest</em> point on the graph over <m>[a,b]</m>.
+    </p>
+
+    <definition>
+        <p>
+            Let <m>f</m> be a function defined on <m>[a,b]</m>, <m>c \in [a,b]</m>. Then,
+            <ul>
+                <li><m>f</m> has an <term>absolute maximum</term> on <m>[a,b]</m> at <m>x = c</m>, if <m>f(x) \leq f(c)</m> for all <m>x \in [a,b]</m>.</li>
+                <li><m>f</m> has an <term>absolute minimum</term> on <m>[a,b]</m> at <m>x = c</m>, if <m>f(x) \geq f(c)</m> for all <m>x \in [a,b]</m>.</li>
+            </ul>
+        </p>
+    </definition>
+
+    <subsection>
+        <title>Extreme-Value Theorem</title>
+        <theorem>
+            <p>
+                Let <m>f</m> be a function, continuous on <m>[a,b]</m>. Then, <m>f</m> has both an absolute maximum and absolute minimum on <m>[a,b]</m>. More explicitly, there exists <m>c_1, c_2 \in [a,b]</m> such that <m>f(c_1) \leq f(x) \leq f(c_2)</m> for all <m>x \in [a,b]</m>.
+            </p>
+        </theorem>
+        <p>
+            The extreme value theorem is intuitively clear, however, a proof of the extreme value theorem requires more advanced mathematical analysis.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Absolute Extrema Test</title>
+        <p>
+            Recall that if <m>f</m> has a maximum value on an interval <m>[a,b]</m>, then it can only occur at a critical point of <m>f</m> (that is, where <m>f'(x) = 0</m> or <m>f'(x)</m> does not exist but <m>f</m> is defined). On a closed interval, a function can also have extrema at its endpoints <m>x = a</m> or <m>x = b</m>. In summary,
+        </p>
+
+        <theorem>
+            <title>Characterization of absolute extrema</title>
+            <p>
+                Let <m>f</m> be continuous on <m>[a,b]</m>. Suppose that <m>f</m> has <m>n</m> critical points on <m>[a,b]</m>. Then, <m>M</m> be the maximum of the <m>n+2</m> values of <m>f</m>, evaluated at the <m>n</m> critical points, along with the endpoints of the interval. Then, <m>M</m> is the maximum value of <m>f</m> on <m>[a,b]</m>. Similarly, the minimum <m>m</m> of these values is the minimum value of <m>f</m> at <m>[a,b]</m>.
+            </p>
+        </theorem>
+
+        <p>
+            If <m>f</m> has only one critical point, then it isn't necessary to consider the endpoints. For example, if <m>f'</m> changes sign from positive to negative at <m>x = c</m>, then <m>f</m> is increasing on <m>(a,c)</m> and decreasing on <m>(b,c)</m>, so the maximum occurs at <m>x = c</m>.
+        </p>
+    </subsection>    
+</section>

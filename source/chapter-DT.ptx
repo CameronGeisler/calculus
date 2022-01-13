@@ -3,11 +3,24 @@
 <chapter xml:id="chapter-DT" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Differentiation Techniques</title>
         <introduction>
-
+            <p>
+                Calculating derivatives using the limit definition can be tedious and sometimes difficult, especially for more complicated functions. Instead, we can develop <term>differentiation rules</term>,
+            </p>
+            <ol>
+                <li>First, rules to differentiate general families of functions (e.g. polynomials, trigonometric functions, exponential and logarithmic functions, etc.)</li>
+                <li>Then, develop rules to differentiate combinations of those general functions (sums, differences, products, quotients, compositions) in terms of the derivatives of the original functions.</li>
+            </ol>
+            <p>
+                This is called <term>systematic differenitation</term>. Combining these two collections of rules will allow for computing derivatives of every elementary function covered in pre-calculus.
+            </p>
         </introduction>
 
         <xi:include href="./chapter-DT/section-BDR.ptx"/>
         <xi:include href="./chapter-DT/section-D.ptx"/>
         <xi:include href="./chapter-DT/section-TPR.ptx"/>
+        <xi:include href="./chapter-DT/section-TQR.ptx"/>
+        <xi:include href="./chapter-DT/section-HD.ptx"/>
+        <xi:include href="./chapter-DT/section-TCR.ptx"/>
+        <xi:include href="./chapter-DT/section-ID.ptx"/>
 
 </chapter>

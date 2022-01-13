@@ -4,20 +4,6 @@
     <title>Basic Differentiation Rules</title>
 
     <subsection>
-        <title>Differentiation Rules and Systematic Differentiation</title>
-        <p>
-            Calculating derivatives using the limit definition can be tedious and sometimes difficult, especially for more complicated functions. Instead, we can develop <term>differentiation rules</term>,
-        </p>
-        <ol>
-            <li>First, rules to differentiate general families of functions (e.g. polynomials, trigonometric functions, exponential and logarithmic functions, etc.)</li>
-            <li>Then, develop rules to differentiate combinations of those general functions (sums, differences, products, quotients, compositions) in terms of the derivatives of the original functions.</li>
-        </ol>
-        <p>
-            Combining these two collections of rules will allow for computing derivatives of every elementary function covered in pre-calculus.
-        </p>
-    </subsection>
-
-    <subsection>
         <title>Derivative of Power Functions, General Power Rule</title>
         <p>
             For power functions, where the variable is raised to a constant power, there is a simple rule for differentiation.

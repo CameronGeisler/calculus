@@ -32,6 +32,7 @@
         <xi:include href="./chapter-ITC.ptx"/>
         <xi:include href="./chapter-TD.ptx"/>
         <xi:include href="./chapter-DT.ptx"/>
+        <xi:include href="./chapter-GBOF.ptx"/>
         <!-- Of course you will want to add more chapters as you proceed-->
     </book>
 </pretext>

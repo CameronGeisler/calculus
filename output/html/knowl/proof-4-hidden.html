@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-12T18:26:04-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>With Leibniz notation, let \(\Delta u = g(x + h) - g(x), \Delta y = f(x + h) - f(x)\text{.}\) Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{dy}{dx} \amp = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}\\
+\amp = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta u} \cdot \frac{\Delta u}{\Delta x} \amp\amp \text{multiplying and dividing by $\Delta u$, and rearranging}\\
+\amp = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta u} \cdot \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x} \amp\amp \text{by the limit product rule}
+\end{align*}
+</div>
+<p>Then, the limit on the right is \(\frac{du}{dx} = g'(x)\text{.}\) Also, since \(y = f(u)\) is differentiable at \(u = g(x)\text{,}\) it is continuous, and so as \(\Delta x \to 0\text{,}\) \(\Delta u \to 0\) also. Thus,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{dy}{dx} \amp = \lim_{\Delta u \to 0} \frac{\Delta y}{\Delta u} \cdot \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x}\\
+\amp = \frac{dy}{du} \cdot \frac{du}{dx}
+\end{align*}
+</div></article></body>
+</html>
