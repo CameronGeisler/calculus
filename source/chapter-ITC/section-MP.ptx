@@ -12,7 +12,7 @@
             A = \pi r^2
         </me>
         <p>
-            This formula must be proven; it is not true by definition. Euclid, ancient Greek mathematician, proved that for any circle, the ratio of its circumference divided by its diameter was the same constant, and today this constant is called <m>\pi</m>. The ancient Greek mathematician <term>Archimedes</term> (287-212 BC) was the first to develop the formula for the area of a circle, in his treatise <q>Measurement of a Circle</q>. The idea is to approximate a region's area by inscribed polygons. These isolated computations in ancient Greece use the core concepts of calculus, but were done millennia before calculus, limits, and integration were developed.
+            This formula must be proven it is not true by definition. Euclid, ancient Greek mathematician, proved that for any circle, the ratio of its circumference divided by its diameter was the same constant, and today this constant is called <m>\pi</m>. The ancient Greek mathematician <term>Archimedes</term> (287-212 BC) was the first to develop the formula for the area of a circle, in his treatise <q>Measurement of a Circle</q>. The idea is to approximate a region's area by inscribed polygons. These isolated computations in ancient Greece use the core concepts of calculus, but were done millennia before calculus, limits, and integration were developed.
         </p>
 
         <example>
@@ -48,7 +48,7 @@
             A_n = n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}
         </me>
         <p>
-            This forms a sequence <m>\set{A_n}</m> that approximates the area of a circle of radius <m>r</m>, in terms of <m>r</m>. In particular, for some <m>n</m>, it is a multiple of $r^2$. Then, as $n$ increases, we expect the approximation to improve. Consider <url href="https://www.desmos.com/calculator/sgjezkp21f">this Desmos applet</url>, which considers the case <m>r = 1</m>.
+            This forms a sequence <m>\set{A_n}</m> that approximates the area of a circle of radius <m>r</m>, in terms of <m>r</m>. In particular, for some <m>n</m>, it is a multiple of <m>r^2</m>. Then, as <m>n</m> increases, we expect the approximation to improve. Consider <url href="https://www.desmos.com/calculator/sgjezkp21f">this Desmos applet</url>, which considers the case <m>r = 1</m>.
         </p>
         <p>
             Notice that as <m>n</m> increases, the sequence <m>A_n</m> approaches <m>\pi</m>. Then, if we increase <m>n</m> indefinitely, as <m>n</m> increases to <q>to infinity</q>, we say that the sequence converges to exactly <m>\pi</m>. This means that the area of a circle of radius 1 is <em>equal to</em> <m>\pi</m>. This technique is now called the <term>method of exhaustion</term>, intuitively because increasing the number of sides exhausts all of the area of the circle. Then, more generally,
@@ -75,19 +75,39 @@
             Consider the parabola <m>f(x) = x^2</m>, and consider the tangent line to the graph at <m>x = 1</m> (i.e. at the point <m>(1,1)</m>). Recall that to define a line, we need its slope and a point on the line. Of course, the tangent line must pass through the point <m>(1,1)</m>.
         </p>
         <p>
-            To determine the slope of this tangent line, consider an approximation of the slope, by considering a nearby point $(1 + h, (1 + h)^2)$ where $h > 0$ is some small non-zero number. Then, the slope of the tangent line can be approximated by the slope of the line between these two points,
+            To determine the slope of this tangent line, consider an approximation of the slope, by considering a nearby point <m>(1 + h, (1 + h)^2)</m> where <m>h > 0</m> is some small non-zero number. Then, the slope of the tangent line can be approximated by the slope of the line between these two points,
         </p>
         <me>
             m_{sec} = \frac{(1 + h)^2 - 1}{(1 + h) - 1} = \frac{(1 + h)^2 - 1}{h}
         </me>
         <p>
-            This line is called a <em>secant line</em>. For different values of <m>h</m> (that are non-zero), we can determine approximations to the slope of the tangent line at <m>x = 1</m>. For smaller values of <m>h</m>, we intuitively expect that the approximation is more accurate. Consider <url href="https://www.desmos.com/calculator/aoin6kjf1g">this Desmos applet</url>.
+            This line is called a <term>secant line</term>. For different values of <m>h</m> (that are non-zero), we can determine approximations to the slope of the tangent line at <m>x = 1</m>. For smaller values of <m>h</m>, we intuitively expect that the approximation is more accurate. Consider <url href="https://www.desmos.com/calculator/aoin6kjf1g">this Desmos applet</url>, where you can see the secant line slopes approaching the tangent line.
         </p>
         <p>
-            However, for <m>h = 0</m>, this slope expression is undefined, because it becomes <m>m_{sec} = \frac{0}{0}</m>. However, if we make <m>h</m> smaller and smaller, but non-zero, the slope seems to be numerically approaching 2.
+            The slope of the secant is a function of <m>h</m>. Then, we can evaluate this expression for small values of <m>h</m> (both positive and negative),
+        </p>
+
+        <sage>
+            <input>
+                h_vec = [1,0.1,0.01,0.001,-0.001,-0.01,-0.1,-1]
+                for h in h_vec:
+                    print(h, ((1+h)**2-1)/h)
+            </input>
+        </sage>
+        <p>
+            Notice that as <m>h</m> get closer to 0, the slope seems to be numerically approaching 2. However, for <m>h = 0</m>, this slope expression is undefined, because it becomes <m>m_{sec} = \frac{0}{0}</m>.
         </p>
         <p>
-            Intuitively, if we make the two points <q>infinitely close</q> together (equivalently, make $h$ ``infinitely" small), then the slope of the secant line becomes exactly equal to the slope of the tangent line. In this case, notice that the expression can be simplified by algebraically manipulating,
+            For a more detailed perspective, <url href="https://www.desmos.com/calculator/jgsqp0rial">we can plot <m>m_{sec}</m> as a function of <m>h</m></url> (here, the horizontal axis is the <m>h</m>-axis). In fact, the graph is a line. Again, notice that as <m>h</m> becomes closer to 0, the graph goes towards 2. However, notice that at the exact point <m>h = 0</m>, the point <m>(0,2)</m> is <em>not</em> on the graph.
+        </p>
+        <p>
+            Intuitively, if we make make <m>h</m> <q>infinitely</q> small, then the two points used to measure the slope become <q>infinitely close</q> together. Then, the slope of the secant line becomes <em>exactly</em> equal to the slope of the tangent line.
+        </p>
+        <p>
+            Then, in calculus, we say the slope of the tangent line is exactly 2. Here, 2 is the value that this slope function intuitively would have <em>if</em> it were defined for <m>h = 0</m>.
+        </p>
+        <p>
+            The previous analysis was mostly numerical and qualitative. In this case, notice that the slope expression can be simplified by algebraically manipulating,
         </p>
         <md>
             <mrow>m_{sec} = \frac{(1 + h)^2 - 1}{h} \amp = \frac{(1 + 2h + h^2) - 1}{h}</mrow>
@@ -95,18 +115,22 @@
             <mrow>\amp = 2 + h</mrow>
         </md>
         <p>
-            That is, <m>m_{sec} = 2 + h</m> (as long as <m>h \neq 0</m>, since we cancelled out a factor of <m>h</m>), i.e. for various values of <m>h</m>, the slope of the resulting secant line is <m>2 + h</m>. Then, we can see that as <m>h</m> gets closer and closer to 0, <m>m_{sec} = 2 + h</m> gets closer and closer to 2. Then, in calculus, we say the slope of the tangent line is exactly 2. Then, in calculus, we say the slope of the tangent line is <em>exactly 2</em>. This seems somewhat contradictory, because by,
+            That is, indeed, <m>m_{sec} = 2 + h</m> (as long as <m>h \neq 0</m>, since we cancelled out a factor of <m>h</m>). That is, for various values of <m>h</m>, the slope of the resulting secant line is <m>2 + h</m>. Again, we can see that as <m>h</m> gets closer and closer to 0, <m>m_{sec} = 2 + h</m> gets closer and closer to 2.
+        </p>
+        <p>
+            This may seem somewhat contradictory, because in the expression,
         </p>
         <me>
             m_{sec} = \frac{2h + h^2}{h} = 2 + h
         </me>
-        we are assuming that <m>h \neq 0</m>, but then also disregarding <m>h</m> by essentially letting <m>h = 0</m>.
-        </subsection>
+        <p>
+            we are assuming that <m>h \neq 0</m>, but then also disregarding <m>h</m> by essentially letting <m>h = 0</m>.
+        </p>
+        
+    </subsection>
 
-        <subsection>
-            <title>
-                The Area Problem (Area Under a Parabola)
-            </title>
+    <subsection>
+        <title>The Area Problem (Area Under a Parabola)</title>
         <p>
             Consider the area under the parabola <m>y = x^2</m> and above the <m>x</m>-axis, from <m>x = 0</m> to <m>x = 1</m>. This region is not a polygon, so its area can't be obtained by the usual area formulas. However, its area can be approximated by the area of rectangles. Divide the interval <m>[0,1]</m> into <m>n</m> equal pieces. For the rectangles, the width will be the length of the interval <m>[0,1]</m>, divided by the number of pieces, or <m>\frac{1}{n}</m>. The height of rectangle can be considered the $y$-coordinate of the parabola. To determine this, we can determine a general formula for the <m>x</m>-coordinate of the <m>k</m>th piece. The starting point is <m>x_0 = 0</m>, and the width of each rectangle is <m>\frac{1}{n}</m>, so the next point is <m>x_1 = \frac{1}{n}</m>, then <m>x_2 = \frac{2}{n}</m>, then <m>x_3 = \frac{3}{n}</m>, up to <m>x_n = \frac{n}{n} = 1</m>. That is, in general, <m>x_k = \frac{k}{n}</m>. Then, in the <m>k</m>th piece, the left endpoint is <m>x_{k-1} = \frac{k-1}{n}</m>, and its right endpoint is <m>x_k = \frac{k}{n}</m>. If we use the right endpoint, then the associated <m>y</m>-coordinate is,
         </p>
@@ -140,7 +164,7 @@
             <mrow>\amp = \frac{(n + 1)(2n + 1)}{6n^2}</mrow>
         </md>
         <p>
-            Intuitively, we expect that as <m>n</m> increases, the approximation is more and more accurate in estimating the ``exact" area <m>\Area{R}</m>. In the language of calculus, we say that in the limit as <m>n \to \infty</m>,
+            Intuitively, we expect that as <m>n</m> increases, the approximation is more and more accurate in estimating the <q>exact</q> area <m>\Area{R}</m>. In the language of calculus, we say that in the limit as <m>n \to \infty</m>,
         </p>
         <me>
             \lim_{n \to \infty} \frac{(n - 1)(2n - 1)}{6n^2} = \lim_{n \to \infty} \frac{1}{6} \brac{1 - \frac{1}{n}} \brac{2 - \frac{1}{n}} = \frac{1}{6} \cdot 1 \cdot 2 = \frac{1}{3}
@@ -226,6 +250,5 @@
         <p>
             Even though <m>\pi</m> is defined to be the ratio of circumference to diameter, its precise value is elusive. You may recall that <m>\pi</m> is an irrational number, meaning that its decimal expansion has infinitely many digits, and its digits are non-repeating, and have no describable pattern. In fact, <m>\pi</m> is the limit of an unattainable process, i.e. defined by calculus.
         </p>
-        
     </subsection>
 </section>

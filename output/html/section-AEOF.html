@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-12T18:26:03-08:00       *-->
+<!--*       on 2022-01-14T18:50:45-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,7 @@
 <title>Absolute Extrema of Functions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore",
     processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -107,6 +120,7 @@
 <li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
 <li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
 <li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
 <li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
 </ul>
 </li>
@@ -120,33 +134,43 @@
 <li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
+<li><a href="section-DLLA.html" data-scroll="section-DLLA">Differentials, Local Linear Approximations</a></li>
+<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
+<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
+<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
+<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
+<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
+</ul>
+</li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-AEOF"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Absolute Extrema of Functions</span>
 </h2>
-<p id="p-253">In most applications, the domain of the functions involved are restricted to numbers in a particular interval. Intuitively, an absolute maximum is the <em class="emphasis">highest</em> point \((c,f(c))\) on the graph of \(f\) over the interval \([a,b]\text{.}\) Similarly, an absolute minimum is the <em class="emphasis">lowest</em> point on the graph over \([a,b]\text{.}\)</p>
+<section class="introduction" id="introduction-13"><p id="p-262">In most applications, the domain of the functions involved are restricted to numbers in a particular interval. Intuitively, an absolute maximum is the <em class="emphasis">highest</em> point \((c,f(c))\) on the graph of \(f\) over the interval \([a,b]\text{.}\) Similarly, an absolute minimum is the <em class="emphasis">lowest</em> point on the graph over \([a,b]\text{.}\)</p>
 <article class="definition definition-like" id="definition-10"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
 </h3>
-<p id="p-254">Let \(f\) be a function defined on \([a,b]\text{,}\) \(c \in [a,b]\text{.}\) Then,</p>
+<p id="p-263">Let \(f\) be a function defined on \([a,b]\text{,}\) \(c \in [a,b]\text{.}\) Then,</p>
 <ul class="disc">
 <li id="li-55"><p id="p-derived-li-55">\(f\) has an <dfn class="terminology">absolute maximum</dfn> on \([a,b]\) at \(x = c\text{,}\) if \(f(x) \leq f(c)\) for all \(x \in [a,b]\text{.}\)</p></li>
 <li id="li-56"><p id="p-derived-li-56">\(f\) has an <dfn class="terminology">absolute minimum</dfn> on \([a,b]\) at \(x = c\text{,}\) if \(f(x) \geq f(c)\) for all \(x \in [a,b]\text{.}\)</p></li>
-</ul></article><section class="subsection" id="subsection-68"><h3 class="heading hide-type">
+</ul></article></section><section class="subsection" id="subsection-68"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.1</span> <span class="title">Extreme-Value Theorem</span>
 </h3>
 <article class="theorem theorem-like" id="theorem-16"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
 </h4>
-<p id="p-255">Let \(f\) be a function, continuous on \([a,b]\text{.}\) Then, \(f\) has both an absolute maximum and absolute minimum on \([a,b]\text{.}\) More explicitly, there exists \(c_1, c_2 \in [a,b]\) such that \(f(c_1) \leq f(x) \leq f(c_2)\) for all \(x \in [a,b]\text{.}\)</p></article><p id="p-256">The extreme value theorem is intuitively clear, however, a proof of the extreme value theorem requires more advanced mathematical analysis.</p></section><section class="subsection" id="subsection-69"><h3 class="heading hide-type">
+<p id="p-264">Let \(f\) be a function, continuous on \([a,b]\text{.}\) Then, \(f\) has both an absolute maximum and absolute minimum on \([a,b]\text{.}\) More explicitly, there exists \(c_1, c_2 \in [a,b]\) such that \(f(c_1) \leq f(x) \leq f(c_2)\) for all \(x \in [a,b]\text{.}\)</p></article><p id="p-265">The extreme value theorem is intuitively clear, however, a proof of the extreme value theorem requires more advanced mathematical analysis.</p></section><section class="subsection" id="subsection-69"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.3.2</span> <span class="title">Absolute Extrema Test</span>
 </h3>
-<p id="p-257">Recall that if \(f\) has a maximum value on an interval \([a,b]\text{,}\) then it can only occur at a critical point of \(f\) (that is, where \(f'(x) = 0\) or \(f'(x)\) does not exist but \(f\) is defined). On a closed interval, a function can also have extrema at its endpoints \(x = a\) or \(x = b\text{.}\) In summary,</p>
+<p id="p-266">Recall that if \(f\) has a maximum value on an interval \([a,b]\text{,}\) then it can only occur at a critical point of \(f\) (that is, where \(f'(x) = 0\) or \(f'(x)\) does not exist but \(f\) is defined). On a closed interval, a function can also have extrema at its endpoints \(x = a\) or \(x = b\text{.}\) In summary,</p>
 <article class="theorem theorem-like" id="theorem-17"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of absolute extrema.</span>
 </h4>
-<p id="p-258">Let \(f\) be continuous on \([a,b]\text{.}\) Suppose that \(f\) has \(n\) critical points on \([a,b]\text{.}\) Then, \(M\) be the maximum of the \(n+2\) values of \(f\text{,}\) evaluated at the \(n\) critical points, along with the endpoints of the interval. Then, \(M\) is the maximum value of \(f\) on \([a,b]\text{.}\) Similarly, the minimum \(m\) of these values is the minimum value of \(f\) at \([a,b]\text{.}\)</p></article><p id="p-259">If \(f\) has only one critical point, then it isn't necessary to consider the endpoints. For example, if \(f'\) changes sign from positive to negative at \(x = c\text{,}\) then \(f\) is increasing on \((a,c)\) and decreasing on \((b,c)\text{,}\) so the maximum occurs at \(x = c\text{.}\)</p></section></section></div></main>
+<p id="p-267">Let \(f\) be continuous on \([a,b]\text{.}\) Suppose that \(f\) has \(n\) critical points on \([a,b]\text{.}\) Then, \(M\) be the maximum of the \(n+2\) values of \(f\text{,}\) evaluated at the \(n\) critical points, along with the endpoints of the interval. Then, \(M\) is the maximum value of \(f\) on \([a,b]\text{.}\) Similarly, the minimum \(m\) of these values is the minimum value of \(f\) at \([a,b]\text{.}\)</p></article><p id="p-268">If \(f\) has only one critical point, then it isn't necessary to consider the endpoints. For example, if \(f'\) changes sign from positive to negative at \(x = c\text{,}\) then \(f\) is increasing on \((a,c)\) and decreasing on \((b,c)\text{,}\) so the maximum occurs at \(x = c\text{.}\)</p></section></section></div></main>
 </div>
 </body>
 </html>

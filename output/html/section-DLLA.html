@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-14T18:50:46-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Differentials, Local Linear Approximations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-AOD.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-AOD.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-RROC.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-AOD.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-AOD.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-RROC.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
+<li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
+<li><a href="section-MP.html" data-scroll="section-MP">Motivational Problems</a></li>
+<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-TD.html" data-scroll="chapter-TD"><span class="codenumber">2</span> <span class="title">The Derivative</span></a><ul>
+<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">Tangent Lines, Slopes of Functions</a></li>
+<li><a href="section-TDF.html" data-scroll="section-TDF">The Derivative Function</a></li>
+<li><a href="section-VAROC.html" data-scroll="section-VAROC">Velocity and Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-DT.html" data-scroll="chapter-DT"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a><ul>
+<li><a href="section-BDR.html" data-scroll="section-BDR">Basic Differentiation Rules</a></li>
+<li><a href="section-D.html" data-scroll="section-D">Differentiability</a></li>
+<li><a href="section-TPR.html" data-scroll="section-TPR">The Product Rule</a></li>
+<li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
+<li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
+<li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
+<li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-GBOF.html" data-scroll="chapter-GBOF"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a><ul>
+<li><a href="section-IADF.html" data-scroll="section-IADF">Increasing and Decreasing Functions</a></li>
+<li><a href="section-LEOF.html" data-scroll="section-LEOF">Local Extrema of Functions</a></li>
+<li><a href="section-AEOF.html" data-scroll="section-AEOF">Absolute Extrema of Functions</a></li>
+<li><a href="section-O.html" data-scroll="section-O">Optimization</a></li>
+<li><a href="section-RTTMVT.html" data-scroll="section-RTTMVT">Rolle's Theorem, The Mean Value Theorem</a></li>
+<li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
+<li><a href="section-DLLA.html" data-scroll="section-DLLA" class="active">Differentials, Local Linear Approximations</a></li>
+<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
+<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
+<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
+<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
+<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-DLLA"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Differentials, Local Linear Approximations</span>
+</h2>
+<section class="subsection" id="subsection-84"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.1.1</span> <span class="title">Derivatives and Local Linearity</span>
+</h3>
+<p id="p-310">One fundamental property of functions \(f\) which are differentiable is that they are <dfn class="terminology">locally linear</dfn>. Roughly, this means that around a point \(x\) where \(f\) is differentiable, \(f\) can be approximated by a linear function. Intuitively, this means that “zooming in” on the function result in the function looking as if it were linear. In particular, this linear function is the tangent line of \(f\) at \(x\text{.}\)</p></section><section class="subsection" id="subsection-85"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.1.2</span> <span class="title">Approximating Small Changes</span>
+</h3>
+<p id="p-311">Recall that if \(y = f(x)\) is differentiable, then,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \frac{dy}{dx}
+\end{equation*}
+</div>
+<p id="p-312">where \(\Delta x\) is an increment in \(x\text{,}\) and \(\Delta y = f(x + \Delta x) - f(x)\text{.}\) Then, if \(\Delta x\) is not taken in the limit to 0, but rather is a non-zero small number, then because \(f\) is differentiable, the ratio \(\frac{\Delta y}{\Delta x}\) will be approximately \(f'(x)\text{,}\) or,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\Delta y}{\Delta x} \approx f'(x)
+\end{equation*}
+</div>
+<p id="p-313">This reasoning was used in the opposite direction to define the derivative. That is, we take the ratio of \(\Delta y\) and \(\Delta x\) to approximate \(f'(x)\text{.}\) On the other hand, if \(f'(x)\) is known, then this approximation can be used in the other way to determine \(\Delta y\) from \(\Delta x\) and \(f'(x)\text{.}\) Multiplying both sides by \(\Delta x\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta y = f'(x) \Delta x
+\end{equation*}
+</div>
+<p id="p-314">In summary,</p>
+<article class="theorem theorem-like" id="theorem-21"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
+</h4>
+<p id="p-315">For a differentiable function \(f\) and small \(\Delta x\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\frac{\Delta y}{\Delta x} \approx f'(x)} \qquad \text{and} \qquad \boxed{\Delta y \approx f'(x) \Delta x}
+\end{equation*}
+</div></article></section><section class="subsection" id="subsection-86"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.1.3</span> <span class="title">Differentials</span>
+</h3>
+<p id="p-316">Previously, we considered the expression \(\frac{dy}{dx}\) as a single symbol representing the derivative. It is also helpful to interpret \(\frac{dy}{dx}\) as the ratio of two very small real number quantities, called <dfn class="terminology">differentials</dfn>.</p>
+<article class="definition definition-like" id="definition-11"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
+</h4>
+<p id="p-317">Let \(y = f(x)\text{.}\) Then, a <dfn class="terminology">differential of x</dfn>, \(dx\text{,}\) is given by \(\,dx = \Delta x\text{,}\) and \(dy\) is the <dfn class="terminology">differential of y</dfn>, given by \(\,dy = f'(x) \,dx\text{.}\)</p></article></section><section class="subsection" id="subsection-87"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.1.4</span> <span class="title">Local Linear Approximation</span>
+</h3>
+<p id="p-318">Using the approximation, if a point \(y = f(x)\) is known, we can approximate points near \(x\) using the approximation,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{f(x + \Delta x) \approx f(x) + \,dy = f(x) + f'(x) \,dx}
+\end{equation*}
+</div>
+<p id="p-319">If \(f\) is differentiable at a point \(x = a\text{,}\) then \(f\) is locally linear around \(a\text{,}\) that is, can be approximated with a line. In particular, it can be approximated with its tangent line,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{f(x) \approx f(a) + f'(a)(x - a)}
+\end{equation*}
+</div>
+<p id="p-320">This approximation holds for \(x \approx a\text{.}\) This is useful because linear functions are very easy to evaluate, whereas a function \(f\) may be difficult or more complicated to evaluate.</p>
+<p id="p-321">We most commonly consider approximations of functions at \(x = 0\text{,}\) in which case the tangent line formula is,</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) \approx f(0) + f'(0)x
+\end{equation*}
+</div>
+<article class="example example-like" id="example-20"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-20"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Sine.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-20"><article class="example example-like"><p id="p-322">For \(f(x) = \sin{x}\text{,}\) \(f'(x) = \cos{x}\text{,}\) and so \(f'(0) = \cos{0} = 1\text{.}\) Then, the tangent line approximation is,</p>
+<div class="displaymath">
+\begin{align*}
+\sin{x} \amp \approx \underbrace{\sin{0}}_{=0} + \underbrace{\cos{0}}_{=1} x\\
+\amp = x
+\end{align*}
+</div>
+<p class="continuation">Thus,</p>
+<div class="displaymath">
+\begin{equation*}
+\sin{x} \approx x \qquad \text{for } x \approx 0
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="example-21"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-21"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Cosine.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-21"><article class="example example-like"><p id="p-323">For \(f(x) = \cos{x}\text{,}\) \(f'(x) = -\sin{x}\text{,}\) and so the tangent line approximation is,</p>
+<div class="displaymath">
+\begin{align*}
+\cos{x} \amp \approx \cos{0} - \sin{0} x\\
+\amp = 1
+\end{align*}
+</div></article></div>
+<article class="example example-like" id="example-22"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-22"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-22"><article class="example example-like"><p id="p-324">For \(f(x) = e^x\text{,}\) \(f'(x) = e^x\text{,}\) and so the tangent line approximation is,</p>
+<div class="displaymath">
+\begin{align*}
+e^x \amp \approx e^0 + e^0 x\\
+\amp = 1 + x
+\end{align*}
+</div>
+<p class="continuation">Thus,</p>
+<div class="displaymath">
+\begin{equation*}
+e^x \approx 1 + x \qquad \text{for } x \approx 0
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="example-23"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-23"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Logarithm.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-23"><article class="example example-like"><p id="p-325">For the logarithmic function \(\ln{x}\text{,}\) it is not defined for \(x = 0\text{.}\) Instead, we can center the linear approximation \(x = 1\text{.}\) Then, for \(f(x) = \ln{x}\text{,}\) \(f'(x) = \frac{1}{x}\text{,}\) and so,</p>
+<div class="displaymath">
+\begin{equation*}
+
+\end{equation*}
+</div>
+<p class="continuation">Thus,</p>
+<div class="displaymath">
+\begin{equation*}
+\ln{x} \approx x - 1 \qquad \text{for } x \approx 1
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="example-24"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-24"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial approximation.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-24"><article class="example example-like"><p id="p-326">For the function \(f(x) = (1 + x)^r\) (for some \(r &gt; 0\)), \(f'(x) = r (1 + x)^{r-1}\text{,}\) and so,</p>
+<div class="displaymath">
+\begin{gather*}
+(1 + x)^r \approx (1 + 0)^r + r (1 + 0)^{r-1} x\\
+\approx 1 + rx
+\end{gather*}
+</div>
+<p class="continuation">Thus,</p>
+<div class="displaymath">
+\begin{equation*}
+(1 + x)^r \approx 1 + rx \qquad \text{for } x \approx 0
+\end{equation*}
+</div>
+<p class="continuation">This is called the <dfn class="terminology">binomial approximation</dfn>.</p></article></div></section><section class="subsection" id="subsection-88"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.1.5</span> <span class="title">Remark About Differentials</span>
+</h3>
+<p id="p-327">Historically, differentials, and linear approximations, were quite useful for making approximations. However, in modern times, with computers, differentials have becomes less useful. Today, differentials are mostly a helpful conceptual idea.</p></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-RROC">
+    <title>Relative Rate of Change</title>
+
+    <subsection>
+        <title>Relative Change and Percentage Change</title>
+        <definition>
+            <p>
+                The <term>relative change</term> of a quantity <m>x</m>, is the ratio,
+                <me>
+                    \boxed{\frac{\text{absolute change}}{\text{quantity}} = \frac{\Delta x}{x}}
+                </me>
+                The <term>percentage change</term> of <m>x</m> is the relative change of <m>x</m>, expressed as a percentage, or,
+                <me>
+                    \boxed{\text{percentage change in $x$} = \frac{\Delta x}{x} \times 100\%}
+                </me>
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Sensitivity to Change</title>
+        <definition>
+            <p>
+                If a small change in <m>x</m> produces a large change in <m>f(x)</m>, then we say that the function <m>f</m> is <term>sensitive</term> to changes in <m>x</m>.
+            </p>
+        </definition>
+        <p>
+            In this way, the derivative <m>f'(x)</m> is a measure of the sensitivity of the <m>f</m> to changes in <m>x</m>.
+        </p>        
+    </subsection>
+
+    <subsection>
+        <title>Relative Growth Rate and the Natural Logarithm</title>
+        <p>
+            In economics and other fields, the relative growth of something is much more important than its absolute growth.
+        </p>
+        <definition>
+            <p>
+                Let <m>y = y(t)</m> represent a quantity over time. Then, the <term>relative rate of change</term> of <m>y</m> is given by,
+                <me>
+                    \boxed{\text{RRC} = \frac{y'(t)}{y(t)}}
+                </me>
+            </p>
+        </definition>
+
+        <p>
+            This gives RRC as a decimal, which can be written as a percentage by multiplying by 100. Notice that,
+        </p>
+        <me>
+            \frac{y'(t)}{y(t)} = \frac{d}{dt} \ln{y(t)}
+        </me>
+        <p>
+            That is, the relative growth rate is the rate of change of the natural logarithm of the original outputs <m>y(t)</m>. This is another reason why logarithms with base <m>e</m> are considered natural.
+        </p>
+
+
+    </subsection>
+    
+</section>

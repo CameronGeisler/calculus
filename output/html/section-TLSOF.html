@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-12T18:26:02-08:00       *-->
+<!--*       on 2022-01-14T18:50:44-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,7 @@
 <title>Tangent Lines, Slopes of Functions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore",
     processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -107,6 +120,7 @@
 <li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
 <li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
 <li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
 <li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
 </ul>
 </li>
@@ -120,6 +134,16 @@
 <li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
+<li><a href="section-DLLA.html" data-scroll="section-DLLA">Differentials, Local Linear Approximations</a></li>
+<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
+<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
+<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
+<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
+<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
+</ul>
+</li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-TLSOF"><h2 class="heading hide-type">
@@ -128,10 +152,10 @@
 <section class="introduction" id="introduction-4">Recall that a line has a slope. In particular, a linear function of the form \(f(x) = mx + b\) has a slope of \(m\text{.}\) Linear functions have a constant slope, i.e. a single number. For more general functions \(f(x)\text{,}\) their slopes vary, or change, i.e. are different for different values of \(x\text{.}\) For a curved function, it isn't even immediately clear how to <em class="emphasis">define</em> slope. Using the ideas of calculus, we can generalize the concept of slope for functions that are not linear, i.e. that are changing at a changing rate.</section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Slopes of Continuous Functions, Tangent Lines and Secant Lines</span>
 </h3>
-<p id="p-54">Consider a curve \(C\) that is the graph of \(y = f(x)\) where \(f\) is a continuous function, and is intuitively “smooth”. Then, let \(P = (x_0, y_0)\) be a point on the graph so that \(y_0 = f(x_0)\text{,}\) and assume that \(P\) is not an endpoint of the graph.</p>
-<p id="p-55">Recall that the tangent line to a circle is a line which touches the circle at exactly one point. It has the property that it is perpendicular to a radius segment which extends out to the point where it intersects the tangent line.</p>
-<p id="p-56">Intuitively, the <dfn class="terminology">tangent line</dfn> to a curve at a point passes through that point, and has the same slope, steepness, or “direction” as the curve, at the point of tangency. For example, consider <a class="external" href="https://www.geogebra.org/m/vfqavd4b" target="_blank">this Desmos applet</a>. The word tangent comes from the Latin word for “touching”, intuitively because a tangent touches the curve at a single point, barely grazing it, instead of cutting across a curve in two places.</p>
-<p id="p-57">To determine the slope of the tangent line at \((x_0, f(x_0))\text{,}\) we will consider the slope of the line between \((x_0, f(x_0))\) and some nearby point, say \((x_0 + h, f(x_0 + h))\text{,}\) where \(h\) is a small, non-zero number. This line between two points on the graph of a function is called a <dfn class="terminology">secant line</dfn>. Then, the slope of this line is,</p>
+<p id="p-60">Consider a curve \(C\) that is the graph of \(y = f(x)\) where \(f\) is a continuous function, and is intuitively “smooth”. Then, let \(P = (x_0, y_0)\) be a point on the graph so that \(y_0 = f(x_0)\text{,}\) and assume that \(P\) is not an endpoint of the graph.</p>
+<p id="p-61">Recall that the tangent line to a circle is a line which touches the circle at exactly one point. It has the property that it is perpendicular to a radius segment which extends out to the point where it intersects the tangent line.</p>
+<p id="p-62">Intuitively, the <dfn class="terminology">tangent line</dfn> to a curve at a point passes through that point, and has the same slope, steepness, or “direction” as the curve, at the point of tangency. For example, consider <a class="external" href="https://www.geogebra.org/m/vfqavd4b" target="_blank">this Desmos applet</a>. The word tangent comes from the Latin word for “touching”, intuitively because a tangent touches the curve at a single point, barely grazing it, instead of cutting across a curve in two places.</p>
+<p id="p-63">To determine the slope of the tangent line at \((x_0, f(x_0))\text{,}\) we will consider the slope of the line between \((x_0, f(x_0))\) and some nearby point, say \((x_0 + h, f(x_0 + h))\text{,}\) where \(h\) is a small, non-zero number. This line between two points on the graph of a function is called a <dfn class="terminology">secant line</dfn>. Then, the slope of this line is,</p>
 <div class="displaymath">
 \begin{align*}
 m_{\text{sec}} \amp = \frac{\Delta y}{\Delta x}\\
@@ -139,25 +163,25 @@ m_{\text{sec}} \amp = \frac{\Delta y}{\Delta x}\\
 \amp = \frac{f(x_0 + h) - f(x_0)}{h}
 \end{align*}
 </div>
-<p id="p-58">In summary,</p>
+<p id="p-64">In summary,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{m_{\text{sec}} = \frac{f(x_0 + h) - f(x_0)}{h}}
 \end{equation*}
 </div>
-<p id="p-59">The quantity \(\frac{f(x_0 + h) - f(x_0)}{h}\) is sometimes called a <dfn class="terminology">difference quotient</dfn>, because the numerator represents the difference in \(y\)-values, the denominator represents a difference in \(x\)-values, so it represents a quotient of differences. As \(h\) approaches 0, this approximate slope will be closer and closer to the slope of the tangent line. However, notice that if $h = 0$, then the expression becomes,</p>
+<p id="p-65">The quantity \(\frac{f(x_0 + h) - f(x_0)}{h}\) is sometimes called a <dfn class="terminology">difference quotient</dfn>, because the numerator represents the difference in \(y\)-values, the denominator represents a difference in \(x\)-values, so it represents a quotient of differences. As \(h\) approaches 0, this approximate slope will be closer and closer to the slope of the tangent line. However, notice that if $h = 0$, then the expression becomes,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{f(x_0 + 0) - f(x_0)}{0} = \frac{f(x_0) - f(x_0)}{0} = \frac{0}{0}
 \end{equation*}
 </div>
-<p id="p-60">An expression of the form \(\frac{0}{0}\) is called <dfn class="terminology">indeterminate</dfn>. However, we can still consider the behavior of this expression as \(h \to 0\text{.}\) In calculus, we \textit{define} the slope of the graph as the limit of the slope of the secant line, as \(h \to 0\text{.}\)</p></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
+<p id="p-66">An expression of the form \(\frac{0}{0}\) is called <dfn class="terminology">indeterminate</dfn>. However, we can still consider the behavior of this expression as \(h \to 0\text{.}\) In calculus, we \textit{define} the slope of the graph as the limit of the slope of the secant line, as \(h \to 0\text{.}\)</p></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">The Tangent Line</span>
 </h3>
 <article class="definition definition-like" id="definition-1"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
 </h4>
-<p id="p-61">Let \(f\) be continuous at \(a\text{,}\) such that the limit,</p>
+<p id="p-67">Let \(f\) be continuous at \(a\text{,}\) such that the limit,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} = m}
@@ -172,13 +196,13 @@ m_{\text{sec}} \amp = \frac{\Delta y}{\Delta x}\\
 <p class="continuation">We sometimes also say that the line is <dfn class="terminology">tangent</dfn> to \(f\) at \(x_0\text{.}\)</p></article> Intuitively, if you zoom in on the graph, the graph will resemble a straight line. Then, the slope of this straight line is the slope of the tangent. Difference quotients were first written by Fermat in 1629, who applied it to polynomials. However, different quotients can be applied to any continuous function.</section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">Equivalent Formulation of the Tangent Slope</span>
 </h3>
-<p id="p-62">An equivalent limit is,</p>
+<p id="p-68">An equivalent limit is,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = m}
 \end{equation*}
 </div>
-<p id="p-63">For this limit, \(\frac{f(x) - f(x_0)}{x - x_0}\) represents the slope of the secant line between the fixed point \((x_0,f(x_0))\) and the arbitrary point \((x,f(x))\text{.}\) The slope \(m\) of the tangent line is the limit of this slope as the arbitrary point approaches the fixed point. Taking the limit as the difference \(h\) between the two points approaches 0, is equivalent to taking the limit as one point \(x\) approaches the other point \(a\text{.}\) More precisely, the limits are equivalent in that substituting \(h = x - x_0\) into the first limit, we have that as \(h \to 0\text{,}\) \(x \to x_0\text{,}\) which results in the second limit.</p></section></section></div></main>
+<p id="p-69">For this limit, \(\frac{f(x) - f(x_0)}{x - x_0}\) represents the slope of the secant line between the fixed point \((x_0,f(x_0))\) and the arbitrary point \((x,f(x))\text{.}\) The slope \(m\) of the tangent line is the limit of this slope as the arbitrary point approaches the fixed point. Taking the limit as the difference \(h\) between the two points approaches 0, is equivalent to taking the limit as one point \(x\) approaches the other point \(a\text{.}\) More precisely, the limits are equivalent in that substituting \(h = x - x_0\) into the first limit, we have that as \(h \to 0\text{,}\) \(x \to x_0\text{,}\) which results in the second limit.</p></section></section></div></main>
 </div>
 </body>
 </html>

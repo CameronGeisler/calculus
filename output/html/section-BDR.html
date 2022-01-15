@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-12T18:26:02-08:00       *-->
+<!--*       on 2022-01-14T18:50:45-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,7 @@
 <title>Basic Differentiation Rules</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore",
     processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -107,6 +120,7 @@
 <li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
 <li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
 <li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
 <li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
 </ul>
 </li>
@@ -120,6 +134,16 @@
 <li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
+<li><a href="section-DLLA.html" data-scroll="section-DLLA">Differentials, Local Linear Approximations</a></li>
+<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
+<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
+<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
+<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
+<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
+</ul>
+</li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-BDR"><h2 class="heading hide-type">
@@ -128,20 +152,20 @@
 <section class="subsection" id="subsection-29"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Derivative of Power Functions, General Power Rule</span>
 </h3>
-<p id="p-142">For power functions, where the variable is raised to a constant power, there is a simple rule for differentiation.</p>
+<p id="p-148">For power functions, where the variable is raised to a constant power, there is a simple rule for differentiation.</p>
 <article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Power rule for derivatives.</span>
 </h4>
-<p id="p-143">If \(f(x) = x^r\) for some \(r \in \mathbb{R}\text{,}\) then \(f'(x) = rx^{r-1}\text{.}\) In other words,</p>
+<p id="p-149">If \(f(x) = x^r\) for some \(r \in \mathbb{R}\text{,}\) then \(f'(x) = rx^{r-1}\text{.}\) In other words,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\frac{d}{dx} x^r = rx^{r-1}}
 \end{equation*}
-</div></article><p id="p-144">In other words, to differentiate a function that is some power of the variable \(x\text{,}\) “bring down” the exponent \(r\) into the “front” as a coefficient, and subtract 1 from the exponent.</p>
-<p id="p-145">This theorem is widely used, because it allows for differentiation of polynomials, but also radicals (i.e. expressions of the form \(\sqrt[b]{x^a} = x^{a/b}\)), and in general any term that can be represented as a power of the variable \(x\text{.}\) However, it is difficult to prove in full generality without using more advanced rules introduced later on.</p>
+</div></article><p id="p-150">In other words, to differentiate a function that is some power of the variable \(x\text{,}\) “bring down” the exponent \(r\) into the “front” as a coefficient, and subtract 1 from the exponent.</p>
+<p id="p-151">This theorem is widely used, because it allows for differentiation of polynomials, but also radicals (i.e. expressions of the form \(\sqrt[b]{x^a} = x^{a/b}\)), and in general any term that can be represented as a power of the variable \(x\text{.}\) However, it is difficult to prove in full generality without using more advanced rules introduced later on.</p>
 <article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-146">Notice that the fact that,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-152">Notice that the fact that,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx} x = 1 \qquad \frac{d}{dx} x^2 = 2x \qquad \frac{d}{dx} x^3 = 3x^2 \qquad \frac{d}{dx} \brac{\frac{1}{x}} = -\frac{1}{x^2}
@@ -153,7 +177,7 @@
 <article class="theorem theorem-like" id="theorem-5"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h4>
-<p id="p-147">Let f, g$ be functions, differentiable at \(x\text{,}\) and let \(k \in \mathbb{R}\text{.}\) Then, the functions \(f + g\text{,}\) \(f - g\text{,}\) and \(kf\) are all differentiable at \(x\text{,}\) and,</p>
+<p id="p-153">Let f, g$ be functions, differentiable at \(x\text{,}\) and let \(k \in \mathbb{R}\text{.}\) Then, the functions \(f + g\text{,}\) \(f - g\text{,}\) and \(kf\) are all differentiable at \(x\text{,}\) and,</p>
 <ul class="disc">
 <li id="li-32"><p id="p-derived-li-32"><dfn class="terminology">Sum/difference rule</dfn>.<div class="displaymath">
 \begin{equation*}
@@ -165,8 +189,8 @@
 \boxed{(kf)'(x) = kf'(x)}
 \end{equation*}
 </div>The derivative of a constant multiple times a function is that constant times the derivative of the function.</p></li>
-</ul></article><p id="p-148">This theorem is about a single point \(x\text{,}\) but it of course can be generalized to all points in an interval \((a,b)\text{.}\) Intuitively, the first statement means that the slope of a sum of functions is the sum of the slopes of the individual functions. The second says that scaling a function by a vertical stretch or compression applies the same scaling to the slopes of the function.</p>
-<p id="p-149">The sum rule can be naturally generalized to $n$ functions.</p>
+</ul></article><p id="p-154">This theorem is about a single point \(x\text{,}\) but it of course can be generalized to all points in an interval \((a,b)\text{.}\) Intuitively, the first statement means that the slope of a sum of functions is the sum of the slopes of the individual functions. The second says that scaling a function by a vertical stretch or compression applies the same scaling to the slopes of the function.</p>
+<p id="p-155">The sum rule can be naturally generalized to $n$ functions.</p>
 <article class="corollary theorem-like" id="corollary-1"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h4>\(f_1, \dots, f_n\)\(x\text{.}\)\(f_1 + \dots + f_n\)\(x\text{,}\)<div class="displaymath">
@@ -176,19 +200,19 @@
 </div></article></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">Differentiation of Polynomials</span>
 </h3>
-<p id="p-150">By combining all of the previous results, we can show that any polynomial is differentiable on \(\mathbb{R}\text{,}\) and determine its derivative. Recall that a polynomial is a function of the form,</p>
+<p id="p-156">By combining all of the previous results, we can show that any polynomial is differentiable on \(\mathbb{R}\text{,}\) and determine its derivative. Recall that a polynomial is a function of the form,</p>
 <div class="displaymath">
 \begin{equation*}
 f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
 \end{equation*}
 </div>
-<p id="p-151">where \(a_n, \dots, a_0 \in \mathbb{R}\text{,}\) \(n \in \mathbb{N}\text{.}\) In other words, it is a sum of monomials of the form \(a_k x^k\text{.}\) Using the power rule (for positive integers) and constant multiple rule, we can differentiate each monomial.</p>
+<p id="p-157">where \(a_n, \dots, a_0 \in \mathbb{R}\text{,}\) \(n \in \mathbb{N}\text{.}\) In other words, it is a sum of monomials of the form \(a_k x^k\text{.}\) Using the power rule (for positive integers) and constant multiple rule, we can differentiate each monomial.</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx} (a_k x^k) = a_k \frac{d}{dx} x^k = a_k k x^{k-1}
 \end{equation*}
 </div>
-<p id="p-152">Then, using the sum rule, we can determine the derivative of a polynomial,</p>
+<p id="p-158">Then, using the sum rule, we can determine the derivative of a polynomial,</p>
 <div class="displaymath">
 \begin{align*}
 f'(x) \amp = \frac{d}{dx} \brac{a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0}\\

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-12T18:26:03-08:00       *-->
+<!--*       on 2022-01-14T18:50:45-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,7 @@
 <title>The Product Rule</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore",
     processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -107,6 +120,7 @@
 <li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
 <li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
 <li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
 <li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
 </ul>
 </li>
@@ -118,6 +132,16 @@
 <li><a href="section-O.html" data-scroll="section-O">Optimization</a></li>
 <li><a href="section-RTTMVT.html" data-scroll="section-RTTMVT">Rolle's Theorem, The Mean Value Theorem</a></li>
 <li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
+<li><a href="section-DLLA.html" data-scroll="section-DLLA">Differentials, Local Linear Approximations</a></li>
+<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
+<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
+<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
+<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
+<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -134,13 +158,13 @@
 \begin{equation*}
 \boxed{(fg)'(x) = f'(x)g(x) + f(x)g'(x)}
 \end{equation*}
-</div></article><p id="p-160">The formula can be more easily remembered by omitting the arguments, as,</p>
+</div></article><p id="p-166">The formula can be more easily remembered by omitting the arguments, as,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{(fg)' = f'g + fg'} \qquad \text{}
 \end{equation*}
 </div>
-<article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="title">Proof using increments.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-161">Let \(u = f(x), v = g(x)\text{.}\) Then, as \(x\) changes, both \(f\) and \(g\) change, and this causes \(uv = f(x)g(x)\) to change. The product rule shows how the product \(uv\) changes as \(x\) changes, in terms of \(f\) and \(g\text{.}\) Suppose that \(x\) is incremented by some \(\Delta x\text{,}\) and let \(\Delta u, \Delta v\) be the corresponding increments in \(u\) and \(v\text{.}\) Then, consider the change in the product, \(\Delta(uv)\text{,}\)</p>
+<article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="title">Proof using increments.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-167">Let \(u = f(x), v = g(x)\text{.}\) Then, as \(x\) changes, both \(f\) and \(g\) change, and this causes \(uv = f(x)g(x)\) to change. The product rule shows how the product \(uv\) changes as \(x\) changes, in terms of \(f\) and \(g\text{.}\) Suppose that \(x\) is incremented by some \(\Delta x\text{,}\) and let \(\Delta u, \Delta v\) be the corresponding increments in \(u\) and \(v\text{.}\) Then, consider the change in the product, \(\Delta(uv)\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \Delta(uv) = \underbrace{(u + \Delta u)(v + \Delta v)}_{\text{new }} - \underbrace{uv}_{\text{old }}
@@ -176,10 +200,10 @@
 </div></article></div></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Simplifying Before Using the Product Rule</span>
 </h3>
-<p id="p-162">When a function can be differentiated using the product rule, sometimes it is simpler to simplify it first to avoid using the product rule.</p>
+<p id="p-168">When a function can be differentiated using the product rule, sometimes it is simpler to simplify it first to avoid using the product rule.</p>
 <article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-163">For \(f(x) = x^2(1 - 7x)\text{,}\) it can be differentiated using the product rule,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-169">For \(f(x) = x^2(1 - 7x)\text{,}\) it can be differentiated using the product rule,</p>
 <div class="displaymath">
 \begin{align*}
 f'(x) \amp = 2x (1 - 7x) + x^2 (-7)\\
@@ -194,13 +218,13 @@ f'(x) = 2x - 21x^2
 </div></article></div></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">Product Rule Mnemonic</span>
 </h3>
-<p id="p-164">The product rule isn't particularly difficult to remember, however, there's an interesting pattern that may help. Consider the product rule,</p>
+<p id="p-170">The product rule isn't particularly difficult to remember, however, there's an interesting pattern that may help. Consider the product rule,</p>
 <div class="displaymath">
 \begin{equation*}
 (fg)' = f'g + fg'
 \end{equation*}
 </div>
-<p id="p-165">Dividing both sides by \(f\) and \(g\text{,}\) we get an interesting pattern,</p>
+<p id="p-171">Dividing both sides by \(f\) and \(g\text{,}\) we get an interesting pattern,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{(fg)'}{fg} = \frac{f'}{f} + \frac{g'}{g}
@@ -208,13 +232,13 @@ f'(x) = 2x - 21x^2
 </div></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.4</span> <span class="title">Differential Intuition</span>
 </h3>
-<p id="p-166">If \(u,v\) are quantities that are functions of \(x\text{,}\) then,</p>
+<p id="p-172">If \(u,v\) are quantities that are functions of \(x\text{,}\) then,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d(uv)}{dx} = u \cdot \frac{dv}{dx} + \frac{du}{dx} \cdot v
 \end{equation*}
 </div>
-<p id="p-167">Or,</p>
+<p id="p-173">Or,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{d(uv) = u \,dv + du \,v}

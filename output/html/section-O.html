@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-12T18:26:03-08:00       *-->
+<!--*       on 2022-01-14T18:50:45-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,7 @@
 <title>Optimization</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore",
     processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -107,6 +120,7 @@
 <li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
 <li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
 <li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
 <li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
 </ul>
 </li>
@@ -120,12 +134,22 @@
 <li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
+<li><a href="section-DLLA.html" data-scroll="section-DLLA">Differentials, Local Linear Approximations</a></li>
+<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
+<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
+<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
+<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
+<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
+</ul>
+</li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-O"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">Optimization</span>
 </h2>
-<section class="introduction" id="introduction-12">A relatively simple but important application of the derivative is the problem of finding a maximum or minimum value of a varying quantity. Historically, this was one of the first successes of calculus.</section><section class="subsection" id="subsection-70"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-14">A relatively simple but important application of the derivative is the problem of finding a maximum or minimum value of a varying quantity. Historically, this was one of the first successes of calculus.</section><section class="subsection" id="subsection-70"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.4.1</span> <span class="title">Optimization Problems</span>
 </h3>
 <ol class="decimal">
@@ -135,16 +159,16 @@
 <li id="li-60"><p id="p-derived-li-60">Determine the implied domain of the single independent variable, based on the specific problem.</p></li>
 <li id="li-61"><p id="p-derived-li-61">Determine critical points, and determine the absolute maximum on the implied domain.</p></li>
 </ol>
-<p id="p-260">Note that there is a difference between a maximum <em class="emphasis">value</em> and the point at which it is achieved. The maximum is the output of the function which is largest; the location of the maximum is the input of the function at which the maximum occurs. Sometimes, <em class="emphasis">maximum point</em> refers to the coordinate pair \((x,y)\) of the maximum. The terminology is somewhat mixed.</p>
+<p id="p-269">Note that there is a difference between a maximum <em class="emphasis">value</em> and the point at which it is achieved. The maximum is the output of the function which is largest; the location of the maximum is the input of the function at which the maximum occurs. Sometimes, <em class="emphasis">maximum point</em> refers to the coordinate pair \((x,y)\) of the maximum. The terminology is somewhat mixed.</p>
 <article class="example example-like" id="example-16"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-16"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-261">Find two positive numbers whose product is 64 and whose sum is a minimum. Let \(x, y &gt; 0\) be the numbers, so \(xy = 64\text{.}\) We want to minimize \(s = x + y\) Then, \(y = \frac{64}{x}\text{,}\) so,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-270">Find two positive numbers whose product is 64 and whose sum is a minimum. Let \(x, y &gt; 0\) be the numbers, so \(xy = 64\text{.}\) We want to minimize \(s = x + y\) Then, \(y = \frac{64}{x}\text{,}\) so,</p>
 <div class="displaymath">
 \begin{equation*}
 s = x + \frac{64}{x}
 \end{equation*}
 </div>
-<p id="p-262">Then, \(\frac{ds}{dx} = 1 - \frac{64}{x^2}\text{.}\) Then,</p>
+<p id="p-271">Then, \(\frac{ds}{dx} = 1 - \frac{64}{x^2}\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{align*}
 1 - \frac{64}{x^2} \amp = 0\\
@@ -152,49 +176,49 @@ x^2 \amp = 64\\
 x \amp = \pm 8
 \end{align*}
 </div>
-<p id="p-263">Here, only the \(x = 8\) solution applies, because the numbers must be positive. Verifying with the second derivative, \(s''(x) = \frac{128}{x^3}\) which is positive for \(x &gt; 0\text{,}\) so \(x = 8\) is a minimum.</p></article></div></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
+<p id="p-272">Here, only the \(x = 8\) solution applies, because the numbers must be positive. Verifying with the second derivative, \(s''(x) = \frac{128}{x^3}\) which is positive for \(x &gt; 0\text{,}\) so \(x = 8\) is a minimum.</p></article></div></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.4.2</span> <span class="title">Application: Snell's Law</span>
 </h3>
-<p id="p-264">You may have noticed that light bends in water. When a ray of light passes from a thinner medium (like air) to a thicker medium (like water, or glass), the light ray bends towards the perpendicular between the two media. Similarly, when passing from denser to thinner, it bends away from the perpendicular. In 1621, <dfn class="terminology">Willebrord Snell</dfn>, Dutch scientist, conducted experiments with refraction in various mediums, and varying the angle of the incoming ray. He discovered that for two given medium, if \(\theta_1, \theta_2\) are the angles between the incident ray and the perpendicular, and the refracted ray and the perpendicular, then the ratio of the sines of these angles were constant. In other words,</p>
+<p id="p-273">You may have noticed that light bends in water. When a ray of light passes from a thinner medium (like air) to a thicker medium (like water, or glass), the light ray bends towards the perpendicular between the two media. Similarly, when passing from denser to thinner, it bends away from the perpendicular. In 1621, <dfn class="terminology">Willebrord Snell</dfn>, Dutch scientist, conducted experiments with refraction in various mediums, and varying the angle of the incoming ray. He discovered that for two given medium, if \(\theta_1, \theta_2\) are the angles between the incident ray and the perpendicular, and the refracted ray and the perpendicular, then the ratio of the sines of these angles were constant. In other words,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\sin{\theta_1}}{\sin{\theta_2}}
 \end{equation*}
 </div>
-<p id="p-265">was constant. In fact, this property was discovered previously in 1602 by <dfn class="terminology">Thomas Harriot</dfn>, English astronomer, and in 984 by <dfn class="terminology">Ibn Sahl</dfn>, Persian mathematician. More precisely,</p>
+<p id="p-274">was constant. In fact, this property was discovered previously in 1602 by <dfn class="terminology">Thomas Harriot</dfn>, English astronomer, and in 984 by <dfn class="terminology">Ibn Sahl</dfn>, Persian mathematician. More precisely,</p>
 <article class="theorem theorem-like" id="theorem-18"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Snell's law.</span>
 </h4>
-<p id="p-266">Let \(v_1, v_2\) be the velocities of light in the two mediums, and let \(\theta_1, \theta_2\) are the angles between the incident ray and the perpendicular. Then,</p>
+<p id="p-275">Let \(v_1, v_2\) be the velocities of light in the two mediums, and let \(\theta_1, \theta_2\) are the angles between the incident ray and the perpendicular. Then,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\sin{\theta_1}}{\sin{\theta_2}} = \frac{v_1}{v_2}
 \end{equation*}
-</div></article><p id="p-267">Fermat's principle of least time states that a ray takes the path from point A to point B which takes the <em class="emphasis">least time</em>. If we assume this principle is true, then using differential calculus and optimization, we can determine the conditions where this is satisfied, and derive this relationship. Let \(L\) be the horizontal distance from the source to the target, \(a\) be the vertical distance from the source to the change in medium, \(b\) be the vertical distance from the target to the change in medium. Let \(\theta_1, \theta_2\) be the angle between the normal and the ray. Then, the total travel time from source to target is,</p>
+</div></article><p id="p-276">Fermat's principle of least time states that a ray takes the path from point A to point B which takes the <em class="emphasis">least time</em>. If we assume this principle is true, then using differential calculus and optimization, we can determine the conditions where this is satisfied, and derive this relationship. Let \(L\) be the horizontal distance from the source to the target, \(a\) be the vertical distance from the source to the change in medium, \(b\) be the vertical distance from the target to the change in medium. Let \(\theta_1, \theta_2\) be the angle between the normal and the ray. Then, the total travel time from source to target is,</p>
 <div class="displaymath">
 \begin{equation*}
 T = \frac{\sqrt{x^2 + a^2}}{v_1} + \frac{\sqrt{(L - x)^2 + b^2}}{v_2}
 \end{equation*}
 </div>
-<p id="p-268">Then, finding critical points,</p>
+<p id="p-277">Then, finding critical points,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{dT}{dx} = \frac{x}{v_1 \sqrt{x^2 + a^2}} - \frac{L - x}{v_2 \sqrt{(L - x)^2 + b^2}} = 0
 \end{equation*}
 </div>
-<p id="p-269">Then, notice that,</p>
+<p id="p-278">Then, notice that,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{x}{\sqrt{x^2 + a^2}} = \sin{\theta_1} \qquad \text{and} \qquad \frac{L - x}{\sqrt{(L - x)^2 + b^2}} = \sin{\theta_2}
 \end{equation*}
 </div>
-<p id="p-270">Then, the equation reduces to,</p>
+<p id="p-279">Then, the equation reduces to,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\sin{\theta_1}}{v_1} - \frac{\sin{\theta_2}}{v_2} = 0
 \end{equation*}
 </div>
-<p id="p-271">This equation can be rearranged into the equivalent formulation,</p>
+<p id="p-280">This equation can be rearranged into the equivalent formulation,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\sin{\theta_2}}{\sin{\theta_1}} = \frac{v_2}{v_1}

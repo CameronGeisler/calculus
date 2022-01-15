@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-12T18:26:03-08:00       *-->
+<!--*       on 2022-01-14T18:50:46-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Also, we can consider derivatives of expressions without defining a function, for example,</p>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Consider the derivative of \(f(x) = x^2\text{.}\) Recall that we previously computed the slope of the tangent line of this function at \(x = 1\text{,}\) in <a href="section-MP.html#tangent-line-problem" class="internal" title="Subsection 1.2.2: The Tangent Line Problem (Tangent of a Parabola)">Subsection 1.2.2</a>. Here, we can compute the slope at an arbitrary value of \(x\text{,}\) which is the derivative.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\\
+\amp = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h}\\
+\amp = \lim_{h \to 0} \frac{(x^2 + 2xh + h^2) - x^2}{h}\\
+\amp = \lim_{h \to 0} \frac{2xh + h^2}{h}\\
+\amp = \lim_{h \to 0} (2x + h)\\
+f'(x) \amp = 2x
+\end{align*}
+</div>
+<p class="continuation">There is a nice visualization for this derivative. Let \(y = x^2\) represent the area of a square with side length \(x\text{.}\) Then, for some small increment \(\Delta x\text{,}\) the added area is \(\Delta y = 2x \Delta x + (\Delta x)^2\text{.}\) Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{\Delta y}{\Delta x} \amp = \frac{2x \Delta x + (\Delta x)^2}{\Delta x}\\
+\amp = 2x + \Delta x
+\end{align*}
+</div>
+<p class="continuation">Then, as \(\Delta x \to 0\text{,}\) we get,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{dy}{dx} = 2x
+\end{equation*}
+</div>
 <span class="incontext"><a href="section-TDF.html#p-87">in-context</a></span>
 </body>
 </html>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-TTPA">
+    <title>Taylor's Theorem, Polynomial Approximation</title>
+
+    <introduction>
+        <p>
+            Recall that linear approximation can be used to approximate values of functions. Of course, if we have a calculator, approximations are unnecessary. Approximations are useful when the true value of a number is unknown. However, we also want to know how accurate our approximation is, that is, an upper bound on the error of our approximation. In general,
+        </p>
+        <me>
+            \boxed{\text{error} = \text{true value} - \text{approximate value}}
+        </me>
+        <p>
+            After all, technically any number is an approximation to any other number. In addition, if the true value is unknown, it is not obvious how to quantify this error.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Linear Approximations and Error</title>
+        <p>
+            Recall that the linear approximation <m>L</m> of <m>f</m> about <m>a</m> is given by,
+        </p>
+        <me>
+            L(x) = f(a) + f'(a)(x - a)
+        </me>
+        <p>
+            Then, the error <m>E(x)</m> of this approximation is given by,
+        </p>
+        <md>
+            <mrow>E(x) \amp = f(x) - L(x)</mrow>
+            <mrow>E(x) \amp = f(x) - f(a) - f'(a)(x - a)</mrow>
+        </md>
+        <p>
+            In delta notation, this is,
+        </p>
+        <me>
+            E(x) = \Delta y - f'(a) \Delta x
+        </me>
+        <p>
+            Graphically, <m>E(x)</m> represents the vertical distance at <m>x</m> between the graph of <m>f</m> and the tangent line to that graph. In general, if <m>x</m> is near <m>a</m>, then <m>E(x)</m> is small.
+        </p>
+
+        <example>
+            <title>Error in linear approximation for cubing function</title>
+            <p>
+                Consider the function <m>f(x) = x^3</m>. For a point <m>a</m>, the tangent line to <m>f</m> at <m>x = a</m> is given by <m>L(x) = a^3 + 3a^2(x - a)</m>. Then, the error in the linear approximation is given by,
+            </p>
+            <me>
+                E(x) = x^3 - \brac{a^3 + 3a^2 (x - a)}
+            </me>
+            <p>
+                This can be simplified and factored, but it is made more simple using delta notation. In this notation, <m>\Delta y = (a + \Delta x)^3 - a^3 = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3</m>, and <m>f'(a) \Delta x = 3a^2 \Delta x</m>. Then,
+            </p>
+            <md>
+                <mrow>E(x) \amp = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3 - 3a^2 \Delta x</mrow>
+                <mrow>\amp = 3a (\Delta x)^2 + (\Delta x)^3</mrow>
+                <mrow>\amp = (\Delta x)^2 (3a + \Delta x)</mrow>
+            </md>
+            <p>
+                Notice that as <m>\Delta x \to 0</m>, <m>E(x) \to 0</m>, due to the factor of <m>\Delta x</m> in the expression. In addition, <m>E(x) \to 0</m> quite quickly, because <m>\Delta x</m> is being squared.
+            </p>
+        </example>
+
+        <p>
+            Graphically, it can be seen that the vertical distance between a function <m>f</m> and its tangent line follows a roughly quadratic pattern. Also, intuitively, $E$ depends on how fast the curve bends away from its tangent line. In other words, if $f''$ is small, then $E$ will be smaller, and if $f''$ is large, then $E$ will be larger. In summary,
+        </p>
+        <theorem>
+            <title>Linear approximation error bound</title>
+            <p>
+                Let <m>f</m> be a function, differentiable on an interval containing <m>a</m> and <m>x</m>. Then, the error <m>E(x) = f(x) - L(x)</m> in the linear approximation <m>L(x) = f(a) + f'(a)(x - a)</m> satisfies,
+                <me>
+                    \boxed{E(x) = \frac{f''(c)}{2}(x - a)^2}
+                </me>
+                for some <m>c</m> between <m>a</m> and <m>x</m>.
+            </p>
+        </theorem>
+        <p>
+            The proof of this theorem is more advanced. Intuitively, this says that the error is proportional to the square of the distance between <m>x</m> and <m>a</m>. Also, the error depends on the magnitude of the second derivative <m>f''</m> for values between <m>x</m> and <m>a</m>. Notice here that the value <m>c</m> is unknown.
+        </p>
+        <proof>
+            <p>
+                First, assume that <m>x > a</m>, and the other case is similar. Apply the generalized MVT to <m>E(x) = f(x) - f(a) - f'(a)(x - a)</m> and the function <m>g(x) = (x - a)^2</m> on the interval <m>[a,x]</m>, then, for some <m>c \in (a,x)</m>,
+                <md>
+                    <mrow>\frac{E(x) - E(a)}{(x - a)^2 - (a - a)^2} \amp = \frac{E'(c)}{2(c - a)}</mrow>
+                    <mrow>\frac{E(x)}{(x - a)^2} \amp = \frac{E'(c)}{2(c - a)}</mrow>
+                </md>
+                Also, note that <m>E(a) = 0</m>. Then, again, applying the generalized MVT to <m>E'(x) = f'(x) - f'(a)</m> and <m>h(x) = 2(x - a)</m> on the interval <m>[a,c]</m> gives that,
+                <md>
+                    <mrow>\frac{E'(c) - E'(a)}{2(c - a) - 2(a - a)} \amp = \frac{E''(u)}{2}</mrow>
+                    <mrow>\frac{E'(c)}{2(c - a)} \amp = \frac{E''(u)}{2} = \frac{f''(u)}{2}</mrow>
+                </md>
+                for some <m>u \in (a,c)</m>, and note that <m>E'(a) = 0</m>, and also that <m>E''(x) = f''(x)</m>. Putting it together,
+                <me>
+                    \frac{E(x)}{(x - a)^2} = \frac{f''(u)}{2}
+                </me>
+                and so <m>E(x) = \frac{f''(u)}{2} (x - a)^2</m>.
+            </p>
+        </proof>
+
+        <corollary>
+            <p>
+                If <m>\abs{f''(t)} \lt M</m> for all <m>t</m> between <m>a</m> and <m>x</m>, then,
+                <me>
+                    \boxed{\abs{E(x)} \leq \frac{M}{2}(x - a)^2}
+                </me>
+            </p>
+        </corollary>
+        <p>
+            Intuitively, the error depends on the magnitude of the concavity of the graph of <m>f</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Quadratic Approximations</title>
+        <example>
+            <title>Sine</title>
+            <me>
+                \sin{x} \approx x
+            </me>
+        </example>
+        
+        <example>
+            <title>Cosine</title>
+            <me>
+                \cos{x} \approx 1 - \frac{1}{2}x^2
+            </me>
+        </example>
+
+        <example>
+            <title>Exponential</title>
+            <me>
+                e^x \approx 1 + x + \frac{1}{2} x^2
+            </me>
+        </example>
+    </subsection>
+    
+    <subsection>
+        <title>Taylor Polynomials</title>
+        <p>
+            Intuitively, the linearization of <m>f</m> at <m>x = a</m>,
+        </p>
+        <me>
+            L(x) = f(a) + f'(a)(x - a)
+        </me>
+        <p>
+            describes the behavior of <m>f</m> near <m>a</m> better than any other degree 1 polynomial, in that $L$ matches <m>f</m> and its derivative <m>f'</m> at <m>a</m>, i.e. <m>L(a) = f(a)</m> and <m>L'(a) = f'(a)</m>.
+        </p>
+        <p>
+            A better approximation of <m>f</m> can be obtained by using quadratic or higher-degree polynomials which match more derivatives at <m>x = a</m>. For example, consider,
+        </p>
+        <me>
+            T_2(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2}(x - a)^2
+        </me>
+        <p>
+            which satisfies <m>T_2(a) = f(a), T_2'(a) = f'(a)</m>, and also <m>T_2''(a) = f''(a)</m> (notice the factor of 2 in the denominator in <m>T_2</m> which allows for the last matching). In a similar way, <m>T_2</m> describes the behavior of <m>f</m> near <m>a</m> better than any other degree 2 polynomial. In general, if <m>f</m> is <m>n</m> times differentiable on some open interval containing <m>a</m>, then the polynomial,
+        </p>
+        <me>
+            T_n(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \frac{f'''(a)}{3!}(x - a)^3 + \dots + \frac{f^{(n)}(a)}{n!}(x - a)^n
+        </me>
+        <p>
+            is the unique polynomial which matches <m>f</m> and its first <m>n</m> derivatives at <m>x = a</m>,
+        </p>
+        <me>
+            T_n(a) = f(a) \qquad T_n'(a) = f'(a) \qquad \cdots \qquad T_n^{(n)}(a) = f^{(n)}(a)
+        </me>
+        <p>
+            and describes <m>f</m> near <m>x = a</m> better than any other polynomial of degree at most <m>n</m>. This is called a Taylor polynomial of <m>f</m>.
+        </p>
+        <definition>
+            <p>
+                Let <m>f</m> be <m>n</m>-times differentiable, <m>a \in \mathbb{R}</m>. Then, the <m>n</m>th order <term>Taylor polynomial</term> centered at <m>a</m> is given by,
+                <me>
+                    \boxed{T_n(x) = f(a) + f'(a)(x - a) + \dots + \frac{f^{(n)}(a)}{n!}(x - a)^n = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (x - a)^k}
+                </me>
+                A Taylor polynomial centered at <m>a = 0</m> are also called <term>MacLaurin polynomial</term>.
+            </p>
+        </definition>
+
+        <p>
+            In this way, <m>T_1(x)</m> is the linearization of <m>f</m>, and <m>T_2(x)</m> is a quadratic approximation of <m>f</m>, etc. The 0th-order Taylor polynomial, <m>T_0</m>, is a constant function <m>T_0(x) = f(a)</m>. Also, in general,
+        </p>
+        <me>
+            T_n(x) = T_{n-1}(x) + \frac{f^{(n)}(a)}{n!}(x - a)^n
+        </me>
+        <p>
+            Note that sometimes, <m>T_n</m> is called the <m>n</m>th degree Taylor polynomial, however <m>T_n</m> may have degree lower than <m>n</m> if <m>f^{(n)}(a) = 0</m>, etc. Taylor polynomials are named after <term>Brook Taylor</term> (1685-1731).
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Taylor's Theorem (Taylor's Formula)</title>
+        <p>
+            Taylor polynomials are used to approximate functions near a value <m>x = a</m>. Taylor's theorem provides information about the error of the approximation.
+        </p>
+        <definition>
+            <p>
+                The <term>error term</term> (or <term>remainder term</term>) of a Taylor approximation is defined by,
+                <me>
+                    \boxed{E_n(x) = f(x) - T_n(x)}
+                </me>
+            </p>
+        </definition>
+
+        <theorem>
+            <p>
+                Let <m>f</m> be <m>(n+1)</m>-times differentiable on an interval containing <m>a</m> and <m>x</m>. Then, the error term is given by,
+                <me>
+                    E_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x - a)^{n+1}
+                </me>
+                for some <m>c</m> between <m>a</m> and <m>x</m>. More explicitly,
+                <me>
+                    \boxed{f(x) = \underbrace{f(a) + f'(a)(x - a) + \dots + \frac{f^{(n+1)}(a)}{n!}(x - a)^n}_{T_n(x)} + \underbrace{\frac{f^{(n+1)}(c)}{(n + 1)!}(x - a)^{n+1}}_{E_n(x)}}
+                </me>
+                This equation is called <term>Taylor's formula</term>.
+            </p>
+        </theorem>
+        <p>
+            Notice that the error term of Taylor's theorem is just the next term in the Taylor approximation, except with the derivative evaluated at some unknown point <m>c</m> between <m>a</m> and <m>x</m>, rather than at <m>a</m>.
+        </p>
+        <corollary>
+            <p>
+                If the <m>(n+1)</m>-st derivative of <m>f</m> is bounded, say <m>\abs{f^{(n+1)}(t)} \leq M</m> for all <m>t</m> between <m>x</m> and <m>a</m>, then by Taylor's theorem,
+                <me>
+                    \boxed{E_n(x) \leq \frac{M}{(n + 1)!}(x - a)^{n+1}}
+                </me>
+            </p>
+        </corollary>
+    </subsection>
+
+    <subsection>
+        <title>Proof of Taylor's Theorem</title>
+        <proof>
+            <p>
+                For <m>n = 0</m>, Taylor's theorem is,
+                <me>
+                    f(x) = f(a) + f'(c)(x - a)
+                </me>
+                for some <m>c</m> between <m>a</m> and <m>x</m>. This is just the MVT.
+            </p>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Misc</title>
+
+        <theorem>
+            <p>
+                Let <m>p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n</m> be a polynomial. Then, for any <m>a \in \mathbb{R}</m>, <m>p</m> can be written in the form,
+                <me>
+                    p(x) = c_0 + c_1 (x - a) + c_2 (x - a)^2 + \dots + c_n (x - a)^n = \sum_{k=0}^n c_k (x - a)^n
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                We write <m>x = (x - a) + a</m>. Then,
+                <me>
+                    p(x) = a_0 + a_1 \brac{(x - a) + a} + a_2 \brac{(x - a) + a}^2 + \dots + a_n \brac{(x - a) + a}^n
+                </me>
+                Then, expand (using the binomial theorem), and collect like powers of <m>x - a</m>.
+            </p>
+        </proof>
+
+        <theorem>
+            <p>
+                If <m>p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n</m> is a polynomial, then the coefficients are given by,
+                <me>
+                    a_k = \frac{p^{(k)}(0)}{k!}
+                </me>
+            </p>
+        </theorem>
+        <proof>
+            <p>
+                The <m>k</m>th derivative of <m>p(x)</m> has constant term <m>k! a_k</m>. Thus, <m>p^{(k)}(0) = k! a_k</m>, and the result follows.
+            </p>
+        </proof>
+
+        <theorem>
+            <p>
+                Let <m>T_n(x) = a_0 + a_1 (x - a) + a_2 (x - a)^2 + \dots + a_n (x - a)^n</m> is the MacLaurin polynomial of <m>f</m> at <m>x = a</m>. Then, the error term <m>E_n(x) = f(x) - T_n(x)</m> is such that,
+                <me>
+                    E_n(a) = E_n'(a) = \dots = E^{(n)}(a) = 0
+                </me>
+                and so the <m>n</m>th Taylor polynomial of <m>E_n</m> at <m>a</m> is 0.
+            </p>
+        </theorem>
+
+        <theorem>
+            <p>
+                If <m>g(x)</m> is <m>(n+1)</m>-times differentiable on some interval containing <m>x</m> and <m>a</m>, and if <m>g(a) = g'(a) = \dots = g^{(n)}(a) = 0</m>, then there exists <m>c</m> between <m>a</m> and <m>x</m> such that,
+                <me>
+                    g(x) = \frac{g^{(n+1)}(c)}{(n+1)!} (x - a)^{n+1}
+                </me>
+            </p>
+        </theorem>
+    </subsection>
+</section>

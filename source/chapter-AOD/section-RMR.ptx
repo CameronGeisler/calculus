@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-RMR">
+    <title>Rectilinear Motion Revisited</title>
+    <p>
+        Recall that if <m>x(t)</m> represents the position of an object along a straight line, then its velocity is given by <m>v(t) = x'(t)</m>, and its acceleration is given by <m>a(t) = v'(t) = x''(t)</m>.
+    </p>
+
+    <ul>
+        <li>If <m>v(t) > 0</m>, then the particle is moving to the right. If <m>v(t) \lt 0</m>, then the particle is moving to the left.</li>
+        <li>If <m>a(t)</m>, then the particle is accelerating to the right. If <m>a(t) \lt 0</m>, then the particle is accelerating to the left.</li>
+        <li>If <m>v(t)</m> and <m>a(t)</m> have the same sign, then the particle is <term>speeding up</term>. If <m>v(t)</m> and <m>a(t)</m> have opposite signs, then the particle is <term>slowing down</term>.</li>
+    </ul>
+</section>

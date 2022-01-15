@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-AOD" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Applications of Differentiation</title>
+        <introduction>
+
+        </introduction>
+
+        <xi:include href="./chapter-AOD/section-DLLA.ptx"/>
+        <xi:include href="./chapter-AOD/section-RROC.ptx"/>
+        <xi:include href="./chapter-AOD/section-RMR.ptx"/>
+        <xi:include href="./chapter-AOD/section-RR.ptx"/>
+        <xi:include href="./chapter-AOD/section-CGR.ptx"/>
+        <xi:include href="./chapter-AOD/section-TTPA.ptx"/>
+
+</chapter>

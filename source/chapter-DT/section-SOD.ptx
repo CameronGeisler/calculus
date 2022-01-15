@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-SOD">
+    <title>Summary of Differentiation</title>
+    <p>
+        So far, we have considered the sum rule, constant multiple rule, product rule, quotient rule, and chain rule (for compositions of functions). Also, we know how to differentiate polynomials, and so we can also differentiate rational functions.
+    </p>
+    <me>
+        \begin{cases} \text{sum} \\ \text{constant multiple} \\ \text{product} \\ \text{quotient} \\ \text{composition} \end{cases} \qquad \begin{cases} \text{polynomials} \\ \text{rational functions} \, \frac{p(x)}{q(x)} \\ \text{trigonometric functions} \, (\text{e.g.} \sin{x}, \cos{x}, \tan{x}) \\ \text{exponential functions} \, b^x, e^x \\ \text{logarithmic functions} \log{x} \\ \vdots \end{cases}
+    </me>
+    <p>
+        Later, we will consider the derivatives of more functions, including trigonometric functions, exponential functions, and logarithmic functions.
+    </p>
+
+</section>

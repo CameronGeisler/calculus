@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-DLLA">
+    <title>Differentials, Local Linear Approximations</title>
+
+    <subsection>
+        <title>Derivatives and Local Linearity</title>
+        <p>
+            One fundamental property of functions <m>f</m> which are differentiable is that they are <term>locally linear</term>. Roughly, this means that around a point <m>x</m> where <m>f</m> is differentiable, <m>f</m> can be approximated by a linear function. Intuitively, this means that <q>zooming in</q> on the function result in the function looking as if it were linear. In particular, this linear function is the tangent line of <m>f</m> at <m>x</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Approximating Small Changes</title>
+        <p>
+            Recall that if <m>y = f(x)</m> is differentiable, then,
+        </p>
+        <me>
+            \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \frac{dy}{dx}
+        </me>
+        <p>
+            where <m>\Delta x</m> is an increment in <m>x</m>, and <m>\Delta y = f(x + \Delta x) - f(x)</m>. Then, if <m>\Delta x</m> is not taken in the limit to 0, but rather is a non-zero small number, then because <m>f</m> is differentiable, the ratio <m>\frac{\Delta y}{\Delta x}</m> will be approximately <m>f'(x)</m>, or,
+        </p>
+        <me>
+            \frac{\Delta y}{\Delta x} \approx f'(x)
+        </me>
+        <p>
+            This reasoning was used in the opposite direction to define the derivative. That is, we take the ratio of <m>\Delta y</m> and <m>\Delta x</m> to approximate <m>f'(x)</m>. On the other hand, if <m>f'(x)</m> is known, then this approximation can be used in the other way to determine <m>\Delta y</m> from <m>\Delta x</m> and <m>f'(x)</m>. Multiplying both sides by <m>\Delta x</m>,
+        </p>
+        <me>
+            \Delta y = f'(x) \Delta x
+        </me>
+        <p>
+            In summary,
+        </p>
+        <theorem>
+            <p>
+                For a differentiable function <m>f</m> and small <m>\Delta x</m>,
+                <me>
+                    \boxed{\frac{\Delta y}{\Delta x} \approx f'(x)} \qquad \text{and} \qquad \boxed{\Delta y \approx f'(x) \Delta x}
+                </me>
+            </p>
+        </theorem>
+    </subsection>
+    
+    <subsection>
+        <title>Differentials</title>
+        <p>
+            Previously, we considered the expression <m>\frac{dy}{dx}</m> as a single symbol representing the derivative. It is also helpful to interpret <m>\frac{dy}{dx}</m> as the ratio of two very small real number quantities, called <term>differentials</term>.
+        </p>
+        <definition>
+            <p>
+                Let <m>y = f(x)</m>. Then, a <term>differential of x</term>, <m>dx</m>, is given by <m>\,dx = \Delta x</m>, and <m>dy</m> is the <term>differential of y</term>, given by <m>\,dy = f'(x) \,dx</m>.
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Local Linear Approximation</title>
+        <p>
+            Using the approximation, if a point <m>y = f(x)</m> is known, we can approximate points near <m>x</m> using the approximation,
+        </p>
+        <me>
+            \boxed{f(x + \Delta x) \approx f(x) + \,dy = f(x) + f'(x) \,dx}
+        </me>
+        <p>
+            If <m>f</m> is differentiable at a point <m>x = a</m>, then <m>f</m> is locally linear around <m>a</m>, that is, can be approximated with a line. In particular, it can be approximated with its tangent line,
+        </p>
+        <me>
+            \boxed{f(x) \approx f(a) + f'(a)(x - a)}
+        </me>
+        <p>
+            This approximation holds for <m>x \approx a</m>. This is useful because linear functions are very easy to evaluate, whereas a function <m>f</m> may be difficult or more complicated to evaluate.
+        </p>
+        <p>
+            We most commonly consider approximations of functions at <m>x = 0</m>, in which case the tangent line formula is,
+        </p>
+        <me>
+            f(x) \approx f(0) + f'(0)x
+        </me>
+        <example>
+            <title>Sine</title>
+            <p>
+                For <m>f(x) = \sin{x}</m>, <m>f'(x) = \cos{x}</m>, and so <m>f'(0) = \cos{0} = 1</m>. Then, the tangent line approximation is,
+                <md>
+                    <mrow>\sin{x} \amp \approx \underbrace{\sin{0}}_{=0} + \underbrace{\cos{0}}_{=1} x</mrow>
+                    <mrow>\amp = x</mrow>
+                </md>
+                Thus,
+                <me>
+                    \sin{x} \approx x \qquad \text{for } x \approx 0
+                </me>
+            </p>
+        </example>
+
+        <example>
+            <title>Cosine</title>
+            <p>
+                For <m>f(x) = \cos{x}</m>, <m>f'(x) = -\sin{x}</m>, and so the tangent line approximation is,
+                <md>
+                    <mrow>\cos{x} \amp \approx \cos{0} - \sin{0} x</mrow>
+                    <mrow>\amp = 1</mrow>
+                </md>
+            </p>
+        </example>
+
+        <example>
+            <title>Exponential</title>
+            <p>
+                For <m>f(x) = e^x</m>, <m>f'(x) = e^x</m>, and so the tangent line approximation is,
+                <md>
+                    <mrow>e^x \amp \approx e^0 + e^0 x</mrow>
+                    <mrow>\amp = 1 + x</mrow>
+                </md>
+                Thus,
+                <me>
+                    e^x \approx 1 + x \qquad \text{for } x \approx 0
+                </me>
+            </p>
+        </example>
+
+        <example>
+            <title>Logarithm</title>
+            <p>
+                For the logarithmic function <m>\ln{x}</m>, it is not defined for <m>x = 0</m>. Instead, we can center the linear approximation <m>x = 1</m>. Then, for <m>f(x) = \ln{x}</m>, <m>f'(x) = \frac{1}{x}</m>, and so,
+                <me>
+                    <mrow>\ln{x} \approx \ln{1} + \frac{1}{1}(x - 1)</mrow>
+                    <mrow>= x - 1</mrow>
+                </me>
+                Thus,
+                <me>
+                    \ln{x} \approx x - 1 \qquad \text{for } x \approx 1
+                </me>
+            </p>
+        </example>
+
+        <example>
+            <title>Binomial approximation</title>
+            <p>
+                For the function <m>f(x) = (1 + x)^r</m> (for some <m>r > 0</m>), <m>f'(x) = r (1 + x)^{r-1}</m>, and so,
+                <md>
+                    <mrow>(1 + x)^r \approx (1 + 0)^r + r (1 + 0)^{r-1} x</mrow>
+                    <mrow>\approx 1 + rx</mrow>
+                </md>
+                Thus,
+                <me>
+                    (1 + x)^r \approx 1 + rx \qquad \text{for } x \approx 0
+                </me>
+                This is called the <term>binomial approximation</term>.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Remark About Differentials</title>
+        <p>
+            Historically, differentials, and linear approximations, were quite useful for making approximations. However, in modern times, with computers, differentials have becomes less useful. Today, differentials are mostly a helpful conceptual idea.
+        </p>
+    </subsection> 
+
+</section>

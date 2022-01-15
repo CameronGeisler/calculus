@@ -7,10 +7,21 @@
         <title>Higher Derivatives</title>
 
         <p>
-            For a function <m>f</m>, its derivative <m>f'</m> is itself a function, and so it itself can be differentiated, to form a new function (the <q>derivative of the derivative</q>). This function is called the <term>second derivative</term>. The second derivative of <m>f</m> is denoted by <m>f''</m> (with two primes). Similarly,
+            For a function <m>f</m>, its derivative <m>f'</m> is itself a function, and so it itself can be differentiated, to form a new function (the <q>derivative of the derivative</q>). This function is called the <term>second derivative</term>. The second derivative of <m>f</m> is denoted by <m>f''</m> (with two primes). In other words,
+        </p>
+        <me>
+            f''(x) = \frac{d}{dx} f'(x)
+        </me>
+        <p>
+            Similarly,
         </p>
         <ul>
-            <li>The <term>third derivative</term> is the derivative of the second derivative, and is denoted by <m>f'''</m>.</li>
+            <li>
+                The <term>third derivative</term> is the derivative of the second derivative, and is denoted by <m>f'''</m>.
+                <me>
+                    f'''(x) = \frac{d}{dx} f''(x)
+                </me>
+            </li>
             <li>In general, the <term><m>n</m>th derivative</term> is the function which results from differentiating <m>f</m> <m>n</m> times, and is denoted by <m>f^{(n)}</m>. </li>
         </ul>
         <p>
@@ -22,6 +33,13 @@
         <p>
             Typically, a number superscript is used for <m>n \geq 4</m>.
         </p>
+        <p>
+            Or, in Leibniz notation, the higher derivatives are denoted by,
+        </p>
+        <me>
+            \brac{\frac{dy}{dx}} \quad, \frac{d^2 y}{dx^2}, \frac{d^3 y}{dx^3}, \frac{d^4 y}{dx^4}, \dots, \frac{d^n y}{dx^n}, \dots
+        </me>
+
     </subsection>
 
     <subsection>
@@ -33,12 +51,6 @@
 
     <subsection>
         <title>Intuition for Leibniz Notation for Higher Derivatives</title>
-        <p>
-            In Leibniz notation, the second derivative is denoted by,
-        </p>
-        <me>
-            \frac{d^2 y}{dx^2}
-        </me>
         <p>
             Intuitively, the second derivative of <m>y</m> is the result of applying the derivative operator <m>\frac{d}{dx}</m> to <m>y</m> <em>twice</em>. In other words,
         </p>
@@ -60,6 +72,6 @@
         <p>
             Finally, Leibniz notation writes <m>dx^2</m> rather than <m>(dx)^2</m>, omitting the brackets but maintaining the intuition that the denominator is <m>(dx)^2</m> rather than <m>d(x^2)</m>.
         </p>
-    </subsection>   
+    </subsection>
 
 </section>

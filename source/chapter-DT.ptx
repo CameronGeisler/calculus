@@ -21,6 +21,7 @@
         <xi:include href="./chapter-DT/section-TQR.ptx"/>
         <xi:include href="./chapter-DT/section-HD.ptx"/>
         <xi:include href="./chapter-DT/section-TCR.ptx"/>
+        <xi:include href="./chapter-DT/section-SOD.ptx"/>
         <xi:include href="./chapter-DT/section-ID.ptx"/>
 
 </chapter>

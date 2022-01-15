@@ -60,7 +60,7 @@
                 which is read as <q>low di-high minus high di-low over low squared</q>.
             </li>
             <li>
-                For a Santa-themed mnemonics, if we take $f$ to be ``hi" (the ``high" function) and $g$ to be the ``ho" function (hi-ho), then we get,
+                For a Santa-themed mnemonics, if we take <m>f</m> to be <q>hi</q> (the <q>high</q> function) and <m>g</m> to be the <q>ho</q> function (hi-ho), then we get,
                 <me>
                     (\text{quotient})' = \frac{\text{ho <m>\times</m> di-hi} - \text{hi <m>\times</m> di-ho}}{(\text{ho})^2}
                 </me>

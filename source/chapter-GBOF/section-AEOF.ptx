@@ -2,19 +2,21 @@
 
 <section xml:id="section-AEOF">
     <title>Absolute Extrema of Functions</title>
-    <p>
-        In most applications, the domain of the functions involved are restricted to numbers in a particular interval. Intuitively, an absolute maximum is the <em>highest</em> point <m>(c,f(c))</m> on the graph of <m>f</m> over the interval <m>[a,b]</m>. Similarly, an absolute minimum is the <em>lowest</em> point on the graph over <m>[a,b]</m>.
-    </p>
-
-    <definition>
+    <introduction>
         <p>
-            Let <m>f</m> be a function defined on <m>[a,b]</m>, <m>c \in [a,b]</m>. Then,
-            <ul>
-                <li><m>f</m> has an <term>absolute maximum</term> on <m>[a,b]</m> at <m>x = c</m>, if <m>f(x) \leq f(c)</m> for all <m>x \in [a,b]</m>.</li>
-                <li><m>f</m> has an <term>absolute minimum</term> on <m>[a,b]</m> at <m>x = c</m>, if <m>f(x) \geq f(c)</m> for all <m>x \in [a,b]</m>.</li>
-            </ul>
+            In most applications, the domain of the functions involved are restricted to numbers in a particular interval. Intuitively, an absolute maximum is the <em>highest</em> point <m>(c,f(c))</m> on the graph of <m>f</m> over the interval <m>[a,b]</m>. Similarly, an absolute minimum is the <em>lowest</em> point on the graph over <m>[a,b]</m>.
         </p>
-    </definition>
+    
+        <definition>
+            <p>
+                Let <m>f</m> be a function defined on <m>[a,b]</m>, <m>c \in [a,b]</m>. Then,
+                <ul>
+                    <li><m>f</m> has an <term>absolute maximum</term> on <m>[a,b]</m> at <m>x = c</m>, if <m>f(x) \leq f(c)</m> for all <m>x \in [a,b]</m>.</li>
+                    <li><m>f</m> has an <term>absolute minimum</term> on <m>[a,b]</m> at <m>x = c</m>, if <m>f(x) \geq f(c)</m> for all <m>x \in [a,b]</m>.</li>
+                </ul>
+            </p>
+        </definition>
+    </introduction>
 
     <subsection>
         <title>Extreme-Value Theorem</title>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-RGR">
+    <title>Comparing Growth Rates</title>
+
+    <p>
+        If,
+    </p>
+    <me>
+        \lim_{x \to \infty} \frac{f(x)}{g(x)} = 1
+    </me>
+    <p>
+        then <m>f</m> and <m>g</m> behave in essentially the same way <q>at <m>\infty</m></q>. For example, if <m>g</m> has a limit at infinity, i.e. <m>\lim_{x \to \infty} g(x) = L</m>, then,
+    </p>
+    <md>
+        <mrow>\lim_{x \to \infty} f(x) \amp = \lim_{x \to \infty} \underbrace{\frac{f(x)}{g(x)}}_{\to 1} \cdot \underbrace{g(x)}_{\to L}</mrow>
+        <mrow>\amp = 1 \cdot L</mrow>
+        <mrow>\amp = L</mrow>
+    </md>
+
+</section>

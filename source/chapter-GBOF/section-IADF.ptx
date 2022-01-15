@@ -3,16 +3,18 @@
 <section xml:id="section-IADF">
     <title>Increasing and Decreasing Functions</title>
 
-    <p>
-        Derivatives provide a large amount of information about the shape of a the graph of a function. First, we will consider whether functions are increasing or decreasing, that is, if they are going up or down. Recall the definitions of a function being increasing or decreasing on an interval.
-    </p>
-
-    <definition>
-        <ul>
-            <li>A function <m>f</m> is <term>increasing</term> on an interval <m>(a,b)</m> if for all <m>x_1, x_2 \in (a,b)</m>, if <m>x_1 \lt x_2</m>, then <m>f(x_1) \lt f(x_2)</m>.</li>
-            <li>A function <m>f</m> is <term>decreasing</term> on an interval <m>(a,b)</m> if for all <m>x_1, x_2 \in (a,b)</m>, if <m>x_1 \gt x_2</m>, then <m>f(x_1) \gt f(x_2)</m>.</li>
-        </ul>
-    </definition>
+    <introduction>
+        <p>
+            Derivatives provide a large amount of information about the shape of a the graph of a function. First, we will consider whether functions are increasing or decreasing, that is, if they are going up or down. Recall the definitions of a function being increasing or decreasing on an interval.
+        </p>
+    
+        <definition>
+            <ul>
+                <li>A function <m>f</m> is <term>increasing</term> on an interval <m>(a,b)</m> if for all <m>x_1, x_2 \in (a,b)</m>, if <m>x_1 \lt x_2</m>, then <m>f(x_1) \lt f(x_2)</m>.</li>
+                <li>A function <m>f</m> is <term>decreasing</term> on an interval <m>(a,b)</m> if for all <m>x_1, x_2 \in (a,b)</m>, if <m>x_1 \gt x_2</m>, then <m>f(x_1) \gt f(x_2)</m>.</li>
+            </ul>
+        </definition>
+    </introduction>
 
     <subsection>
         <title>Increasing/Decreasing Test (Positive Derivative Implies Increasing)</title>

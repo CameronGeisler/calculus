@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-12T18:26:03-08:00       *-->
+<!--*       on 2022-01-14T18:50:45-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,7 @@
 <title>Higher Derivatives</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore",
     processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -107,6 +120,7 @@
 <li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
 <li><a href="section-HD.html" data-scroll="section-HD" class="active">Higher Derivatives</a></li>
 <li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
 <li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
 </ul>
 </li>
@@ -120,6 +134,16 @@
 <li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
+<li><a href="section-DLLA.html" data-scroll="section-DLLA">Differentials, Local Linear Approximations</a></li>
+<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
+<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
+<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
+<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
+<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
+</ul>
+</li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-HD"><h2 class="heading hide-type">
@@ -128,48 +152,58 @@
 <section class="subsection" id="subsection-42"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">Higher Derivatives</span>
 </h3>
-<p id="p-173">For a function \(f\text{,}\) its derivative \(f'\) is itself a function, and so it itself can be differentiated, to form a new function (the “derivative of the derivative”). This function is called the <dfn class="terminology">second derivative</dfn>. The second derivative of \(f\) is denoted by \(f''\) (with two primes). Similarly,</p>
+<p id="p-179">For a function \(f\text{,}\) its derivative \(f'\) is itself a function, and so it itself can be differentiated, to form a new function (the “derivative of the derivative”). This function is called the <dfn class="terminology">second derivative</dfn>. The second derivative of \(f\) is denoted by \(f''\) (with two primes). In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+f''(x) = \frac{d}{dx} f'(x)
+\end{equation*}
+</div>
+<p id="p-180">Similarly,</p>
 <ul class="disc">
-<li id="li-40"><p id="p-derived-li-40">The <dfn class="terminology">third derivative</dfn> is the derivative of the second derivative, and is denoted by \(f'''\text{.}\)</p></li>
+<li id="li-40"><p id="p-derived-li-40">The <dfn class="terminology">third derivative</dfn> is the derivative of the second derivative, and is denoted by \(f'''\text{.}\)<div class="displaymath">
+\begin{equation*}
+f'''(x) = \frac{d}{dx} f''(x)
+\end{equation*}
+</div></p></li>
 <li id="li-41"><p id="p-derived-li-41">In general, the <dfn class="terminology">\(n\)th derivative</dfn> is the function which results from differentiating \(f\) \(n\) times, and is denoted by \(f^{(n)}\text{.}\)</p></li>
 </ul>
-<p id="p-174">Then, the derivatives of \(f\) are denoted by,</p>
+<p id="p-181">Then, the derivatives of \(f\) are denoted by,</p>
 <div class="displaymath">
 \begin{equation*}
 f', f'', f''', f^{(4)}, f^{(5)}, \dots, f^{(n)}, \dots
 \end{equation*}
 </div>
-<p id="p-175">Typically, a number superscript is used for \(n \geq 4\text{.}\)</p></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">Intuition for Higher Derivatives</span>
-</h3>
-<p id="p-176">Given a function \(f\text{,}\) recall that the derivative of \(f\) can be thought of as the rate of change of \(f\text{.}\) Then, the derivative \(f''\) of \(f'\) can be thought of as the rate of change of \(f'\text{,}\) that is, measuring how fast the derivative changes. In terms of \(f\text{,}\) \(f''\) can be thought of as how fast the slope of \(f\) is changing.</p></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">Intuition for Leibniz Notation for Higher Derivatives</span>
-</h3>
-<p id="p-177">In Leibniz notation, the second derivative is denoted by,</p>
+<p id="p-182">Typically, a number superscript is used for \(n \geq 4\text{.}\)</p>
+<p id="p-183">Or, in Leibniz notation, the higher derivatives are denoted by,</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{d^2 y}{dx^2}
+\brac{\frac{dy}{dx}} \quad, \frac{d^2 y}{dx^2}, \frac{d^3 y}{dx^3}, \frac{d^4 y}{dx^4}, \dots, \frac{d^n y}{dx^n}, \dots
 \end{equation*}
-</div>
-<p id="p-178">Intuitively, the second derivative of \(y\) is the result of applying the derivative operator \(\frac{d}{dx}\) to \(y\) <em class="emphasis">twice</em>. In other words,</p>
+</div></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">Intuition for Higher Derivatives</span>
+</h3>
+<p id="p-184">Given a function \(f\text{,}\) recall that the derivative of \(f\) can be thought of as the rate of change of \(f\text{.}\) Then, the derivative \(f''\) of \(f'\) can be thought of as the rate of change of \(f'\text{,}\) that is, measuring how fast the derivative changes. In terms of \(f\text{,}\) \(f''\) can be thought of as how fast the slope of \(f\) is changing.</p></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">Intuition for Leibniz Notation for Higher Derivatives</span>
+</h3>
+<p id="p-185">Intuitively, the second derivative of \(y\) is the result of applying the derivative operator \(\frac{d}{dx}\) to \(y\) <em class="emphasis">twice</em>. In other words,</p>
 <div class="displaymath">
 \begin{equation*}
 y'' = \frac{d}{dx} \frac{d}{dx} y
 \end{equation*}
 </div>
-<p id="p-179">Then, in some sense, the operators can be “combined” as,</p>
+<p id="p-186">Then, in some sense, the operators can be “combined” as,</p>
 <div class="displaymath">
 \begin{equation*}
 y'' = \brac{\frac{d}{dx}}^2 y
 \end{equation*}
 </div>
-<p id="p-180">Or,</p>
+<p id="p-187">Or,</p>
 <div class="displaymath">
 \begin{equation*}
 y'' = \frac{d^2}{(dx)^2} y = \frac{d^2 y}{(dx)^2}
 \end{equation*}
 </div>
-<p id="p-181">Finally, Leibniz notation writes \(dx^2\) rather than \((dx)^2\text{,}\) omitting the brackets but maintaining the intuition that the denominator is \((dx)^2\) rather than \(d(x^2)\text{.}\)</p></section></section></div></main>
+<p id="p-188">Finally, Leibniz notation writes \(dx^2\) rather than \((dx)^2\text{,}\) omitting the brackets but maintaining the intuition that the denominator is \((dx)^2\) rather than \(d(x^2)\text{.}\)</p></section></section></div></main>
 </div>
 </body>
 </html>
