@@ -3,8 +3,36 @@
 <section xml:id="section-ND">
     <title>Numerical Differentiation</title>
 
-    <p>
-        Python program to evaluate difference quotients, using a program to evaluate limits numerically.
-    </p>
+    <introduction>
+        <p>
+            In many applications, derivatives cannot be evaluated using derivatives rules. In particular, this occurs when the formula for a function is not given. This can occur if the function is determined from data points from an experiment. Instead, we want to develop numerical techniques to approximate the derivative function.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Symmetric Difference Quotient</title>
+        <p>
+            To approximate a derivative, a difference quotient can be used, which is the slope of the secant line,
+        </p>
+        <me>
+            f'(x) \approx \frac{f(x + h) - f(x)}{h}
+        </me>
+        <p>
+            However, depending if <m>h</m> is positive or negative, this can bias the derivative, depending on the shape of the curve. Instead, we can approximate the slope at <m>x</m> using two points at equal distance from <m>x</m>, say <m>(x - h, f(x - h))</m> and <m>(x + h, f(x + h))</m>. Then, the difference quotient is,
+        </p>
+        <me>
+            f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}
+        </me>
+        <p>
+            and is called a <term>symmetric difference quotient</term>. 
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Python</title>
+        <p>
+            Python program to evaluate difference quotients, using a program to evaluate limits numerically.
+        </p>
+    </subsection>
 
 </section>
