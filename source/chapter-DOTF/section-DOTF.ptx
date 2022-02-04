@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-DOTF">
+    <title>Derivatives of Trigonometric Functions</title>
+
+    <introduction>
+        <p>
+            Note that in calculus, the inputs of trigonometric functions are always measured in radians.
+        </p>
+    </introduction>
+
+    <subsection>
+        <title>Derivative of Sine</title>
+        <p>
+            Consider the derivative of the sine function <m>f(x) = \sin{x}</m>. Since the sine functon is periodic, it is sufficient to consider it over the interval <m>[0,2\pi]</m>.
+        </p>
+        <p>
+            First, the sine function has horizontal tangent lines at <m>x = \frac{\pi}{2}</m> and <m>x = \frac{3\pi}{2}</m>, so <m>f'(x) = 0</m> there. At <m>x = 0</m>, the slope of the tangent is 1 (this can be intuitively confirmed graphically), so <m>f'(0) = 1</m>. In addition, at <m>x = \pi</m>, <m>f'(\pi) = -1</m>. From these points, it is intuitive that these points trace out the cosine function. <url href = "https://www.desmos.com/calculator/jsewoun6d3">Consider this Desmos applet, where you can see the slope of <m>\sin{x}</m> trace out the cosine curve</url>. In summary,
+        </p>
+        <theorem>
+            <title>Derivative of sine is cosine</title>
+            <p>
+                Let <m>f(x) = \sin{x}</m>. Then, <m>f'(x) = \cos{x}</m>. In other words,
+            </p>
+            <me>
+                \boxed{\frac{d}{dx} \sin{x} = \cos{x}}
+            </me>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Derivative of Cosine</title>
+        <p>
+            Similarly, <url href = "https://www.desmos.com/calculator/jsewoun6d3">consider this Desmos applet, which shows the slope of the tangent lines of <m>\cos{x}</m> is <m>-\sin{x}</m></url>.
+        </p>
+        <theorem>
+            <title>Derivative of cosine is negative of sine</title>
+            <p>
+                Let <m>f(x) = \cos{x}</m>. Then, <m>f'(x) = -\sin{x}</m>. In other words,
+            </p>
+            <me>
+                \boxed{\frac{d}{dx} \cos{x} = -\sin{x}}
+            </me>
+        </theorem>
+    </subsection>
+
+    <subsection>
+        <title>Limit Definition of Derivative of Sine and Cosine</title>
+        <p>
+            For the sine function, consider the derivative, using the limit definition,
+        </p>
+        <me>
+            f'(x) = \lim_{h \to 0} \frac{\sin{(x + h)} - \sin{x}}{h}
+        </me>
+        <p>
+            The term <m>\sin{(x + h)}</m> can be expanded using the sine addition identity,
+        </p>
+        <md>
+            <mrow>\amp = \lim_{h \to 0} \frac{\sin{x}\cos{h} + \cos{x}\sin{h} - \sin{x}}{h} \amp\amp \text{by the sine addition identity}</mrow>
+            <mrow>\amp = \lim_{h \to 0} \frac{\sin{x}(\cos{h} - 1) + \cos{x} \sin{h}}{h}</mrow>
+        </md>
+        <p>
+            Then, we can use the sum rule to split this into two limits,
+        </p>
+        <me>
+            = \lim_{h \to 0} \frac{\sin{x}(\cos{h} - 1)}{h} + \lim_{h \to 0} \frac{\cos{x} \sin{h}}{h}
+        </me>
+        <p>
+            Then, factor out <m>\sin{x}</m> and <m>\cos{x}</m> respectively from each limit, as they are constants with respect to the limit <m>h \to 0</m>,
+        </p>
+        <me>
+            = \sin{x} \lim_{h \to 0} \frac{\cos{h} - 1}{h} + \cos{x} \lim_{h \to 0} \frac{\sin{h}}{h}
+        </me>
+        <p>
+            Then, the derivative depends on the two limits,
+        </p>
+        <me>
+            \lim_{h \to 0} \frac{\sin{h}}{h} \qquad \text{and} \qquad \lim_{h \to 0} \frac{\cos{h} - 1}{h}
+        </me>
+        <p>
+            which are both of indeterminate form, because substituting in <m>h = 0</m> gives <m>\frac{0}{0}</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Two Important Limits</title>
+        <p>
+            Consider the limit,
+        </p>
+        <me>
+            \lim_{h \to 0} \frac{\sin{h}}{h}
+        </me>
+        <p>
+            <url href = "https://www.desmos.com/calculator/ao16lio3bw">Consider this Desmos applet</url>. Here, the horizontal axis represents the <m>h</m>-axis. Notice that as <m>h \to 0</m>, the expression <m>\frac{\sin{h}}{h}</m> seems to approach 1. In summary,
+        </p>
+
+        <fact>
+            <me>
+                \boxed{\lim_{x \to 0} \frac{\sin{x}}{x} = 1}
+            </me>
+        </fact>
+        <proof>
+            <p>
+                A more precise proof can be done using the squeeze theorem.
+            </p>
+        </proof>
+
+        <p>
+            Similarly, consider the limit,
+        </p>
+        <me>
+            \lim_{h \to 0} \frac{\cos{h} - 1}{h}
+        </me>
+        <p>
+            <url href = "https://www.desmos.com/calculator/22syj1lyvc">Consider this Desmos applet</url>, where you can see that as <m>h \to 0</m>, the expression approaches 0. In summary,
+        </p>
+
+        <fact>
+            <me>
+                \boxed{\lim_{x \to 0} \frac{\cos{x} - 1}{x} = 0}
+            </me>
+        </fact>
+        <proof>
+            <p>
+                There is a similar geometric interpretation, however it can be derived algebraically from the previous limit.
+            </p>
+            <md>
+                <mrow>\lim_{x \to 0} \frac{\cos{x} - 1}{x} \amp = \lim_{x \to 0} \frac{\cos{x} - 1}{x} \cdot \frac{\cos{x} + 1}{\cos{x} + 1}</mrow>
+                <mrow>\amp = \lim_{x \to 0} \frac{\cos^2{x} - 1}{x(\cos{x} + 1)}</mrow>
+                <mrow>\amp = \lim_{x \to 0} \frac{\sin^2{x}}{x(\cos{x} + 1)}</mrow>
+                <mrow>\amp = \lim_{x \to 0} \underbrace{\frac{\sin{x}}{x}}_{\to 1} \cdot \underbrace{\frac{\sin{x}}{\cos{x} + 1}}_{\to \frac{0}{2} = 0}</mrow>
+                <mrow>\amp = 0</mrow>
+            </md>
+        </proof>
+        <p>
+            This means that both of these expressions have a removable discontinuity at <m>x = 0</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Derivative of Sine and Cosine Conclusion</title>
+        <p>
+            Recall from before,
+        </p>
+        <me>
+            f'(x) = \sin{x} \lim_{h \to 0} \frac{\cos{h} - 1}{h} + \cos{x} \lim_{h \to 0} \frac{\sin{h}}{h}
+        </me>
+        <p>
+            Then, substituting the known values of the two limits,
+        </p>
+        <md>
+            <mrow>f'(x) \amp = \sin{x} \cdot 0 + \cos{x} \cdot 1</mrow>
+            <mrow>f'(x) \amp = \cos{x}</mrow>
+        </md>
+
+        <p>
+            To prove the derivative of cosine, one method is to use the complementary angle identities to write cosine in terms of sine (and vise versa),
+        </p>
+        <me>
+            \sin{\brac{\frac{\pi}{2} - x}} = \cos{x} \qquad \text{and} \qquad \cos{\brac{\frac{\pi}{2} - x}} = \sin{x}
+        </me>
+        <proof>
+            <title>Proof using the sine derivative, and the chain rule</title>
+            <p>
+                Let <m>f(x) = \cos{x}</m>. Then,
+            </p>
+            <md>
+                <mrow>f'(x) \amp = \frac{d}{dx} \cos{x}</mrow>
+                <mrow>\amp = \frac{d}{dx} \sin{\brac{\frac{\pi}{2} - x}}</mrow>
+                <mrow>\amp = (-1) \cos{\brac{\frac{\pi}{2} - x}} \amp\amp \text{by the chain rule}</mrow>
+                <mrow>\amp = -\sin{x}</mrow>
+            </md>
+        </proof>
+
+        <p>
+            On the other hand, the derivative of cosine can be shown directly from the limit definition, in a similar way as the the sine derivative.
+        </p>
+
+        <proof>
+            <title>Direct proof</title>
+            <p>
+                Let <m>f(x) = \cos{x}</m>. Using the cosine addition formula <m>\cos{(x + h)} = \cos{x} \cos{h} - \sin{x} \sin{h}</m>,
+            </p>
+            <md>
+                <mrow>f'(x) \amp = \lim_{h \to 0} \frac{\cos{(x + h)} - \cos{x}}{h}</mrow>
+                <mrow>\amp = \lim_{h \to 0} \frac{\cos{x}\cos{h} - \sin{x}\sin{h} - \cos{x}}{h} \amp\amp \text{by the cosine addition identity}</mrow>
+                <mrow>\amp = \lim_{h \to 0} \frac{\cos{x}(\cos{h} - 1) - \sin{x}\sin{h}}{h}</mrow>
+            </md>
+            <p>
+                In a similar way, splitting up the limit and factoring out the constants <m>\cos{x}</m> and <m>\sin{x}</m>,
+            </p>
+            <md>
+                <mrow>\amp = \cos{x} \lim_{h \to 0} \frac{\cos{h} - 1}{h} - \sin{x} \lim_{h \to 0} \frac{\sin{h}}{h}</mrow>
+                <mrow>\amp = \cos{x} \cdot 0 - \sin{x} \cdot 1 \amp\amp \text{by the limits from before}</mrow>
+                <mrow>\amp = -\sin{x}</mrow>
+            </md>
+
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Derivatives of Other Trigonometric Functions</title>
+        <p>
+            The tangent function, and the three reciprocal functions (secant, cosecant, and cotangent) can all be expressed in terms of sine and cosine functions. In particular,
+        </p>
+        <me>
+            \tan{x} = \frac{\sin{x}}{\cos{x}} \qquad \sec{x} = \frac{1}{\cos{x}} \qquad \csc{x} = \frac{1}{\sin{x}} \qquad \cot{x} = \frac{\cos{x}}{\sin{x}}
+        </me>
+        <p>
+            In this way, their derivatives follow from the derivatives of sine and cosine, along with the product and quotient rules.
+        </p>
+        <theorem>
+            <title>Derivative of tangent</title>
+            <p>
+                If <m>f(x) = \tan{x}</m>, then <m>f'(x) = \sec^2{x}</m>. In other words,
+            </p>
+            <me>
+                \boxed{\frac{d}{dx} \tan{x} = \sec^2{x}}
+            </me>
+        </theorem>
+        <proof>
+            <p>
+                Since <m>\tan{x} = \frac{\sin{x}}{\cos{x}}</m>, by the quotient rule,
+            </p>
+            <md>
+                <mrow>f'(x) \amp = \frac{d}{dx} \frac{\sin{x}}{\cos{x}}</mrow>
+                <mrow>\amp = \frac{\cos{x}(\cos{x}) - \sin{x}(-\sin{x})}{(\cos{x})^2}</mrow>
+                <mrow>\amp = \frac{\cos^2{x} + \sin^2{x}}{\cos^2{x}}</mrow>
+                <mrow>\amp = \frac{1}{\cos^2{x}} \amp\amp \text{by the Pythagorean identity}</mrow>
+                <mrow>\amp = \sec^2{x}</mrow>
+            </md>
+        </proof>
+
+        <theorem>
+            <title>Derivative of secant</title>
+            <p>
+                If <m>f(x) = \sec{x}</m>, then <m>f'(x) = \sec{x} \tan{x}</m>. In other words,
+            </p>
+            <me>
+                \boxed{\frac{d}{dx} \sec{x} = \sec{x} \tan{x}}
+            </me>
+        </theorem>
+        <proof>
+            <p>
+                Since <m>\sec{x} = \frac{1}{\cos{x}}</m>, then by the reciprocal rule,
+            </p>
+            <md>
+                <mrow>f'(x) \amp = \frac{d}{dx} \frac{1}{\cos{x}}</mrow>
+                <mrow>\amp = -\frac{-\sin{x}}{(\cos{x})^2}</mrow>
+                <mrow>\amp = \frac{1}{\cos{x}} \cdot \frac{\sin{x}}{\cos{x}}</mrow>
+                <mrow>\amp = \sec{x} \tan{x}</mrow>
+            </md>
+        </proof>
+
+        <theorem>
+            <title>Derivative of cosecant</title>
+            <p>
+                If <m>f(x) = \csc{x}</m>, then <m>f'(x) = -\csc{x} \cot{x}</m>. In other words,
+            </p>
+            <me>
+                \boxed{\frac{d}{dx} \csc{x} = -\csc{x} \cot{x}}
+            </me>
+        </theorem>
+        <proof>
+            <p>
+                Since <m>\csc{x} = \frac{1}{\sin{x}}</m>, by the reciprocal rule,
+            </p>
+            <md>
+                <mrow>f'(x) \amp = \frac{d}{dx} \frac{1}{\sin{x}}</mrow>
+                <mrow>\amp = -\frac{\cos{x}}{(\sin{x})^2}</mrow>
+                <mrow>\amp = -\frac{1}{\sin{x}} \cdot \frac{\cos{x}}{\sin{x}}</mrow>
+                <mrow>\amp = -\csc{x} \cot{x}</mrow>
+            </md>
+        </proof>
+
+        <theorem>
+            <title>Derivative of cotangent</title>
+            <p>
+                If <m>f(x) = \cot{x}</m>, then <m>f'(x) = -\csc^2{x}</m>. In other words,
+            </p>
+            <me>
+                \boxed{\frac{d}{dx} \cot{x} = -\csc^2{x}}
+            </me>
+        </theorem>
+        <proof>
+            <p>
+                Since <m>\cot{x} = \frac{\cos{x}}{\sin{x}}</m>, by the quotient rule,
+            </p>
+            <md>
+                <mrow>f'(x) \amp = \frac{d}{dx} \frac{\cos{x}}{\sin{x}}</mrow>
+                <mrow>\amp = \frac{\sin{x}(-\sin{x}) - \cos{x}(\cos{x})}{(\sin{x})^2}</mrow>
+                <mrow>\amp = -\frac{\sin^2{x} + \cos^2{x}}{\sin^2{x}}</mrow>
+                <mrow>\amp = -\frac{1}{\sin^2{x}} \amp\amp \text{by the Pythagorean identity}</mrow>
+                <mrow>\amp = -\csc^2{x}</mrow>
+            </md>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Summary of Trigonometric Derivatives</title>
+        <p>
+            In summary,
+        </p>
+        <theorem>
+            <title>Trigonometric derivatives</title>
+            <me>
+                \boxed{\begin{array}{ll}
+                    \dfrac{d}{dx} \sin{x} = \cos{x} \amp \dfrac{d}{dx} \csc{x} = -\csc{x} \cot{x} \\[10pt]
+                    \dfrac{d}{dx} \cos{x} = -\sin{x} \amp \dfrac{d}{dx} \sec{x} = \sec{x} \tan{x} \\[10pt]
+                    \dfrac{d}{dx} \tan{x} = \sec^2{x} \amp \dfrac{d}{dx} \cot{x} = -\csc^2{x}
+                \end{array}}
+            </me>
+        </theorem>
+
+        <p>
+            Note that these <q>nice</q> formulas only apply if <m>x</m> is measured in radians. If $x$ is measured in degrees, then there are extra factors of <m>\frac{\pi}{180}</m>. In fact, this is the main reason radians are taught in pre-calculus.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Derivatives of Cofunctions</title>
+        <p>
+            Notice that the derivatives of the <q>cofunctions</q> (cosine, cosecant, and cotangent) all contain negative signs. Further, if we denote <m>\operatorname{co}{f(x)}</m> to be the <q>cofunction</q> of <m>f(x)</m>, then all 6 trigonometric derivatives follow the rule,
+        </p>
+        <me>
+            \frac{d}{dx} \operatorname{co}(f(x)) = - \operatorname{co} \brac{\frac{d}{dx} f(x)}
+        </me>
+        <p>
+            In fact, it turns out it is also true that,
+        </p>
+        <me>
+            \frac{d^2}{dx^2} \operatorname{co}(f(x)) = \operatorname{co}\brac{\frac{d^2}{dx^2} f(x)}
+        </me>
+    </subsection>
+
+    <subsection>
+        <title>Continuity of Sine and Cosine</title>
+        <p>
+            It is intuitively clear that the sine and cosine functions <m>\sin{x}</m> and <m>\cos{x}</m> are continuous functions. However, this can be proved more rigorously, using a similar technique to that to prove the two limits above.
+        </p>
+        <p>
+            Assuming that <m>\cos{x}</m> and <m>\sin{x}</m> are continuous at <m>x = 0</m>, this can be used to prove that the functions are continuous on <m>\mathbb{R}</m>. That is,
+        </p>
+        <me>
+            \lim_{h \to 0} \cos{h} = \cos{0} = 1 \qquad \text{and} \qquad \lim_{h \to 0} \sin{h} = \sin{0} = 0
+        </me>
+        <proof>
+            <title>Proof that sine is continuous</title>
+            <md>
+                <mrow>\lim_{h \to 0} \sin{(x + h)} \amp = \lim_{h \to 0} \brac{\sin{x} \cos{h} - \cos{x} \sin{h}} \amp\amp \text{using the sine addition formula}</mrow>
+                <mrow>\amp = \sin{x} \lim_{h \to 0} \cos{h} - \cos{x} \lim_{h \to 0} \sin{h} \amp\amp \text{as $\cos{x}, \sin{x}$ are constant with respect to the limits}</mrow>
+                <mrow>\amp = \sin{x} \cdot 1 - \cos{x} \cdot 0 \amp\amp</mrow>
+                <mrow>\amp = \sin{x}</mrow>
+            </md>
+        </proof>
+
+        <proof>
+            <title>Proof that cosine is continuous</title>
+            <md>
+                <mrow>\lim_{h \to 0} \cos{(x + h)} \amp = \lim_{h \to 0} \brac{\cos{x} \cos{h} - \sin{x} \sin{h}} \amp\amp \text{using the cosine addition formula}</mrow>
+                <mrow>\amp = \cos{x} \lim_{h \to 0} \cos{h} - \sin{x} \lim_{h \to 0} \sin{h} \amp\amp \text{as $\cos{x}, \sin{x}$ are constant with respect to the limits}</mrow>
+                <mrow>\amp = \cos{x} \cdot 1 - \sin{x} \cdot 0 \amp\amp</mrow>
+                <mrow>\amp = \cos{x}</mrow>
+            </md>
+        </proof>
+    </subsection>
+
+    <subsection>
+        <title>Cyclical Pattern of Sine Derivatives</title>
+        <p>
+            Consider the first few derivatives of sine <m>f(x) = \sin{x}</m>,
+        </p>
+        <md>
+            <mrow>f'(x) \amp = \cos{x}</mrow>
+            <mrow>f''(x) \amp = -\sin{x}</mrow>
+            <mrow>f'''(x) \amp = -\cos{x}</mrow>
+            <mrow>f^{(4)}(x) \amp = \sin{x}</mrow>
+        </md>
+        <p>
+            which returns back to <m>\sin{x}</m>. Thus, this pattern continues.
+        </p>
+        <theorem>
+            <title>Derivatives of sine</title>
+            <me>
+                \frac{d^n}{dx^n} \sin{x} = \begin{cases} \sin{x} \amp n = 0, 4, 8, \dots \\
+                \cos{x} \amp n = 1, 5, 9, \dots \\
+                -\sin{x} \amp n = 2, 6, 10, \dots \\
+                -\cos{x} \amp n = 3, 7, 11, \dots \end{cases}
+            </me>
+        </theorem>
+    </subsection>
+    
+    <!-- \section*{Trigonometric Limits}
+    \begin{example}
+    \begin{equation*}
+        \lim_{x \to 0} \frac{\tan{(6x)}}{\sin{(2x)}} = 3
+    \end{equation*}
+    \end{example}
+    
+    \begin{example}
+    \begin{align*}
+        \lim_{x \to 0} \frac{\cos{(2x)} - 1}{\sin{(3x)}} \amp = \lim_{x \to 0} \underbrace{\frac{\cos{(2x)} - 1}{2x}}_{\to 0} \cdot \underbrace{\frac{3x}{\sin{(3x)}}}_{\to 1} \cdot \frac{2}{3} \\
+        \amp = 0
+    \end{align*}
+    \end{example}
+    
+    \begin{example}
+    \begin{equation*}
+        \lim_{x \to 0} \frac{\sin{(9x)}}{x + \tan{(5x)}} = \frac{3}{2}
+    \end{equation*}
+    \end{example}
+    
+    \begin{example}
+    \begin{align*}
+        \lim_{x \to 0} \frac{\sin{(x^3)}}{x} \amp = \lim_{x \to 0} \underbrace{\frac{\sin{(x^3)}}{x^3}}_{\to 1} \cdot \underbrace{x^2}_{\to 0}
+    \end{align*}
+    \end{example}
+    
+    \begin{example}
+    \begin{align*}
+        \lim_{x \to 5} \frac{\sin{(x - 5)}}{x^2 + 2x - 35} \amp = \lim_{x \to 5} \frac{\sin{(x - 5)}}{(x + 7)(x - 5)} \\
+        \amp = \lim_{x \to 5} \underbrace{\frac{\sin{(x - 5)}}{x - 5}}_{\to 1} \cdot \frac{1}{x + 7} \\
+        \amp = 1 \cdot \frac{1}{12} = \frac{1}{12}
+    \end{align*}
+    \end{example} -->
+    
+</section>

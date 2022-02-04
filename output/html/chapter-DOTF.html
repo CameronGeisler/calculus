@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-02-03T18:31:34-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Derivatives of Transcendental Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-TTPA.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="book.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-DOTF.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-TTPA.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="book.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-DOTF.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
+<li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
+<li><a href="section-MP.html" data-scroll="section-MP">Motivational Problems</a></li>
+<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-TD.html" data-scroll="chapter-TD"><span class="codenumber">2</span> <span class="title">The Derivative</span></a><ul>
+<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">Tangent Lines, Slopes of Functions</a></li>
+<li><a href="section-TDF.html" data-scroll="section-TDF">The Derivative Function</a></li>
+<li><a href="section-VAROC.html" data-scroll="section-VAROC">Velocity and Rates of Change</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-DT.html" data-scroll="chapter-DT"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a><ul>
+<li><a href="section-BDR.html" data-scroll="section-BDR">Basic Differentiation Rules</a></li>
+<li><a href="section-D.html" data-scroll="section-D">Differentiability</a></li>
+<li><a href="section-TPR.html" data-scroll="section-TPR">The Product Rule</a></li>
+<li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
+<li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
+<li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
+<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
+<li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-GBOF.html" data-scroll="chapter-GBOF"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a><ul>
+<li><a href="section-IADF.html" data-scroll="section-IADF">Increasing and Decreasing Functions</a></li>
+<li><a href="section-LEOF.html" data-scroll="section-LEOF">Local Extrema of Functions</a></li>
+<li><a href="section-AEOF.html" data-scroll="section-AEOF">Absolute Extrema of Functions</a></li>
+<li><a href="section-O.html" data-scroll="section-O">Optimization</a></li>
+<li><a href="section-RTTMVT.html" data-scroll="section-RTTMVT">Rolle's Theorem, The Mean Value Theorem</a></li>
+<li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
+<li><a href="section-DLLA.html" data-scroll="section-DLLA">Differentials, Local Linear Approximations</a></li>
+<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
+<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
+<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
+<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
+<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="chapter-DOTF.html" data-scroll="chapter-DOTF"><span class="codenumber">6</span> <span class="title">Derivatives of Transcendental Functions</span></a><ul>
+<li><a href="section-DOTF.html" data-scroll="section-DOTF">Derivatives of Trigonometric Functions</a></li>
+<li><a href="section-DOTF.html" data-scroll="section-DOTF">Derivatives of Exponential Functions</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="chapter-DOTF"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">6</span> <span class="title">Derivatives of Transcendental Functions</span>
+</h2>
+<section class="introduction" id="introduction-19"><p id="p-380">Transcendental functions include trigonometric functions, exponential functions, and logarithmic functions. Also, more advanced functions, including inverse trigonometric functions, hyperbolic trigonometric functions, and inverse hyperbolic functions.</p></section><nav class="summary-links"><ul>
+<li><a href="section-DOTF.html"><span class="codenumber">6.1</span> <span class="title">Derivatives of Trigonometric Functions</span></a></li>
+<li><a href="section-DOTF.html"><span class="codenumber">6.2</span> <span class="title">Derivatives of Exponential Functions</span></a></li>
+</ul></nav></section></div></main>
+</div>
+</body>
+</html>

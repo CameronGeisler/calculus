@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-17T13:20:23-08:00       *-->
+<!--*       on 2022-02-03T18:31:35-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,17 +13,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>If \(x = x(t)\) represents the position of an object, then recall that,</p>
+<body><article class="example example-like"><p>Find two positive numbers whose product is 64 and whose sum is a minimum. Let \(x, y &gt; 0\) be the numbers, so \(xy = 64\text{.}\) We want to minimize \(s = x + y\) Then, \(y = \frac{64}{x}\text{,}\) so,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-v_{\text{avg}} = \frac{x(b) - x(a)}{b - a}
+s = x + \frac{64}{x}
 \end{equation*}
 </div>
-<p class="continuation">represents the average velocity of the object from \(t = a\) to \(t = b\text{,}\) and \(x'(t)\) represents the instantaneous velocity at \(t\text{.}\) Then, the MVT says that if the average velocity of an object over \([a,b]\) is \(v_{\text{avg}}\text{,}\) then the object had an instantaneous velocity of \(v_{\text{avg}}\) for at least one point in time in \([a,b]\text{.}\) In other words, there exists \(t_0\) such that,</p>
+<p>Then, \(\frac{ds}{dx} = 1 - \frac{64}{x^2}\text{.}\) Then,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{x(b) - x(a)}{b - a} = x'(t_0)
-\end{equation*}
+\begin{align*}
+1 - \frac{64}{x^2} \amp = 0\\
+x^2 \amp = 64\\
+x \amp = \pm 8
+\end{align*}
 </div>
-<p class="continuation">For example, if you drive 100km from point A to point B in 2 hours, then there is at least one point in that time where the instantaneous velocity of the car was \(\frac{100 \text{ km}}{2 \text{ hr}} = 50 \text{ km/hr}\text{.}\) This makes the natural assumption that the position function \(x(t)\) is continuous (objects can't “teleport”) and assumes that \(x\) is differentiable.</p></article></body>
+<p>Here, only the \(x = 8\) solution applies, because the numbers must be positive. Verifying with the second derivative, \(s''(x) = \frac{128}{x^3}\) which is positive for \(x &gt; 0\text{,}\) so \(x = 8\) is a minimum.</p></article></body>
 </html>

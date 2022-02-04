@@ -20,6 +20,18 @@
         <p>
             Note that there is a difference between a maximum <em>value</em> and the point at which it is achieved. The maximum is the output of the function which is largest; the location of the maximum is the input of the function at which the maximum occurs. Sometimes, <em>maximum point</em> refers to the coordinate pair <m>(x,y)</m> of the maximum. The terminology is somewhat mixed.
         </p>
+    </subsection>
+
+    <subsection>
+        <title>Examples</title>
+
+        <example>
+            <title>Maximize area of a rectangle with fixed perimeter</title>
+        </example>
+
+        <example>
+            <title>Minimize perimeter of a rectangle with fixed area</title>
+        </example>
 
         <example>
             <p>

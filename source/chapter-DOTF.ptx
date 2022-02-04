@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-DOTF" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Derivatives of Transcendental Functions</title>
+        <introduction>
+            <p>
+                Transcendental functions include trigonometric functions, exponential functions, and logarithmic functions. Also, more advanced functions, including inverse trigonometric functions, hyperbolic trigonometric functions, and inverse hyperbolic functions.
+            </p>
+        </introduction>
+
+        <xi:include href="./chapter-DOTF/section-DOTF.ptx"/>
+        <xi:include href="./chapter-DOTF/section-DOEF.ptx"/>
+
+</chapter>
