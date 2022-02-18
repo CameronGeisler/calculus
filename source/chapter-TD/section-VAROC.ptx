@@ -45,17 +45,19 @@
             Then, we expect that this approximation improves as <m>\Delta t \to 0</m>. Then, in the limit as <m>\Delta t \to 0</m>, we intuitively expect the right hand side to be <em>exactly equal</em> to the instantaneous velocity at <m>t</m>. Then, this the derivative of the position function <m>x(t)</m>,
         </p>
         <me>
-            \boxed{v(t) = \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t} = x'(t)}
+            \boxed{v(t) = \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t} = \frac{dx}{dt} = x'(t)}
         </me>
         <p>
             That is, if we make <m>\Delta t</m> an infinitely small positive or negative number, and from both sides the difference quotient <m>\frac{x(t + \Delta t) - x(t)}{\Delta t}</m> approaches the same value, then we define that that to be the instantaneous velocity at <m>t</m>. In this way, instantaneous velocity at a time <m>t</m> is the <em>best constant approximation</em> for the velocity <em>around</em> <m>t</m>.
         </p>
-
         <theorem>
             <title>Velocity is the derivative of position</title>
             <p>
-                For an object with position given (in 1 dimension) given by <m>x(t)</m>, its velocity <m>v(t)</m> is given by the derivative of <m>x(t)</m>, i.e. <m>v(t) = x'(t)</m>.
+                For an object with position given (in 1 dimension) given by <m>x(t)</m>, its velocity <m>v(t)</m> is given by the derivative of <m>x(t)</m>. In other words,
             </p>
+            <me>
+                \boxed{v(t) = x'(t) = \frac{dx}{dt}}
+            </me>
         </theorem>
         <p>
             Note that this models motion in 1 dimension, so the graph of the position function has its position on the vertical axis, and time on the horizontal axis. In this way, the object does not travel along the curve, but rather along the vertical axis.

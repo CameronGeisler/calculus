@@ -43,7 +43,7 @@
             \frac{f(x_0 + 0) - f(x_0)}{0} = \frac{f(x_0) - f(x_0)}{0} = \frac{0}{0}
         </me>
         <p>
-            An expression of the form <m>\frac{0}{0}</m> is called <term>indeterminate</term>. However, we can still consider the behavior of this expression as <m>h \to 0</m>. In calculus, we \textit{define} the slope of the graph as the limit of the slope of the secant line, as <m>h \to 0</m>.
+            An expression of the form <m>\frac{0}{0}</m> is called an <term>indeterminate form</term>. However, we can still consider the behavior of this expression as <m>h \to 0</m>. In calculus, we \textit{define} the slope of the graph as the limit of the slope of the secant line, as <m>h \to 0</m>.
         </p>
     </subsection>
 

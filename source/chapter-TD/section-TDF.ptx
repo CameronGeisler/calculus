@@ -70,7 +70,7 @@
     </subsection>
 
     <subsection>
-        <title>Derivative of a Constant Function</title>
+        <title>Derivative of Some Basic Functions</title>
         <p>
             A constant function <m>f(x) = k</m> is a horizontal line, which has slope 0, so we would expect that its derivative would be 0.
         </p>
@@ -79,17 +79,14 @@
         </theorem>
         <proof>
             <md>
-                <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \amp\amp \text{by definition of derivative</mrow>
+                <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \amp\amp \text{by definition of derivative}</mrow>
                 <mrow>\amp = \lim_{h \to 0} \frac{k - k}{h} \amp\amp \text{as $f(x + k) = f(x) = k$}</mrow>
                 <mrow>\amp = \lim_{h \to 0} \frac{0}{h}</mrow>
                 <mrow>\amp = \lim_{h \to 0} 0</mrow>
                 <mrow>\amp = 0</mrow>
             </md>
         </proof>
-    </subsection>
 
-    <subsection>
-        <title>Derivative of a Linear Function</title>
         <p>
             Recall that linear functions have constant slope. In this way we expect that the derivative of a line is constant. In particular, the slope of a line <m>f(x) = mx + b</m> is <m>m</m>.
         </p>
@@ -104,9 +101,13 @@
                 <mrow>\amp = m</mrow>
             </md>
             <p>
-                Again, here, the difference quotient simplifies to <m>m</m>, because the slope does not depend on <m>h</m>.
+                Again, here, the difference quotient simplifies to the constant <m>m</m>, because the slope does not depend on <m>h</m>.
             </p>
         </proof>
+
+        <p>
+            The previous two examples are somewhat trivial, because the functions were linear, and so their slopes were constant.
+        </p>
     </subsection>
 
     <subsection>
@@ -136,10 +137,10 @@
     </subsection>
 
     <subsection>
-        <title>Derivative of Some Basic Functions</title>
+        <title>Derivative of Some More Basic Functions</title>
 
         <p>
-            The previous examples were somewhat trivial, because the functions were linear, and so their derivatives are simply results from pre-calculus. For functions which are non-linear, the definition of derivative becomes more clear.
+            For functions which are non-linear, the definition of derivative becomes more clear.
         </p>
 
         <example>
@@ -181,7 +182,7 @@
                     <mrow>\amp = \lim_{h \to 0} -\frac{1}{x(x + h)}</mrow>
                     <mrow>\amp = -\frac{1}{x^2}</mrow>
                 </md>
-                In particular, notice that <m>f'(x) \le 0</m> for all <m>x \neq 0</m>, and as <m>x \to \infty</m>, <m>f'(x) \to 0</m>, the slope of the tangents becomes less steep.
+                In particular, notice that <m>f'(x) \lt 0</m> for all <m>x \neq 0</m>, and as <m>x \to \infty</m>, <m>f'(x) \to 0</m>, the slope of the tangents becomes less steep.
             </p>
         </example>
         
@@ -198,11 +199,11 @@
                     <mrow>\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}</mrow>
                     <mrow>\amp = \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})}</mrow>
                     <mrow>\amp = \lim_{h \to 0} \frac{h}{h(\sqrt{x + h} + \sqrt{x})}</mrow>
-                    <mrow>\amp = \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt{x}} \amp\amp \text{cancelling the common factor of <m>h</m>}</mrow>
+                    <mrow>\amp = \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt{x}} \amp\amp \text{cancelling the common factor of $h$}</mrow>
                     <mrow>\amp = \frac{1}{\sqrt{x} + \sqrt{x}}</mrow>
                     <mrow>\amp = \frac{1}{2\sqrt{x}}</mrow>
                 </md>
-                Notice that while <m>f(x) = \sqrt{x}</m> is defined on <m>[0,\infty)</m>, its derivative <m>f'(x)</m> is only differentiable on <m>(0,\infty)</m>, in particular not differentiable at <m>x = 0</m>.
+                Notice that while <m>f(x) = \sqrt{x}</m> is defined on <m>[0,\infty)</m>, its derivative <m>f'(x)</m> is only differentiable on <m>(0,\infty)</m>. In particular, <m>f</m> is not differentiable at <m>x = 0</m>.
             </p>
         </example>
     </subsection>
@@ -243,9 +244,6 @@
             Prime notation and Leibniz notation are mostly interchangeable. Leibniz notation tends to be used more in applications, where <m>y</m> and <m>x</m> represent physical quantities.
         </p>
         <p>
-            Prime notation and Leibniz notation are mostly interchangeable. Leibniz notation tends to be used more in applications, where <m>y</m> and <m>x</m> represent physical quantities.
-        </p>
-        <p>
             There are also alternative notations which are used less often, or are used for other more advanced areas of mathematics which use calculus. For a function <m>y = f(x)</m>, these include,
         </p>
         <me>
@@ -264,7 +262,6 @@
         <p>
             It is possible to assign meaningful interpretations to <m>dy</m> and <m>dx</m>, however, for now, we will treat <m>\frac{dy}{dx}</m> as an indivisible symbol which represents the derivative of <m>y</m>, which is a function of <m>x</m>. In any case, it is helpful to think of the derivative <m>\frac{dy}{dx}</m> conceptually as a quotient or ratio of infinitesimals. That is, the ratio of an infinitely small change in <m>y</m> to an infinitely small change in <m>x</m>. Just as <m>\Delta x</m> and <m>\Delta y</m> represent a small change in <m>x</m> and <m>y</m>, <m>dx</m> and <m>dy</m> intuitively represent an infinitesimal change in <m>x</m> and <m>y</m>. Put another way, <m>dx</m> and <m>dy</m> represent infinitely small <em>differences</em> between two values of <m>x</m> and <m>y</m>. Quite literally, the reason it is called <em>differential</em> calculus is because <q>differentiating</q> literally means <q>identifying differences</q>. 
         </p>
-        <!-- Leibniz developed the introductory theory of differentials, which are small changes in time. -->
         <p>
             More concretely, suppose that <m>y = f(x)</m>, and suppose that <m>x</m> is changed by a small increment <m>\Delta x</m>, and consider the resulting change in <m>\Delta y</m> in <m>y</m>. In particular, a change from <m>x</m> to <m>x</m> will result in a change of <m>y</m> from <m>f(x)</m> to <m>f(x + \Delta x)</m>, or,
         </p>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-09T21:38:37-08:00       *-->
+<!--*       on 2022-02-15T12:07:03-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Derivatives of Exponential Functions</title>
+<title>Derivatives of Trigonometric Functions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
@@ -90,10 +90,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-DOTF.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-DOTF.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-DOTF.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-DOTF.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-DOEF.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-DOTF.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-DOTF.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-DOTF.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-DOTF.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-DOEF.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -146,257 +146,320 @@
 </li>
 <li class="link">
 <a href="chapter-DOTF.html" data-scroll="chapter-DOTF"><span class="codenumber">6</span> <span class="title">Derivatives of Transcendental Functions</span></a><ul>
-<li><a href="section-DOTF.html" data-scroll="section-DOTF">Derivatives of Trigonometric Functions</a></li>
-<li><a href="section-DOTF.html" data-scroll="section-DOTF" class="active">Derivatives of Exponential Functions</a></li>
+<li><a href="section-DOTF.html" data-scroll="section-DOTF" class="active">Derivatives of Trigonometric Functions</a></li>
+<li><a href="section-DOEF.html" data-scroll="section-DOEF">Derivatives of Exponential Functions</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-DOTF"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Derivatives of Exponential Functions</span>
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Derivatives of Trigonometric Functions</span>
 </h2>
-<section class="subsection" id="subsection-112"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">6.2.1</span> <span class="title">Irrational Exponents Intuitive Definition</span>
+<section class="introduction" id="introduction-20"><p id="p-380">Note that in calculus, the inputs of trigonometric functions are always measured in radians.</p></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.1</span> <span class="title">Derivative of Sine</span>
 </h3>
-<p id="p-425">Before developing the derivative of exponential functions, we need to extend the definition of exponents to all real numbers, i.e. define the expression \(b^x\) for all real numbers \(x\text{.}\)</p>
-<p id="p-426">Recall that for a positive number \(b\) with rational exponent \(\frac{m}{n}\text{,}\) the power \(b^{m/n}\) is defined as,</p>
+<p id="p-381">Consider the derivative of the sine function \(f(x) = \sin{x}\text{.}\) Since the sine functon is periodic, it is sufficient to consider it over the interval \([0,2\pi]\text{.}\)</p>
+<p id="p-382">First, the sine function has horizontal tangent lines at \(x = \frac{\pi}{2}\) and \(x = \frac{3\pi}{2}\text{,}\) so \(f'(x) = 0\) there. At \(x = 0\text{,}\) the slope of the tangent is 1 (this can be intuitively confirmed graphically), so \(f'(0) = 1\text{.}\) In addition, at \(x = \pi\text{,}\) \(f'(\pi) = -1\text{.}\) From these points, it is intuitive that these points trace out the cosine function. <a class="external" href="https://www.desmos.com/calculator/jsewoun6d3" target="_blank">Consider this Desmos applet, where you can see the slope of \(\sin{x}\) trace out the cosine curve</a>. In summary,</p>
+<article class="theorem theorem-like" id="theorem-28"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of sine is cosine.</span>
+</h4>
+<p id="p-383">Let \(f(x) = \sin{x}\text{.}\) Then, \(f'(x) = \cos{x}\text{.}\) In other words,</p>
 <div class="displaymath">
 \begin{equation*}
-b^{m/n} = \sqrt[n]{b^m}
+\boxed{\frac{d}{dx} \sin{x} = \cos{x}}
 \end{equation*}
-</div>
-<p id="p-427">Here, we will extend the definition of \(b^x\) for exponents \(x\) that are irrational. For example, what does \(3^{\sqrt{2}}\) mean? We can approximate \(3^{\sqrt{2}}\) by using rational approximations of the irrational exponent \(\sqrt{2} = 1.41421356 \dots\text{.}\) As the approximations \(1.4, 1.41, 1.414, 1.4142\) (and so on) include more decimals, they will better approximate \(\sqrt{2}\text{,}\) and so we can expect the powers \(3^{1.4}, 3^{1.41}, 3^{1.414}, 3^{1.4142}\) to better approximate \(3^{\sqrt{2}}\text{.}\) Each of these exponents are rational and so can be calculated, and they will “converge” to \(3^{\sqrt{2}}\text{.}\) Roughly, we define \(b^r\) for irrational powers \(r\) as the limit as rational values \(x\) approach \(r\text{.}\) That is,</p>
-<div class="displaymath">
-\begin{equation*}
-b^r = \lim_{x \to r, x \text{ rational}} b^x
-\end{equation*}
-</div>
-<p id="p-428">This limit isn't very precise, but it gives an intuitive definition.</p>
-<p id="p-429">For example, for \(\sqrt{2} = 1.41421356 \cdots\text{,}\) we define \(3^{\sqrt{2}}\) as the limit of the sequence of,</p>
-<div class="displaymath">
-\begin{equation*}
-3^{1.4}, 3^{1.41}, 3^{1.414}, 3^{1.4142}, \dots
-\end{equation*}
-</div>
-<p id="p-430">In this way, we can define the power \(b^x\) for all real numbers. Also, it turns out that all exponent laws and theorems that apply to powers with rational exponents also apply to powers with irrational exponents.</p></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">6.2.2</span> <span class="title">The Number e, and the Natural Exponential Function</span>
+</div></article></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.2</span> <span class="title">Derivative of Cosine</span>
 </h3>
-<p id="p-431">A particular exponential function of interest is an exponential with base \(e\text{,}\) where \(e\) is <dfn class="terminology">Euler's number</dfn>, which is approximately,</p>
+<p id="p-384">Similarly, <a class="external" href="https://www.desmos.com/calculator/jsewoun6d3" target="_blank">consider this Desmos applet, which shows the slope of the tangent lines of \(\cos{x}\) is \(-\sin{x}\)</a>.</p>
+<article class="theorem theorem-like" id="theorem-29"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of cosine is negative of sine.</span>
+</h4>
+<p id="p-385">Let \(f(x) = \cos{x}\text{.}\) Then, \(f'(x) = -\sin{x}\text{.}\) In other words,</p>
 <div class="displaymath">
 \begin{equation*}
-\boxed{e = 2.71828 \dots}
+\boxed{\frac{d}{dx} \cos{x} = -\sin{x}}
 \end{equation*}
-</div>
-<p id="p-432">It is named after <dfn class="terminology">Leonard Euler</dfn> (where Euler is pronounced “Oi-ler”).</p>
-<p id="p-433">The number \(e\) is one of the most important mathematical constants in many applications of mathematics. The number \(e\) is an irrational number, meaning it is a non-terminating and non-repeating decimal. It was discovered by <dfn class="terminology">Jacob Bernoulli</dfn>, despite being named after Euler. The number \(e\) is a discovered constant in the universe, similar to \(\pi\text{.}\) There are multiple equivalent definitions of \(e\text{.}\) One intuitive definition comes from exponential growth, compound interest, and a particular limit.</p></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">6.2.3</span> <span class="title">Compound Interest, and the Number e</span>
+</div></article></section><section class="subsection" id="subsection-104"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.3</span> <span class="title">Limit Definition of Derivative of Sine and Cosine</span>
 </h3>
-<p id="p-434"><dfn class="terminology">Compound interest</dfn> is interest computed on the original principal as well as on any accumulated interest. It is the most common method of applying interest, both for savings and for interest on loans.</p>
-<p id="p-435">Intuitively, in a situation with compound interest, the more money you have, the more interest you earn over time. From pre-calculus, if you have a principal of \(P\text{,}\) the interest rate per year is \(r\) (as a decimal), then after \(t\) years, the accumulated value \(A\) is given by,</p>
+<p id="p-386">For the sine function, consider the derivative, using the limit definition,</p>
 <div class="displaymath">
 \begin{equation*}
-A = P(1 + r)^t
+f'(x) = \lim_{h \to 0} \frac{\sin{(x + h)} - \sin{x}}{h}
 \end{equation*}
 </div>
-<p id="p-436">For simplicity, suppose that \(P = 1\) (initially there is $1). Then, the formula is just,</p>
-<div class="displaymath">
-\begin{equation*}
-A = (1 + r)^t
-\end{equation*}
-</div>
-<p id="p-437">Also, suppose the interest rate is \(r = 1\) (which corresponds to 100%). Then, the formula is just,</p>
+<p id="p-387">The term \(\sin{(x + h)}\) can be expanded using the sine addition identity,</p>
 <div class="displaymath">
 \begin{align*}
-A \amp = (1 + 1)^t\\
-A \amp = 2^t
+\amp = \lim_{h \to 0} \frac{\sin{x}\cos{h} + \cos{x}\sin{h} - \sin{x}}{h} \amp\amp \text{by the sine addition identity}\\
+\amp = \lim_{h \to 0} \frac{\sin{x}(\cos{h} - 1) + \cos{x} \sin{h}}{h}
 \end{align*}
 </div>
-<p id="p-438">Then, after a single year, the dollar doubles to \(A = $2\text{.}\) Then, suppose that instead of computing the interest a single time at the end of the year, they divide the 100% interest into two periods of 50% interest, compounded every 6 months. Then, after 6 months, you have \(A = \brac{1 + \frac{1}{2}}^1 = $1.5\text{,}\) and after the second 6 months, the interest is compounded onto the existing $1.5, so the final amount is \(A = 1.5\brac{1 + \frac{1}{2}} = $2.25\text{.}\) In other words,</p>
+<p id="p-388">Then, we can use the sum rule to split this into two limits,</p>
 <div class="displaymath">
 \begin{equation*}
-A = \brac{1 + \frac{1}{2}}^2 = \$2.25
+= \lim_{h \to 0} \frac{\sin{x}(\cos{h} - 1)}{h} + \lim_{h \to 0} \frac{\cos{x} \sin{h}}{h}
 \end{equation*}
 </div>
-<p id="p-439">Similarly, we could compound interest every month (12 times per year) i.e. giving \(\frac{100}{12} \approx 8.33%\) interest each month, which gives,</p>
+<p id="p-389">Then, factor out \(\sin{x}\) and \(\cos{x}\) respectively from each limit, as they are constants with respect to the limit \(h \to 0\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
-A = \brac{1 + \frac{1}{12}}^{12} \approx $2.61
+= \sin{x} \lim_{h \to 0} \frac{\cos{h} - 1}{h} + \cos{x} \lim_{h \to 0} \frac{\sin{h}}{h}
 \end{equation*}
 </div>
-<p id="p-440">Or, every day (365 times per year),</p>
+<p id="p-390">Then, the derivative depends on the two limits,</p>
 <div class="displaymath">
 \begin{equation*}
-A = \brac{1 + \frac{1}{365}}^{365} \approx \$2.71
+\lim_{h \to 0} \frac{\sin{h}}{h} \qquad \text{and} \qquad \lim_{h \to 0} \frac{\cos{h} - 1}{h}
 \end{equation*}
 </div>
-<p id="p-441">Yearly has many more compounding periods (365 vs. 12), but the result is only slightly more money ($2.71 vs. $2.61). In general, the amount after 1 year of compounding \(n\) times per year is,</p>
-<div class="displaymath">
-\begin{equation*}
-A = \brac{1 + \frac{1}{n}}^n
-\end{equation*}
-</div>
-<p id="p-442">In summary,</p>
-<div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c}
-n \amp A \\ \hline
-1 \amp 2 \\
-2 \amp 2.25 \\
-12 \amp 2.61 \\
-365 \amp 2.71
-\end{array}
-\end{equation*}
-</div>
-<p id="p-443">As \(n\) increases, \(A\) increases, however, the <em class="emphasis">rate</em> of increase of \(A\) seems to slow down. It turns out that,</p>
-<div class="displaymath">
-\begin{equation*}
-\begin{array}{c|c}
-n \amp A \\ \hline
-10 \amp 2.59374246 \\
-1,000 \amp 2.716923932 \\
-1,000,000 \amp 2.718280469 \\
-1,000,000,000 \amp 2.718282031
-\end{array}
-\end{equation*}
-</div>
-<p id="p-444">As \(n\) increases, it seems that \(A \to e \approx 2.718\text{.}\) Then, it turns out that,</p>
-<div class="displaymath">
-\begin{equation*}
-\boxed{\lim_{n \to \infty} \brac{1 + \frac{1}{n}}^n = e}
-\end{equation*}
-</div>
-<p id="p-445">This can be thought of as a <em class="emphasis">definition</em> of \(e\text{,}\) giving a symbolic name to the outcome of a limiting procedure. More generally, it turns out that,</p>
-<div class="displaymath">
-\begin{equation*}
-\boxed{\lim_{n \to \infty} \brac{1 + \frac{x}{n}}^n = e^x}
-\end{equation*}
-</div>
-<p id="p-446">which is the exponential function, with base \(e\text{.}\) Then,</p>
-<div class="displaymath">
-\begin{align*}
-A \amp = P\brac{1 + \frac{r}{n}}^{nt}\\
-\amp = P \brac{\brac{1 + \frac{1}{\frac{n}{r}}}^{n/r}}^{rt} \amp\amp \text{since $nt = \frac{n}{r} \cdot rt$}\\
-\amp = P \brac{\brac{1 + \frac{1}{h}}^h}^{rt} \amp\amp \text{for $h = \frac{n}{r}$, and as $n \to \infty$, $h \to \infty$ (since $r &gt; 0$)}\\
-\amp = P e^{rt} \amp\amp \text{as $h \to \infty$, $\brac{1 + \frac{1}{h}}^h \to e$}
-\end{align*}
-</div>
-<p id="p-447">In other words,</p>
-<div class="displaymath">
-\begin{equation*}
-\boxed{\lim_{n \to \infty} P\brac{1 + \frac{r}{n}}^{nt} = Pe^{rt}}
-\end{equation*}
-</div>
-<p id="p-448">The limit,</p>
-<div class="displaymath">
-\begin{equation*}
-\lim_{n \to \infty} \brac{1 + \frac{1}{n}}^n
-\end{equation*}
-</div>
-<p id="p-449">is an indeterminate form, of the form \(1^{\infty}\text{.}\) This is because \(1 + \frac{1}{n}\) is always larger than 1, and we know that \(b^n \to \infty\) as \(n \to \infty\) if \(b &gt; 1\) (an increasing exponential). On the other hand, \(1 + \frac{1}{n} \to 1\) as \(n \to \infty\text{,}\) and we know that \(1^n = 1\) for any \(n\text{.}\) It is kinda an outstanding fact that the limit is neither 1 nor \(\infty\text{,}\) but instead is is an irrational number which is about 3.</p></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">6.2.4</span> <span class="title">Derivatives of Exponential Functions</span>
+<p id="p-391">which are both of indeterminate form, because substituting in \(h = 0\) gives \(\frac{0}{0}\text{.}\)</p></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.4</span> <span class="title">Two Important Limits</span>
 </h3>
-<p id="p-450">Consider an exponential function \(f(x) = b^x\) where \(b &gt; 0\text{,}\) and \(b \neq 1\text{.}\) Then, by definition,</p>
+<p id="p-392">Consider the limit,</p>
 <div class="displaymath">
 \begin{equation*}
-f'(x) = \lim_{h \to 0} \frac{b^{x+h} - b^x}{h}
+\lim_{h \to 0} \frac{\sin{h}}{h}
 \end{equation*}
 </div>
-<p id="p-451">To evaluate this limit, a natural thing to do is to use the properties of exponents, to separate \(b^{x+h} = b^x \cdot b^h\text{,}\) because this produces a common factor of \(b^x\) in the numerator,</p>
-<div class="displaymath">
-\begin{align*}
-\amp = \lim_{h \to 0} \frac{b^x \cdot b^h - b^x}{h}\\
-\amp = \lim_{h \to 0} \frac{b^x(b^h - 1)}{h}
-\end{align*}
-</div>
-<p id="p-452">Then, the factor \(b^x\) is constant with respect to the limit which is with respect to \(h\text{,}\) so it can be factored out as a constant multiple,</p>
-<div class="displaymath">
-\begin{equation*}
-f'(x) = b^x \lim_{h \to 0} \frac{b^h - 1}{h}
-\end{equation*}
-</div>
-<p id="p-453">Notice that the remaining limit is independent of \(x\text{.}\) That is, this shows that the derivative of \(b^x\) is the function \(b^x\) itself, multiplied by a constant factor equal to the value of the limit (it turns out that this limit exists as a real number). Intuitively, this means that the rate of change of an exponential function is proportional to itself. In addition, notice that the limit is precisely the derivative of the exponential at \(x = 0\text{,}\)</p>
-<div class="displaymath">
-\begin{equation*}
-f'(0) = \lim_{h \to 0} \frac{b^{0+h} - b^0}{h} = \lim_{h \to 0} \frac{b^h - 1}{h}
-\end{equation*}
-</div>
-<p id="p-454">Then, we have that,</p>
-<div class="displaymath">
-\begin{equation*}
-f'(x) = b^x f'(0)
-\end{equation*}
-</div>
-<p id="p-455">It turns out that the limit \(f'(0)\) is equal to \(\ln{b}\) (the natural logarithm of \(b\)). Thus,</p>
-<article class="fact theorem-like" id="fact-3"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of exponential function.</span>
+<p id="p-393"><a class="external" href="https://www.desmos.com/calculator/ao16lio3bw" target="_blank">Consider this Desmos applet</a>. Here, the horizontal axis represents the \(h\)-axis. Notice that as \(h \to 0\text{,}\) the expression \(\frac{\sin{h}}{h}\) seems to approach 1. In summary,</p>
+<article class="fact theorem-like" id="fact-1"><h4 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span>
 </h4>
 <div class="displaymath">
 \begin{equation*}
-\boxed{\frac{d}{dx} b^x = b^x \ln{b}}
+\boxed{\lim_{x \to 0} \frac{\sin{x}}{x} = 1}
 \end{equation*}
-</div></article><p id="p-456">Then, for the natural logarithmic function \(f(x) = e^x\text{,}\) we have \(\ln{e} = 1\text{,}\) so,</p>
-<article class="fact theorem-like" id="fact-4"><h4 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of the natural exponential.</span>
+</div></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><p id="p-394">A more precise proof can be done using the squeeze theorem.</p></article></div>
+<p id="p-395">Similarly, consider the limit,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{h \to 0} \frac{\cos{h} - 1}{h}
+\end{equation*}
+</div>
+<p id="p-396"><a class="external" href="https://www.desmos.com/calculator/22syj1lyvc" target="_blank">Consider this Desmos applet</a>, where you can see that as \(h \to 0\text{,}\) the expression approaches 0. In summary,</p>
+<article class="fact theorem-like" id="fact-2"><h4 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span>
 </h4>
 <div class="displaymath">
 \begin{equation*}
-\boxed{\frac{d}{dx} e^x = e^x}
+\boxed{\lim_{x \to 0} \frac{\cos{x} - 1}{x} = 0}
 \end{equation*}
-</div></article><p id="p-457">In particular, the derivative of any exponential function is also an exponential function, with the same base. In addition, exponential functions are proportional to their own derivative. Finally, the exponential function \(e^x\) is the unique such function which is <em class="emphasis">exactly</em> equal to its own derivative. That is, the slope of the tangent line to the graph of \(f(x) = e^x\) is exactly equal to the \(y\)-coordinate of the point on the graph being considered.</p></section><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">6.2.5</span> <span class="title">The General Exponential Function</span>
-</h3>
-<p id="p-458">The relationship between a general exponential \(b^x\) and the natural exponential \(e^x\) can be seen another way. Recall that,</p>
-<div class="displaymath">
-\begin{equation*}
-b^x = \brac{e^{\ln{b}}}^x = e^{\ln{b} \cdot x}
-\end{equation*}
-</div>
-<p id="p-459">This is a pre-calculus exercise that every exponential function can be written in terms of the natural exponential.</p>
-<p id="p-460">More precisely, \(b^x = e^{\ln{b} \cdot x}\) can be thought of as a <em class="emphasis">definition</em> of the exponential function \(b^x\text{.}\)</p></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">6.2.6</span> <span class="title">Derivative of the General Exponential</span>
-</h3>
-<p id="p-461">Then,</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{d}{dx} b^x = \frac{d}{dx} e^{\ln{b} \cdot x}
-\end{equation*}
-</div>
-<p id="p-462">Using the chain rule,</p>
+</div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><p id="p-397">There is a similar geometric interpretation, however it can be derived algebraically from the previous limit.</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx} e^{\ln{b} \cdot x} \amp = \underbrace{e^{\ln{b} \cdot x}}_{b^x} \cdot \ln{b}\\
-\amp = b^x \ln{b}
+\lim_{x \to 0} \frac{\cos{x} - 1}{x} \amp = \lim_{x \to 0} \frac{\cos{x} - 1}{x} \cdot \frac{\cos{x} + 1}{\cos{x} + 1}\\
+\amp = \lim_{x \to 0} \frac{\cos^2{x} - 1}{x(\cos{x} + 1)}\\
+\amp = \lim_{x \to 0} \frac{\sin^2{x}}{x(\cos{x} + 1)}\\
+\amp = \lim_{x \to 0} \underbrace{\frac{\sin{x}}{x}}_{\to 1} \cdot \underbrace{\frac{\sin{x}}{\cos{x} + 1}}_{\to \frac{0}{2} = 0}\\
+\amp = 0
+\end{align*}
+</div></article></div>
+<p id="p-398">This means that both of these expressions have a removable discontinuity at \(x = 0\text{.}\)</p></section><section class="subsection" id="subsection-106"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.5</span> <span class="title">Derivative of Sine and Cosine Conclusion</span>
+</h3>
+<p id="p-399">Recall from before,</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = \sin{x} \lim_{h \to 0} \frac{\cos{h} - 1}{h} + \cos{x} \lim_{h \to 0} \frac{\sin{h}}{h}
+\end{equation*}
+</div>
+<p id="p-400">Then, substituting the known values of the two limits,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \sin{x} \cdot 0 + \cos{x} \cdot 1\\
+f'(x) \amp = \cos{x}
 \end{align*}
 </div>
-<article class="theorem theorem-like" id="theorem-36"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
+<p id="p-401">To prove the derivative of cosine, one method is to use the complementary angle identities to write cosine in terms of sine (and vise versa),</p>
+<div class="displaymath">
+\begin{equation*}
+\sin{\brac{\frac{\pi}{2} - x}} = \cos{x} \qquad \text{and} \qquad \cos{\brac{\frac{\pi}{2} - x}} = \sin{x}
+\end{equation*}
+</div>
+<article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="title">Proof using the sine derivative, and the chain rule.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-402">Let \(f(x) = \cos{x}\text{.}\) Then,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \frac{d}{dx} \cos{x}\\
+\amp = \frac{d}{dx} \sin{\brac{\frac{\pi}{2} - x}}\\
+\amp = (-1) \cos{\brac{\frac{\pi}{2} - x}} \amp\amp \text{by the chain rule}\\
+\amp = -\sin{x}
+\end{align*}
+</div></article></div>
+<p id="p-403">On the other hand, the derivative of cosine can be shown directly from the limit definition, in a similar way as the the sine derivative.</p>
+<article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="title">Direct proof.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-404">Let \(f(x) = \cos{x}\text{.}\) Using the cosine addition formula \(\cos{(x + h)} = \cos{x} \cos{h} - \sin{x} \sin{h}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{\cos{(x + h)} - \cos{x}}{h}\\
+\amp = \lim_{h \to 0} \frac{\cos{x}\cos{h} - \sin{x}\sin{h} - \cos{x}}{h} \amp\amp \text{by the cosine addition identity}\\
+\amp = \lim_{h \to 0} \frac{\cos{x}(\cos{h} - 1) - \sin{x}\sin{h}}{h}
+\end{align*}
+</div>
+<p id="p-405">In a similar way, splitting up the limit and factoring out the constants \(\cos{x}\) and \(\sin{x}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp = \cos{x} \lim_{h \to 0} \frac{\cos{h} - 1}{h} - \sin{x} \lim_{h \to 0} \frac{\sin{h}}{h}\\
+\amp = \cos{x} \cdot 0 - \sin{x} \cdot 1 \amp\amp \text{by the limits from before}\\
+\amp = -\sin{x}
+\end{align*}
+</div></article></div></section><section class="subsection" id="subsection-107"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.6</span> <span class="title">Derivatives of Other Trigonometric Functions</span>
+</h3>
+<p id="p-406">The tangent function, and the three reciprocal functions (secant, cosecant, and cotangent) can all be expressed in terms of sine and cosine functions. In particular,</p>
+<div class="displaymath">
+\begin{equation*}
+\tan{x} = \frac{\sin{x}}{\cos{x}} \qquad \sec{x} = \frac{1}{\cos{x}} \qquad \csc{x} = \frac{1}{\sin{x}} \qquad \cot{x} = \frac{\cos{x}}{\sin{x}}
+\end{equation*}
+</div>
+<p id="p-407">In this way, their derivatives follow from the derivatives of sine and cosine, along with the product and quotient rules.</p>
+<article class="theorem theorem-like" id="theorem-30"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of tangent.</span>
+</h4>
+<p id="p-408">If \(f(x) = \tan{x}\text{,}\) then \(f'(x) = \sec^2{x}\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\frac{d}{dx} \tan{x} = \sec^2{x}}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-409">Since \(\tan{x} = \frac{\sin{x}}{\cos{x}}\text{,}\) by the quotient rule,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \frac{d}{dx} \frac{\sin{x}}{\cos{x}}\\
+\amp = \frac{\cos{x}(\cos{x}) - \sin{x}(-\sin{x})}{(\cos{x})^2}\\
+\amp = \frac{\cos^2{x} + \sin^2{x}}{\cos^2{x}}\\
+\amp = \frac{1}{\cos^2{x}} \amp\amp \text{by the Pythagorean identity}\\
+\amp = \sec^2{x}
+\end{align*}
+</div></article></div>
+<article class="theorem theorem-like" id="theorem-31"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of secant.</span>
+</h4>
+<p id="p-410">If \(f(x) = \sec{x}\text{,}\) then \(f'(x) = \sec{x} \tan{x}\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\frac{d}{dx} \sec{x} = \sec{x} \tan{x}}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-411">Since \(\sec{x} = \frac{1}{\cos{x}}\text{,}\) then by the reciprocal rule,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \frac{d}{dx} \frac{1}{\cos{x}}\\
+\amp = -\frac{-\sin{x}}{(\cos{x})^2}\\
+\amp = \frac{1}{\cos{x}} \cdot \frac{\sin{x}}{\cos{x}}\\
+\amp = \sec{x} \tan{x}
+\end{align*}
+</div></article></div>
+<article class="theorem theorem-like" id="theorem-32"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of cosecant.</span>
+</h4>
+<p id="p-412">If \(f(x) = \csc{x}\text{,}\) then \(f'(x) = -\csc{x} \cot{x}\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\frac{d}{dx} \csc{x} = -\csc{x} \cot{x}}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><p id="p-413">Since \(\csc{x} = \frac{1}{\sin{x}}\text{,}\) by the reciprocal rule,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \frac{d}{dx} \frac{1}{\sin{x}}\\
+\amp = -\frac{\cos{x}}{(\sin{x})^2}\\
+\amp = -\frac{1}{\sin{x}} \cdot \frac{\cos{x}}{\sin{x}}\\
+\amp = -\csc{x} \cot{x}
+\end{align*}
+</div></article></div>
+<article class="theorem theorem-like" id="theorem-33"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of cotangent.</span>
+</h4>
+<p id="p-414">If \(f(x) = \cot{x}\text{,}\) then \(f'(x) = -\csc^2{x}\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+\boxed{\frac{d}{dx} \cot{x} = -\csc^2{x}}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><p id="p-415">Since \(\cot{x} = \frac{\cos{x}}{\sin{x}}\text{,}\) by the quotient rule,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \frac{d}{dx} \frac{\cos{x}}{\sin{x}}\\
+\amp = \frac{\sin{x}(-\sin{x}) - \cos{x}(\cos{x})}{(\sin{x})^2}\\
+\amp = -\frac{\sin^2{x} + \cos^2{x}}{\sin^2{x}}\\
+\amp = -\frac{1}{\sin^2{x}} \amp\amp \text{by the Pythagorean identity}\\
+\amp = -\csc^2{x}
+\end{align*}
+</div></article></div></section><section class="subsection" id="subsection-108"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.7</span> <span class="title">Summary of Trigonometric Derivatives</span>
+</h3>
+<p id="p-416">In summary,</p>
+<article class="theorem theorem-like" id="theorem-34"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Trigonometric derivatives.</span>
 </h4>
 <div class="displaymath">
 \begin{equation*}
-\boxed{\frac{d}{dx} b^x = b^x \cdot \ln{b}}
+\boxed{\begin{array}{ll}
+\dfrac{d}{dx} \sin{x} = \cos{x} \amp \dfrac{d}{dx} \csc{x} = -\csc{x} \cot{x} \\[10pt]
+\dfrac{d}{dx} \cos{x} = -\sin{x} \amp \dfrac{d}{dx} \sec{x} = \sec{x} \tan{x} \\[10pt]
+\dfrac{d}{dx} \tan{x} = \sec^2{x} \amp \dfrac{d}{dx} \cot{x} = -\csc^2{x}
+\end{array}}
 \end{equation*}
-</div></article></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">6.2.7</span> <span class="title">More About the Number e</span>
+</div></article><p id="p-417">Note that these “nice” formulas only apply if \(x\) is measured in radians. If $x$ is measured in degrees, then there are extra factors of \(\frac{\pi}{180}\text{.}\) In fact, this is the main reason radians are taught in pre-calculus.</p></section><section class="subsection" id="subsection-109"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.8</span> <span class="title">Derivatives of Cofunctions</span>
 </h3>
-<p id="p-463">In integral calculus, it is shown that $e$ can be written as the “infinite summation”,</p>
+<p id="p-418">Notice that the derivatives of the “cofunctions” (cosine, cosecant, and cotangent) all contain negative signs. Further, if we denote \(\operatorname{co}{f(x)}\) to be the “cofunction” of \(f(x)\text{,}\) then all 6 trigonometric derivatives follow the rule,</p>
 <div class="displaymath">
 \begin{equation*}
-e = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \dots = \sum_{n=0}^{\infty} \frac{1}{n!}
+\frac{d}{dx} \operatorname{co}(f(x)) = - \operatorname{co} \brac{\frac{d}{dx} f(x)}
 \end{equation*}
 </div>
-<p id="p-464">One of the reasons why the natural logarithm is “natural” is that it naturally comes up when differentiating exponential functions, whether or not their base is \(e\text{.}\) Equivalently, because of the simplicity of the law,</p>
+<p id="p-419">In fact, it turns out it is also true that,</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{d}{dx} e^x = e^x
+\frac{d^2}{dx^2} \operatorname{co}(f(x)) = \operatorname{co}\brac{\frac{d^2}{dx^2} f(x)}
+\end{equation*}
+</div></section><section class="subsection" id="subsection-110"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.9</span> <span class="title">Continuity of Sine and Cosine</span>
+</h3>
+<p id="p-420">It is intuitively clear that the sine and cosine functions \(\sin{x}\) and \(\cos{x}\) are continuous functions. However, this can be proved more rigorously, using a similar technique to that to prove the two limits above.</p>
+<p id="p-421">Assuming that \(\cos{x}\) and \(\sin{x}\) are continuous at \(x = 0\text{,}\) this can be used to prove that the functions are continuous on \(\mathbb{R}\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{h \to 0} \cos{h} = \cos{0} = 1 \qquad \text{and} \qquad \lim_{h \to 0} \sin{h} = \sin{0} = 0
 \end{equation*}
 </div>
-<p id="p-465">which is the reason that most exponential functions are written in terms of the natural exponential.</p>
-<p id="p-466">Also, the number \(e\) can be <em class="emphasis">defined</em> as the (unique) number such that,</p>
+<article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h4 class="heading"><span class="title">Proof that sine is continuous.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+\lim_{h \to 0} \sin{(x + h)} \amp = \lim_{h \to 0} \brac{\sin{x} \cos{h} - \cos{x} \sin{h}} \amp\amp \text{using the sine addition formula}\\
+\amp = \sin{x} \lim_{h \to 0} \cos{h} - \cos{x} \lim_{h \to 0} \sin{h} \amp\amp \text{as $\cos{x}, \sin{x}$ are constant with respect to the limits}\\
+\amp = \sin{x} \cdot 1 - \cos{x} \cdot 0 \amp\amp\\
+\amp = \sin{x}
+\end{align*}
+</div></article></div>
+<article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h4 class="heading"><span class="title">Proof that cosine is continuous.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+\lim_{h \to 0} \cos{(x + h)} \amp = \lim_{h \to 0} \brac{\cos{x} \cos{h} - \sin{x} \sin{h}} \amp\amp \text{using the cosine addition formula}\\
+\amp = \cos{x} \lim_{h \to 0} \cos{h} - \sin{x} \lim_{h \to 0} \sin{h} \amp\amp \text{as $\cos{x}, \sin{x}$ are constant with respect to the limits}\\
+\amp = \cos{x} \cdot 1 - \sin{x} \cdot 0 \amp\amp\\
+\amp = \cos{x}
+\end{align*}
+</div></article></div></section><section class="subsection" id="subsection-111"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.1.10</span> <span class="title">Cyclical Pattern of Sine Derivatives</span>
+</h3>
+<p id="p-422">Consider the first few derivatives of sine \(f(x) = \sin{x}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = \cos{x}\\
+f''(x) \amp = -\sin{x}\\
+f'''(x) \amp = -\cos{x}\\
+f^{(4)}(x) \amp = \sin{x}
+\end{align*}
+</div>
+<p id="p-423">which returns back to \(\sin{x}\text{.}\) Thus, this pattern continues.</p>
+<article class="theorem theorem-like" id="theorem-35"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Derivatives of sine.</span>
+</h4>
 <div class="displaymath">
 \begin{equation*}
-\lim_{h \to 0} \frac{e^h - 1}{h} = 1
+\frac{d^n}{dx^n} \sin{x} = \begin{cases} \sin{x} \amp n = 0, 4, 8, \dots \\
+\cos{x} \amp n = 1, 5, 9, \dots \\
+-\sin{x} \amp n = 2, 6, 10, \dots \\
+-\cos{x} \amp n = 3, 7, 11, \dots \end{cases}
 \end{equation*}
-</div></section></section></div></main>
+</div></article></section></section></div></main>
 </div>
 </body>
 </html>

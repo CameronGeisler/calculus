@@ -10,13 +10,21 @@
     </introduction>
 
     <subsection>
-        <title>Symmetric Difference Quotient</title>
+        <title>Approximating the Derivative</title>
         <p>
             To approximate a derivative, a difference quotient can be used, which is the slope of the secant line,
         </p>
         <me>
             f'(x) \approx \frac{f(x + h) - f(x)}{h}
         </me>
+        <p>
+            for some small <m>h \neq 0</m>. For example, <m>h = 1, 0.1, 0.01, 0.001</m>, or <m>h = -1, -0.1,-0.01,-0.001</m>. This will provide an estimate, or approximation, to the derivative.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Symmetric Difference Quotient</title>
+
         <p>
             However, depending if <m>h</m> is positive or negative, this can bias the derivative, depending on the shape of the curve. Instead, we can approximate the slope at <m>x</m> using two points at equal distance from <m>x</m>, say <m>(x - h, f(x - h))</m> and <m>(x + h, f(x + h))</m>. Then, the difference quotient is,
         </p>
