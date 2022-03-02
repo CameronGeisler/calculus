@@ -14,7 +14,7 @@
     <book xml:id="book" xmlns:xi="http://www.w3.org/2001/XInclude">
         <!-- The book needs a title and can have a subtitle  -->
         <title>Calculus</title>
-        <subtitle></subtitle>
+        <!-- <subtitle></subtitle> -->
 
         <introduction>
             My calculus notes.
