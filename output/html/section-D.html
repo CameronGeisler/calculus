@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-15T12:07:02-08:00       *-->
+<!--*       on 2022-03-05T14:40:26-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -84,7 +84,7 @@
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<h1 class="heading"><a href="book.html"><span class="title">Calculus</span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
@@ -155,18 +155,18 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-D"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Differentiability</span>
 </h2>
-<section class="subsection" id="subsection-32"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-31"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Differentiability on an Interval</span>
 </h3>
 <article class="definition definition-like" id="definition-6"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
-</h4>If a function is defined on an open interval \((a,b)\text{,}\) then \(f\) is <dfn class="terminology">differentiable</dfn> on \((a,b)\) if \(f\) is differentiable for all \(x \in (a,b)\text{.}\)</article><p id="p-158">Functions that are differentiable are intuitively “smooth”. Values of \(x\) in \(D(f)\) where \(f\) is non-differentiable and are not endpoints are called <dfn class="terminology">singular points</dfn> of \(f\text{.}\)</p>
-<p id="p-159">Note that we used an open interval \((a,b)\) and did not include the endpoints. This is because if \(f\) is defined on a closed interval \([a,b]\text{,}\) then it cannot be differentiable at the endpoints \(x = a\) or \(x = b\text{,}\) because the (two-sided) limit cannot exist if the function is only defined on one side.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+</h4>If a function is defined on an open interval \((a,b)\text{,}\) then \(f\) is <dfn class="terminology">differentiable</dfn> on \((a,b)\) if \(f\) is differentiable for all \(x \in (a,b)\text{.}\)</article><p id="p-165">Functions that are differentiable are intuitively “smooth”. Values of \(x\) in \(D(f)\) where \(f\) is non-differentiable and are not endpoints are called <dfn class="terminology">singular points</dfn> of \(f\text{.}\)</p>
+<p id="p-166">Note that we used an open interval \((a,b)\) and did not include the endpoints. This is because if \(f\) is defined on a closed interval \([a,b]\text{,}\) then it cannot be differentiable at the endpoints \(x = a\) or \(x = b\text{,}\) because the (two-sided) limit cannot exist if the function is only defined on one side.</p></section><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Continuous But Not Differentiable</span>
 </h3>
 <article class="example example-like" id="example-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of absolute value function.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-160">Consider the derivative of the absolute value function,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-167">Consider the derivative of the absolute value function,</p>
 <div class="displaymath">
 \begin{equation*}
 f(x) = \abs{x} = \begin{cases} x \amp x \geq 0 \\ -x \amp x \lt 0 \end{cases}
@@ -180,12 +180,12 @@ f'(0) \amp = \lim_{h \to 0} \frac{\abs{0 + h} - \abs{0}}{h}\\
 \end{align*}
 </div>
 <ul class="disc">
-<li id="li-34"><p id="p-derived-li-34">From the right, as \(h \to 0+\text{,}\) \(\abs{h} = h\text{,}\) and so,<div class="displaymath">
+<li id="li-36"><p id="p-derived-li-36">From the right, as \(h \to 0+\text{,}\) \(\abs{h} = h\text{,}\) and so,<div class="displaymath">
 \begin{equation*}
 \lim_{h \to 0+} \frac{\abs{h}}{h} = \lim_{h \to 0} \frac{h}{h} = \lim_{h \to 0} 1 = 1
 \end{equation*}
 </div>Thus, from the right, the slopes approach 1 (this can be confirmed graphically).</p></li>
-<li id="li-35"><p id="p-derived-li-35">However, from the left, as \(h \to 0-\text{,}\) \(\abs{h} = -h\text{,}\) and so,<div class="displaymath">
+<li id="li-37"><p id="p-derived-li-37">However, from the left, as \(h \to 0-\text{,}\) \(\abs{h} = -h\text{,}\) and so,<div class="displaymath">
 \begin{equation*}
 \lim_{h \to 0-} \frac{\abs{h}}{h} = \lim_{h \to 0-} \frac{-h}{h} = \lim_{h \to 0} -1 = -1
 \end{equation*}
@@ -202,18 +202,18 @@ f'(0) \amp = \lim_{h \to 0} \frac{\abs{0 + h} - \abs{0}}{h}\\
 \begin{equation*}
 \boxed{\frac{d}{dx} \abs{x} = \frac{\abs{x}}{x} \qquad x \neq 0}
 \end{equation*}
-</div></article></div></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Differentiability and Continuity</span>
 </h3>
-<p id="p-161">If a function \(f\) is continuous at \(x\text{,}\) it may or may not be differentiable at \(x\text{.}\) For example, \(f(x) = \abs{x}\) is continuous but not differentiable at \(x = 0\text{.}\) However, the converse is true, in that differentiability implies continuity.</p>
+<p id="p-168">If a function \(f\) is continuous at \(x\text{,}\) it may or may not be differentiable at \(x\text{.}\) For example, \(f(x) = \abs{x}\) is continuous but not differentiable at \(x = 0\text{.}\) However, the converse is true, in that differentiability implies continuity.</p>
 <article class="theorem theorem-like" id="theorem-6"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
 </h4>
-<p id="p-162">Let \(f\) be a function. If \(f\) is differentiable at \(x = a\text{,}\) then it is continuous at \(x = a\text{.}\)</p></article><p id="p-163">Intuitively, this theorem says that if a function is smooth at a point \(a\text{,}\) then it can't have a discontinuity there. Alternatively, it is more intuitive to consider the contrapositive, that if \(x\) is not continuous at \(a\) (i.e. it has a break or jump), then it is not differentiable at \(a\) (the slope of a tangent line cannot be found).</p>
+<p id="p-169">Let \(f\) be a function. If \(f\) is differentiable at \(x = a\text{,}\) then it is continuous at \(x = a\text{.}\)</p></article><p id="p-170">Intuitively, this theorem says that if a function is smooth at a point \(a\text{,}\) then it can't have a discontinuity there. Alternatively, it is more intuitive to consider the contrapositive, that if \(x\) is not continuous at \(a\) (i.e. it has a break or jump), then it is not differentiable at \(a\) (the slope of a tangent line cannot be found).</p>
 <article class="corollary theorem-like" id="corollary-2"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
 </h4>
-<p id="p-164">If \(f\) is discontinuous at \(a\text{,}\) then \(f\) is not differentiable at \(a\text{.}\)</p></article></section></section></div></main>
+<p id="p-171">If \(f\) is discontinuous at \(a\text{,}\) then \(f\) is not differentiable at \(a\text{.}\)</p></article></section></section></div></main>
 </div>
 </body>
 </html>

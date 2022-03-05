@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-15T12:07:05-08:00       *-->
+<!--*       on 2022-03-05T14:40:29-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,8 +16,11 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-f'(x) \amp = \sin{x} \cdot 0 + \cos{x} \cdot 1\\
-f'(x) \amp = \cos{x}
+\lim_{x \to 0} \frac{\cos{x} - 1}{x} \amp = \lim_{x \to 0} \frac{\cos{x} - 1}{x} \cdot \frac{\cos{x} + 1}{\cos{x} + 1}\\
+\amp = \lim_{x \to 0} \frac{\cos^2{x} - 1}{x(\cos{x} + 1)}\\
+\amp = \lim_{x \to 0} \frac{\sin^2{x}}{x(\cos{x} + 1)}\\
+\amp = \lim_{x \to 0} \underbrace{\frac{\sin{x}}{x}}_{\to 1} \cdot \underbrace{\frac{\sin{x}}{\cos{x} + 1}}_{\to \frac{0}{2} = 0}\\
+\amp = 0
 \end{align*}
 </div>
 <span class="incontext"><a href="section-DOTF.html#mjx-eqn:mrow-122">in-context</a></span>

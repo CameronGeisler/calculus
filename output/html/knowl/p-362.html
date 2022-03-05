@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-15T12:07:05-08:00       *-->
+<!--*       on 2022-03-05T14:40:29-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,27 @@
 </head>
 <body>
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>is the unique polynomial which matches \(f\) and its first \(n\) derivatives at \(x = a\text{,}\)</p>
+<p>First, assume that \(x &gt; a\text{,}\) and the other case is similar. Apply the generalized MVT to \(E(x) = f(x) - f(a) - f'(a)(x - a)\) and the function \(g(x) = (x - a)^2\) on the interval \([a,x]\text{,}\) then, for some \(c \in (a,x)\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{E(x) - E(a)}{(x - a)^2 - (a - a)^2} \amp = \frac{E'(c)}{2(c - a)}\\
+\frac{E(x)}{(x - a)^2} \amp = \frac{E'(c)}{2(c - a)}
+\end{align*}
+</div>
+<p class="continuation">Also, note that \(E(a) = 0\text{.}\) Then, again, applying the generalized MVT to \(E'(x) = f'(x) - f'(a)\) and \(h(x) = 2(x - a)\) on the interval \([a,c]\) gives that,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{E'(c) - E'(a)}{2(c - a) - 2(a - a)} \amp = \frac{E''(u)}{2}\\
+\frac{E'(c)}{2(c - a)} \amp = \frac{E''(u)}{2} = \frac{f''(u)}{2}
+\end{align*}
+</div>
+<p class="continuation">for some \(u \in (a,c)\text{,}\) and note that \(E'(a) = 0\text{,}\) and also that \(E''(x) = f''(x)\text{.}\) Putting it together,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{E(x)}{(x - a)^2} = \frac{f''(u)}{2}
+\end{equation*}
+</div>
+<p class="continuation">and so \(E(x) = \frac{f''(u)}{2} (x - a)^2\text{.}\)</p>
 <span class="incontext"><a href="section-TTPA.html#p-362">in-context</a></span>
 </body>
 </html>

@@ -27,15 +27,29 @@
             The derivative of <m>f</m> is a function whose outputs are the slopes of <m>f</m>. Intuitively, the outputs for the derivative of a function come from evaluating the associated limit <m>\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</m> for each value of <m>x</m> in the domain of <m>f</m>, and plotting the results. Consider <url href="https://www.geogebra.org/m/DH4BpjGP">this Desmos applet for the derivative</url>. In other words,
         </p>
         <me>
-            \boxed{\text{The output $f'(x)$ at a particular value of $x$ is the slope of the tangent line of $f$ at $x$}}
+            \boxed{\text{The output $f'(x)$ at a particular value of $x$ represents the slope of the tangent line of $f$ at $x$}}
         </me>
+
+    </subsection>
+
+    <subsection>
+        <title>Equivalent Formulation of the Tangent Slope</title>
         <p>
             There is an alternate notation that is equivalent, which is,
         </p>
         <me>
             \boxed{f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}}
         </me>
-    </subsection>
+        <p>
+            An equivalent limit is,
+        </p>
+        <me>
+            \boxed{\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = m}
+        </me>
+        <p>
+            For this limit, <m>\frac{f(x) - f(x_0)}{x - x_0}</m> represents the slope of the secant line between the fixed point <m>(x_0,f(x_0))</m> and the arbitrary point <m>(x,f(x))</m>. The slope <m>m</m> of the tangent line is the limit of this slope as the arbitrary point approaches the fixed point. Taking the limit as the difference <m>h</m> between the two points approaches 0, is equivalent to taking the limit as one point <m>x</m> approaches the other point <m>a</m>. More precisely, the limits are equivalent in that substituting <m>h = x - x_0</m> into the first limit, we have that as <m>h \to 0</m>, <m>x \to x_0</m>, which results in the second limit.
+        </p>
+    </subsection>    
 
     <subsection>
         <title>Graphical Differentiation</title>
@@ -59,13 +73,16 @@
             y = f'(x_0)(x - x_0) + f(x_0)
         </me>
         <p>
-            In particular, notice that <m>f'(x) = 0</m> precisely when $f$ has a horizontal tangent line at <m>x</m>. The equation of this line can be written in the familiar slope-intercept form,
+            The equation of this line can be written in the familiar slope-intercept form,
         </p>
         <me>
             y = \underbrace{f'(x_0)}_m x + \underbrace{f(x_0) - x_0 f'(x_0)}_{b}
         </me>
         <p>
             and so is of the form <m>y = mx + b</m> where <m>m = f'(x_0)</m> and <m>b = f(x_0) - x_0 f'(x_0)</m>. The key question here is how to determine the derivative <m>f'(x_0)</m>.
+        </p>
+        <p>
+            In particular, notice that <m>f'(x) = 0</m> precisely when <m>f</m> has a horizontal tangent line at <m>x</m>.
         </p>
     </subsection>
 
@@ -75,6 +92,7 @@
             A constant function <m>f(x) = k</m> is a horizontal line, which has slope 0, so we would expect that its derivative would be 0.
         </p>
         <theorem>
+            <title>Derivative of a constant is zero</title>
             <p>If <m>f(x) = k</m> for some <m>k \in \mathbb{R}</m>, then <m>f'(x) = 0</m>.</p>
         </theorem>
         <proof>
@@ -88,9 +106,10 @@
         </proof>
 
         <p>
-            Recall that linear functions have constant slope. In this way we expect that the derivative of a line is constant. In particular, the slope of a line <m>f(x) = mx + b</m> is <m>m</m>.
+            Recall that linear functions have constant slope. In this way we expect that the derivative of a line is constant. In general, the slope of a line <m>f(x) = mx + b</m> is <m>m</m>.
         </p>
         <theorem>
+            <title>Derivative of a line is the slope of the line</title>
             <p>If <m>f(x) = mx + b</m> for some <m>b, m \in \mathbb{R}</m>, then <m>f'(x) = m</m>.</p>
         </theorem>
         <proof>
@@ -126,10 +145,10 @@
                 <me>
                     \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
                 </me>
-                for the particular function <m>f</m>.
+                for the particular function <m>f</m>, using the formula for <m>f</m>.
             </li>
-            <li>Manipulate the difference quotient to a form which allows the limit to be evaluated.</li>
-            <li>Evaluate the limit as <m>h \to 0</m>.</li>
+            <li>Algebraically manipulate the difference quotient to a form which allows the limit to be evaluated. This is the most difficult step, and the techniques required depends on the type of function.</li>
+            <li>Evaluate the limit as <m>h \to 0</m>. This will always involve simply substituting <m>h = 0</m>.</li>
         </ol>
         <p>
             For the first few examples, it will involve cancelling a common factor of <m>h</m> from the numerator and denominator.
@@ -175,8 +194,9 @@
                     <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
                     <mrow>\amp = \lim_{h \to 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{h}</mrow>
                 </md>
-                To simplify this difference quotient, we first write this complex fraction as a single fraction, by multiplying numerator and denominator by <m>x(x+h)</m>,
+                To simplify this difference quotient, we first write this complex fraction as a single fraction, by clearing denominators, by multiplying numerator and denominator by <m>x(x+h)</m>,
                 <md>
+                    <mrow>\amp = \lim_{h \to 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{h} \cdot \frac{x(x + h)}{x(x + h)}</mrow>
                     <mrow>\amp = \lim_{h \to 0} \frac{x - (x + h)}{hx(x + h)}</mrow>
                     <mrow>\amp = \lim_{h \to 0} -\frac{h}{hx(x + h)}</mrow>
                     <mrow>\amp = \lim_{h \to 0} -\frac{1}{x(x + h)}</mrow>
@@ -194,7 +214,7 @@
                     <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
                     <mrow>\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h}</mrow>
                 </md>
-                Then, it turns out that we can cancel the factor of <m>h</m> in the denominator by rationalizing the numerator,
+                Then, the goal is to cancel the factor of <m>h</m> in the denominator. It turns out that the correct next algebraic step is a technique called <term>rationalizing the numerator</term>. You may recall rationalizing the denominator, which involves multiplying numerator and denominator in order to eliminate a square root in the denominator. Here, we can use a similar technique with the goal of removing the square roots in the numerator. In this case, we multiply by the conjugate of the numerator, which is <m>\sqrt{x + h} + \sqrt{x}</m>,
                 <md>
                     <mrow>\amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}</mrow>
                     <mrow>\amp = \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})}</mrow>
@@ -217,7 +237,7 @@
             \frac{dy}{dx}
         </me>
         <p>
-            read as <q>the derivative of <m>y</m> with respect to <m>x</m></q>, or sometimes simply by reading the letters (i.e. <q>dee-why dee-ex</q>). Note that just as <m>\Delta x</m> is not a product of <m>\Delta</m> with <m>x</m>, <m>dx</m> (and <m>dy</m>) does not represent the product of <m>d</m> with <m>x</m>. The advantage of this notation is that it enables us to consider derivatives without reference to a dependent variable, as we can write,
+            read as <q>the derivative of <m>y</m> with respect to <m>x</m></q>, or sometimes simply by reading the letters (i.e. <q>dee-why dee-ex</q>). The phrase <q>with respect to</q> means that <m>x</m> is being treated as the independent variable, and is often abbreviated as <q>w.r.t</q>. Note that just as <m>\Delta x</m> is not a product of <m>\Delta</m> with <m>x</m>, <m>dx</m> (and <m>dy</m>) does not represent the product of <m>d</m> with <m>x</m>. The advantage of this notation is that it enables us to consider derivatives without reference to a dependent variable, as we can write,
         </p>
         <me>
             \frac{d}{dx} f(x) = f'(x)

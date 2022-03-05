@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-15T12:07:04-08:00       *-->
+<!--*       on 2022-03-05T14:40:28-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,40 +15,7 @@
 </head>
 <body>
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Let \(u = f(x), v = g(x)\text{.}\) Then, as \(x\) changes, both \(f\) and \(g\) change, and this causes \(uv = f(x)g(x)\) to change. The product rule shows how the product \(uv\) changes as \(x\) changes, in terms of \(f\) and \(g\text{.}\) Suppose that \(x\) is incremented by some \(\Delta x\text{,}\) and let \(\Delta u, \Delta v\) be the corresponding increments in \(u\) and \(v\text{.}\) Then, consider the change in the product, \(\Delta(uv)\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\Delta(uv) = \underbrace{(u + \Delta u)(v + \Delta v)}_{\text{new }} - \underbrace{uv}_{\text{old }}
-\end{equation*}
-</div>
-<p class="continuation">Then, expanding and simplifying,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\Delta(uv) \amp = uv + \Delta u v + u \Delta v + \Delta u \Delta v - uv\\
-\amp = \Delta u v + u \Delta v + \Delta u \Delta v
-\end{align*}
-</div>
-<p class="continuation">Then, dividing both sides by \(\Delta x\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\frac{\Delta(uv)}{\Delta x} \amp = \frac{\Delta u v}{\Delta x} + \frac{u \Delta v}{\Delta x} + \frac{\Delta u \Delta v}{\Delta x}\\
-\amp = \frac{\Delta u}{\Delta x} v + u \frac{\Delta v}{\Delta x} + \Delta u \frac{\Delta v}{\Delta x}
-\end{align*}
-</div>
-<p class="continuation">Then, as \(\Delta x \to 0\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\lim_{\Delta x \to 0} \frac{\Delta(uv)}{\Delta x} \amp = \lim_{\Delta x \to 0} \brac{\frac{\Delta u}{\Delta x} v + u \frac{\Delta v}{\Delta x} + \Delta u \frac{\Delta v}{\Delta x}}\\
-\frac{d(uv)}{dx} \amp = \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x} \cdot v + \lim_{\Delta x \to 0} u \cdot \frac{\Delta v}{\Delta x} + \lim_{\Delta x \to 0} \Delta u \frac{\Delta v}{\Delta x}
-\end{align*}
-</div>
-<p class="continuation">The first term approaches \(\frac{du}{dx} v\text{,}\) the second approaches \(u \frac{dv}{dx}\text{,}\) and for the third, \(\lim_{\Delta x \to 0} \frac{\Delta v}{\Delta x} = \frac{dv}{dx}\text{,}\) however \(\Delta u\) also depends on \(\Delta x\text{,}\) and since \(f\) is continuous, as the change in \(x\) goes to 0, the change in \(u\) goes to 0 also. Thus,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\frac{d(uv)}{dx} \amp = \frac{du}{dx} v + u \frac{dv}{dx} + 0 \cdot \frac{dv}{dx}\\
-\amp = \frac{du}{dx} v + u \frac{dv}{dx}
-\end{align*}
-</div>
-<span class="incontext"><a href="section-TPR.html#p-166">in-context</a></span>
+<p>Note that we used an open interval \((a,b)\) and did not include the endpoints. This is because if \(f\) is defined on a closed interval \([a,b]\text{,}\) then it cannot be differentiable at the endpoints \(x = a\) or \(x = b\text{,}\) because the (two-sided) limit cannot exist if the function is only defined on one side.</p>
+<span class="incontext"><a href="section-D.html#p-166">in-context</a></span>
 </body>
 </html>

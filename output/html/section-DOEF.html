@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-15T12:07:04-08:00       *-->
+<!--*       on 2022-03-05T14:40:28-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -84,7 +84,7 @@
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book.html"><span class="title">Calculus:</span> <span class="subtitle"></span></a></h1>
+<h1 class="heading"><a href="book.html"><span class="title">Calculus</span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
@@ -155,87 +155,87 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-DOEF"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Derivatives of Exponential Functions</span>
 </h2>
-<section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<section class="subsection" id="subsection-113"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.1</span> <span class="title">Irrational Exponents Intuitive Definition</span>
 </h3>
-<p id="p-424">Before developing the derivative of exponential functions, we need to extend the definition of exponents to all real numbers, i.e. define the expression \(b^x\) for all real numbers \(x\text{.}\)</p>
-<p id="p-425">Recall that for a positive number \(b\) with rational exponent \(\frac{m}{n}\text{,}\) the power \(b^{m/n}\) is defined as,</p>
+<p id="p-431">Before developing the derivative of exponential functions, we need to extend the definition of exponents to all real numbers, i.e. define the expression \(b^x\) for all real numbers \(x\text{.}\)</p>
+<p id="p-432">Recall that for a positive number \(b\) with rational exponent \(\frac{m}{n}\text{,}\) the power \(b^{m/n}\) is defined as,</p>
 <div class="displaymath">
 \begin{equation*}
 b^{m/n} = \sqrt[n]{b^m}
 \end{equation*}
 </div>
-<p id="p-426">Here, we will extend the definition of \(b^x\) for exponents \(x\) that are irrational. For example, what does \(3^{\sqrt{2}}\) mean? We can approximate \(3^{\sqrt{2}}\) by using rational approximations of the irrational exponent \(\sqrt{2} = 1.41421356 \dots\text{.}\) As the approximations \(1.4, 1.41, 1.414, 1.4142\) (and so on) include more decimals, they will better approximate \(\sqrt{2}\text{,}\) and so we can expect the powers \(3^{1.4}, 3^{1.41}, 3^{1.414}, 3^{1.4142}\) to better approximate \(3^{\sqrt{2}}\text{.}\) Each of these exponents are rational and so can be calculated, and they will “converge” to \(3^{\sqrt{2}}\text{.}\) Roughly, we define \(b^r\) for irrational powers \(r\) as the limit as rational values \(x\) approach \(r\text{.}\) That is,</p>
+<p id="p-433">Here, we will extend the definition of \(b^x\) for exponents \(x\) that are irrational. For example, what does \(3^{\sqrt{2}}\) mean? We can approximate \(3^{\sqrt{2}}\) by using rational approximations of the irrational exponent \(\sqrt{2} = 1.41421356 \dots\text{.}\) As the approximations \(1.4, 1.41, 1.414, 1.4142\) (and so on) include more decimals, they will better approximate \(\sqrt{2}\text{,}\) and so we can expect the powers \(3^{1.4}, 3^{1.41}, 3^{1.414}, 3^{1.4142}\) to better approximate \(3^{\sqrt{2}}\text{.}\) Each of these exponents are rational and so can be calculated, and they will “converge” to \(3^{\sqrt{2}}\text{.}\) Roughly, we define \(b^r\) for irrational powers \(r\) as the limit as rational values \(x\) approach \(r\text{.}\) That is,</p>
 <div class="displaymath">
 \begin{equation*}
 b^r = \lim_{x \to r, x \text{ rational}} b^x
 \end{equation*}
 </div>
-<p id="p-427">This limit isn't very precise, but it gives an intuitive definition.</p>
-<p id="p-428">For example, for \(\sqrt{2} = 1.41421356 \cdots\text{,}\) we define \(3^{\sqrt{2}}\) as the limit of the sequence of,</p>
+<p id="p-434">This limit isn't very precise, but it gives an intuitive definition.</p>
+<p id="p-435">For example, for \(\sqrt{2} = 1.41421356 \cdots\text{,}\) we define \(3^{\sqrt{2}}\) as the limit of the sequence of,</p>
 <div class="displaymath">
 \begin{equation*}
 3^{1.4}, 3^{1.41}, 3^{1.414}, 3^{1.4142}, \dots
 \end{equation*}
 </div>
-<p id="p-429">In this way, we can define the power \(b^x\) for all real numbers. Also, it turns out that all exponent laws and theorems that apply to powers with rational exponents also apply to powers with irrational exponents.</p></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
+<p id="p-436">In this way, we can define the power \(b^x\) for all real numbers. Also, it turns out that all exponent laws and theorems that apply to powers with rational exponents also apply to powers with irrational exponents.</p></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.2</span> <span class="title">The Number e, and the Natural Exponential Function</span>
 </h3>
-<p id="p-430">A particular exponential function of interest is an exponential with base \(e\text{,}\) where \(e\) is <dfn class="terminology">Euler's number</dfn>, which is approximately,</p>
+<p id="p-437">A particular exponential function of interest is an exponential with base \(e\text{,}\) where \(e\) is <dfn class="terminology">Euler's number</dfn>, which is approximately,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{e = 2.71828 \dots}
 \end{equation*}
 </div>
-<p id="p-431">It is named after <dfn class="terminology">Leonard Euler</dfn> (where Euler is pronounced “Oi-ler”).</p>
-<p id="p-432">The number \(e\) is one of the most important mathematical constants in many applications of mathematics. The number \(e\) is an irrational number, meaning it is a non-terminating and non-repeating decimal. It was discovered by <dfn class="terminology">Jacob Bernoulli</dfn>, despite being named after Euler. The number \(e\) is a discovered constant in the universe, similar to \(\pi\text{.}\) There are multiple equivalent definitions of \(e\text{.}\) One intuitive definition comes from exponential growth, compound interest, and a particular limit.</p></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
+<p id="p-438">It is named after <dfn class="terminology">Leonard Euler</dfn> (where Euler is pronounced “Oi-ler”).</p>
+<p id="p-439">The number \(e\) is one of the most important mathematical constants in many applications of mathematics. The number \(e\) is an irrational number, meaning it is a non-terminating and non-repeating decimal. It was discovered by <dfn class="terminology">Jacob Bernoulli</dfn>, despite being named after Euler. The number \(e\) is a discovered constant in the universe, similar to \(\pi\text{.}\) There are multiple equivalent definitions of \(e\text{.}\) One intuitive definition comes from exponential growth, compound interest, and a particular limit.</p></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.3</span> <span class="title">Compound Interest, and the Number e</span>
 </h3>
-<p id="p-433"><dfn class="terminology">Compound interest</dfn> is interest computed on the original principal as well as on any accumulated interest. It is the most common method of applying interest, both for savings and for interest on loans.</p>
-<p id="p-434">Intuitively, in a situation with compound interest, the more money you have, the more interest you earn over time. From pre-calculus, if you have a principal of \(P\text{,}\) the interest rate per year is \(r\) (as a decimal), then after \(t\) years, the accumulated value \(A\) is given by,</p>
+<p id="p-440"><dfn class="terminology">Compound interest</dfn> is interest computed on the original principal as well as on any accumulated interest. It is the most common method of applying interest, both for savings and for interest on loans.</p>
+<p id="p-441">Intuitively, in a situation with compound interest, the more money you have, the more interest you earn over time. From pre-calculus, if you have a principal of \(P\text{,}\) the interest rate per year is \(r\) (as a decimal), then after \(t\) years, the accumulated value \(A\) is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 A = P(1 + r)^t
 \end{equation*}
 </div>
-<p id="p-435">For simplicity, suppose that \(P = 1\) (initially there is $1). Then, the formula is just,</p>
+<p id="p-442">For simplicity, suppose that \(P = 1\) (initially there is $1). Then, the formula is just,</p>
 <div class="displaymath">
 \begin{equation*}
 A = (1 + r)^t
 \end{equation*}
 </div>
-<p id="p-436">Also, suppose the interest rate is \(r = 1\) (which corresponds to 100%). Then, the formula is just,</p>
+<p id="p-443">Also, suppose the interest rate is \(r = 1\) (which corresponds to 100%). Then, the formula is just,</p>
 <div class="displaymath">
 \begin{align*}
 A \amp = (1 + 1)^t\\
 A \amp = 2^t
 \end{align*}
 </div>
-<p id="p-437">Then, after a single year, the dollar doubles to \(A = $2\text{.}\) Then, suppose that instead of computing the interest a single time at the end of the year, they divide the 100% interest into two periods of 50% interest, compounded every 6 months. Then, after 6 months, you have \(A = \brac{1 + \frac{1}{2}}^1 = $1.5\text{,}\) and after the second 6 months, the interest is compounded onto the existing $1.5, so the final amount is \(A = 1.5\brac{1 + \frac{1}{2}} = $2.25\text{.}\) In other words,</p>
+<p id="p-444">Then, after a single year, the dollar doubles to \(A = $2\text{.}\) Then, suppose that instead of computing the interest a single time at the end of the year, they divide the 100% interest into two periods of 50% interest, compounded every 6 months. Then, after 6 months, you have \(A = \brac{1 + \frac{1}{2}}^1 = $1.5\text{,}\) and after the second 6 months, the interest is compounded onto the existing $1.5, so the final amount is \(A = 1.5\brac{1 + \frac{1}{2}} = $2.25\text{.}\) In other words,</p>
 <div class="displaymath">
 \begin{equation*}
 A = \brac{1 + \frac{1}{2}}^2 = \$2.25
 \end{equation*}
 </div>
-<p id="p-438">Similarly, we could compound interest every month (12 times per year) i.e. giving \(\frac{100}{12} \approx 8.33%\) interest each month, which gives,</p>
+<p id="p-445">Similarly, we could compound interest every month (12 times per year) i.e. giving \(\frac{100}{12} \approx 8.33%\) interest each month, which gives,</p>
 <div class="displaymath">
 \begin{equation*}
 A = \brac{1 + \frac{1}{12}}^{12} \approx $2.61
 \end{equation*}
 </div>
-<p id="p-439">Or, every day (365 times per year),</p>
+<p id="p-446">Or, every day (365 times per year),</p>
 <div class="displaymath">
 \begin{equation*}
 A = \brac{1 + \frac{1}{365}}^{365} \approx \$2.71
 \end{equation*}
 </div>
-<p id="p-440">Yearly has many more compounding periods (365 vs. 12), but the result is only slightly more money ($2.71 vs. $2.61). In general, the amount after 1 year of compounding \(n\) times per year is,</p>
+<p id="p-447">Yearly has many more compounding periods (365 vs. 12), but the result is only slightly more money ($2.71 vs. $2.61). In general, the amount after 1 year of compounding \(n\) times per year is,</p>
 <div class="displaymath">
 \begin{equation*}
 A = \brac{1 + \frac{1}{n}}^n
 \end{equation*}
 </div>
-<p id="p-441">In summary,</p>
+<p id="p-448">In summary,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c}
@@ -247,7 +247,7 @@ n \amp A \\ \hline
 \end{array}
 \end{equation*}
 </div>
-<p id="p-442">As \(n\) increases, \(A\) increases, however, the <em class="emphasis">rate</em> of increase of \(A\) seems to slow down. It turns out that,</p>
+<p id="p-449">As \(n\) increases, \(A\) increases, however, the <em class="emphasis">rate</em> of increase of \(A\) seems to slow down. It turns out that,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|c}
@@ -259,19 +259,19 @@ n \amp A \\ \hline
 \end{array}
 \end{equation*}
 </div>
-<p id="p-443">As \(n\) increases, it seems that \(A \to e \approx 2.718\text{.}\) Then, it turns out that,</p>
+<p id="p-450">As \(n\) increases, it seems that \(A \to e \approx 2.718\text{.}\) Then, it turns out that,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\lim_{n \to \infty} \brac{1 + \frac{1}{n}}^n = e}
 \end{equation*}
 </div>
-<p id="p-444">This can be thought of as a <em class="emphasis">definition</em> of \(e\text{,}\) giving a symbolic name to the outcome of a limiting procedure. More generally, it turns out that,</p>
+<p id="p-451">This can be thought of as a <em class="emphasis">definition</em> of \(e\text{,}\) giving a symbolic name to the outcome of a limiting procedure. More generally, it turns out that,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\lim_{n \to \infty} \brac{1 + \frac{x}{n}}^n = e^x}
 \end{equation*}
 </div>
-<p id="p-445">which is the exponential function, with base \(e\text{.}\) Then,</p>
+<p id="p-452">which is the exponential function, with base \(e\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{align*}
 A \amp = P\brac{1 + \frac{r}{n}}^{nt}\\
@@ -280,53 +280,53 @@ A \amp = P\brac{1 + \frac{r}{n}}^{nt}\\
 \amp = P e^{rt} \amp\amp \text{as $h \to \infty$, $\brac{1 + \frac{1}{h}}^h \to e$}
 \end{align*}
 </div>
-<p id="p-446">In other words,</p>
+<p id="p-453">In other words,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\lim_{n \to \infty} P\brac{1 + \frac{r}{n}}^{nt} = Pe^{rt}}
 \end{equation*}
 </div>
-<p id="p-447">The limit,</p>
+<p id="p-454">The limit,</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{n \to \infty} \brac{1 + \frac{1}{n}}^n
 \end{equation*}
 </div>
-<p id="p-448">is an indeterminate form, of the form \(1^{\infty}\text{.}\) This is because \(1 + \frac{1}{n}\) is always larger than 1, and we know that \(b^n \to \infty\) as \(n \to \infty\) if \(b &gt; 1\) (an increasing exponential). On the other hand, \(1 + \frac{1}{n} \to 1\) as \(n \to \infty\text{,}\) and we know that \(1^n = 1\) for any \(n\text{.}\) It is kinda an outstanding fact that the limit is neither 1 nor \(\infty\text{,}\) but instead is is an irrational number which is about 3.</p></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
+<p id="p-455">is an indeterminate form, of the form \(1^{\infty}\text{.}\) This is because \(1 + \frac{1}{n}\) is always larger than 1, and we know that \(b^n \to \infty\) as \(n \to \infty\) if \(b &gt; 1\) (an increasing exponential). On the other hand, \(1 + \frac{1}{n} \to 1\) as \(n \to \infty\text{,}\) and we know that \(1^n = 1\) for any \(n\text{.}\) It is kinda an outstanding fact that the limit is neither 1 nor \(\infty\text{,}\) but instead is is an irrational number which is about 3.</p></section><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.4</span> <span class="title">Derivatives of Exponential Functions</span>
 </h3>
-<p id="p-449">Consider an exponential function \(f(x) = b^x\) where \(b &gt; 0\text{,}\) and \(b \neq 1\text{.}\) Then, by definition,</p>
+<p id="p-456">Consider an exponential function \(f(x) = b^x\) where \(b &gt; 0\text{,}\) and \(b \neq 1\text{.}\) Then, by definition,</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x) = \lim_{h \to 0} \frac{b^{x+h} - b^x}{h}
 \end{equation*}
 </div>
-<p id="p-450">To evaluate this limit, a natural thing to do is to use the properties of exponents, to separate \(b^{x+h} = b^x \cdot b^h\text{,}\) because this produces a common factor of \(b^x\) in the numerator,</p>
+<p id="p-457">To evaluate this limit, a natural thing to do is to use the properties of exponents, to separate \(b^{x+h} = b^x \cdot b^h\text{,}\) because this produces a common factor of \(b^x\) in the numerator,</p>
 <div class="displaymath">
 \begin{align*}
 \amp = \lim_{h \to 0} \frac{b^x \cdot b^h - b^x}{h}\\
 \amp = \lim_{h \to 0} \frac{b^x(b^h - 1)}{h}
 \end{align*}
 </div>
-<p id="p-451">Then, the factor \(b^x\) is constant with respect to the limit which is with respect to \(h\text{,}\) so it can be factored out as a constant multiple,</p>
+<p id="p-458">Then, the factor \(b^x\) is constant with respect to the limit which is with respect to \(h\text{,}\) so it can be factored out as a constant multiple,</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x) = b^x \lim_{h \to 0} \frac{b^h - 1}{h}
 \end{equation*}
 </div>
-<p id="p-452">Notice that the remaining limit is independent of \(x\text{.}\) That is, this shows that the derivative of \(b^x\) is the function \(b^x\) itself, multiplied by a constant factor equal to the value of the limit (it turns out that this limit exists as a real number). Intuitively, this means that the rate of change of an exponential function is proportional to itself. In addition, notice that the limit is precisely the derivative of the exponential at \(x = 0\text{,}\)</p>
+<p id="p-459">Notice that the remaining limit is independent of \(x\text{.}\) That is, this shows that the derivative of \(b^x\) is the function \(b^x\) itself, multiplied by a constant factor equal to the value of the limit (it turns out that this limit exists as a real number). Intuitively, this means that the rate of change of an exponential function is proportional to itself. In addition, notice that the limit is precisely the derivative of the exponential at \(x = 0\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 f'(0) = \lim_{h \to 0} \frac{b^{0+h} - b^0}{h} = \lim_{h \to 0} \frac{b^h - 1}{h}
 \end{equation*}
 </div>
-<p id="p-453">Then, we have that,</p>
+<p id="p-460">Then, we have that,</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x) = b^x f'(0)
 \end{equation*}
 </div>
-<p id="p-454">It turns out that the limit \(f'(0)\) is equal to \(\ln{b}\) (the natural logarithm of \(b\)). Thus,</p>
+<p id="p-461">It turns out that the limit \(f'(0)\) is equal to \(\ln{b}\) (the natural logarithm of \(b\)). Thus,</p>
 <article class="fact theorem-like" id="fact-3"><h4 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of exponential function.</span>
 </h4>
@@ -334,7 +334,7 @@ f'(x) = b^x f'(0)
 \begin{equation*}
 \boxed{\frac{d}{dx} b^x = b^x \ln{b}}
 \end{equation*}
-</div></article><p id="p-455">Then, for the natural logarithmic function \(f(x) = e^x\text{,}\) we have \(\ln{e} = 1\text{,}\) so,</p>
+</div></article><p id="p-462">Then, for the natural logarithmic function \(f(x) = e^x\text{,}\) we have \(\ln{e} = 1\text{,}\) so,</p>
 <article class="fact theorem-like" id="fact-4"><h4 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of the natural exponential.</span>
 </h4>
@@ -342,26 +342,26 @@ f'(x) = b^x f'(0)
 \begin{equation*}
 \boxed{\frac{d}{dx} e^x = e^x}
 \end{equation*}
-</div></article><p id="p-456">In particular, the derivative of any exponential function is also an exponential function, with the same base. In addition, exponential functions are proportional to their own derivative. Finally, the exponential function \(e^x\) is the unique such function which is <em class="emphasis">exactly</em> equal to its own derivative. That is, the slope of the tangent line to the graph of \(f(x) = e^x\) is exactly equal to the \(y\)-coordinate of the point on the graph being considered.</p></section><section class="subsection" id="subsection-116"><h3 class="heading hide-type">
+</div></article><p id="p-463">In particular, the derivative of any exponential function is also an exponential function, with the same base. In addition, exponential functions are proportional to their own derivative. Finally, the exponential function \(e^x\) is the unique such function which is <em class="emphasis">exactly</em> equal to its own derivative. That is, the slope of the tangent line to the graph of \(f(x) = e^x\) is exactly equal to the \(y\)-coordinate of the point on the graph being considered.</p></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.5</span> <span class="title">The General Exponential Function</span>
 </h3>
-<p id="p-457">The relationship between a general exponential \(b^x\) and the natural exponential \(e^x\) can be seen another way. Recall that,</p>
+<p id="p-464">The relationship between a general exponential \(b^x\) and the natural exponential \(e^x\) can be seen another way. Recall that,</p>
 <div class="displaymath">
 \begin{equation*}
 b^x = \brac{e^{\ln{b}}}^x = e^{\ln{b} \cdot x}
 \end{equation*}
 </div>
-<p id="p-458">This is a pre-calculus exercise that every exponential function can be written in terms of the natural exponential.</p>
-<p id="p-459">More precisely, \(b^x = e^{\ln{b} \cdot x}\) can be thought of as a <em class="emphasis">definition</em> of the exponential function \(b^x\text{.}\)</p></section><section class="subsection" id="subsection-117"><h3 class="heading hide-type">
+<p id="p-465">This is a pre-calculus exercise that every exponential function can be written in terms of the natural exponential.</p>
+<p id="p-466">More precisely, \(b^x = e^{\ln{b} \cdot x}\) can be thought of as a <em class="emphasis">definition</em> of the exponential function \(b^x\text{.}\)</p></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.6</span> <span class="title">Derivative of the General Exponential</span>
 </h3>
-<p id="p-460">Then,</p>
+<p id="p-467">Then,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx} b^x = \frac{d}{dx} e^{\ln{b} \cdot x}
 \end{equation*}
 </div>
-<p id="p-461">Using the chain rule,</p>
+<p id="p-468">Using the chain rule,</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx} e^{\ln{b} \cdot x} \amp = \underbrace{e^{\ln{b} \cdot x}}_{b^x} \cdot \ln{b}\\
@@ -375,23 +375,23 @@ b^x = \brac{e^{\ln{b}}}^x = e^{\ln{b} \cdot x}
 \begin{equation*}
 \boxed{\frac{d}{dx} b^x = b^x \cdot \ln{b}}
 \end{equation*}
-</div></article></section><section class="subsection" id="subsection-118"><h3 class="heading hide-type">
+</div></article></section><section class="subsection" id="subsection-119"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.2.7</span> <span class="title">More About the Number e</span>
 </h3>
-<p id="p-462">In integral calculus, it is shown that $e$ can be written as the “infinite summation”,</p>
+<p id="p-469">In integral calculus, it is shown that $e$ can be written as the “infinite summation”,</p>
 <div class="displaymath">
 \begin{equation*}
 e = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \dots = \sum_{n=0}^{\infty} \frac{1}{n!}
 \end{equation*}
 </div>
-<p id="p-463">One of the reasons why the natural logarithm is “natural” is that it naturally comes up when differentiating exponential functions, whether or not their base is \(e\text{.}\) Equivalently, because of the simplicity of the law,</p>
+<p id="p-470">One of the reasons why the natural logarithm is “natural” is that it naturally comes up when differentiating exponential functions, whether or not their base is \(e\text{.}\) Equivalently, because of the simplicity of the law,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx} e^x = e^x
 \end{equation*}
 </div>
-<p id="p-464">which is the reason that most exponential functions are written in terms of the natural exponential.</p>
-<p id="p-465">Also, the number \(e\) can be <em class="emphasis">defined</em> as the (unique) number such that,</p>
+<p id="p-471">which is the reason that most exponential functions are written in terms of the natural exponential.</p>
+<p id="p-472">Also, the number \(e\) can be <em class="emphasis">defined</em> as the (unique) number such that,</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{h \to 0} \frac{e^h - 1}{h} = 1

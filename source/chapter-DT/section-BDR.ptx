@@ -38,7 +38,7 @@
         <title>Sum, Difference, and Constant Multiple Rules</title>
         <theorem>
             <p>
-                Let f, g$ be functions, differentiable at <m>x</m>, and let <m>k \in \mathbb{R}</m>. Then, the functions <m>f + g</m>, <m>f - g</m>, and <m>kf</m> are all differentiable at <m>x</m>, and,
+                Let <m>f, g</m> be functions, differentiable at <m>x</m>, and let <m>k \in \mathbb{R}</m>. Then, the functions <m>f + g</m>, <m>f - g</m>, and <m>kf</m> are all differentiable at <m>x</m>, and,
                 <ul>
                     <li><term>Sum/difference rule</term>.
                         <me>
@@ -60,13 +60,15 @@
             This theorem is about a single point <m>x</m>, but it of course can be generalized to all points in an interval <m>(a,b)</m>. Intuitively, the first statement means that the slope of a sum of functions is the sum of the slopes of the individual functions. The second says that scaling a function by a vertical stretch or compression applies the same scaling to the slopes of the function.
         </p>
         <p>
-            The sum rule can be naturally generalized to $n$ functions.
+            The sum rule can be naturally generalized to <m>n</m> functions. This basically means that derivatives can be determined term-by-term.
         </p>
         <corollary>
-            Let <m>f_1, \dots, f_n</m> be functions, differentiable at <m>x</m>. Then, <m>f_1 + \dots + f_n</m> is differentiable at <m>x</m>, and,
-            <me>
-                \boxed{(f_1 + \dots + f_n)'(x) = f_1'(x) + \dots + f_n'(x)}
-            </me>
+            <p>
+                Let <m>f_1, \dots, f_n</m> be functions, differentiable at <m>x</m>. Then, <m>f_1 + \dots + f_n</m> is differentiable at <m>x</m>, and,
+                <me>
+                    \boxed{(f_1 + \dots + f_n)'(x) = f_1'(x) + \dots + f_n'(x)}
+                </me>
+            </p>
         </corollary>
     </subsection>
     

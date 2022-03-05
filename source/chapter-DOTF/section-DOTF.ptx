@@ -101,7 +101,7 @@
         </fact>
         <proof>
             <p>
-                A more precise proof can be done using the squeeze theorem.
+                A more precise proof can be done using the squeeze theorem. Note that the proof only works if <m>x</m> is in radians. If the angle is measured in degrees, then the area of a sector formula is different.
             </p>
         </proof>
 
@@ -313,7 +313,7 @@
         </theorem>
 
         <p>
-            Note that these <q>nice</q> formulas only apply if <m>x</m> is measured in radians. If $x$ is measured in degrees, then there are extra factors of <m>\frac{\pi}{180}</m>. In fact, this is the main reason radians are taught in pre-calculus.
+            Note that these <q>nice</q> formulas only apply if <m>x</m> is measured in radians. If <m>x</m> is measured in degrees, then there are extra factors of <m>\frac{\pi}{180}</m>. In fact, this is the main reason radians are taught in pre-calculus.
         </p>
     </subsection>
 

@@ -11,16 +11,24 @@
         <title>The Product Rule</title>
 
         <theorem>
-            Let <m>f, g</m> be functions differentiable at <m>x</m>. Then, <m>fg</m> is also differentiable at <m>x</m>, and,
+            <p>
+                Let <m>f, g</m> be functions differentiable at <m>x</m>. Then, the product function <m>fg</m> is also differentiable at <m>x</m>, and,
+            </p>
             <me>
-                \boxed{(fg)'(x) = f'(x)g(x) + f(x)g'(x)}
+                \boxed{(fg)'(x) = f'(x)g(x) + f(x)g'(x)} \quad \text{or} \quad \boxed{\frac{d}{dx} \brac{f(x) g(x)} = \frac{d}{dx} f(x) \cdot g(x) + f(x) \cdot \frac{d}{dx} g(x)}
             </me>
         </theorem>
         <p>
             The formula can be more easily remembered by omitting the arguments, as,
         </p>
         <me>
-            \boxed{(fg)' = f'g + fg'} \qquad \text{<q><m>fg</m> prime equals <m>f</m> prime times <m>g</m> plus <m>f</m> times <m>g</m> prime</q>}
+            \boxed{(fg)' = f'g + fg'} \quad \text{<q><m>fg</m> prime equals <m>f</m> prime times <m>g</m> plus <m>f</m> times <m>g</m> prime</q>}
+        </me>
+        <p>
+            If <m>u, v</m> are quantities that are functions of <m>x</m>, then in Leibniz notation,
+        </p>
+        <me>
+            \frac{d(uv)}{dx} = u \cdot \frac{dv}{dx} + \frac{du}{dx} \cdot v
         </me>
 
         <proof>
@@ -77,6 +85,9 @@
     <subsection>
         <title>Product Rule Mnemonic</title>
         <p>
+            Each term in the product rule has one derivative, multiplied by the other function. Note that because the two terms are added, their order doesn't matter.
+        </p>
+        <p>
             The product rule isn't particularly difficult to remember, however, there's an interesting pattern that may help. Consider the product rule,
         </p>
         <me>
@@ -93,13 +104,13 @@
     <subsection>
         <title>Differential Intuition</title>
         <p>
-            If <m>u,v</m> are quantities that are functions of <m>x</m>, then,
+            Recall the equation in Leibniz notation,
         </p>
         <me>
             \frac{d(uv)}{dx} = u \cdot \frac{dv}{dx} + \frac{du}{dx} \cdot v
         </me>
         <p>
-            Or,
+            Then, <q>multiplying by <m>dx</m></q>,
         </p>
         <me>
             \boxed{d(uv) = u \,dv + du \,v}

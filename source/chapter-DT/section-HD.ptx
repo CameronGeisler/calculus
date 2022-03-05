@@ -37,7 +37,7 @@
             Or, in Leibniz notation, the higher derivatives are denoted by,
         </p>
         <me>
-            \brac{\frac{dy}{dx}} \quad, \frac{d^2 y}{dx^2}, \frac{d^3 y}{dx^3}, \frac{d^4 y}{dx^4}, \dots, \frac{d^n y}{dx^n}, \dots
+            \brac{\frac{dy}{dx}} \quad, \quad \frac{d^2 y}{dx^2}, \frac{d^3 y}{dx^3}, \frac{d^4 y}{dx^4}, \dots, \frac{d^n y}{dx^n}, \dots
         </me>
 
     </subsection>

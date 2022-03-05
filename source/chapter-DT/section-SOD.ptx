@@ -2,14 +2,37 @@
 
 <section xml:id="section-SOD">
     <title>Summary of Differentiation</title>
-    <p>
-        So far, we have considered the sum rule, constant multiple rule, product rule, quotient rule, and chain rule (for compositions of functions). Also, we know how to differentiate polynomials, and so we can also differentiate rational functions.
-    </p>
-    <me>
-        \begin{cases} \text{sum} \\ \text{constant multiple} \\ \text{product} \\ \text{quotient} \\ \text{composition} \end{cases} \qquad \begin{cases} \text{polynomials} \\ \text{rational functions} \, \frac{p(x)}{q(x)} \\ \text{trigonometric functions} \, (\text{e.g.} \sin{x}, \cos{x}, \tan{x}) \\ \text{exponential functions} \, b^x, e^x \\ \text{logarithmic functions} \log{x} \\ \vdots \end{cases}
-    </me>
-    <p>
-        Later, we will consider the derivatives of more functions, including trigonometric functions, exponential functions, and logarithmic functions.
-    </p>
+
+    <subsection>
+        <title>Summary of Differentiation Rules</title>
+        <ol>
+            <li><m>\frac{d}{dx} a = 0</m> (constant rule)</li>
+            <li><m>\frac{d}{dx} x^n = nx^{n-1}</m> (power rule)</li>
+            <li><m>\frac{d}{dx} \brac{a f(x)} = a \frac{d}{dx} f(x)</m> (constant multiple rule)</li>
+            <li><m>\frac{d}{dx} \brac{f(x) \pm g(x)} = \frac{d}{dx} f(x) \pm \frac{d}{dx} g(x)</m> (sum rule)</li>
+            <li><m>\frac{d}{dx} \brac{f(x) g(x)} = f(x) \frac{d}{dx} g(x) + g(x) \cdot \frac{d}{dx} f(x)</m> (product rule)</li>
+            <li><m>\frac{d}{dx} \brac{\frac{f(x)}{g(x)}} = \frac{g(x) f'(x) - f(x) g'(x)}{(g(x))^2}</m> (quotient rule)</li>
+        </ol>
+
+        <example>
+            <p>
+                Note that things like <m>\pi</m> and <m>e</m> are numbers, not variables. Then, <m>\frac{d}{dx}(\pi^3) = 0</m>, not <m>\frac{d}{dx}(\pi^3) = 3\pi^2</m>.
+            </p>
+        </example>
+    </subsection>
+
+    <subsection>
+        <title>Systematic Differentiation Summarized</title>
+        <p>
+            So far, we have considered the sum rule, constant multiple rule, product rule, quotient rule, and chain rule (for compositions of functions). Also, we know how to differentiate polynomials, and so we can also differentiate rational functions.
+        </p>
+        <me>
+            \begin{cases} \text{sum} \\ \text{constant multiple} \\ \text{product} \\ \text{quotient} \\ \text{composition} \end{cases} \qquad \begin{cases} \text{polynomials} \\ \text{rational functions} \quad \frac{p(x)}{q(x)} \\ \text{trigonometric functions} \quad (\text{e.g.} \sin{x}, \cos{x}, \tan{x}) \\ \text{exponential functions} \quad b^x, e^x \\ \text{logarithmic functions} \log{x} \\ \vdots \end{cases}
+        </me>
+        <p>
+            Later, we will consider the derivatives of more functions, including trigonometric functions, exponential functions, and logarithmic functions. The rules for differentiating these functions can be combined with the previous rules, to differentiate various combinations of these functions.
+        </p>
+    </subsection>
+
 
 </section>

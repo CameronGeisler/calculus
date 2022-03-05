@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-15T12:07:04-08:00       *-->
+<!--*       on 2022-03-05T14:40:28-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,44 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Consider the derivative of the absolute value function,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f(x) = \abs{x} = \begin{cases} x \amp x \geq 0 \\ -x \amp x \lt 0 \end{cases}
-\end{equation*}
-</div>
-<p class="continuation">For \(x \neq 0\text{,}\) \(f\) is differentiable. In particular, for \(x &gt; 0\text{,}\) \(f'(x) = \frac{d}{dx} x = 1\text{,}\) and for \(x \lt 0\text{,}\) \(f'(x) = \frac{d}{dx} (-x) = -1\text{.}\) However, at \(x = 0\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-f'(0) \amp = \lim_{h \to 0} \frac{\abs{0 + h} - \abs{0}}{h}\\
-\amp = \lim_{h \to 0} \frac{\abs{h}}{h}
-\end{align*}
-</div>
-<ul class="disc">
-<li><p>From the right, as \(h \to 0+\text{,}\) \(\abs{h} = h\text{,}\) and so,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\lim_{h \to 0+} \frac{\abs{h}}{h} = \lim_{h \to 0} \frac{h}{h} = \lim_{h \to 0} 1 = 1
-\end{equation*}
-</div>Thus, from the right, the slopes approach 1 (this can be confirmed graphically).</p></li>
-<li><p>However, from the left, as \(h \to 0-\text{,}\) \(\abs{h} = -h\text{,}\) and so,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\lim_{h \to 0-} \frac{\abs{h}}{h} = \lim_{h \to 0-} \frac{-h}{h} = \lim_{h \to 0} -1 = -1
-\end{equation*}
-</div>From the left, the slopes approach -1.</p></li>
-</ul>
-<p class="continuation">Since these one sided limits are unequal, \(\lim_{h \to 0} \frac{\abs{h}}{h}\) does not exist, and so \(f\) is not differentiable at \(x = 0\text{.}\) In summary,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{d}{dx} \abs{x} = \begin{cases} 1 \amp x &gt; 0 \\ -1 \amp x \lt 0 \end{cases}
-\end{equation*}
-</div>
-<p class="continuation">This can be summarized as,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\boxed{\frac{d}{dx} \abs{x} = \frac{\abs{x}}{x} \qquad x \neq 0}
-\end{equation*}
-</div>
-<span class="incontext"><a href="section-D.html#p-160">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>This theorem is about a single point \(x\text{,}\) but it of course can be generalized to all points in an interval \((a,b)\text{.}\) Intuitively, the first statement means that the slope of a sum of functions is the sum of the slopes of the individual functions. The second says that scaling a function by a vertical stretch or compression applies the same scaling to the slopes of the function.</p>
+<span class="incontext"><a href="section-BDR.html#p-160">in-context</a></span>
 </body>
 </html>
