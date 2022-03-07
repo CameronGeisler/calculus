@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-05T14:40:27-08:00       *-->
+<!--*       on 2022-03-07T15:24:22-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -148,6 +148,7 @@
 <a href="chapter-DOTF.html" data-scroll="chapter-DOTF"><span class="codenumber">6</span> <span class="title">Derivatives of Transcendental Functions</span></a><ul>
 <li><a href="section-DOTF.html" data-scroll="section-DOTF">Derivatives of Trigonometric Functions</a></li>
 <li><a href="section-DOEF.html" data-scroll="section-DOEF">Derivatives of Exponential Functions</a></li>
+<li><a href="section-DOIF.html" data-scroll="section-DOIF">Derivatives of Inverse Functions</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -161,18 +162,18 @@
 <article class="theorem theorem-like" id="theorem-19"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.5.1</span><span class="period">.</span>
 </h4>
-<p id="p-288">Let \(f\) be a function, continuous on \([a,b]\text{,}\) differentiable on \((a,b)\text{.}\) Then, if \(f(a) = f(b)\text{,}\) then there exists \(c \in (a,b)\) such that \(f'(c) = 0\text{.}\)</p></article><p id="p-289">Intutitively, Rolle's theorem says that if a differentiable function is equal at two different points, then there must be a point in-between where the tangent is horizontal.</p>
-<p id="p-290">Rolle's theorem can be illustrated by first plotting two points which lie on the same horizontal line, and then attempting to connect them with a smooth curve (a curve that is continuous and has no sharp corners). However the curve is drawn, it will be impossible to do so without it having at least one point with a horizontal tangent. Intuitively, this is because if the curve goes upward, then it must eventually come back downward, in order to “meet” the other point. By doing so, it will have a horizontal tangent along the way. Similarly, if it curve goes downward, it will eventually have to come back up, and will have a horizontal tangent. Finally, if the curve goes neither upward nor downward, then the function is constant, so of course its derivative is 0 everywhere.</p>
-<article class="example example-like" id="example-19"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-19"><h4 class="heading">
+<p id="p-293">Let \(f\) be a function, continuous on \([a,b]\text{,}\) differentiable on \((a,b)\text{.}\) Then, if \(f(a) = f(b)\text{,}\) then there exists \(c \in (a,b)\) such that \(f'(c) = 0\text{.}\)</p></article><p id="p-294">Intutitively, Rolle's theorem says that if a differentiable function is equal at two different points, then there must be a point in-between where the tangent is horizontal.</p>
+<p id="p-295">Rolle's theorem can be illustrated by first plotting two points which lie on the same horizontal line, and then attempting to connect them with a smooth curve (a curve that is continuous and has no sharp corners). However the curve is drawn, it will be impossible to do so without it having at least one point with a horizontal tangent. Intuitively, this is because if the curve goes upward, then it must eventually come back downward, in order to “meet” the other point. By doing so, it will have a horizontal tangent along the way. Similarly, if it curve goes downward, it will eventually have to come back up, and will have a horizontal tangent. Finally, if the curve goes neither upward nor downward, then the function is constant, so of course its derivative is 0 everywhere.</p>
+<article class="example example-like" id="example-20"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-20"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Kinematics connection.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-19"><article class="example example-like"><p id="p-291">Let \(x = x(t)\) represent the position of an object. If \(x(a) = x(b)\text{,}\) then the object is at the same position at two different time instants \(t = a\) and \(t = b\text{.}\) By Rolle's theorem, this means that \(x'(c) = v(c) = 0\) for some \(c \in (a,b)\text{,}\) i.e. the velocity of the object is 0 at some point between \(a\) and \(b\text{.}\) For example, when an object is thrown upwards and falls back down, it has 0 velocity at the top of its flight path.</p></article></div></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-20"><article class="example example-like"><p id="p-296">Let \(x = x(t)\) represent the position of an object. If \(x(a) = x(b)\text{,}\) then the object is at the same position at two different time instants \(t = a\) and \(t = b\text{.}\) By Rolle's theorem, this means that \(x'(c) = v(c) = 0\) for some \(c \in (a,b)\text{,}\) i.e. the velocity of the object is 0 at some point between \(a\) and \(b\text{.}\) For example, when an object is thrown upwards and falls back down, it has 0 velocity at the top of its flight path.</p></article></div></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.5.2</span> <span class="title">The Mean Value Theorem</span>
 </h3>
-<p id="p-292">The mean value theorem is a generalization of Rolle's theorem.</p>
+<p id="p-297">The mean value theorem is a generalization of Rolle's theorem.</p>
 <article class="theorem theorem-like" id="theorem-20"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Mean value theorem (MVT).</span>
 </h4>
-<p id="p-293">Let \(f\) be a function, continuous on \([a,b]\text{,}\) differentiable on \((a,b)\text{.}\) Then, there exists \(c \in (a,b)\) such that,</p>
+<p id="p-298">Let \(f\) be a function, continuous on \([a,b]\text{,}\) differentiable on \((a,b)\text{.}\) Then, there exists \(c \in (a,b)\) such that,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{f'(c) = \frac{f(b) - f(a)}{b - a}}
@@ -183,13 +184,13 @@
 \begin{equation*}
 f(b) - f(a) = f'(c)(b - a)
 \end{equation*}
-</div></article><p id="p-294">The first form intuitively says that on an interval \([a,b]\text{,}\) there exists some point \(c \in (a,b)\) such that the slope of the tangent line of \(f\) at \(x = c\) is equal to the slope of the secant line from \((a,f(a))\) to \((b,f(b))\text{.}\)</p>
-<p id="p-295">The MVT is the “slanted” version of Rolle's theorem (conversely, Rolle's theorem is the “horizontal” version of the MVT). If \(f(a) = f(b)\) in the MVT, the conclusion states that \(f'(c) = 0\) for some \(c \in (a,b)\text{,}\) which is precisely Rolle's theorem.</p>
-<p id="p-296">The MVT is an existence theorem, as it doesn't provide a method for determining \(c\) (if there is one, or multiple). <a class="external" href="https://www.geogebra.org/m/J5KMJQqC" target="_blank">This applet</a> determines the value of \(c\) for a given \(f\) and \([a,b]\text{,}\) and displays it graphically. Here is <a class="external" href="https://www.geogebra.org/m/YH8JxhSw" target="_blank">another applet</a>.</p>
-<p id="p-297">We can visualize moving the secant line parallel to itself, and see that it turns into the tangent line at its last point of contact with the graph of the curve.</p>
-<article class="example example-like" id="example-20"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-20"><h4 class="heading">
+</div></article><p id="p-299">The first form intuitively says that on an interval \([a,b]\text{,}\) there exists some point \(c \in (a,b)\) such that the slope of the tangent line of \(f\) at \(x = c\) is equal to the slope of the secant line from \((a,f(a))\) to \((b,f(b))\text{.}\)</p>
+<p id="p-300">The MVT is the “slanted” version of Rolle's theorem (conversely, Rolle's theorem is the “horizontal” version of the MVT). If \(f(a) = f(b)\) in the MVT, the conclusion states that \(f'(c) = 0\) for some \(c \in (a,b)\text{,}\) which is precisely Rolle's theorem.</p>
+<p id="p-301">The MVT is an existence theorem, as it doesn't provide a method for determining \(c\) (if there is one, or multiple). <a class="external" href="https://www.geogebra.org/m/J5KMJQqC" target="_blank">This applet</a> determines the value of \(c\) for a given \(f\) and \([a,b]\text{,}\) and displays it graphically. Here is <a class="external" href="https://www.geogebra.org/m/YH8JxhSw" target="_blank">another applet</a>.</p>
+<p id="p-302">We can visualize moving the secant line parallel to itself, and see that it turns into the tangent line at its last point of contact with the graph of the curve.</p>
+<article class="example example-like" id="example-21"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-21"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Kinematics interpretation of the MVT.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-20"><article class="example example-like"><p id="p-298">If \(x = x(t)\) represents the position of an object, then recall that,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-21"><article class="example example-like"><p id="p-303">If \(x = x(t)\) represents the position of an object, then recall that,</p>
 <div class="displaymath">
 \begin{equation*}
 v_{\text{avg}} = \frac{x(b) - x(a)}{b - a}
@@ -202,24 +203,24 @@ v_{\text{avg}} = \frac{x(b) - x(a)}{b - a}
 \end{equation*}
 </div>
 <p class="continuation">For example, if you drive 100km from point A to point B in 2 hours, then there is at least one point in that time where the instantaneous velocity of the car was \(\frac{100 \text{ km}}{2 \text{ hr}} = 50 \text{ km/hr}\text{.}\) This makes the natural assumption that the position function \(x(t)\) is continuous (objects can't “teleport”) and assumes that \(x\) is differentiable.</p></article></div>
-<p id="p-299">The MVT was first stated by <dfn class="terminology">Augustin Cauchy</dfn> in 1823.</p></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
+<p id="p-304">The MVT was first stated by <dfn class="terminology">Augustin Cauchy</dfn> in 1823.</p></section><section class="subsection" id="subsection-76"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.5.3</span> <span class="title">Remarks</span>
 </h3>
-<p id="p-300">Each of the hypotheses for the MVT are required. Consider a function \(f\) which is continuous on \([a,b]\) but non-differentiable for some point in \((a,b)\text{.}\) Also, consider $f$ which is continuous and differentiable on \((a,b)\) but not continuous at \(x = a\) (or \(x = b\text{,}\) or both). In these cases, the conclusion of the MVT fails.</p>
-<p id="p-301">On the other hand, if a function is continuous <em class="emphasis">and</em> differentiable on \([a,b]\text{,}\) then certainly it is differentiable on the smaller interval \((a,b)\text{,}\) and the conclusion of the MVT holds.</p>
-<p id="p-302">Also, there is another interpretation of the MVT relating to increments. Recall that for an interval \([x, x + \Delta x]\text{,}\) we have the approximation,</p>
+<p id="p-305">Each of the hypotheses for the MVT are required. Consider a function \(f\) which is continuous on \([a,b]\) but non-differentiable for some point in \((a,b)\text{.}\) Also, consider $f$ which is continuous and differentiable on \((a,b)\) but not continuous at \(x = a\) (or \(x = b\text{,}\) or both). In these cases, the conclusion of the MVT fails.</p>
+<p id="p-306">On the other hand, if a function is continuous <em class="emphasis">and</em> differentiable on \([a,b]\text{,}\) then certainly it is differentiable on the smaller interval \((a,b)\text{,}\) and the conclusion of the MVT holds.</p>
+<p id="p-307">Also, there is another interpretation of the MVT relating to increments. Recall that for an interval \([x, x + \Delta x]\text{,}\) we have the approximation,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{f(x + \Delta x) - f(x)}{\Delta x} \approx f'(x)
 \end{equation*}
 </div>
-<p id="p-303">Then, the MVT says that for some \(c \in [x, x + \Delta x]\text{,}\) we have the equality,</p>
+<p id="p-308">Then, the MVT says that for some \(c \in [x, x + \Delta x]\text{,}\) we have the equality,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{f(x + \Delta x) - f(x)}{\Delta x} = f'(c)
 \end{equation*}
 </div>
-<p id="p-304">In addition, the MVT implies the following intuitive fact, that the average slope is somewhere in between the maximum and minimum instantaneous slopes. More precisely,</p>
+<p id="p-309">In addition, the MVT implies the following intuitive fact, that the average slope is somewhere in between the maximum and minimum instantaneous slopes. More precisely,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\min_{x \in [a,b]} f'(x) \leq \frac{f(b) - f(a)}{b - a} \leq \max_{x \in [a,b]} f'(x)}
@@ -227,9 +228,9 @@ v_{\text{avg}} = \frac{x(b) - x(a)}{b - a}
 </div></section><section class="subsection" id="subsection-77"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.5.4</span> <span class="title">Examples</span>
 </h3>
-<article class="example example-like" id="example-21"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-21"><h4 class="heading">
+<article class="example example-like" id="example-22"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-22"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-21"><article class="example example-like"><p id="p-305">Consider the reciprocal function,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-22"><article class="example example-like"><p id="p-310">Consider the reciprocal function,</p>
 <div class="displaymath">
 \begin{equation*}
 f(x) = \frac{1}{x}

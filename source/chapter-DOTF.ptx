@@ -10,5 +10,6 @@
 
         <xi:include href="./chapter-DOTF/section-DOTF.ptx"/>
         <xi:include href="./chapter-DOTF/section-DOEF.ptx"/>
+        <xi:include href="./chapter-DOTF/section-DOIF.ptx"/>
 
 </chapter>

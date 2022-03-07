@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-05T14:40:29-08:00       *-->
+<!--*       on 2022-03-07T15:24:24-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,9 +13,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><article class="example example-like"><p>Consider the function \(f(x) = x^3\text{.}\) For a point \(a\text{,}\) the tangent line to \(f\) at \(x = a\) is given by \(L(x) = a^3 + 3a^2(x - a)\text{.}\) Then, the error in the linear approximation is given by,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\sin{x} \approx x
+E(x) = x^3 - \brac{a^3 + 3a^2 (x - a)}
 \end{equation*}
-</div></article></body>
+</div>
+<p>This can be simplified and factored, but it is made more simple using delta notation. In this notation, \(\Delta y = (a + \Delta x)^3 - a^3 = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3\text{,}\) and \(f'(a) \Delta x = 3a^2 \Delta x\text{.}\) Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+E(x) \amp = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3 - 3a^2 \Delta x\\
+\amp = 3a (\Delta x)^2 + (\Delta x)^3\\
+\amp = (\Delta x)^2 (3a + \Delta x)
+\end{align*}
+</div>
+<p>Notice that as \(\Delta x \to 0\text{,}\) \(E(x) \to 0\text{,}\) due to the factor of \(\Delta x\) in the expression. In addition, \(E(x) \to 0\) quite quickly, because \(\Delta x\) is being squared.</p></article></body>
 </html>

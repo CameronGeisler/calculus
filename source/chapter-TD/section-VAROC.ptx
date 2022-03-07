@@ -15,7 +15,7 @@
     <subsection>
         <title>Motion and Velocity</title>
         <p>
-            Consider the motion of a moving object. For simplicity, consider an object that is moving along a straight line, which is said to be in <term>rectilinear motion</term>. In particular, the position <m>x</m> of an object is given by <m>x = x(t)</m>. Recall that if the velocity of the object is constant, then this velocity <m>v</m> is given by,
+            Consider the motion of a moving object. For simplicity, consider an object that is moving along a straight line, which is said to be in <term>rectilinear motion</term>. In particular, the position <m>x</m> of an object is given by <m>x = x(t)</m>. Then, the <term>displacement</term> is <m>\Delta x</m>, the (signed) change in position. Recall that if the velocity of the object is constant, then this velocity <m>v</m> is given by,
         </p>
         <me>
             v = \frac{\Delta x}{\Delta t}
