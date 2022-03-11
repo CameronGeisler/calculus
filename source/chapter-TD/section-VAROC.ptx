@@ -65,7 +65,7 @@
     </subsection>
 
     <subsection>
-        <title>Acceleration</title>
+        <title>Acceleration and Jerk</title>
         <p>
             A similar analysis can be done with acceleration. If an object has velocity given by <m>v = v(t)</m>, then the <term>average acceleration</term> between times <m>t = a</m> and <m>t = b</m> is,
         </p>
@@ -83,6 +83,12 @@
         </p>
         <me>
             \boxed{a(t) = \lim_{\Delta t \to 0} \frac{v(t + \Delta t) - v(t)}{\Delta t} = v'(t)}
+        </me>
+        <p>
+            Also, <term>jerk</term> is defined to be the rate of change of acceleration. If the jerk at time <m>t</m> is denoted by <m>j(t)</m>, then,
+        </p>
+        <me>
+            j(t) = \lim_{\Delta t \to 0} \frac{a(t + \Delta t) - a(t)}{\Delta t} = a'(t)
         </me>
     </subsection>
 

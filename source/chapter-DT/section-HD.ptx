@@ -74,4 +74,15 @@
         </p>
     </subsection>
 
+    <subsection>
+        <title>Kinematics and Higher Derivatives</title>
+        <p>
+            Recall that if <m>x(t)</m> is the position of an object at time <m>t</m>, its velocity and acceleration are given by <m>v(t) = x'(t)</m> and <m>a(t) = v'(t)</m>, respectively. Then, using the language of higher derivatives,
+        </p>
+        <md>
+            <mrow>v(t) \amp = \frac{dx}{dt} \quad \text{is the first derivative of position}</mrow>
+            <mrow>a(t) \amp = \frac{dv}{dt} = \frac{d^2x}{dt^2} \quad \text{is the second derivative of position}</mrow>
+        </md>
+    </subsection>
+
 </section>

@@ -28,7 +28,7 @@
     </introduction>
 
     <subsection>
-        <title>Inverse Function Theorem</title>
+        <title>Derivative of Inverse Functions (Inverse Function Theorem)</title>
         <p>
             For a function <m>f</m> which is one-to-one, it has an inverse function <m>f^{-1}</m>. In this case, the relation,
         </p>
@@ -96,7 +96,31 @@
         <p>
             which is intuitively true, if the Leibniz notation for derivative is treated as a fraction.
         </p>
+    </subsection>
 
+    <subsection>
+        <title>Examples</title>
+        <example>
+            <p>
+                For the function <m>f(x) = x^5 + 2x^3 + 7x + 1</m>, consider <m>(f^{-1})'(1)</m>. First,
+            </p>
+            <me>
+                (f^{-1})'(1) = \frac{1}{f'(f^{-1}(1))}
+            </me>
+            <p>
+                Then, <m>f^{-1}(1) = x</m> if and only if <m>f(x) = 1</m>. Then, to solve for <m>x</m>, solve <m>x^5 + 2x^3 + 7x + 1 = 1</m>. This gives,
+            </p>
+            <md>
+                <mrow>x^5 + 2x^3 + 7x \amp = 0</mrow>
+                <mrow>x \brac{x^4 + 2x^2 + 7} \amp = 0</mrow>
+            </md>
+            <p>
+                Here, <m>x = 0</m> is a solution, and there are no other solutions because <m>x^4 + 2x^2 + 7 = 0</m> has no solution. Or, if we assume that <m>f</m> is invertible, then it follows that there is at most one solution. Then, <m>f'(x) = 5x^4 + 6x + 7</m>, so <m>f'(0) = 7</m>. Thus,
+            </p>
+            <me>
+                (f^{-1})'(1) = \frac{1}{7}
+            </me>
+        </example>
     </subsection>
 
     <subsection>
@@ -111,7 +135,7 @@
             Then, differentiating this identity again results in an expression for the second derivative <m>(f^{-1})''</m>,
         </p>
         <md>
-            <mrow>\frac{d}{dx} (f^{-1})'(x) = \frac{d}{dx} \frac{1}{f'(f^{-1}(x))}</mrow>
+            <mrow>\frac{d}{dx} (f^{-1})'(x) \amp = \frac{d}{dx} \frac{1}{f'(f^{-1}(x))}</mrow>
             <mrow>(f^{-1})''(x) \amp = \frac{d}{dx} \frac{1}{f'(f^{-1}(x))}</mrow>
         </md>
         <p>

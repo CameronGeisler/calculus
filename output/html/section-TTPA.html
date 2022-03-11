@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-07T15:24:22-08:00       *-->
+<!--*       on 2022-03-10T13:53:42-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -156,44 +156,44 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-TTPA"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.6</span> <span class="title">Taylor's Theorem, Polynomial Approximation</span>
 </h2>
-<section class="introduction" id="introduction-18"><p id="p-355">Recall that linear approximation can be used to approximate values of functions. Of course, if we have a calculator, approximations are unnecessary. Approximations are useful when the true value of a number is unknown. However, we also want to know how accurate our approximation is, that is, an upper bound on the error of our approximation. In general,</p>
+<section class="introduction" id="introduction-18"><p id="p-356">Recall that linear approximation can be used to approximate values of functions. Of course, if we have a calculator, approximations are unnecessary. Approximations are useful when the true value of a number is unknown. However, we also want to know how accurate our approximation is, that is, an upper bound on the error of our approximation. In general,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\text{error} = \text{true value} - \text{approximate value}}
 \end{equation*}
 </div>
-<p id="p-356">After all, technically any number is an approximation to any other number. In addition, if the true value is unknown, it is not obvious how to quantify this error.</p></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
+<p id="p-357">After all, technically any number is an approximation to any other number. In addition, if the true value is unknown, it is not obvious how to quantify this error.</p></section><section class="subsection" id="subsection-99"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.1</span> <span class="title">Linear Approximations and Error</span>
 </h3>
-<p id="p-357">Recall that the linear approximation \(L\) of \(f\) about \(a\) is given by,</p>
+<p id="p-358">Recall that the linear approximation \(L\) of \(f\) about \(a\) is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 L(x) = f(a) + f'(a)(x - a)
 \end{equation*}
 </div>
-<p id="p-358">Then, the error \(E(x)\) of this approximation is given by,</p>
+<p id="p-359">Then, the error \(E(x)\) of this approximation is given by,</p>
 <div class="displaymath">
 \begin{align*}
 E(x) \amp = f(x) - L(x)\\
 E(x) \amp = f(x) - f(a) - f'(a)(x - a)
 \end{align*}
 </div>
-<p id="p-359">In delta notation, this is,</p>
+<p id="p-360">In delta notation, this is,</p>
 <div class="displaymath">
 \begin{equation*}
 E(x) = \Delta y - f'(a) \Delta x
 \end{equation*}
 </div>
-<p id="p-360">Graphically, \(E(x)\) represents the vertical distance at \(x\) between the graph of \(f\) and the tangent line to that graph. In general, if \(x\) is near \(a\text{,}\) then \(E(x)\) is small.</p>
+<p id="p-361">Graphically, \(E(x)\) represents the vertical distance at \(x\) between the graph of \(f\) and the tangent line to that graph. In general, if \(x\) is near \(a\text{,}\) then \(E(x)\) is small.</p>
 <article class="example example-like" id="example-29"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-29"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Error in linear approximation for cubing function.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-29"><article class="example example-like"><p id="p-361">Consider the function \(f(x) = x^3\text{.}\) For a point \(a\text{,}\) the tangent line to \(f\) at \(x = a\) is given by \(L(x) = a^3 + 3a^2(x - a)\text{.}\) Then, the error in the linear approximation is given by,</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-29"><article class="example example-like"><p id="p-362">Consider the function \(f(x) = x^3\text{.}\) For a point \(a\text{,}\) the tangent line to \(f\) at \(x = a\) is given by \(L(x) = a^3 + 3a^2(x - a)\text{.}\) Then, the error in the linear approximation is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 E(x) = x^3 - \brac{a^3 + 3a^2 (x - a)}
 \end{equation*}
 </div>
-<p id="p-362">This can be simplified and factored, but it is made more simple using delta notation. In this notation, \(\Delta y = (a + \Delta x)^3 - a^3 = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3\text{,}\) and \(f'(a) \Delta x = 3a^2 \Delta x\text{.}\) Then,</p>
+<p id="p-363">This can be simplified and factored, but it is made more simple using delta notation. In this notation, \(\Delta y = (a + \Delta x)^3 - a^3 = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3\text{,}\) and \(f'(a) \Delta x = 3a^2 \Delta x\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{align*}
 E(x) \amp = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3 - 3a^2 \Delta x\\
@@ -201,19 +201,19 @@ E(x) \amp = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3 - 3a^2 \Delta x\\
 \amp = (\Delta x)^2 (3a + \Delta x)
 \end{align*}
 </div>
-<p id="p-363">Notice that as \(\Delta x \to 0\text{,}\) \(E(x) \to 0\text{,}\) due to the factor of \(\Delta x\) in the expression. In addition, \(E(x) \to 0\) quite quickly, because \(\Delta x\) is being squared.</p></article></div>
-<p id="p-364">Graphically, it can be seen that the vertical distance between a function \(f\) and its tangent line follows a roughly quadratic pattern. Also, intuitively, $E$ depends on how fast the curve bends away from its tangent line. In other words, if $f''$ is small, then $E$ will be smaller, and if $f''$ is large, then $E$ will be larger. In summary,</p>
+<p id="p-364">Notice that as \(\Delta x \to 0\text{,}\) \(E(x) \to 0\text{,}\) due to the factor of \(\Delta x\) in the expression. In addition, \(E(x) \to 0\) quite quickly, because \(\Delta x\) is being squared.</p></article></div>
+<p id="p-365">Graphically, it can be seen that the vertical distance between a function \(f\) and its tangent line follows a roughly quadratic pattern. Also, intuitively, $E$ depends on how fast the curve bends away from its tangent line. In other words, if $f''$ is small, then $E$ will be smaller, and if $f''$ is large, then $E$ will be larger. In summary,</p>
 <article class="theorem theorem-like" id="theorem-22"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation error bound.</span>
 </h4>
-<p id="p-365">Let \(f\) be a function, differentiable on an interval containing \(a\) and \(x\text{.}\) Then, the error \(E(x) = f(x) - L(x)\) in the linear approximation \(L(x) = f(a) + f'(a)(x - a)\) satisfies,</p>
+<p id="p-366">Let \(f\) be a function, differentiable on an interval containing \(a\) and \(x\text{.}\) Then, the error \(E(x) = f(x) - L(x)\) in the linear approximation \(L(x) = f(a) + f'(a)(x - a)\) satisfies,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{E(x) = \frac{f''(c)}{2}(x - a)^2}
 \end{equation*}
 </div>
-<p class="continuation">for some \(c\) between \(a\) and \(x\text{.}\)</p></article><p id="p-366">The proof of this theorem is more advanced. Intuitively, this says that the error is proportional to the square of the distance between \(x\) and \(a\text{.}\) Also, the error depends on the magnitude of the second derivative \(f''\) for values between \(x\) and \(a\text{.}\) Notice here that the value \(c\) is unknown.</p>
-<article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-367">First, assume that \(x &gt; a\text{,}\) and the other case is similar. Apply the generalized MVT to \(E(x) = f(x) - f(a) - f'(a)(x - a)\) and the function \(g(x) = (x - a)^2\) on the interval \([a,x]\text{,}\) then, for some \(c \in (a,x)\text{,}\)</p>
+<p class="continuation">for some \(c\) between \(a\) and \(x\text{.}\)</p></article><p id="p-367">The proof of this theorem is more advanced. Intuitively, this says that the error is proportional to the square of the distance between \(x\) and \(a\text{.}\) Also, the error depends on the magnitude of the second derivative \(f''\) for values between \(x\) and \(a\text{.}\) Notice here that the value \(c\) is unknown.</p>
+<article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-368">First, assume that \(x &gt; a\text{,}\) and the other case is similar. Apply the generalized MVT to \(E(x) = f(x) - f(a) - f'(a)(x - a)\) and the function \(g(x) = (x - a)^2\) on the interval \([a,x]\text{,}\) then, for some \(c \in (a,x)\text{,}\)</p>
 <div class="displaymath">
 \begin{align*}
 \frac{E(x) - E(a)}{(x - a)^2 - (a - a)^2} \amp = \frac{E'(c)}{2(c - a)}\\
@@ -237,12 +237,12 @@ E(x) \amp = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3 - 3a^2 \Delta x\\
 <article class="corollary theorem-like" id="corollary-5"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">5.6.3</span><span class="period">.</span>
 </h4>
-<p id="p-368">If \(\abs{f''(t)} \lt M\) for all \(t\) between \(a\) and \(x\text{,}\) then,</p>
+<p id="p-369">If \(\abs{f''(t)} \lt M\) for all \(t\) between \(a\) and \(x\text{,}\) then,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\abs{E(x)} \leq \frac{M}{2}(x - a)^2}
 \end{equation*}
-</div></article><p id="p-369">Intuitively, the error depends on the magnitude of the concavity of the graph of \(f\text{.}\)</p></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
+</div></article><p id="p-370">Intuitively, the error depends on the magnitude of the concavity of the graph of \(f\text{.}\)</p></section><section class="subsection" id="subsection-100"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.2</span> <span class="title">Quadratic Approximations</span>
 </h3>
 <article class="example example-like" id="example-30"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-30"><h4 class="heading">
@@ -265,58 +265,58 @@ E(x) \amp = 3a^2 \Delta x + 3a (\Delta x)^2 + (\Delta x)^3 - 3a^2 \Delta x\\
 \begin{equation*}
 e^x \approx 1 + x + \frac{1}{2} x^2
 \end{equation*}
-</div></article></div></section><section class="subsection" id="subsection-99"><h3 class="heading hide-type">
+</div></article></div></section><section class="subsection" id="subsection-101"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.3</span> <span class="title">Taylor Polynomials</span>
 </h3>
-<p id="p-370">Intuitively, the linearization of \(f\) at \(x = a\text{,}\)</p>
+<p id="p-371">Intuitively, the linearization of \(f\) at \(x = a\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 L(x) = f(a) + f'(a)(x - a)
 \end{equation*}
 </div>
-<p id="p-371">describes the behavior of \(f\) near \(a\) better than any other degree 1 polynomial, in that $L$ matches \(f\) and its derivative \(f'\) at \(a\text{,}\) i.e. \(L(a) = f(a)\) and \(L'(a) = f'(a)\text{.}\)</p>
-<p id="p-372">A better approximation of \(f\) can be obtained by using quadratic or higher-degree polynomials which match more derivatives at \(x = a\text{.}\) For example, consider,</p>
+<p id="p-372">describes the behavior of \(f\) near \(a\) better than any other degree 1 polynomial, in that $L$ matches \(f\) and its derivative \(f'\) at \(a\text{,}\) i.e. \(L(a) = f(a)\) and \(L'(a) = f'(a)\text{.}\)</p>
+<p id="p-373">A better approximation of \(f\) can be obtained by using quadratic or higher-degree polynomials which match more derivatives at \(x = a\text{.}\) For example, consider,</p>
 <div class="displaymath">
 \begin{equation*}
 T_2(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2}(x - a)^2
 \end{equation*}
 </div>
-<p id="p-373">which satisfies \(T_2(a) = f(a), T_2'(a) = f'(a)\text{,}\) and also \(T_2''(a) = f''(a)\) (notice the factor of 2 in the denominator in \(T_2\) which allows for the last matching). In a similar way, \(T_2\) describes the behavior of \(f\) near \(a\) better than any other degree 2 polynomial. In general, if \(f\) is \(n\) times differentiable on some open interval containing \(a\text{,}\) then the polynomial,</p>
+<p id="p-374">which satisfies \(T_2(a) = f(a), T_2'(a) = f'(a)\text{,}\) and also \(T_2''(a) = f''(a)\) (notice the factor of 2 in the denominator in \(T_2\) which allows for the last matching). In a similar way, \(T_2\) describes the behavior of \(f\) near \(a\) better than any other degree 2 polynomial. In general, if \(f\) is \(n\) times differentiable on some open interval containing \(a\text{,}\) then the polynomial,</p>
 <div class="displaymath">
 \begin{equation*}
 T_n(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \frac{f'''(a)}{3!}(x - a)^3 + \dots + \frac{f^{(n)}(a)}{n!}(x - a)^n
 \end{equation*}
 </div>
-<p id="p-374">is the unique polynomial which matches \(f\) and its first \(n\) derivatives at \(x = a\text{,}\)</p>
+<p id="p-375">is the unique polynomial which matches \(f\) and its first \(n\) derivatives at \(x = a\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 T_n(a) = f(a) \qquad T_n'(a) = f'(a) \qquad \cdots \qquad T_n^{(n)}(a) = f^{(n)}(a)
 \end{equation*}
 </div>
-<p id="p-375">and describes \(f\) near \(x = a\) better than any other polynomial of degree at most \(n\text{.}\) This is called a Taylor polynomial of \(f\text{.}\)</p>
+<p id="p-376">and describes \(f\) near \(x = a\) better than any other polynomial of degree at most \(n\text{.}\) This is called a Taylor polynomial of \(f\text{.}\)</p>
 <article class="definition definition-like" id="definition-15"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.6.7</span><span class="period">.</span>
 </h4>
-<p id="p-376">Let \(f\) be \(n\)-times differentiable, \(a \in \mathbb{R}\text{.}\) Then, the \(n\)th order <dfn class="terminology">Taylor polynomial</dfn> centered at \(a\) is given by,</p>
+<p id="p-377">Let \(f\) be \(n\)-times differentiable, \(a \in \mathbb{R}\text{.}\) Then, the \(n\)th order <dfn class="terminology">Taylor polynomial</dfn> centered at \(a\) is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{T_n(x) = f(a) + f'(a)(x - a) + \dots + \frac{f^{(n)}(a)}{n!}(x - a)^n = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (x - a)^k}
 \end{equation*}
 </div>
-<p class="continuation">A Taylor polynomial centered at \(a = 0\) are also called <dfn class="terminology">MacLaurin polynomial</dfn>.</p></article><p id="p-377">In this way, \(T_1(x)\) is the linearization of \(f\text{,}\) and \(T_2(x)\) is a quadratic approximation of \(f\text{,}\) etc. The 0th-order Taylor polynomial, \(T_0\text{,}\) is a constant function \(T_0(x) = f(a)\text{.}\) Also, in general,</p>
+<p class="continuation">A Taylor polynomial centered at \(a = 0\) are also called <dfn class="terminology">MacLaurin polynomial</dfn>.</p></article><p id="p-378">In this way, \(T_1(x)\) is the linearization of \(f\text{,}\) and \(T_2(x)\) is a quadratic approximation of \(f\text{,}\) etc. The 0th-order Taylor polynomial, \(T_0\text{,}\) is a constant function \(T_0(x) = f(a)\text{.}\) Also, in general,</p>
 <div class="displaymath">
 \begin{equation*}
 T_n(x) = T_{n-1}(x) + \frac{f^{(n)}(a)}{n!}(x - a)^n
 \end{equation*}
 </div>
-<p id="p-378">Note that sometimes, \(T_n\) is called the \(n\)th degree Taylor polynomial, however \(T_n\) may have degree lower than \(n\) if \(f^{(n)}(a) = 0\text{,}\) etc. Taylor polynomials are named after <dfn class="terminology">Brook Taylor</dfn> (1685-1731).</p></section><section class="subsection" id="subsection-100"><h3 class="heading hide-type">
+<p id="p-379">Note that sometimes, \(T_n\) is called the \(n\)th degree Taylor polynomial, however \(T_n\) may have degree lower than \(n\) if \(f^{(n)}(a) = 0\text{,}\) etc. Taylor polynomials are named after <dfn class="terminology">Brook Taylor</dfn> (1685-1731).</p></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.4</span> <span class="title">Taylor's Theorem (Taylor's Formula)</span>
 </h3>
-<p id="p-379">Taylor polynomials are used to approximate functions near a value \(x = a\text{.}\) Taylor's theorem provides information about the error of the approximation.</p>
+<p id="p-380">Taylor polynomials are used to approximate functions near a value \(x = a\text{.}\) Taylor's theorem provides information about the error of the approximation.</p>
 <article class="definition definition-like" id="definition-16"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.6.8</span><span class="period">.</span>
 </h4>
-<p id="p-380">The <dfn class="terminology">error term</dfn> (or <dfn class="terminology">remainder term</dfn>) of a Taylor approximation is defined by,</p>
+<p id="p-381">The <dfn class="terminology">error term</dfn> (or <dfn class="terminology">remainder term</dfn>) of a Taylor approximation is defined by,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{E_n(x) = f(x) - T_n(x)}
@@ -324,7 +324,7 @@ T_n(x) = T_{n-1}(x) + \frac{f^{(n)}(a)}{n!}(x - a)^n
 </div></article><article class="theorem theorem-like" id="theorem-23"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.6.9</span><span class="period">.</span>
 </h4>
-<p id="p-381">Let \(f\) be \((n+1)\)-times differentiable on an interval containing \(a\) and \(x\text{.}\) Then, the error term is given by,</p>
+<p id="p-382">Let \(f\) be \((n+1)\)-times differentiable on an interval containing \(a\) and \(x\text{.}\) Then, the error term is given by,</p>
 <div class="displaymath">
 \begin{equation*}
 E_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x - a)^{n+1}
@@ -336,36 +336,36 @@ E_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x - a)^{n+1}
 \boxed{f(x) = \underbrace{f(a) + f'(a)(x - a) + \dots + \frac{f^{(n+1)}(a)}{n!}(x - a)^n}_{T_n(x)} + \underbrace{\frac{f^{(n+1)}(c)}{(n + 1)!}(x - a)^{n+1}}_{E_n(x)}}
 \end{equation*}
 </div>
-<p class="continuation">This equation is called <dfn class="terminology">Taylor's formula</dfn>.</p></article><p id="p-382">Notice that the error term of Taylor's theorem is just the next term in the Taylor approximation, except with the derivative evaluated at some unknown point \(c\) between \(a\) and \(x\text{,}\) rather than at \(a\text{.}\)</p>
+<p class="continuation">This equation is called <dfn class="terminology">Taylor's formula</dfn>.</p></article><p id="p-383">Notice that the error term of Taylor's theorem is just the next term in the Taylor approximation, except with the derivative evaluated at some unknown point \(c\) between \(a\) and \(x\text{,}\) rather than at \(a\text{.}\)</p>
 <article class="corollary theorem-like" id="corollary-6"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">5.6.10</span><span class="period">.</span>
 </h4>
-<p id="p-383">If the \((n+1)\)-st derivative of \(f\) is bounded, say \(\abs{f^{(n+1)}(t)} \leq M\) for all \(t\) between \(x\) and \(a\text{,}\) then by Taylor's theorem,</p>
+<p id="p-384">If the \((n+1)\)-st derivative of \(f\) is bounded, say \(\abs{f^{(n+1)}(t)} \leq M\) for all \(t\) between \(x\) and \(a\text{,}\) then by Taylor's theorem,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{E_n(x) \leq \frac{M}{(n + 1)!}(x - a)^{n+1}}
 \end{equation*}
-</div></article></section><section class="subsection" id="subsection-101"><h3 class="heading hide-type">
+</div></article></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.5</span> <span class="title">Proof of Taylor's Theorem</span>
 </h3>
-<article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-384">For \(n = 0\text{,}\) Taylor's theorem is,</p>
+<article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-385">For \(n = 0\text{,}\) Taylor's theorem is,</p>
 <div class="displaymath">
 \begin{equation*}
 f(x) = f(a) + f'(c)(x - a)
 \end{equation*}
 </div>
-<p class="continuation">for some \(c\) between \(a\) and \(x\text{.}\) This is just the MVT.</p></article></div></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
+<p class="continuation">for some \(c\) between \(a\) and \(x\text{.}\) This is just the MVT.</p></article></div></section><section class="subsection" id="subsection-104"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.6.6</span> <span class="title">Misc</span>
 </h3>
 <article class="theorem theorem-like" id="theorem-24"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.6.11</span><span class="period">.</span>
 </h4>
-<p id="p-385">Let \(p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n\) be a polynomial. Then, for any \(a \in \mathbb{R}\text{,}\) \(p\) can be written in the form,</p>
+<p id="p-386">Let \(p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n\) be a polynomial. Then, for any \(a \in \mathbb{R}\text{,}\) \(p\) can be written in the form,</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = c_0 + c_1 (x - a) + c_2 (x - a)^2 + \dots + c_n (x - a)^n = \sum_{k=0}^n c_k (x - a)^n
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-386">We write \(x = (x - a) + a\text{.}\) Then,</p>
+</div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-387">We write \(x = (x - a) + a\text{.}\) Then,</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = a_0 + a_1 \brac{(x - a) + a} + a_2 \brac{(x - a) + a}^2 + \dots + a_n \brac{(x - a) + a}^n
@@ -375,16 +375,16 @@ p(x) = a_0 + a_1 \brac{(x - a) + a} + a_2 \brac{(x - a) + a}^2 + \dots + a_n \br
 <article class="theorem theorem-like" id="theorem-25"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.6.12</span><span class="period">.</span>
 </h4>
-<p id="p-387">If \(p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n\) is a polynomial, then the coefficients are given by,</p>
+<p id="p-388">If \(p(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n\) is a polynomial, then the coefficients are given by,</p>
 <div class="displaymath">
 \begin{equation*}
 a_k = \frac{p^{(k)}(0)}{k!}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-388">The \(k\)th derivative of \(p(x)\) has constant term \(k! a_k\text{.}\) Thus, \(p^{(k)}(0) = k! a_k\text{,}\) and the result follows.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-389">The \(k\)th derivative of \(p(x)\) has constant term \(k! a_k\text{.}\) Thus, \(p^{(k)}(0) = k! a_k\text{,}\) and the result follows.</p></article></div>
 <article class="theorem theorem-like" id="theorem-26"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.6.13</span><span class="period">.</span>
 </h4>
-<p id="p-389">Let \(T_n(x) = a_0 + a_1 (x - a) + a_2 (x - a)^2 + \dots + a_n (x - a)^n\) is the MacLaurin polynomial of \(f\) at \(x = a\text{.}\) Then, the error term \(E_n(x) = f(x) - T_n(x)\) is such that,</p>
+<p id="p-390">Let \(T_n(x) = a_0 + a_1 (x - a) + a_2 (x - a)^2 + \dots + a_n (x - a)^n\) is the MacLaurin polynomial of \(f\) at \(x = a\text{.}\) Then, the error term \(E_n(x) = f(x) - T_n(x)\) is such that,</p>
 <div class="displaymath">
 \begin{equation*}
 E_n(a) = E_n'(a) = \dots = E^{(n)}(a) = 0
@@ -393,7 +393,7 @@ E_n(a) = E_n'(a) = \dots = E^{(n)}(a) = 0
 <p class="continuation">and so the \(n\)th Taylor polynomial of \(E_n\) at \(a\) is 0.</p></article><article class="theorem theorem-like" id="theorem-27"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.6.14</span><span class="period">.</span>
 </h4>
-<p id="p-390">If \(g(x)\) is \((n+1)\)-times differentiable on some interval containing \(x\) and \(a\text{,}\) and if \(g(a) = g'(a) = \dots = g^{(n)}(a) = 0\text{,}\) then there exists \(c\) between \(a\) and \(x\) such that,</p>
+<p id="p-391">If \(g(x)\) is \((n+1)\)-times differentiable on some interval containing \(x\) and \(a\text{,}\) and if \(g(a) = g'(a) = \dots = g^{(n)}(a) = 0\text{,}\) then there exists \(c\) between \(a\) and \(x\) such that,</p>
 <div class="displaymath">
 \begin{equation*}
 g(x) = \frac{g^{(n+1)}(c)}{(n+1)!} (x - a)^{n+1}

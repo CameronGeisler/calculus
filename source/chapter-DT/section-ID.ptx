@@ -29,10 +29,10 @@
     <subsection>
         <title>Implicit Differentiation</title>
         <p>
-            The idea of implicit differentiation is to differentiate both sides of an equation with respect to <m>x</m>, regarding <m>y</m> as a function of <m>x</m> with derivative <m>\frac{dy}{dx} = y'</m>. In other words, apply the differentiation operator <m>\frac{d}{dx}</m> to both sides of the equation. Then, we can solve the equation for <m>\frac{dy}{dx}</m> to determine an equation for the derivative of the function.
+            The idea of implicit differentiation is to differentiate both sides of an equation with respect to <m>x</m>, regarding <m>y</m> as a function of <m>x</m> with derivative <m>\frac{dy}{dx} = y'</m>. In other words, apply the differentiation operator <m>\frac{d}{dx}</m> to both sides of the equation. Then, solve the equation for <m>\frac{dy}{dx}</m> to determine an equation for the derivative of the function.
         </p>
         <p>
-            When differentiating <m>y</m>, it is often necessary to use the chain rule.
+            When differentiating an expression in <m>y</m>, it is necessary to use the chain rule.
         </p>
         <p>
             When using implicit differentiation, <m>\frac{dy}{dx}</m> is usually in terms of both <m>x</m> and <m>y</m>, and so it is necessary to know both coordinates to determine the derivative at a point.
@@ -69,6 +69,10 @@
             The equation <m>x^3 + y^3 - 3xy = 0</m> represents a curve called the <term>folium of Descartes</term>. Since <m>y</m> is a cubic polynomial in terms of <m>x</m>, it is possible to solve for <m>y</m> explicitly using the cubic formula, resulting in 3 explicit functions. However, the explicit expression is quite complicated, making the explicit derivative tedious to compute.
         </p>
     </subsection>
+
+    <subsection>
+        <title>Ellipses</title>
+    </subsection>
     
     <subsection>
         <title>Hyperbolas</title>
@@ -94,7 +98,7 @@
             Then, the tangent line at a point <m>(x_0,y_0)</m> on the parabola is given by,
         </p>
         <me>
-            y - y_0 \amp = \frac{b^2 x_0}{a^2 y_0} (x - x_0)
+            y - y_0 = \frac{b^2 x_0}{a^2 y_0} (x - x_0)
         </me>
         <p>
             It turns out that this can be simplified further. This comes from trying to rewrite the equation into the standard form of a line <m>Ax + By = C</m>. We have,
@@ -112,6 +116,13 @@
             \frac{x_0 x}{a^2} - \frac{y_0 y}{b^2} = 1
         </me>
 
+    </subsection>
+
+    <subsection>
+        <title>Implicit Second Derivatives</title>
+        <p>
+            After determining <m>\frac{dy}{dx}</m>, we can differentiate again to determine <m>\frac{d^2y}{dx^2}</m>. Typically, after simplifying, we can simplify by substituting the equation of the curve.
+        </p>
     </subsection>
 
     <subsection>

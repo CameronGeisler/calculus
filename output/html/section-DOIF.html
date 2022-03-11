@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-07T15:24:23-08:00       *-->
+<!--*       on 2022-03-10T13:53:42-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -156,10 +156,10 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-DOIF"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Derivatives of Inverse Functions</span>
 </h2>
-<section class="introduction" id="introduction-21"><p id="p-478">There are many functions in mathematics which have useful inverses. For example, exponential functions have inverses of logarithmic functions, and trigonometric functions have their inverse trigonometric functions (\(\arcsin{x}, \arccos{x}, \arctan{x}\)).</p>
-<p id="p-479">Then, consider how the derivative of a function This theorem will allow us to more easily compute the derivative of the various inverse functions in mathematics. In addition, it allows us to compute the derivative (slopes) of the inverse of a function, even if it is difficult or impossible to determine an explicit formula for the inverse function.</p>
-<p id="p-480">Recall that graphically, an inverse function is the functions reflection over the line \(y = x\text{.}\) Then, it seems intuitive that the slopes of the tangent lines of \(y = f^{-1}(x)\) can be written in terms of the slopes of \(y = f(x)\text{.}\)</p>
-<p id="p-481"><a class="external" href="https://www.desmos.com/calculator/qgkawoqjgj" target="_blank">Consider this Desmos applet</a>. For the given slopes, it appears that if the point \((a,b)\) is on the graph of \(f(x)\text{,}\) then the slope of the graph of \(f^{-1}\) at \(b\text{,}\) or \(f^{-1}(b)\) is the reciprocal,</p>
+<section class="introduction" id="introduction-21"><p id="p-479">There are many functions in mathematics which have useful inverses. For example, exponential functions have inverses of logarithmic functions, and trigonometric functions have their inverse trigonometric functions (\(\arcsin{x}, \arccos{x}, \arctan{x}\)).</p>
+<p id="p-480">Then, consider how the derivative of a function This theorem will allow us to more easily compute the derivative of the various inverse functions in mathematics. In addition, it allows us to compute the derivative (slopes) of the inverse of a function, even if it is difficult or impossible to determine an explicit formula for the inverse function.</p>
+<p id="p-481">Recall that graphically, an inverse function is the functions reflection over the line \(y = x\text{.}\) Then, it seems intuitive that the slopes of the tangent lines of \(y = f^{-1}(x)\) can be written in terms of the slopes of \(y = f(x)\text{.}\)</p>
+<p id="p-482"><a class="external" href="https://www.desmos.com/calculator/qgkawoqjgj" target="_blank">Consider this Desmos applet</a>. For the given slopes, it appears that if the point \((a,b)\) is on the graph of \(f(x)\text{,}\) then the slope of the graph of \(f^{-1}\) at \(b\text{,}\) or \(f^{-1}(b)\) is the reciprocal,</p>
 <div class="displaymath">
 \begin{equation*}
 f^{-1}(b) = \frac{1}{f'(a)}
@@ -167,96 +167,96 @@ f^{-1}(b) = \frac{1}{f'(a)}
 </div>
 <article class="example example-like" id="example-33"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-33"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Linear function.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-33"><article class="example example-like"><p id="p-482">Recall that for a linear function, say \(f(x) = 3x + 2\text{,}\) its inverse function is given by \(f^{-1}(x) = \frac{1}{3}x - \frac{2}{3}\text{.}\) Notice that the slope of the inverse function is the reciprocal of the slope of the original function.</p></article></div></section><section class="subsection" id="subsection-120"><h3 class="heading hide-type">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-33"><article class="example example-like"><p id="p-483">Recall that for a linear function, say \(f(x) = 3x + 2\text{,}\) its inverse function is given by \(f^{-1}(x) = \frac{1}{3}x - \frac{2}{3}\text{.}\) Notice that the slope of the inverse function is the reciprocal of the slope of the original function.</p></article></div></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.1</span> <span class="title">Inverse Function Theorem</span>
 </h3>
-<p id="p-483">For a function \(f\) which is one-to-one, it has an inverse function \(f^{-1}\text{.}\) In this case, the relation,</p>
+<p id="p-484">For a function \(f\) which is one-to-one, it has an inverse function \(f^{-1}\text{.}\) In this case, the relation,</p>
 <div class="displaymath">
 \begin{equation*}
 f\brac{f^{-1}(x)} = x
 \end{equation*}
 </div>
-<p id="p-484">is true for all \(x\) in the domain of \(f^{-1}\text{.}\) In this way, inverse functions are a special case of function composition. From this, we can determine an expression for the derivative of the inverse function, \((f^{-1})'\text{,}\) in terms of the derivative of \(f\text{.}\) Differentiating both sides (using implicit differentiation),</p>
+<p id="p-485">is true for all \(x\) in the domain of \(f^{-1}\text{.}\) In this way, inverse functions are a special case of function composition. From this, we can determine an expression for the derivative of the inverse function, \((f^{-1})'\text{,}\) in terms of the derivative of \(f\text{.}\) Differentiating both sides (using implicit differentiation),</p>
 <div class="displaymath">
 \begin{align*}
 \frac{d}{dx} f\brac{f^{-1}(x)} \amp = \frac{d}{dx} x\\
 f' \brac{f^{-1}(x)} (f^{-1})'(x) \amp = 1
 \end{align*}
 </div>
-<p id="p-485">The left-hand side follows from the chain rule. Then, solving for the derivative of \(f^{-1}\text{,}\) \((f^{-1})'(x)\text{,}\)</p>
+<p id="p-486">The left-hand side follows from the chain rule. Then, solving for the derivative of \(f^{-1}\text{,}\) \((f^{-1})'(x)\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 (f^{-1})'(x) = \frac{1}{f' \brac{f^{-1}(x)}}
 \end{equation*}
 </div>
-<p id="p-486">In summary,</p>
+<p id="p-487">In summary,</p>
 <article class="theorem theorem-like" id="theorem-37"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of inverse functions.</span>
 </h4>
-<p id="p-487">Let \(f\) be one-to-one with inverse \(f^{-1}\text{.}\) Then, if \(f\) is differentiable at \(f^{-1}(x)\text{,}\) then \(f^{-1}\) is differentiable at \(x\text{,}\) and,</p>
+<p id="p-488">Let \(f\) be one-to-one with inverse \(f^{-1}\text{.}\) Then, if \(f\) is differentiable at \(f^{-1}(x)\text{,}\) then \(f^{-1}\) is differentiable at \(x\text{,}\) and,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{(f^{-1})'(x) = \frac{1}{f'\brac{f^{-1}(x)}}}
 \end{equation*}
 </div>
-<p id="p-488">for all \(x \in D(f^{-1})\) such that \(f'(f^{-1}(x)) \neq 0\text{.}\)</p></article><p id="p-489">Graphically, this means that the slope of the graph of \(f^{-1}\) at $(x,y)$ is the reciprocal of the slope of the graph of \(f\) at the corresponding point $(y,x)$.</p>
-<p id="p-490">The requirement that \(f' \neq 0\) intuitively comes from the fact that if \(f\) has a horizontal tangent line at a point, then \(f^{-1}\) will have a vertical tangent line at the corresponding point, and so will not be differentiable there.</p>
-<article class="hiddenproof" id="proof-20"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><p id="p-491">Note that technically, the derivation above does not prove the above theorem. In particular, the derivation uses the chain rule, which requires assuming that the inverse function is differentiable, which is not known a priori.</p></article></div>
-<p id="p-492">Also, notice that if \(f\) is always increasing, i.e. \(f'(x) &gt; 0\) for all \(x\text{,}\) then \((f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))} &gt; 0\) for all \(x\) also. Thus, \(f^{-1}\) is increasing.</p>
+<p id="p-489">for all \(x \in D(f^{-1})\) such that \(f'(f^{-1}(x)) \neq 0\text{.}\)</p></article><p id="p-490">Graphically, this means that the slope of the graph of \(f^{-1}\) at $(x,y)$ is the reciprocal of the slope of the graph of \(f\) at the corresponding point $(y,x)$.</p>
+<p id="p-491">The requirement that \(f' \neq 0\) intuitively comes from the fact that if \(f\) has a horizontal tangent line at a point, then \(f^{-1}\) will have a vertical tangent line at the corresponding point, and so will not be differentiable there.</p>
+<article class="hiddenproof" id="proof-20"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><p id="p-492">Note that technically, the derivation above does not prove the above theorem. In particular, the derivation uses the chain rule, which requires assuming that the inverse function is differentiable, which is not known a priori.</p></article></div>
+<p id="p-493">Also, notice that if \(f\) is always increasing, i.e. \(f'(x) &gt; 0\) for all \(x\text{,}\) then \((f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))} &gt; 0\) for all \(x\) also. Thus, \(f^{-1}\) is increasing.</p>
 <article class="corollary theorem-like" id="corollary-7"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
 </h4>
-<p id="p-493">If \(f\) is increasing on an interval $I$, then its inverse \(f^{-1}\) is increasing on the corresponding interval. Similarly, if \(f\) is decreasing, then \(f^{-1}\) is decreasing.</p></article></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
+<p id="p-494">If \(f\) is increasing on an interval $I$, then its inverse \(f^{-1}\) is increasing on the corresponding interval. Similarly, if \(f\) is decreasing, then \(f^{-1}\) is decreasing.</p></article></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.2</span> <span class="title">Leibniz Notation</span>
 </h3>
-<p id="p-494">Using Leibniz notation, if \(y = f(x)\text{,}\) and \(x = f^{-1}(y)\) is its inverse, then the derivative of \(y\) is \(\frac{dy}{dx}\text{,}\) and the derivative of the inverse is \(\frac{dx}{dy}\text{.}\) Then, the inverse function theorem can be written as,</p>
+<p id="p-495">Using Leibniz notation, if \(y = f(x)\text{,}\) and \(x = f^{-1}(y)\) is its inverse, then the derivative of \(y\) is \(\frac{dy}{dx}\text{,}\) and the derivative of the inverse is \(\frac{dx}{dy}\text{.}\) Then, the inverse function theorem can be written as,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{\frac{dx}{dy} = \frac{\quad 1 \quad}{\frac{dy}{dx}}}
 \end{equation*}
 </div>
-<p id="p-495">which is intuitively true, if the Leibniz notation for derivative is treated as a fraction.</p></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
+<p id="p-496">which is intuitively true, if the Leibniz notation for derivative is treated as a fraction.</p></section><section class="subsection" id="subsection-124"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.3</span> <span class="title">Concavity of Inverse Functions</span>
 </h3>
-<p id="p-496">A natural extension of the derivatives of inverse functions is the concavity of inverse functions. That is, how does the concavity of \(f^{-1}\) relate to that of \(f\text{?}\) Intuitively, from a graphically sketch, it seems that an increasing function reverse its concavity when inverted, and a decreasing function preserves concavity. To show this using calculus, recall that,</p>
+<p id="p-497">A natural extension of the derivatives of inverse functions is the concavity of inverse functions. That is, how does the concavity of \(f^{-1}\) relate to that of \(f\text{?}\) Intuitively, from a graphically sketch, it seems that an increasing function reverse its concavity when inverted, and a decreasing function preserves concavity. To show this using calculus, recall that,</p>
 <div class="displaymath">
 \begin{equation*}
 (f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}
 \end{equation*}
 </div>
-<p id="p-497">Then, differentiating this identity again results in an expression for the second derivative \((f^{-1})''\text{,}\)</p>
+<p id="p-498">Then, differentiating this identity again results in an expression for the second derivative \((f^{-1})''\text{,}\)</p>
 <div class="displaymath">
 \begin{align*}
-\frac{d}{dx} (f^{-1})'(x) = \frac{d}{dx} \frac{1}{f'(f^{-1}(x))}\\
+\frac{d}{dx} (f^{-1})'(x) \amp = \frac{d}{dx} \frac{1}{f'(f^{-1}(x))}\\
 (f^{-1})''(x) \amp = \frac{d}{dx} \frac{1}{f'(f^{-1}(x))}
 \end{align*}
 </div>
-<p id="p-498">The right-hand side can be differentiated using the quotient rule (or reciprocal rule),</p>
+<p id="p-499">The right-hand side can be differentiated using the quotient rule (or reciprocal rule),</p>
 <div class="displaymath">
 \begin{equation*}
 (f^{-1})''(x) = -\frac{f''(f^{-1}(x)) \cdot (f^{-1})'(x)}{(f'(f^{-1}(x)))^2}
 \end{equation*}
 </div>
-<p id="p-499">Note that,</p>
+<p id="p-500">Note that,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx} f'(f^{-1}(x)) = f''(f^{-1}(x)) \cdot (f^{-1})'(x)
 \end{equation*}
 </div>
-<p id="p-500">by the chain rule. Then, using the previous expression for \((f^{-1})'(x)\text{,}\) we can write this formula for \((f^{-1})''\) in terms of \(f'\) and \(f''\) only,</p>
+<p id="p-501">by the chain rule. Then, using the previous expression for \((f^{-1})'(x)\text{,}\) we can write this formula for \((f^{-1})''\) in terms of \(f'\) and \(f''\) only,</p>
 <div class="displaymath">
 \begin{align*}
 (f^{-1})''(x) \amp = -\frac{f''(f^{-1}(x)) \cdot \frac{1}{f'(f^{-1}(x))}}{(f'(f^{-1}(x)))^2}\\
 \amp = -\frac{f''(f^{-1}(x))}{(f'(f^{-1}(x)))^3}
 \end{align*}
 </div>
-<p id="p-501">In summary,</p>
+<p id="p-502">In summary,</p>
 <div class="displaymath">
 \begin{equation*}
 \boxed{(f^{-1})''(x) = -\frac{f''(f^{-1}(x))}{(f'(f^{-1}(x)))^3}}
 \end{equation*}
 </div>
-<p id="p-502">From this equation, we can observe that if \(f'\) and \(f''\) are both positive or both negative, then \((f^{-1})''\) is negative and positive, respectively. If \(f'\) and \(f''\) have opposite signs, then \((f^{-1})''\) is positive. It can be verified graphically that an increasing graph reverses its concavity when reflected over \(y = x\text{,}\) and a decreasing graph preserves its concavity.</p></section></section></div></main>
+<p id="p-503">From this equation, we can observe that if \(f'\) and \(f''\) are both positive or both negative, then \((f^{-1})''\) is negative and positive, respectively. If \(f'\) and \(f''\) have opposite signs, then \((f^{-1})''\) is positive. It can be verified graphically that an increasing graph reverses its concavity when reflected over \(y = x\text{,}\) and a decreasing graph preserves its concavity.</p></section></section></div></main>
 </div>
 </body>
 </html>

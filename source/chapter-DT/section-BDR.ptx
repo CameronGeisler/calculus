@@ -94,6 +94,9 @@
             <mrow>\amp = \frac{d}{dx} (a_n x^n) + \frac{d}{dx} (a_{n-1} x^{n-1}) + \dots + \frac{d}{dx} (a_1 x) + \frac{d}{dx} a_0 \amp\amp \text{by the sum rule}</mrow>
             <mrow>\amp = a_n n x^{n-1} + a_{n-1} (n - 1) x^{n-2} + \dots + a_1</mrow>
         </md>
+        <p>
+            Notice that the derivative of a polynomial of degree <m>n</m> is a polynomial of degree <m>n-1</m>. For example, the derivative of a cubic polynomial is quadratic, and the derivative of a quadratic polynomial is linear.
+        </p>
     </subsection>
     
 
