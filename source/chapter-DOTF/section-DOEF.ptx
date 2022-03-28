@@ -4,18 +4,9 @@
     <title>Derivatives of Exponential Functions</title>
 
     <subsection>
-        <title>Irrational Exponents Intuitive Definition</title>
+        <title>Irrational Exponents Definition</title>
         <p>
-            Before developing the derivative of exponential functions, we need to extend the definition of exponents to all real numbers, i.e. define the expression <m>b^x</m> for all real numbers <m>x</m>.
-        </p>
-        <p>
-            Recall that for a positive number <m>b</m> with rational exponent <m>\frac{m}{n}</m>, the power <m>b^{m/n}</m> is defined as,
-        </p>
-        <me>
-            b^{m/n} = \sqrt[n]{b^m}
-        </me>
-        <p>
-            Here, we will extend the definition of <m>b^x</m> for exponents <m>x</m> that are irrational. For example, what does <m>3^{\sqrt{2}}</m> mean? We can approximate <m>3^{\sqrt{2}}</m> by using rational approximations of the irrational exponent <m>\sqrt{2} = 1.41421356 \dots</m>. As the approximations <m>1.4, 1.41, 1.414, 1.4142</m> (and so on) include more decimals, they will better approximate <m>\sqrt{2}</m>, and so we can expect the powers <m>3^{1.4}, 3^{1.41}, 3^{1.414}, 3^{1.4142}</m> to better approximate <m>3^{\sqrt{2}}</m>. Each of these exponents are rational and so can be calculated, and they will <q>converge</q> to <m>3^{\sqrt{2}}</m>. Roughly, we define <m>b^r</m> for irrational powers <m>r</m> as the limit as rational values <m>x</m> approach <m>r</m>. That is,
+            Before developing the derivative of exponential functions, we need to extend the definition of exponents to all real numbers, i.e. define the expression <m>b^x</m> for all real numbers <m>x</m>. Roughly, we define <m>b^r</m> for irrational exponents <m>r</m> as the limit as rational values <m>x</m> approach <m>r</m>. That is,
         </p>
         <me>
             b^r = \lim_{x \to r, x \text{ rational}} b^x
@@ -29,9 +20,6 @@
         <me>
             3^{1.4}, 3^{1.41}, 3^{1.414}, 3^{1.4142}, \dots
         </me>
-        <p>
-            In this way, we can define the power <m>b^x</m> for all real numbers. Also, it turns out that all exponent laws and theorems that apply to powers with rational exponents also apply to powers with irrational exponents.
-        </p>
     </subsection>
 
     <subsection>
@@ -46,7 +34,10 @@
             It is named after <term>Leonard Euler</term> (where Euler is pronounced <q>Oi-ler</q>).
         </p>
         <p>
-            The number <m>e</m> is one of the most important mathematical constants in many applications of mathematics. The number <m>e</m> is an irrational number, meaning it is a non-terminating and non-repeating decimal. It was discovered by <term>Jacob Bernoulli</term>, despite being named after Euler. The number <m>e</m> is a discovered constant in the universe, similar to <m>\pi</m>. There are multiple equivalent definitions of <m>e</m>. One intuitive definition comes from exponential growth, compound interest, and a particular limit.
+            The number <m>e</m> is one of the most important mathematical constants in many applications of mathematics. The number <m>e</m> is an irrational number, meaning it is a non-terminating and non-repeating decimal. It was discovered by <term>Jacob Bernoulli</term>, despite being named after Euler. The number <m>e</m> is a discovered constant in the universe, similar to <m>\pi</m>. Euler's number is used as the base of an exponential function, and most calculators have a button for <m>e</m>.
+        </p>
+        <p>
+            There are multiple equivalent definitions of <m>e</m>. One intuitive definition comes from exponential growth, compound interest, and a particular limit.
         </p>
     </subsection>
 

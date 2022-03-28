@@ -64,4 +64,19 @@
             </p>
         </example>
     </subsection>
+
+    <subsection>
+        <title>Increasing Functions and Roots</title>
+        <p>
+            Recall that by the intermediate value theorem, if <m>f(a) \lt 0</m> and <m>f(b) > 0</m>, then there exists at least one solution <m>c \in (a,b)</m> such that <m>f(c) = 0</m>. Using the fact that positive derivative implies increasing, we can additionally show that there is <em>at most</em> one solution in the interval, which together implies that there is exactly one solution in the interval.
+        </p>
+        <p>
+            If <m>f'(x) > 0</m> on <m>(a,b)</m>, then there is at most one root. This is because if there were two roots <m>c_1</m> and <m>c_2</m>, say with <m>c_1 \lt c_2</m>, with <m>f(c_1) = f(c_2) = 0</m>. However, beacuse the function is increasing, <m>c_1 \lt c_2</m> implies that <m>f(c_1) \lt f(c_2)</m>, which contradicts the fact that they are both solutions.
+        </p>
+        <theorem>
+            <p>
+                If <m>f'(x) \neq 0</m> on an interval, then <m>f</m> has at most one root in that interval.
+            </p>
+        </theorem>
+    </subsection>
 </section>

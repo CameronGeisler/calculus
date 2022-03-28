@@ -4,7 +4,9 @@
     <title>Optimization</title>
 
     <introduction>
-        A relatively simple but important application of the derivative is the problem of finding a maximum or minimum value of a varying quantity. Historically, this was one of the first successes of calculus.
+        <p>
+            A relatively simple but important application of the derivative is the problem of finding a maximum or minimum value of a varying quantity. Historically, this was one of the first successes of calculus.
+        </p>        
     </introduction>
     
     <subsection>
@@ -52,6 +54,43 @@
                 Here, only the <m>x = 8</m> solution applies, because the numbers must be positive. Verifying with the second derivative, <m>s''(x) = \frac{128}{x^3}</m> which is positive for <m>x > 0</m>, so <m>x = 8</m> is a minimum.
             </p>
         </example>
+    </subsection>
+
+    <subsection>
+        <title>Application: Range of a Projectile</title>
+        <p>
+            You may recall from physics that for a projectile launched from the ground, with initial velocity <m>v</m> at an angle of <m>\theta</m> above the horizontal, the horziontal <term>range</term> of the projectile is given by,
+        </p>
+        <me>
+            R = \frac{v^2 \sin{(2\theta)}{g}
+        </me>
+        <p>
+            where <m>g</m> is the gravitational constant. This neglects air resistance, and assumes the Earth is flat.
+        </p>
+        <p>
+            Using differentiation, we can determine what angle <m>\theta</m> produces the maximum range.
+        </p>
+        <md>
+            <mrow>\frac{dR}{d\theta} = \frac{2v^2}{g} \cos{(2\theta)} \amp = 0</mrow>
+            <mrow>\cos{(2\theta)} \amp = 0</mrow>
+        </md>
+        <p>
+            Then,
+        </p>
+        <md>
+            <mrow>2\theta \amp = \frac{\pi}{2}</mrow>
+            <mrow>\theta \amp = \frac{\pi}{4}</mrow>
+        </md>
+        <p>
+            In other words, the maximum range is produced when the launch angle is <m>\ang{45}</m>.
+        </p>
+    </subsection>
+
+    <subsection>
+        <title>Cylindrical Can</title>
+        <p>
+            Minimize surface area (material used) given a fixed volume that is desired.
+        </p>
     </subsection>
 
     <subsection>

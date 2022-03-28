@@ -14,12 +14,15 @@
 
         <definition>
             <p>
-                Broadly, a <term>relative maximum</term> is a point <m>x = a</m> such that <m>f(x) \geq f(x)</m> for all <m>x</m> near <m>a</m>. Similarly, a <term>relative minimum</term> is a point <m>x = a</m> such that <m>f(a) \leq f(x)</m> for all <m>x</m> near <m>a</m>.
+                Broadly, a <term>relative maximum</term> is a point <m>x = a</m> such that <m>f(a) \geq f(x)</m> for all <m>x</m> near <m>a</m>. Similarly, a <term>relative minimum</term> is a point <m>x = a</m> such that <m>f(a) \leq f(x)</m> for all <m>x</m> near <m>a</m>.
             </p>
         </definition>
 
         <p>
             The singular of extrema is extremum (the word originates from Latin). An extremum refers to either a maximum or minimum.
+        </p>
+        <p>
+            Note that there some math textbooks have the convention that allows endpoints of the domain of a function to be possible local extrema. Whereas, other textbooks do not, requiring that a function be defined on <em>both</em> sides of its local extrema.
         </p>
     </subsection>
 
@@ -92,7 +95,7 @@
     </subsection>
 
     <subsection>
-        <title>Remark</title>
+        <title>Remarks</title>
         <p>
             Technically, it is not true in general that functions which are differentiable have continuous derivatives. However, functions which fail to have continuous derivatives are quite pathological, and not relevant in any applications.
         </p>
