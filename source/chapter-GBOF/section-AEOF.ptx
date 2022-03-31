@@ -46,5 +46,28 @@
         <p>
             If <m>f</m> has only one critical point, then it isn't necessary to consider the endpoints. For example, if <m>f'</m> changes sign from positive to negative at <m>x = c</m>, then <m>f</m> is increasing on <m>(a,c)</m> and decreasing on <m>(b,c)</m>, so the maximum occurs at <m>x = c</m>.
         </p>
-    </subsection>    
+    </subsection>
+
+    <subsection>
+        <title>Absolute Extrema Over Infinite Intervals</title>
+        <p>
+            Absolute extrema can also be consider over infinite intervals, and arbitrary domains.
+        </p>
+        <definition>
+            <p>
+                Let <m>f</m> be a function, <m>c \in D(f)</m>. Then,
+                <ul>
+                    <li><m>f</m> has an <term>absolute maximum</term> at <m>x = c</m>, if <m>f(x) \leq f(c)</m> for all <m>x</m> in the domain of <m>f</m>.</li>
+                    <li><m>f</m> has an <term>absolute minimum</term> at <m>x = c</m>, if <m>f(x) \geq f(c)</m> for all <m>x</m> in the domain of <m>f</m>.</li>
+                </ul>
+            </p>
+        </definition>
+    </subsection>
+
+    <subsection>
+        <title>Remark on Absolute Extrema</title>
+        <p>
+            In general, absolute extrema are also considered local extrema, by default. However, if you are using the convention that endpoints <em>cannot</em> be local extrema, then it is possible for an endpoint to be an absolute extrema, while not being a local extrema.
+        </p>
+    </subsection>
 </section>

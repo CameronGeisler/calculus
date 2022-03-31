@@ -95,6 +95,35 @@
     </subsection>
 
     <subsection>
+        <title>Endpoints as Local Extrema (Advanced)</title>
+        <p>
+            If we use the convention that endpoints can be local extrema, then we can also use insight from the derivative to determine if a function has a local max or local min at the endpoints of an interval.
+        </p>
+        <example>
+            <p>
+                For the function <m>f(x) = \sqrt{x}</m>, it has a local minima at <m>x = 0</m>. However, the derivative <m>f'(x) = \frac{1}{2\sqrt{x}}</m>. Notice that as <m>x \to 0+</m>, <m>f'(x) \to \infty</m>.
+            </p>
+        </example>
+        <p>
+            Let <m>f</m> be a function, differentiable on <m>[a,b]</m>. Then,
+        </p>
+        <ul>
+            <li>
+                <m>x = a</m> is a local maximum (minimum) if and only if,
+                <me>
+                    \lim_{x \to a+} f'(x) \lt 0 \qquad \brac{\text{respectively, } \lim_{x \to a+} f'(x) > 0
+                </me>
+            </li>
+            <li>
+                <m>x = b</m> is a local maximum (minimum) if and only if,
+                <me>
+                    \lim_{x \to b-} f'(x) > 0 \qquad \brac{\text{respectively, } \lim_{x \to b-} f'(x) \lt 0
+                </me>
+            </li>
+        </ul>
+    </subsection>
+
+    <subsection>
         <title>Remarks</title>
         <p>
             Technically, it is not true in general that functions which are differentiable have continuous derivatives. However, functions which fail to have continuous derivatives are quite pathological, and not relevant in any applications.
@@ -108,10 +137,14 @@
                 Prove that <m>\tan{x} > x</m> for <m>x \in (0,\pi/2)</m>, by showing that <m>f(x) = \tan{x} - x</m> is increasing on <m>(0,\pi/2)</m>.
             </p>
         </example>
+
+        <p>
+            In general, if <m>f(x) = g(x) - h(x)</m> satisfies <m>f(a) \geq 0</m>, and <m>f'(x) > 0</m> on the interval <m>(a,b)</m>, then <m>g(x) > h(x)</m> on <m>(a,b)</m>.
+        </p>
     </subsection>
 
     <subsection>
-        <title>Fermat's Method of Adequality</title>
+        <title>Fermat's Method of Adequality (Historical Note)</title>
         <p>
             In 1629, Fermat developed a technique of finding extremum of functions, later published in his treatise Methodus ad disquirendam maximam et minimam (Method of Finding Maxima and Minima). This was before the development of the derivative.
         </p>
