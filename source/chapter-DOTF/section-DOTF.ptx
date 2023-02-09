@@ -320,11 +320,14 @@
     <subsection>
         <title>Derivatives of Cofunctions</title>
         <p>
-            Notice that the derivatives of the <q>cofunctions</q> (cosine, cosecant, and cotangent) all contain negative signs. Further, if we denote <m>\operatorname{co}{f(x)}</m> to be the <q>cofunction</q> of <m>f(x)</m>, then all 6 trigonometric derivatives follow the rule,
+            Notice that the derivatives of the <q>cofunctions</q> (cosine, cosecant, and cotangent) all contain negative signs. Further, notice that if we denote <m>\operatorname{co}{f(x)}</m> to be the <q>cofunction</q> of <m>f(x)</m>, then 6 trigonometric derivatives follow the rule,
         </p>
         <me>
             \frac{d}{dx} \operatorname{co}(f(x)) = - \operatorname{co} \brac{\frac{d}{dx} f(x)}
         </me>
+        <p>
+            For example, th derivative of <m>\sec{x}</m> is <m>\sec{x} \tan{x}</m>, so to remember the derivative of <m>\csc{x}</m>, which is the cofunction of <m>\sec{x}</m>, switch the functions <m>\sec{x} \tan{x}</m> to their cofunctions <m>\csc{x} \cot{x}</m>, and put a negative sign, to get <m>-\csc{x} \cot{x}</m>.
+        </p>
         <p>
             In fact, it turns out it is also true that,
         </p>

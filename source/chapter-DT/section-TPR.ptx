@@ -4,7 +4,10 @@
     <title>The Product Rule</title>
 
     <introduction>
-        The rule for differentiating a product of function is slightly more complicated than previous rules. One might at first glance believe that the derivative of a product of two functions is the product of the derivatives, however this is not true.
+        The rule for differentiating a product of function is slightly more complicated than previous rules. One might at first glance believe that the derivative of a product of two functions is the product of the derivatives, however this is not true. Especially because the derivative of a sum is the sum of the derivatives (sum rule). In other words,
+        <me>
+            \frac{d}{dx} \brac{f(x) g(x)} \neq f'(x) g'(x)
+        </me>
     </introduction>
 
     <subsection>

@@ -2,9 +2,6 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-10T13:53:43-08:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,9 +10,48 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
+<body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let \(f\) be a function. If \(f\) is differentiable at \(x = a\text{,}\) then it is continuous at \(x = a\text{.}\)</p>
-<span class="incontext"><a href="section-D.html#p-170">in-context</a></span>
+<div class="para logical">
+<div class="para">Consider the derivative of the absolute value function,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = \abs{x} = \begin{cases} x \amp x \geq 0 \\ -x \amp x \lt 0 \end{cases}
+\end{equation*}
+</div>
+<div class="para">For <span class="process-math">\(x \neq 0\text{,}\)</span> <span class="process-math">\(f\)</span> is differentiable. In particular, for <span class="process-math">\(x &gt; 0\text{,}\)</span> <span class="process-math">\(f'(x) = \frac{d}{dx} x = 1\text{,}\)</span> and for <span class="process-math">\(x \lt 0\text{,}\)</span> <span class="process-math">\(f'(x) = \frac{d}{dx} (-x) = -1\text{.}\)</span> However, at <span class="process-math">\(x = 0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+f'(0) \amp = \lim_{h \to 0} \frac{\abs{0 + h} - \abs{0}}{h}\\
+\amp = \lim_{h \to 0} \frac{\abs{h}}{h}
+\end{align*}
+</div>
+<ul class="disc">
+<li><div class="para">From the right, as <span class="process-math">\(h \to 0+\text{,}\)</span> <span class="process-math">\(\abs{h} = h\text{,}\)</span> and so,<div class="displaymath process-math">
+\begin{equation*}
+\lim_{h \to 0+} \frac{\abs{h}}{h} = \lim_{h \to 0} \frac{h}{h} = \lim_{h \to 0} 1 = 1
+\end{equation*}
+</div>Thus, from the right, the slopes approach 1 (this can be confirmed graphically).</div></li>
+<li><div class="para">However, from the left, as <span class="process-math">\(h \to 0-\text{,}\)</span> <span class="process-math">\(\abs{h} = -h\text{,}\)</span> and so,<div class="displaymath process-math">
+\begin{equation*}
+\lim_{h \to 0-} \frac{\abs{h}}{h} = \lim_{h \to 0-} \frac{-h}{h} = \lim_{h \to 0} -1 = -1
+\end{equation*}
+</div>From the left, the slopes approach -1.</div></li>
+</ul>
+<div class="para">Since these one sided limits are unequal, <span class="process-math">\(\lim_{h \to 0} \frac{\abs{h}}{h}\)</span> does not exist, and so <span class="process-math">\(f\)</span> is not differentiable at <span class="process-math">\(x = 0\text{.}\)</span> In summary,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dx} \abs{x} = \begin{cases} 1 \amp x &gt; 0 \\ -1 \amp x \lt 0 \end{cases}
+\end{equation*}
+</div>
+<div class="para">This can be summarized as,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\boxed{\frac{d}{dx} \abs{x} = \frac{\abs{x}}{x} \qquad x \neq 0}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="section-D.html#p-170" class="internal">in-context</a></span>
 </body>
 </html>

@@ -2,9 +2,6 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-10T13:53:43-08:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,38 +10,43 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Let \(u = f(x), v = g(x)\text{.}\) Then, as \(x\) changes, both \(f\) and \(g\) change, and this causes \(uv = f(x)g(x)\) to change. The product rule shows how the product \(uv\) changes as \(x\) changes, in terms of \(f\) and \(g\text{.}\) Suppose that \(x\) is incremented by some \(\Delta x\text{,}\) and let \(\Delta u, \Delta v\) be the corresponding increments in \(u\) and \(v\text{.}\) Then, consider the change in the product, \(\Delta(uv)\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body class="ignore-math"><article class="hiddenproof"> <div class="para logical">
+<div class="para">Let <span class="process-math">\(u = f(x), v = g(x)\text{.}\)</span> Then, as <span class="process-math">\(x\)</span> changes, both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> change, and this causes <span class="process-math">\(uv = f(x)g(x)\)</span> to change. The product rule shows how the product <span class="process-math">\(uv\)</span> changes as <span class="process-math">\(x\)</span> changes, in terms of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{.}\)</span> Suppose that <span class="process-math">\(x\)</span> is incremented by some <span class="process-math">\(\Delta x\text{,}\)</span> and let <span class="process-math">\(\Delta u, \Delta v\)</span> be the corresponding increments in <span class="process-math">\(u\)</span> and <span class="process-math">\(v\text{.}\)</span> Then, consider the change in the product, <span class="process-math">\(\Delta(uv)\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \Delta(uv) = \underbrace{(u + \Delta u)(v + \Delta v)}_{\text{new }} - \underbrace{uv}_{\text{old }}
 \end{equation*}
 </div>
-<p class="continuation">Then, expanding and simplifying,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">Then, expanding and simplifying,</div>
+<div class="displaymath process-math">
 \begin{align*}
 \Delta(uv) \amp = uv + \Delta u v + u \Delta v + \Delta u \Delta v - uv\\
 \amp = \Delta u v + u \Delta v + \Delta u \Delta v
 \end{align*}
 </div>
-<p class="continuation">Then, dividing both sides by \(\Delta x\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">Then, dividing both sides by <span class="process-math">\(\Delta x\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{align*}
 \frac{\Delta(uv)}{\Delta x} \amp = \frac{\Delta u v}{\Delta x} + \frac{u \Delta v}{\Delta x} + \frac{\Delta u \Delta v}{\Delta x}\\
 \amp = \frac{\Delta u}{\Delta x} v + u \frac{\Delta v}{\Delta x} + \Delta u \frac{\Delta v}{\Delta x}
 \end{align*}
 </div>
-<p class="continuation">Then, as \(\Delta x \to 0\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">Then, as <span class="process-math">\(\Delta x \to 0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{align*}
 \lim_{\Delta x \to 0} \frac{\Delta(uv)}{\Delta x} \amp = \lim_{\Delta x \to 0} \brac{\frac{\Delta u}{\Delta x} v + u \frac{\Delta v}{\Delta x} + \Delta u \frac{\Delta v}{\Delta x}}\\
 \frac{d(uv)}{dx} \amp = \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x} \cdot v + \lim_{\Delta x \to 0} u \cdot \frac{\Delta v}{\Delta x} + \lim_{\Delta x \to 0} \Delta u \frac{\Delta v}{\Delta x}
 \end{align*}
 </div>
-<p class="continuation">The first term approaches \(\frac{du}{dx} v\text{,}\) the second approaches \(u \frac{dv}{dx}\text{,}\) and for the third, \(\lim_{\Delta x \to 0} \frac{\Delta v}{\Delta x} = \frac{dv}{dx}\text{,}\) however \(\Delta u\) also depends on \(\Delta x\text{,}\) and since \(f\) is continuous, as the change in \(x\) goes to 0, the change in \(u\) goes to 0 also. Thus,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">The first term approaches <span class="process-math">\(\frac{du}{dx} v\text{,}\)</span> the second approaches <span class="process-math">\(u \frac{dv}{dx}\text{,}\)</span> and for the third, <span class="process-math">\(\lim_{\Delta x \to 0} \frac{\Delta v}{\Delta x} = \frac{dv}{dx}\text{,}\)</span> however <span class="process-math">\(\Delta u\)</span> also depends on <span class="process-math">\(\Delta x\text{,}\)</span> and since <span class="process-math">\(f\)</span> is continuous, as the change in <span class="process-math">\(x\)</span> goes to 0, the change in <span class="process-math">\(u\)</span> goes to 0 also. Thus,</div>
+<div class="displaymath process-math">
 \begin{align*}
 \frac{d(uv)}{dx} \amp = \frac{du}{dx} v + u \frac{dv}{dx} + 0 \cdot \frac{dv}{dx}\\
 \amp = \frac{du}{dx} v + u \frac{dv}{dx}
 \end{align*}
+</div>
 </div></article></body>
 </html>

@@ -2,9 +2,6 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-10T13:53:43-08:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,15 +10,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>Consider the derivative of \(f(x) = \sqrt{x}\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body class="ignore-math"><article class="example example-like"> <div class="para logical">
+<div class="para">Consider the derivative of <span class="process-math">\(f(x) = \sqrt{x}\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{align*}
 f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\\
 \amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h}
 \end{align*}
 </div>
-<p class="continuation">Then, the goal is to cancel the factor of \(h\) in the denominator. It turns out that the correct next algebraic step is a technique called <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">rationalizing the numerator</dfn>. You may recall rationalizing the denominator, which involves multiplying numerator and denominator in order to eliminate a square root in the denominator. Here, we can use a similar technique with the goal of removing the square roots in the numerator. In this case, we multiply by the conjugate of the numerator, which is \(\sqrt{x + h} + \sqrt{x}\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">Then, the goal is to cancel the factor of <span class="process-math">\(h\)</span> in the denominator. It turns out that the correct next algebraic step is a technique called <dfn class="terminology">rationalizing the numerator</dfn>. You may recall rationalizing the denominator, which involves multiplying numerator and denominator in order to eliminate a square root in the denominator. Here, we can use a similar technique with the goal of removing the square roots in the numerator. In this case, we multiply by the conjugate of the numerator, which is <span class="process-math">\(\sqrt{x + h} + \sqrt{x}\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{align*}
 \amp = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}\\
 \amp = \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})}\\
@@ -31,5 +31,7 @@ f'(x) \amp = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\\
 \amp = \frac{1}{2\sqrt{x}}
 \end{align*}
 </div>
-<p class="continuation">Notice that while \(f(x) = \sqrt{x}\) is defined on \([0,\infty)\text{,}\) its derivative \(f'(x)\) is only differentiable on \((0,\infty)\text{.}\) In particular, \(f\) is not differentiable at \(x = 0\text{.}\)</p></article></body>
+<div class="para">Notice that while <span class="process-math">\(f(x) = \sqrt{x}\)</span> is defined on <span class="process-math">\([0,\infty)\text{,}\)</span> its derivative <span class="process-math">\(f'(x)\)</span> is only differentiable on <span class="process-math">\((0,\infty)\text{.}\)</span> In particular, <span class="process-math">\(f\)</span> is not differentiable at <span class="process-math">\(x = 0\text{.}\)</span>
+</div>
+</div></article></body>
 </html>

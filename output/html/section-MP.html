@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-10T13:53:40-08:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Motivational Problems</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "has_am",
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
     renderActions: {
         findScript: [10, function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
@@ -41,37 +40,164 @@
     },
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
-</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-IAHOC.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-ITC.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-TFSC.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\set}[1]{\left\{ #1 \right\}}
 \renewcommand{\neg}{\sim}
 \newcommand{\brac}[1]{\left( #1 \right)}
@@ -89,258 +215,510 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book.html"><span class="title">Calculus</span></a></h1>
-<p class="byline"></p>
-</div>
-</div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-IAHOC.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-TFSC.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-IAHOC.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-ITC.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-TFSC.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link">
-<a href="chapter-ITC.html" data-scroll="chapter-ITC"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a><ul>
-<li><a href="section-IAHOC.html" data-scroll="section-IAHOC">Introduction and History of Calculus</a></li>
-<li><a href="section-MP.html" data-scroll="section-MP" class="active">Motivational Problems</a></li>
-<li><a href="section-TFSC.html" data-scroll="section-TFSC">Tips for Studying Calculus</a></li>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="chapter-ITC.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Calculus</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-IAHOC.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction and History of Calculus</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-IAHOC.html#subsection-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Introduction to Calculus</span></a></div></li>
+<li><div class="toc-item"><a href="section-IAHOC.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">The Usefulness of Calculus</span></a></div></li>
+<li><div class="toc-item"><a href="section-IAHOC.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Learning Calculus</span></a></div></li>
+<li><div class="toc-item"><a href="section-IAHOC.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The People of Calculus</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-TD.html" data-scroll="chapter-TD"><span class="codenumber">2</span> <span class="title">The Derivative</span></a><ul>
-<li><a href="section-TLSOF.html" data-scroll="section-TLSOF">Tangent Lines, Slopes of Functions</a></li>
-<li><a href="section-TDF.html" data-scroll="section-TDF">The Derivative Function</a></li>
-<li><a href="section-VAROC.html" data-scroll="section-VAROC">Velocity and Rates of Change</a></li>
+<li class="active">
+<div class="toc-item"><a href="section-MP.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Motivational Problems</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-MP.html#subsection-5" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Motivational Problem: Area of a Circle</span></a></div></li>
+<li><div class="toc-item"><a href="section-MP.html#tangent-line-problem" class="internal"><span class="codenumber">1.2.2</span> <span class="title">The Tangent Line Problem (Tangent of a Parabola)</span></a></div></li>
+<li><div class="toc-item"><a href="section-MP.html#subsection-7" class="internal"><span class="codenumber">1.2.3</span> <span class="title">The Area Problem (Area Under a Parabola)</span></a></div></li>
+<li><div class="toc-item"><a href="section-MP.html#subsection-8" class="internal"><span class="codenumber">1.2.4</span> <span class="title">The Calculus Principle, and Infinity</span></a></div></li>
+<li><div class="toc-item"><a href="section-MP.html#subsection-9" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Archimedes Quadrature of the Parabola (Area of a Parabolic Segment)</span></a></div></li>
+<li><div class="toc-item"><a href="section-MP.html#subsection-10" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Circumference of a Circle (Approximating Pi)</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-DT.html" data-scroll="chapter-DT"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a><ul>
-<li><a href="section-BDR.html" data-scroll="section-BDR">Basic Differentiation Rules</a></li>
-<li><a href="section-D.html" data-scroll="section-D">Differentiability</a></li>
-<li><a href="section-TPR.html" data-scroll="section-TPR">The Product Rule</a></li>
-<li><a href="section-TQR.html" data-scroll="section-TQR">The Quotient Rule</a></li>
-<li><a href="section-HD.html" data-scroll="section-HD">Higher Derivatives</a></li>
-<li><a href="section-TCR.html" data-scroll="section-TCR">The Chain Rule</a></li>
-<li><a href="section-SOD.html" data-scroll="section-SOD">Summary of Differentiation</a></li>
-<li><a href="section-ID.html" data-scroll="section-ID">Implicit Differentiation</a></li>
+<li><div class="toc-item"><a href="section-TFSC.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Tips for Studying Calculus</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-GBOF.html" data-scroll="chapter-GBOF"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a><ul>
-<li><a href="section-IADF.html" data-scroll="section-IADF">Increasing and Decreasing Functions</a></li>
-<li><a href="section-LEOF.html" data-scroll="section-LEOF">Local Extrema of Functions</a></li>
-<li><a href="section-AEOF.html" data-scroll="section-AEOF">Absolute Extrema of Functions</a></li>
-<li><a href="section-O.html" data-scroll="section-O">Optimization</a></li>
-<li><a href="section-RTTMVT.html" data-scroll="section-RTTMVT">Rolle's Theorem, The Mean Value Theorem</a></li>
-<li><a href="section-SGOF.html" data-scroll="section-SGOF">Sketching Graphs of Functions</a></li>
+<li>
+<div class="toc-item"><a href="chapter-TD.html" class="internal"><span class="codenumber">2</span> <span class="title">The Derivative</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-TLSOF.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Tangent Lines, Slopes of Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-TLSOF.html#subsection-11" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Slopes of Continuous Functions, Tangent Lines and Secant Lines</span></a></div></li>
+<li><div class="toc-item"><a href="section-TLSOF.html#subsection-12" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Tangent Line, Slope of Functions</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-AOD.html" data-scroll="chapter-AOD"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a><ul>
-<li><a href="section-DLLA.html" data-scroll="section-DLLA">Differentials, Local Linear Approximations</a></li>
-<li><a href="section-RROC.html" data-scroll="section-RROC">Relative Rate of Change</a></li>
-<li><a href="section-RMR.html" data-scroll="section-RMR">Rectilinear Motion Revisited</a></li>
-<li><a href="section-RR.html" data-scroll="section-RR">Related Rates</a></li>
-<li><a href="section-RGR.html" data-scroll="section-RGR">Comparing Growth Rates</a></li>
-<li><a href="section-TTPA.html" data-scroll="section-TTPA">Taylor's Theorem, Polynomial Approximation</a></li>
+<li>
+<div class="toc-item"><a href="section-TDF.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Derivative Function</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-TDF.html#subsection-13" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Derivative</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-14" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Equivalent Formulation of the Tangent Slope</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-15" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Graphical Differentiation</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-16" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Tangent Line and Derivatives</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-17" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Derivative of Some Basic Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-18" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Determining Derivatives Using the Definition</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-19" class="internal"><span class="codenumber">2.2.7</span> <span class="title">Derivative of Some More Basic Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-20" class="internal"><span class="codenumber">2.2.8</span> <span class="title">Derivative Notation</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-21" class="internal"><span class="codenumber">2.2.9</span> <span class="title">Leibniz Notation, Derivative as a Limit of a Ratio, Differentials, Infinitesimals</span></a></div></li>
+<li><div class="toc-item"><a href="section-TDF.html#subsection-22" class="internal"><span class="codenumber">2.2.10</span> <span class="title">Summary</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-DOTF.html" data-scroll="chapter-DOTF"><span class="codenumber">6</span> <span class="title">Derivatives of Transcendental Functions</span></a><ul>
-<li><a href="section-DOTF.html" data-scroll="section-DOTF">Derivatives of Trigonometric Functions</a></li>
-<li><a href="section-DOEF.html" data-scroll="section-DOEF">Derivatives of Exponential Functions</a></li>
-<li><a href="section-DOIF.html" data-scroll="section-DOIF">Derivatives of Inverse Functions</a></li>
+<li>
+<div class="toc-item"><a href="section-VAROC.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Velocity and Rates of Change</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-VAROC.html#subsection-23" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Motion and Velocity</span></a></div></li>
+<li><div class="toc-item"><a href="section-VAROC.html#subsection-24" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Acceleration and Jerk</span></a></div></li>
+<li><div class="toc-item"><a href="section-VAROC.html#subsection-25" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Motion of a Projectile (Freefall Motion)</span></a></div></li>
+<li><div class="toc-item"><a href="section-VAROC.html#subsection-26" class="internal"><span class="codenumber">2.3.4</span> <span class="title">More General Rates of Change</span></a></div></li>
+<li><div class="toc-item"><a href="section-VAROC.html#subsection-27" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Geometry: Area of a Circle</span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-MP"><h2 class="heading hide-type">
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-DT.html" class="internal"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-BDR.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Basic Differentiation Rules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-BDR.html#subsection-28" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Derivative of Power Functions, General Power Rule</span></a></div></li>
+<li><div class="toc-item"><a href="section-BDR.html#subsection-29" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Sum, Difference, and Constant Multiple Rules</span></a></div></li>
+<li><div class="toc-item"><a href="section-BDR.html#subsection-30" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Differentiation of Polynomials</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-D.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Differentiability</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-D.html#subsection-31" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Differentiability on an Interval</span></a></div></li>
+<li><div class="toc-item"><a href="section-D.html#subsection-32" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Continuous But Not Differentiable</span></a></div></li>
+<li><div class="toc-item"><a href="section-D.html#subsection-33" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Differentiability and Continuity</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-TPR.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Product Rule</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-TPR.html#subsection-34" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Product Rule</span></a></div></li>
+<li><div class="toc-item"><a href="section-TPR.html#subsection-35" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Simplifying Before Using the Product Rule</span></a></div></li>
+<li><div class="toc-item"><a href="section-TPR.html#subsection-36" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Product Rule Mnemonic</span></a></div></li>
+<li><div class="toc-item"><a href="section-TPR.html#subsection-37" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Differential Intuition</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-TQR.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Quotient Rule</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-TQR.html#subsection-38" class="internal"><span class="codenumber">3.4.1</span> <span class="title">The Quotient Rule</span></a></div></li>
+<li><div class="toc-item"><a href="section-TQR.html#subsection-39" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Using the Quotient Rule</span></a></div></li>
+<li><div class="toc-item"><a href="section-TQR.html#subsection-40" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Remembering the Quotient Rule</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-HD.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Higher Derivatives</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-HD.html#subsection-41" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Higher Derivatives</span></a></div></li>
+<li><div class="toc-item"><a href="section-HD.html#subsection-42" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Intuition for Higher Derivatives</span></a></div></li>
+<li><div class="toc-item"><a href="section-HD.html#subsection-43" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Intuition for Leibniz Notation for Higher Derivatives</span></a></div></li>
+<li><div class="toc-item"><a href="section-HD.html#subsection-44" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Kinematics and Higher Derivatives</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-TCR.html" class="internal"><span class="codenumber">3.6</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-TCR.html#subsection-45" class="internal"><span class="codenumber">3.6.1</span> <span class="title">The Chain Rule</span></a></div></li>
+<li><div class="toc-item"><a href="section-TCR.html#subsection-46" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Chain Rule for More Than Two Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-TCR.html#subsection-47" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Intuitive Proof of the Chain Rule</span></a></div></li>
+<li><div class="toc-item"><a href="section-TCR.html#subsection-48" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Combining the Chain Rule with Other Differentiation Rules</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-SOD.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Summary of Differentiation</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-SOD.html#subsection-49" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Summary of Differentiation Rules</span></a></div></li>
+<li><div class="toc-item"><a href="section-SOD.html#subsection-50" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Systematic Differentiation Summarized</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-ID.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-ID.html#subsection-51" class="internal"><span class="codenumber">3.8.1</span> <span class="title">Curves Given by Implicitly-Defined Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-52" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Implicit Differentiation</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-53" class="internal"><span class="codenumber">3.8.3</span> <span class="title">Circles</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-54" class="internal"><span class="codenumber">3.8.4</span> <span class="title">Horizontal Parabolas</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-55" class="internal"><span class="codenumber">3.8.5</span> <span class="title">Folium of Descartes</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-56" class="internal"><span class="codenumber">3.8.6</span> <span class="title">Ellipses</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-57" class="internal"><span class="codenumber">3.8.7</span> <span class="title">Hyperbolas</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-58" class="internal"><span class="codenumber">3.8.8</span> <span class="title">Implicit Second Derivatives</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-59" class="internal"><span class="codenumber">3.8.9</span> <span class="title">Remark on Where Implicit Differentiation Fails</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-60" class="internal"><span class="codenumber">3.8.10</span> <span class="title">Implicit Function Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-ID.html#subsection-61" class="internal"><span class="codenumber">3.8.11</span> <span class="title">Power Rule for Rational Exponents Proof</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-GBOF.html" class="internal"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-IADF.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Increasing and Decreasing Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-IADF.html#subsection-62" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Increasing/Decreasing Test (Positive Derivative Implies Increasing)</span></a></div></li>
+<li><div class="toc-item"><a href="section-IADF.html#subsection-63" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Increasing Functions and Inequalities</span></a></div></li>
+<li><div class="toc-item"><a href="section-IADF.html#subsection-64" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Increasing Functions and Inverse Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-IADF.html#subsection-65" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Increasing Functions and Roots</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-LEOF.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Local Extrema of Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-LEOF.html#subsection-66" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Local/Relative Extrema</span></a></div></li>
+<li><div class="toc-item"><a href="section-LEOF.html#subsection-67" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Critical Points</span></a></div></li>
+<li><div class="toc-item"><a href="section-LEOF.html#subsection-68" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Fermat's Theorem (Interior Extremum Theorem)</span></a></div></li>
+<li><div class="toc-item"><a href="section-LEOF.html#subsection-69" class="internal"><span class="codenumber">4.2.4</span> <span class="title">First Derivative Test</span></a></div></li>
+<li><div class="toc-item"><a href="section-LEOF.html#subsection-70" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Endpoints as Local Extrema (Advanced)</span></a></div></li>
+<li><div class="toc-item"><a href="section-LEOF.html#subsection-71" class="internal"><span class="codenumber">4.2.6</span> <span class="title">Remarks</span></a></div></li>
+<li><div class="toc-item"><a href="section-LEOF.html#subsection-72" class="internal"><span class="codenumber">4.2.7</span> <span class="title">Advanced Examples</span></a></div></li>
+<li><div class="toc-item"><a href="section-LEOF.html#subsection-73" class="internal"><span class="codenumber">4.2.8</span> <span class="title">Fermat's Method of Adequality (Historical Note)</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-AEOF.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Absolute Extrema of Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-AEOF.html#subsection-74" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Extreme-Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-AEOF.html#subsection-75" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Absolute Extrema Test</span></a></div></li>
+<li><div class="toc-item"><a href="section-AEOF.html#subsection-76" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Absolute Extrema Over Infinite Intervals</span></a></div></li>
+<li><div class="toc-item"><a href="section-AEOF.html#subsection-77" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Remark on Absolute Extrema</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-O.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Optimization</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-O.html#subsection-78" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Optimization Problems</span></a></div></li>
+<li><div class="toc-item"><a href="section-O.html#subsection-79" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="section-O.html#subsection-80" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Application: Range of a Projectile</span></a></div></li>
+<li><div class="toc-item"><a href="section-O.html#subsection-81" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Cylindrical Can</span></a></div></li>
+<li><div class="toc-item"><a href="section-O.html#subsection-82" class="internal"><span class="codenumber">4.4.5</span> <span class="title">Application: Snell's Law</span></a></div></li>
+<li><div class="toc-item"><a href="section-O.html#subsection-83" class="internal"><span class="codenumber">4.4.6</span> <span class="title">Advaned: General Box Problem</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-RTTMVT.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Rolle's Theorem, The Mean Value Theorem</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-RTTMVT.html#subsection-84" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Rolle's Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-RTTMVT.html#subsection-85" class="internal"><span class="codenumber">4.5.2</span> <span class="title">The Mean Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-RTTMVT.html#subsection-86" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Remarks</span></a></div></li>
+<li><div class="toc-item"><a href="section-RTTMVT.html#subsection-87" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-SGOF.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Sketching Graphs of Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-SGOF.html#subsection-88" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Curve Sketching</span></a></div></li>
+<li><div class="toc-item"><a href="section-SGOF.html#subsection-89" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Sketching the Graph of a Polynomial Function</span></a></div></li>
+<li><div class="toc-item"><a href="section-SGOF.html#subsection-90" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Quadratic Functions (Parabolas)</span></a></div></li>
+<li><div class="toc-item"><a href="section-SGOF.html#subsection-91" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Cubic Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="section-SGOF.html#subsection-92" class="internal"><span class="codenumber">4.6.5</span> <span class="title">Sketching the Graph of a Rational Function</span></a></div></li>
+<li><div class="toc-item"><a href="section-SGOF.html#subsection-93" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Sketching Functions with Cusps and Vertical Tangents</span></a></div></li>
+<li><div class="toc-item"><a href="section-SGOF.html#subsection-94" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Sketching a General Function</span></a></div></li>
+<li><div class="toc-item"><a href="section-SGOF.html#subsection-95" class="internal"><span class="codenumber">4.6.8</span> <span class="title">Sketching a Function Given Properties</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-AOD.html" class="internal"><span class="codenumber">5</span> <span class="title">Applications of Differentiation</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-DLLA.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentials, Local Linear Approximations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-DLLA.html#subsection-96" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Derivatives and Local Linearity</span></a></div></li>
+<li><div class="toc-item"><a href="section-DLLA.html#subsection-97" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Approximating Small Changes</span></a></div></li>
+<li><div class="toc-item"><a href="section-DLLA.html#subsection-98" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Differentials</span></a></div></li>
+<li><div class="toc-item"><a href="section-DLLA.html#subsection-99" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Local Linear Approximation</span></a></div></li>
+<li><div class="toc-item"><a href="section-DLLA.html#subsection-100" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Remark About Differentials</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-RROC.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Relative Rate of Change</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-RROC.html#subsection-101" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Relative Change and Percentage Change</span></a></div></li>
+<li><div class="toc-item"><a href="section-RROC.html#subsection-102" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Sensitivity to Change</span></a></div></li>
+<li><div class="toc-item"><a href="section-RROC.html#subsection-103" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Relative Growth Rate and the Natural Logarithm</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-RMR.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Rectilinear Motion Revisited</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-RR.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Related Rates</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-RR.html#subsection-104" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Solving Related Rates Problems</span></a></div></li>
+<li><div class="toc-item"><a href="section-RR.html#subsection-105" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Commonly-Used Formulas in Related-Rate Applications</span></a></div></li>
+<li><div class="toc-item"><a href="section-RR.html#subsection-106" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Remark About Related Rates</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-RGR.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Comparing Growth Rates</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-TTPA.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Taylor's Theorem, Polynomial Approximation</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-TTPA.html#subsection-107" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Linear Approximations and Error</span></a></div></li>
+<li><div class="toc-item"><a href="section-TTPA.html#subsection-108" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Quadratic Approximations</span></a></div></li>
+<li><div class="toc-item"><a href="section-TTPA.html#subsection-109" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Taylor Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="section-TTPA.html#subsection-110" class="internal"><span class="codenumber">5.6.4</span> <span class="title">Taylor's Theorem (Taylor's Formula)</span></a></div></li>
+<li><div class="toc-item"><a href="section-TTPA.html#subsection-111" class="internal"><span class="codenumber">5.6.5</span> <span class="title">Proof of Taylor's Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-TTPA.html#subsection-112" class="internal"><span class="codenumber">5.6.6</span> <span class="title">Misc</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-DOTF.html" class="internal"><span class="codenumber">6</span> <span class="title">Derivatives of Transcendental Functions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-DOTF.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Derivatives of Trigonometric Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-113" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Derivative of Sine</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-114" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Derivative of Cosine</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-115" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Limit Definition of Derivative of Sine and Cosine</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-116" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Two Important Limits</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-117" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Derivative of Sine and Cosine Conclusion</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-118" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Derivatives of Other Trigonometric Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-119" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Summary of Trigonometric Derivatives</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-120" class="internal"><span class="codenumber">6.1.8</span> <span class="title">Derivatives of Cofunctions</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-121" class="internal"><span class="codenumber">6.1.9</span> <span class="title">Continuity of Sine and Cosine</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOTF.html#subsection-122" class="internal"><span class="codenumber">6.1.10</span> <span class="title">Cyclical Pattern of Sine Derivatives</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-DOEF.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Derivatives of Exponential Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-DOEF.html#subsection-123" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Irrational Exponents Definition</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOEF.html#subsection-124" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Number e, and the Natural Exponential Function</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOEF.html#subsection-125" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Compound Interest, and the Number e</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOEF.html#subsection-126" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOEF.html#subsection-127" class="internal"><span class="codenumber">6.2.5</span> <span class="title">The General Exponential Function</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOEF.html#subsection-128" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Derivative of the General Exponential</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOEF.html#subsection-129" class="internal"><span class="codenumber">6.2.7</span> <span class="title">More About the Number e</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-DOIF.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Derivatives of Inverse Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-DOIF.html#subsection-130" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Derivative of Inverse Functions (Inverse Function Theorem)</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOIF.html#subsection-131" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Leibniz Notation</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOIF.html#subsection-132" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="section-DOIF.html#subsection-133" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Concavity of Inverse Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-MP"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Motivational Problems</span>
 </h2>
 <section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Motivational Problem: Area of a Circle</span>
 </h3>
-<p id="p-15">Recall that the area \(A\) of a circle of radius \(r\) is given by,</p>
-<div class="displaymath">
+<div class="para" id="p-15">Recall that the area <span class="process-math">\(A\)</span> of a circle of radius <span class="process-math">\(r\)</span> is given by,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 A = \pi r^2
 \end{equation*}
 </div>
-<p id="p-16">This formula must be proven it is not true by definition. Euclid, ancient Greek mathematician, proved that for any circle, the ratio of its circumference divided by its diameter was the same constant, and today this constant is called \(\pi\text{.}\) The ancient Greek mathematician <dfn class="terminology">Archimedes</dfn> (287-212 BC) was the first to develop the formula for the area of a circle, in his treatise “Measurement of a Circle”. The idea is to approximate a region's area by inscribed polygons. These isolated computations in ancient Greece use the core concepts of calculus, but were done millennia before calculus, limits, and integration were developed.</p>
+<div class="para" id="p-16">This formula must be proven it is not true by definition. Euclid, ancient Greek mathematician, proved that for any circle, the ratio of its circumference divided by its diameter was the same constant, and today this constant is called <span class="process-math">\(\pi\text{.}\)</span> The ancient Greek mathematician <dfn class="terminology">Archimedes</dfn> (287-212 BC) was the first to develop the formula for the area of a circle, in his treatise “Measurement of a Circle”. The idea is to approximate a region's area by inscribed polygons. These isolated computations in ancient Greece use the core concepts of calculus, but were done millennia before calculus, limits, and integration were developed.</div>
 <article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like">Area of a circle using slices of pizza, rectangle with length \(\pi r\) and height \(r\text{.}\) The more slices, the more accurate the approximation, and in the limit, the area is \(\pi r^2\text{.}\) Archimedes used an argument similar to this.</article></div>
-<p id="p-17">We can intuitively derive this formula. Consider a circle of radius \(r\text{,}\) and consider a regular polygon with \(n\) sides (\(n \geq 3\)) inscribed inside this circle. For example, for \(n = 3\text{,}\) the polygon is a equilateral triangle. For \(n = 4\) is a square. For \(n = 5\text{,}\) it is a pentagon. In general, the area \(A_n\) of the polygon is an approximation of the area of the circle. In particular, since the line segments are shorter than the curved arcs, \(A_n\) is an underestimate of \(A\text{.}\) As \(n\) increases, the polygon forms more of a circle-like shape, and \(A_n\) becomes a better and better approximation to the area of the circle.</p>
-<p id="p-18">A regular polygon with \(n\) sides can be broken up into triangles. In particular, \(n\) non-overlapping, <em class="emphasis">congruent</em>, isosceles triangles, each having a common vertex of the center of the circle. For each of these triangles, the central angle is \(\frac{2\pi}{n}\text{,}\) as the total angle around the circle is \(2\pi\text{,}\) and there are \(n\) triangles. Also, the length of the two isosceles sides are the radius of the circle \(r\text{.}\) Then, the height of the triangle is,</p>
-<div class="displaymath">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like">Area of a circle using slices of pizza, rectangle with length <span class="process-math">\(\pi r\)</span> and height <span class="process-math">\(r\text{.}\)</span> The more slices, the more accurate the approximation, and in the limit, the area is <span class="process-math">\(\pi r^2\text{.}\)</span> Archimedes used an argument similar to this.</article></div>
+<div class="para" id="p-17">We can intuitively derive this formula. Consider a circle of radius <span class="process-math">\(r\text{,}\)</span> and consider a regular polygon with <span class="process-math">\(n\)</span> sides (<span class="process-math">\(n \geq 3\)</span>) inscribed inside this circle. For example, for <span class="process-math">\(n = 3\text{,}\)</span> the polygon is a equilateral triangle. For <span class="process-math">\(n = 4\)</span> is a square. For <span class="process-math">\(n = 5\text{,}\)</span> it is a pentagon. In general, the area <span class="process-math">\(A_n\)</span> of the polygon is an approximation of the area of the circle. In particular, since the line segments are shorter than the curved arcs, <span class="process-math">\(A_n\)</span> is an underestimate of <span class="process-math">\(A\text{.}\)</span> As <span class="process-math">\(n\)</span> increases, the polygon forms more of a circle-like shape, and <span class="process-math">\(A_n\)</span> becomes a better and better approximation to the area of the circle.</div>
+<div class="para" id="p-18">A regular polygon with <span class="process-math">\(n\)</span> sides can be broken up into triangles. In particular, <span class="process-math">\(n\)</span> non-overlapping, <em class="emphasis">congruent</em>, isosceles triangles, each having a common vertex of the center of the circle. For each of these triangles, the central angle is <span class="process-math">\(\frac{2\pi}{n}\text{,}\)</span> as the total angle around the circle is <span class="process-math">\(2\pi\text{,}\)</span> and there are <span class="process-math">\(n\)</span> triangles. Also, the length of the two isosceles sides are the radius of the circle <span class="process-math">\(r\text{.}\)</span> Then, the height of the triangle is,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 h = r\cos{\brac{\frac{\frac{2\pi}{n}}{2}}} = r\cos{\brac{\frac{\pi}{n}}}
 \end{equation*}
 </div>
-<p id="p-19">The base of the triangle has length,</p>
-<div class="displaymath">
+<div class="para" id="p-19">The base of the triangle has length,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 b = 2r \sin{\brac{\frac{\pi}{n}}}
 \end{equation*}
 </div>
-<p id="p-20">Then, the area of each triangle is,</p>
-<div class="displaymath">
+<div class="para" id="p-20">Then, the area of each triangle is,</div>
+<div class="displaymath process-math" id="md-1">
 \begin{align*}
 \Area{\text{triangle}} \amp = \frac{1}{2} \brac{r\cos{\brac{\frac{\pi}{n}}}} \brac{2r \sin{\brac{\frac{\pi}{n}}}}\\
 \amp = r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}
 \end{align*}
 </div>
-<p id="p-21">Then, the area \(A_n\) of the entire \(n\)-gon is \(n\) times this, or,</p>
-<div class="displaymath">
+<div class="para" id="p-21">Then, the area <span class="process-math">\(A_n\)</span> of the entire <span class="process-math">\(n\)</span>-gon is <span class="process-math">\(n\)</span> times this, or,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 A_n = n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}
 \end{equation*}
 </div>
-<p id="p-22">This forms a sequence \(\set{A_n}\) that approximates the area of a circle of radius \(r\text{,}\) in terms of \(r\text{.}\) In particular, for some \(n\text{,}\) it is a multiple of \(r^2\text{.}\) Then, as \(n\) increases, we expect the approximation to improve. Consider <a class="external" href="https://www.desmos.com/calculator/sgjezkp21f" target="_blank">this Desmos applet</a>, which considers the case \(r = 1\text{.}\)</p>
-<p id="p-23">Notice that as \(n\) increases, the sequence \(A_n\) approaches \(\pi\text{.}\) Then, if we increase \(n\) indefinitely, as \(n\) increases to “to infinity”, we say that the sequence converges to exactly \(\pi\text{.}\) This means that the area of a circle of radius 1 is <em class="emphasis">equal to</em> \(\pi\text{.}\) This technique is now called the <dfn class="terminology">method of exhaustion</dfn>, intuitively because increasing the number of sides exhausts all of the area of the circle. Then, more generally,</p>
-<div class="displaymath">
+<div class="para" id="p-22">This forms a sequence <span class="process-math">\(\set{A_n}\)</span> that approximates the area of a circle of radius <span class="process-math">\(r\text{,}\)</span> in terms of <span class="process-math">\(r\text{.}\)</span> In particular, for some <span class="process-math">\(n\text{,}\)</span> it is a multiple of <span class="process-math">\(r^2\text{.}\)</span> Then, as <span class="process-math">\(n\)</span> increases, we expect the approximation to improve. Consider <a class="external" href="https://www.desmos.com/calculator/sgjezkp21f" target="_blank">this Desmos applet</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>, which considers the case <span class="process-math">\(r = 1\text{.}\)</span>
+</div>
+<div class="para" id="p-23">Notice that as <span class="process-math">\(n\)</span> increases, the sequence <span class="process-math">\(A_n\)</span> approaches <span class="process-math">\(\pi\text{.}\)</span> Then, if we increase <span class="process-math">\(n\)</span> indefinitely, as <span class="process-math">\(n\)</span> increases to “to infinity”, we say that the sequence converges to exactly <span class="process-math">\(\pi\text{.}\)</span> This means that the area of a circle of radius 1 is <em class="emphasis">equal to</em> <span class="process-math">\(\pi\text{.}\)</span> This technique is now called the <dfn class="terminology">method of exhaustion</dfn>, intuitively because increasing the number of sides exhausts all of the area of the circle. Then, more generally,</div>
+<div class="displaymath process-math" id="md-2">
 \begin{align*}
 A_n \amp = \underbrace{n \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}}}_{\to \pi} \cdot r^2\\
 \amp = \pi r^2
 \end{align*}
 </div>
-<p id="p-24">More precisely, as \(n \to \infty\text{,}\)</p>
-<div class="displaymath">
+<div class="para" id="p-24">More precisely, as <span class="process-math">\(n \to \infty\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="md-3">
 \begin{align*}
 \lim_{n \to \infty} A_n = \lim_{n \to \infty} n r^2 \cos{\brac{\frac{\pi}{n}}} \sin{\brac{\frac{\pi}{n}}} \amp = \lim_{n \to \infty} \pi r^2 \underbrace{\cos{\brac{\frac{\pi}{n}}}}_{\to \cos{0} = 1} \cdot \underbrace{\frac{\sin{\brac{\frac{\pi}{n}}}}{\frac{\pi}{n}}}_{\to 1}\\
 \amp = \pi r^2
 \end{align*}
 </div>
-<p id="p-25">as desired. For every \(n\text{,}\) the shape is a polygon with sides that are straight line segments. But, in some sense, for infinitely many sides, the polygon “becomes” a circle.</p></section><section class="subsection" id="tangent-line-problem"><h3 class="heading hide-type">
+<div class="para" id="p-25">as desired. For every <span class="process-math">\(n\text{,}\)</span> the shape is a polygon with sides that are straight line segments. But, in some sense, for infinitely many sides, the polygon “becomes” a circle.</div></section><section class="subsection" id="tangent-line-problem"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">The Tangent Line Problem (Tangent of a Parabola)</span>
 </h3>
-<p id="p-26">Consider the parabola \(f(x) = x^2\text{,}\) and consider the tangent line to the graph at \(x = 1\) (i.e. at the point \((1,1)\)). Recall that to define a line, we need its slope and a point on the line. Of course, the tangent line must pass through the point \((1,1)\text{.}\)</p>
-<p id="p-27">To determine the slope of this tangent line, consider an approximation of the slope, by considering a nearby point \((1 + h, (1 + h)^2)\) where \(h &gt; 0\) is some small non-zero number. Then, the slope of the tangent line can be approximated by the slope of the line between these two points,</p>
-<div class="displaymath">
+<div class="para" id="p-26">Consider the parabola <span class="process-math">\(f(x) = x^2\text{,}\)</span> and consider the tangent line to the graph at <span class="process-math">\(x = 1\)</span> (i.e. at the point <span class="process-math">\((1,1)\)</span>). Recall that to define a line, we need its slope and a point on the line. Of course, the tangent line must pass through the point <span class="process-math">\((1,1)\text{.}\)</span>
+</div>
+<div class="para" id="p-27">To determine the slope of this tangent line, consider an approximation of the slope, by considering a nearby point <span class="process-math">\((1 + h, (1 + h)^2)\)</span> where <span class="process-math">\(h &gt; 0\)</span> is some small non-zero number. Then, the slope of the tangent line can be approximated by the slope of the line between these two points,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 m_{sec} = \frac{(1 + h)^2 - 1}{(1 + h) - 1} = \frac{(1 + h)^2 - 1}{h}
 \end{equation*}
 </div>
-<p id="p-28">This line is called a <dfn class="terminology">secant line</dfn>. For different values of \(h\) (that are non-zero), we can determine approximations to the slope of the tangent line at \(x = 1\text{.}\) For smaller values of \(h\text{,}\) we intuitively expect that the approximation is more accurate. Consider <a class="external" href="https://www.desmos.com/calculator/aoin6kjf1g" target="_blank">this Desmos applet</a>, where you can see the secant line slopes approaching the tangent line.</p>
-<p id="p-29">The slope of the secant is a function of \(h\text{.}\) Then, we can evaluate this expression for small values of \(h\) (both positive and negative),</p>
-<div class="sagecell-sage" id="sage-1"><script type="text/x-sage">h_vec = [1,0.1,0.01,0.001,-0.001,-0.01,-0.1,-1]
+<div class="para" id="p-28">This line is called a <dfn class="terminology">secant line</dfn>. For different values of <span class="process-math">\(h\)</span> (that are non-zero), we can determine approximations to the slope of the tangent line at <span class="process-math">\(x = 1\text{.}\)</span> For smaller values of <span class="process-math">\(h\text{,}\)</span> we intuitively expect that the approximation is more accurate. Consider <a class="external" href="https://www.desmos.com/calculator/aoin6kjf1g" target="_blank">this Desmos applet</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>, where you can see the secant line slopes approaching the tangent line.</div>
+<div class="para" id="p-29">The slope of the secant is a function of <span class="process-math">\(h\text{.}\)</span> Then, we can evaluate this expression for small values of <span class="process-math">\(h\)</span> (both positive and negative),</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">h_vec = [1,0.1,0.01,0.001,-0.001,-0.01,-0.1,-1]
 for h in h_vec:
     print(h, ((1+h)**2-1)/h)
-</script></div>
-<p id="p-30">Notice that as \(h\) get closer to 0, the slope seems to be numerically approaching 2. However, for \(h = 0\text{,}\) this slope expression is undefined, because it becomes \(m_{sec} = \frac{0}{0}\text{.}\)</p>
-<p id="p-31">For a more detailed perspective, <a class="external" href="https://www.desmos.com/calculator/jgsqp0rial" target="_blank">we can plot \(m_{sec}\) as a function of \(h\)</a> (here, the horizontal axis is the \(h\)-axis). In fact, the graph is a line. Again, notice that as \(h\) becomes closer to 0, the graph goes towards 2. However, notice that at the exact point \(h = 0\text{,}\) the point \((0,2)\) is <em class="emphasis">not</em> on the graph.</p>
-<p id="p-32">Intuitively, if we make make \(h\) “infinitely” small, then the two points used to measure the slope become “infinitely close” together. Then, the slope of the secant line becomes <em class="emphasis">exactly</em> equal to the slope of the tangent line.</p>
-<p id="p-33">Then, in calculus, we say the slope of the tangent line is exactly 2. Here, 2 is the value that this slope function intuitively would have <em class="emphasis">if</em> it were defined for \(h = 0\text{.}\)</p>
-<p id="p-34">The previous analysis was mostly numerical and qualitative. In this case, notice that the slope expression can be simplified by algebraically manipulating,</p>
-<div class="displaymath">
+</script></pre>
+<div class="para" id="p-30">Notice that as <span class="process-math">\(h\)</span> get closer to 0, the slope seems to be numerically approaching 2. However, for <span class="process-math">\(h = 0\text{,}\)</span> this slope expression is undefined, because it becomes <span class="process-math">\(m_{sec} = \frac{0}{0}\text{.}\)</span>
+</div>
+<div class="para" id="p-31">For a more detailed perspective, <a class="external" href="https://www.desmos.com/calculator/jgsqp0rial" target="_blank">we can plot <span class="process-math">\(m_{sec}\)</span> as a function of <span class="process-math">\(h\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a> (here, the horizontal axis is the <span class="process-math">\(h\)</span>-axis). In fact, the graph is a line. Again, notice that as <span class="process-math">\(h\)</span> becomes closer to 0, the graph goes towards 2. However, notice that at the exact point <span class="process-math">\(h = 0\text{,}\)</span> the point <span class="process-math">\((0,2)\)</span> is <em class="emphasis">not</em> on the graph.</div>
+<div class="para" id="p-32">Intuitively, if we make make <span class="process-math">\(h\)</span> “infinitely” small, then the two points used to measure the slope become “infinitely close” together. Then, the slope of the secant line becomes <em class="emphasis">exactly</em> equal to the slope of the tangent line.</div>
+<div class="para" id="p-33">Then, in calculus, we say the slope of the tangent line is exactly 2. Here, 2 is the value that this slope function intuitively would have <em class="emphasis">if</em> it were defined for <span class="process-math">\(h = 0\text{.}\)</span>
+</div>
+<div class="para" id="p-34">The previous analysis was mostly numerical and qualitative. In this case, notice that the slope expression can be simplified by algebraically manipulating,</div>
+<div class="displaymath process-math" id="md-4">
 \begin{align*}
 m_{sec} = \frac{(1 + h)^2 - 1}{h} \amp = \frac{(1 + 2h + h^2) - 1}{h}\\
 \amp = \frac{2h + h^2}{h}\\
 \amp = 2 + h
 \end{align*}
 </div>
-<p id="p-35">That is, indeed, \(m_{sec} = 2 + h\) (as long as \(h \neq 0\text{,}\) since we cancelled out a factor of \(h\)). That is, for various values of \(h\text{,}\) the slope of the resulting secant line is \(2 + h\text{.}\) Again, we can see that as \(h\) gets closer and closer to 0, \(m_{sec} = 2 + h\) gets closer and closer to 2.</p>
-<p id="p-36">This may seem somewhat contradictory, because in the expression,</p>
-<div class="displaymath">
+<div class="para" id="p-35">That is, indeed, <span class="process-math">\(m_{sec} = 2 + h\)</span> (as long as <span class="process-math">\(h \neq 0\text{,}\)</span> since we cancelled out a factor of <span class="process-math">\(h\)</span>). That is, for various values of <span class="process-math">\(h\text{,}\)</span> the slope of the resulting secant line is <span class="process-math">\(2 + h\text{.}\)</span> Again, we can see that as <span class="process-math">\(h\)</span> gets closer and closer to 0, <span class="process-math">\(m_{sec} = 2 + h\)</span> gets closer and closer to 2.</div>
+<div class="para" id="p-36">This may seem somewhat contradictory, because in the expression,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 m_{sec} = \frac{2h + h^2}{h} = 2 + h
 \end{equation*}
 </div>
-<p id="p-37">we are assuming that \(h \neq 0\text{,}\) but then also disregarding \(h\) by essentially letting \(h = 0\text{.}\)</p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<div class="para" id="p-37">we are assuming that <span class="process-math">\(h \neq 0\text{,}\)</span> but then also disregarding <span class="process-math">\(h\)</span> by essentially letting <span class="process-math">\(h = 0\text{.}\)</span>
+</div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">The Area Problem (Area Under a Parabola)</span>
 </h3>
-<p id="p-38">Consider the area under the parabola \(y = x^2\) and above the \(x\)-axis, from \(x = 0\) to \(x = 1\text{.}\) This region is not a polygon, so its area can't be obtained by the usual area formulas. However, its area can be approximated by the area of rectangles. Divide the interval \([0,1]\) into \(n\) equal pieces. For the rectangles, the width will be the length of the interval \([0,1]\text{,}\) divided by the number of pieces, or \(\frac{1}{n}\text{.}\) The height of rectangle can be considered the $y$-coordinate of the parabola. To determine this, we can determine a general formula for the \(x\)-coordinate of the \(k\)th piece. The starting point is \(x_0 = 0\text{,}\) and the width of each rectangle is \(\frac{1}{n}\text{,}\) so the next point is \(x_1 = \frac{1}{n}\text{,}\) then \(x_2 = \frac{2}{n}\text{,}\) then \(x_3 = \frac{3}{n}\text{,}\) up to \(x_n = \frac{n}{n} = 1\text{.}\) That is, in general, \(x_k = \frac{k}{n}\text{.}\) Then, in the \(k\)th piece, the left endpoint is \(x_{k-1} = \frac{k-1}{n}\text{,}\) and its right endpoint is \(x_k = \frac{k}{n}\text{.}\) If we use the right endpoint, then the associated \(y\)-coordinate is,</p>
-<div class="displaymath">
+<div class="para" id="p-38">Consider the area under the parabola <span class="process-math">\(y = x^2\)</span> and above the <span class="process-math">\(x\)</span>-axis, from <span class="process-math">\(x = 0\)</span> to <span class="process-math">\(x = 1\text{.}\)</span> This region is not a polygon, so its area can't be obtained by the usual area formulas. However, its area can be approximated by the area of rectangles. Divide the interval <span class="process-math">\([0,1]\)</span> into <span class="process-math">\(n\)</span> equal pieces. For the rectangles, the width will be the length of the interval <span class="process-math">\([0,1]\text{,}\)</span> divided by the number of pieces, or <span class="process-math">\(\frac{1}{n}\text{.}\)</span> The height of rectangle can be considered the $y$-coordinate of the parabola. To determine this, we can determine a general formula for the <span class="process-math">\(x\)</span>-coordinate of the <span class="process-math">\(k\)</span>th piece. The starting point is <span class="process-math">\(x_0 = 0\text{,}\)</span> and the width of each rectangle is <span class="process-math">\(\frac{1}{n}\text{,}\)</span> so the next point is <span class="process-math">\(x_1 = \frac{1}{n}\text{,}\)</span> then <span class="process-math">\(x_2 = \frac{2}{n}\text{,}\)</span> then <span class="process-math">\(x_3 = \frac{3}{n}\text{,}\)</span> up to <span class="process-math">\(x_n = \frac{n}{n} = 1\text{.}\)</span> That is, in general, <span class="process-math">\(x_k = \frac{k}{n}\text{.}\)</span> Then, in the <span class="process-math">\(k\)</span>th piece, the left endpoint is <span class="process-math">\(x_{k-1} = \frac{k-1}{n}\text{,}\)</span> and its right endpoint is <span class="process-math">\(x_k = \frac{k}{n}\text{.}\)</span> If we use the right endpoint, then the associated <span class="process-math">\(y\)</span>-coordinate is,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 f(x_k) = \brac{\frac{k}{n}}^2 = \frac{k^2}{n^2}
 \end{equation*}
 </div>
-<p id="p-39">Then, the total area, say denoted by \(\Area{R}\text{,}\) is approximately equation to the sum of the areas of the \(n\) rectangles. That is, using summation notation,</p>
-<div class="displaymath">
+<div class="para" id="p-39">Then, the total area, say denoted by <span class="process-math">\(\Area{R}\text{,}\)</span> is approximately equation to the sum of the areas of the <span class="process-math">\(n\)</span> rectangles. That is, using summation notation,</div>
+<div class="displaymath process-math" id="md-5">
 \begin{align*}
 \Area{R} \approx \sum_{k=1}^n f(x_k) \Delta x_k \amp = \sum_{k=1}^n \frac{k^2}{n^2} \cdot \frac{1}{n}\\
 \amp = \sum_{k=1}^n \frac{k^2}{n^3}
 \end{align*}
 </div>
-<p id="p-40">Then, given a particular $n$, evaluating this summation gives an approximation for the desired area. To determine a closed-form formula for this summation, first notice that \(n^3\) is constant with respect to the summation, so it can be factored out,</p>
-<div class="displaymath">
+<div class="para" id="p-40">Then, given a particular $n$, evaluating this summation gives an approximation for the desired area. To determine a closed-form formula for this summation, first notice that <span class="process-math">\(n^3\)</span> is constant with respect to the summation, so it can be factored out,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \Area{R} \approx \frac{1}{n^3} \sum_{k=1}^n k^2
 \end{equation*}
 </div>
-<p id="p-41">Then, notice that this area summation will depend on the summation of the first \(n\) squares, \(\sum_{k=1}^n k^2\text{.}\) From algebra, this sum has a closed-form formula given by,</p>
-<div class="displaymath">
+<div class="para" id="p-41">Then, notice that this area summation will depend on the summation of the first <span class="process-math">\(n\)</span> squares, <span class="process-math">\(\sum_{k=1}^n k^2\text{.}\)</span> From algebra, this sum has a closed-form formula given by,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{k=1}^n k^2 = \frac{n(n + 1)(2n + 1)}{6}
 \end{equation*}
 </div>
-<p id="p-42">Then,</p>
-<div class="displaymath">
+<div class="para" id="p-42">Then,</div>
+<div class="displaymath process-math" id="md-6">
 \begin{align*}
 \Area{R} \approx \frac{1}{n^3} \sum_{k=1}^n k^2 \amp = \frac{1}{n^3} \cdot \frac{n(n + 1)(2n + 1)}{6}\\
 \amp = \frac{(n + 1)(2n + 1)}{6n^2}
 \end{align*}
 </div>
-<p id="p-43">Intuitively, we expect that as \(n\) increases, the approximation is more and more accurate in estimating the “exact” area \(\Area{R}\text{.}\) In the language of calculus, we say that in the limit as \(n \to \infty\text{,}\)</p>
-<div class="displaymath">
+<div class="para" id="p-43">Intuitively, we expect that as <span class="process-math">\(n\)</span> increases, the approximation is more and more accurate in estimating the “exact” area <span class="process-math">\(\Area{R}\text{.}\)</span> In the language of calculus, we say that in the limit as <span class="process-math">\(n \to \infty\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n \to \infty} \frac{(n - 1)(2n - 1)}{6n^2} = \lim_{n \to \infty} \frac{1}{6} \brac{1 - \frac{1}{n}} \brac{2 - \frac{1}{n}} = \frac{1}{6} \cdot 1 \cdot 2 = \frac{1}{3}
 \end{equation*}
 </div>
-<p id="p-44">That is, as \(n\) increases without bound, the area approximation becomes closer and closer to \(\frac{1}{3}\text{.}\) Then, in the language of calculus, we say that the area is exactly equal to \(\frac{1}{3}\text{,}\)</p>
-<div class="displaymath">
+<div class="para" id="p-44">That is, as <span class="process-math">\(n\)</span> increases without bound, the area approximation becomes closer and closer to <span class="process-math">\(\frac{1}{3}\text{.}\)</span> Then, in the language of calculus, we say that the area is exactly equal to <span class="process-math">\(\frac{1}{3}\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \Area{R} = \frac{1}{3}
 \end{equation*}
 </div>
-<p id="p-45">This can be thought of as a discovery of the area of a region. Or, equivalently, a \textit{definition} of the area of the region.</p>
-<p id="p-46">In fact, this idea of determining the area of a region by splitting it up into smaller and smaller pieces, was known to the ancient Greeks, in particular Archimedes and Eudoxus of Cnidus. Of course, this was well before algebra was invented.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<div class="para" id="p-45">This can be thought of as a discovery of the area of a region. Or, equivalently, a \textit{definition} of the area of the region.</div>
+<div class="para" id="p-46">In fact, this idea of determining the area of a region by splitting it up into smaller and smaller pieces, was known to the ancient Greeks, in particular Archimedes and Eudoxus of Cnidus. Of course, this was well before algebra was invented.</div></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">The Calculus Principle, and Infinity</span>
 </h3>
-<p id="p-47">The above examples illustrate the overarching principle of calculus.</p>
+<div class="para" id="p-47">The above examples illustrate the overarching principle of calculus.</div>
 <ol class="decimal">
-<li id="li-17"><p id="p-derived-li-17">First, we start with some quantity which seems difficult to compute exactly.</p></li>
-<li id="li-18"><p id="p-derived-li-18">Then, we develop an approximation to that exact quantity, a method of slicing that difficult problem into smaller pieces, that we can compute exactly.</p></li>
-<li id="li-19"><p id="p-derived-li-19">Then, improve the approximation.</p></li>
-<li id="li-20"><p id="p-derived-li-20">Then, continue improving the approximation indefinitely, or “to infinity”, and observe what fixed number the approximation approaches.</p></li>
+<li id="li-17"><div class="para" id="p-derived-li-17">First, we start with some quantity which seems difficult to compute exactly.</div></li>
+<li id="li-18"><div class="para" id="p-derived-li-18">Then, we develop an approximation to that exact quantity, a method of slicing that difficult problem into smaller pieces, that we can compute exactly.</div></li>
+<li id="li-19"><div class="para" id="p-derived-li-19">Then, improve the approximation.</div></li>
+<li id="li-20"><div class="para" id="p-derived-li-20">Then, continue improving the approximation indefinitely, or “to infinity”, and observe what fixed number the approximation approaches.</div></li>
 </ol>
-<p id="p-48">This number, called a <em class="emphasis">limit</em>, is said to be the exact value of the quantity. A fundamental difference between pre-calculus and calculus is that calculus deals with infinity. In particular, quantities which are “infinitely large” or “infinitely small”. The structure of calculus is almost all simply variations on this idea. Also, this system of reasoning reflects how the universe works. For objects or phenomenon which are “continuous”, or “infinitely divisible”, such as curves, motion, etc.</p>
+<div class="para" id="p-48">This number, called a <em class="emphasis">limit</em>, is said to be the exact value of the quantity. A fundamental difference between pre-calculus and calculus is that calculus deals with infinity. In particular, quantities which are “infinitely large” or “infinitely small”. The structure of calculus is almost all simply variations on this idea. Also, this system of reasoning reflects how the universe works. For objects or phenomenon which are “continuous”, or “infinitely divisible”, such as curves, motion, etc.</div>
 <article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Computer graphics and animation.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-49">In computer graphics, real-world objects and their surfaces, which are continuous and smooth, are approximated by models made up of polygons, most commonly triangles. By using many triangles, the approximation is accurate enough to be realistic to human perception. This technique is used in animated movies.</p></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"> <div class="para" id="p-49">In computer graphics, real-world objects and their surfaces, which are continuous and smooth, are approximated by models made up of polygons, most commonly triangles. By using many triangles, the approximation is accurate enough to be realistic to human perception. This technique is used in animated movies.</div></article></div>
 <article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Circles.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-50">In fact, computers generate circles in a similar way as the Archimedes method above, by drawing a regular polygon with large number of sides (say, 180 or more sides), which is sufficient to give the visual impression that the polygon is a circle.</p></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"> <div class="para" id="p-50">In fact, computers generate circles in a similar way as the Archimedes method above, by drawing a regular polygon with large number of sides (say, 180 or more sides), which is sufficient to give the visual impression that the polygon is a circle.</div></article></div>
 <article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Curves.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-51">Curves in the plane can be approximated by straight line segments. In fact, this is how graphing calculators graph functions. They plot a large number of points, and connect those points with straight line segments. Because there are so many points, and the line segments are so small, this gives the visual impression of a curve.</p></article></div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"> <div class="para" id="p-51">Curves in the plane can be approximated by straight line segments. In fact, this is how graphing calculators graph functions. They plot a large number of points, and connect those points with straight line segments. Because there are so many points, and the line segments are so small, this gives the visual impression of a curve.</div></article></div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.5</span> <span class="title">Archimedes Quadrature of the Parabola (Area of a Parabolic Segment)</span>
 </h3>
-<p id="p-52">Archimedes used the method of exhaustion to determine the area of a region bounded by a parabola and a line, called a parabolic segment. This was in his treatise called <em class="emphasis">Quadrature of the Parabola</em>. In Archimedes's time, area was called quadrature. Also, Archimedes thought of a parabola not as a quadratic equation (\(y = ax^2 + bx + c\)), because he did not have analytic geometry.</p>
-<p id="p-53">Archimedes used triangle shapes to make up the parabolic region. First, he formed a sequence of triangles which make up the area of the region. Each triangle has a vertex that where the tangent to the parabola is parallel to the base of the triangle. He proved that the first triangle is 8 times the area of the 2nd triangles, and more generally, at each step, the area of the \(n\)th triangle is 8 times the area of each of the 2 smaller triangles. Then, the area of the triangles at each next step is \(\frac{1}{4}\)th the area at the previous step. Then, if the area of the first triangle is 1 unit, then the area of the parabolic segment is equal to the infinite sum of the areas of the triangles,</p>
-<div class="displaymath">
+<div class="para" id="p-52">Archimedes used the method of exhaustion to determine the area of a region bounded by a parabola and a line, called a parabolic segment. This was in his treatise called <em class="emphasis">Quadrature of the Parabola</em>. In Archimedes's time, area was called quadrature. Also, Archimedes thought of a parabola not as a quadratic equation (<span class="process-math">\(y = ax^2 + bx + c\)</span>), because he did not have analytic geometry.</div>
+<div class="para" id="p-53">Archimedes used triangle shapes to make up the parabolic region. First, he formed a sequence of triangles which make up the area of the region. Each triangle has a vertex that where the tangent to the parabola is parallel to the base of the triangle. He proved that the first triangle is 8 times the area of the 2nd triangles, and more generally, at each step, the area of the <span class="process-math">\(n\)</span>th triangle is 8 times the area of each of the 2 smaller triangles. Then, the area of the triangles at each next step is <span class="process-math">\(\frac{1}{4}\)</span>th the area at the previous step. Then, if the area of the first triangle is 1 unit, then the area of the parabolic segment is equal to the infinite sum of the areas of the triangles,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 A = 1 + \frac{1}{4} + \frac{1}{16} + \frac{1}{64} + \dots
 \end{equation*}
 </div>
-<p id="p-54">Archimedes did not use this “infinite” sum. Instead, he proved, using strictly geometric means, that the area was not less than \(\frac{4}{3}\text{,}\) and also not greater than \(\frac{4}{3}\text{,}\) and so by conclusion must be equal to \(\frac{4}{3}\text{.}\)</p>
-<p id="p-55">You may recall that the infinite sum is an infinite geometric series, and has sum,</p>
-<div class="displaymath">
+<div class="para" id="p-54">Archimedes did not use this “infinite” sum. Instead, he proved, using strictly geometric means, that the area was not less than <span class="process-math">\(\frac{4}{3}\text{,}\)</span> and also not greater than <span class="process-math">\(\frac{4}{3}\text{,}\)</span> and so by conclusion must be equal to <span class="process-math">\(\frac{4}{3}\text{.}\)</span>
+</div>
+<div class="para" id="p-55">You may recall that the infinite sum is an infinite geometric series, and has sum,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 A = \frac{1}{1 - \frac{1}{4}} = \boxed{\frac{4}{3}}
 \end{equation*}
 </div>
-<p id="p-56">That is, the ratio between the area of the parabolic segment to the big triangle is \(\frac{4}{3}\text{.}\)</p></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<div class="para" id="p-56">That is, the ratio between the area of the parabolic segment to the big triangle is <span class="process-math">\(\frac{4}{3}\text{.}\)</span>
+</div></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.6</span> <span class="title">Circumference of a Circle (Approximating Pi)</span>
 </h3>
-<p id="p-57">Even though \(\pi\) is defined to be the ratio of circumference to diameter, its precise value is elusive. You may recall that \(\pi\) is an irrational number, meaning that its decimal expansion has infinitely many digits, and its digits are non-repeating, and have no describable pattern. In fact, \(\pi\) is the limit of an unattainable process, i.e. defined by calculus.</p></section></section></div></main>
+<div class="para" id="p-57">Even though <span class="process-math">\(\pi\)</span> is defined to be the ratio of circumference to diameter, its precise value is elusive. You may recall that <span class="process-math">\(\pi\)</span> is an irrational number, meaning that its decimal expansion has infinitely many digits, and its digits are non-repeating, and have no describable pattern. In fact, <span class="process-math">\(\pi\)</span> is the limit of an unattainable process, i.e. defined by calculus.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/sgjezkp21f</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/aoin6kjf1g</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/jgsqp0rial</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-IAHOC.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-TFSC.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

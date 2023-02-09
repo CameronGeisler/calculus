@@ -12,16 +12,13 @@
     <subsection>
         <title>Optimization Problems</title>
         <ol>
-            <li>Sketch a diagram of the geometric situation. Try to sketch the most general situation. Label which quantities are given (fixed), and which quantities are varying (variables).</li>
+            <li>Read the question carefully, and identify what is known and what needs to be found, and what quantity needs to be optimized.</li>
+            <li>Sketch a diagram of the geometric situation, if possible. Try to sketch the most general situation. Label which quantities are given (fixed), and which quantities are varying (variables). This will help you identify the relationships between the quantity involved.</li>
             <li>Determine the equation that involves the quantity which is to be maximized or minimized, in terms of the quantities labelled in the previous step, called the <term>objective function</term>.</li>
             <li>Write the objective function in terms of only one independent variable, by determining relationships between the independent variables, solving for one of the variables, and substituting into the formula.</li>
             <li>Determine the implied domain of the single independent variable, based on the specific problem.</li>
-            <li>Determine critical points, and determine the absolute maximum on the implied domain.</li>
+            <li>Use the techniques of differential calculus to determine the absolute maximum or minimum. In other words, determine critical points, and determine the absolute maximum on the implied domain.</li>
         </ol>
-
-        <p>
-            Note that there is a difference between a maximum <em>value</em> and the point at which it is achieved. The maximum is the output of the function which is largest; the location of the maximum is the input of the function at which the maximum occurs. Sometimes, <em>maximum point</em> refers to the coordinate pair <m>(x,y)</m> of the maximum. The terminology is somewhat mixed.
-        </p>
     </subsection>
 
     <subsection>
@@ -29,10 +26,16 @@
 
         <example>
             <title>Maximize area of a rectangle with fixed perimeter</title>
+            <p>
+                Maximize the product of two numbers with fixed sum.
+            </p>
         </example>
 
         <example>
             <title>Minimize perimeter of a rectangle with fixed area</title>
+            <p>
+                Minimize the sum of two numbers with fixed product.
+            </p>
         </example>
 
         <example>
@@ -53,6 +56,22 @@
             <p>
                 Here, only the <m>x = 8</m> solution applies, because the numbers must be positive. Verifying with the second derivative, <m>s''(x) = \frac{128}{x^3}</m> which is positive for <m>x > 0</m>, so <m>x = 8</m> is a minimum.
             </p>
+        </example>
+
+        <example>
+            <title>Minimum distance between point and graph</title>
+            <p>
+                The distance between a point <m>(x,y)</m> on the graph of <m>y = f(x)</m> and a fixed point <m>(a,b)</m> is given by,
+            </p>
+            <me>
+                d(x) = \sqrt{(x - a)^2 + \brac{f(x) - b}^2}
+            </me>
+            <p>
+                Instead, we can minimize the square of distance, which makes differentiation easier. Say,
+            </p>
+            <me>
+                D(x) = (x - a)^2 + \brac{f(x) - b}^2
+            </me>
         </example>
     </subsection>
 
@@ -143,6 +162,44 @@
         <me>
             \frac{\sin{\theta_2}}{\sin{\theta_1}} = \frac{v_2}{v_1}
         </me>
+    </subsection>
+
+    <subsection>
+        <title>Advaned: General Box Problem</title>
+        <p>
+            Consider the box problem, with a rectangular piece of cardboard, of length <m>L</m> and width <m>W</m>, forming an open box by cutting four equal-sized square corners, and folding up the sides, and taping them together at the edges. The volume of the box with side length cut <m>x</m> is given by,
+        </p>
+        <me>
+            V(x) = (L - 2x) \cdot (W - 2x) \cdot x
+        </me>
+        <p>
+            Then, in this general form, we can determine the extrema.
+        </p>
+        <md>
+            <mrow>V(x) \amp = (LW - 2Wx - 2Lx + 4x^2) x </mrow>
+            <mrow>\amp = LWx + (-2W - 2L) x^2 + 4x^3</mrow>
+            <mrow>4x^3 + (-2W - 2L) x^2 + LWx</mrow>
+        </md>
+        <p>
+            Then,
+        </p>
+        <me>
+            V'(x) = 12x^2 + (-4W - 4L)x + LWx = 0
+        </me>
+        <p>
+            Then, determining critical points,
+        </p>
+        <md>
+            <mrow>x \amp = \frac{-(-4W - 4L) \pm \sqrt{(-4W - 4L)^2 - 4(12)(LW)}{2(12)}</mrow>
+            <mrow>\amp = \frac{4W + 4L \pm \sqrt{16W^2 + 32LW + 16L^2 - 48LW}{24}</mrow>
+            <mrow>\amp = \frac{4W + 4L \pm \sqrt{16W^2 - 16LW + 16L^2}{24}</mrow>
+            <mrow>\amp = \frac{4W + 4L \pm 4 \sqrt{W^2 - LW + L^2}}{24}</mrow>
+            <mrow>\amp = \frac{W + L \pm \sqrt{W^2 - LW + L^2}}{6}</mrow>
+        </md>
+        <p>
+            It turns out that the maximum occurs at the solution with the negative sign. Then, the maximum volume is <m>V\brac{\frac{W + L \pm \sqrt{W^2 - LW + L^2}}{6}}</m>.
+        </p>
+            
     </subsection>
 
     <!-- \begin{example}

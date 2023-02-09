@@ -2,9 +2,6 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-10T13:53:44-08:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,20 +10,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
+<body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">relative change</dfn> of a quantity \(x\text{,}\) is the ratio,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para logical">
+<div class="para">Consider the reciprocal function,</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\boxed{\frac{\text{absolute change}}{\text{quantity}} = \frac{\Delta x}{x}}
+f(x) = \frac{1}{x}
 \end{equation*}
 </div>
-<p class="continuation">The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">percentage change</dfn> of \(x\) is the relative change of \(x\text{,}\) expressed as a percentage, or,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<div class="para">for <span class="process-math">\(x &gt; 0\text{.}\)</span> Consider any interval <span class="process-math">\([a,b]\text{,}\)</span> where <span class="process-math">\(0 \lt a \lt b\text{.}\)</span> Then, <span class="process-math">\(f\)</span> is differentiable and continuous on this interval, where,</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\boxed{\text{percentage change in $x$} = \frac{\Delta x}{x} \times 100\%}
+f'(x) = -\frac{1}{x^2}
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-RROC.html#p-341">in-context</a></span>
+<div class="para">Then, by the MVT, there exists <span class="process-math">\(c \in (a,b)\)</span> such that,</div>
+<div class="displaymath process-math">
+\begin{align*}
+f'(c) \amp = \frac{f(b) - f(a)}{b - a}\\
+-\frac{1}{c^2} \amp = \frac{\frac{1}{b} - \frac{1}{a}}{b - a}\\
+-\frac{1}{c^2} \amp = -\frac{1}{ab}\\
+c^2 \amp = ab\\
+c \amp = \sqrt{ab}
+\end{align*}
+</div>
+<div class="para">In other words, the value of <span class="process-math">\(c\)</span> which satisfies the MVT is the geometric mean of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Note that we take the positive square root here because <span class="process-math">\(c \in (a,b)\)</span> and so <span class="process-math">\(c &gt; 0\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="section-RTTMVT.html#p-341" class="internal">in-context</a></span>
 </body>
 </html>

@@ -120,7 +120,7 @@
                 <mrow>\amp = m</mrow>
             </md>
             <p>
-                Again, here, the difference quotient simplifies to the constant <m>m</m>, because the slope does not depend on <m>h</m>.
+                Again, here, the difference quotient simplifies to the constant <m>m</m>, because the slope does not depend on <m>h</m>. In general, a linear function has the same slope everywhere on its graph, so its average rate of change is always equal to its instantaneous rate of change.
             </p>
         </proof>
 
@@ -138,7 +138,7 @@
             \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
         </me>
         <p>
-            This limit cannot be evaluated immediately, because substituting <m>h = 0</m> results in an expression of the form <m>\frac{0}{0}</m>, which is an indeterminate form. In this way, evaluating the limit requires manipulating the difference quotient into a different form. This is the most important step, and it can be easy or challenging depending on the function <m>f</m>. In summary, to determine the derivative using the limit definition,
+            This limit cannot be evaluated immediately, because substituting <m>h = 0</m> results in an expression of the form <m>\frac{0}{0}</m>, which is an <term>indeterminate form</term>. In this way, evaluating the limit requires manipulating the difference quotient into a different form. This is the most important step, and it can be easy or challenging depending on the function <m>f</m>. In summary, to determine the derivative using the limit definition,
         </p>
         <ol>
             <li>Write down and evaluate the definition,
@@ -268,6 +268,28 @@
         </p>
         <me>
             \frac{df}{dx} \quad \frac{d}{dx} f \quad \frac{d}{dx} f(x) \quad D_x f
+        </me>
+        <p>
+            In summary,
+        </p>
+        <me>
+            \begin{array}{c}
+                \text{Prime notation} \\
+                \begin{array}{c|l}
+                    y' \amp \text{$y$ prime} \\
+                    f' \amp \text{$f$ prime} \\
+                    f'(x) \amp \text{$f$ prime of $x$}
+                \end{array}
+            \end{array}
+        </me>
+        <me>
+            \begin{array}{cc}
+                \text{Leibniz notation} \\
+                \begin{array}{c|l}
+                    \dfrac{dy}{dx} \amp \text{the derivative of $y$ with respect to $x$, or dee-why dee-ex} \\
+                    \dfrac{d}{dx} f(x) \amp \text{the derivative of $f$ with respect to $x$}
+                \end{array}
+            \end{array}
         </me>
     </subsection>
 

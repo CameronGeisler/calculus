@@ -70,7 +70,21 @@
             \boxed{f(x) \approx f(a) + f'(a)(x - a)}
         </me>
         <p>
-            This approximation holds for <m>x \approx a</m>. This is useful because linear functions are very easy to evaluate, whereas a function <m>f</m> may be difficult or more complicated to evaluate.
+            This approximation works well for <m>x \approx a</m>. The approximation is called a linearization.
+        </p>
+        <definition>
+            <p>
+                Let <m>f</m> be differentiable at <m>x = a</m>. Then, the <term>linearization</term> (or <term>linear approximation</term>) of <m>f</m> at <m>x = a</m> is the function,
+            </p>
+            <me>
+                \boxed{L(x) = f(a) + f'(a)(x - a)}
+            </me>
+        </definition>
+        <p>
+            This is useful because linear functions are very easy to evaluate, whereas a function <m>f</m> may be difficult or more complicated to evaluate.
+        </p>
+        <p>
+            A linear approximation is just the tangent line of a function, but thought of as a function <m>y = L(x)</m>, rather than a line (say, <m>y = mx + b</m>).
         </p>
         <p>
             We most commonly consider approximations of functions at <m>x = 0</m>, in which case the tangent line formula is,

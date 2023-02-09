@@ -4,10 +4,10 @@
     <title>Differentiation Techniques</title>
         <introduction>
             <p>
-                Calculating derivatives using the limit definition can be tedious and sometimes difficult, especially for more complicated functions. Instead, we can develop <term>differentiation rules</term>,
+                Calculating derivatives using the limit definition can be tedious and sometimes difficult, especially for more complicated functions. It turns out, there are various patterns and rules for computing derivatives of various functions, i.e. <term>differentiation rules</term>,
             </p>
             <ol>
-                <li>First, rules to differentiate general families of functions (e.g. polynomials, trigonometric functions, exponential and logarithmic functions, etc.)</li>
+                <li>First, rules to differentiate general families of functions (e.g. polynomials, trigonometric functions, exponential functions, logarithmic functions, etc.)</li>
                 <li>Then, develop rules to differentiate combinations of those general functions (sums, differences, products, quotients, compositions) in terms of the derivatives of the original functions.</li>
             </ol>
             <p>
