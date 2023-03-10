@@ -35,7 +35,10 @@
             When differentiating an expression in <m>y</m>, it is necessary to use the chain rule.
         </p>
         <p>
-            When using implicit differentiation, <m>\frac{dy}{dx}</m> is usually in terms of both <m>x</m> and <m>y</m>, and so it is necessary to know both coordinates to determine the derivative at a point.
+            When using implicit differentiation, the derivative <m>\frac{dy}{dx}</m> is usually given in terms of both <m>x</m> and <m>y</m>. This means, to evaluate the derivative, it is necessary to know both coordinates to determine the derivative at a point. This is in contrast to the derivative of an explicit function which is only in terms of <m>x</m>.
+        </p>
+        <p>
+            You can use <m>\frac{dy}{dx}</m> or <m>y'</m> to represent the derivative of <m>y</m> with respect to <m>x</m>. The latter notation <m>y'</m> is a bit more compact.
         </p>
     </subsection>
 

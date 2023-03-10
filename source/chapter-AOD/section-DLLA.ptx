@@ -35,9 +35,9 @@
         </p>
         <theorem>
             <p>
-                For a differentiable function <m>f</m> and small <m>\Delta x</m>,
+                Let <m>f</m> be a differentiable function. Then, for a small change in <m>x</m>, <m>\Delta x</m>, the corresponding change in <m>y</m>, <m>\Delta y</m>, is approximately given by,
                 <me>
-                    \boxed{\frac{\Delta y}{\Delta x} \approx f'(x)} \qquad \text{and} \qquad \boxed{\Delta y \approx f'(x) \Delta x}
+                    \boxed{\Delta y \approx f'(x) \Delta x} \qquad \text{or,} \qquad \boxed{\frac{\Delta y}{\Delta x} \approx f'(x)}
                 </me>
             </p>
         </theorem>

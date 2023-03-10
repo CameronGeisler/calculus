@@ -8,7 +8,7 @@
 
     <ul>
         <li>If <m>v(t) > 0</m>, then the particle is <term>moving to the right</term>. If <m>v(t) \lt 0</m>, then the particle is moving to the left.</li>
-        <li>The particle is <term>at rest</term> if <m>v(t) = 0</m>.</li>
+        <li>The particle is <term>at rest</term> (or, is stationary) if <m>v(t) = 0</m>.</li>
         <li>The particle <term>changes direction</term> if <m>v(t)</m> changes sign (either from positive to negative, or vise versa).</li>
         <li>If <m>a(t) > 0</m>, then the particle is accelerating to the right. If <m>a(t) \lt 0</m>, then the particle is accelerating to the left.</li>
         <li>If <m>v(t)</m> and <m>a(t)</m> have the same sign, then the particle is <term>speeding up</term>. If <m>v(t)</m> and <m>a(t)</m> have opposite signs, then the particle is <term>slowing down</term>.</li>

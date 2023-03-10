@@ -27,6 +27,9 @@
             \boxed{v_{\text{avg}} = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1} = \frac{x(b) - x(a)}{b - a}}
         </me>
         <p>
+            On a graph of the position function <m>x(t)</m>, the average velocity is the slope between the two points <m>(a,x(a))</m> and <m>(b,x(b))</m>, i.e. the slope of a secant line.
+        </p>
+        <p>
             Using calculus, we can define the so-called instantaneous velocity of an object.
         </p>
         <definition>
@@ -50,6 +53,9 @@
         <p>
             That is, if we make <m>\Delta t</m> an infinitely small positive or negative number, and from both sides the difference quotient <m>\frac{x(t + \Delta t) - x(t)}{\Delta t}</m> approaches the same value, then we define that that to be the instantaneous velocity at <m>t</m>. In this way, instantaneous velocity at a time <m>t</m> is the <em>best constant approximation</em> for the velocity <em>around</em> <m>t</m>.
         </p>
+        <p>
+            Also, on a graph of position <m>x(t)</m>, the instantaneous velocity at <m>t</m> is the slope of the tangent line at <m>t</m>.
+        </p>
         <theorem>
             <title>Velocity is the derivative of position</title>
             <p>
@@ -62,6 +68,23 @@
         <p>
             Note that this models motion in 1 dimension, so the graph of the position function has its position on the vertical axis, and time on the horizontal axis. In this way, the object does not travel along the curve, but rather along the vertical axis.
         </p>
+    </subsection>
+
+    <subsection>
+        <title>Speed</title>
+        <p>
+            You may recall from physics the difference between velocity and speed. Velocity considers the direction of motion and is signed (can be positive or negative), wheras speed is the magnitude of velocity.
+        </p>
+
+        <definition>
+            <p>
+                For an object with position given (in 1 dimension) given by <m>x(t)</m>, its speed is given by the absolute value of velocity, or,
+            </p>
+            <me>
+                \boxed{\text{speed} = \abs{v(t)}}
+            </me>
+        </definition>
+
     </subsection>
 
     <subsection>
@@ -189,6 +212,12 @@
         <p>
             Then, average velocity and instantaneous velocity are a special case of this, when <m>y</m> represents distance (or displacement) and <m>x</m> represents time. 
         </p>
+
+        <example>
+            <p>
+                If <m>P(t)</m> represents the population of a country at year <m>t</m>, then <m>\frac{dP}{dt}</m> is the (instantaneous) rate of change of the population.
+            </p>
+        </example>
     </subsection>
 
     <subsection>
