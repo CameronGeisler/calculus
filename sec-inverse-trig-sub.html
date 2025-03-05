@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Calculus</title>
+<title>Inverse Trigonometric Substitution</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -122,7 +122,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><a class="next-button button" href="ch-chapter-title.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-section-name.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-title.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\set}[1]{\left\{ #1 \right\}}
 \renewcommand{\neg}{\sim}
@@ -149,19 +149,34 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active"><li class="toc-item toc-chapter">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active"><li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter Title</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section Title</span></a></div></li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-inverse-trig-sub.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Inverse Trigonometric Substitution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#sec-inverse-trig-sub-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Baisc Trigonometric Substitutions</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#sec-inverse-trig-sub-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Baisc Trigonometric Substitutions</span></a></div></li></ul>
 </li>
 </ul>
 </li></ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="book" id="book"><section class="introduction" id="book-2"></section><nav class="summary-links"><ul><li><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter Title</span></a></li></ul></nav></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-inverse-trig-sub"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Inverse Trigonometric Substitution</span>
+</h2>
+<section class="introduction" id="sec-inverse-trig-sub-2"><div class="para" id="sec-inverse-trig-sub-2-1">Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form \( \sqrt{a^2 - x^2} \), \( \sqrt{x^2 - a^2} \), or \( \sqrt{a^2 + x^2} \). This method utilizes trigonometric identities to simplify these expressions.</div></section><section class="subsection" id="sec-inverse-trig-sub-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Baisc Trigonometric Substitutions</span>
+</h3>
+<article class="theorem theorem-like" id="sec-inverse-trig-sub-3-2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Basic Trigonometric Substitutions.</span>
+</h4>
+<div class="para logical" id="sec-inverse-trig-sub-3-2-2-1"><ul class="disc" id="sec-inverse-trig-sub-3-2-2-1-1">
+<li id="sec-inverse-trig-sub-3-2-2-1-1-1"><div class="para" id="p-derived-sec-inverse-trig-sub-3-2-2-1-1-1">For \( \sqrt{a^2 - x^2} \), use \( x = a \sin \theta \).</div></li>
+<li id="sec-inverse-trig-sub-3-2-2-1-1-2"><div class="para" id="p-derived-sec-inverse-trig-sub-3-2-2-1-1-2">For \( \sqrt{x^2 - a^2} \), use \( x = a \sec \theta \).</div></li>
+<li id="sec-inverse-trig-sub-3-2-2-1-1-3"><div class="para" id="p-derived-sec-inverse-trig-sub-3-2-2-1-1-3">For \( \sqrt{a^2 + x^2} \), use \( x = a \tan \theta \).</div></li>
+</ul></div></article><details id="sec-inverse-trig-sub-3-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Example: Evaluating \( \int \frac{dx}{\sqrt{9 - x^2}} \).</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-inverse-trig-sub-3-3-2-1">Evaluate the integral \( I = \int \frac{dx}{\sqrt{9 - x^2}} \) using inverse trigonometric substitution.</div></article></details></section></section></div>
 <div class="ptx-content-footer">
-<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-chapter-title.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-section-name.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
