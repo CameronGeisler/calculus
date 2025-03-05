@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-inverse-trig-sub" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Inverse Trigonometric Substitution</title>
+
+  <introduction>
+    <p>Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form \( \sqrt{a^2 - x^2} \), \( \sqrt{x^2 - a^2} \), or \( \sqrt{a^2 + x^2} \). This method utilizes trigonometric identities to simplify these expressions.</p>
+  </introduction>
+
+  <subsection>
+    <title>Baisc Trigonometric Substitutions</title>
+    
+    
+  <theorem>
+    <title>Basic Trigonometric Substitutions</title>
+    <statement>
+      <p>
+        <ul>
+          <li>For \( \sqrt{a^2 - x^2} \), use \( x = a \sin \theta \).</li>
+          <li>For \( \sqrt{x^2 - a^2} \), use \( x = a \sec \theta \).</li>
+          <li>For \( \sqrt{a^2 + x^2} \), use \( x = a \tan \theta \).</li>
+        </ul>
+      </p>
+    </statement>
+  </theorem>
+
+  <example>
+    <title>Example: Evaluating \( \int \frac{dx}{\sqrt{9 - x^2}} \)</title>
+    <statement>
+      <p>Evaluate the integral \( I = \int \frac{dx}{\sqrt{9 - x^2}} \) using inverse trigonometric substitution.</p>
+    </statement>
+  </example>
+  
+  </subsection>
+</section>
