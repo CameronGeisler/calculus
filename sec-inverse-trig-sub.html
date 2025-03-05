@@ -106,7 +106,7 @@ eBookConfig.enable_chatcodes =  false;
 <script src="_static/prefix-runtime.c2d04816128ebb44.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
-<body id="changeme" class="pretext book ignore-math">
+<body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="book.html"><span class="title">Calculus</span></a></h1>
 <p class="byline"></p>
@@ -155,26 +155,165 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section Title</span></a></div></li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-inverse-trig-sub.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Inverse Trigonometric Substitution</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#sec-inverse-trig-sub-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Baisc Trigonometric Substitutions</span></a></div></li></ul>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#summary-of-inverse-trigonometric-substitution" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Summary of Inverse Trigonometric Substitution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#examples" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Examples</span></a></div></li>
+</ul>
 </li>
 </ul>
 </li></ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-inverse-trig-sub"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Inverse Trigonometric Substitution</span>
 </h2>
-<section class="introduction" id="sec-inverse-trig-sub-2"><div class="para" id="sec-inverse-trig-sub-2-1">Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form \( \sqrt{a^2 - x^2} \), \( \sqrt{x^2 - a^2} \), or \( \sqrt{a^2 + x^2} \). This method utilizes trigonometric identities to simplify these expressions.</div></section><section class="subsection" id="sec-inverse-trig-sub-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Baisc Trigonometric Substitutions</span>
+<section class="introduction" id="sec-inverse-trig-sub-2"><div class="para" id="sec-inverse-trig-sub-2-1">Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form <span class="process-math">\(\sqrt{a^2 - x^2}\text{,}\)</span> <span class="process-math">\(\sqrt{x^2 - a^2}\text{,}\)</span> or <span class="process-math">\(\sqrt{a^2 + x^2}\text{.}\)</span> This method uses trigonometric identities to simplify these integrals.</div></section><section class="subsection" id="summary-of-inverse-trigonometric-substitution"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Summary of Inverse Trigonometric Substitution</span>
 </h3>
-<article class="theorem theorem-like" id="sec-inverse-trig-sub-3-2"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Basic Trigonometric Substitutions.</span>
-</h4>
-<div class="para logical" id="sec-inverse-trig-sub-3-2-2-1"><ul class="disc" id="sec-inverse-trig-sub-3-2-2-1-1">
-<li id="sec-inverse-trig-sub-3-2-2-1-1-1"><div class="para" id="p-derived-sec-inverse-trig-sub-3-2-2-1-1-1">For \( \sqrt{a^2 - x^2} \), use \( x = a \sin \theta \).</div></li>
-<li id="sec-inverse-trig-sub-3-2-2-1-1-2"><div class="para" id="p-derived-sec-inverse-trig-sub-3-2-2-1-1-2">For \( \sqrt{x^2 - a^2} \), use \( x = a \sec \theta \).</div></li>
-<li id="sec-inverse-trig-sub-3-2-2-1-1-3"><div class="para" id="p-derived-sec-inverse-trig-sub-3-2-2-1-1-3">For \( \sqrt{a^2 + x^2} \), use \( x = a \tan \theta \).</div></li>
-</ul></div></article><details id="sec-inverse-trig-sub-3-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Example: Evaluating \( \int \frac{dx}{\sqrt{9 - x^2}} \).</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-inverse-trig-sub-3-3-2-1">Evaluate the integral \( I = \int \frac{dx}{\sqrt{9 - x^2}} \) using inverse trigonometric substitution.</div></article></details></section></section></div>
+<figure class="table table-like" id="summary-of-inverse-trigonometric-substitution-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\text{form}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\text{substitution}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\text{conversion}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\text{triangle}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{a^2 - x^2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(x = a \sin{\theta}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{a^2 - x^2} \rightarrow a \cos{\theta}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{a^2 - x^2}, x, a\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{a^2 + x^2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(x = a \tan{\theta}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{a^2 + x^2} \rightarrow a \sec{\theta}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(x, a, \sqrt{a^2 + x^2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{x^2 - a^2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(x = a \sec{\theta}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{x^2 - a^2} \rightarrow a \tan{\theta}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{x^2 - a^2}, a, x\)</span></td>
+</tr>
+</table></div></figure><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/summary-of-inverse-trigonometric-substitution-3.svg" role="img" class="contained"></div>
+<div class="para logical" id="summary-of-inverse-trigonometric-substitution-4"><ol class="decimal" id="summary-of-inverse-trigonometric-substitution-4-1">
+<li id="summary-of-inverse-trigonometric-substitution-4-1-1"><div class="para" id="p-derived-summary-of-inverse-trigonometric-substitution-4-1-1">Identify the form of the substitution (sine, tangent, or secant).</div></li>
+<li id="summary-of-inverse-trigonometric-substitution-4-1-2"><div class="para" id="p-derived-summary-of-inverse-trigonometric-substitution-4-1-2">Apply the substitution. Sketch a right triangle and label the sides, to represent the relationships between <span class="process-math">\(x, a\)</span> and <span class="process-math">\(\theta\text{.}\)</span>
+</div></li>
+<li id="summary-of-inverse-trigonometric-substitution-4-1-3"><div class="para" id="p-derived-summary-of-inverse-trigonometric-substitution-4-1-3">Simplify the integral.</div></li>
+<li id="summary-of-inverse-trigonometric-substitution-4-1-4"><div class="para" id="p-derived-summary-of-inverse-trigonometric-substitution-4-1-4">Integrate with the new variable <span class="process-math">\(\theta\text{,}\)</span> using previous strategies, typically a trigonometric integral.</div></li>
+<li id="summary-of-inverse-trigonometric-substitution-4-1-5"><div class="para" id="p-derived-summary-of-inverse-trigonometric-substitution-4-1-5">Back-substitute using the inverse trigonometric function to substitute back for <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+</ol></div></section><section class="subsection" id="examples"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Examples</span>
+</h3>
+<details id="examples-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Example.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="examples-2-2-1">Evaluate <span class="process-math">\(\int \frac{x^2}{\sqrt{9-x^2}} \,dx\text{.}\)</span>
+</div>
+<div class="solutions">
+<details id="examples-2-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="examples-2-3-1">Let <span class="process-math">\(x = 3 \sin{\theta}\text{,}\)</span> so <span class="process-math">\(dx = 3 \cos{\theta} \,d\theta\text{.}\)</span>
+</div></div></details><details id="examples-2-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="examples-2-4-1"><div class="displaymath process-math" id="examples-2-4-1-1">
+\begin{gather*}
+\frac{9}{2} \sin^{-1}\brac{\frac{x}{3}} - \frac{1}{2} x \sqrt{9-x^2} + C
+\end{gather*}
+</div></div></div></details><details id="examples-2-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="examples-2-5-1"><div class="displaymath process-math" id="examples-2-5-1-1">
+\begin{align*}
+\amp = \int \frac{(3 \sin{\theta})^2}{3 \cos{\theta}} \cdot 3 \cos{\theta} \,d\theta\\
+\amp = 9 \int \sin^2{\theta} \,d\theta\\
+\amp = ...\\
+\amp = \frac{9}{2} \sin^{-1}\brac{\frac{x}{3}} - \frac{1}{2} x \sqrt{9-x^2} + C
+\end{align*}
+</div></div></div></details>
+</div></article></details><details id="examples-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Example.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-3-2-1">
+<div class="para">Determine</div>
+<div class="displaymath process-math" id="examples-3-2-1-1">
+\begin{gather*}
+\int \frac{1}{x^2 \sqrt{4 + x^2}} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Example.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-4-2-1">
+<div class="para">Determine</div>
+<div class="displaymath process-math" id="examples-4-2-1-1">
+\begin{gather*}
+\int \frac{1}{(1 + 9x^2)} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Example.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-5-2-1">
+<div class="para">Determine</div>
+<div class="displaymath process-math" id="examples-5-2-1-1">
+\begin{gather*}
+\int \frac{\sqrt{x^2 - 25}}{x} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-6-1-1">
+<div class="para">Evaluate</div>
+<div class="displaymath process-math" id="examples-6-1-1-1">
+\begin{gather*}
+\int \frac{\sqrt{x^2 - 1}}{x^4} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-7-1-1">
+<div class="para">Evaluate</div>
+<div class="displaymath process-math" id="examples-7-1-1-1">
+\begin{gather*}
+\int \frac{\sqrt{25x^2 - 4}}{x} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-8-1-1">
+<div class="para">Evaluate</div>
+<div class="displaymath process-math" id="examples-8-1-1-1">
+\begin{gather*}
+\int \frac{\sqrt{x^2+16}}{x^2} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-9-1-1">
+<div class="para">Evaluate</div>
+<div class="displaymath process-math" id="examples-9-1-1-1">
+\begin{gather*}
+\int \frac{x}{\sqrt{9-4x^2}} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-10-1-1">
+<div class="para">Evaluate</div>
+<div class="displaymath process-math" id="examples-10-1-1-1">
+\begin{gather*}
+\int \frac{1}{\sqrt{25x^2-4}} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-11-1-1">
+<div class="para">Evaluate</div>
+<div class="displaymath process-math" id="examples-11-1-1-1">
+\begin{gather*}
+\int \frac{1}{x^2 \sqrt{x^2-1}} \,dx
+\end{gather*}
+</div>
+</div></article></details><details id="examples-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="examples-12-1-1">
+<div class="para">Evaluate</div>
+<div class="displaymath process-math" id="examples-12-1-1-1">
+\begin{gather*}
+\int \frac{8}{(4x^2+1)^2} \,dx
+\end{gather*}
+</div>
+</div></article></details></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-section-name.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
