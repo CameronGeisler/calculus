@@ -4,32 +4,234 @@
   <title>Inverse Trigonometric Substitution</title>
 
   <introduction>
-    <p>Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form \( \sqrt{a^2 - x^2} \), \( \sqrt{x^2 - a^2} \), or \( \sqrt{a^2 + x^2} \). This method utilizes trigonometric identities to simplify these expressions.</p>
+    <p>Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form <m>\sqrt{a^2 - x^2}</m>, <m>\sqrt{x^2 - a^2}</m>, or <m>\sqrt{a^2 + x^2}</m>. This method uses trigonometric identities to simplify these integrals.</p>
   </introduction>
 
-  <subsection>
-    <title>Baisc Trigonometric Substitutions</title>
-    
-    
-  <theorem>
-    <title>Basic Trigonometric Substitutions</title>
-    <statement>
-      <p>
-        <ul>
-          <li>For \( \sqrt{a^2 - x^2} \), use \( x = a \sin \theta \).</li>
-          <li>For \( \sqrt{x^2 - a^2} \), use \( x = a \sec \theta \).</li>
-          <li>For \( \sqrt{a^2 + x^2} \), use \( x = a \tan \theta \).</li>
-        </ul>
-      </p>
-    </statement>
-  </theorem>
+  <subsection xml:id="summary-of-inverse-trigonometric-substitution">
+    <title>Summary of Inverse Trigonometric Substitution</title>
 
-  <example>
-    <title>Example: Evaluating \( \int \frac{dx}{\sqrt{9 - x^2}} \)</title>
-    <statement>
-      <p>Evaluate the integral \( I = \int \frac{dx}{\sqrt{9 - x^2}} \) using inverse trigonometric substitution.</p>
-    </statement>
-  </example>
-  
+    <table>
+      <title></title>
+      <tabular>
+        <row>
+          <cell><m>\text{form}</m></cell>
+          <cell><m>\text{substitution}</m></cell>
+          <cell><m>\text{conversion}</m></cell>
+          <cell><m>\text{triangle}</m></cell>
+        </row>
+        <row>
+          <cell><m>\sqrt{a^2 - x^2}</m></cell>
+          <cell><m>x = a \sin{\theta}</m></cell>
+          <cell><m>\sqrt{a^2 - x^2} \rightarrow a \cos{\theta}</m></cell>
+          <cell><m>\sqrt{a^2 - x^2}, x, a</m></cell>
+        </row>
+        <row>
+          <cell><m>\sqrt{a^2 + x^2}</m></cell>
+          <cell><m>x = a \tan{\theta}</m></cell>
+          <cell><m>\sqrt{a^2 + x^2} \rightarrow a \sec{\theta}</m></cell>
+          <cell><m>x, a, \sqrt{a^2 + x^2}</m></cell>
+        </row>
+        <row>
+          <cell><m>\sqrt{x^2 - a^2}</m></cell>
+          <cell><m>x = a \sec{\theta}</m></cell>
+          <cell><m>\sqrt{x^2 - a^2} \rightarrow a \tan{\theta}</m></cell>
+          <cell><m>\sqrt{x^2 - a^2}, a, x</m></cell>
+        </row>
+      </tabular>
+    </table>
+
+  <image>
+    <latex-image>
+      \begin{tikzpicture}[scale=0.8, font=\small]
+        \usetikzlibrary{calc,angles,quotes} % calc for coordinates, angles for angle marks, quotes for labels
+        
+        % First triangle (sine)
+        \begin{scope}[shift={(-4,0)}]
+          \coordinate (O) at (0,0);
+          \coordinate (A) at (3,0);
+          \coordinate (B) at (3,2);
+          \draw (O) -- (A) -- (B) -- cycle;
+          \draw pic["$\theta$", angle radius=0.6cm, angle eccentricity=1.2]{angle=A--O--B};
+          \node[below] at ($(O)!0.5!(A)$) {$\sqrt{a^2 - x^2}$}; 
+          \node[right] at ($(A)!0.5!(B)$) {$x$};
+          \node[above left] at ($(O)!0.5!(B)$) {$a$};
+        \end{scope}
+
+        % Second triangle (tangent)
+        \begin{scope}[shift={(0,0)}]
+          \coordinate (O) at (0,0);
+          \coordinate (A) at (3,0);
+          \coordinate (B) at (3,2);
+          \draw (O) -- (A) -- (B) -- cycle;
+          \draw pic["$\theta$", angle radius=0.6cm, angle eccentricity=1.2]{angle=A--O--B};
+          \node[below] at ($(O)!0.5!(A)$) {$a$};
+          \node[right] at ($(A)!0.5!(B)$) {$x$};
+          \node[above left] at ($(O)!0.5!(B)$) {$\sqrt{a^2 + x^2}$};
+        \end{scope}
+
+        % Third triangle (secant)
+        \begin{scope}[shift={(4,0)}]
+          \coordinate (O) at (0,0);
+          \coordinate (A) at (3,0);
+          \coordinate (B) at (3,2);
+          \draw (O) -- (A) -- (B) -- cycle;
+          \draw pic["$\theta$", angle radius=0.6cm, angle eccentricity=1.2]{angle=A--O--B};
+          \node[below] at ($(O)!0.5!(A)$) {$a$};
+          \node[right] at ($(A)!0.5!(B)$) {$\sqrt{x^2 - a^2}$};
+          \node[above left] at ($(O)!0.5!(B)$) {$x$};
+        \end{scope}
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+
+
+    <p>
+      <ol>
+        <li>Identify the form of the substitution (sine, tangent, or secant).</li>
+        <li>Apply the substitution. Sketch a right triangle and label the sides, to represent the relationships between <m>x, a</m> and <m>\theta</m>.</li>
+        <li>Simplify the integral.</li>
+        <li>Integrate with the new variable <m>\theta</m>, using previous strategies, typically a trigonometric integral.</li>
+        <li>Back-substitute using the inverse trigonometric function to substitute back for <m>x</m>.</li>
+      </ol>
+    </p>
+
   </subsection>
+
+  <subsection xml:id="examples">
+    <title>Examples</title>
+
+    <exercise>
+      <title>Example</title>
+      <statement>
+        <p>
+          Evaluate <m>\int \frac{x^2}{\sqrt{9-x^2}} \,dx</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>Let <m>x = 3 \sin{\theta}</m>, so <m>dx = 3 \cos{\theta} \,d\theta</m>.</p>
+      </hint>
+      <answer>
+        <p>
+        <md>  
+          <mrow>\frac{9}{2} \sin^{-1}\brac{\frac{x}{3}} - \frac{1}{2} x \sqrt{9-x^2} + C</mrow>
+        </md>
+        </p>
+      </answer>
+      <solution>
+        <p>
+        <md>
+          <mrow>\amp = \int \frac{(3 \sin{\theta})^2}{3 \cos{\theta}} \cdot 3 \cos{\theta} \,d\theta</mrow>
+          <mrow>\amp = 9 \int \sin^2{\theta} \,d\theta</mrow>
+          <mrow>\amp = ...</mrow>
+          <mrow>\amp = \frac{9}{2} \sin^{-1}\brac{\frac{x}{3}} - \frac{1}{2} x \sqrt{9-x^2} + C</mrow>
+        </md>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <title>Example</title>
+      <statement>
+        <p>Determine
+        <md>
+          <mrow>\int \frac{1}{x^2 \sqrt{4 + x^2}} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <title>Example</title>
+      <statement>
+        <p>Determine
+        <md>
+          <mrow>\int \frac{1}{(1 + 9x^2)} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <title>Example</title>
+      <statement>
+        <p>Determine
+        <md>
+          <mrow>\int \frac{\sqrt{x^2 - 25}}{x} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Evaluate
+        <md>
+          <mrow>\int \frac{\sqrt{x^2 - 1}}{x^4} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Evaluate
+        <md>
+          <mrow>\int \frac{\sqrt{25x^2 - 4}}{x} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Evaluate
+        <md>
+          <mrow>\int \frac{\sqrt{x^2+16}}{x^2} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Evaluate
+        <md>
+          <mrow>\int \frac{x}{\sqrt{9-4x^2}} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Evaluate
+        <md>
+          <mrow>\int \frac{1}{\sqrt{25x^2-4}} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Evaluate
+        <md>
+          <mrow>\int \frac{1}{x^2 \sqrt{x^2-1}} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>Evaluate
+        <md>
+          <mrow>\int \frac{8}{(4x^2+1)^2} \,dx</mrow>
+        </md>
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+
+
 </section>

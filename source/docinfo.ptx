@@ -6,10 +6,10 @@
 <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <!-- A unique name for the book in a catalog; for example, see https://pretextbook.org/catalog.html and https://runestone.academy/ns/books/index. -->
-  <document-id>changeme</document-id>
+  <!-- <document-id>changeme</document-id> -->
 
   <!-- A brief description for the book in a catalog. -->
-  <blurb shelf="AP Computer Science"> A simple string (no markup is allowed) to describe your book. </blurb>
+  <!-- <blurb shelf="AP Computer Science"> A simple string (no markup is allowed) to describe your book. </blurb> -->
 
   <!-- The next three lines are likely for mature projects only: -->
   <!-- <brandlogo url="" source="images/cover.png"/> -->
@@ -43,14 +43,15 @@
   </macros>
 
   <!-- LaTeX Preamble -->
-  <latex-preamble>
-    \usepackage{cancel}
+  <!-- <latex-preamble> -->
+    <!-- \usepackage{cancel} -->
     <!-- \usepackage{systeme} -->
-  </latex-preamble>
+  <!-- </latex-preamble> -->
 
   <!-- If you put any latex-image elements you can include preambles for those in the next element. -->
   <latex-image-preamble>
     \usepackage{tikz, pgfplots}
+    \usetikzlibrary{calc,angles,quotes} % calc for coordinate calculations, angles for angle markings, and quotes for angle labels
     \usetikzlibrary{positioning,matrix,arrows}
     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
     \usetikzlibrary{decorations.markings}
