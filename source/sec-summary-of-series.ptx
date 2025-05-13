@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-summary-of-series" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary of Series</title>
+
+  <introduction>
+    <p>
+      The culmination of this chapter is to be able to take a given series, and determine if it converges or diverges. For each of these kinds of questions, you should:
+    </p>
+    <p>
+    <ul>
+      <li>State convergence or divergence, and also,</li>
+      <li>Specify which test you used, and give a justification for why it can be used (which is how you show your work).</li>
+    </ul>
+    </p>
+    <p>For most questions, the test you should use will not be given, so you will have to develop intuition to recognize which test to use.</p>
+  </introduction>
+  
+
+  <subsection>
+    <title>Choosing Which Test to Use</title>
+    <p>
+      <ul>
+        <li>
+          <p>
+            <alert>Do the terms not approach 0?</alert>
+          </p>
+          <p>
+            Use the <m>n</m>th term test for divergence: If <m>\lim_{n \to \infty} a_n \neq 0</m> (or the limit doesn't exist), then the series diverges immediately.
+          </p>
+        </li>
+      
+        <li>
+          <p>
+            <alert>Are there exponents of <m>n</m>?</alert>
+          </p>
+          <p>
+            Could be a geometric series, of the form <m>\sum a\,r^n</m>.
+          </p>
+          <p>
+            Use the geometric series test: For common ratio <m>r</m>,
+          </p>
+          <p>
+            <ul>
+              <li><m>|r| \lt 1</m> ⇒ converges</li>
+              <li><m>|r| \geq 1</m> ⇒ diverges</li>
+            </ul>
+          </p>
+        </li>
+      
+        <li>
+          <p>
+            <alert>Are two similar terms being subtracted? Or, can you do partial‑fraction decomposition?</alert>
+          </p>
+          <p>
+            Could be telescoping.
+          </p>
+          <p>
+            Write the partial sum <m>s_n</m> explicitly, then take <m>\lim_{n \to \infty} s_n</m>.
+          </p>
+        </li>
+      
+        <li>
+          <p>
+            <alert>Can it be written as a power of <m>n</m>?</alert>
+          </p>
+          <p>
+            Consider the p‑series <m>\sum \frac{1}{n^{p}}</m>
+          </p>
+          <p>
+            <m>p</m>‑series: converges if <m>p \gt 1</m>, diverges if <m>p \leq 1</m>.
+          </p>
+        </li>
+      
+        <li>
+          <p>
+            <alert>Does the numerator or denominator have more than one term?</alert>
+          </p>
+          <p>
+            Consider asymptotic comparison (keeping only the dominant term)
+          </p>
+          <p>
+            Use the direct or limit comparison test: compare to a simpler series (typically a p‑series or geometric series).
+          </p>
+          <p>
+            <ul>
+              <li>For limit comparison, calculate <m>L = \lim_{n \to \infty} \frac{a_n}{b_n}</m>. If <m>L \gt 0</m>, then <m>\sum a_n</m> and <m>\sum b_n</m> behave the same.</li>
+            </ul>
+          </p>
+        </li>
+      
+        <li>
+          <p>
+            <alert>Has factorials (<m>n!</m>) and/or exponential expressions (<m>b^n</m>)?</alert>
+          </p>
+          <p>
+            Use the ratio test: calculate <m>\rho = \lim_{n \to \infty} \frac{a_{n+1}}{a_n}</m>
+          </p>
+          <p>
+            <ul>
+              <li><m>\rho \lt 1</m> ⇒ converges (absolutely)</li>
+              <li><m>\rho \gt 1</m> ⇒ diverges</li>
+              <li><m>\rho = 1</m> ⇒ inconclusive (use another test)</li>
+            </ul>
+          </p>
+        </li>
+      
+        <li>
+          <p>
+            <alert>Has a double power (like <m>n^n</m> or <m>(f(n))^n</m>)?</alert>
+          </p>
+          <p>
+            Use the root test: calculate <m>L = \lim_{n \to \infty} \sqrt[n]{\lvert a_n\rvert}</m>
+          </p>
+          <p>
+            <ul>
+              <li><m>L \lt 1</m> ⇒ converges</li>
+              <li><m>L \gt 1</m> ⇒ diverges</li>
+              <li><m>L = 1</m> ⇒ inconclusive (use another test)</li>
+            </ul>
+          </p>
+        </li>
+      
+        <li>
+          <p>
+            <alert>Has an alternating factor, like <m>(-1)^n</m> or <m>(-1)^{n+1}</m>?</alert>
+          </p>
+          <p>
+            Use the alternating series test: if <m>\lim_{n \to \infty} a_n = 0</m> and <m>a_n</m> is decreasing, then the series converges (conditionally).
+          </p>
+        </li>
+      
+        <li>
+          <p>
+            <alert>Terms can be integrated easily, maybe using <m>u</m>-substitution?</alert>
+          </p>
+          <p>
+            Use the integral test: convergence of <m>\sum a_n</m> is the same as <m>\int f(x) \,dx</m>
+          </p>
+        </li>
+      </ul>
+    </p>
+    
+  </subsection>
+
+  
+
+</section>

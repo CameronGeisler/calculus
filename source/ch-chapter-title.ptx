@@ -4,10 +4,10 @@
   <title>Chapter Title</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> Text before the section. </p>
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-inverse-trigonometric-substitution.ptx"/>
+  <xi:include href="sec-section-name.ptx"/>
 
 </chapter>
