@@ -13,7 +13,7 @@
   </introduction>
 
   <subsection xml:id="subsec-subsection-name">
-    <title>subsection-name</tle>
+    <title>Subsection Name</title>
     <p>
       This is the introduction to the subsection. It can contain any content
       that is valid in a <introduction> element, including <p>, <ul>, <ol>,
