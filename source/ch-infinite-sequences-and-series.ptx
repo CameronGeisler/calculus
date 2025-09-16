@@ -9,5 +9,6 @@
 
   <!-- include sections -->
   <xi:include href="sec-summary-of-series.ptx"/>
+  <xi:include href="sec-series-review.ptx"/>
 
 </chapter>

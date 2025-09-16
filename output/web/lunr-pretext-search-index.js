@@ -124,7 +124,1042 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Summary of Series",
-  "body": " Summary of Series   The culmination of this chapter is to be able to take a given series, and determine if it converges or diverges. For each of these kinds of questions, you should:    State convergence or divergence, and also,  Specify which test you used, and give a justification for why it can be used (which is how you show your work).    For most questions, the test you should use will not be given, so you will have to develop intuition to recognize which test to use.    Choosing Which Test to Use      Do the terms not approach 0?   Use the th term test for divergence: If (or the limit doesn't exist), then the series diverges immediately.     Are there exponents of  ?   Could be a geometric series, of the form  .  Use the geometric series test: For common ratio  ,    ⇒ converges  ⇒ diverges       Are two similar terms being subtracted? Or, can you do partial‑fraction decomposition?   Could be telescoping.  Write the partial sum  explicitly, then take  .     Can it be written as a power of  ?   Consider the p‑series     ‑series: converges if  , diverges if  .     Does the numerator or denominator have more than one term?   Consider asymptotic comparison (keeping only the dominant term)  Use the direct or limit comparison test: compare to a simpler series (typically a p‑series or geometric series).    For limit comparison, calculate . If , then and behave the same.       Has factorials ( ) and\/or exponential expressions ( )?   Use the ratio test: calculate     ⇒ converges (absolutely)  ⇒ diverges  ⇒ inconclusive (use another test)       Has a double power (like  or  )?   Use the root test: calculate     ⇒ converges  ⇒ diverges  ⇒ inconclusive (use another test)       Has an alternating factor, like or  ?   Use the alternating series test: if  and  is decreasing, then the series converges (conditionally).     Terms can be integrated easily, maybe using  -substitution?   Use the integral test: convergence of  is the same as       "
+  "body": " Summary of Series   In previous sections, we explored various methods for determining if an infinite series converges or diverges. Also, in a few limited cases, it is possible to determine the exact value of the convergent series.  The culmination of the series chapter is to be able to take a given series and determine if it converges or diverges. Most problems won't tell you which test to use, so you'll have to be able to use pattern recognition to figure out which test applies. This is similar to how evaluating integrals involves pattern recognition for which technique to use. For each of these questions, you should:    State convergence or divergence,  Specify which test you used, and,  Why it can be applied.      Choosing Which Test to Use      Do the terms not approach 0?   If or the limit does not exist, use the th-term test for divergence: the series diverges immediately.     Are there exponents of ?  Could be a geometric series . Rewrite in the form . With common ratio ,     converges   diverges    The sum is (if it converges)     Are two similar terms being subtracted? Or can you do partial-fraction decomposition ? Could be telescoping. Write the partial sum explicitly, then take . Often used for simple rational functions, or with quadratic denominators that are factorable.     Can it be written as a power of ?   Consider the -series . Use the -series test: converges if , diverges if . Should be second-nature in order to help with the comparison tests.     Is there a fraction, with a numerator or denominator with more than one term? Especially a rational function, or generally terms involving fractions. Consider comparison tests . Use asymptotic comparison (keeping only the dominant term). Use the direct or limit comparison test: compare to a simpler series (usually a -series or geometric).    Use direct comparison, if it's easy enough.  Use limit comparison if direct comparison is too difficult. Calculate . If , then and behave the same.       Has factorials ( ) and\/or exponentials ( )? Especially mixed with powers ( ) or double exponentials ( ).   Use the ratio test : compute .     converges (absolutely)   diverges   inconclusive (try another test)       Has a double power? With in the exponent and  in the base (like or of the form ).   Use the root test : compute .     converges (absolutely)   diverges   inconclusive (try another test)    Note: Don't confuse this with a geometric series , which has a constant base.     Has an alternating factor (like or )?    Use the alternating series test : if and is decreasing, then the series converges (conditionally).     Can be integrated easily, maybe using -substitution?  Use the integral test : convergence of is the same as .       Overall Remarks    Some series can be shown to converge or diverge using multiple different tests (which give you the same conclusion). However, one method may be easier or harder than the other.  Always check if the terms approach 0. The divergence test is the easiest to apply (because it only involves taking a limit), and it can lead to a quick conclusion of divergence. It is often forgotten by students.     "
+},
+{
+  "id": "sec-series-review",
+  "level": "1",
+  "url": "sec-series-review.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Series Review",
+  "body": " Series Review   The three main question types for series (and sequences) problems are:  Find the limit of the sequence, or determine if the sequence diverges.  Determine if series converges or diverges.  Find the value of the sum of the series, or determine if it diverges.  Determine if series converges absolutely, converges conditionally, or diverges.      Exercises     Find the limit of each sequence, or determine if the sequence diverges.                                                                                                                                 Convergence of series   Determine if each series converges or diverges.                                             Sum of a series   Find the value of the sum of each series, or determine if it diverges. Simplify your answer completely.                        Absolute convergence and conditional convergence   Determine if each series converges absolutely, converges conditionally, or diverges.                     "
+},
+{
+  "id": "sec-series-review-3-2-1-2",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-2",
+  "type": "Exercise",
+  "number": "2.2.1.1",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-3",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-3",
+  "type": "Exercise",
+  "number": "2.2.1.2",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-4",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-4",
+  "type": "Exercise",
+  "number": "2.2.1.3",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-5",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-5",
+  "type": "Exercise",
+  "number": "2.2.1.4",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-6",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-6",
+  "type": "Exercise",
+  "number": "2.2.1.5",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-7",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-7",
+  "type": "Exercise",
+  "number": "2.2.1.6",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-8",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-8",
+  "type": "Exercise",
+  "number": "2.2.1.7",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-9",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-9",
+  "type": "Exercise",
+  "number": "2.2.1.8",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-10",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-10",
+  "type": "Exercise",
+  "number": "2.2.1.9",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-11",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-11",
+  "type": "Exercise",
+  "number": "2.2.1.10",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-12",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-12",
+  "type": "Exercise",
+  "number": "2.2.1.11",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-13",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-13",
+  "type": "Exercise",
+  "number": "2.2.1.12",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-14",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-14",
+  "type": "Exercise",
+  "number": "2.2.1.13",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-15",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-15",
+  "type": "Exercise",
+  "number": "2.2.1.14",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-16",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-16",
+  "type": "Exercise",
+  "number": "2.2.1.15",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-17",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-17",
+  "type": "Exercise",
+  "number": "2.2.1.16",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-18",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-18",
+  "type": "Exercise",
+  "number": "2.2.1.17",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-19",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-19",
+  "type": "Exercise",
+  "number": "2.2.1.18",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-20",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-20",
+  "type": "Exercise",
+  "number": "2.2.1.19",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-21",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-21",
+  "type": "Exercise",
+  "number": "2.2.1.20",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-22",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-22",
+  "type": "Exercise",
+  "number": "2.2.1.21",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-23",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-23",
+  "type": "Exercise",
+  "number": "2.2.1.22",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-24",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-24",
+  "type": "Exercise",
+  "number": "2.2.1.23",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-25",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-25",
+  "type": "Exercise",
+  "number": "2.2.1.24",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-26",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-26",
+  "type": "Exercise",
+  "number": "2.2.1.25",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-27",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-27",
+  "type": "Exercise",
+  "number": "2.2.1.26",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-28",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-28",
+  "type": "Exercise",
+  "number": "2.2.1.27",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-29",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-29",
+  "type": "Exercise",
+  "number": "2.2.1.28",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-30",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-30",
+  "type": "Exercise",
+  "number": "2.2.1.29",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-31",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-31",
+  "type": "Exercise",
+  "number": "2.2.1.30",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-32",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-32",
+  "type": "Exercise",
+  "number": "2.2.1.31",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-33",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-33",
+  "type": "Exercise",
+  "number": "2.2.1.32",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-34",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-34",
+  "type": "Exercise",
+  "number": "2.2.1.33",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-35",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-35",
+  "type": "Exercise",
+  "number": "2.2.1.34",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-36",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-36",
+  "type": "Exercise",
+  "number": "2.2.1.35",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-37",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-37",
+  "type": "Exercise",
+  "number": "2.2.1.36",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "sec-series-review-3-2-1-38",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-38",
+  "type": "Exercise",
+  "number": "2.2.1.37",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-39",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-39",
+  "type": "Exercise",
+  "number": "2.2.1.38",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-40",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-40",
+  "type": "Exercise",
+  "number": "2.2.1.39",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-41",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-41",
+  "type": "Exercise",
+  "number": "2.2.1.40",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-2-3",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-3",
+  "type": "Exercise",
+  "number": "2.2.1.41",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-4",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-4",
+  "type": "Exercise",
+  "number": "2.2.1.42",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-5",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-5",
+  "type": "Exercise",
+  "number": "2.2.1.43",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-6",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-6",
+  "type": "Exercise",
+  "number": "2.2.1.44",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-7",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-7",
+  "type": "Exercise",
+  "number": "2.2.1.45",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-8",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-8",
+  "type": "Exercise",
+  "number": "2.2.1.46",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-9",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-9",
+  "type": "Exercise",
+  "number": "2.2.1.47",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-10",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-10",
+  "type": "Exercise",
+  "number": "2.2.1.48",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-11",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-11",
+  "type": "Exercise",
+  "number": "2.2.1.49",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-12",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-12",
+  "type": "Exercise",
+  "number": "2.2.1.50",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-13",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-13",
+  "type": "Exercise",
+  "number": "2.2.1.51",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-14",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-14",
+  "type": "Exercise",
+  "number": "2.2.1.52",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-15",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-15",
+  "type": "Exercise",
+  "number": "2.2.1.53",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-16",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-16",
+  "type": "Exercise",
+  "number": "2.2.1.54",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-17",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-17",
+  "type": "Exercise",
+  "number": "2.2.1.55",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-18",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-18",
+  "type": "Exercise",
+  "number": "2.2.1.56",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-19",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-19",
+  "type": "Exercise",
+  "number": "2.2.1.57",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-20",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-20",
+  "type": "Exercise",
+  "number": "2.2.1.58",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-21",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-21",
+  "type": "Exercise",
+  "number": "2.2.1.59",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-22",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-22",
+  "type": "Exercise",
+  "number": "2.2.1.60",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-23",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-23",
+  "type": "Exercise",
+  "number": "2.2.1.61",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-24",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-24",
+  "type": "Exercise",
+  "number": "2.2.1.62",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-25",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-25",
+  "type": "Exercise",
+  "number": "2.2.1.63",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-26",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-26",
+  "type": "Exercise",
+  "number": "2.2.1.64",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-27",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-27",
+  "type": "Exercise",
+  "number": "2.2.1.65",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-28",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-28",
+  "type": "Exercise",
+  "number": "2.2.1.66",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-29",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-29",
+  "type": "Exercise",
+  "number": "2.2.1.67",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-30",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-30",
+  "type": "Exercise",
+  "number": "2.2.1.68",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-31",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-31",
+  "type": "Exercise",
+  "number": "2.2.1.69",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-32",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-32",
+  "type": "Exercise",
+  "number": "2.2.1.70",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-33",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-33",
+  "type": "Exercise",
+  "number": "2.2.1.71",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-34",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-34",
+  "type": "Exercise",
+  "number": "2.2.1.72",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-35",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-35",
+  "type": "Exercise",
+  "number": "2.2.1.73",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-36",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-36",
+  "type": "Exercise",
+  "number": "2.2.1.74",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-37",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-37",
+  "type": "Exercise",
+  "number": "2.2.1.75",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-38",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-38",
+  "type": "Exercise",
+  "number": "2.2.1.76",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-39",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-39",
+  "type": "Exercise",
+  "number": "2.2.1.77",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-40",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-40",
+  "type": "Exercise",
+  "number": "2.2.1.78",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-41",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-41",
+  "type": "Exercise",
+  "number": "2.2.1.79",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-2-42",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-2-42",
+  "type": "Exercise",
+  "number": "2.2.1.80",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-3",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-3",
+  "type": "Exercise",
+  "number": "2.2.1.81",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-4",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-4",
+  "type": "Exercise",
+  "number": "2.2.1.82",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-5",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-5",
+  "type": "Exercise",
+  "number": "2.2.1.83",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-6",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-6",
+  "type": "Exercise",
+  "number": "2.2.1.84",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-7",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-7",
+  "type": "Exercise",
+  "number": "2.2.1.85",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-8",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-8",
+  "type": "Exercise",
+  "number": "2.2.1.86",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-9",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-9",
+  "type": "Exercise",
+  "number": "2.2.1.87",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-10",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-10",
+  "type": "Exercise",
+  "number": "2.2.1.88",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-11",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-11",
+  "type": "Exercise",
+  "number": "2.2.1.89",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-12",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-12",
+  "type": "Exercise",
+  "number": "2.2.1.90",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-13",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-13",
+  "type": "Exercise",
+  "number": "2.2.1.91",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-14",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-14",
+  "type": "Exercise",
+  "number": "2.2.1.92",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-15",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-15",
+  "type": "Exercise",
+  "number": "2.2.1.93",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-16",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-16",
+  "type": "Exercise",
+  "number": "2.2.1.94",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-17",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-17",
+  "type": "Exercise",
+  "number": "2.2.1.95",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-18",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-18",
+  "type": "Exercise",
+  "number": "2.2.1.96",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-19",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-19",
+  "type": "Exercise",
+  "number": "2.2.1.97",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-20",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-20",
+  "type": "Exercise",
+  "number": "2.2.1.98",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-3-21",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-3-21",
+  "type": "Exercise",
+  "number": "2.2.1.99",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-3",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-3",
+  "type": "Exercise",
+  "number": "2.2.1.100",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-4",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-4",
+  "type": "Exercise",
+  "number": "2.2.1.101",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-5",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-5",
+  "type": "Exercise",
+  "number": "2.2.1.102",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-6",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-6",
+  "type": "Exercise",
+  "number": "2.2.1.103",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-7",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-7",
+  "type": "Exercise",
+  "number": "2.2.1.104",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-8",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-8",
+  "type": "Exercise",
+  "number": "2.2.1.105",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-9",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-9",
+  "type": "Exercise",
+  "number": "2.2.1.106",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-10",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-10",
+  "type": "Exercise",
+  "number": "2.2.1.107",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-11",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-11",
+  "type": "Exercise",
+  "number": "2.2.1.108",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-12",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-12",
+  "type": "Exercise",
+  "number": "2.2.1.109",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-13",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-13",
+  "type": "Exercise",
+  "number": "2.2.1.110",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-14",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-14",
+  "type": "Exercise",
+  "number": "2.2.1.111",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-15",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-15",
+  "type": "Exercise",
+  "number": "2.2.1.112",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-16",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-16",
+  "type": "Exercise",
+  "number": "2.2.1.113",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "sec-series-review-3-2-4-17",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-4-17",
+  "type": "Exercise",
+  "number": "2.2.1.114",
+  "title": "",
+  "body": ""
 }
 ]
 
