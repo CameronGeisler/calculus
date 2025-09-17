@@ -133,23 +133,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Series Review",
-  "body": " Series Review   The three main question types for series (and sequences) problems are:  Find the limit of the sequence, or determine if the sequence diverges.  Determine if series converges or diverges.  Find the value of the sum of the series, or determine if it diverges.  Determine if series converges absolutely, converges conditionally, or diverges.      Exercises     Find the limit of each sequence, or determine if the sequence diverges.                                                                                                                                 Convergence of series   Determine if each series converges or diverges.                                             Sum of a series   Find the value of the sum of each series, or determine if it diverges. Simplify your answer completely.                        Absolute convergence and conditional convergence   Determine if each series converges absolutely, converges conditionally, or diverges.                     "
-},
-{
-  "id": "sec-series-review-3-2-1-2",
-  "level": "2",
-  "url": "sec-series-review.html#sec-series-review-3-2-1-2",
-  "type": "Exercise",
-  "number": "2.2.1.1",
-  "title": "",
-  "body": "  "
+  "body": " Series Review   The three main question types for series (and sequences) problems are:  Find the limit of the sequence, or determine if the sequence diverges.  Determine if series converges or diverges.  Find the value of the sum of the series, or determine if it diverges.  Determine if series converges absolutely, converges conditionally, or diverges.      Exercises    Limit of sequences   Find the limit of each sequence, or determine if the sequence diverges.                                                                                                                                 Convergence of series   Determine if each series converges or diverges.                                             Sum of a series   Find the value of the sum of each series, or determine if it diverges. Simplify your answer completely.                        Absolute convergence and conditional convergence   Determine if each series converges absolutely, converges conditionally, or diverges.                     "
 },
 {
   "id": "sec-series-review-3-2-1-3",
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-3",
   "type": "Exercise",
-  "number": "2.2.1.2",
+  "number": "2.2.1.1",
   "title": "",
   "body": "  "
 },
@@ -158,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-4",
   "type": "Exercise",
-  "number": "2.2.1.3",
+  "number": "2.2.1.2",
   "title": "",
   "body": "  "
 },
@@ -167,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-5",
   "type": "Exercise",
-  "number": "2.2.1.4",
+  "number": "2.2.1.3",
   "title": "",
   "body": "  "
 },
@@ -176,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-6",
   "type": "Exercise",
-  "number": "2.2.1.5",
+  "number": "2.2.1.4",
   "title": "",
   "body": "  "
 },
@@ -185,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-7",
   "type": "Exercise",
-  "number": "2.2.1.6",
+  "number": "2.2.1.5",
   "title": "",
   "body": "  "
 },
@@ -194,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-8",
   "type": "Exercise",
-  "number": "2.2.1.7",
+  "number": "2.2.1.6",
   "title": "",
   "body": "  "
 },
@@ -203,7 +194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-9",
   "type": "Exercise",
-  "number": "2.2.1.8",
+  "number": "2.2.1.7",
   "title": "",
   "body": "  "
 },
@@ -212,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-10",
   "type": "Exercise",
-  "number": "2.2.1.9",
+  "number": "2.2.1.8",
   "title": "",
   "body": "  "
 },
@@ -221,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-11",
   "type": "Exercise",
-  "number": "2.2.1.10",
+  "number": "2.2.1.9",
   "title": "",
   "body": "  "
 },
@@ -230,7 +221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-12",
   "type": "Exercise",
-  "number": "2.2.1.11",
+  "number": "2.2.1.10",
   "title": "",
   "body": "  "
 },
@@ -239,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-13",
   "type": "Exercise",
-  "number": "2.2.1.12",
+  "number": "2.2.1.11",
   "title": "",
   "body": "  "
 },
@@ -248,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-14",
   "type": "Exercise",
-  "number": "2.2.1.13",
+  "number": "2.2.1.12",
   "title": "",
   "body": "  "
 },
@@ -257,7 +248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-15",
   "type": "Exercise",
-  "number": "2.2.1.14",
+  "number": "2.2.1.13",
   "title": "",
   "body": "  "
 },
@@ -266,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-16",
   "type": "Exercise",
-  "number": "2.2.1.15",
+  "number": "2.2.1.14",
   "title": "",
   "body": "  "
 },
@@ -275,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-17",
   "type": "Exercise",
-  "number": "2.2.1.16",
+  "number": "2.2.1.15",
   "title": "",
   "body": "  "
 },
@@ -284,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-18",
   "type": "Exercise",
-  "number": "2.2.1.17",
+  "number": "2.2.1.16",
   "title": "",
   "body": "  "
 },
@@ -293,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-19",
   "type": "Exercise",
-  "number": "2.2.1.18",
+  "number": "2.2.1.17",
   "title": "",
   "body": "  "
 },
@@ -302,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-20",
   "type": "Exercise",
-  "number": "2.2.1.19",
+  "number": "2.2.1.18",
   "title": "",
   "body": "  "
 },
@@ -311,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-21",
   "type": "Exercise",
-  "number": "2.2.1.20",
+  "number": "2.2.1.19",
   "title": "",
   "body": "  "
 },
@@ -320,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-22",
   "type": "Exercise",
-  "number": "2.2.1.21",
+  "number": "2.2.1.20",
   "title": "",
   "body": "  "
 },
@@ -329,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-23",
   "type": "Exercise",
-  "number": "2.2.1.22",
+  "number": "2.2.1.21",
   "title": "",
   "body": "  "
 },
@@ -338,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-24",
   "type": "Exercise",
-  "number": "2.2.1.23",
+  "number": "2.2.1.22",
   "title": "",
   "body": "  "
 },
@@ -347,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-25",
   "type": "Exercise",
-  "number": "2.2.1.24",
+  "number": "2.2.1.23",
   "title": "",
   "body": "  "
 },
@@ -356,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-26",
   "type": "Exercise",
-  "number": "2.2.1.25",
+  "number": "2.2.1.24",
   "title": "",
   "body": "  "
 },
@@ -365,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-27",
   "type": "Exercise",
-  "number": "2.2.1.26",
+  "number": "2.2.1.25",
   "title": "",
   "body": "  "
 },
@@ -374,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-28",
   "type": "Exercise",
-  "number": "2.2.1.27",
+  "number": "2.2.1.26",
   "title": "",
   "body": "  "
 },
@@ -383,7 +374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-29",
   "type": "Exercise",
-  "number": "2.2.1.28",
+  "number": "2.2.1.27",
   "title": "",
   "body": "  "
 },
@@ -392,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-30",
   "type": "Exercise",
-  "number": "2.2.1.29",
+  "number": "2.2.1.28",
   "title": "",
   "body": "  "
 },
@@ -401,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-31",
   "type": "Exercise",
-  "number": "2.2.1.30",
+  "number": "2.2.1.29",
   "title": "",
   "body": "  "
 },
@@ -410,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-32",
   "type": "Exercise",
-  "number": "2.2.1.31",
+  "number": "2.2.1.30",
   "title": "",
   "body": "  "
 },
@@ -419,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-33",
   "type": "Exercise",
-  "number": "2.2.1.32",
+  "number": "2.2.1.31",
   "title": "",
   "body": "  "
 },
@@ -428,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-34",
   "type": "Exercise",
-  "number": "2.2.1.33",
+  "number": "2.2.1.32",
   "title": "",
   "body": "  "
 },
@@ -437,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-35",
   "type": "Exercise",
-  "number": "2.2.1.34",
+  "number": "2.2.1.33",
   "title": "",
   "body": "  "
 },
@@ -446,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-36",
   "type": "Exercise",
-  "number": "2.2.1.35",
+  "number": "2.2.1.34",
   "title": "",
   "body": "  "
 },
@@ -455,25 +446,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-37",
   "type": "Exercise",
-  "number": "2.2.1.36",
+  "number": "2.2.1.35",
   "title": "",
-  "body": "      "
+  "body": "  "
 },
 {
   "id": "sec-series-review-3-2-1-38",
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-38",
   "type": "Exercise",
-  "number": "2.2.1.37",
+  "number": "2.2.1.36",
   "title": "",
-  "body": "  "
+  "body": "      "
 },
 {
   "id": "sec-series-review-3-2-1-39",
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-39",
   "type": "Exercise",
-  "number": "2.2.1.38",
+  "number": "2.2.1.37",
   "title": "",
   "body": "  "
 },
@@ -482,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-40",
   "type": "Exercise",
-  "number": "2.2.1.39",
+  "number": "2.2.1.38",
   "title": "",
   "body": "  "
 },
@@ -490,6 +481,15 @@ var ptx_lunr_docs = [
   "id": "sec-series-review-3-2-1-41",
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-41",
+  "type": "Exercise",
+  "number": "2.2.1.39",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "sec-series-review-3-2-1-42",
+  "level": "2",
+  "url": "sec-series-review.html#sec-series-review-3-2-1-42",
   "type": "Exercise",
   "number": "2.2.1.40",
   "title": "",
@@ -1160,6 +1160,51 @@ var ptx_lunr_docs = [
   "number": "2.2.1.114",
   "title": "",
   "body": ""
+},
+{
+  "id": "sec-power-series",
+  "level": "1",
+  "url": "sec-power-series.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "Power Series",
+  "body": " Power Series    Interval of Convergence of Power Series Summary  To determine the interval of convergence of a power series:      Determine the open interval where the series converges .  Use the ratio test (or root test).    Ratio test: converges if .  Root test: converges if .    Solve the resulting inequality to find the (open) interval where the series converges, which will always be of the form , where is the radius of convergence.     Test the endpoints separately . Check the convergence of the series at and by substituting these values into the original series, and using a suitable test or the convergence or divergence of a known series. Some common series forms you'll see:    Harmonic series  Alternating harmonic series  Divergence test (terms don't approach 0)   -series  Alternating series test (alternating series whose terms approach 0)    (If or , there are no endpoints to test)     Form the complete interval of convergence , by combining the interval from step 2 and the endpoints from step 3.     Remarks:    Often, when testing the endpoints, the two values of will lead to a very similar series. Contrasting where they are different can help you think about which converges and\/or which diverges.  The ratio test is used for about 90% of all examples. However, sometimes both can be used, and the root test uses easier algebra, particularly when there are a lot of exponents of .  Note that with the ratio test (or root test), the limit is with respect to , and so is a constant with respect to the limit.      Examples    Find the interval of convergence and radius of convergence of each series.                                                                                         Advanced Examples    Find the interval of convergence and radius of convergence of each series.       (where )  (where )                 (where is a positive integer)        Find the radius of convergence of each power series.              Find the interval of convergence and radius of convergence of each series. Then, find the sum of the series for in that interval.     .      The series is geometric.     , converges to .     "
+},
+{
+  "id": "sec-power-series-3-2",
+  "level": "2",
+  "url": "sec-power-series.html#sec-power-series-3-2",
+  "type": "Checkpoint",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  Find the interval of convergence and radius of convergence of each series.                                                                                      "
+},
+{
+  "id": "sec-power-series-4-2",
+  "level": "2",
+  "url": "sec-power-series.html#sec-power-series-4-2",
+  "type": "Checkpoint",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Find the interval of convergence and radius of convergence of each series.       (where )  (where )                 (where is a positive integer)     "
+},
+{
+  "id": "sec-power-series-4-3",
+  "level": "2",
+  "url": "sec-power-series.html#sec-power-series-4-3",
+  "type": "Checkpoint",
+  "number": "3.1.3",
+  "title": "",
+  "body": "  Find the radius of convergence of each power series.           "
+},
+{
+  "id": "sec-power-series-4-4",
+  "level": "2",
+  "url": "sec-power-series.html#sec-power-series-4-4",
+  "type": "Checkpoint",
+  "number": "3.1.4",
+  "title": "",
+  "body": "  Find the interval of convergence and radius of convergence of each series. Then, find the sum of the series for in that interval.     .      The series is geometric.     , converges to .   "
 }
 ]
 
