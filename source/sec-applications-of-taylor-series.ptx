@@ -17,8 +17,8 @@
     <p>Taylor series provide another method of evaluating limits of indeterminate forms like <m>\frac{0}{0}</m> or <m>\frac{\infty}{\infty}</m>. Previously, to do this, you learned:</p>
     <p>
       <ul>
-        <li><alert>Various algebraic techniques</alert>, like e.g. factoring, multiplying by the conjugate, or using trigonometric identities.</li>
-        <li><alert>L'Hopital's rule</alert>, which is like a shortcut, that works in many situations.</li>
+        <li><em>Various algebraic techniques</em>, like e.g. factoring, multiplying by the conjugate, or using trigonometric identities.</li>
+        <li><em>L'Hopital's rule</em>, which is like a shortcut, that works in many situations.</li>
       </ul>
     </p>
     <p>However, there are some situations where L'Hopital's rule is complicated, because the derivatives involved are complicated. Taylor series give a more flexible, general, and simple method.</p>
@@ -105,8 +105,14 @@
     </p>
     <p>There are 2 ways to bound the error:</p>
     <ol>
-      <li><em>Add terms one at a time until your calculator output is stable</em>. Add the first term, then the 2nd, then the 3rd, and so on, one at a time. Each time, check if the decimal digits you care about stop changing. After they stay the same for 2 or 3 steps in a row, that is your answer.</li>
-      <p>This is the most naive and simple method, which will give you the correct answer for most exam problems. However, it is technically not rigorous, and gives misleading results in some rare tricky cases. To be more safe, you can add more terms to confirm that your answer is correct.</p>
+      <li>
+        <p>
+          <em>Add terms one at a time until your calculator output is stable</em>. Add the first term, then the 2nd, then the 3rd, and so on, one at a time. Each time, check if the decimal digits you care about stop changing. After they stay the same for 2 or 3 steps in a row, that is your answer.
+        </p>
+        <p>
+          This is the most naive and simple method, which will give you the correct answer for most exam problems. However, it is technically not rigorous, and gives misleading results in some rare tricky cases. To be more safe, you can add more terms to confirm that your answer is correct.
+        </p>
+      </li>
       <li>
         <p>
           <em>Alternating series error bound</em>. If the series is alternating (which a lot of them are), then the error is bounded by the first omitted term. In other words, <m>\abs{r_n} \leq a_{n+1}</m>.
@@ -114,10 +120,10 @@
             <li>If you want error less than <m>10^{-4}</m>, then test values of <m>n</m> such that <m>a_{n+1}</m> is less than <m>10^{-4}</m>.</li>
             <li>For example, if <m>a_6</m> is less than <m>10^{-4}</m>, then adding terms up to <m>n=5</m> is sufficient.</li>
           </ul>
+          This method is more rigorous, and is how you can show your work.
         </p>
       </li>
     </ol>
-    <p>This method is more rigorous, and is how you can show your work.</p>
     <example>
       <p>Use power series to approximate each definite integral with the stated accuracy.</p>
       <ol>
