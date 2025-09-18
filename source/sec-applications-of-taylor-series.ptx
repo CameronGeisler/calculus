@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-applications-of-taylor-series" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Applications of Taylor Series</title>
+  
+  <!-- <introduction>
+  <p>
+  This is the introduction to the section. It can contain any content
+  that is valid in a <introduction> element, including <p>, <ul>, <ol>,
+  <figure>, and <table>. You can also include other files using
+  <xi:include> tags.
+  </p>
+  </introduction> -->
+  
+  <subsection>
+    <title>Evaluating Limits of Indeterminate Forms</title>
+    <p>Taylor series provide another method of evaluating limits of indeterminate forms like <m>\frac{0}{0}</m> or <m>\frac{\infty}{\infty}</m>. Previously, to do this, you learned:</p>
+    <p>
+      <ul>
+        <li><alert>Various algebraic techniques</alert>, like e.g. factoring, multiplying by the conjugate, or using trigonometric identities.</li>
+        <li><alert>L'Hopital's rule</alert>, which is like a shortcut, that works in many situations.</li>
+      </ul>
+    </p>
+    <p>However, there are some situations where L'Hopital's rule is complicated, because the derivatives involved are complicated. Taylor series give a more flexible, general, and simple method.</p>
+    <p>The broad idea is:</p>
+    <p>
+      <ul>
+        <li>Replace each function with the first few terms of its Taylor series expansion.</li>
+        <li>Simplify and cancel.</li>
+        <li>Take the limit by substituting in the limit value.</li>
+      </ul>
+    </p>
+    <p>Sometimes it is not obvious how many terms of the Taylor series to use. A good rule of thumb is 3 or 4 terms, but when in doubt, you can always include more terms. The dots (<m>\dots</m>) stand for powers of <m>x</m> greater than the last power that appears.</p>
+    
+    <example>
+      <p>Evaluate each limit using series.</p>
+      <ol>
+        <li><m>\lim_{x \to 0} \frac{e^x - (1+x)}{x^2}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\ln{(x + 1)}}{x}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\tan^{-1}x - x}{x^3}</m></li>
+        <li><m>\lim_{x \to 0} \frac{e^x - 1}{x}</m></li>
+        <li><m>\lim_{x \to 0} \frac{-x - \ln(1-x)}{x^2}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\sin 2x}{x}</m></li>
+        <li><m>\lim_{x \to 0} \frac{1 + x - e^x}{4x^2}</m></li>
+        <li><m>\lim_{x \to 0} \frac{2\cos 2x - 2 + 4x^2}{2x^4}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\ln(1+x) - x + \frac12 x^2}{x^3}</m></li>
+        <li><m>\lim_{x \to 4} \frac{x^2 - 16}{\ln(x-3)}</m></li>
+        <li><m>\lim_{x \to 0} \frac{12x - 8x^3 - 6\sin 2x}{x^5}</m></li>
+        <li><m>\lim_{x \to 1} \frac{x-1}{\ln x}</m></li>
+        <li><m>\lim_{x \to 2} \frac{x-2}{\ln(x-1)}</m></li>
+        <li><m>\lim_{x \to 0} \frac{e^{-2x} - 4e^{-x/2} + 3}{2x^2}</m></li>
+        <li><m>\lim_{x \to 0} \frac{x - \ln(1+x)}{x^2}</m></li>
+        <li><m>\lim_{x \to 0} \brac{\frac{1}{\sin x} - \frac{1}{x}}</m></li>
+        <li><m>\lim_{x \to 0} \frac{1 - \cos x - \frac12 x^2}{x^4}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\sin x - x + \frac16 x^3}{x^5}</m></li>
+        <li><m>\lim_{x \to 0} \frac{x - \arctan x}{x^3}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\arctan x - \sin x}{x^3 \cos x}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\ln(1+x^2)}{1 - \cos x}</m></li>
+        <li><m>\lim_{x \to 2} \frac{x^2 - 4}{\ln(x-1)}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\sin(3x^2)}{1 - \cos(2x)}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\sin x - \tan x}{x^3}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\ln(1+x^3)}{x \cdot \sin(x^2)}</m></li>
+        <li><m>\lim_{x \to 0} \frac{1 - \cos x}{1 + x - e^x}</m></li>
+        <li><m>\lim_{x \to 0} \frac{x^3 - 3x + 3\tan^{-1}x}{x^5}</m></li>
+        <li><m>\lim_{x \to 0} \frac{\cos x - e^{-x^2/2}}{x^3 \sin x}</m></li>
+        <li><m>\lim_{x \to 0} \frac{x^2 \tan^{-1}(x^3) - x^5 + \frac{1}{3}x^{11}}{x^{17}}</m></li>
+      </ol>
+    </example>
+  </subsection>
+  
+  <subsection>
+    <title>Finding Antiderivatives / Approximating Integrals with Series</title>
+    <example>
+      <p>Evaluate each indefinite integral as a power series, and find the radius of convergence.</p>
+      <ol>
+        <li><m>\int \sin(x^2) \,dx</m></li>
+        <li><m>\int x^2 \ln(1+x) \, dx</m></li>
+        <li><m>\int e^{-x^2} \,dx</m></li>
+        <li><m>\int \frac{\tan^{-1} x}{x} \, dx</m></li>
+        <li><m>\int \frac{\cos x - 1}{x} \, dx</m></li>
+        <li><m>\int \frac{x}{1 - x^8} \, dx</m></li>
+        <li><m>\int \frac{x}{1 + x^3} \, dx</m></li>
+        <li><m>\int \frac{\ln(1-x)}{x} \, dx</m></li>
+        <li><m>\int \frac{x - \tan^{-1}{x}}{x^3} \, dx</m></li>
+        <li><m>\int x^2 \sin(x^2) \, dx</m></li>
+        <li><m>\int \arctan(x^2) \, dx</m></li>
+        <li><m>\int x^4 \tan^{-1}(2x) \,dx</m></li>
+        <li><m>\int \sqrt{1 + x^3} \, dx</m> (requires binomial series)</li>
+      </ol>
+    </example>
+    <p>When evaluating an integral to a desired accuracy, there are 2 ways they will specify the accuracy:</p>
+    <p>
+      <ul>
+        <li><em>Directly</em>, saying you should have error less than <m>0.001</m>, or less than <m>10^{-5}</m>.</li>
+        <li>
+          <p>
+            <em>Up to some decimal places</em>, like accurate up to 3 decimal places, or 5 decimal places. Note that accurate up to <m>k</m> decimal places basically means to keep the error below <m>5 \times 10^{-k}</m>. For example:
+            <ul>
+              <li>2 decimal places <m>\implies</m> <m>\text{error} \lt 0.005</m></li>
+              <li>5 decimal places <m>\implies</m> <m>\text{error} \lt 0.000005</m></li>
+            </ul>
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>There are 2 ways to bound the error:</p>
+    <ol>
+      <li><em>Add terms one at a time until your calculator output is stable</em>. Add the first term, then the 2nd, then the 3rd, and so on, one at a time. Each time, check if the decimal digits you care about stop changing. After they stay the same for 2 or 3 steps in a row, that is your answer.</li>
+      <p>This is the most naive and simple method, which will give you the correct answer for most exam problems. However, it is technically not rigorous, and gives misleading results in some rare tricky cases. To be more safe, you can add more terms to confirm that your answer is correct.</p>
+      <li>
+        <p>
+          <em>Alternating series error bound</em>. If the series is alternating (which a lot of them are), then the error is bounded by the first omitted term. In other words, <m>\abs{r_n} \leq a_{n+1}</m>.
+          <ul>
+            <li>If you want error less than <m>10^{-4}</m>, then test values of <m>n</m> such that <m>a_{n+1}</m> is less than <m>10^{-4}</m>.</li>
+            <li>For example, if <m>a_6</m> is less than <m>10^{-4}</m>, then adding terms up to <m>n=5</m> is sufficient.</li>
+          </ul>
+        </p>
+      </li>
+    </ol>
+    <p>This method is more rigorous, and is how you can show your work.</p>
+    <example>
+      <p>Use power series to approximate each definite integral with the stated accuracy.</p>
+      <ol>
+        <li><m>\int_{0}^{1/2} \arctan\brac{\frac{x}{2}}\,dx \quad</m> (six decimal places)</li>
+        <li><m>\int_{0}^{0.2} x\ln\brac{1+x^2}\,dx \quad</m> (six decimal places)</li>
+        <li><m>\int_{0}^{0.5} x^4 e^{-x^2}\,dx \quad</m> (four decimal places)</li>
+        <li><m>\int_{0}^{0.6} \sin\brac{x^2}\,dx \quad</m> (<m>|\text{error}|\lt 10^{-5}</m>)</li>
+        <li><m>\int_{0}^{0.3} \frac{x}{1+x^3}\,dx \quad</m> (six decimal places)</li>
+        <li><m>\int_{0}^{0.4} \frac{e^{-x}-1}{x}\,dx \quad</m> (<m>|\text{error}|\lt 10^{-5}</m>)</li>
+        <li><m>\int_{0}^{0.3} \frac{x^2}{1+x^4}\,dx \quad</m> (six decimal places)</li>
+        <li><m>\int_{0}^{0.1} \frac{\sin x}{x}\,dx \quad</m> (<m>|\text{error}|\lt 10^{-5}</m>)</li>
+        <li><m>\int_{0}^{0.1} e^{-x^2}\,dx \quad</m> (<m>|\text{error}|\lt 10^{-5}</m>)</li>
+        <li><m>\int_{0}^{0.1} \frac{1-\cos x}{x^2}\,dx \quad</m> (<m>|\text{error}|\lt 10^{-5}</m>)</li>
+        <li><m>\int_{0}^{1/2} x^3\arctan x\,dx \quad</m> (four decimal places)</li>
+        <li><m>\int_{0}^{1} \sin\brac{x^4}\,dx \quad</m> (four decimal places)</li>
+        <li><m>\int_{0}^{0.5} x^2 e^{-x^2}\,dx \quad</m> (<m>|\text{error}| \lt 0.001</m>)</li>
+      </ol>
+    </example>
+  </subsection>
+  
+  
+  
+  
+</section>
