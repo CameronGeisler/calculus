@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Applications of Taylor Series</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-power-series.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-series-representation-of-functions.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-integration-techniques.html" class="internal"><span class="codenumber">1</span> <span class="title">Integration Techniques</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-inverse-trig-sub.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Inverse Trigonometric Substitution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#summary-of-inverse-trigonometric-substitution" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Summary of Inverse Trigonometric Substitution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#examples" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-infinite-sequences-and-series.html" class="internal"><span class="codenumber">2</span> <span class="title">Infinite Sequences and Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-summary-of-series.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Summary of Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-summary-of-series.html#sec-summary-of-series-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Choosing Which Test to Use</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-summary-of-series.html#sec-summary-of-series-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Overall Remarks</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-series-review.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Series Review</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-series-review.html#sec-series-review-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-series-review.html#sec-series-review-3-2" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-series-representation-of-functions.html" class="internal"><span class="codenumber">3</span> <span class="title">Series Representation of Functions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-power-series.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-power-series.html#sec-power-series-2" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Interval of Convergence of Power Series Summary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-power-series.html#sec-power-series-3" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-power-series.html#sec-power-series-4" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Advanced Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-applications-of-taylor-series.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Applications of Taylor Series</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Evaluating Limits of Indeterminate Forms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Finding Antiderivatives / Approximating Integrals with Series</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-applications-of-taylor-series"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applications of Taylor Series</span>
+</h2>
+<section class="subsection" id="sec-applications-of-taylor-series-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating Limits of Indeterminate Forms</span>
+</h3>
+<div class="para" id="sec-applications-of-taylor-series-2-2">Taylor series provide another method of evaluating limits of indeterminate forms like <span class="process-math">\(\frac{0}{0}\)</span> or <span class="process-math">\(\frac{\infty}{\infty}\text{.}\)</span> Previously, to do this, you learned:<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-applications-of-taylor-series-2-3">
+<ul class="disc" id="sec-applications-of-taylor-series-2-3-1">
+<li id="sec-applications-of-taylor-series-2-3-1-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-3-1-1">
+<em class="alert">Various algebraic techniques</em>, like e.g. factoring, multiplying by the conjugate, or using trigonometric identities.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-2-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-3-1-2">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-3-1-2">
+<em class="alert">L’Hopital’s rule</em>, which is like a shortcut, that works in many situations.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-2-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-applications-of-taylor-series-2-4">However, there are some situations where L’Hopital’s rule is complicated, because the derivatives involved are complicated. Taylor series give a more flexible, general, and simple method.<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-applications-of-taylor-series-2-5">The broad idea is:<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-applications-of-taylor-series-2-6">
+<ul class="disc" id="sec-applications-of-taylor-series-2-6-1">
+<li id="sec-applications-of-taylor-series-2-6-1-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-6-1-1">Replace each function with the first few terms of its Taylor series expansion.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-2-6-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-6-1-2">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-6-1-2">Simplify and cancel.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-2-6-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-6-1-3">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-6-1-3">Take the limit by substituting in the limit value.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-2-6-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-applications-of-taylor-series-2-7">Sometimes it is not obvious how many terms of the Taylor series to use. A good rule of thumb is 3 or 4 terms, but when in doubt, you can always include more terms. The dots (<span class="process-math">\(\dots\)</span>) stand for powers of <span class="process-math">\(x\)</span> greater than the last power that appears.<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-applications-of-taylor-series-2-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-applications-of-taylor-series-2-8-1">Evaluate each limit using series.<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec-applications-of-taylor-series-2-8-2">
+<li id="sec-applications-of-taylor-series-2-8-2-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-1"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{e^x - (1+x)}{x^2}\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-applications-of-taylor-series-2-8-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-2">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-2"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\ln{(x + 1)}}{x}\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-applications-of-taylor-series-2-8-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-3">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-3"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\tan^{-1}x - x}{x^3}\)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec-applications-of-taylor-series-2-8-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-4">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-4"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{e^x - 1}{x}\)</span></div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec-applications-of-taylor-series-2-8-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-5">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-5"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{-x - \ln(1-x)}{x^2}\)</span></div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec-applications-of-taylor-series-2-8-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-6">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-6"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\sin 2x}{x}\)</span></div>
+<div class="autopermalink" data-description="Item 6"><a href="#sec-applications-of-taylor-series-2-8-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-7">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-7"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{1 + x - e^x}{4x^2}\)</span></div>
+<div class="autopermalink" data-description="Item 7"><a href="#sec-applications-of-taylor-series-2-8-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-8">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-8"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{2\cos 2x - 2 + 4x^2}{2x^4}\)</span></div>
+<div class="autopermalink" data-description="Item 8"><a href="#sec-applications-of-taylor-series-2-8-2-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-9">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-9"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\ln(1+x) - x + \frac12 x^2}{x^3}\)</span></div>
+<div class="autopermalink" data-description="Item 9"><a href="#sec-applications-of-taylor-series-2-8-2-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-10">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-10"><span class="process-math">\(\displaystyle \lim_{x \to 4} \frac{x^2 - 16}{\ln(x-3)}\)</span></div>
+<div class="autopermalink" data-description="Item 10"><a href="#sec-applications-of-taylor-series-2-8-2-10" title="Copy heading and permalink for Item 10" aria-label="Copy heading and permalink for Item 10">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-11">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-11"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{12x - 8x^3 - 6\sin 2x}{x^5}\)</span></div>
+<div class="autopermalink" data-description="Item 11"><a href="#sec-applications-of-taylor-series-2-8-2-11" title="Copy heading and permalink for Item 11" aria-label="Copy heading and permalink for Item 11">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-12">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-12"><span class="process-math">\(\displaystyle \lim_{x \to 1} \frac{x-1}{\ln x}\)</span></div>
+<div class="autopermalink" data-description="Item 12"><a href="#sec-applications-of-taylor-series-2-8-2-12" title="Copy heading and permalink for Item 12" aria-label="Copy heading and permalink for Item 12">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-13">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-13"><span class="process-math">\(\displaystyle \lim_{x \to 2} \frac{x-2}{\ln(x-1)}\)</span></div>
+<div class="autopermalink" data-description="Item 13"><a href="#sec-applications-of-taylor-series-2-8-2-13" title="Copy heading and permalink for Item 13" aria-label="Copy heading and permalink for Item 13">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-14">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-14"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{e^{-2x} - 4e^{-x/2} + 3}{2x^2}\)</span></div>
+<div class="autopermalink" data-description="Item 14"><a href="#sec-applications-of-taylor-series-2-8-2-14" title="Copy heading and permalink for Item 14" aria-label="Copy heading and permalink for Item 14">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-15">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-15"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{x - \ln(1+x)}{x^2}\)</span></div>
+<div class="autopermalink" data-description="Item 15"><a href="#sec-applications-of-taylor-series-2-8-2-15" title="Copy heading and permalink for Item 15" aria-label="Copy heading and permalink for Item 15">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-16">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-16"><span class="process-math">\(\displaystyle \lim_{x \to 0} \brac{\frac{1}{\sin x} - \frac{1}{x}}\)</span></div>
+<div class="autopermalink" data-description="Item 16"><a href="#sec-applications-of-taylor-series-2-8-2-16" title="Copy heading and permalink for Item 16" aria-label="Copy heading and permalink for Item 16">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-17">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-17"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{1 - \cos x - \frac12 x^2}{x^4}\)</span></div>
+<div class="autopermalink" data-description="Item 17"><a href="#sec-applications-of-taylor-series-2-8-2-17" title="Copy heading and permalink for Item 17" aria-label="Copy heading and permalink for Item 17">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-18">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-18"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\sin x - x + \frac16 x^3}{x^5}\)</span></div>
+<div class="autopermalink" data-description="Item 18"><a href="#sec-applications-of-taylor-series-2-8-2-18" title="Copy heading and permalink for Item 18" aria-label="Copy heading and permalink for Item 18">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-19">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-19"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{x - \arctan x}{x^3}\)</span></div>
+<div class="autopermalink" data-description="Item 19"><a href="#sec-applications-of-taylor-series-2-8-2-19" title="Copy heading and permalink for Item 19" aria-label="Copy heading and permalink for Item 19">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-20">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-20"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\arctan x - \sin x}{x^3 \cos x}\)</span></div>
+<div class="autopermalink" data-description="Item 20"><a href="#sec-applications-of-taylor-series-2-8-2-20" title="Copy heading and permalink for Item 20" aria-label="Copy heading and permalink for Item 20">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-21">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-21"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\ln(1+x^2)}{1 - \cos x}\)</span></div>
+<div class="autopermalink" data-description="Item 21"><a href="#sec-applications-of-taylor-series-2-8-2-21" title="Copy heading and permalink for Item 21" aria-label="Copy heading and permalink for Item 21">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-22">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-22"><span class="process-math">\(\displaystyle \lim_{x \to 2} \frac{x^2 - 4}{\ln(x-1)}\)</span></div>
+<div class="autopermalink" data-description="Item 22"><a href="#sec-applications-of-taylor-series-2-8-2-22" title="Copy heading and permalink for Item 22" aria-label="Copy heading and permalink for Item 22">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-23">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-23"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\sin(3x^2)}{1 - \cos(2x)}\)</span></div>
+<div class="autopermalink" data-description="Item 23"><a href="#sec-applications-of-taylor-series-2-8-2-23" title="Copy heading and permalink for Item 23" aria-label="Copy heading and permalink for Item 23">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-24">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-24"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\sin x - \tan x}{x^3}\)</span></div>
+<div class="autopermalink" data-description="Item 24"><a href="#sec-applications-of-taylor-series-2-8-2-24" title="Copy heading and permalink for Item 24" aria-label="Copy heading and permalink for Item 24">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-25">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-25"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\ln(1+x^3)}{x \cdot \sin(x^2)}\)</span></div>
+<div class="autopermalink" data-description="Item 25"><a href="#sec-applications-of-taylor-series-2-8-2-25" title="Copy heading and permalink for Item 25" aria-label="Copy heading and permalink for Item 25">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-26">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-26"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{1 - \cos x}{1 + x - e^x}\)</span></div>
+<div class="autopermalink" data-description="Item 26"><a href="#sec-applications-of-taylor-series-2-8-2-26" title="Copy heading and permalink for Item 26" aria-label="Copy heading and permalink for Item 26">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-27">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-27"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{x^3 - 3x + 3\tan^{-1}x}{x^5}\)</span></div>
+<div class="autopermalink" data-description="Item 27"><a href="#sec-applications-of-taylor-series-2-8-2-27" title="Copy heading and permalink for Item 27" aria-label="Copy heading and permalink for Item 27">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-28">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-28"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{\cos x - e^{-x^2/2}}{x^3 \sin x}\)</span></div>
+<div class="autopermalink" data-description="Item 28"><a href="#sec-applications-of-taylor-series-2-8-2-28" title="Copy heading and permalink for Item 28" aria-label="Copy heading and permalink for Item 28">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-2-8-2-29">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-2-8-2-29"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{x^2 \tan^{-1}(x^3) - x^5 + \frac{1}{3}x^{11}}{x^{17}}\)</span></div>
+<div class="autopermalink" data-description="Item 29"><a href="#sec-applications-of-taylor-series-2-8-2-29" title="Copy heading and permalink for Item 29" aria-label="Copy heading and permalink for Item 29">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Example 3.2.1"><a href="#sec-applications-of-taylor-series-2-8" title="Copy heading and permalink for Example 3.2.1" aria-label="Copy heading and permalink for Example 3.2.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.2.1: Evaluating Limits of Indeterminate Forms"><a href="#sec-applications-of-taylor-series-2" title="Copy heading and permalink for Subsection 3.2.1: Evaluating Limits of Indeterminate Forms" aria-label="Copy heading and permalink for Subsection 3.2.1: Evaluating Limits of Indeterminate Forms">🔗</a></div></section><section class="subsection" id="sec-applications-of-taylor-series-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Antiderivatives / Approximating Integrals with Series</span>
+</h3>
+<details id="sec-applications-of-taylor-series-3-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-applications-of-taylor-series-3-2-1">Evaluate each indefinite integral as a power series, and find the radius of convergence.<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec-applications-of-taylor-series-3-2-2">
+<li id="sec-applications-of-taylor-series-3-2-2-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-1"><span class="process-math">\(\displaystyle \int \sin(x^2) \,dx\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-applications-of-taylor-series-3-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-2">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-2"><span class="process-math">\(\displaystyle \int x^2 \ln(1+x) \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-applications-of-taylor-series-3-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-3">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-3"><span class="process-math">\(\displaystyle \int e^{-x^2} \,dx\)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec-applications-of-taylor-series-3-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-4">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-4"><span class="process-math">\(\displaystyle \int \frac{\tan^{-1} x}{x} \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec-applications-of-taylor-series-3-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-5">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-5"><span class="process-math">\(\displaystyle \int \frac{\cos x - 1}{x} \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec-applications-of-taylor-series-3-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-6">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-6"><span class="process-math">\(\displaystyle \int \frac{x}{1 - x^8} \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 6"><a href="#sec-applications-of-taylor-series-3-2-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-7">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-7"><span class="process-math">\(\displaystyle \int \frac{x}{1 + x^3} \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 7"><a href="#sec-applications-of-taylor-series-3-2-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-8">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-8"><span class="process-math">\(\displaystyle \int \frac{\ln(1-x)}{x} \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 8"><a href="#sec-applications-of-taylor-series-3-2-2-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-9">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-9"><span class="process-math">\(\displaystyle \int \frac{x - \tan^{-1}{x}}{x^3} \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 9"><a href="#sec-applications-of-taylor-series-3-2-2-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-10">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-10"><span class="process-math">\(\displaystyle \int x^2 \sin(x^2) \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 10"><a href="#sec-applications-of-taylor-series-3-2-2-10" title="Copy heading and permalink for Item 10" aria-label="Copy heading and permalink for Item 10">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-11">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-11"><span class="process-math">\(\displaystyle \int \arctan(x^2) \, dx\)</span></div>
+<div class="autopermalink" data-description="Item 11"><a href="#sec-applications-of-taylor-series-3-2-2-11" title="Copy heading and permalink for Item 11" aria-label="Copy heading and permalink for Item 11">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-12">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-12"><span class="process-math">\(\displaystyle \int x^4 \tan^{-1}(2x) \,dx\)</span></div>
+<div class="autopermalink" data-description="Item 12"><a href="#sec-applications-of-taylor-series-3-2-2-12" title="Copy heading and permalink for Item 12" aria-label="Copy heading and permalink for Item 12">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-2-2-13">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-2-2-13">
+<span class="process-math">\(\int \sqrt{1 + x^3} \, dx\)</span> (requires binomial series)</div>
+<div class="autopermalink" data-description="Item 13"><a href="#sec-applications-of-taylor-series-3-2-2-13" title="Copy heading and permalink for Item 13" aria-label="Copy heading and permalink for Item 13">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Example 3.2.2"><a href="#sec-applications-of-taylor-series-3-2" title="Copy heading and permalink for Example 3.2.2" aria-label="Copy heading and permalink for Example 3.2.2">🔗</a></div></article></details><div class="para" id="sec-applications-of-taylor-series-3-3">When evaluating an integral to a desired accuracy, there are 2 ways they will specify the accuracy:<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-applications-of-taylor-series-3-4">
+<ul class="disc" id="sec-applications-of-taylor-series-3-4-1">
+<li id="sec-applications-of-taylor-series-3-4-1-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-4-1-1">
+<em class="emphasis">Directly</em>, saying you should have error less than <span class="process-math">\(0.001\text{,}\)</span> or less than <span class="process-math">\(10^{-5}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-3-4-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-4-1-2">
+<div class="para logical" id="sec-applications-of-taylor-series-3-4-1-2-1">
+<div class="para">
+<em class="emphasis">Up to some decimal places</em>, like accurate up to 3 decimal places, or 5 decimal places. Note that accurate up to <span class="process-math">\(k\)</span> decimal places basically means to keep the error below <span class="process-math">\(5 \times 10^{-k}\text{.}\)</span> For example:</div>
+<ul class="circle" id="sec-applications-of-taylor-series-3-4-1-2-1-4">
+<li id="sec-applications-of-taylor-series-3-4-1-2-1-4-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-4-1-2-1-4-1">2 decimal places <span class="process-math">\(\implies\)</span> <span class="process-math">\(\text{error} \lt 0.005\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-3-4-1-2-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-4-1-2-1-4-2">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-4-1-2-1-4-2">5 decimal places <span class="process-math">\(\implies\)</span> <span class="process-math">\(\text{error} \lt 0.000005\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-3-4-1-2-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-3-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-3-4-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-applications-of-taylor-series-3-5">There are 2 ways to bound the error:<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec-applications-of-taylor-series-3-6">
+<li id="sec-applications-of-taylor-series-3-6-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-6-1">
+<em class="emphasis">Add terms one at a time until your calculator output is stable</em>. Add the first term, then the 2nd, then the 3rd, and so on, one at a time. Each time, check if the decimal digits you care about stop changing. After they stay the same for 2 or 3 steps in a row, that is your answer.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-applications-of-taylor-series-3-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-6-3">
+<div class="para logical" id="sec-applications-of-taylor-series-3-6-3-1">
+<div class="para">
+<em class="emphasis">Alternating series error bound</em>. If the series is alternating (which a lot of them are), then the error is bounded by the first omitted term. In other words, <span class="process-math">\(\abs{r_n} \leq a_{n+1}\text{.}\)</span>
+</div>
+<ul class="disc" id="sec-applications-of-taylor-series-3-6-3-1-3">
+<li id="sec-applications-of-taylor-series-3-6-3-1-3-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-6-3-1-3-1">If you want error less than <span class="process-math">\(10^{-4}\text{,}\)</span> then test values of <span class="process-math">\(n\)</span> such that <span class="process-math">\(a_{n+1}\)</span> is less than <span class="process-math">\(10^{-4}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-3-6-3-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-6-3-1-3-2">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-6-3-1-3-2">For example, if <span class="process-math">\(a_6\)</span> is less than <span class="process-math">\(10^{-4}\text{,}\)</span> then adding terms up to <span class="process-math">\(n=5\)</span> is sufficient.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-applications-of-taylor-series-3-6-3-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-3-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-applications-of-taylor-series-3-6-3" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="sec-applications-of-taylor-series-3-7">This method is more rigorous, and is how you can show your work.<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-applications-of-taylor-series-3-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-applications-of-taylor-series-3-8-1">Use power series to approximate each definite integral with the stated accuracy.<div class="autopermalink" data-description="Paragraph"><a href="#sec-applications-of-taylor-series-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec-applications-of-taylor-series-3-8-2">
+<li id="sec-applications-of-taylor-series-3-8-2-1">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-1">
+<span class="process-math">\(\int_{0}^{1/2} \arctan\brac{\frac{x}{2}}\,dx \quad\)</span> (six decimal places)</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-applications-of-taylor-series-3-8-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-2">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-2">
+<span class="process-math">\(\int_{0}^{0.2} x\ln\brac{1+x^2}\,dx \quad\)</span> (six decimal places)</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-applications-of-taylor-series-3-8-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-3">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-3">
+<span class="process-math">\(\int_{0}^{0.5} x^4 e^{-x^2}\,dx \quad\)</span> (four decimal places)</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec-applications-of-taylor-series-3-8-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-4">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-4">
+<span class="process-math">\(\int_{0}^{0.6} \sin\brac{x^2}\,dx \quad\)</span> (<span class="process-math">\(|\text{error}|\lt 10^{-5}\)</span>)</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec-applications-of-taylor-series-3-8-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-5">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-5">
+<span class="process-math">\(\int_{0}^{0.3} \frac{x}{1+x^3}\,dx \quad\)</span> (six decimal places)</div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec-applications-of-taylor-series-3-8-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-6">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-6">
+<span class="process-math">\(\int_{0}^{0.4} \frac{e^{-x}-1}{x}\,dx \quad\)</span> (<span class="process-math">\(|\text{error}|\lt 10^{-5}\)</span>)</div>
+<div class="autopermalink" data-description="Item 6"><a href="#sec-applications-of-taylor-series-3-8-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-7">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-7">
+<span class="process-math">\(\int_{0}^{0.3} \frac{x^2}{1+x^4}\,dx \quad\)</span> (six decimal places)</div>
+<div class="autopermalink" data-description="Item 7"><a href="#sec-applications-of-taylor-series-3-8-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-8">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-8">
+<span class="process-math">\(\int_{0}^{0.1} \frac{\sin x}{x}\,dx \quad\)</span> (<span class="process-math">\(|\text{error}|\lt 10^{-5}\)</span>)</div>
+<div class="autopermalink" data-description="Item 8"><a href="#sec-applications-of-taylor-series-3-8-2-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-9">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-9">
+<span class="process-math">\(\int_{0}^{0.1} e^{-x^2}\,dx \quad\)</span> (<span class="process-math">\(|\text{error}|\lt 10^{-5}\)</span>)</div>
+<div class="autopermalink" data-description="Item 9"><a href="#sec-applications-of-taylor-series-3-8-2-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-10">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-10">
+<span class="process-math">\(\int_{0}^{0.1} \frac{1-\cos x}{x^2}\,dx \quad\)</span> (<span class="process-math">\(|\text{error}|\lt 10^{-5}\)</span>)</div>
+<div class="autopermalink" data-description="Item 10"><a href="#sec-applications-of-taylor-series-3-8-2-10" title="Copy heading and permalink for Item 10" aria-label="Copy heading and permalink for Item 10">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-11">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-11">
+<span class="process-math">\(\int_{0}^{1/2} x^3\arctan x\,dx \quad\)</span> (four decimal places)</div>
+<div class="autopermalink" data-description="Item 11"><a href="#sec-applications-of-taylor-series-3-8-2-11" title="Copy heading and permalink for Item 11" aria-label="Copy heading and permalink for Item 11">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-12">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-12">
+<span class="process-math">\(\int_{0}^{1} \sin\brac{x^4}\,dx \quad\)</span> (four decimal places)</div>
+<div class="autopermalink" data-description="Item 12"><a href="#sec-applications-of-taylor-series-3-8-2-12" title="Copy heading and permalink for Item 12" aria-label="Copy heading and permalink for Item 12">🔗</a></div>
+</li>
+<li id="sec-applications-of-taylor-series-3-8-2-13">
+<div class="para" id="p-derived-sec-applications-of-taylor-series-3-8-2-13">
+<span class="process-math">\(\int_{0}^{0.5} x^2 e^{-x^2}\,dx \quad\)</span> (<span class="process-math">\(|\text{error}| \lt 0.001\)</span>)</div>
+<div class="autopermalink" data-description="Item 13"><a href="#sec-applications-of-taylor-series-3-8-2-13" title="Copy heading and permalink for Item 13" aria-label="Copy heading and permalink for Item 13">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Example 3.2.3"><a href="#sec-applications-of-taylor-series-3-8" title="Copy heading and permalink for Example 3.2.3" aria-label="Copy heading and permalink for Example 3.2.3">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.2.2: Finding Antiderivatives / Approximating Integrals with Series"><a href="#sec-applications-of-taylor-series-3" title="Copy heading and permalink for Subsection 3.2.2: Finding Antiderivatives / Approximating Integrals with Series" aria-label="Copy heading and permalink for Subsection 3.2.2: Finding Antiderivatives / Approximating Integrals with Series">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: Applications of Taylor Series"><a href="#sec-applications-of-taylor-series" title="Copy heading and permalink for Section 3.2: Applications of Taylor Series" aria-label="Copy heading and permalink for Section 3.2: Applications of Taylor Series">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-power-series.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
