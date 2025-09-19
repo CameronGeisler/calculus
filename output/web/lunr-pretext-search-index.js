@@ -1207,11 +1207,227 @@ var ptx_lunr_docs = [
   "body": "  Find the interval of convergence and radius of convergence of each series. Then, find the sum of the series for in that interval.     .      The series is geometric.     , converges to .   "
 },
 {
+  "id": "sec-representation-of-functions-with-power-series",
+  "level": "1",
+  "url": "sec-representation-of-functions-with-power-series.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Representation of Functions with Power Series",
+  "body": " Representation of Functions with Power Series   Power series can be used to represent certain types of functions.    Motivational Example: Geometric Series  The first and simplest example we already know is the geometric series,   This equation represents the function as the power series (as long as ), and so we say that is the power series representation of . Consider this Desmos applet: Geometric Series Power Series . Recall that the sum of a series is the limit of its sequence of partial sums. Then, if we write to be the partial sum,   Then, as the number of terms increases (as increases), the sum becomes a better and better approximation for the function (where ).    Power Series as an Approximation  In general, for a function with a power series, a partial sum of the power series can be used to approximate the function (within its interval of convergence). That is, a function with a power series can be approximated by its (partial) power series, a polynomial of degree ,   In general, the approximation improves if we add more terms, i.e. as .    Power Series Representation of Functions  The geometric series can be used to find power series representations of other related functions. The idea is to write the function in the form , where is any expression, and then apply the geometric series formula.   For the function , it just has a positive instead of a negative . We can write as , and apply the geometric series,   Note that typically, we split up the from the power of , to more clearly separate the coefficient in front from the power.   For the interval of convergence, we could use the ratio test, but it is unnecessary, because we know that a geometric series converges precisely when . In this case, it is , so if , or , or .    Consider . Here, there is instead of , and it is also positive instead of negative. So, we can write,   This converges if , or , or .    Consider . To make the denominator into the form , we need to have a 1, so we need to factor out a 4,   This converges if , or , or .    Consider . First, separate the to the side, and then write the positive as ,      Examples    Find the power series representation for each function (centered at 0), and find its interval of convergence.                                       .    .      .                                       .    , IOC .      .    , IOC .      .    , IOC .      (where )       "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-5-3",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-5-3",
+  "type": "Example",
+  "number": "3.2.1",
+  "title": "",
+  "body": " For the function , it just has a positive instead of a negative . We can write as , and apply the geometric series,   Note that typically, we split up the from the power of , to more clearly separate the coefficient in front from the power.   For the interval of convergence, we could use the ratio test, but it is unnecessary, because we know that a geometric series converges precisely when . In this case, it is , so if , or , or .  "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-5-4",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-5-4",
+  "type": "Example",
+  "number": "3.2.2",
+  "title": "",
+  "body": " Consider . Here, there is instead of , and it is also positive instead of negative. So, we can write,   This converges if , or , or .  "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-5-5",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-5-5",
+  "type": "Example",
+  "number": "3.2.3",
+  "title": "",
+  "body": " Consider . To make the denominator into the form , we need to have a 1, so we need to factor out a 4,   This converges if , or , or .  "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-5-6",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-5-6",
+  "type": "Example",
+  "number": "3.2.4",
+  "title": "",
+  "body": " Consider . First, separate the to the side, and then write the positive as ,   "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-2",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-2",
+  "type": "Exercise",
+  "number": "3.2.4.1",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-3",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-3",
+  "type": "Exercise",
+  "number": "3.2.4.2",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-4",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-4",
+  "type": "Exercise",
+  "number": "3.2.4.3",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-5",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-5",
+  "type": "Exercise",
+  "number": "3.2.4.4",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-6",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-6",
+  "type": "Exercise",
+  "number": "3.2.4.5",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-7",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-7",
+  "type": "Exercise",
+  "number": "3.2.4.6",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-8",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-8",
+  "type": "Exercise",
+  "number": "3.2.4.7",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-9",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-9",
+  "type": "Exercise",
+  "number": "3.2.4.8",
+  "title": "",
+  "body": "  .    .   "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-10",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-10",
+  "type": "Exercise",
+  "number": "3.2.4.9",
+  "title": "",
+  "body": "  .      "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-11",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-11",
+  "type": "Exercise",
+  "number": "3.2.4.10",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-12",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-12",
+  "type": "Exercise",
+  "number": "3.2.4.11",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-13",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-13",
+  "type": "Exercise",
+  "number": "3.2.4.12",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-14",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-14",
+  "type": "Exercise",
+  "number": "3.2.4.13",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-15",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-15",
+  "type": "Exercise",
+  "number": "3.2.4.14",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-16",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-16",
+  "type": "Exercise",
+  "number": "3.2.4.15",
+  "title": "",
+  "body": "    "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-17",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-17",
+  "type": "Exercise",
+  "number": "3.2.4.16",
+  "title": "",
+  "body": "  .    , IOC .   "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-18",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-18",
+  "type": "Exercise",
+  "number": "3.2.4.17",
+  "title": "",
+  "body": "  .    , IOC .   "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-19",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-19",
+  "type": "Exercise",
+  "number": "3.2.4.18",
+  "title": "",
+  "body": "  .    , IOC .   "
+},
+{
+  "id": "sec-representation-of-functions-with-power-series-6-2-1-20",
+  "level": "2",
+  "url": "sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2-1-20",
+  "type": "Exercise",
+  "number": "3.2.4.19",
+  "title": "",
+  "body": "  (where )   "
+},
+{
   "id": "sec-applications-of-taylor-series",
   "level": "1",
   "url": "sec-applications-of-taylor-series.html",
   "type": "Section",
-  "number": "3.2",
+  "number": "3.3",
   "title": "Applications of Taylor Series",
   "body": " Applications of Taylor Series    Evaluating Limits of Indeterminate Forms  Taylor series provide another method of evaluating limits of indeterminate forms like or . Previously, to do this, you learned:    Various algebraic techniques , like e.g. factoring, multiplying by the conjugate, or using trigonometric identities.  L'Hopital's rule , which is like a shortcut, that works in many situations.    However, there are some situations where L'Hopital's rule is complicated, because the derivatives involved are complicated. Taylor series give a more flexible, general, and simple method.  The broad idea is:    Replace each function with the first few terms of its Taylor series expansion.  Simplify and cancel.  Take the limit by substituting in the limit value.    Sometimes it is not obvious how many terms of the Taylor series to use. A good rule of thumb is 3 or 4 terms, but when in doubt, you can always include more terms. The dots ( ) stand for powers of greater than the last power that appears.   Evaluate each limit using series.                                    Finding Antiderivatives \/ Approximating Integrals with Series   Evaluate each indefinite integral as a power series, and find the radius of convergence.               (requires binomial series)    When evaluating an integral to a desired accuracy, there are 2 ways they will specify the accuracy:    Directly , saying you should have error less than , or less than .    Up to some decimal places , like accurate up to 3 decimal places, or 5 decimal places. Note that accurate up to decimal places basically means to keep the error below . For example:  2 decimal places   5 decimal places        There are 2 ways to bound the error:     Add terms one at a time until your calculator output is stable . Add the first term, then the 2nd, then the 3rd, and so on, one at a time. Each time, check if the decimal digits you care about stop changing. After they stay the same for 2 or 3 steps in a row, that is your answer.  This is the most naive and simple method, which will give you the correct answer for most exam problems. However, it is technically not rigorous, and gives misleading results in some rare tricky cases. To be more safe, you can add more terms to confirm that your answer is correct.     Alternating series error bound . If the series is alternating (which a lot of them are), then the error is bounded by the first omitted term. In other words, .  If you want error less than , then test values of such that is less than .  For example, if is less than , then adding terms up to is sufficient.  This method is more rigorous, and is how you can show your work.     Use power series to approximate each definite integral with the stated accuracy.   (six decimal places)  (six decimal places)  (four decimal places)  ( )  (six decimal places)  ( )  (six decimal places)  ( )  ( )  ( )  (four decimal places)  (four decimal places)  ( )     "
 },
@@ -1220,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-2-8",
   "type": "Example",
-  "number": "3.2.1",
+  "number": "3.3.1",
   "title": "",
   "body": " Evaluate each limit using series.                                 "
 },
@@ -1229,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-3-2",
   "type": "Example",
-  "number": "3.2.2",
+  "number": "3.3.2",
   "title": "",
   "body": " Evaluate each indefinite integral as a power series, and find the radius of convergence.               (requires binomial series)   "
 },
@@ -1238,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-3-7",
   "type": "Example",
-  "number": "3.2.3",
+  "number": "3.3.3",
   "title": "",
   "body": " Use power series to approximate each definite integral with the stated accuracy.   (six decimal places)  (six decimal places)  (four decimal places)  ( )  (six decimal places)  ( )  (six decimal places)  ( )  ( )  ( )  (four decimal places)  (four decimal places)  ( )   "
 }

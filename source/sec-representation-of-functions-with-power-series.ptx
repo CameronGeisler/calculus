@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-representation-of-functions-with-power-series" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Representation of Functions with Power Series</title>
+  
+  <introduction>
+    <p>
+      Power series can be used to represent certain types of functions.
+    </p>
+  </introduction>
+  
+  <subsection>
+    <title>Motivational Example: Geometric Series</title>
+    <p>
+      The first and simplest example we already know is the geometric series,
+    </p>
+    <md>
+      <mrow>\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n</mrow>
+    </md>
+    <p>
+      This equation represents the function <m>f(x) = \frac{1}{1-x}</m> as the power series <m>\sum_{n=0}^{\infty} x^n</m> (as long as <m>-1 \lt x \lt 1</m>), and so we say that is the power series representation of <m>\frac{1}{1-x}</m>. Consider this Desmos applet: <url href="https://www.desmos.com/calculator/0d1x0dakq0">Geometric Series Power Series</url>. Recall that the sum of a series is the limit of its sequence of partial sums. Then, if we write <m>s_N(x)</m> to be the partial sum,
+    </p>
+    <md>
+      <mrow>s_N(x) = \sum_{n=0}^{N} x^n = 1 + x + x^2 + x^3 + \dots + x^N</mrow>
+    </md>
+    <p>
+      Then, as the number of terms increases (as <m>N</m> increases), the sum becomes a better and better approximation for the function <m>\frac{1}{1-x}</m> (where <m>-1\lt x\lt 1</m>).
+    </p>
+  </subsection>
+  
+  <subsection>
+    <title>Power Series as an Approximation</title>
+    <p>
+      In general, for a function with a power series, a partial sum of the power series can be used to approximate the function (within its interval of convergence). That is, a function <m>f</m> with a power series can be approximated by its (partial) power series, a polynomial of degree <m>n</m>,
+    </p>
+    <md>
+      <mrow>f(x) = a_0 + a_1 x + a_2 x^2 + \dots + a_n x^n</mrow>
+    </md>
+    <p>
+      In general, the approximation improves if we add more terms, i.e. as <m>n \to \infty</m>.
+    </p>
+  </subsection>
+  
+  <subsection>
+    <title>Power Series Representation of Functions</title>
+    <p>
+      The geometric series can be used to find power series representations of other related functions. The idea is to write the function in the form <m>\frac{1}{1-u}</m>, where <m>u</m> is any expression, and then apply the geometric series formula.
+    </p>
+    <example>
+      <p>
+        For the function <m>f(x) = \frac{1}{1+x}</m>, it just has a positive <m>x</m> instead of a negative <m>x</m>. We can write <m>x</m> as <m>-(-x)</m>, and apply the geometric series,
+      </p>
+      <md>
+        <mrow>\frac{1}{1 - (-x)} \amp = \sum_{n=0}^{\infty} (-x)^n \\</mrow>
+        <mrow>\amp = \sum_{n=0}^{\infty} (-1)^n x^n \\</mrow>
+        <mrow>\amp = 1 - x + x^2 - x^3 + x^4 - \dots</mrow>
+      </md>
+      <p>
+        Note that typically, we split up the <m>-1</m> from the power of <m>x</m>, to more clearly separate the coefficient in front from the power.
+      </p>
+      <md>
+        <mrow>\boxed{\frac{1}{1 + x} = 1 - x + x^2 - x^3 + \dots = \sum_{n=0}^{\infty} (-1)^n x^n}</mrow>
+      </md>
+      <p>
+        For the interval of convergence, we could use the ratio test, but it is unnecessary, because we know that a geometric series converges precisely when <m>\abs{r} \lt 1</m>. In this case, it is <m>-x</m>, so if <m>\abs{-x} \lt 1</m>, or <m>\abs{x} \lt 1</m>, or <m>-1 \lt x \lt 1</m>.
+      </p>
+    </example>
+    <example>
+      <p>
+        Consider <m>f(x) = \frac{1}{1+x^2}</m>. Here, there is <m>x^2</m> instead of <m>x</m>, and it is also positive instead of negative. So, we can write,
+      </p>
+      <md>
+        <mrow>\frac{1}{1+x^2} \amp = \frac{1}{1-(-x^2)} \\</mrow>
+        <mrow>\amp = \sum_{n=0}^{\infty} (-x^2)^n \\</mrow>
+        <mrow>\frac{1}{1+x^2} \amp = \sum_{n=0}^{\infty} (-1)^n x^{2n} = 1 - x^2 + x^4 - x^6 + \dots</mrow>
+      </md>
+      <p>
+        This converges if <m>\abs{-x^2} \lt 1</m>, or <m>x^2 \lt 1</m>, or <m>-1 \lt x \lt 1</m>.
+      </p>
+    </example>
+    <example>
+      <p>
+        Consider <m>f(x) = \frac{1}{x + 4}</m>. To make the denominator into the form <m>1-u</m>, we need to have a 1, so we need to factor out a 4,
+      </p>
+      <md>
+        <mrow>\frac{1}{4+x} \amp = \frac{1}{4\brac{1 + \frac{x}{4}}} \\</mrow>
+        <mrow>\amp = \frac{1}{4} \cdot \frac{1}{1 - \brac{-\frac{x}{4}}} \\</mrow>
+        <mrow>\amp = \frac{1}{4} \cdot \sum_{n=0}^{\infty} \brac{-\frac{x}{4}}^n \\</mrow>
+        <mrow>\amp = \frac{1}{4} \cdot \sum_{n=0}^{\infty} \frac{(-1)^n}{4^n} x^n \\</mrow>
+        <mrow>\frac{1}{4+x} \amp = \sum_{n=0}^{\infty} \frac{(-1)^n}{4^{n+1}} x^n = \frac{1}{4} - \frac{1}{16} x + \frac{1}{64}x^2 - \dots</mrow>
+      </md>
+      <p>
+        This converges if <m>\abs{-\frac{x}{4}} \lt 1</m>, or <m>\abs{x} \lt 4</m>, or <m>-4 \lt x \lt 4</m>.
+      </p>
+    </example>
+    <example>
+      <p>
+        Consider <m>f(x) = \frac{2x^2}{1 + x^3}</m>. First, separate the <m>2x^2</m> to the side, and then write the positive <m>x^3</m> as <m>-(-x^3)</m>,
+      </p>
+      <md>
+        <mrow>f(x) \amp = 2x^2 \cdot \frac{1}{1 + x^3} \\</mrow>
+        <mrow>\amp = 2x^2 \cdot \frac{1}{1 - (-x^3)} \\</mrow>
+        <mrow>\amp = 2x^2 \sum_{n=0}^{\infty} (-x^3)^n \\</mrow>
+        <mrow>\amp = 2x^2 \sum_{n=0}^{\infty} (-1)^n x^{3n} \\</mrow>
+        <mrow>\amp = \sum_{n=0}^{\infty} 2(-1)^n x^{3n+2} = 2x^2 - 2x^5 + 2x^8 - \dots</mrow>
+      </md>
+    </example>
+  </subsection>
+  
+  <subsection>
+    <title>Examples</title>
+    <exercises>
+      <exercisegroup>
+        <p>Find the power series representation for each function (centered at 0), and find its interval of convergence.</p>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{1}{1 - 3x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{x^3}{1 - x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{2x^3}{1 - x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{1}{1 - x^3}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{4x^{12}}{1 - x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{1}{1 + 4x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{x}{3 - x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{x^3}{1-2x^2}</m>.</p>
+          </statement>
+          <answer>
+            <p><m>\sum_{n=0}^{\infty} 2^n x^{2n+3}</m>.</p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{x^3}{9 + 4x^2}</m>.</p>
+          </statement>
+          <answer>
+            <p><m>\sum_{n=0}^{\infty} \frac{(-1)^n 4^n}{9^{n+1}} x^{2n+3}</m></p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{1}{1+x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{x}{1+x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{1}{1-x^2}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{2}{3-x}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{x^2}{x^4+16}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{x-1}{x+2}</m></p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x)=\frac{5}{1-4x^2}</m>.</p>
+          </statement>
+          <answer>
+            <p><m>\sum_{n=0}^{\infty} 5 \cdot 4^n x^{2n}</m>, IOC <m>(-\frac{1}{2},\frac{1}{2})</m>.</p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x)=\frac{4}{2x+3}</m>.</p>
+          </statement>
+          <answer>
+            <p><m>\sum_{n=0}^{\infty}\frac{4(-2)^n}{3^{n+1}}x^{n}</m>, IOC <m>(-\frac{3}{2},\frac{3}{2})</m>.</p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x)=\frac{x}{2x^2+1}</m>.</p>
+          </statement>
+          <answer>
+            <p><m>\sum_{n=0}^{\infty} (-1)^n 2^n x^{2n+1}</m>, IOC <m>(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})</m>.</p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p><m>f(x) = \frac{x+a}{x^2+a^2}</m> (where <m>a \gt 0</m>)</p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </subsection>
+  
+</section>
