@@ -94,7 +94,7 @@
         <li><em>Directly</em>, saying you should have error less than <m>0.001</m>, or less than <m>10^{-5}</m>.</li>
         <li>
           <p>
-            <em>Up to some decimal places</em>, like accurate up to 3 decimal places, or 5 decimal places. Note that accurate up to <m>k</m> decimal places basically means to keep the error below <m>5 \times 10^{-k}</m>. For example:
+            <em>Up to some decimal places</em>, like accurate up to 3 decimal places, or 5 decimal places. Note that accurate up to <m>k</m> decimal places basically means to keep the error below <m>0.5 \times 10^{-k}</m>. For example:
             <ul>
               <li>2 decimal places <m>\implies</m> <m>\text{error} \lt 0.005</m></li>
               <li>5 decimal places <m>\implies</m> <m>\text{error} \lt 0.000005</m></li>
@@ -103,6 +103,7 @@
         </li>
       </ul>
     </p>
+
     <p>There are 2 ways to bound the error:</p>
     <ol>
       <li>
