@@ -13,5 +13,6 @@
   <xi:include href="sec-differentiation-and-integration-of-power-series.ptx"/>
   <!-- <xi:include href="sec-taylor-and-maclaurin-series.ptx"/> -->
   <xi:include href="sec-applications-of-taylor-series.ptx"/>
+  <xi:include href="sec-summary-of-series-representation-of-functions.ptx"/>
 
 </chapter>

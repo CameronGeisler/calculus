@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-summary-of-series-representation-of-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary</title>
+  
+  <!-- <introduction>
+  <p>
+  This is the introduction to the section. It can contain any content
+  that is valid in a <introduction> element, including <p>, <ul>, <ol>,
+  <figure>, and <table>. You can also include other files using
+  <xi:include> tags.
+  </p>
+  </introduction> -->
+  
+  <subsection>
+    <title>Common Maclaurin Series</title>
+    <md>
+      <mrow>
+        \boxed{
+          \begin{aligned}
+          \frac{1}{1-x} \amp= \sum_{n=0}^{\infty} x^{n}
+          \amp= 1 + x + x^{2} + x^{3} + \cdots
+          \amp\quad -1 &lt; x &lt; 1
+          \\[0.6ex]
+          e^{x} \amp= \sum_{n=0}^{\infty} \frac{x^{n}}{n!}
+          \amp= 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \cdots
+          \amp\quad -\infty &lt; x &lt; \infty
+          \\[0.6ex]
+          \sin x \amp= \sum_{n=0}^{\infty} (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}
+          \amp= x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} - \frac{x^{7}}{7!} + \cdots
+          \amp\quad -\infty &lt; x &lt; \infty
+          \\[0.6ex]
+          \cos x \amp= \sum_{n=0}^{\infty} (-1)^{n}\frac{x^{2n}}{(2n)!}
+          \amp= 1 - \frac{x^{2}}{2!} + \frac{x^{4}}{4!} - \frac{x^{6}}{6!} + \cdots
+          \amp\quad -\infty &lt; x &lt; \infty
+          \\[0.6ex]
+          \ln(1+x) \amp= \sum_{n=0}^{\infty} (-1)^n \frac{x^{n+1}}{n+1}
+          \amp= x - \frac{x^{2}}{2} + \frac{x^{3}}{3} - \frac{x^{4}}{4} + \cdots
+          \amp\quad -1 &lt; x \le 1
+          \\[0.6ex]
+          \arctan x \amp= \sum_{n=0}^{\infty} (-1)^{n}\frac{x^{2n+1}}{2n+1}
+          \amp= x - \frac{x^{3}}{3} + \frac{x^{5}}{5} - \frac{x^{7}}{7} + \cdots
+          \amp\quad -1 \le x \le 1
+          \end{aligned}}
+        </mrow>
+      </md>
+    </subsection>
+    
+    <subsection>
+      <title>Key Skills</title>
+      <ul>
+        <li><p>Find interval of convergence and radius of convergence of a power series.</p></li>
+        <li><p>Find power series representation of a function, and determine interval of convergence.</p></li>
+        <li><p>Evaluate a limit, using series.</p></li>
+        <li><p>Find an antiderivative of a function as a power series, using series.</p></li>
+        <li><p>Approximate an integral, with some accuracy, using series.</p></li>
+      </ul>
+    </subsection>
+    
+    <subsection>
+      <title>More Maclaurin Series</title>
+      <md>
+        <mrow>
+          \tan x \amp = x + \frac{x^3}{3} + \frac{2x^5}{15} + \frac{17x^7}{315} + \cdots, \quad \lvert x\rvert &lt; \frac{\pi}{2} \\[1em]
+        </mrow>
+        <mrow>
+          (1+x)^n \amp = 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + \cdots
+          = \sum_{k=0}^{\infty} \binom{n}{k} x^k, \quad \lvert x\rvert &lt; 1 \\[1em]
+        </mrow>
+        <mrow>
+          \sinh x \amp = x + \frac{x^3}{3!} + \frac{x^5}{5!} + \cdots
+          = \sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!}, \quad -\infty &lt; x &lt; \infty \\[1em]
+        </mrow>
+        <mrow>
+          \cosh x \amp = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \cdots
+          = \sum_{n=0}^{\infty} \frac{x^{2n}}{(2n)!}, \quad -\infty &lt; x &lt; \infty
+        </mrow>
+      </md>
+    </subsection>
+    
+    
+    
+  </section>
