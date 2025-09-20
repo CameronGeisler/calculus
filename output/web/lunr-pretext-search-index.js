@@ -1423,11 +1423,110 @@ var ptx_lunr_docs = [
   "body": "  (where )   "
 },
 {
+  "id": "sec-differentiation-and-integration-of-power-series",
+  "level": "1",
+  "url": "sec-differentiation-and-integration-of-power-series.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Differentiation and Integration of Power Series",
+  "body": " Differentiation and Integration of Power Series   One of the reasons that power series are so useful is that it turns out that differentiation and integration (the basic operations of calculus) can be applied to power series in a fairly simple way.  In particular, power series behave like polynomials (on their interval of convergence). This means that you can take their derivatives as if they were a polynomial, i.e. using the power rule, and differentiating term-by-term,   Similarly, integrals (or antiderivatives) can be done with the power rule, and done term-by-term,   It is not immediately obvious that the sum rule for derivatives can work here, since there is an infinite number of terms, but in fact, it does.    Differentiation and Integration of Power Series  Consider a power series which converges on . This means that it defines a function of ,   with domain . Since this is a function, we can take its derivative. In fact, it can be done like a polynomial,   In summation notation, this can be thought of as the derivative being able to be brought ``through\" the summation sign,   The last line comes from applying the power rule. Note the summation now starts at instead of , because the term (which is ) vanishes after taking the derivative. In summary,     Differentiation of power series term-by-term . Let be a power series that converges on , and let on this interval. Then, is differentiable on , and can be differentiated term by term. That is,        Integration of power series term-by-term . Let be a power series that converges on , and let on this interval. Then, is integrable on any closed subinterval of , and for , can be integrated term-by-term. That is,      The proofs of these theorems are beyond the scope, requiring more advanced and subtle analysis arguments.   These properties will allow us to find power series representations for a few more functions.  Note that the theorem says that the radius of convergence doesn't change, but not necessarily the interval of convergence. In particular, differentiating or integration can change convergence at the endpoints of the interval, in the following way:     With differentiation, one or both endpoints of convergence may be lost.    With integration, one or both endpoints may be gained.       Power Series of Arctangent  Recall that,   Then,   Then, taking the antiderivative of both sides,   To find , evaluate both sides at , to get , so . The series converges if , or , or .     For , the series is , which converges by the alternating series test.    For , we get the same series.     Thus, the series converges for . In summary,     Arctangent power series .       Power Series of the Logarithm  A power series for the logarithmic function can be found by integrating the geometric series. Recall that,   Then, integrating,   This provides a series representation of . Sometimes, the series is written with a shifted index, as . The series converges for , because the radius of convergence is still 1. However, we still have to check the endpoints, because endpoints can become convergent when you integrate.     For , , the alternating harmonic series, which converges.    For , , the harmonic series, which diverges.     Thus, the power series converges for .     Logarithm power series .     This gives a series for , which is the natural logarithm function, shifted left by one unit. For just the natural logarithm function , we can substitute with .   This results in a power series centered at , which converges for .    Derivative of Geometric Series  The geometric series can also be differentiated to obtain new series.   Recall the geometric series,   which converges on . Differentiating both sides gives a series for a new function,   which also converges on .    The previous example can be taken one step further. Start with the equation,   Differentiating both sides,   This gives a series for .     If you instead just wanted , you can divide both sides by 2,       This kind of creative reasoning can be used to find power series for very particular functions.   Consider the function . Notice that the denominator is similar to , except it is , and cubed. Then, the entire expression is multiplied by .  Start with the geometric series, and first replace with , to get in the denominator,   Then, differentiate both sides, like before,   Then, differentiate again,   Then, we want the numerator to be instead of 2, so we can divide both sides by 2, and multiply both sides by ,    In summary,   You probably don't want to try and memorize these formulas. The main idea is just that you can differentiate the geometric series to get power series representations for new, similar functions.     Find a power series representation for each function (using the geometric series), and determine its radius of convergence.      .    substitute with , differentiate, and multiply by .     , .       .    factor out 2 to get into the form , use the geometric series, differentiate two times, and multiply by .     , .       "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-3-9",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-3-9",
+  "type": "Theorem",
+  "number": "3.3.1",
+  "title": "",
+  "body": "   Differentiation of power series term-by-term . Let be a power series that converges on , and let on this interval. Then, is differentiable on , and can be differentiated term by term. That is,    "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-3-10",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-3-10",
+  "type": "Theorem",
+  "number": "3.3.2",
+  "title": "",
+  "body": "   Integration of power series term-by-term . Let be a power series that converges on , and let on this interval. Then, is integrable on any closed subinterval of , and for , can be integrated term-by-term. That is,    "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-3-11",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-3-11",
+  "type": "Proof",
+  "number": "3.3.1.1",
+  "title": "",
+  "body": " The proofs of these theorems are beyond the scope, requiring more advanced and subtle analysis arguments.  "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-4-11",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-4-11",
+  "type": "Theorem",
+  "number": "3.3.3",
+  "title": "",
+  "body": "   Arctangent power series .    "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-5-9",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-5-9",
+  "type": "Theorem",
+  "number": "3.3.4",
+  "title": "",
+  "body": "   Logarithm power series .    "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-6-3",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-6-3",
+  "type": "Example",
+  "number": "3.3.5",
+  "title": "",
+  "body": " Recall the geometric series,   which converges on . Differentiating both sides gives a series for a new function,   which also converges on .  "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-6-4",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-6-4",
+  "type": "Example",
+  "number": "3.3.6",
+  "title": "",
+  "body": " The previous example can be taken one step further. Start with the equation,   Differentiating both sides,   This gives a series for .     If you instead just wanted , you can divide both sides by 2,      "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-6-6",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-6-6",
+  "type": "Example",
+  "number": "3.3.7",
+  "title": "",
+  "body": " Consider the function . Notice that the denominator is similar to , except it is , and cubed. Then, the entire expression is multiplied by .  Start with the geometric series, and first replace with , to get in the denominator,   Then, differentiate both sides, like before,   Then, differentiate again,   Then, we want the numerator to be instead of 2, so we can divide both sides by 2, and multiply both sides by ,   "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-6-10-1-2",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-6-10-1-2",
+  "type": "Exercise",
+  "number": "3.3.4.1",
+  "title": "",
+  "body": "   .    substitute with , differentiate, and multiply by .     , .   "
+},
+{
+  "id": "sec-differentiation-and-integration-of-power-series-6-10-1-3",
+  "level": "2",
+  "url": "sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-6-10-1-3",
+  "type": "Exercise",
+  "number": "3.3.4.2",
+  "title": "",
+  "body": "   .    factor out 2 to get into the form , use the geometric series, differentiate two times, and multiply by .     , .   "
+},
+{
   "id": "sec-applications-of-taylor-series",
   "level": "1",
   "url": "sec-applications-of-taylor-series.html",
   "type": "Section",
-  "number": "3.3",
+  "number": "3.4",
   "title": "Applications of Taylor Series",
   "body": " Applications of Taylor Series    Evaluating Limits of Indeterminate Forms  Taylor series provide another method of evaluating limits of indeterminate forms like or . Previously, to do this, you learned:    Various algebraic techniques , like e.g. factoring, multiplying by the conjugate, or using trigonometric identities.  L'Hopital's rule , which is like a shortcut, that works in many situations.    However, there are some situations where L'Hopital's rule is complicated, because the derivatives involved are complicated. Taylor series give a more flexible, general, and simple method.  The broad idea is:    Replace each function with the first few terms of its Taylor series expansion.  Simplify and cancel.  Take the limit by substituting in the limit value.    Sometimes it is not obvious how many terms of the Taylor series to use. A good rule of thumb is 3 or 4 terms, but when in doubt, you can always include more terms. The dots ( ) stand for powers of greater than the last power that appears.   Evaluate each limit using series.                                    Finding Antiderivatives \/ Approximating Integrals with Series   Evaluate each indefinite integral as a power series, and find the radius of convergence.               (requires binomial series)    When evaluating an integral to a desired accuracy, there are 2 ways they will specify the accuracy:    Directly , saying you should have error less than , or less than .    Up to some decimal places , like accurate up to 3 decimal places, or 5 decimal places. Note that accurate up to decimal places basically means to keep the error below . For example:  2 decimal places   5 decimal places        There are 2 ways to bound the error:     Add terms one at a time until your calculator output is stable . Add the first term, then the 2nd, then the 3rd, and so on, one at a time. Each time, check if the decimal digits you care about stop changing. After they stay the same for 2 or 3 steps in a row, that is your answer.  This is the most naive and simple method, which will give you the correct answer for most exam problems. However, it is technically not rigorous, and gives misleading results in some rare tricky cases. To be more safe, you can add more terms to confirm that your answer is correct.     Alternating series error bound . If the series is alternating (which a lot of them are), then the error is bounded by the first omitted term. In other words, .  If you want error less than , then test values of such that is less than .  For example, if is less than , then adding terms up to is sufficient.  This method is more rigorous, and is how you can show your work.     Use power series to approximate each definite integral with the stated accuracy.   (six decimal places)  (six decimal places)  (four decimal places)  ( )  (six decimal places)  ( )  (six decimal places)  ( )  ( )  ( )  (four decimal places)  (four decimal places)  ( )     "
 },
@@ -1436,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-2-8",
   "type": "Example",
-  "number": "3.3.1",
+  "number": "3.4.1",
   "title": "",
   "body": " Evaluate each limit using series.                                 "
 },
@@ -1445,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-3-2",
   "type": "Example",
-  "number": "3.3.2",
+  "number": "3.4.2",
   "title": "",
   "body": " Evaluate each indefinite integral as a power series, and find the radius of convergence.               (requires binomial series)   "
 },
@@ -1454,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-3-7",
   "type": "Example",
-  "number": "3.3.3",
+  "number": "3.4.3",
   "title": "",
   "body": " Use power series to approximate each definite integral with the stated accuracy.   (six decimal places)  (six decimal places)  (four decimal places)  ( )  (six decimal places)  ( )  (six decimal places)  ( )  ( )  ( )  (four decimal places)  (four decimal places)  ( )   "
 }

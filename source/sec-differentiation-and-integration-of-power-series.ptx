@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-differentiation-and-integration-of-power-series" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Differentiation and Integration of Power Series</title>
+  
+  <introduction>
+    <p>
+      One of the reasons that power series are so useful is that it turns out that differentiation and integration (the basic operations of calculus) can be applied to power series in a fairly simple way.
+    </p>
+    <p>
+      In particular, power series behave like polynomials (on their interval of convergence). This means that you can take their derivatives as if they were a polynomial, i.e. using the power rule, and differentiating term-by-term,
+    </p>
+    <md>
+      <mrow>
+        \begin{array}{c|c}
+        \text{power rule} \amp \text{sum rule}\ \hline
+        \rule{0pt}{22pt} \displaystyle \frac{d}{dx} x^n = n x^{,n-1} \amp \displaystyle \frac{d}{dx}\bigl(f(x)+g(x)\bigr) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
+        \end{array}
+      </mrow>
+    </md>
+    <p>
+      Similarly, integrals (or antiderivatives) can be done with the power rule, and done term-by-term,
+    </p>
+    <md>
+      <mrow>
+        \begin{array}{c|c}
+        \text{power rule for integrals} \amp \text{sum rule for integrals} \ \hline
+        \rule{0pt}{22pt} \displaystyle \int x^n ,dx = \frac{1}{n+1} x^{n+1} + C \amp \displaystyle\int \brac{f(x) + g(x)} ,dx = \int f(x) ,dx + \int g(x) ,dx
+        \end{array}
+      </mrow>
+    </md>
+    <p>
+      It is not immediately obvious that the sum rule for derivatives can work here, since there is an <em>infinite</em> number of terms, but in fact, it does.
+    </p>
+  </introduction>
+  
+  <subsection>
+    <title>Differentiation and Integration of Power Series</title>
+    <p>
+      Consider a power series <m>\sum_{n=0}^{\infty} a_n x^n</m> which converges on <m>(-R,R)</m>. This means that it defines a function of <m>x</m>,
+    </p>
+    <md>
+      <mrow>
+        f(x) = \sum_{n=0}^{\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \dots
+      </mrow>
+    </md>
+    <p>
+      with domain <m>(-R,R)</m>. Since this is a function, we can take its derivative. In fact, it can be done like a polynomial,
+    </p>
+    <md>
+      <mrow>
+        f'(x) \amp = \frac{d}{dx} \brac{a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \dots} \
+      </mrow>
+      <mrow>
+        \amp = a_1 + 2a_2 x + 3a_3 x^2 + 4a_4 x^3 + \dots
+      </mrow>
+    </md>
+    <p>
+      In summation notation, this can be thought of as the derivative being able to be brought ``through" the summation sign,
+    </p>
+    <md>
+      <mrow>
+        f'(x) \amp = \frac{d}{dx} \sum_{n=0}^{\infty} a_n x^n \
+      </mrow>
+      <mrow>
+        \amp = \sum_{n=0}^{\infty} \frac{d}{dx} a_n x^n \amp\amp \text{interchanging the derivative and summation} \
+      </mrow>
+      <mrow>
+        \amp = \sum_{n=1}^{\infty} n a_n x^{n-1}
+      </mrow>
+    </md>
+    <p>
+      The last line comes from applying the power rule. Note the summation now starts at <m>n=1</m> instead of <m>n=0</m>, because the <m>n = 0</m> term (which is <m>a_0</m>) vanishes after taking the derivative. In summary,
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          <alert>Differentiation of power series term-by-term</alert>. Let <m>\sum_{n=0}^{\infty} a_n x^n</m> be a power series that converges on <m>(-R,R)</m>, and let <m>f(x) = \sum_{n=0}^{\infty} a_n x^n</m> on this interval. Then, <m>f</m> is differentiable on <m>(-R,R)</m>, and <m>f</m> can be differentiated term by term. That is,
+        </p>
+        <md>
+          <mrow>
+            \boxed{f'(x) = \sum_{n=1}^{\infty} n a_n x^{n-1} = a_1 + 2a_2 x + 3a_3 x^2 + 4a_4 x^3 + \dots}
+          </mrow>
+        </md>
+      </statement>
+    </theorem>
+    <theorem>
+      <statement>
+        <p>
+          <alert>Integration of power series term-by-term</alert>. Let <m>\sum_{n=0}^{\infty} a_n x^n</m> be a power series that converges on <m>(-R,R)</m>, and let <m>f(x) = \sum_{n=0}^{\infty} a_n x^n</m> on this interval. Then, <m>f</m> is integrable on any closed subinterval of <m>(-R,R)</m>, and for <m>x \in (-R,R)</m>, <m>f</m> can be integrated term-by-term. That is,
+        </p>
+        <md>
+          <mrow>
+            \boxed{\int f(x) ,dx = C + \sum_{n=0}^{\infty} \frac{a_n}{n+1} x^{n+1} = C + a_0 x + \frac{1}{2} a_1 x^2 + \frac{1}{3} a_2 x^3 + \dots}
+          </mrow>
+        </md>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        The proofs of these theorems are beyond the scope, requiring more advanced and subtle analysis arguments.
+      </p>
+    </proof>
+    <p>
+      These properties will allow us to find power series representations for a few more functions.
+    </p>
+    <p>
+      Note that the theorem says that the radius of convergence doesn't change, but not necessarily the <em>interval</em> of convergence. In particular, differentiating or integration can change convergence at the endpoints of the interval, in the following way:
+    </p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            With differentiation, one or both endpoints of convergence may be lost.
+          </p>
+        </li>
+        <li>
+          <p>
+            With integration, one or both endpoints may be gained.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  
+  <subsection>
+    <title>Power Series of Arctangent</title>
+    <p>
+      Recall that,
+    </p>
+    <md>
+      <mrow>
+        \frac{d}{dx} \arctan{x} = \frac{1}{1 + x^2}
+      </mrow>
+    </md>
+    <p>
+      Then,
+    </p>
+    <md>
+      <mrow>
+        \frac{1}{1 + x^2} \amp = \frac{1}{1 - (-x^2)} \
+      </mrow>
+      <mrow>
+        \amp = \sum_{n=0}^{\infty} (-x^2)^n \
+      </mrow>
+      <mrow>
+        \amp = \sum_{n=0}^{\infty} (-1)^n x^{2n}
+      </mrow>
+    </md>
+    <p>
+      Then, taking the antiderivative of both sides,
+    </p>
+    <md>
+      <mrow>
+        \int \frac{1}{1 + x^2} ,dx \amp = \int \sum_{n=0}^{\infty} (-1)^n x^{2n} ,dx \
+      </mrow>
+      <mrow>
+        \arctan{x} \amp = C + \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n + 1}
+      </mrow>
+    </md>
+    <p>
+      To find <m>C</m>, evaluate both sides at <m>x=0</m>, to get <m>\arctan{0} = C</m>, so <m>C = 0</m>. The series converges if <m>\abs{-x^2} \lt 1</m>, or <m>x^2 \lt 1</m>, or <m>-1 \lt x \lt 1</m>.
+    </p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            For <m>x = 1</m>, the series is <m>\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}</m>, which converges by the alternating series test.
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>x = -1</m>, we get the same series.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Thus, the series converges for <m>-1 \leq x \leq 1</m>. In summary,
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          <alert>Arctangent power series</alert>.
+        </p>
+        <md>
+          <mrow>
+            \boxed{\arctan{x} = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n + 1} = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \dots \qquad \text{for <m>-1 \leq x \leq 1</m>}}
+          </mrow>
+        </md>
+      </statement>
+    </theorem>
+  </subsection>
+  
+  <subsection>
+    <title>Power Series of the Logarithm</title>
+    <p>
+      A power series for the logarithmic function can be found by integrating the geometric series. Recall that,
+    </p>
+    <md>
+      <mrow>
+        \frac{1}{1 + x} = \sum_{n=0}^{\infty} (-1)^n x^n
+      </mrow>
+    </md>
+    <p>
+      Then, integrating,
+    </p>
+    <md>
+      <mrow>
+        \int \frac{1}{1 + x} ,dx \amp = \int \sum_{n=0}^{\infty} (-1)^n x^n \
+      </mrow>
+      <mrow>
+        \ln{(1 + x)} \amp = \sum_{n=0}^{\infty} \frac{x^{n+1}}{n+1}
+      </mrow>
+    </md>
+    <p>
+      This provides a series representation of <m>\ln{(1 + x)}</m>. Sometimes, the series is written with a shifted index, as <m>\sum_{n=1}^{\infty} \frac{x^n}{n}</m>. The series converges for <m>-1 \lt x \lt 1</m>, because the radius of convergence is still 1. However, we still have to check the endpoints, because endpoints can become convergent when you integrate.
+    </p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            For <m>x = 1</m>, <m>\sum_{n=1}^{\infty} \frac{(-1)^n}{n}</m>, the alternating harmonic series, which converges.
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>x = -1</m>, <m>\sum_{n=0}^{\infty} (-1)^n \frac{(-1)^{n+1}}{n+1} = \sum_{n=0}^{\infty} \frac{1}{n+1}</m>, the harmonic series, which diverges.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Thus, the power series converges for <m>(-1,1]</m>.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          <alert>Logarithm power series</alert>.
+        </p>
+        <md>
+          <mrow>
+            \boxed{\ln{(1 + x)} = \sum_{n=0}^{\infty} (-1)^n \frac{x^{n+1}}{n+1} = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots \qquad \text{for <m>-1 \lt x \leq 1</m>}}
+          </mrow>
+        </md>
+      </statement>
+    </theorem>
+    <p>
+      This gives a series for <m>\ln{(1 + x)}</m>, which is the natural logarithm function, shifted left by one unit. For just the natural logarithm function <m>\ln{x}</m>, we can substitute <m>x</m> with <m>x-1</m>.
+    </p>
+    <md>
+      <mrow>
+        \boxed{\ln{x} = \sum_{n=0}^{\infty} (-1)^n \frac{(x - 1)^{n+1}}{n + 1}}
+      </mrow>
+    </md>
+    <p>
+      This results in a power series centered at <m>x = 1</m>, which converges for <m>x \in (0,2]</m>.
+    </p>
+  </subsection>
+  
+  <subsection>
+    <title>Derivative of Geometric Series</title>
+    <p>
+      The geometric series can also be differentiated to obtain new series.
+    </p>
+    <example>
+      <p>
+        Recall the geometric series,
+      </p>
+      <md>
+        <mrow>
+          \frac{1}{1 - x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \dots
+        </mrow>
+      </md>
+      <p>
+        which converges on <m>(-1,1)</m>. Differentiating both sides gives a series for a new function,
+      </p>
+      <md>
+        <mrow>
+          \boxed{\frac{1}{(1-x)^2} = \sum_{n=1}^{\infty} n x^{n-1} = 1 + 2x + 3x^2 + \dots}
+        </mrow>
+      </md>
+      <p>
+        which also converges on <m>(-1,1)</m>.
+      </p>
+    </example>
+    <example>
+      <p>
+        The previous example can be taken one step further. Start with the equation,
+      </p>
+      <md>
+        <mrow>
+          \frac{1}{(1-x)^2} = \sum_{n=1}^{\infty} n x^{n-1}
+        </mrow>
+      </md>
+      <p>
+        Differentiating both sides,
+      </p>
+      <md>
+        <mrow>
+          \frac{2}{(1-x)^3} = \sum_{n=2}^{\infty} n (n-1) x^{n-2}
+        </mrow>
+      </md>
+      <p>
+        This gives a series for <m>\frac{2}{(1-x)^3}</m>.
+      </p>
+      <p>
+        <ul>
+          <li>
+            <p>
+              If you instead just wanted <m>\frac{1}{(1-x)^3}</m>, you can divide both sides by 2,
+            </p>
+            <md>
+              <mrow>
+                \frac{1}{(1-x)^3} = \sum_{n=2}^{\infty} \frac{n (n-1)}{2} x^{n-2}
+              </mrow>
+            </md>
+          </li>
+        </ul>
+      </p>
+    </example>
+    <p>
+      This kind of creative reasoning can be used to find power series for very particular functions.
+    </p>
+    <example>
+      <p>
+        Consider the function <m>f(x) = \frac{x^2}{(1+x)^3}</m>. Notice that the denominator is similar to <m>1-x</m>, except it is <m>1+x</m>, and cubed. Then, the entire expression is multiplied by <m>x^2</m>.
+      </p>
+      <p>
+        Start with the geometric series, and first replace <m>x</m> with <m>-x</m>, to get <m>1+x</m> in the denominator,
+      </p>
+      <md>
+        <mrow>
+          \frac{1}{1 + x} \amp = \sum_{n=0}^{\infty} (-x)^n \
+        </mrow>
+        <mrow>
+          \amp = \sum_{n=0}^{\infty} (-1)^n x^n
+        </mrow>
+      </md>
+      <p>
+        Then, differentiate both sides, like before,
+      </p>
+      <md>
+        <mrow>
+          -\frac{1}{(1+x)^2} \amp = \sum_{n=1}^{\infty} (-1)^n n x^{n-1}
+        </mrow>
+      </md>
+      <p>
+        Then, differentiate again,
+      </p>
+      <md>
+        <mrow>
+          \frac{2}{(1+x)^3} \amp = \sum_{n=2}^{\infty} (-1)^n n(n-1) x^{n-2}
+        </mrow>
+      </md>
+      <p>
+        Then, we want the numerator to be <m>x^2</m> instead of 2, so we can divide both sides by 2, and multiply both sides by <m>x^2</m>,
+      </p>
+      <md>
+        <mrow>
+          \frac{x^2}{(1+x)^3} \amp = \sum_{n=2}^{\infty} (-1)^n \frac{n(n-1)}{2} x^n \
+        </mrow>
+        <mrow>
+          \amp = x^2 - 3x^3 + 6x^4 - 10x^5 + \dots
+        </mrow>
+      </md>
+    </example>
+    <p>
+      In summary,
+    </p>
+    <md>
+      <mrow>
+        \boxed{\begin{array}{ll}
+        \text{Geometric, } \abs{x} \lt 1 : \quad \dfrac{1}{1-x}=\displaystyle\sum_{n=0}^{\infty} x^{n},[20pt]
+        \text{Differentiate once:}\quad \dfrac{1}{(1-x)^{2}}=\displaystyle\sum_{n=1}^{\infty} n,x^{,n-1},[20pt]
+        \text{Differentiate twice:}\quad \dfrac{2}{(1-x)^{3}}=\displaystyle\sum_{n=2}^{\infty} n(n-1)x^{n-2}
+        \end{array}}
+      </mrow>
+    </md>
+    <p>
+      You probably don't want to try and memorize these formulas. The main idea is just that you can differentiate the geometric series to get power series representations for new, similar functions.
+    </p>
+    <exercises>
+      <exercisegroup>
+        <introduction>
+          <p>
+            Find a power series representation for each function (using the geometric series), and determine its radius of convergence.
+          </p>
+        </introduction>  
+        <exercise>
+          <statement>
+            <p>
+              <m>f(x) = \frac{x}{(1+4x)^2}</m>.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              substitute <m>x</m> with <m>-4x</m>, differentiate, and multiply by <m>x</m>.
+            </p>
+          </hint>
+          <answer>
+            <p>
+              <m>\sum_{n=1}^{\infty} (-1)^{n+1} n \cdot 4^{n-1} x^n</m>, <m>R = \frac{1}{4}</m>.
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>f(x) = \brac{\frac{x}{2-x}}^3</m>.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              factor out 2 to get into the form <m>1-u</m>, use the geometric series, differentiate two times, and multiply by <m>x^3</m>.
+            </p>
+          </hint>
+          <answer>
+            <p>
+              <m>\sum_{n=2}^{\infty} \frac{n(n-1)}{2^{n+2}} x^{n+1}</m>, <m>R = 2</m>.
+            </p>
+          </answer>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </subsection>
+  
+</section>
