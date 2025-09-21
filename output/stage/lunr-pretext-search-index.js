@@ -1556,6 +1556,15 @@ var ptx_lunr_docs = [
   "number": "3.4.3",
   "title": "",
   "body": " Use power series to approximate each definite integral with the stated accuracy.   (six decimal places)  (six decimal places)  (four decimal places)  ( )  (six decimal places)  ( )  (six decimal places)  ( )  ( )  ( )  (four decimal places)  (four decimal places)  ( )   "
+},
+{
+  "id": "sec-summary-of-series-representation-of-functions",
+  "level": "1",
+  "url": "sec-summary-of-series-representation-of-functions.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Summary",
+  "body": " Summary    Common Maclaurin Series     Key Skills   Find interval of convergence and radius of convergence of a power series.  Find power series representation of a function, and determine interval of convergence.  Evaluate a limit, using series.  Find an antiderivative of a function as a power series, using series.  Approximate an integral, with some accuracy, using series.     More Maclaurin Series    "
 }
 ]
 

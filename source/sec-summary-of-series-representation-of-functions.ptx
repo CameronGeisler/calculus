@@ -61,15 +61,15 @@
       <title>More Maclaurin Series</title>
       <md>
         <mrow>
-          \tan x \amp = x + \frac{x^3}{3} + \frac{2x^5}{15} + \frac{17x^7}{315} + \cdots, \quad \lvert x\rvert &lt; \frac{\pi}{2} \\[1em]
+          \tan x \amp = x + \frac{x^3}{3} + \frac{2x^5}{15} + \frac{17x^7}{315} + \cdots, \quad \lvert x\rvert &lt; \frac{\pi}{2} \\
         </mrow>
         <mrow>
           (1+x)^n \amp = 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + \cdots
-          = \sum_{k=0}^{\infty} \binom{n}{k} x^k, \quad \lvert x\rvert &lt; 1 \\[1em]
+          = \sum_{k=0}^{\infty} \binom{n}{k} x^k, \quad \lvert x\rvert &lt; 1 \\
         </mrow>
         <mrow>
           \sinh x \amp = x + \frac{x^3}{3!} + \frac{x^5}{5!} + \cdots
-          = \sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!}, \quad -\infty &lt; x &lt; \infty \\[1em]
+          = \sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!}, \quad -\infty &lt; x &lt; \infty \\
         </mrow>
         <mrow>
           \cosh x \amp = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \cdots

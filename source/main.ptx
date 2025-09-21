@@ -14,7 +14,7 @@
     <book xml:id="book" xmlns:xi="http://www.w3.org/2001/XInclude">
         <!-- The book needs a title and can have a subtitle  -->
         <title>Calculus</title>
-        <!-- <subtitle></subtitle> -->
+        <subtitle>Cameron Geisler</subtitle>
 
         <introduction>
             My calculus notes.
@@ -23,7 +23,7 @@
 
         <!-- First a frontmatter for prefaces and such. Maybe comment  -->
         <!-- out for now and write this when the book is more complete -->
-        <!-- <xi:include href="./frontmatter.ptx" /> -->
+        <xi:include href="./frontmatter.ptx" />
 
         <!-- The first chapter will be bare bones to illustrate the    -->
         <!-- possible structure of the book.  Once you know what the   -->
@@ -33,6 +33,7 @@
         <xi:include href="./ch-integration-techniques.ptx"/>
         <xi:include href="./ch-infinite-sequences-and-series.ptx"/>
         <xi:include href="./ch-series-representation-of-functions.ptx"/>
+        <xi:include href="./ch-differential-equations.ptx"/>
 
         <!-- Of course you will want to add more chapters as you proceed-->
     </book>

@@ -13,8 +13,8 @@
     <md>
       <mrow>
         \begin{array}{c|c}
-        \text{power rule} \amp \text{sum rule}\ \hline
-        \rule{0pt}{22pt} \displaystyle \frac{d}{dx} x^n = n x^{,n-1} \amp \displaystyle \frac{d}{dx}\bigl(f(x)+g(x)\bigr) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
+        \text{power rule} \amp \text{sum rule} \\ \hline
+        \rule{0pt}{22pt} \displaystyle \frac{d}{dx} x^n = n x^{n-1} \amp \displaystyle \frac{d}{dx} \brac{f(x)+g(x)} = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
         \end{array}
       </mrow>
     </md>
@@ -24,8 +24,8 @@
     <md>
       <mrow>
         \begin{array}{c|c}
-        \text{power rule for integrals} \amp \text{sum rule for integrals} \ \hline
-        \rule{0pt}{22pt} \displaystyle \int x^n ,dx = \frac{1}{n+1} x^{n+1} + C \amp \displaystyle\int \brac{f(x) + g(x)} ,dx = \int f(x) ,dx + \int g(x) ,dx
+        \text{power rule for integrals} \amp \text{sum rule for integrals} \\ \hline
+        \rule{0pt}{22pt} \displaystyle \int x^n \,dx = \frac{1}{n+1} x^{n+1} + C \amp \displaystyle\int \brac{f(x) + g(x)} \,dx = \int f(x) \, dx + \int g(x) \, dx
         \end{array}
       </mrow>
     </md>
@@ -371,8 +371,8 @@
     <md>
       <mrow>
         \boxed{\begin{array}{ll}
-        \text{Geometric, } \abs{x} \lt 1 : \quad \dfrac{1}{1-x}=\displaystyle\sum_{n=0}^{\infty} x^{n},[20pt]
-        \text{Differentiate once:}\quad \dfrac{1}{(1-x)^{2}}=\displaystyle\sum_{n=1}^{\infty} n,x^{,n-1},[20pt]
+        \text{Geometric, } \abs{x} \lt 1 : \quad \dfrac{1}{1-x}=\displaystyle\sum_{n=0}^{\infty} x^n \\[20pt]
+        \text{Differentiate once:}\quad \dfrac{1}{(1-x)^{2}}=\displaystyle\sum_{n=1}^{\infty} n,x^{n-1} \\[20pt]
         \text{Differentiate twice:}\quad \dfrac{2}{(1-x)^{3}}=\displaystyle\sum_{n=2}^{\infty} n(n-1)x^{n-2}
         \end{array}}
       </mrow>
