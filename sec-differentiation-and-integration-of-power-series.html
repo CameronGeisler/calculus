@@ -78,6 +78,7 @@ window.MathJax = {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus">
+<meta property="book:author" content="">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -114,7 +115,7 @@ eBookConfig.enable_chatcodes =  false;
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="book.html"><span class="title">Calculus</span></a></h1>
+<h1 class="heading"><a href="book.html"><span class="title">Calculus</span> <span class="subtitle">Cameron Geisler</span></a></h1>
 <p class="byline"></p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -156,6 +157,7 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-integration-techniques.html" class="internal"><span class="codenumber">1</span> <span class="title">Integration Techniques</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
@@ -237,6 +239,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-differential-equations.html" class="internal"><span class="codenumber">4</span> <span class="title">Differential Equations</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-differentiation-and-integration-of-power-series"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiation and Integration of Power Series</span>
@@ -248,8 +251,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="displaymath process-math" id="sec-differentiation-and-integration-of-power-series-2-3">
 \begin{align*}
 \begin{array}{c|c}
-\text{power rule} \amp \text{sum rule}\ \hline
-\rule{0pt}{22pt} \displaystyle \frac{d}{dx} x^n = n x^{,n-1} \amp \displaystyle \frac{d}{dx}\bigl(f(x)+g(x)\bigr) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
+\text{power rule} \amp \text{sum rule} \\ \hline
+\rule{0pt}{22pt} \displaystyle \frac{d}{dx} x^n = n x^{n-1} \amp \displaystyle \frac{d}{dx} \brac{f(x)+g(x)} = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
 \end{array}
 \end{align*}
 </div>
@@ -258,8 +261,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="displaymath process-math" id="sec-differentiation-and-integration-of-power-series-2-5">
 \begin{align*}
 \begin{array}{c|c}
-\text{power rule for integrals} \amp \text{sum rule for integrals} \ \hline
-\rule{0pt}{22pt} \displaystyle \int x^n ,dx = \frac{1}{n+1} x^{n+1} + C \amp \displaystyle\int \brac{f(x) + g(x)} ,dx = \int f(x) ,dx + \int g(x) ,dx
+\text{power rule for integrals} \amp \text{sum rule for integrals} \\ \hline
+\rule{0pt}{22pt} \displaystyle \int x^n \,dx = \frac{1}{n+1} x^{n+1} + C \amp \displaystyle\int \brac{f(x) + g(x)} \,dx = \int f(x) \, dx + \int g(x) \, dx
 \end{array}
 \end{align*}
 </div>
@@ -545,8 +548,8 @@ f'(x) \amp = \frac{d}{dx} \sum_{n=0}^{\infty} a_n x^n \\\
 <div class="displaymath process-math" id="sec-differentiation-and-integration-of-power-series-6-8">
 \begin{gather*}
 \boxed{\begin{array}{ll}
-\text{Geometric, } \abs{x} \lt 1 : \quad \dfrac{1}{1-x}=\displaystyle\sum_{n=0}^{\infty} x^{n},[20pt]
-\text{Differentiate once:}\quad \dfrac{1}{(1-x)^{2}}=\displaystyle\sum_{n=1}^{\infty} n,x^{,n-1},[20pt]
+\text{Geometric, } \abs{x} \lt 1 : \quad \dfrac{1}{1-x}=\displaystyle\sum_{n=0}^{\infty} x^n \\[20pt]
+\text{Differentiate once:}\quad \dfrac{1}{(1-x)^{2}}=\displaystyle\sum_{n=1}^{\infty} n,x^{n-1} \\[20pt]
 \text{Differentiate twice:}\quad \dfrac{2}{(1-x)^{3}}=\displaystyle\sum_{n=2}^{\infty} n(n-1)x^{n-2}
 \end{array}}
 \end{gather*}

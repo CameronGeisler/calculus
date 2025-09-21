@@ -1565,6 +1565,15 @@ var ptx_lunr_docs = [
   "number": "3.5",
   "title": "Summary",
   "body": " Summary    Common Maclaurin Series     Key Skills   Find interval of convergence and radius of convergence of a power series.  Find power series representation of a function, and determine interval of convergence.  Evaluate a limit, using series.  Find an antiderivative of a function as a power series, using series.  Approximate an integral, with some accuracy, using series.     More Maclaurin Series    "
+},
+{
+  "id": "ch-differential-equations",
+  "level": "1",
+  "url": "ch-differential-equations.html",
+  "type": "Chapter",
+  "number": "4",
+  "title": "Differential Equations",
+  "body": " Differential Equations     "
 }
 ]
 
