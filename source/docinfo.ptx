@@ -52,9 +52,10 @@
   <latex-image-preamble>
     \usepackage{tikz, pgfplots}
     \usetikzlibrary{calc,angles,quotes} % calc for coordinate calculations, angles for angle markings, and quotes for angle labels
-    \usetikzlibrary{positioning,matrix,arrows}
+    \usetikzlibrary{positioning,matrix}
     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
     \usetikzlibrary{decorations.markings}
+    \usetikzlibrary{arrows.meta}
   </latex-image-preamble>
 
   <!-- It is possible to rename elements using the tags below -->

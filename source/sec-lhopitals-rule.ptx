@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-lhopitals-rule" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>L'Hopital's Rule</title>
+  
+  <!-- <introduction>
+  <p>
+  This is the introduction to the section.
+  </p>
+  </introduction> -->
+  
+  <subsection xml:id="subsec-lhopital-summary">
+    <title>L'Hopital's Rule Summary</title>
+    
+    <ol>
+      <li><p>Determine if the limit is an indeterminate form, and if so, then what form it is.</p></li>
+      <li><p>If it's <m>\frac{0}{0}</m> or <m>\frac{\infty}{\infty}</m>, then apply L'Hopital's rule directly.</p></li>
+      <li><p>If it's <m>0 \cdot \infty</m> (or <m>\infty \cdot 0</m>), flip one of the terms to convert it to <m>\frac{0}{0}</m> or <m>\frac{\infty}{\infty}</m> (whichever is more convenient).</p></li>
+      <li><p>If it's <m>\infty - \infty</m>, then write it as one fraction first, and then continue.</p></li>
+      <li><p>If it's an indeterminate form with an exponent, like <m>1^{\infty}</m>, <m>0^0</m>, or <m>\infty^0</m>, then first use logarithms.</p></li>
+    </ol>
+    
+    <p>Visually,</p>
+    
+    <image>
+      <latex-image>
+        \begin{tikzpicture}
+        \node[draw, rounded corners, align=center, inner sep=4pt] (power) at (0,0) {$1^{\infty} \quad 0^0 \quad \infty^0$};
+        \node[draw, rounded corners, align=center, inner sep=4pt] (prod) at (0,2) {$0\cdot\infty \quad \infty\cdot 0$};
+        \node[draw, rounded corners, very thick, align=center, inner sep=4pt] (quot) at (0,4) {$\dfrac{0}{0} \quad \dfrac{\infty}{\infty}$};
+        \node (side) at (3,2) {$\infty-\infty$};
+        \draw[-&gt;, very thick] (power) -- node[left] {take $\ln$} (prod);
+        \draw[-&gt;, very thick] (prod) -- node[left] {rewrite as a fraction} (quot);
+        \draw[-&gt;, dashed, very thick] (side) -- node[above right] {combine into one fraction} (quot);
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </subsection>
+  
+</section>

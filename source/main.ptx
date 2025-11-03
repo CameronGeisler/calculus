@@ -32,6 +32,8 @@
 
         <xi:include href="ch-differentiation-techniques.ptx" />
 
+        <xi:include href="./ch-applications-of-derivatives.ptx" />
+
         <xi:include href="./ch-integration-techniques.ptx"/>
         <xi:include href="./ch-infinite-sequences-and-series.ptx"/>
         <xi:include href="./ch-series-representation-of-functions.ptx"/>
