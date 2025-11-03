@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Differential Equations</title>
+<title>L’Hopital’s Rule</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -129,7 +129,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-summary-of-series-representation-of-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-applications-of-derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-applications-of-derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-integration-techniques.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\set}[1]{\left\{ #1 \right\}}
 \renewcommand{\neg}{\sim}
@@ -169,11 +169,11 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li></ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-applications-of-derivatives.html" class="internal"><span class="codenumber">2</span> <span class="title">Applications of Derivatives</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-lhopitals-rule.html" class="internal"><span class="codenumber">2.1</span> <span class="title">L’Hopital’s Rule</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-lhopitals-rule.html#subsec-lhopital-summary" class="internal"><span class="codenumber">2.1.1</span> <span class="title">L’Hopital’s Rule Summary</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-lhopitals-rule.html#subsec-lhopital-summary" class="internal"><span class="codenumber">2.1.1</span> <span class="title">L’Hopital’s Rule Summary</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -257,14 +257,47 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="ch-differential-equations.html" class="internal"><span class="codenumber">6</span> <span class="title">Differential Equations</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-differential-equations.html" class="internal"><span class="codenumber">6</span> <span class="title">Differential Equations</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-differential-equations"><h2 class="heading">
-<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differential Equations</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-lhopitals-rule"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L’Hopital’s Rule</span>
 </h2>
-<div class="autopermalink" data-description="Chapter 6: Differential Equations"><a href="#ch-differential-equations" title="Copy heading and permalink for Chapter 6: Differential Equations" aria-label="Copy heading and permalink for Chapter 6: Differential Equations">🔗</a></div></section></div>
+<section class="subsection" id="subsec-lhopital-summary"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L’Hopital’s Rule Summary</span>
+</h3>
+<ol class="decimal" id="subsec-lhopital-summary-2">
+<li id="subsec-lhopital-summary-2-1">
+<div class="para" id="subsec-lhopital-summary-2-1-1">Determine if the limit is an indeterminate form, and if so, then what form it is.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-lhopital-summary-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#subsec-lhopital-summary-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="subsec-lhopital-summary-2-2">
+<div class="para" id="subsec-lhopital-summary-2-2-1">If it’s <span class="process-math">\(\frac{0}{0}\)</span> or <span class="process-math">\(\frac{\infty}{\infty}\text{,}\)</span> then apply L’Hopital’s rule directly.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-lhopital-summary-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#subsec-lhopital-summary-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="subsec-lhopital-summary-2-3">
+<div class="para" id="subsec-lhopital-summary-2-3-1">If it’s <span class="process-math">\(0 \cdot \infty\)</span> (or <span class="process-math">\(\infty \cdot 0\)</span>), flip one of the terms to convert it to <span class="process-math">\(\frac{0}{0}\)</span> or <span class="process-math">\(\frac{\infty}{\infty}\)</span> (whichever is more convenient).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-lhopital-summary-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#subsec-lhopital-summary-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="subsec-lhopital-summary-2-4">
+<div class="para" id="subsec-lhopital-summary-2-4-1">If it’s <span class="process-math">\(\infty - \infty\text{,}\)</span> then write it as one fraction first, and then continue.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-lhopital-summary-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#subsec-lhopital-summary-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="subsec-lhopital-summary-2-5">
+<div class="para" id="subsec-lhopital-summary-2-5-1">If it’s an indeterminate form with an exponent, like <span class="process-math">\(1^{\infty}\text{,}\)</span> <span class="process-math">\(0^0\text{,}\)</span> or <span class="process-math">\(\infty^0\text{,}\)</span> then first use logarithms.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-lhopital-summary-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#subsec-lhopital-summary-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="subsec-lhopital-summary-3">Visually,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-lhopital-summary-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/subsec-lhopital-summary-4.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Subsection 2.1.1: L’Hopital’s Rule Summary"><a href="#subsec-lhopital-summary" title="Copy heading and permalink for Subsection 2.1.1: L’Hopital’s Rule Summary" aria-label="Copy heading and permalink for Subsection 2.1.1: L’Hopital’s Rule Summary">🔗</a></div></section><div class="autopermalink" data-description="Section 2.1: L’Hopital’s Rule"><a href="#sec-lhopitals-rule" title="Copy heading and permalink for Section 2.1: L’Hopital’s Rule" aria-label="Copy heading and permalink for Section 2.1: L’Hopital’s Rule">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-summary-of-series-representation-of-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="ch-applications-of-derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-integration-techniques.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
