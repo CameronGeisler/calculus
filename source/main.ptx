@@ -30,7 +30,8 @@
         <!-- title of the chapter is, rename the file something based  -->
         <!-- on the title (ch-shorttitle.ptx) both here and on disk    -->
 
-        <xi:include href="ch-differentiation-techniques.ptx" />
+        <xi:include href="./ch-differentiation-techniques.ptx" />
+        <xi:include href="./ch-graphical-behavior-of-functions.ptx" />
 
         <xi:include href="./ch-applications-of-derivatives.ptx" />
 
