@@ -9,5 +9,6 @@
 
   <!-- include sections -->
   <xi:include href="sec-increasing-and-decreasing-functions.ptx"/>
+  <xi:include href="sec-local-extrema-first-derivative-test.ptx"/>
 
 </chapter>

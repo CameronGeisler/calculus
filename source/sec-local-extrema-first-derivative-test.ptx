@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-local-extrema-first-derivative-test" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Local Extrema and the First Derivative Test</title>
+  
+  <!-- <introduction>
+  <p>
+  This is the introduction to the section.
+  </p>
+  </introduction> -->
+  
+  <subsection xml:id="subsec-finding-local-maxima-minima-examples">
+    <title>Finding Local Maxima/Minima Examples</title>
+    
+    <project xml:id="project-polynomial-functions">
+      <title>Polynomial Functions</title>
+      <introduction>
+        <p>For each function, find any local maxima or local minima, and intervals of increase and decrease.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=x^3+3x^2+1</m></p></statement>
+        <hint><p><m>f'(x)=3x(x+2)</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,-2),(0,\infty)</m>, decreasing: <m>(-2,0)</m>, local maxima: <m>(-2,5)</m>, local minima: <m>(0,1)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=-x^2-3x+3</m></p></statement>
+        <hint><p><m>f'(x)=-2x-3=-(2x+3)</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,-\frac{3}{2})</m>, decreasing: <m>(-\frac{3}{2},\infty)</m>, local maxima: <m>\brac{-\frac{3}{2}, \frac{21}{4}}</m>, local minima: none</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^3-6x^2+9x+2</m></p></statement>
+        <hint><p><m>f'(x)=3x^2-12x+9=3(x-1)(x-3)</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,1),(3,\infty)</m>, decreasing: <m>(1,3)</m>, local maxima: <m>(1,6)</m>, local minima: <m>(3,2)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=(x^2-3)e^x</m></p></statement>
+        <hint><p><m>f'(x)=e^x(x^2+2x-3)=e^x(x+3)(x-1)</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,-3),(1,\infty)</m>, decreasing: <m>(-3,1)</m>, local maxima: <m>(-3,\frac{6}{e^3})</m>, local minima: <m>(1,-2e)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=4x-x^3</m></p></statement>
+        <hint><p><m>f'(x)=4-3x^2</m></p></hint>
+        <answer><p>increasing: <m>(-\frac{2\sqrt{3}}{3},\frac{2\sqrt{3}}{3})</m>, decreasing: <m>(-\infty,-\frac{2\sqrt{3}}{3}),(\frac{2\sqrt{3}}{3},\infty)</m>, local maxima: <m>\brac{\frac{2\sqrt{3}}{3}, \frac{16\sqrt{3}}{9}}</m>, local minima: <m>\brac{-\frac{2\sqrt{3}}{3}, -\frac{16\sqrt{3}}{9}}</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=-3x^3-5x</m></p></statement>
+        <hint><p><m>f'(x)=-9x^2-5</m></p></hint>
+        <answer><p>increasing: none, decreasing: <m>(-\infty,\infty)</m>, local maxima: none, local minima: none</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{1}{3}x^3-9x+2</m></p></statement>
+        <hint><p><m>f'(x)=x^2-9=(x-3)(x+3)</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,-3),(3,\infty)</m>, decreasing: <m>(-3,3)</m>, local maxima: <m>(-3,20)</m>, local minima: <m>(3,-16)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=-x^3+2x^2</m></p></statement>
+        <hint><p><m>f'(x)=-3x^2+4x=x(4-3x)</m></p></hint>
+        <answer><p>increasing: <m>(0,\frac{4}{3})</m>, decreasing: <m>(-\infty,0),(\frac{4}{3},\infty)</m>, local maxima: <m>(\frac{4}{3}, \frac{32}{27}</m>, local minima: <m>(0,0)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=2x^3-18x</m></p></statement>
+        <hint><p><m>f'(x)=6x^2-18=6(x-\sqrt{3})(x+\sqrt{3})</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,-\sqrt{3}),(\sqrt{3},\infty)</m>, decreasing: <m>(-\sqrt{3},\sqrt{3})</m>, local maxima: <m>(-\sqrt{3}, 12\sqrt{3})</m>, local minima: <m>(\sqrt{3}, -12\sqrt{3})</m></p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-rational-transcendental-functions">
+      <title>Rational and Transcendental Functions</title>
+      <introduction>
+        <p>For each function, find any local maxima or local minima, and intervals of increase and decrease.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=4\sqrt{x}-x^2+3</m></p></statement>
+        <hint><p><m>f'(x)=\frac{2}{\sqrt{x}}-2x</m></p></hint>
+        <answer><p>increasing: <m>(0,1)</m>, decreasing: <m>(1,\infty)</m>, local maxima: <m>(1,6)</m>, local minima: none</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x^2-3}{x-2}</m>, <m>x\ne 2</m></p></statement>
+        <hint><p><m>f'(x)=\frac{x^2-4x+3}{(x-2)^2}=\frac{(x-1)(x-3)}{(x-2)^2}</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,1),(3,\infty)</m>, decreasing: <m>(1,2),(2,3)</m>, local maxima: <m>(1,2)</m>, local minima: <m>(3,6)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^5+x^3</m></p></statement>
+        <hint><p><m>f'(x)=5x^4+3x^2=x^2(5x^2+3)</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,\infty)</m>, decreasing: none, local maxima: none, local minima: none</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^2-2x-4\ln x</m></p></statement>
+        <hint><p><m>f'(x)=2x-2-\frac{4}{x}=\frac{2(x-2)(x+1)}{x}</m></p></hint>
+        <answer><p>increasing: <m>(2,\infty)</m>, decreasing: <m>(0,2)</m>, local maxima: none, local minima: <m>\brac{2, -4\ln 2}</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{3}{2}x^4-x^6</m></p></statement>
+        <hint><p><m>f'(x)=6x^3-6x^5=-6x^3(x-1)(x+1)</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,-1),(0,1)</m>, decreasing: <m>(-1,0),(1,\infty)</m>, local maxima: <m>\brac{-1,\frac{1}{2}},\brac{1,\frac{1}{2}}</m>, local minima: <m>(0,0)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x^2}{x-2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{x(x-4)}{(x-2)^2}</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,0),(4,\infty)</m>, decreasing: <m>(0,2),(2,4)</m>, local maxima: <m>(0,0)</m>, local minima: <m>(4,8)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=e^{2x}+e^{-x}</m></p></statement>
+        <hint><p><m>f'(x)=2e^{2x}-e^{-x}=e^{-x}(2e^{3x}-1)</m></p></hint>
+        <answer><p>increasing: <m>(-\frac{\ln 2}{3},\infty)</m>, decreasing: <m>(-\infty,-\frac{\ln 2}{3})</m>, local maxima: none, local minima: <m>\brac{-\frac{\ln 2}{3}, \sqrt[3]{2}+\frac{1}{\sqrt[3]{4}}}</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^2\ln x^2+1</m></p></statement>
+        <hint><p><m>f'(x)=2x(\ln x^2+1)</m></p></hint>
+        <answer><p>increasing: <m>(-\frac{1}{\sqrt{e}},0),(\frac{1}{\sqrt{e}},\infty)</m>, decreasing: <m>(-\infty,-\frac{1}{\sqrt{e}}),(0,\frac{1}{\sqrt{e}})</m>, local maxima: none, local minima: <m>(-\frac{1}{\sqrt{e}},1-\frac{1}{e}),(\frac{1}{\sqrt{e}},1-\frac{1}{e})</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x^3}{3x^2+1}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{3x^2(x^2+1)}{(3x^2+1)^2}</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,\infty)</m>, decreasing: none, local maxima: none, local minima: none</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=e^{\sqrt{x}}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{e^{\sqrt{x}}}{2\sqrt{x}}</m></p></hint>
+        <answer><p>increasing: <m>(0,\infty)</m>, decreasing: none, local maxima: none, local minima: none</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^2\ln x</m></p></statement>
+        <hint><p><m>f'(x)=2x\ln x+x=x(2\ln x+1)</m></p></hint>
+        <answer><p>increasing: <m>(\frac{1}{\sqrt{e}},\infty)</m>, decreasing: <m>(0,\frac{1}{\sqrt{e}})</m>, local maxima: none, local minima: <m>\brac{\frac{1}{\sqrt{e}}, -\frac{1}{2e}}</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x(\ln x)^2</m></p></statement>
+        <hint><p><m>f'(x)=(\ln x)^2+2\ln x=\ln x(\ln x+2)</m></p></hint>
+        <answer><p>increasing: <m>(0,\frac{1}{e^2}),(1,\infty)</m>, decreasing: <m>(\frac{1}{e^2},1)</m>, local maxima: <m>\brac{\frac{1}{e^2}, \frac{4}{e^2}}</m>, local minima: <m>(1,0)</m></p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-fractional-power-functions">
+      <title>Fractional Power Functions (Cusps and Vertical Tangents)</title>
+      <introduction>
+        <p>For each function, find any local maxima or local minima, and intervals of increase and decrease.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=x^{2/3}(x^2-4)</m></p></statement>
+        <hint><p><m>f'(x)=\frac{8(x^2-1)}{3x^{1/3}}</m></p></hint>
+        <answer><p>increasing: <m>(-1,0),(1,\infty)</m>, decreasing: <m>(-\infty,-1),(0,1)</m>, local maxima: <m>(0,0)</m>, local minima: <m>(-1,-3),(1,-3)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^{1/3}(x-4)</m></p></statement>
+        <hint><p><m>f'(x)=\frac{4(x-1)}{3x^{2/3}}</m></p></hint>
+        <answer><p>increasing: <m>(1,\infty)</m>, decreasing: <m>(-\infty,0),(0,1)</m>, local maxima: none, local minima: <m>(1,-3)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=(x-5)^{\frac{1}{3}}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{1}{3(x-5)^{2/3}}</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,5),(5,\infty)</m>, decreasing: none, local maxima: none, local minima: none</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=(x^2-1)^{\frac{1}{3}}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{2x}{3(x^2-1)^{2/3}}</m></p></hint>
+        <answer><p>increasing: <m>(0,1),(1,\infty)</m>, decreasing: <m>(-\infty,-1),(-1,0)</m>, local maxima: none, local minima: <m>(0,-1)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^{\frac{1}{3}}(x+8)</m></p></statement>
+        <hint><p><m>f'(x)=\frac{4(x+2)}{3x^{2/3}}</m></p></hint>
+        <answer><p>increasing: <m>(-2,0),(0,\infty)</m>, decreasing: <m>(-\infty,-2)</m>, local maxima: none, local minima: <m>\brac{-2,-6\sqrt[3]{2}}</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^{\frac{2}{3}}(x+5)</m></p></statement>
+        <hint><p><m>f'(x)=\frac{5(x+2)}{3x^{1/3}}</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,-2),(0,\infty)</m>, decreasing: <m>(-2,0)</m>, local maxima: <m>\brac{-2,3\sqrt[3]{4}}</m>, local minima: <m>(0,0)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^{\frac{1}{3}}(x^2-4)</m></p></statement>
+        <hint><p><m>f'(x)=\frac{7x^2-4}{3x^{2/3}}</m></p></hint>
+        <answer><p>increasing: <m>(-\infty,-\frac{2\sqrt{7}}{7}),(\frac{2\sqrt{7}}{7},\infty)</m>, decreasing: <m>(-\frac{2\sqrt{7}}{7},0),(0,\frac{2\sqrt{7}}{7})</m>, local maxima: <m>\approx \brac{-\frac{2}{\sqrt{7}}, 3.12}</m>, local minima: <m>\approx \brac{\frac{2}{\sqrt{7}}, -3.12}</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^{\frac{2}{3}}(x^2-4)</m></p></statement>
+        <hint><p><m>f'(x)=\frac{8(x^2-1)}{3x^{1/3}}=\frac{8(x-1)(x+1)}{3x^{1/3}}</m></p></hint>
+        <answer><p>increasing: <m>(-1,0),(1,\infty)</m>, decreasing: <m>(-\infty,-1),(0,1)</m>, local maxima: <m>(0,0)</m>, local minima: <m>(-1,-3),(1,-3)</m></p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-radical-functions">
+      <title>Radical Functions (Square Roots)</title>
+      <introduction>
+        <p>For each function, find any local maxima or local minima, and intervals of increase and decrease.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=x\sqrt{8-x^2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{-2x^2+8}{\sqrt{8-x^2}}</m></p></hint>
+        <answer><p>domain: <m>[-2\sqrt{2},2\sqrt{2}]</m>, increasing: <m>(-2,2)</m>, decreasing: <m>(-2\sqrt{2},-2),(2,2\sqrt{2})</m>, local maxima: <m>(2,4)</m>, local minima: <m>(-2,-4)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^2\sqrt{9-x^2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{-3x^3+18x}{\sqrt{9-x^2}}</m></p></hint>
+        <answer><p>domain: <m>[-3,3]</m>, increasing: <m>(-3,-\sqrt{6}),(0,\sqrt{6})</m>, decreasing: <m>(-\sqrt{6},0),(\sqrt{6},3)</m>, local maxima: <m>(-\sqrt{6},6\sqrt{3}),(\sqrt{6},6\sqrt{3})</m>, local minima: <m>(0,0)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\sqrt{x^2-2x+2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{x-1}{\sqrt{x^2-2x+2}}</m></p></hint>
+        <answer><p>domain: <m>(-\infty,\infty)</m>, increasing: <m>(1,\infty)</m>, decreasing: <m>(-\infty,1)</m>, local maxima: none, local minima: <m>(1,1)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x-6\sqrt{x-1}</m></p></statement>
+        <hint><p><m>f'(x)=1-\frac{3}{\sqrt{x-1}}=\frac{\sqrt{x-1}-3}{\sqrt{x-1}}</m></p></hint>
+        <answer><p>domain: <m>[1,\infty)</m>, increasing: <m>(10,\infty)</m>, decreasing: <m>(1,10)</m>, local maxima: none, local minima: <m>(10,-8)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^2\sqrt{5-x}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{5x(4-x)}{2\sqrt{5-x}}</m></p></hint>
+        <answer><p>domain: <m>(-\infty,5]</m>, increasing: <m>(0,4)</m>, decreasing: <m>(-\infty,0),(4,5)</m>, local maxima: <m>(4,16)</m>, local minima: <m>(0,0)</m></p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-trigonometric-functions">
+      <title>Trigonometric Functions</title>
+      <introduction>
+        <p>For each function, find any local maxima or local minima, and intervals of increase and decrease.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=2\cos x+\sin^2 x</m> on <m>[0,2\pi]</m></p></statement>
+        <hint><p><m>f'(x)=2\sin x(\cos x-1)</m></p></hint>
+        <answer><p>increasing: <m>(\pi,2\pi)</m>, decreasing: <m>(0,\pi)</m>, local maxima: <m>(0,2),(2\pi,2)</m>, local minima: <m>(\pi,-2)</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\sin x+\cos x</m> on <m>[0,2\pi]</m></p></statement>
+        <hint><p><m>f'(x)=\cos x-\sin x</m></p></hint>
+        <answer><p>increasing: <m>(0,\frac{\pi}{4}),(\frac{5\pi}{4},2\pi)</m>, decreasing: <m>(\frac{\pi}{4},\frac{5\pi}{4})</m>, local maxima: <m>(\frac{\pi}{4},\sqrt{2})</m>, local minima: <m>(\frac{5\pi}{4},-\sqrt{2})</m></p></answer>
+      </task>
+    </project>
+  </subsection>
+  
+</section>
