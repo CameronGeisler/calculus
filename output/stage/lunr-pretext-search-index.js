@@ -79,7 +79,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Increasing and Decreasing Functions",
-  "body": " Increasing and Decreasing Functions   Derivatives provide a lot of information about the shape of a function's graph. First, we will analyze whether functions are increasing or decreasing.    Increasing and Decreasing Functions  Recall what it means for a function to be increasing or decreasing.           Increasing and decreasing functions    A function is increasing if when increases, increases.    A function is decreasing if when increases, decreases.     In other words,    Increasing and decreasing come from the perspective of reading from left to right (or, with increasing ).     Increasing\/Decreasing Test (Positive Derivative Implies Increasing)  Increasing and decreasing directly relate to derivatives. Recall that the value of the derivative represents the slope of the tangent line of . This means that,    If , then the tangent line has positive slope, and its graph is sloping up to the right, and so is increasing.    Similarly, if , then the tangent line has negative slope, and so is decreasing.             Positive derivative implies increasing    If for all , then is increasing on .    If for all , then is decreasing on .    If for all , then is constant on .     In short,   Graphically, these statements are intuitively true. However, a proof requires the mean value theorem, which we will cover later on.   "
+  "body": " Increasing and Decreasing Functions   Derivatives provide a lot of information about the shape of a function's graph. First, we will analyze whether functions are increasing or decreasing.    Increasing and Decreasing Functions  Recall what it means for a function to be increasing or decreasing.           Increasing and decreasing functions    A function is increasing if when increases, increases.    A function is decreasing if when increases, decreases.     In other words,    Increasing and decreasing come from the perspective of reading from left to right (or, with increasing ).     Increasing\/Decreasing Test (Positive Derivative Implies Increasing)  Increasing and decreasing directly relate to derivatives. Recall that the value of the derivative represents the slope of the tangent line of . This means that,    If , then the tangent line has positive slope, and its graph is sloping up to the right, and so is increasing.    Similarly, if , then the tangent line has negative slope, and so is decreasing.             Positive derivative implies increasing    If for all , then is increasing on .    If for all , then is decreasing on .    If for all , then is constant on .     In short,   Graphically, these statements are intuitively true. However, a proof requires the mean value theorem, which we will cover later on.    Finding Intervals of Increase and Decrease   Basic Examples     increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing: none      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:     More Polynomial Examples     increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:     Trigonometry Examples   on   increasing: , decreasing:    on   increasing: , decreasing:    on   increasing: , decreasing:    on   increasing: , decreasing:     More Examples     increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:    on   increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:     Advanced Examples     increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:     "
 },
 {
   "id": "subsec-increasing-decreasing-functions-4",
@@ -107,6 +107,105 @@ var ptx_lunr_docs = [
   "number": "2.1.3",
   "title": "Positive derivative implies increasing.",
   "body": " Positive derivative implies increasing    If for all , then is increasing on .    If for all , then is decreasing on .    If for all , then is constant on .    "
+},
+{
+  "id": "subsec-finding-intervals-increase-decrease-2",
+  "level": "2",
+  "url": "sec-increasing-and-decreasing-functions.html#subsec-finding-intervals-increase-decrease-2",
+  "type": "Exercise Group",
+  "number": "2.1.1",
+  "title": "Basic Examples.",
+  "body": " Basic Examples     increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing: none      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:   "
+},
+{
+  "id": "subsec-finding-intervals-increase-decrease-3",
+  "level": "2",
+  "url": "sec-increasing-and-decreasing-functions.html#subsec-finding-intervals-increase-decrease-3",
+  "type": "Exercise Group",
+  "number": "2.1.2",
+  "title": "More Polynomial Examples.",
+  "body": " More Polynomial Examples     increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:   "
+},
+{
+  "id": "subsec-finding-intervals-increase-decrease-4",
+  "level": "2",
+  "url": "sec-increasing-and-decreasing-functions.html#subsec-finding-intervals-increase-decrease-4",
+  "type": "Exercise Group",
+  "number": "2.1.3",
+  "title": "Trigonometry Examples.",
+  "body": " Trigonometry Examples   on   increasing: , decreasing:    on   increasing: , decreasing:    on   increasing: , decreasing:    on   increasing: , decreasing:   "
+},
+{
+  "id": "subsec-finding-intervals-increase-decrease-5",
+  "level": "2",
+  "url": "sec-increasing-and-decreasing-functions.html#subsec-finding-intervals-increase-decrease-5",
+  "type": "Exercise Group",
+  "number": "2.1.4",
+  "title": "More Examples.",
+  "body": " More Examples     increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:    on   increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:   "
+},
+{
+  "id": "subsec-finding-intervals-increase-decrease-6",
+  "level": "2",
+  "url": "sec-increasing-and-decreasing-functions.html#subsec-finding-intervals-increase-decrease-6",
+  "type": "Exercise Group",
+  "number": "2.1.5",
+  "title": "Advanced Examples.",
+  "body": " Advanced Examples     increasing: , decreasing:      increasing: , decreasing:      increasing: , decreasing:   "
+},
+{
+  "id": "sec-local-extrema-first-derivative-test",
+  "level": "1",
+  "url": "sec-local-extrema-first-derivative-test.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Local Extrema and the First Derivative Test",
+  "body": " Local Extrema and the First Derivative Test    Finding Local Maxima\/Minima Examples   Polynomial Functions   For each function, find any local maxima or local minima, and intervals of increase and decrease.      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima: none      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: none, decreasing: , local maxima: none, local minima: none      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:     Rational and Transcendental Functions   For each function, find any local maxima or local minima, and intervals of increase and decrease.      increasing: , decreasing: , local maxima: , local minima: none    ,   increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: none, local maxima: none, local minima: none      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: none, local maxima: none, local minima: none      increasing: , decreasing: none, local maxima: none, local minima: none      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: , local minima:     Fractional Power Functions (Cusps and Vertical Tangents)   For each function, find any local maxima or local minima, and intervals of increase and decrease.      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: none, local maxima: none, local minima: none      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:     Radical Functions (Square Roots)   For each function, find any local maxima or local minima, and intervals of increase and decrease.      domain: , increasing: , decreasing: , local maxima: , local minima:      domain: , increasing: , decreasing: , local maxima: , local minima:      domain: , increasing: , decreasing: , local maxima: none, local minima:      domain: , increasing: , decreasing: , local maxima: none, local minima:      domain: , increasing: , decreasing: , local maxima: , local minima:     Trigonometric Functions   For each function, find any local maxima or local minima, and intervals of increase and decrease.    on   increasing: , decreasing: , local maxima: , local minima:    on   increasing: , decreasing: , local maxima: , local minima:     "
+},
+{
+  "id": "project-polynomial-functions",
+  "level": "2",
+  "url": "sec-local-extrema-first-derivative-test.html#project-polynomial-functions",
+  "type": "Exercise Group",
+  "number": "2.2.1",
+  "title": "Polynomial Functions.",
+  "body": " Polynomial Functions   For each function, find any local maxima or local minima, and intervals of increase and decrease.      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima: none      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: none, decreasing: , local maxima: none, local minima: none      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:   "
+},
+{
+  "id": "project-rational-transcendental-functions",
+  "level": "2",
+  "url": "sec-local-extrema-first-derivative-test.html#project-rational-transcendental-functions",
+  "type": "Exercise Group",
+  "number": "2.2.2",
+  "title": "Rational and Transcendental Functions.",
+  "body": " Rational and Transcendental Functions   For each function, find any local maxima or local minima, and intervals of increase and decrease.      increasing: , decreasing: , local maxima: , local minima: none    ,   increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: none, local maxima: none, local minima: none      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: none, local maxima: none, local minima: none      increasing: , decreasing: none, local maxima: none, local minima: none      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: , local minima:   "
+},
+{
+  "id": "project-fractional-power-functions",
+  "level": "2",
+  "url": "sec-local-extrema-first-derivative-test.html#project-fractional-power-functions",
+  "type": "Exercise Group",
+  "number": "2.2.3",
+  "title": "Fractional Power Functions (Cusps and Vertical Tangents).",
+  "body": " Fractional Power Functions (Cusps and Vertical Tangents)   For each function, find any local maxima or local minima, and intervals of increase and decrease.      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: none, local maxima: none, local minima: none      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: none, local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:      increasing: , decreasing: , local maxima: , local minima:   "
+},
+{
+  "id": "project-radical-functions",
+  "level": "2",
+  "url": "sec-local-extrema-first-derivative-test.html#project-radical-functions",
+  "type": "Exercise Group",
+  "number": "2.2.4",
+  "title": "Radical Functions (Square Roots).",
+  "body": " Radical Functions (Square Roots)   For each function, find any local maxima or local minima, and intervals of increase and decrease.      domain: , increasing: , decreasing: , local maxima: , local minima:      domain: , increasing: , decreasing: , local maxima: , local minima:      domain: , increasing: , decreasing: , local maxima: none, local minima:      domain: , increasing: , decreasing: , local maxima: none, local minima:      domain: , increasing: , decreasing: , local maxima: , local minima:   "
+},
+{
+  "id": "project-trigonometric-functions",
+  "level": "2",
+  "url": "sec-local-extrema-first-derivative-test.html#project-trigonometric-functions",
+  "type": "Exercise Group",
+  "number": "2.2.5",
+  "title": "Trigonometric Functions.",
+  "body": " Trigonometric Functions   For each function, find any local maxima or local minima, and intervals of increase and decrease.    on   increasing: , decreasing: , local maxima: , local minima:    on   increasing: , decreasing: , local maxima: , local minima:   "
 },
 {
   "id": "sec-lhopitals-rule",

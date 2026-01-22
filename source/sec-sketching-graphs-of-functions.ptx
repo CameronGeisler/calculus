@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-sketching-graphs-of-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Sketching Graphs of Functions</title>
+  
+  <!-- <introduction>
+    <p>
+      This is the introduction to the section.
+    </p>
+  </introduction> -->
+  
+  <subsection xml:id="subsection-examples">
+    <title>Examples</title>
+    
+    <project xml:id="project-polynomials">
+      <title>Polynomials</title>
+      <introduction>
+        <p>Sketch the graph of each function.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=x^2-4x+3</m></p></statement>
+        <hint><p><m>f'(x)=2x-4</m>, <m>f''(x)=2</m>.</p></hint>
+        <answer><p>increasing: <m>(2,\infty)</m>, decreasing: <m>(-\infty,2)</m>, local maxima: none, local minima: <m>(2,-1)</m>, concave up: <m>(-\infty,\infty)</m>, concave down: none, inflection point(s): none.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^3-3x+3</m></p></statement>
+        <hint><p><m>f'(x)=3(x-1)(x+1)</m>, <m>f''(x)=6x</m>.</p></hint>
+        <answer><p>increasing: <m>(-\infty,-1),(1,\infty)</m>, decreasing: <m>(-1,1)</m>, local maxima: <m>(-1,5)</m>, local minima: <m>(1,1)</m>, concave up: <m>(0,\infty)</m>, concave down: <m>(-\infty,0)</m>, inflection point(s): <m>(0,3)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=2x^3-9x^2+12x-3</m></p></statement>
+        <hint><p><m>f'(x)=6(x-1)(x-2)</m>, <m>f''(x)=12x-18</m>.</p></hint>
+        <answer><p>increasing: <m>(-\infty,1),(2,\infty)</m>, decreasing: <m>(1,2)</m>, local maxima: <m>(1,2)</m>, local minima: <m>(2,1)</m>, concave down: <m>(-\infty,\frac{3}{2})</m>, concave up: <m>(\frac{3}{2},\infty)</m>, inflection point(s): <m>\brac{\frac{3}{2},\frac{3}{2}}</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^4-2x^2</m></p></statement>
+        <hint><p><m>f'(x)=4x(x-1)(x+1)</m>, <m>f''(x)=4(3x^2-1)</m>.</p></hint>
+        <answer><p>increasing: <m>(-1,0),(1,\infty)</m>, decreasing: <m>(-\infty,-1),(0,1)</m>, local maxima: <m>(0,0)</m>, local minima: <m>(-1,-1),(1,-1)</m>, concave up: <m>(-\infty,-\frac{\sqrt3}{3}),(\frac{\sqrt3}{3},\infty)</m>, concave down <m>(-\frac{\sqrt3}{3},\frac{\sqrt3}{3})</m>, inflection point(s): <m>(\pm\frac{\sqrt3}{3},-\frac{5}{9})</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x(x-4)^3</m></p></statement>
+        <hint><p><m>f'(x)=4(x-4)^2(x-1)</m>, <m>f''(x)=12(x-4)(x-2)</m>.</p></hint>
+        <answer><p><m>x</m>-intercepts <m>x=0,4</m>, <m>y</m>-intercept: <m>y=0</m>, increasing: <m>(1,\infty)</m>, decreasing: <m>(-\infty,1)</m>, local minima: <m>(1,-27)</m>, local maxima: none, concave up: <m>(-\infty,2),(4,\infty)</m>, concave down: <m>(2,4)</m>, inflection point(s): <m>(2,-16),(4,0)</m>.</p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-rational-functions">
+      <title>Rational Functions (Vertical Asymptotes)</title>
+      <introduction>
+        <p>Sketch the graph of each function.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=\frac{x}{9-x^2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{x^2+9}{(9-x^2)^2}</m>, <m>f''(x)=-\frac{2x(x^2+27)}{(9-x^2)^3}</m>.</p></hint>
+        <answer><p>domain: <m>(-\infty,-3),(-3,3),(3,\infty)</m>, <m>x</m>-intercepts <m>x=0</m>, <m>y</m>-intercept: <m>y=0</m>, increasing: <m>(-\infty,-3),(-3,3),(3,\infty)</m>, decreasing: none, local minima: none, local maxima: none, concave up: <m>(-\infty,-3),(0,3)</m>, concave down: <m>(-3,0),(3,\infty)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x}{x^2-4x+4}</m></p></statement>
+        <hint><p><m>f(x)=\frac{x}{(x-2)^2}</m>, <m>f'(x)=\frac{-(x+2)}{(x-2)^3}</m>, <m>f''(x)=\frac{2(x+4)}{(x-2)^4}</m>.</p></hint>
+        <answer><p>domain: <m>(-\infty,2)\cup(2,\infty)</m>, <m>x</m>-intercept: <m>x=0</m>, <m>y</m>-intercept: <m>y=0</m>, vertical asymptote <m>x=2</m>, horizontal asymptote <m>y=0</m>, increasing <m>(-2,2)</m>, decreasing <m>(-\infty,-2)\cup(2,\infty)</m>, local minima: <m>(-2,-\frac{1}{8})</m>, local maxima: none, concave down: <m>(-\infty,-4)</m>, concave up: <m>(-4,2)\cup(2,\infty)</m>, inflection point: <m>(-4,-\frac{1}{9})</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x}{x^2+1}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{1-x^2}{(x^2+1)^2}</m>, <m>f''(x)=\frac{2x(x^2-3)}{(x^2+1)^3}</m>.</p></hint>
+        <answer><p>domain: <m>(-\infty,\infty)</m>, <m>x</m>-intercept <m>x=0</m>, <m>y</m>-intercept: <m>y=0</m>, increasing: <m>(-1,1)</m>, decreasing: <m>(-\infty,-1),(1,\infty)</m>, local max: <m>(1,\frac{1}{2})</m>, local min: <m>(-1,-\frac{1}{2})</m>, concave up: <m>(-\sqrt{3},0),(\sqrt{3},\infty)</m>, concave down: <m>(-\infty,-\sqrt{3}),(0,\sqrt{3})</m>, inflection points: <m>\brac{-\sqrt{3},-\frac{\sqrt{3}}{4}},(0,0),\brac{\sqrt{3},\frac{\sqrt{3}}{4}}</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x^2-49}{x^2+5x-14}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{5}{(x-2)^2}</m>, <m>f''(x)=-\frac{10}{(x-2)^3}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,-7),(-7,2),(2,\infty)</m>, <m>x</m>-intercept <m>x=7</m>, <m>y</m>-intercept: <m>y=\frac{7}{2}</m>, vertical asymptote: <m>x=2</m>, hole: <m>(-7,\frac{14}{9})</m>, horizontal asymptote: <m>y=1</m>, increasing: <m>(-\infty,-7),(-7,2),(2,\infty)</m>, decreasing: none, local minima: none, local maxima: none, concave up: <m>(-\infty,-7),(-7,2)</m>, concave down: <m>(2,\infty)</m>.</p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-graphing-trigonometric-functions">
+      <title>Trigonometric Functions</title>
+      <introduction>
+        <p>Sketch the graph of each function.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=\sin x+\cos x</m>, <m>0\leq x\leq 2\pi</m></p></statement>
+        <hint><p><m>f'(x)=\cos x-\sin x</m>, <m>f''(x)=-(\sin x+\cos x)</m>.</p></hint>
+        <answer><p><m>x</m>-intercepts <m>x=\frac{3\pi}{4},\frac{7\pi}{4}</m>, <m>y</m>-intercept: <m>y=1</m>, increasing: <m>(0,\frac{\pi}{4}),(\frac{5\pi}{4},2\pi)</m>, decreasing: <m>(\frac{\pi}{4},\frac{5\pi}{4})</m>, local max: <m>\brac{\frac{\pi}{4},\sqrt{2}}</m>, local min: <m>\brac{\frac{5\pi}{4},-\sqrt{2}}</m>, concave down: <m>(0,\frac{3\pi}{4}),(\frac{7\pi}{4},2\pi)</m>, concave up: <m>(\frac{3\pi}{4},\frac{7\pi}{4})</m>, inflection points: <m>(\frac{3\pi}{4},0),(\frac{7\pi}{4},0)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=2\cos x+\cos^2 x</m>, <m>0\leq x\leq 2\pi</m></p></statement>
+        <hint><p><m>f'(x)=-2\sin x(1+\cos x)</m>, <m>f''(x)=-2(\cos x+\cos 2x)</m>.</p></hint>
+        <answer><p><m>x</m>-intercepts <m>x=\frac{\pi}{2},\frac{3\pi}{2}</m>, <m>y</m>-intercept 3, decreasing: <m>(0,\pi)</m>, increasing: <m>(\pi,2\pi)</m>, local min: <m>(\pi,-1)</m>, local maxima: none, concave down: <m>(0,\frac{\pi}{3}),(\frac{5\pi}{3},2\pi)</m>, concave up: <m>(\frac{\pi}{3},\frac{5\pi}{3})</m>, inflection points: <m>\brac{\frac{\pi}{3},\frac{5}{4}},\brac{\frac{5\pi}{3},\frac{5}{4}}</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x+\sin x</m>, <m>0\leq x\leq 2\pi</m></p></statement>
+        <hint><p><m>f'(x)=1+\cos x</m>, <m>f''(x)=-\sin x</m>.</p></hint>
+        <answer><p>domain <m>[0,2\pi]</m>, <m>x</m>-intercepts <m>x=0</m>, <m>y</m>-intercept 0, increasing <m>(0,\pi),(\pi,2\pi)</m>, decreasing none, local minima none, local maxima none, concave down <m>(0,\pi)</m>, concave up <m>(\pi,2\pi)</m>, inflection point <m>(\pi,\pi)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\sin x\cos x</m>, <m>0\leq x\leq \pi</m></p></statement>
+        <hint><p><m>f'(x)=\cos^2{x}-\sin^2{x}</m>, <m>f''(x)=-4\sin{x}\cos{x}</m>.</p></hint>
+        <answer><p>domain <m>[0,\pi]</m>, <m>x</m>-intercepts <m>x=0,\frac{\pi}{2},\pi</m>, <m>y</m>-intercept 0, increasing <m>(0,\frac{\pi}{4}),(\frac{3\pi}{4},\pi)</m>, decreasing <m>(\frac{\pi}{4},\frac{3\pi}{4})</m>, local maxima <m>(\frac{\pi}{4},\frac{1}{2})</m>, local minima <m>(\frac{3\pi}{4},-\frac{1}{2})</m>, concave down <m>(0,\frac{\pi}{2})</m>, concave up <m>(\frac{\pi}{2},\pi)</m>, inflection point <m>(\frac{\pi}{2},0)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x-\sin x</m>, <m>0\leq x\leq 2\pi</m></p></statement>
+        <hint><p><m>f'(x)=1-\cos x</m>, <m>f''(x)=\sin x</m>.</p></hint>
+        <answer><p>increasing <m>(0,2\pi)</m>, decreasing none, local minima none, local maxima none, concave up <m>(0,\pi)</m>, concave down <m>(\pi,2\pi)</m>, inflection point <m>(\pi,\pi)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\sqrt3 x-2\cos x</m>, <m>0\leq x\leq 2\pi</m></p></statement>
+        <hint><p><m>f'(x)=\sqrt3+2\sin x</m>, <m>f''(x)=2\cos x</m>.</p></hint>
+        <answer><p>domain <m>[0,2\pi]</m>, <m>y</m>-intercept <m>-2</m>, increasing <m>(0,\frac{4\pi}{3}),(\frac{5\pi}{3},2\pi)</m>, decreasing <m>(\frac{4\pi}{3},\frac{5\pi}{3})</m>, local maxima <m>(\frac{4\pi}{3},\frac{4\pi\sqrt3}{3}+1)</m>, local minima <m>(\frac{5\pi}{3},\frac{5\pi\sqrt3}{3}-1)</m>, concave up <m>(0,\frac{\pi}{2}),(\frac{3\pi}{2},2\pi)</m>, concave down <m>(\frac{\pi}{2},\frac{3\pi}{2})</m>, inflection points <m>(\frac{\pi}{2},\frac{\pi\sqrt3}{2})</m> and <m>(\frac{3\pi}{2},\frac{3\pi\sqrt3}{2})</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\cos^2 x-2\sin x</m>, <m>0\leq x\leq 2\pi</m></p></statement>
+        <hint><p><m>f'(x)=-2\cos x(\sin x+1)</m>, <m>f''(x)=2(\sin x-\cos 2x)</m>.</p></hint>
+        <answer><p><m>y</m>-intercept 1, increasing: <m>(\frac{\pi}{2},\frac{3\pi}{2})</m>, decreasing: <m>(0,\frac{\pi}{2}),(\frac{3\pi}{2},2\pi)</m>, local min: <m>\brac{\frac{\pi}{2},-2}</m>, local max: <m>(\frac{3\pi}{2},2)</m>, concave down: <m>(0,\frac{\pi}{6}),(\frac{5\pi}{6},2\pi)</m>, concave up: <m>(\frac{\pi}{6},\frac{5\pi}{6})</m>, inflection points: <m>\brac{\frac{\pi}{6},\frac{5}{4}},\brac{\frac{5\pi}{6},-\frac{3}{4}}</m>.</p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-vertical-tangents">
+      <title>Vertical Tangents and Cusps</title>
+      <introduction>
+        <p>Sketch the graph of each function.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=2x-3x^{2/3}</m></p></statement>
+        <hint><p><m>f'(x) = 2-\frac{2}{\sqrt[3]{x}}</m>, <m>f''(x) = \frac{2}{3x^{4/3}}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,\infty)</m>, <m>x</m>-intercepts <m>x = 0,\frac{27}{8}</m>, <m>y</m>-intercept 0, increasing: <m>(-\infty,0),(1,\infty)</m>, decreasing: <m>(0,1)</m>, local minima: <m>(1,-1)</m>, local maxima: <m>(0,0)</m>, concave up: <m>(-\infty,0),(0,\infty)</m>, concave down: none.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=(x-4)^{2/3}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{2}{3(x-4)^{1/3}}</m>, <m>f''(x)=\frac{-2}{9(x-4)^{4/3}}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,\infty)</m>, <m>x</m>-intercept <m>x=4</m>, <m>y</m>-intercept <m>4^{2/3}</m>, decreasing <m>(-\infty,4)</m>, increasing <m>(4,\infty)</m>, local minimum <m>(4,0)</m>, concave down <m>(-\infty,4),(4,\infty)</m>, concave up none, inflection points none.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x) = 5x^{2/5} - 2x</m></p></statement>
+        <hint><p><m>f'(x) = \frac{2}{x^{3/5}}-2</m>, <m>f''(x) = -\frac{6}{5x^{8/5}}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,\infty)</m>, <m>x</m>-intercepts <m>x = 0,\left(\frac{5}{2}\right)^{5/3}</m>, <m>y</m>-intercept 0, increasing: <m>(0,1)</m>, decreasing: <m>(-\infty,0),(1,\infty)</m>, local minima: <m>(0,0)</m>, local maxima: <m>(1,3)</m>, concave up: none, concave down: <m>(-\infty,0),(0,\infty)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=x^{1/3}(x+3)^{2/3}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{x+1}{x^{2/3}(x+3)^{1/3}}</m>, <m>f''(x)=\frac{-2}{x^{5/3}(x+3)^{4/3}}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,\infty)</m>, <m>x</m>-intercepts <m>x=-3,0</m>, <m>y</m>-intercept 0, increasing <m>(-\infty,-3),(-1,0),(0,\infty)</m>, decreasing <m>(-3,-1)</m>, local maximum <m>(-3,0)</m>, local minimum <m>(-1,-2^{2/3})</m>, concave up <m>(-\infty,0)</m>, concave down <m>(0,\infty)</m>, inflection point <m>(0,0)</m>.</p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-slant-asymptotes">
+      <title>Slant Asymptotes</title>
+      <introduction>
+        <p>Sketch the graph of each function.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=\frac{x^2}{x+1}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{x(x+2)}{(x+1)^2}</m>, <m>f''(x)=\frac{2}{(x+1)^3}</m>.</p></hint>
+        <answer><p>domain: <m>(-\infty,-1)\cup(-1,\infty)</m>, <m>x</m>-intercept: <m>x=0</m>, <m>y</m>-intercept: <m>y=0</m>, vertical asymptote: <m>x=-1</m>, slant asymptote: <m>y=x-1</m>, increasing <m>(-\infty,-2),(0,\infty)</m>, decreasing <m>(-2,-1),(-1,0)</m>, local maxima <m>(-2,-4)</m>, local minima <m>(0,0)</m>, concave down <m>(-\infty,-1)</m>, concave up <m>(-1,\infty)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x^2-x+1}{x-1}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{x(x-2)}{(x-1)^2}</m>, <m>f''(x)=\frac{2}{(x-1)^3}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,1)\cup(1,\infty)</m>, <m>x</m>-intercepts none, <m>y</m>-intercept <m>-1</m>, vertical asymptote <m>x=1</m>, slant asymptote <m>y=x</m>, increasing <m>(-\infty,0)\cup(2,\infty)</m>, decreasing <m>(0,1)\cup(1,2)</m>, local maxima <m>(0,-1)</m>, local minima <m>(2,3)</m>, concave down <m>(-\infty,1)</m>, concave up <m>(1,\infty)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x^2-3x+2}{x-3}</m></p></statement>
+        <hint><p><m>f(x)=x+\frac{2}{x-3}</m>, <m>f'(x)=1-\frac{2}{(x-3)^2}</m>, <m>f''(x)=\frac{4}{(x-3)^3}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,3)\cup(3,\infty)</m>, <m>x</m>-intercepts <m>x=1,2</m>, <m>y</m>-intercept <m>-\frac{2}{3}</m>, vertical asymptote <m>x=3</m>, slant asymptote <m>y=x</m>, increasing <m>(-\infty,3-\sqrt{2})\cup(3+\sqrt{2},\infty)</m>, decreasing <m>(3-\sqrt{2},3)\cup(3,3+\sqrt{2})</m>, local maximum <m>(3-\sqrt{2},3-2\sqrt{2})</m>, local minimum <m>(3+\sqrt{2},3+2\sqrt{2})</m>, concave down <m>(-\infty,3)</m>, concave up <m>(3,\infty)</m>, inflection points none.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x^3-3x^2+3x-1}{x^2+x-2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{(x-1)(x+5)}{(x+2)^2}</m>, <m>f''(x)=\frac{18}{(x+2)^3}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,-2)\cup(-2,1)\cup(1,\infty)</m>, <m>x</m>-intercepts none, <m>y</m>-intercept <m>\frac{1}{2}</m>, vertical asymptote <m>x=-2</m>, hole <m>(1,0)</m>, slant asymptote <m>y=x-4</m>, increasing <m>(-\infty,-5)\cup(1,\infty)</m>, decreasing <m>(-5,-2)\cup(-2,1)</m>, local maxima <m>(-5,-12)</m>, local minima none, concave down <m>(-\infty,-2)</m>, concave up <m>(-2,1)\cup(1,\infty)</m>.</p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-polynomial-rational-mixed">
+      <title>Polynomial and Rational Functions</title>
+      <introduction>
+        <p>Sketch the graph of each function.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=x(6-2x)^2</m></p></statement>
+        <hint><p><m>f'(x)=12(x-3)(x-1)</m>, <m>f''(x)=24x-48</m>.</p></hint>
+        <answer><p>increasing: <m>(-\infty,1),(3,\infty)</m>, decreasing: <m>(1,3)</m>, local maxima: <m>(1,16)</m>, local minima: <m>(3,0)</m>, concave up: <m>(2,\infty)</m>, concave down: <m>(-\infty,2)</m>, inflection point(s): <m>(2,8)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{4x}{x^2+4}</m></p></statement>
+        <hint><p><m>f'(x)=-\frac{4(x-2)(x+2)}{(x^2+4)^2}</m>, <m>f''(x)=\frac{8x(x^2-12)}{(x^2+4)^3}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,\infty)</m>, <m>x</m>-intercept <m>(0,0)</m>, <m>y</m>-intercept 0, horizontal asymptote <m>y=0</m>, increasing <m>(-2,2)</m>, decreasing <m>(-\infty,-2),(2,\infty)</m>, local minima <m>(-2,-1)</m>, local maxima <m>(2,1)</m>, concave up <m>(-2\sqrt3,0),(2\sqrt3,\infty)</m>, concave down <m>(-\infty,-2\sqrt3),(0,2\sqrt3)</m>, inflection points <m>(-2\sqrt3,-\frac{\sqrt3}{2})</m>, <m>(0,0)</m>, <m>(2\sqrt3,\frac{\sqrt3}{2})</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x}{x^2-1}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{-x^2-1}{(x^2-1)^2}</m>, <m>f''(x)=\frac{2x(x^2+3)}{(x-1)^3(x+1)^3}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,-1)\cup(-1,1)\cup(1,\infty)</m>, <m>x</m>-intercept: 0, <m>y</m>-intercept: 0, vertical asymptotes: <m>x=-1,1</m>, horizontal asymptote: <m>y=0</m>, increasing: none, decreasing: <m>(-\infty,-1),(-1,1),(1,\infty)</m>, local maxima: none, local minima: none, concave up <m>(-1,0),(1,\infty)</m>, concave down <m>(-\infty,-1),(0,1)</m>, inflection point <m>(0,0)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{x^4+1}{x^2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{2(x-1)(x+1)(x^2+1)}{x^3}</m>, <m>f''(x)=\frac{2(x^4+3)}{x^4}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,0)\cup(0,\infty)</m>, <m>x</m>-intercepts none, <m>y</m>-intercept none, vertical asymptote <m>x=0</m>, increasing <m>(-1,0),(1,\infty)</m>, decreasing <m>(-\infty,-1),(0,1)</m>, local minima <m>(-1,2)</m> and <m>(1,2)</m>, local maxima none, concave up <m>(-\infty,0),(0,\infty)</m>, concave down none.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{2x^2}{x^2-1}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{-4x}{(x^2-1)^2}</m>, <m>f''(x)=\frac{4(3x^2+1)}{(x^2-1)^3}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,-1)\cup(-1,1)\cup(1,\infty)</m>, <m>x</m>-intercepts: <m>x=0</m>, <m>y</m>-intercept: <m>0</m>, increasing: <m>(-\infty,-1),(-1,0)</m>, decreasing: <m>(0,1),(1,\infty)</m>, local minima: none, local maxima: <m>(0,0)</m>, concave up: <m>(-\infty,-1),(1,\infty)</m>, concave down: <m>(-1,1)</m>, inflection point(s): none.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x) = \frac{2x}{5+x^2}</m></p></statement>
+        <answer><p>increasing: <m>\brac{-\sqrt{5},\sqrt{5}}</m>, decreasing: <m>(-\infty,-\sqrt{5}),(\sqrt{5},\infty)</m>, local minima: <m>\brac{-\sqrt{5},-\frac{\sqrt{5}}{5}}</m>, local maxima: <m>\brac{\sqrt{5},\frac{\sqrt{5}}{5}}</m>, concave up: <m>\brac{-\sqrt{15},0},(\sqrt{15},\infty)</m>, concave down: <m>(-\infty,-\sqrt{15}),(0,\sqrt{15})</m>, inflection point(s): <m>\brac{-\sqrt{15},-\frac{\sqrt{15}}{10}},(0,0),\brac{\sqrt{15},\frac{\sqrt{15}}{10}}</m>.</p></answer>
+      </task>
+    </project>
+    
+    <project xml:id="project-transcendental-functions">
+      <title>Transcendental Functions</title>
+      <introduction>
+        <p>Sketch the graph of each function.</p>
+      </introduction>
+      <task>
+        <statement><p><m>f(x)=x\sqrt{4-x^2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{4-2x^2}{\sqrt{4-x^2}}, f''(x)=\frac{2x^3-12x}{(4-x^2)^{3/2}}</m>.</p></hint>
+        <answer><p>domain <m>[-2,2]</m>, <m>x</m>-intercepts <m>x=-2,0,2</m>, <m>y</m>-intercept 0, increasing on <m>(-\sqrt{2},\sqrt{2})</m>, decreasing: <m>(-2,-\sqrt{2}),(\sqrt{2},2)</m>, local minimum: <m>(-\sqrt{2},-2)</m>, local maximum: <m>(\sqrt{2},2)</m>, concave up: <m>(-2,0)</m>, concave down: <m>(0,2)</m>, inflection point: <m>(0,0)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=e^{2x}+e^{-x}</m></p></statement>
+        <hint><p><m>f'(x)=2e^{2x}-e^{-x}</m>, <m>f''(x)=4e^{2x}+e^{-x}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,\infty)</m>, <m>x</m>-intercepts none, <m>y</m>-intercept 2, decreasing: <m>(-\infty,-\frac{\ln 2}{3})</m>, increasing: <m>(-\frac{\ln 2}{3},\infty)</m>, local min: <m>\brac{-\frac{\ln 2}{3},\frac{3}{2^{2/3}}}</m>, local max: none, concave up: <m>(-\infty,\infty)</m>, concave down: none, inflection points: none.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\sqrt{x^2+x-2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{2x+1}{2\sqrt{x^2+x-2}}</m>, <m>f''(x)=-\frac{9}{4(x^2+x-2)^{3/2}}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,-2]\cup[1,\infty)</m>, <m>x</m>-intercepts <m>x=-2,1</m>, <m>y</m>-intercept none, increasing: <m>(1,\infty)</m>, decreasing: <m>(-\infty,-2)</m>, local minima: <m>(-2,0),(1,0)</m>, local maxima: none, concave up: none, concave down: <m>(-\infty,-2),(1,\infty)</m>, inflection point(s): none.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\ln(x^2+9)</m></p></statement>
+        <hint><p><m>f'(x)=\frac{2x}{x^2+9}</m>, <m>f''(x)=\frac{2(9-x^2)}{(x^2+9)^2}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,\infty)</m>, <m>x</m>-intercepts none, <m>y</m>-intercept <m>\ln 9</m>, decreasing: <m>(-\infty,0)</m>, increasing: <m>(0,\infty)</m>, local min: <m>(0,\ln 9)</m>, local max: none, concave up: <m>(-3,3)</m>, concave down: <m>(-\infty,-3),(3,\infty)</m>, inflection points: <m>(-3,\ln 18),(3,\ln 18)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{1}{1+e^{-x}}=\frac{e^x}{1+e^x}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{e^{-x}}{(1+e^{-x})^2}</m>, <m>f''(x)=\frac{e^{-x}(e^{-x}-1)}{(1+e^{-x})^3}</m>.</p></hint>
+        <answer><p>domain <m>(-\infty,\infty)</m>, <m>x</m>-intercepts none, <m>y</m>-intercept <m>\frac{1}{2}</m>, increasing: <m>(-\infty,\infty)</m>, decreasing: none, local minima: none, local maxima: none, concave up: <m>(-\infty,0)</m>, concave down: <m>(0,\infty)</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p><m>f(x)=\frac{\ln{x}}{x^2}</m></p></statement>
+        <hint><p><m>f'(x)=\frac{1-2\ln x}{x^3}</m>, <m>f''(x)=\frac{6\ln x-5}{x^4}</m>.</p></hint>
+        <answer><p>domain <m>(0,\infty)</m>, <m>x</m>-intercepts <m>x=1</m>, <m>y</m>-intercept none, increasing: <m>(0,\sqrt{e})</m>, decreasing: <m>(\sqrt{e},\infty)</m>, local minima: none, local maxima: <m>\brac{\sqrt{e},\frac{1}{2e}}</m>, concave up: <m>(e^{5/6},\infty)</m>, concave down: <m>(0,e^{5/6})</m>, inflection point(s): <m>\brac{e^{5/6},\frac{5}{6e^{5/3}}}</m>.</p></answer>
+      </task>
+    </project>
+    
+  </subsection>
+  
+</section>
