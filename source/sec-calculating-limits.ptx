@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-calculating-limits" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Calculating Limits</title>
+
+  <introduction>
+    <p>We can evaluate limits using a variety of techniques.</p>
+  </introduction>
+
+  <subsection xml:id="subsec-simple-limits">
+    <title>Simple Limits (Direct Substitution)</title>
+
+    <example xml:id="ex-direct-sub-linear">
+      <title>Direct Substitution with a Linear Function</title>
+      <p>Consider <m>\lim_{x \to 3} (2x+1)</m>. We know that the function <m>f(x)=2x+1</m> is a line, and it is never undefined, particularly not at <m>x=3</m>, because <m>f(3)=2(3)+1=7</m>. Then, we expect that as <m>x</m> approaches 3, <m>2x+1</m> gets closer to 7. Then,</p>
+      <md>
+        <mrow>\lim_{x \to 3} (2x+1) \amp = 2(3)+1</mrow>
+        <mrow>\amp = 7</mrow>
+      </md>
+      <p>In other words, we can just plug in <m>x=3</m> to get the limit value.</p>
+    </example>
+
+    <p>In general, for a linear function, you can just plug in the limit point that you're approaching.</p>
+
+    <example xml:id="ex-direct-sub-quadratic">
+      <title>Direct Substitution with a Quadratic Function</title>
+      <p>Consider <m>\lim_{x \to 2} (2x^2+x-1)</m>. We know that this function <m>f(x)=2x^2+x-1</m> is a parabola. In a similar way, as <m>x</m> approaches 2, the <m>y</m>-value will approach the function's <m>y</m>-value at <m>x=2</m>, which we can get by just plugging in <m>x=2</m>,</p>
+      <md>
+        <mrow>\lim_{x \to 2} (2x^2+x-1) \amp = 2(2)^2 + 2 - 1</mrow>
+        <mrow>\amp = 9</mrow>
+      </md>
+    </example>
+
+    <p>In general, if you can plug in the limit point and get a number (as opposed to something where you divide by 0), then that will be the limit value. This works almost always. These functions are <q>nice</q> in that there are no holes, asymptotes, jumps, or anything strange that would make the limits be more challenging to find.</p>
+
+    <example xml:id="ex-direct-sub-rational">
+      <title>Direct Substitution with a Rational Function</title>
+      <p>Consider <m>\lim_{x \to -1} \frac{x-1}{x^2+2x}</m>. Again, let's see if we can plug in <m>x=-1</m>,</p>
+      <md>
+        <mrow>\frac{-1-1}{(-1)^2+2(-1)} = \frac{-2}{-1} = 2</mrow>
+      </md>
+      <p>This means the limit is just 2,</p>
+      <md>
+        <mrow>\lim_{x \to -1} \frac{x-1}{x^2+2x} \amp = \frac{-1-1}{(-1)^2+2(-1)}</mrow>
+        <mrow>\amp = 2</mrow>
+      </md>
+    </example>
+
+    <p>In general, the limit of a polynomial function can be found by just substituting the value that <m>x</m> is approaching.</p>
+
+    <theorem xml:id="thm-polynomial-limit">
+      <statement>
+        <p>If <m>f(x)</m> is a polynomial function, then <m>\lim_{x \to a} f(x) = f(a)</m>.</p>
+      </statement>
+    </theorem>
+
+    <p>Also, for a rational function, the same rule applies, as long as you don't divide by 0 when you plug it in.</p>
+
+    <theorem xml:id="thm-rational-limit">
+      <statement>
+        <p>If <m>f(x)</m> is a rational function, then <m>\lim_{x \to a} f(x) = f(a)</m>, as long as <m>a</m> is in the domain of <m>f</m>.</p>
+      </statement>
+    </theorem>
+
+    <project xml:id="proj-direct-sub">
+      <title>Direct Substitution</title>
+      <introduction><p>Evaluate each limit.</p></introduction>
+      <task><statement><p><m>\lim_{x \to 2} (3x^2 + 4x - 1)</m></p></statement><answer><p><m>19</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to -1} \frac{x^2 - 5x + 2}{2x^3 + 3x + 1}</m></p></statement><answer><p><m>-2</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 5} \sqrt{\frac{x^2}{x - 1}}</m></p></statement><answer><p><m>\frac{5}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 4} (3x-7)</m></p></statement><answer><p><m>5</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 1} (-2x+5)</m></p></statement><answer><p><m>3</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -9} 5x</m></p></statement><answer><p><m>-45</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 6} 4</m></p></statement><answer><p><m>4</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 1} (2x^3-3x^2+4x+5)</m></p></statement><answer><p><m>8</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -2} (x^2+5x+7)</m></p></statement><answer><p><m>1</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 1} \frac{5x^2+6x+1}{8x-4}</m></p></statement><answer><p><m>3</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 3} \sqrt[3]{x^2-10}</m></p></statement><answer><p><m>-1</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 2} \frac{3x}{\sqrt{4x+1}-1}</m></p></statement><answer><p><m>3</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 2} (x^2-x)^5</m></p></statement><answer><p><m>32</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 3} \frac{-5x}{\sqrt{4x-3}}</m></p></statement><answer><p><m>-5</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{3}{\sqrt{16+3x+4}}</m></p></statement><answer><p><m>\frac{3\sqrt{5}}{10}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 2} (5x-6)^{3/2}</m></p></statement><answer><p><m>8</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{100}{(10x-1)^{11}+2}</m></p></statement><answer><p><m>100</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-indeterminate-form">
+    <title>Limits in Indeterminate Form</title>
+    <p>Most limits will not be this simple. Instead, when you plug in the limit point, you will get an expression of the form <m>\frac{0}{0}</m>, where the denominator is 0 (dividing by 0, which makes it undefined), and the numerator is also 0.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-factoring-canceling">
+    <title>Factoring and Canceling</title>
+
+    <example xml:id="ex-factoring-intro">
+      <title>Factoring to Evaluate a Limit</title>
+      <p>Consider the limit,</p>
+      <md>
+        <mrow>\lim_{x \to 2} \frac{x^2-5x+6}{x-2}</mrow>
+      </md>
+      <p>The function <m>\frac{x^2-5x+6}{x-2}</m> is undefined at <m>x = 2</m>, because plugging in <m>x=2</m> leads to dividing by 0. However, it turns out that we can algebraically manipulate it, by factoring the numerator,</p>
+      <md>
+        <mrow>\frac{x^2 - 5x + 6}{x - 2} \amp = \frac{(x - 3)(x - 2)}{x - 2}</mrow>
+      </md>
+      <p>Then, cancelling the common factor of <m>x - 2</m>,</p>
+      <md>
+        <mrow>\amp = x - 3</mrow>
+      </md>
+      <p>Then, since there is no denominator anymore, it turns out we can just plug in <m>x=2</m> to get the answer. In total,</p>
+      <md>
+        <mrow>\lim_{x \to 2} \frac{x^2-5x+6}{x-2} \amp = \lim_{x \to 2} \frac{(x - 3)(x - 2)}{x - 2}</mrow>
+        <mrow>\amp = \lim_{x \to 2} (x-3)</mrow>
+        <mrow>\amp = 2-3 = -1</mrow>
+      </md>
+      <p>This works because the simplified version is equal to the original expression,</p>
+      <md>
+        <mrow>\frac{x^2 - 5x + 6}{x - 2} = x - 3</mrow>
+      </md>
+      <p>They are the same everywhere, except for <m>x=2</m> (because then the left-hand side gives an error for dividing by 0, but the right-hand side gives <m>2 - 3 = -1</m>). Therefore, if you want to know what <m>\frac{x^2-5x+6}{x-3}</m> is doing near <m>x=2</m>, you can instead consider the simplified expression <m>x-3</m>.</p>
+      <p>This is because a limit only cares about values of <m>x</m> <em>near</em> <m>x = 2</m>, and doesn't care about what happens exactly at <m>x=2</m>. Thus, in terms of limits, the expressions are equal.</p>
+    </example>
+
+    <ul>
+      <li><p>To review factoring quadratics, see <url href="https://camerongeisler.github.io/algebra-precalculus/sec-factoring-quadratics-summary.html">Factoring Quadratics Summary</url>.</p></li>
+      <li><p>To review more advanced factoring techniques (like difference/sum of cubes), see <url href="https://camerongeisler.github.io/algebra-precalculus/sec-advanced-polynomial-factoring.html">Advanced Polynomial Factoring</url>.</p></li>
+    </ul>
+
+    <project xml:id="proj-factoring-1">
+      <title>Factoring and Canceling</title>
+      <introduction><p>Evaluate each limit.</p></introduction>
+      <task><statement><p><m>\lim_{x \to -6} \frac{x^2 - 36}{x + 6}</m></p></statement><answer><p><m>-12</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 6} \frac{x^2 - 4x - 12}{x - 6}</m></p></statement><answer><p><m>8</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 1} \frac{x^3 - 1}{x - 1}</m></p></statement><answer><p><m>3</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 2} \frac{x-2}{x^2+x-6}</m></p></statement><answer><p><m>\frac{1}{5}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to -4} \frac{x+4}{x^3+64}</m></p></statement><hint><p>Sum of cubes.</p></hint><answer><p><m>\frac{1}{48}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 1} \frac{x^4 - 1}{x^3 - 1}</m></p></statement><hint><p>Difference of cubes, difference of squares.</p></hint><answer><p><m>\frac{4}{3}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 3} \frac{x^2 - 2x - 3}{x - 3}</m></p></statement><answer><p><m>4</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 15} \frac{x^2 + 3x - 270}{x^2 - 225}</m></p></statement><answer><p><m>\frac{11}{10}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 2} \frac{4-x^2}{2-x}</m></p></statement><answer><p><m>4</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to -1} \frac{2x^2 + 5x + 3}{x + 1}</m></p></statement><answer><p><m>1</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 3} \frac{x^3 - 27}{x - 3}</m></p></statement><answer><p><m>27</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 5} \frac{x-5}{x^2-25}</m></p></statement><answer><p><m>\frac{1}{10}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -3} \frac{x+3}{x^2+4x+3}</m></p></statement><answer><p><m>-\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -5} \frac{x^2+3x-10}{x+5}</m></p></statement><answer><p><m>-7</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 2} \frac{x^2-7x+10}{x-2}</m></p></statement><answer><p><m>-3</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 1} \frac{x^2+x-2}{x^2-1}</m></p></statement><answer><p><m>\frac{3}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -1} \frac{x^2+3x+2}{x^2-x-2}</m></p></statement><answer><p><m>-\frac{1}{3}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -2} \frac{-2x-4}{x^3+2x^2}</m></p></statement><answer><p><m>-\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{5x^3+8x^2}{3x^4-16x^2}</m></p></statement><answer><p><m>-\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 2} \frac{x^3-8}{x^4-16}</m></p></statement><answer><p><m>\frac{3}{8}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to -4} \frac{16 - x^2}{x^3 + 64}</m></p></statement><answer><p><m>\frac{1}{6}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 4} \frac{x^2 - 16}{x^2 - 5x + 4}</m></p></statement><answer><p><m>\frac{8}{3}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to -1} \frac{x^2 + x}{x + 1}</m></p></statement><answer><p><m>-1</m></p></answer></task>
+    </project>
+
+    <project xml:id="proj-factoring-2">
+      <title>More Factoring Practice</title>
+      <introduction><p>Evaluate each limit.</p></introduction>
+      <task><statement><p><m>\lim_{x\to 1} \frac{x^2-1}{x-1}</m></p></statement><answer><p><m>2</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 4} \frac{x^2-16}{4-x}</m></p></statement><answer><p><m>-8</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 2} \frac{3x^2-7x+2}{2-x}</m></p></statement><answer><p><m>-5</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -1} \frac{(2x-1)^2-9}{x+1}</m></p></statement><answer><p><m>-12</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-rationalizing">
+    <title>Rationalizing (Removing Roots)</title>
+
+    <example xml:id="ex-rationalizing-intro">
+      <title>Rationalizing the Numerator</title>
+      <p>Consider the limit,</p>
+      <md>
+        <mrow>\lim_{x \to 0} \frac{\sqrt{4+x} - 2}{x}</mrow>
+      </md>
+      <p>If we try to plug in <m>x=0</m>, we get <m>\frac{0}{0}</m>, which is undefined. To simplify this expression, we can rationalize the numerator. To do this, multiply by the conjugate, which is <m>\sqrt{4+x}+2</m>, in both the numerator and denominator,</p>
+      <md>
+        <mrow>= \lim_{x \to 0} \frac{\sqrt{4+x} - 2}{x} \cdot \frac{\sqrt{4+x} + 2}{\sqrt{4+x} + 2}</mrow>
+      </md>
+      <p>In the numerator, multiplying together the conjugates gives a difference of squares, which cancels out the square root,</p>
+      <md>
+        <mrow>\amp = \lim_{x \to 0} \frac{(\sqrt{4+x})^2 - 2^2}{x(\sqrt{4+x} + 2)}</mrow>
+        <mrow>\amp = \lim_{x \to 0} \frac{4 + x - 4}{x(\sqrt{4+x} + 2)}</mrow>
+        <mrow>\amp = \lim_{x \to 0} \frac{x}{x(\sqrt{4+x} + 2)} \amp\amp \text{simplifying the numerator}</mrow>
+        <mrow>\amp = \lim_{x \to 0} \frac{1}{\sqrt{4+x} + 2} \amp\amp \text{cancelling the common factor of } x</mrow>
+      </md>
+      <p>Now, we can plug in <m>x=0</m>,</p>
+      <md>
+        <mrow>\amp = \frac{1}{\sqrt{4+0} + 2}</mrow>
+        <mrow>\amp = \frac{1}{4}</mrow>
+      </md>
+      <p>Therefore, the answer is <m>\frac{1}{4}</m>.</p>
+    </example>
+
+    <p>In general, rationalize by multiplying by the conjugate, which is the same expression except the middle sign is flipped. This takes advantage of the difference of squares pattern,</p>
+    <md>
+      <mrow>(a-b)(a+b) \amp = a^2-b^2</mrow>
+    </md>
+    <p>To get rid of the square root.</p>
+
+    <project xml:id="proj-rationalizing-1">
+      <title>Project I</title>
+      <introduction><p>Evaluate each limit.</p></introduction>
+      <task><statement><p><m>\lim_{x \to 0} \frac{\sqrt{x+1} - 1}{x}</m></p></statement><answer><p><m>\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 4} \frac{\sqrt{x} - 2}{x - 4}</m></p></statement><answer><p><m>\frac{1}{4}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 0} \frac{2}{\sqrt{3x + 4} + 2}</m></p></statement><answer><p><m>\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 0} \frac{2 - \sqrt{4 + x}}{x}</m></p></statement><answer><p><m>-\frac{1}{4}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 1} \frac{\sqrt{x}-1}{x-1}</m></p></statement><answer><p><m>\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 49} \frac{\sqrt{x}-7}{x-49}</m></p></statement><answer><p><m>\frac{1}{14}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{\sqrt{x+1}-1}{x}</m></p></statement><answer><p><m>\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{3}{\sqrt{3x+1}+1}</m></p></statement><answer><p><m>\frac{3}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{\sqrt{5x+4}-2}{x}</m></p></statement><answer><p><m>\frac{5}{4}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 9} \frac{\sqrt{x}-3}{x-9}</m></p></statement><answer><p><m>\frac{1}{6}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 1} \frac{x-1}{\sqrt{x+3}-2}</m></p></statement><answer><p><m>4</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{x}{\sqrt{x+9}-3}</m></p></statement><answer><p><m>6</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 3} \frac{2-\sqrt{7-x}}{x-3}</m></p></statement><answer><p><m>\frac{1}{4}</m></p></answer></task>
+    </project>
+
+    <project xml:id="proj-rationalizing-2">
+      <title>Project II</title>
+      <introduction><p>Evaluate each limit.</p></introduction>
+      <task><statement><p><m>\lim_{x \to 0} \frac{\sqrt{7 - x} - \sqrt{7 + x}}{x}</m></p></statement><answer><p><m>-\frac{\sqrt{7}}{7}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 16} \frac{16-x}{4-\sqrt{x}}</m></p></statement><answer><p><m>8</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 4^+} \frac{x^2 - 16}{\sqrt{x - 4}}</m></p></statement><hint><p>Note that the limit is a right-hand limit, because the expression is not defined for <m>x \lt 4</m>.</p></hint><answer><p><m>0</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{\sqrt{x^2+9}-3}{x^2}</m></p></statement><answer><p><m>\frac{1}{6}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 4} \frac{4x-x^2}{2-\sqrt{x}}</m></p></statement><answer><p><m>16</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -1} \frac{\sqrt{x^2+8}-3}{x+1}</m></p></statement><answer><p><m>-\frac{1}{3}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 2} \frac{\sqrt{x^2+12}-4}{x-2}</m></p></statement><answer><p><m>\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -2} \frac{x+2}{\sqrt{x^2+5}-3}</m></p></statement><answer><p><m>-\frac{3}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to -3} \frac{2-\sqrt{x^2-5}}{x+3}</m></p></statement><answer><p><m>\frac{3}{2}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 4} \frac{4-x}{5-\sqrt{x^2+9}}</m></p></statement><answer><p><m>\frac{5}{4}</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-absolute-value-limits">
+    <title>Limits with Absolute Values</title>
+
+    <example xml:id="ex-abs-value-intro-1">
+      <title>Absolute Value Limit at Zero</title>
+      <p>Consider the limit,</p>
+      <md>
+        <mrow>\lim_{x \to 0} \frac{|x|}{x}</mrow>
+      </md>
+      <p>Graphically, the function looks like: <url href="https://www.desmos.com/calculator/iejwldqg8q">Graph of <m>\frac{|x|}{x}</m></url>. Notice that there is a jump at <m>x=0</m>. As <m>x</m> approaches 0 from the right, the function approaches 1, while as <m>x</m> approaches 0 from the left, the function approaches <m>-1</m>. Therefore, the two-sided limit does not exist.</p>
+      <p>Algebraically, if you try to plug in <m>x=0</m>, you get <m>\frac{0}{0}</m>, which is indeterminate. To evaluate this limit, we need to consider the left-hand and right-hand limits separately, because the absolute value function behaves differently on each side of 0.</p>
+      <p>Recall that the absolute value function is defined as,</p>
+      <md>
+        <mrow>|x| = \begin{cases} x \amp x \geq 0 \\ -x \amp x \lt 0 \end{cases}</mrow>
+      </md>
+      <ul>
+        <li>
+          <p>From the right, as <m>x \to 0^+</m>, <m>|x| = x</m> (because <m>x</m> is positive), so,</p>
+          <md>
+            <mrow>\lim_{x \to 0^+} \frac{|x|}{x} \amp = \lim_{x \to 0^+} \frac{x}{x}</mrow>
+            <mrow>\amp = \lim_{x \to 0^+} 1 \amp\amp \text{cancelling } x</mrow>
+            <mrow>\amp = 1</mrow>
+          </md>
+        </li>
+        <li>
+          <p>From the left, as <m>x \to 0^-</m>, <m>|x| = -x</m> (because <m>x</m> is negative), so,</p>
+          <md>
+            <mrow>\lim_{x \to 0^-} \frac{|x|}{x} \amp = \lim_{x \to 0^-} \frac{-x}{x}</mrow>
+            <mrow>\amp = \lim_{x \to 0^-} -1 \amp\amp \text{cancelling } x</mrow>
+            <mrow>\amp = -1</mrow>
+          </md>
+        </li>
+      </ul>
+      <p>Since these one-sided limits are not equal, the limit does not exist.</p>
+    </example>
+
+    <example xml:id="ex-abs-value-intro-2">
+      <title>Absolute Value Limit at a Nonzero Point</title>
+      <p>Consider the limit,</p>
+      <md>
+        <mrow>\lim_{x \to 2} \frac{|x-2|}{x-2}</mrow>
+      </md>
+      <p>This is similar to the previous example, except the jump is at <m>x=2</m> instead of <m>x=0</m>. Graphically, the function looks like: <url href="https://www.desmos.com/calculator/rday0bwwcd">Graph of <m>\frac{|x-2|}{x-2}</m></url>.</p>
+      <p>Algebraically,</p>
+      <md>
+        <mrow>\lim_{x \to 2^+} \frac{|x-2|}{x-2} \amp = \lim_{x \to 2^+} \frac{x-2}{x-2}</mrow>
+        <mrow>\amp = \lim_{x \to 2^+} 1</mrow>
+        <mrow>\amp = 1</mrow>
+      </md>
+      <p>For the left limit,</p>
+      <md>
+        <mrow>\lim_{x \to 2^-} \frac{|x-2|}{x-2} \amp = \lim_{x \to 2^-} \frac{-(x-2)}{x-2}</mrow>
+        <mrow>\amp = \lim_{x \to 2^-} -1 \amp\amp \text{cancelling the common factor of } x-2</mrow>
+        <mrow>\amp = -1</mrow>
+      </md>
+      <p>Since these one-sided limits are not equal, the two-sided limit does not exist.</p>
+    </example>
+
+    <project xml:id="proj-abs-value">
+      <title>Absolute Value Limits</title>
+      <introduction><p>Find each limit, if it exists.</p></introduction>
+      <task><statement><p><m>\lim_{x \to 5} \frac{|x-5|}{x-5}</m></p></statement><answer><p>DNE</p></answer></task>
+      <task><statement><p><m>\lim_{x \to \frac{5}{2}} \frac{|2x-5|(x+1)}{2x-5}</m></p></statement><answer><p>DNE</p></answer></task>
+      <task><statement><p><m>\lim_{x \to -2} \frac{(x+2)^3}{|x+2|}</m></p></statement><answer><p><m>0</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 2} \frac{x^2-x-2}{|x-2|}</m></p></statement><answer><p>DNE</p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-complex-fractions">
+    <title>Simplifying Complex Fractions</title>
+
+    <p>These limits often come from the derivative of a function.</p>
+
+    <project xml:id="proj-complex-fractions">
+      <title>Complex Fractions</title>
+      <introduction><p>Find each limit.</p></introduction>
+      <task><statement><p><m>\lim_{x\to 1} \frac{x^{-1}-1}{x-1}</m></p></statement><answer><p><m>-1</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{\frac{1}{x-1}+\frac{1}{x+1}}{x}</m></p></statement><answer><p><m>-2</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 0} \frac{\frac{1}{5+x}-\frac{1}{5}}{x}</m></p></statement><answer><p><m>-\frac{1}{25}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 1} \left(\frac{1}{x^2-x}-\frac{1}{x-1}\right)</m></p></statement><answer><p><m>-1</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 5} \left(\frac{1}{x^2-4x-5}-\frac{1}{6(x-5)}\right)</m></p></statement><answer><p><m>-\frac{1}{36}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x\to 3} \left(4x-\frac{2}{x-3}\right)(6+x-x^2)</m></p></statement><answer><p><m>10</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-one-sided-limits">
+    <title>One-Sided Limits</title>
+
+    <exercise xml:id="ex-piecewise-1">
+      <title>Piecewise Function Limit</title>
+      <statement>
+        <p>Let <m>f(x)=\begin{cases} x^2 \amp x \lt 1 \\ -x+2 \amp x \geq 1 \end{cases}</m>. Find <m>\lim_{x \to 1} f(x)</m>, if it exists.</p>
+      </statement>
+      <answer><p><m>1</m></p></answer>
+    </exercise>
+
+    <exercise xml:id="ex-piecewise-2">
+      <title>Another Piecewise Function Limit</title>
+      <statement>
+        <p>Let <m>f(x)=\begin{cases} 8-2x \amp x \lt 4 \\ \sqrt{x-4} \amp x \gt 4 \end{cases}</m>. Find <m>\lim_{x \to 4} f(x)</m>, if it exists.</p>
+      </statement>
+      <answer><p><m>0</m></p></answer>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-substitution">
+    <title>Substitution (Change of Variable)</title>
+
+    <project xml:id="proj-substitution">
+      <title>Change of Variable</title>
+      <introduction><p>Evaluate the limit by using a change of variable.</p></introduction>
+      <task><statement><p><m>\lim_{x \to 8} \frac{\sqrt[3]{x} - 2}{x - 8}</m></p></statement><answer><p><m>\frac{1}{12}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 0} \frac{(x+8)^{1/3} - 2}{x}</m></p></statement><answer><p><m>\frac{1}{12}</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 27} \frac{27 - x}{x^{1/3} - 3}</m></p></statement><answer><p><m>-27</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 1} \frac{x^{1/6} - 1}{x - 1}</m></p></statement><answer><p><m>6</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 1} \frac{x^{1/6} - 1}{x^{1/3} - 1}</m></p></statement><answer><p><m>2</m></p></answer></task>
+      <task><statement><p><m>\lim_{x \to 4} \frac{\sqrt{x} - 2}{\sqrt{x^3} - 8}</m></p></statement><answer><p><m>\frac{1}{12}</m></p></answer></task>
+    </project>
+  </subsection>
+
+</section>

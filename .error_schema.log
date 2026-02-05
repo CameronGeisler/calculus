@@ -1,5 +1,5 @@
-file:/C:/Users/CKG/Documents/pretext_math/calculus/source/main.ptx:17:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got subtitle
-file:/C:/Users/CKG/Documents/pretext_math/calculus/source/main.ptx:17:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
-file:/C:/Users/CKG/Documents/pretext_math/calculus/source/main.ptx:14:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
-file:/C:/Users/CKG/Documents/pretext_math/calculus/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext
-file:/C:/Users/CKG/Documents/pretext_math/calculus/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element pretext there
+<string>:17:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got subtitle
+<string>:17:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
+<string>:14:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
+<string>:8:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext
+<string>:8:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element pretext there

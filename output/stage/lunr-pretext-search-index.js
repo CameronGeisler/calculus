@@ -208,6 +208,78 @@ var ptx_lunr_docs = [
   "body": " Trigonometric Functions   For each function, find any local maxima or local minima, and intervals of increase and decrease.    on   increasing: , decreasing: , local maxima: , local minima:    on   increasing: , decreasing: , local maxima: , local minima:   "
 },
 {
+  "id": "sec-sketching-graphs-of-functions",
+  "level": "1",
+  "url": "sec-sketching-graphs-of-functions.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Sketching Graphs of Functions",
+  "body": " Sketching Graphs of Functions    Examples   Polynomials   Sketch the graph of each function.     , .  increasing: , decreasing: , local maxima: none, local minima: , concave up: , concave down: none, inflection point(s): none.     , .  increasing: , decreasing: , local maxima: , local minima: , concave up: , concave down: , inflection point(s): .     , .  increasing: , decreasing: , local maxima: , local minima: , concave down: , concave up: , inflection point(s): .     , .  increasing: , decreasing: , local maxima: , local minima: , concave up: , concave down , inflection point(s): .     , .  -intercepts , -intercept: , increasing: , decreasing: , local minima: , local maxima: none, concave up: , concave down: , inflection point(s): .     Rational Functions (Vertical Asymptotes)   Sketch the graph of each function.     , .  domain: , -intercepts , -intercept: , increasing: , decreasing: none, local minima: none, local maxima: none, concave up: , concave down: .     , , .  domain: , -intercept: , -intercept: , vertical asymptote , horizontal asymptote , increasing , decreasing , local minima: , local maxima: none, concave down: , concave up: , inflection point: .     , .  domain: , -intercept , -intercept: , increasing: , decreasing: , local max: , local min: , concave up: , concave down: , inflection points: .     , .  domain , -intercept , -intercept: , vertical asymptote: , hole: , horizontal asymptote: , increasing: , decreasing: none, local minima: none, local maxima: none, concave up: , concave down: .     Trigonometric Functions   Sketch the graph of each function.    ,  , .  -intercepts , -intercept: , increasing: , decreasing: , local max: , local min: , concave down: , concave up: , inflection points: .    ,  , .  -intercepts , -intercept 3, decreasing: , increasing: , local min: , local maxima: none, concave down: , concave up: , inflection points: .    ,  , .  domain , -intercepts , -intercept 0, increasing , decreasing none, local minima none, local maxima none, concave down , concave up , inflection point .    ,  , .  domain , -intercepts , -intercept 0, increasing , decreasing , local maxima , local minima , concave down , concave up , inflection point .    ,  , .  increasing , decreasing none, local minima none, local maxima none, concave up , concave down , inflection point .    ,  , .  domain , -intercept , increasing , decreasing , local maxima , local minima , concave up , concave down , inflection points and .    ,  , .  -intercept 1, increasing: , decreasing: , local min: , local max: , concave down: , concave up: , inflection points: .     Vertical Tangents and Cusps   Sketch the graph of each function.     , .  domain , -intercepts , -intercept 0, increasing: , decreasing: , local minima: , local maxima: , concave up: , concave down: none.     , .  domain , -intercept , -intercept , decreasing , increasing , local minimum , concave down , concave up none, inflection points none.     , .  domain , -intercepts , -intercept 0, increasing: , decreasing: , local minima: , local maxima: , concave up: none, concave down: .     , .  domain , -intercepts , -intercept 0, increasing , decreasing , local maximum , local minimum , concave up , concave down , inflection point .     Slant Asymptotes   Sketch the graph of each function.     , .  domain: , -intercept: , -intercept: , vertical asymptote: , slant asymptote: , increasing , decreasing , local maxima , local minima , concave down , concave up .     , .  domain , -intercepts none, -intercept , vertical asymptote , slant asymptote , increasing , decreasing , local maxima , local minima , concave down , concave up .     , , .  domain , -intercepts , -intercept , vertical asymptote , slant asymptote , increasing , decreasing , local maximum , local minimum , concave down , concave up , inflection points none.     , .  domain , -intercepts none, -intercept , vertical asymptote , hole , slant asymptote , increasing , decreasing , local maxima , local minima none, concave down , concave up .     Polynomial and Rational Functions   Sketch the graph of each function.     , .  increasing: , decreasing: , local maxima: , local minima: , concave up: , concave down: , inflection point(s): .     , .  domain , -intercept , -intercept 0, horizontal asymptote , increasing , decreasing , local minima , local maxima , concave up , concave down , inflection points , , .     , .  domain , -intercept: 0, -intercept: 0, vertical asymptotes: , horizontal asymptote: , increasing: none, decreasing: , local maxima: none, local minima: none, concave up , concave down , inflection point .     , .  domain , -intercepts none, -intercept none, vertical asymptote , increasing , decreasing , local minima and , local maxima none, concave up , concave down none.     , .  domain , -intercepts: , -intercept: , increasing: , decreasing: , local minima: none, local maxima: , concave up: , concave down: , inflection point(s): none.     increasing: , decreasing: , local minima: , local maxima: , concave up: , concave down: , inflection point(s): .     Transcendental Functions   Sketch the graph of each function.     .  domain , -intercepts , -intercept 0, increasing on , decreasing: , local minimum: , local maximum: , concave up: , concave down: , inflection point: .     , .  domain , -intercepts none, -intercept 2, decreasing: , increasing: , local min: , local max: none, concave up: , concave down: none, inflection points: none.     , .  domain , -intercepts , -intercept none, increasing: , decreasing: , local minima: , local maxima: none, concave up: none, concave down: , inflection point(s): none.     , .  domain , -intercepts none, -intercept , decreasing: , increasing: , local min: , local max: none, concave up: , concave down: , inflection points: .     , .  domain , -intercepts none, -intercept , increasing: , decreasing: none, local minima: none, local maxima: none, concave up: , concave down: .     , .  domain , -intercepts , -intercept none, increasing: , decreasing: , local minima: none, local maxima: , concave up: , concave down: , inflection point(s): .     "
+},
+{
+  "id": "project-polynomials",
+  "level": "2",
+  "url": "sec-sketching-graphs-of-functions.html#project-polynomials",
+  "type": "Exercise Group",
+  "number": "2.3.1",
+  "title": "Polynomials.",
+  "body": " Polynomials   Sketch the graph of each function.     , .  increasing: , decreasing: , local maxima: none, local minima: , concave up: , concave down: none, inflection point(s): none.     , .  increasing: , decreasing: , local maxima: , local minima: , concave up: , concave down: , inflection point(s): .     , .  increasing: , decreasing: , local maxima: , local minima: , concave down: , concave up: , inflection point(s): .     , .  increasing: , decreasing: , local maxima: , local minima: , concave up: , concave down , inflection point(s): .     , .  -intercepts , -intercept: , increasing: , decreasing: , local minima: , local maxima: none, concave up: , concave down: , inflection point(s): .   "
+},
+{
+  "id": "project-rational-functions",
+  "level": "2",
+  "url": "sec-sketching-graphs-of-functions.html#project-rational-functions",
+  "type": "Exercise Group",
+  "number": "2.3.2",
+  "title": "Rational Functions (Vertical Asymptotes).",
+  "body": " Rational Functions (Vertical Asymptotes)   Sketch the graph of each function.     , .  domain: , -intercepts , -intercept: , increasing: , decreasing: none, local minima: none, local maxima: none, concave up: , concave down: .     , , .  domain: , -intercept: , -intercept: , vertical asymptote , horizontal asymptote , increasing , decreasing , local minima: , local maxima: none, concave down: , concave up: , inflection point: .     , .  domain: , -intercept , -intercept: , increasing: , decreasing: , local max: , local min: , concave up: , concave down: , inflection points: .     , .  domain , -intercept , -intercept: , vertical asymptote: , hole: , horizontal asymptote: , increasing: , decreasing: none, local minima: none, local maxima: none, concave up: , concave down: .   "
+},
+{
+  "id": "project-graphing-trigonometric-functions",
+  "level": "2",
+  "url": "sec-sketching-graphs-of-functions.html#project-graphing-trigonometric-functions",
+  "type": "Exercise Group",
+  "number": "2.3.3",
+  "title": "Trigonometric Functions.",
+  "body": " Trigonometric Functions   Sketch the graph of each function.    ,  , .  -intercepts , -intercept: , increasing: , decreasing: , local max: , local min: , concave down: , concave up: , inflection points: .    ,  , .  -intercepts , -intercept 3, decreasing: , increasing: , local min: , local maxima: none, concave down: , concave up: , inflection points: .    ,  , .  domain , -intercepts , -intercept 0, increasing , decreasing none, local minima none, local maxima none, concave down , concave up , inflection point .    ,  , .  domain , -intercepts , -intercept 0, increasing , decreasing , local maxima , local minima , concave down , concave up , inflection point .    ,  , .  increasing , decreasing none, local minima none, local maxima none, concave up , concave down , inflection point .    ,  , .  domain , -intercept , increasing , decreasing , local maxima , local minima , concave up , concave down , inflection points and .    ,  , .  -intercept 1, increasing: , decreasing: , local min: , local max: , concave down: , concave up: , inflection points: .   "
+},
+{
+  "id": "project-vertical-tangents",
+  "level": "2",
+  "url": "sec-sketching-graphs-of-functions.html#project-vertical-tangents",
+  "type": "Exercise Group",
+  "number": "2.3.4",
+  "title": "Vertical Tangents and Cusps.",
+  "body": " Vertical Tangents and Cusps   Sketch the graph of each function.     , .  domain , -intercepts , -intercept 0, increasing: , decreasing: , local minima: , local maxima: , concave up: , concave down: none.     , .  domain , -intercept , -intercept , decreasing , increasing , local minimum , concave down , concave up none, inflection points none.     , .  domain , -intercepts , -intercept 0, increasing: , decreasing: , local minima: , local maxima: , concave up: none, concave down: .     , .  domain , -intercepts , -intercept 0, increasing , decreasing , local maximum , local minimum , concave up , concave down , inflection point .   "
+},
+{
+  "id": "project-slant-asymptotes",
+  "level": "2",
+  "url": "sec-sketching-graphs-of-functions.html#project-slant-asymptotes",
+  "type": "Exercise Group",
+  "number": "2.3.5",
+  "title": "Slant Asymptotes.",
+  "body": " Slant Asymptotes   Sketch the graph of each function.     , .  domain: , -intercept: , -intercept: , vertical asymptote: , slant asymptote: , increasing , decreasing , local maxima , local minima , concave down , concave up .     , .  domain , -intercepts none, -intercept , vertical asymptote , slant asymptote , increasing , decreasing , local maxima , local minima , concave down , concave up .     , , .  domain , -intercepts , -intercept , vertical asymptote , slant asymptote , increasing , decreasing , local maximum , local minimum , concave down , concave up , inflection points none.     , .  domain , -intercepts none, -intercept , vertical asymptote , hole , slant asymptote , increasing , decreasing , local maxima , local minima none, concave down , concave up .   "
+},
+{
+  "id": "project-polynomial-rational-mixed",
+  "level": "2",
+  "url": "sec-sketching-graphs-of-functions.html#project-polynomial-rational-mixed",
+  "type": "Exercise Group",
+  "number": "2.3.6",
+  "title": "Polynomial and Rational Functions.",
+  "body": " Polynomial and Rational Functions   Sketch the graph of each function.     , .  increasing: , decreasing: , local maxima: , local minima: , concave up: , concave down: , inflection point(s): .     , .  domain , -intercept , -intercept 0, horizontal asymptote , increasing , decreasing , local minima , local maxima , concave up , concave down , inflection points , , .     , .  domain , -intercept: 0, -intercept: 0, vertical asymptotes: , horizontal asymptote: , increasing: none, decreasing: , local maxima: none, local minima: none, concave up , concave down , inflection point .     , .  domain , -intercepts none, -intercept none, vertical asymptote , increasing , decreasing , local minima and , local maxima none, concave up , concave down none.     , .  domain , -intercepts: , -intercept: , increasing: , decreasing: , local minima: none, local maxima: , concave up: , concave down: , inflection point(s): none.     increasing: , decreasing: , local minima: , local maxima: , concave up: , concave down: , inflection point(s): .   "
+},
+{
+  "id": "project-transcendental-functions",
+  "level": "2",
+  "url": "sec-sketching-graphs-of-functions.html#project-transcendental-functions",
+  "type": "Exercise Group",
+  "number": "2.3.7",
+  "title": "Transcendental Functions.",
+  "body": " Transcendental Functions   Sketch the graph of each function.     .  domain , -intercepts , -intercept 0, increasing on , decreasing: , local minimum: , local maximum: , concave up: , concave down: , inflection point: .     , .  domain , -intercepts none, -intercept 2, decreasing: , increasing: , local min: , local max: none, concave up: , concave down: none, inflection points: none.     , .  domain , -intercepts , -intercept none, increasing: , decreasing: , local minima: , local maxima: none, concave up: none, concave down: , inflection point(s): none.     , .  domain , -intercepts none, -intercept , decreasing: , increasing: , local min: , local max: none, concave up: , concave down: , inflection points: .     , .  domain , -intercepts none, -intercept , increasing: , decreasing: none, local minima: none, local maxima: none, concave up: , concave down: .     , .  domain , -intercepts , -intercept none, increasing: , decreasing: , local minima: none, local maxima: , concave up: , concave down: , inflection point(s): .   "
+},
+{
   "id": "sec-lhopitals-rule",
   "level": "1",
   "url": "sec-lhopitals-rule.html",
