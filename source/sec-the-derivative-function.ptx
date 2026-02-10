@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-the-derivative-function" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Derivative Function</title>
+
+  <introduction>
+    <p>Recall that previously, we found the instantaneous rate of change of a function, which is the slope of the tangent line to the graph of the function, using a limit of the form,</p>
+    <me>\lim_{h \to 0} \frac{f(a+h) - f(a)}{h}</me>
+    <p>This limit is very important in calculus, so it is given a name and a concise notation, called the <term>derivative</term>.</p>
+
+    <definition xml:id="def-derivative-at-a">
+      <title>Derivative at a Point</title>
+      <statement>
+        <p>The <term>derivative</term> of <m>f</m> at <m>a</m>, denoted by <m>f'(a)</m> (read as <q><m>f</m> prime of <m>a</m></q>), is given by,</p>
+        <me>\boxed{f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}}</me>
+      </statement>
+    </definition>
+
+    <example>
+      <title>Derivative at a Specific Point</title>
+      <p>Find the derivative of <m>f(x) = x^2 + 2</m> at <m>x = 3</m>.</p>
+      <md>
+        <mrow>f'(3) \amp= \lim_{h \to 0} \frac{f(3 + h) - f(3)}{h}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{(3 + h)^2 + 2 - (3^2 + 2)}{h}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{(9 + 6h + h^2) + 2 - 11}{h} \amp\amp \text{expanding and simplifying}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{6h + h^2}{h} \amp\amp \text{combining like terms}</mrow>
+        <mrow>\amp= \lim_{h \to 0} (6 + h) \amp\amp \text{cancelling a common factor of $h$}</mrow>
+        <mrow>f'(3) \amp= 6 \amp\amp \text{plugging in $h=0$}</mrow>
+      </md>
+      <p>Therefore, <m>f'(3) = 6</m>.</p>
+    </example>
+
+    <p>If we want to find the slope of the tangent line at many different values of <m>x</m>, then this way of using the definition for each value of <m>x</m> is not very efficient.</p>
+    <p>Instead, we can calculate the derivative at an <em>arbitrary</em> value of <m>x</m>, which will give us a formula for the slope of the tangent at <em>any</em> value of <m>x</m>.</p>
+
+    <example>
+      <title>Squaring Function</title>
+      <p>Find the derivative of <m>f(x) = x^2</m> at an arbitrary value of <m>x</m>. To do this, instead of plugging in a specific value for <m>x</m>, we will just leave it as <m>x</m>,</p>
+      <md>
+        <mrow>f'(x) \amp= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{(x^2 + 2xh + h^2) - x^2}{h} \amp\amp \text{expanding}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{2xh + h^2}{h} \amp\amp \text{combining like terms}</mrow>
+        <mrow>\amp= \lim_{h \to 0} (2x + h) \amp\amp \text{cancelling a common factor of $h$}</mrow>
+        <mrow>f'(x) \amp= 2x \amp\amp \text{plugging in $h=0$}</mrow>
+      </md>
+      <p>Therefore, <m>f'(x)=2x</m>. This means that the slope of the tangent line to the graph of <m>f</m> at any value of <m>x</m> is <m>2x</m>. For example, at <m>x=3</m>, the slope of the tangent line is <m>f'(3) = 2 \cdot 3 = 6</m>, which is what we found in the previous example.</p>
+      <p>This allows us to create a table of values for the slope of the tangent line at different values of <m>x</m>,</p>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>x</m></cell>
+          <cell><m>f'(x)</m></cell>
+        </row>
+        <row>
+          <cell><m>-2</m></cell>
+          <cell><m>-4</m></cell>
+        </row>
+        <row>
+          <cell><m>-1</m></cell>
+          <cell><m>-2</m></cell>
+        </row>
+        <row>
+          <cell><m>0</m></cell>
+          <cell><m>0</m></cell>
+        </row>
+        <row>
+          <cell><m>1</m></cell>
+          <cell><m>2</m></cell>
+        </row>
+        <row>
+          <cell><m>2</m></cell>
+          <cell><m>4</m></cell>
+        </row>
+      </tabular>
+      <p>This gives the slope at each of these values of <m>x</m>. This means that the derivative is itself a function, which takes in a value of <m>x</m>, and outputs the slope of the tangent line at that value of <m>x</m>. Here is a graph: <url href="https://www.desmos.com/calculator/xd3tj4qjcc">Graph of <m>f(x)=x^2</m> and its derivative</url>. At each value of <m>x</m>, the slope of the tangent line to the graph of <m>f</m> is given by the <m>y</m>-value of <m>f'(x)=2x</m>.</p>
+    </example>
+
+    <p>In general, the derivative of a function <m>f</m> is not just a number, but is itself a function.</p>
+  </introduction>
+
+  <subsection xml:id="subsec-derivative-as-function">
+    <title>The Derivative as a Function</title>
+
+    <definition xml:id="def-derivative-function">
+      <title>Derivative Function</title>
+      <statement>
+        <p>Let <m>f</m> be a function. The <term>derivative</term> of <m>f</m>, denoted by <m>f'</m>, is another function, defined by,</p>
+        <me>\boxed{f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}}</me>
+        <ul>
+          <li><p>The derivative <q><m>f'</m></q> is read as <q><m>f</m> prime</q> and <q><m>f'(x)</m></q> as <q><m>f</m> prime of <m>x</m></q>.</p></li>
+          <li><p>The action of finding the derivative of a function is often called <q>taking the derivative</q> or <q>differentiating</q>.</p></li>
+        </ul>
+      </statement>
+    </definition>
+
+    <example>
+      <title>Reciprocal Function</title>
+      <p>Consider the derivative of <m>f(x) = \frac{1}{x}</m>,</p>
+      <md>
+        <mrow>f'(x) \amp= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{h}</mrow>
+      </md>
+      <p>To simplify this difference quotient, we first simplify the complex fraction, by clearing denominators, by multiplying numerator and denominator by <m>x(x+h)</m>,</p>
+      <md>
+        <mrow>\amp= \lim_{h \to 0} \frac{\frac{1}{x + h} - \frac{1}{x}}{h} \cdot \frac{x(x + h)}{x(x + h)}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{x - (x + h)}{hx(x + h)}</mrow>
+        <mrow>\amp= \lim_{h \to 0} -\frac{h}{hx(x + h)} \amp\amp \text{simplifying the numerator}</mrow>
+        <mrow>\amp= \lim_{h \to 0} -\frac{1}{x(x + h)} \amp\amp \text{cancelling the common factor of $h$}</mrow>
+        <mrow>\amp= -\frac{1}{x^2}</mrow>
+      </md>
+      <p>Therefore, <m>f'(x) = -\frac{1}{x^2}</m>. Observe the relationship between <m>f(x)</m> and its derivative: <url href="https://www.desmos.com/calculator/coesbxbgm9">Graph of <m>f(x)=\frac{1}{x}</m> and its derivative</url>. Notice that:</p>
+      <ul>
+        <li><p>The slope of the tangent of <m>f</m> is negative for all values of <m>x</m>, which corresponds to the derivative being negative (or, <m>f'(x) \lt 0</m>).</p></li>
+        <li><p>As <m>x</m> gets larger, the slope of the tangent line gets closer to <m>0</m>, which corresponds to the derivative getting closer to <m>0</m> (or, <m>f'(x) \to 0</m> as <m>x \to \infty</m>).</p></li>
+      </ul>
+    </example>
+
+    <example>
+      <title>Square Root Function</title>
+      <p>Consider the derivative of <m>f(x) = \sqrt{x}</m>,</p>
+      <md>
+        <mrow>f'(x) \amp= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h}</mrow>
+      </md>
+      <p>Then, the goal is to cancel the factor of <m>h</m> in the denominator. It turns out that the correct next algebraic step is a technique called <term>rationalizing the numerator</term>. You may recall rationalizing the denominator, which involves multiplying numerator and denominator in order to eliminate a square root in the denominator. Here, we can use a similar technique with the goal of removing the square roots in the numerator. In this case, we multiply by the conjugate of the numerator, which is <m>\sqrt{x + h} + \sqrt{x}</m>,</p>
+      <md>
+        <mrow>\amp= \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{(x + h) - x}{h(\sqrt{x + h} + \sqrt{x})}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{h}{h(\sqrt{x + h} + \sqrt{x})}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt{x}} \amp\amp \text{cancelling the common factor of $h$}</mrow>
+        <mrow>\amp= \frac{1}{\sqrt{x} + \sqrt{x}} \amp\amp \text{plugging in $h = 0$}</mrow>
+        <mrow>\amp= \frac{1}{2\sqrt{x}}</mrow>
+      </md>
+      <p>Observe the relationship between <m>f(x)</m> and its derivative: <url href="https://www.desmos.com/calculator/6ohk5t72cu">Desmos</url>.</p>
+      <ul>
+        <li><p>The slope of <m>f(x) = \sqrt{x}</m> starts out large and positive, and then as <m>x</m> increases, the slope becomes smaller but still positive.</p></li>
+        <li><p>This corresponds to the derivative <m>f'(x) = \frac{1}{2\sqrt{x}}</m> being positive for all <m>x \gt 0</m>, and getting closer to 0 as <m>x</m> gets larger (or, <m>f'(x) \to 0</m> as <m>x \to \infty</m>).</p></li>
+      </ul>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-derivative-limit-definition">
+    <title>Derivative Using Limit Definition</title>
+
+    <project>
+      <title>Derivative at a Specific Value</title>
+      <introduction><p>For each function, find the value of the derivative <m>f'(a)</m> for the given value of <m>a</m>.</p></introduction>
+      <task><statement><p><m>f(x)=x^2, a=1</m></p></statement><answer><p><m>2</m></p></answer></task>
+      <task><statement><p><m>f(x)=x^2+3x+1, a=3</m></p></statement><answer><p><m>9</m></p></answer></task>
+      <task><statement><p><m>f(x)=\sqrt{x+1}, a=0</m></p></statement><answer><p><m>\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>f(x)=\frac{5}{x}, a=-1</m></p></statement><answer><p><m>-5</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Derivatives of Polynomial Functions</title>
+      <introduction><p>Find the derivative of each function, using the limit definition of the derivative.</p></introduction>
+      <task><statement><p><m>f(x)=-5x-8</m></p></statement><answer><p><m>f'(x)=-5</m></p></answer></task>
+      <task><statement><p><m>f(x)=3x^2</m></p></statement><answer><p><m>f'(x)=6x</m></p></answer></task>
+      <task><statement><p><m>f(x)=2x^2+4x</m></p></statement><answer><p><m>f'(x)=4x+4</m></p></answer></task>
+      <task><statement><p><m>f(x)=6-7x</m></p></statement><answer><p><m>f'(x)=-7</m></p></answer></task>
+      <task><statement><p><m>f(x) = 3x^2 + 7x</m></p></statement><answer><p><m>f'(x)=6x+7</m></p></answer></task>
+      <task><statement><p><m>f(x)=6x^3-7x</m></p></statement><answer><p><m>f'(x)=18x^2-7</m></p></answer></task>
+      <task><statement><p><m>f(x) = 2x^2 + 3x - 4</m></p></statement><answer><p><m>f'(x)=4x+3</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Derivatives of Rational Functions</title>
+      <introduction><p>Find the derivative of each function, using the limit definition of the derivative.</p></introduction>
+      <task><statement><p><m>f(x)=\frac{x+1}{x-1}</m></p></statement><answer><p><m>f'(x)=\frac{-2}{(x-1)^2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x}{3x - 5}</m></p></statement><answer><p><m>f'(x)=\frac{-5}{(3x-5)^2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x}{1+x}</m></p></statement><answer><p><m>f'(x)=\frac{1}{(1+x)^2}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Derivatives of Square Root Functions</title>
+      <introduction><p>Find the derivative of each function, using the limit definition of the derivative.</p></introduction>
+      <task><statement><p><m>f(x) = \sqrt{x+1}</m></p></statement><answer><p><m>f'(x)=\frac{1}{2\sqrt{x+1}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{2x+1}</m></p></statement><answer><p><m>f'(x)=\frac{1}{\sqrt{2x+1}}</m></p></answer></task>
+      <task><statement><p><m>f(x)=\sqrt{3x+2}</m></p></statement><answer><p><m>f'(x)=\frac{3}{2\sqrt{3x+2}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x^2+4}</m></p></statement><answer><p><m>f'(x)=\frac{x}{\sqrt{x^2+4}}</m></p></answer></task>
+    </project>
+
+    <exercise>
+      <title>Tangent Line from Given Values</title>
+      <statement><p>Find the equation of the tangent line of <m>f</m> at <m>x = 3</m>, given that <m>f(3) = 5</m> and <m>f'(3) = 2</m>.</p></statement>
+      <answer><p><m>y - 5 = 2(x-3)</m> or <m>y = 2x-1</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Finding Derivative from Tangent Line Equation</title>
+      <statement><p>Suppose that the tangent line to <m>f</m> at <m>x = 3</m> has equation <m>y = 5x + 2</m>. Find <m>f(3)</m> and <m>f'(3)</m>.</p></statement>
+      <answer><p><m>f(3) = 17</m> and <m>f'(3) = 5</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Derivative of <m>x|x|</m></title>
+      <statement><p>For the function <m>f(x)=x \cdot |x|</m>, show that <m>f'(0)</m> exists. What is the value?</p></statement>
+      <answer><p><m>f'(0)=0</m></p></answer>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-advanced-derivative-examples">
+    <title>Advanced Examples</title>
+
+    <exercise>
+      <title>Tangent Lines Through an External Point</title>
+      <statement><p>Determine the equations of both lines that are tangent to the graph of <m>f(x)=x^2</m> and pass through the point <m>(1,-3)</m>.</p></statement>
+      <answer><p><m>y=6x-9</m> and <m>y=-2x-1</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Continuous but Not Differentiable</title>
+      <statement><p>Give an example of a function that is continuous on <m>-\infty \lt x \lt \infty</m> but is not differentiable at <m>x=3</m>.</p></statement>
+      <answer><p><m>f(x)=|x-3|</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Parallel to a Line</title>
+      <statement><p>At what point on the graph of <m>y=x^2-4x-5</m> is the tangent parallel to <m>2x-y=1</m>?</p></statement>
+      <answer><p><m>(3,-8)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Evaluating a Limit Using Derivative Information</title>
+      <statement><p>If <m>f(a)=0</m> and <m>f'(a)=6</m>, find <m>\lim_{h\to 0}\frac{f(a+h)}{2h}</m>.</p></statement>
+      <answer><p><m>3</m></p></answer>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-differentiability">
+    <title>Differentiability</title>
+
+    <example>
+      <title>Domain of the Derivative</title>
+      <p>For <m>f(x)=\sqrt{x}</m>, notice that while its domain is <m>[0,\infty)</m>, its derivative <m>f'(x)</m> is only differentiable on <m>(0,\infty)</m>. In particular, <m>f</m> is not differentiable at <m>x = 0</m>.</p>
+    </example>
+
+    <example>
+      <title>Geometric Visualization of the Derivative</title>
+      <p>There is a nice visualization for this derivative. Let <m>y = x^2</m> represent the area of a square with side length <m>x</m>. Then, for some small increment <m>\Delta x</m>, the added area is <m>\Delta y = 2x \Delta x + (\Delta x)^2</m>. Then,</p>
+      <md>
+        <mrow>\frac{\Delta y}{\Delta x} \amp= \frac{2x \Delta x + (\Delta x)^2}{\Delta x}</mrow>
+        <mrow>\amp= 2x + \Delta x</mrow>
+      </md>
+      <p>Then, as <m>\Delta x \to 0</m>, we get,</p>
+      <me>\frac{dy}{dx} = 2x</me>
+    </example>
+  </subsection>
+
+</section>
