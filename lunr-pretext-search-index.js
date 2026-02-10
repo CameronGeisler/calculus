@@ -370,6 +370,150 @@ var ptx_lunr_docs = [
   "body": " Geometric Visualization of the Derivative  There is a nice visualization for this derivative. Let represent the area of a square with side length . Then, for some small increment , the added area is . Then,   Then, as , we get,   "
 },
 {
+  "id": "sec-basic-derivative-rules",
+  "level": "1",
+  "url": "sec-basic-derivative-rules.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Basic Derivative Rules",
+  "body": " Basic Derivative Rules   Calculating derivatives using the limit definition is often tedious and sometimes difficult, especially for more complicated functions. It turns out, there are various patterns and shortcut rules for computing derivatives of various functions, i.e. differentiation rules ,   Rules to differentiate specific types of functions, that you have learned about in pre-calculus.  Also, rules to differentiate various types of combinations of those functions.    This could be called systematic differentiation . Combining all of these rules will allow us to compute derivatives of every type of function that is covered in pre-calculus.    Derivative of Constant and a Line  Perhaps the most basic function is a constant function.   Constant Function  Consider the function . This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. Graph of . Its graph is a horizontal line at , which has slope 0, so we would expect that its derivative would be always 0.   In general, for a constant function, of the form (where is some number), its derivative is 0.   Derivative of a Constant Is Zero   If for some number , then . In other words,     Using the definition of the derivative, we have,     In short,   A slightly more complicated situation is the case of a line.   Linear Function  Consider the function . This is a linear function, because its graph is a line. Graph of . This line has a slope of 2, so we would expect that its derivative would be always 2.   In general, a line has a constant slope, so its derivative is the slope of the line.    Derivatives of Constants and Lines  Find the derivative of each function.          Derivative of Power Functions (Power Rule)  The next basic type of function we will consider are power functions, where the variable is raised to a constant number.   Discovering the Power Rule Pattern  You may recall from a previous section the following derivatives of , , , and . If not, these can be derived from the limit definition of the derivative. They are,   Observe the pattern for the derivative of these powers of . The derivative has:   A coefficient in the front, which is the exponent of .  The variable raised to a exponent that is one less than what it was before.   This applies to even the first example , as has an exponent of 1, so the pattern says the derivative should be (recall: for any ).  It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for any number.    Power Rule for Derivatives   If for some number , then . In other words,     In other words, to differentiate a function that is some power of the variable ,   Bring down the exponent into the front and multiply it  Subtract 1 from the exponent.    Power Rule with Reciprocal and Square Root  You may recall 2 more examples of derivatives we have seen before, which don't look like powers at first, but can be rewritten as powers in order to use the power rule,   For (the reciprocal function). You may recall the derivative is . This also follows the power rule, because .   For , you may recall the derivative is . This also follows the power rule, because ,      Power Rule Practice  Differentiate each function.          Derivative of Sums and Differences   Differentiating Term by Term  Consider the derivative of . This function has 3 terms ( , , and ). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of is , the derivative of is 5, and the derivative of is 0. So, the derivative of is .   In general, to differentiate a function with multiple terms,   Differentiate each term individually (term-by-term).  For any coefficients (numbers multiplied in the front), keep them in the front (they come along for the ride ).   These two intuitive rules are formalized by the sum rule, difference rule, and constant multiple rule.   Sum\/Difference Rule and Constant Multiple Rule    Sum\/difference rule . The derivative of a sum or difference is the sum or difference of the derivatives    Constant multiple rule . The derivative of a constant multiplied by a function is the constant multiplied by the derivative of the function.       The sum or difference rule also applies to any number of functions, not just 2 functions. This basically means that derivatives can be determined term-by-term.    Derivative of Polynomial Functions  This rule can be used to differentiate any polynomial function.   Differentiating Polynomials  Differentiate each function.     Expand first.     Rational Exponents and Radical Functions  The power rule can also be used to differentiate functions with rational exponents, i.e. expressions of the form ), and in general any term that can be represented as a power of the variable .   Differentiating Radical Functions  Differentiate each function.      In general, if your derivative has negative exponents, it is good practice to rewrite the final answer with positive exponents.    Simplifying Before Using Basic Rules  Sometimes, you need to simplify the function before you can use the basic rules.   Simplify Then Differentiate  Differentiate each function.           "
+},
+{
+  "id": "sec-basic-derivative-rules-2-1",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#sec-basic-derivative-rules-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "differentiation rules "
+},
+{
+  "id": "sec-basic-derivative-rules-2-4",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#sec-basic-derivative-rules-2-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "systematic differentiation "
+},
+{
+  "id": "subsec-derivative-constant-line-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-3",
+  "type": "Example",
+  "number": "2.2.1",
+  "title": "Constant Function.",
+  "body": " Constant Function  Consider the function . This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. Graph of . Its graph is a horizontal line at , which has slope 0, so we would expect that its derivative would be always 0.  "
+},
+{
+  "id": "subsec-derivative-constant-line-5",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-5",
+  "type": "Theorem",
+  "number": "2.2.2",
+  "title": "Derivative of a Constant Is Zero.",
+  "body": " Derivative of a Constant Is Zero   If for some number , then . In other words,     Using the definition of the derivative, we have,    "
+},
+{
+  "id": "subsec-derivative-constant-line-9",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-9",
+  "type": "Example",
+  "number": "2.2.3",
+  "title": "Linear Function.",
+  "body": " Linear Function  Consider the function . This is a linear function, because its graph is a line. Graph of . This line has a slope of 2, so we would expect that its derivative would be always 2.  "
+},
+{
+  "id": "subsec-derivative-constant-line-12",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-12",
+  "type": "Exercise Group",
+  "number": "2.2.1",
+  "title": "Derivatives of Constants and Lines.",
+  "body": " Derivatives of Constants and Lines  Find the derivative of each function.       "
+},
+{
+  "id": "subsec-power-rule-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-power-rule-3",
+  "type": "Example",
+  "number": "2.2.4",
+  "title": "Discovering the Power Rule Pattern.",
+  "body": " Discovering the Power Rule Pattern  You may recall from a previous section the following derivatives of , , , and . If not, these can be derived from the limit definition of the derivative. They are,   Observe the pattern for the derivative of these powers of . The derivative has:   A coefficient in the front, which is the exponent of .  The variable raised to a exponent that is one less than what it was before.   This applies to even the first example , as has an exponent of 1, so the pattern says the derivative should be (recall: for any ).  It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for any number.  "
+},
+{
+  "id": "subsec-power-rule-4",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-power-rule-4",
+  "type": "Theorem",
+  "number": "2.2.5",
+  "title": "Power Rule for Derivatives.",
+  "body": " Power Rule for Derivatives   If for some number , then . In other words,    "
+},
+{
+  "id": "subsec-power-rule-7",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-power-rule-7",
+  "type": "Remark",
+  "number": "2.2.6",
+  "title": "Power Rule with Reciprocal and Square Root.",
+  "body": " Power Rule with Reciprocal and Square Root  You may recall 2 more examples of derivatives we have seen before, which don't look like powers at first, but can be rewritten as powers in order to use the power rule,   For (the reciprocal function). You may recall the derivative is . This also follows the power rule, because .   For , you may recall the derivative is . This also follows the power rule, because ,    "
+},
+{
+  "id": "subsec-power-rule-8",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-power-rule-8",
+  "type": "Exercise Group",
+  "number": "2.2.2",
+  "title": "Power Rule Practice.",
+  "body": " Power Rule Practice  Differentiate each function.       "
+},
+{
+  "id": "subsec-sum-difference-rule-2",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-sum-difference-rule-2",
+  "type": "Example",
+  "number": "2.2.7",
+  "title": "Differentiating Term by Term.",
+  "body": " Differentiating Term by Term  Consider the derivative of . This function has 3 terms ( , , and ). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of is , the derivative of is 5, and the derivative of is 0. So, the derivative of is .  "
+},
+{
+  "id": "subsec-sum-difference-rule-6",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-sum-difference-rule-6",
+  "type": "Theorem",
+  "number": "2.2.8",
+  "title": "Sum\/Difference Rule and Constant Multiple Rule.",
+  "body": " Sum\/Difference Rule and Constant Multiple Rule    Sum\/difference rule . The derivative of a sum or difference is the sum or difference of the derivatives    Constant multiple rule . The derivative of a constant multiplied by a function is the constant multiplied by the derivative of the function.      "
+},
+{
+  "id": "subsec-derivative-polynomials-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-derivative-polynomials-3",
+  "type": "Exercise Group",
+  "number": "2.2.3",
+  "title": "Differentiating Polynomials.",
+  "body": " Differentiating Polynomials  Differentiate each function.     Expand first.  "
+},
+{
+  "id": "subsec-rational-exponents-radicals-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-rational-exponents-radicals-3",
+  "type": "Exercise Group",
+  "number": "2.2.4",
+  "title": "Differentiating Radical Functions.",
+  "body": " Differentiating Radical Functions  Differentiate each function.     "
+},
+{
+  "id": "subsec-simplify-before-differentiating-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-simplify-before-differentiating-3",
+  "type": "Exercise Group",
+  "number": "2.2.5",
+  "title": "Simplify Then Differentiate.",
+  "body": " Simplify Then Differentiate  Differentiate each function.         "
+},
+{
   "id": "sec-implicit-differentiation",
   "level": "1",
   "url": "sec-implicit-differentiation.html",

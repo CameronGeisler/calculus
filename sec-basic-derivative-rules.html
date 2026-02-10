@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Basic Derivative Rules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus">
+<meta property="book:author" content="">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.13';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="book.html"><span class="title">Calculus</span> <span class="subtitle">Cameron Geisler</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-the-derivative-function.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-differentiation-techniques.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\renewcommand{\neg}{\sim}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\eval}[1]{\left. #1 \right|}
+
+\newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-limits.html" class="internal"><span class="codenumber">1</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-calculating-limits.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Calculating Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculating-limits.html#subsec-simple-limits" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Simple Limits (Direct Substitution)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculating-limits.html#subsec-indeterminate-form" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Limits in Indeterminate Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculating-limits.html#subsec-factoring-canceling" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Factoring and Canceling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculating-limits.html#subsec-rationalizing" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Rationalizing (Removing Roots)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculating-limits.html#subsec-absolute-value-limits" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Limits with Absolute Values</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculating-limits.html#subsec-complex-fractions" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Simplifying Complex Fractions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculating-limits.html#subsec-one-sided-limits" class="internal"><span class="codenumber">1.1.7</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculating-limits.html#subsec-substitution" class="internal"><span class="codenumber">1.1.8</span> <span class="title">Substitution (Change of Variable)</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-derivatives.html" class="internal"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-the-derivative-function.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Derivative Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-derivative-function.html#subsec-derivative-as-function" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Derivative as a Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-derivative-function.html#subsec-derivative-limit-definition" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Derivative Using Limit Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-derivative-function.html#subsec-advanced-derivative-examples" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Advanced Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-derivative-function.html#subsec-differentiability" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Differentiability</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-basic-derivative-rules.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Basic Derivative Rules</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basic-derivative-rules.html#subsec-derivative-constant-line" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Derivative of Constant and a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basic-derivative-rules.html#subsec-power-rule" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Derivative of Power Functions (Power Rule)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basic-derivative-rules.html#subsec-sum-difference-rule" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Derivative of Sums and Differences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basic-derivative-rules.html#subsec-derivative-polynomials" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Derivative of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basic-derivative-rules.html#subsec-rational-exponents-radicals" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Rational Exponents and Radical Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basic-derivative-rules.html#subsec-simplify-before-differentiating" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Simplifying Before Using Basic Rules</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation-techniques.html" class="internal"><span class="codenumber">3</span> <span class="title">Differentiation Techniques</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-implicit-differentiation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-implicit-differentiation.html#sec-implicit-curves-slopes" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Implicit Curves and Their Slopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-implicit-differentiation.html#sec-summary-implicit-diff" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Summary of Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-implicit-differentiation.html#sec-horiz-vert-tangents" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Horizontal and Vertical Tangents</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-graphical-behavior-of-functions.html" class="internal"><span class="codenumber">4</span> <span class="title">Graphical Behavior of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-increasing-and-decreasing-functions.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Increasing and Decreasing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-increasing-and-decreasing-functions.html#subsec-increasing-decreasing-functions" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Increasing and Decreasing Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-increasing-and-decreasing-functions.html#subsec-increasing-decreasing-test" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Increasing/Decreasing Test (Positive Derivative Implies Increasing)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-increasing-and-decreasing-functions.html#subsec-finding-intervals-increase-decrease" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Finding Intervals of Increase and Decrease</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-local-extrema-first-derivative-test.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Local Extrema and the First Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-local-extrema-first-derivative-test.html#subsec-finding-local-maxima-minima-examples" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Finding Local Maxima/Minima Examples</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sketching-graphs-of-functions.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Sketching Graphs of Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sketching-graphs-of-functions.html#subsection-examples" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Examples</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-applications-of-derivatives.html" class="internal"><span class="codenumber">5</span> <span class="title">Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-lhopitals-rule.html" class="internal"><span class="codenumber">5.1</span> <span class="title">L’Hopital’s Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-lhopitals-rule.html#subsec-lhopital-summary" class="internal"><span class="codenumber">5.1.1</span> <span class="title">L’Hopital’s Rule Summary</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-integration-techniques.html" class="internal"><span class="codenumber">6</span> <span class="title">Integration Techniques</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-inverse-trig-sub.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Inverse Trigonometric Substitution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#summary-of-inverse-trigonometric-substitution" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Summary of Inverse Trigonometric Substitution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-inverse-trig-sub.html#examples" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-infinite-sequences-and-series.html" class="internal"><span class="codenumber">7</span> <span class="title">Infinite Sequences and Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-summary-of-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Summary of Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-summary-of-series.html#sec-summary-of-series-3" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Choosing Which Test to Use</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-summary-of-series.html#sec-summary-of-series-4" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Overall Remarks</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-series-review.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Series Review</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-series-review.html#sec-series-review-3" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-series-review.html#sec-series-review-3-2" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-series-representation-of-functions.html" class="internal"><span class="codenumber">8</span> <span class="title">Series Representation of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-power-series.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-power-series.html#sec-power-series-2" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Interval of Convergence of Power Series Summary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-power-series.html#sec-power-series-3" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-power-series.html#sec-power-series-4" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Advanced Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-representation-of-functions-with-power-series.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Representation of Functions with Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-3" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Motivational Example: Geometric Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-4" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Power Series as an Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-5" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Power Series Representation of Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Examples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-representation-of-functions-with-power-series.html#sec-representation-of-functions-with-power-series-6-2" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-differentiation-and-integration-of-power-series.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Differentiation and Integration of Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-3" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Differentiation and Integration of Power Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-4" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Power Series of Arctangent</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-5" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Power Series of the Logarithm</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-6" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Derivative of Geometric Series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-differentiation-and-integration-of-power-series.html#sec-differentiation-and-integration-of-power-series-6-10" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-applications-of-taylor-series.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Applications of Taylor Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-2" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Evaluating Limits of Indeterminate Forms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-applications-of-taylor-series.html#sec-applications-of-taylor-series-3" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Finding Antiderivatives / Approximating Integrals with Series</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-summary-of-series-representation-of-functions.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Summary</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-summary-of-series-representation-of-functions.html#sec-summary-of-series-representation-of-functions-2" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Common Maclaurin Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-summary-of-series-representation-of-functions.html#sec-summary-of-series-representation-of-functions-3" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Key Skills</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-summary-of-series-representation-of-functions.html#sec-summary-of-series-representation-of-functions-4" class="internal"><span class="codenumber">8.5.3</span> <span class="title">More Maclaurin Series</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-differential-equations.html" class="internal"><span class="codenumber">9</span> <span class="title">Differential Equations</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-basic-derivative-rules"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic Derivative Rules</span>
+</h2>
+<section class="introduction" id="sec-basic-derivative-rules-2"><div class="para" id="sec-basic-derivative-rules-2-1">Calculating derivatives using the limit definition is often tedious and sometimes difficult, especially for more complicated functions. It turns out, there are various patterns and shortcut rules for computing derivatives of various functions, i.e. <dfn class="terminology">differentiation rules</dfn>,<div class="autopermalink" data-description="Paragraph"><a href="#sec-basic-derivative-rules-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec-basic-derivative-rules-2-2">
+<li id="sec-basic-derivative-rules-2-2-1">
+<div class="para" id="sec-basic-derivative-rules-2-2-1-1">Rules to differentiate specific types of functions, that you have learned about in pre-calculus.<div class="autopermalink" data-description="Paragraph"><a href="#sec-basic-derivative-rules-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-basic-derivative-rules-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-basic-derivative-rules-2-2-2">
+<div class="para" id="sec-basic-derivative-rules-2-2-2-1">Also, rules to differentiate various types of <em class="emphasis">combinations</em> of those functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-basic-derivative-rules-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-basic-derivative-rules-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="displaymath process-math" id="sec-basic-derivative-rules-2-3">
+\begin{equation*}
+\begin{cases} \text{polynomials / powers} \quad x^n \\ \text{rational functions} \quad \frac{p(x)}{q(x)} \\ \text{trigonometric functions} \quad \sin{x}, \cos{x}, \tan{x}, .\dots \\ \text{exponential functions} \quad b^x, e^x \\ \text{logarithmic functions} \quad \log{x} \\ \qquad \vdots \end{cases} \qquad \begin{cases} \text{sum and difference (adding and subtracting)} \\  \text{product (multiplying)} \\ \text{quotient (dividing)} \\ \text{composition (one function inside another)} \end{cases}
+\end{equation*}
+</div>
+<div class="para" id="sec-basic-derivative-rules-2-4">This could be called <dfn class="terminology">systematic differentiation</dfn>. Combining all of these rules will allow us to compute derivatives of every type of function that is covered in pre-calculus.<div class="autopermalink" data-description="Paragraph"><a href="#sec-basic-derivative-rules-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-derivative-constant-line"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of Constant and a Line</span>
+</h3>
+<div class="para" id="subsec-derivative-constant-line-2">Perhaps the most basic function is a constant function.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-derivative-constant-line-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constant Function.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-derivative-constant-line-3-2">Consider the function <span class="process-math">\(f(x) = 3\text{.}\)</span> This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. <a class="external" href="https://www.desmos.com/calculator/ejelchpaql" target="_blank">Graph of <span class="process-math">\(f(x)=3\)</span></a>. Its graph is a horizontal line at <span class="process-math">\(y=3\text{,}\)</span> which has slope 0, so we would expect that its derivative would be always 0.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.2.1: Constant Function"><a href="#subsec-derivative-constant-line-3" title="Copy heading and permalink for Example 2.2.1: Constant Function" aria-label="Copy heading and permalink for Example 2.2.1: Constant Function">🔗</a></div></article></details><div class="para" id="subsec-derivative-constant-line-4">In general, for a constant function, of the form <span class="process-math">\(f(x)=k\)</span> (where <span class="process-math">\(k\)</span> is some number), its derivative is 0.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="subsec-derivative-constant-line-5"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of a Constant Is Zero.</span>
+</h4>
+<div class="para" id="subsec-derivative-constant-line-5-2-1">If <span class="process-math">\(f(x) = k\)</span> for some number <span class="process-math">\(k\text{,}\)</span> then <span class="process-math">\(f'(x) = 0\text{.}\)</span> In other words,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-derivative-constant-line-5-2-2">
+\begin{equation*}
+\boxed{\frac{d}{dx} k = 0}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Theorem 2.2.2: Derivative of a Constant Is Zero"><a href="#subsec-derivative-constant-line-5" title="Copy heading and permalink for Theorem 2.2.2: Derivative of a Constant Is Zero" aria-label="Copy heading and permalink for Theorem 2.2.2: Derivative of a Constant Is Zero">🔗</a></div></article><details id="subsec-derivative-constant-line-5-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="subsec-derivative-constant-line-5-3-1">Using the definition of the derivative, we have,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-derivative-constant-line-5-3-2">
+\begin{align*}
+f'(x) \amp= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\\
+\amp= \lim_{h \to 0} \frac{k - k}{h} \amp\amp \text{as $f(x + h) = k$ and $f(x) = k$}\\
+\amp= \lim_{h \to 0} \frac{0}{h}\\
+\amp= \lim_{h \to 0} 0\\
+\amp= 0
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Proof 2.2.2.1"><a href="#subsec-derivative-constant-line-5-3" title="Copy heading and permalink for Proof 2.2.2.1" aria-label="Copy heading and permalink for Proof 2.2.2.1">🔗</a></div></article></details><div class="para" id="subsec-derivative-constant-line-6">In short,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-derivative-constant-line-7">
+\begin{equation*}
+\boxed{\text{The derivative of a constant is zero.}}
+\end{equation*}
+</div>
+<div class="para" id="subsec-derivative-constant-line-8">A slightly more complicated situation is the case of a line.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-derivative-constant-line-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear Function.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-derivative-constant-line-9-2">Consider the function <span class="process-math">\(f(x) = 2x + 3\text{.}\)</span> This is a linear function, because its graph is a line. <a class="external" href="https://www.desmos.com/calculator/yjfgw2gxzb" target="_blank">Graph of <span class="process-math">\(f(x)=2x+3\)</span></a>. This line has a slope of 2, so we would expect that its derivative would be always 2.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.2.3: Linear Function"><a href="#subsec-derivative-constant-line-9" title="Copy heading and permalink for Example 2.2.3: Linear Function" aria-label="Copy heading and permalink for Example 2.2.3: Linear Function">🔗</a></div></article></details><div class="para" id="subsec-derivative-constant-line-10">In general, a line has a constant slope, so its derivative is the slope of the line.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-derivative-constant-line-11">
+\begin{equation*}
+\boxed{\text{The derivative of a line is its slope.}}
+\end{equation*}
+</div>
+<details id="subsec-derivative-constant-line-12" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Exercise Group</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Constants and Lines.</span>
+</h4></summary><article class="project project-like knowl__content"><div class="introduction" id="subsec-derivative-constant-line-12-2"><div class="para" id="subsec-derivative-constant-line-12-2-1">Find the derivative of each function.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-derivative-constant-line-12-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-derivative-constant-line-12-3-1-1">
+<span class="process-math">\(f(x) = 5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-derivative-constant-line-12-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-constant-line-12-3-2-1">
+<span class="process-math">\(f'(x) = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.a.1"><a href="#subsec-derivative-constant-line-12-3-2" title="Copy heading and permalink for Answer 2.2.1.a.1" aria-label="Copy heading and permalink for Answer 2.2.1.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.1.a"><a href="#subsec-derivative-constant-line-12-3" title="Copy heading and permalink for Task 2.2.1.a" aria-label="Copy heading and permalink for Task 2.2.1.a">🔗</a></div></article><article class="task exercise-like" id="subsec-derivative-constant-line-12-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-derivative-constant-line-12-4-1-1">
+<span class="process-math">\(f(x) = -3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-derivative-constant-line-12-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-constant-line-12-4-2-1">
+<span class="process-math">\(f'(x) = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.b.1"><a href="#subsec-derivative-constant-line-12-4-2" title="Copy heading and permalink for Answer 2.2.1.b.1" aria-label="Copy heading and permalink for Answer 2.2.1.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.1.b"><a href="#subsec-derivative-constant-line-12-4" title="Copy heading and permalink for Task 2.2.1.b" aria-label="Copy heading and permalink for Task 2.2.1.b">🔗</a></div></article><article class="task exercise-like" id="subsec-derivative-constant-line-12-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-derivative-constant-line-12-5-1-1">
+<span class="process-math">\(f(x) = 7x + 2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-derivative-constant-line-12-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-constant-line-12-5-2-1">
+<span class="process-math">\(f'(x) = 7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.c.1"><a href="#subsec-derivative-constant-line-12-5-2" title="Copy heading and permalink for Answer 2.2.1.c.1" aria-label="Copy heading and permalink for Answer 2.2.1.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.1.c"><a href="#subsec-derivative-constant-line-12-5" title="Copy heading and permalink for Task 2.2.1.c" aria-label="Copy heading and permalink for Task 2.2.1.c">🔗</a></div></article><article class="task exercise-like" id="subsec-derivative-constant-line-12-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="subsec-derivative-constant-line-12-6-1-1">
+<span class="process-math">\(f(x) = -4x + 9\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-derivative-constant-line-12-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-constant-line-12-6-2-1">
+<span class="process-math">\(f'(x) = -4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.d.1"><a href="#subsec-derivative-constant-line-12-6-2" title="Copy heading and permalink for Answer 2.2.1.d.1" aria-label="Copy heading and permalink for Answer 2.2.1.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.1.d"><a href="#subsec-derivative-constant-line-12-6" title="Copy heading and permalink for Task 2.2.1.d" aria-label="Copy heading and permalink for Task 2.2.1.d">🔗</a></div></article><article class="task exercise-like" id="subsec-derivative-constant-line-12-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="subsec-derivative-constant-line-12-7-1-1">
+<span class="process-math">\(f(x) = \frac{\pi}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-derivative-constant-line-12-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-constant-line-12-7-2-1">
+<span class="process-math">\(f'(x) = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-constant-line-12-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.e.1"><a href="#subsec-derivative-constant-line-12-7-2" title="Copy heading and permalink for Answer 2.2.1.e.1" aria-label="Copy heading and permalink for Answer 2.2.1.e.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.1.e"><a href="#subsec-derivative-constant-line-12-7" title="Copy heading and permalink for Task 2.2.1.e" aria-label="Copy heading and permalink for Task 2.2.1.e">🔗</a></div></article><div class="autopermalink" data-description="Exercise Group 2.2.1: Derivatives of Constants and Lines"><a href="#subsec-derivative-constant-line-12" title="Copy heading and permalink for Exercise Group 2.2.1: Derivatives of Constants and Lines" aria-label="Copy heading and permalink for Exercise Group 2.2.1: Derivatives of Constants and Lines">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.2.1: Derivative of Constant and a Line"><a href="#subsec-derivative-constant-line" title="Copy heading and permalink for Subsection 2.2.1: Derivative of Constant and a Line" aria-label="Copy heading and permalink for Subsection 2.2.1: Derivative of Constant and a Line">🔗</a></div></section><section class="subsection" id="subsec-power-rule"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of Power Functions (Power Rule)</span>
+</h3>
+<div class="para" id="subsec-power-rule-2">The next basic type of function we will consider are power functions, where the variable is raised to a constant number.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-power-rule-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Discovering the Power Rule Pattern.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-power-rule-3-2">You may recall from a previous section the following derivatives of <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2\text{,}\)</span> <span class="process-math">\(x^3\text{,}\)</span> and <span class="process-math">\(x^4\text{.}\)</span> If not, these can be derived from the limit definition of the derivative. They are,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-power-rule-3-3">
+\begin{align*}
+\frac{d}{dx} x \amp= 1\\
+\frac{d}{dx} x^2 \amp= 2x\\
+\frac{d}{dx} x^3 \amp= 3x^2\\
+\frac{d}{dx} x^4 \amp= 4x^3
+\end{align*}
+</div>
+<div class="para" id="subsec-power-rule-3-4">Observe the pattern for the derivative of these powers of <span class="process-math">\(x\text{.}\)</span> The derivative has:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="subsec-power-rule-3-5">
+<li id="subsec-power-rule-3-5-1">
+<div class="para" id="subsec-power-rule-3-5-1-1">A coefficient in the front, which is the exponent of <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-power-rule-3-5-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-power-rule-3-5-2">
+<div class="para" id="subsec-power-rule-3-5-2-1">The variable <span class="process-math">\(x\)</span> raised to a exponent that is one less than what it was before.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-power-rule-3-5-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="subsec-power-rule-3-6">This applies to even the first example <span class="process-math">\(\frac{d}{dx} x = 1\text{,}\)</span> as <span class="process-math">\(x\)</span> has an exponent of 1, so the pattern says the derivative should be <span class="process-math">\(1 \cdot x^0 = 1\)</span> (recall: <span class="process-math">\(x^0 = 1\)</span> for any <span class="process-math">\(x\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-power-rule-3-7">It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for <em class="emphasis">any</em> number.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.2.4: Discovering the Power Rule Pattern"><a href="#subsec-power-rule-3" title="Copy heading and permalink for Example 2.2.4: Discovering the Power Rule Pattern" aria-label="Copy heading and permalink for Example 2.2.4: Discovering the Power Rule Pattern">🔗</a></div></article></details><article class="theorem theorem-like" id="subsec-power-rule-4"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Rule for Derivatives.</span>
+</h4>
+<div class="para" id="subsec-power-rule-4-2-1">If <span class="process-math">\(f(x) = x^n\)</span> for some number <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(f'(x) = n x^{n-1}\text{.}\)</span> In other words,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-power-rule-4-2-2">
+\begin{equation*}
+\boxed{\frac{d}{dx} x^n = n x^{n-1}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Theorem 2.2.5: Power Rule for Derivatives"><a href="#subsec-power-rule-4" title="Copy heading and permalink for Theorem 2.2.5: Power Rule for Derivatives" aria-label="Copy heading and permalink for Theorem 2.2.5: Power Rule for Derivatives">🔗</a></div></article><div class="para" id="subsec-power-rule-5">In other words, to differentiate a function that is some power of the variable <span class="process-math">\(x\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="subsec-power-rule-6">
+<li id="subsec-power-rule-6-1">
+<div class="para" id="subsec-power-rule-6-1-1">Bring down the exponent into the “front” and multiply it<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-power-rule-6-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-power-rule-6-2">
+<div class="para" id="subsec-power-rule-6-2-1">Subtract 1 from the exponent.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-power-rule-6-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<details id="subsec-power-rule-7" class="remark remark-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Rule with Reciprocal and Square Root.</span>
+</h4></summary><article class="remark remark-like knowl__content"><div class="para" id="subsec-power-rule-7-2">You may recall 2 more examples of derivatives we have seen before, which don’t look like powers at first, but can be rewritten as powers in order to use the power rule,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="subsec-power-rule-7-3">
+<li id="subsec-power-rule-7-3-1">
+<div class="para logical" id="subsec-power-rule-7-3-1-1">
+<div class="para">For <span class="process-math">\(f(x) = \frac{1}{x}\)</span> (the reciprocal function). You may recall the derivative is <span class="process-math">\(f'(x) = -\frac{1}{x^2}\text{.}\)</span> This also follows the power rule, because <span class="process-math">\(\frac{1}{x} = x^{-1}\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-power-rule-7-3-1-1-4">
+\begin{align*}
+\frac{d}{dx} \frac{1}{x} \amp= \frac{d}{dx} x^{-1}\\
+\amp= -x^{-2} \amp\amp \text{by the power rule}\\
+\amp= -\frac{1}{x^2}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-power-rule-7-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-power-rule-7-3-2">
+<div class="para logical" id="subsec-power-rule-7-3-2-1">
+<div class="para">For <span class="process-math">\(f(x) = \sqrt{x}\text{,}\)</span> you may recall the derivative is <span class="process-math">\(f'(x) = \frac{1}{2\sqrt{x}}\text{.}\)</span> This also follows the power rule, because <span class="process-math">\(\sqrt{x} = x^{1/2}\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-power-rule-7-3-2-1-4">
+\begin{align*}
+\frac{d}{dx} \sqrt{x} \amp= \frac{d}{dx} x^{1/2}\\
+\amp= \frac{1}{2} x^{-1/2} \amp\amp \text{by the power rule}\\
+\amp= \frac{1}{2\sqrt{x}}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-7-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-power-rule-7-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Remark 2.2.6: Power Rule with Reciprocal and Square Root"><a href="#subsec-power-rule-7" title="Copy heading and permalink for Remark 2.2.6: Power Rule with Reciprocal and Square Root" aria-label="Copy heading and permalink for Remark 2.2.6: Power Rule with Reciprocal and Square Root">🔗</a></div></article></details><details id="subsec-power-rule-8" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Exercise Group</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Rule Practice.</span>
+</h4></summary><article class="project project-like knowl__content"><div class="introduction" id="subsec-power-rule-8-2"><div class="para" id="subsec-power-rule-8-2-1">Differentiate each function.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-power-rule-8-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-power-rule-8-3-1-1">
+<span class="process-math">\(f(x) = x^5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-power-rule-8-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-power-rule-8-3-2-1">
+<span class="process-math">\(f'(x) = 5x^4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.2.a.1"><a href="#subsec-power-rule-8-3-2" title="Copy heading and permalink for Answer 2.2.2.a.1" aria-label="Copy heading and permalink for Answer 2.2.2.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.2.a"><a href="#subsec-power-rule-8-3" title="Copy heading and permalink for Task 2.2.2.a" aria-label="Copy heading and permalink for Task 2.2.2.a">🔗</a></div></article><article class="task exercise-like" id="subsec-power-rule-8-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-power-rule-8-4-1-1">
+<span class="process-math">\(f(x) = x^{-3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-power-rule-8-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-power-rule-8-4-2-1">
+<span class="process-math">\(f'(x) = -3x^{-4} = -\frac{3}{x^4}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.2.b.1"><a href="#subsec-power-rule-8-4-2" title="Copy heading and permalink for Answer 2.2.2.b.1" aria-label="Copy heading and permalink for Answer 2.2.2.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.2.b"><a href="#subsec-power-rule-8-4" title="Copy heading and permalink for Task 2.2.2.b" aria-label="Copy heading and permalink for Task 2.2.2.b">🔗</a></div></article><article class="task exercise-like" id="subsec-power-rule-8-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-power-rule-8-5-1-1">
+<span class="process-math">\(f(x) = \frac{2}{x^6}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-power-rule-8-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-power-rule-8-5-2-1">
+<span class="process-math">\(f'(x) = -12x^{-7} =-\frac{12}{x^7}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.2.c.1"><a href="#subsec-power-rule-8-5-2" title="Copy heading and permalink for Answer 2.2.2.c.1" aria-label="Copy heading and permalink for Answer 2.2.2.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.2.c"><a href="#subsec-power-rule-8-5" title="Copy heading and permalink for Task 2.2.2.c" aria-label="Copy heading and permalink for Task 2.2.2.c">🔗</a></div></article><article class="task exercise-like" id="subsec-power-rule-8-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="subsec-power-rule-8-6-1-1">
+<span class="process-math">\(f(x) = x^{7/2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-power-rule-8-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-power-rule-8-6-2-1">
+<span class="process-math">\(f'(x) = \frac{7}{2} x^{5/2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.2.d.1"><a href="#subsec-power-rule-8-6-2" title="Copy heading and permalink for Answer 2.2.2.d.1" aria-label="Copy heading and permalink for Answer 2.2.2.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.2.d"><a href="#subsec-power-rule-8-6" title="Copy heading and permalink for Task 2.2.2.d" aria-label="Copy heading and permalink for Task 2.2.2.d">🔗</a></div></article><article class="task exercise-like" id="subsec-power-rule-8-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="subsec-power-rule-8-7-1-1">
+<span class="process-math">\(f(x) = x^{\sqrt{2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-power-rule-8-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-power-rule-8-7-2-1">
+<span class="process-math">\(f'(x) = \sqrt{2} x^{\sqrt{2} - 1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-power-rule-8-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.2.e.1"><a href="#subsec-power-rule-8-7-2" title="Copy heading and permalink for Answer 2.2.2.e.1" aria-label="Copy heading and permalink for Answer 2.2.2.e.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.2.e"><a href="#subsec-power-rule-8-7" title="Copy heading and permalink for Task 2.2.2.e" aria-label="Copy heading and permalink for Task 2.2.2.e">🔗</a></div></article><div class="autopermalink" data-description="Exercise Group 2.2.2: Power Rule Practice"><a href="#subsec-power-rule-8" title="Copy heading and permalink for Exercise Group 2.2.2: Power Rule Practice" aria-label="Copy heading and permalink for Exercise Group 2.2.2: Power Rule Practice">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.2.2: Derivative of Power Functions (Power Rule)"><a href="#subsec-power-rule" title="Copy heading and permalink for Subsection 2.2.2: Derivative of Power Functions (Power Rule)" aria-label="Copy heading and permalink for Subsection 2.2.2: Derivative of Power Functions (Power Rule)">🔗</a></div></section><section class="subsection" id="subsec-sum-difference-rule"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of Sums and Differences</span>
+</h3>
+<details id="subsec-sum-difference-rule-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiating Term by Term.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-sum-difference-rule-2-2">Consider the derivative of <span class="process-math">\(f(x)= 3x^2 + 5x - 7\text{.}\)</span> This function has 3 terms (<span class="process-math">\(3x^2\text{,}\)</span> <span class="process-math">\(5x\text{,}\)</span> and <span class="process-math">\(-7\)</span>). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of <span class="process-math">\(3x^2\)</span> is <span class="process-math">\(6x\text{,}\)</span> the derivative of <span class="process-math">\(5x\)</span> is 5, and the derivative of <span class="process-math">\(-7\)</span> is 0. So, the derivative of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f'(x) = 6x + 5 + 0 = 6x + 5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-sum-difference-rule-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.2.7: Differentiating Term by Term"><a href="#subsec-sum-difference-rule-2" title="Copy heading and permalink for Example 2.2.7: Differentiating Term by Term" aria-label="Copy heading and permalink for Example 2.2.7: Differentiating Term by Term">🔗</a></div></article></details><div class="para" id="subsec-sum-difference-rule-3">In general, to differentiate a function with multiple terms,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sum-difference-rule-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="subsec-sum-difference-rule-4">
+<li id="subsec-sum-difference-rule-4-1">
+<div class="para" id="subsec-sum-difference-rule-4-1-1">Differentiate each term individually (term-by-term).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sum-difference-rule-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-sum-difference-rule-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-sum-difference-rule-4-2">
+<div class="para" id="subsec-sum-difference-rule-4-2-1">For any coefficients (numbers multiplied in the front), keep them in the front (they “come along for the ride”).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sum-difference-rule-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-sum-difference-rule-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="subsec-sum-difference-rule-5">These two intuitive rules are formalized by the sum rule, difference rule, and constant multiple rule.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sum-difference-rule-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="subsec-sum-difference-rule-6"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sum/Difference Rule and Constant Multiple Rule.</span>
+</h4>
+<ul class="disc" id="subsec-sum-difference-rule-6-2-1">
+<li id="subsec-sum-difference-rule-6-2-1-1">
+<div class="para logical" id="subsec-sum-difference-rule-6-2-1-1-1">
+<div class="para">
+<em class="alert">Sum/difference rule</em>. “The derivative of a sum or difference is the sum or difference of the derivatives”</div>
+<div class="displaymath process-math" id="subsec-sum-difference-rule-6-2-1-1-1-3">
+\begin{equation*}
+\boxed{\frac{d}{dx} \left( f(x) + g(x) \right) = \frac{d}{dx} f(x) + \frac{d}{dx} g(x)} \qquad \text{or} \qquad (f + g)'(x) = f'(x) + g'(x)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sum-difference-rule-6-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-sum-difference-rule-6-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-sum-difference-rule-6-2-1-2">
+<div class="para logical" id="subsec-sum-difference-rule-6-2-1-2-1">
+<div class="para">
+<em class="alert">Constant multiple rule</em>. “The derivative of a constant multiplied by a function is the constant multiplied by the derivative of the function.”</div>
+<div class="displaymath process-math" id="subsec-sum-difference-rule-6-2-1-2-1-3">
+\begin{equation*}
+\boxed{\frac{d}{dx} \left( k f(x) \right) = k \cdot \frac{d}{dx} f(x)} \qquad \text{or} \qquad (kf)'(x) = k f'(x)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sum-difference-rule-6-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-sum-difference-rule-6-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Theorem 2.2.8: Sum/Difference Rule and Constant Multiple Rule"><a href="#subsec-sum-difference-rule-6" title="Copy heading and permalink for Theorem 2.2.8: Sum/Difference Rule and Constant Multiple Rule" aria-label="Copy heading and permalink for Theorem 2.2.8: Sum/Difference Rule and Constant Multiple Rule">🔗</a></div></article><div class="para" id="subsec-sum-difference-rule-7">The sum or difference rule also applies to any number of functions, not just 2 functions. This basically means that derivatives can be determined term-by-term.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sum-difference-rule-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.2.3: Derivative of Sums and Differences"><a href="#subsec-sum-difference-rule" title="Copy heading and permalink for Subsection 2.2.3: Derivative of Sums and Differences" aria-label="Copy heading and permalink for Subsection 2.2.3: Derivative of Sums and Differences">🔗</a></div></section><section class="subsection" id="subsec-derivative-polynomials"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of Polynomial Functions</span>
+</h3>
+<div class="para" id="subsec-derivative-polynomials-2">This rule can be used to differentiate any polynomial function.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-derivative-polynomials-3" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Exercise Group</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiating Polynomials.</span>
+</h4></summary><article class="project project-like knowl__content"><div class="introduction" id="subsec-derivative-polynomials-3-2"><div class="para" id="subsec-derivative-polynomials-3-2-1">Differentiate each function.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-derivative-polynomials-3-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-derivative-polynomials-3-3-1-1">
+<span class="process-math">\(f(x) = x^2 - 4x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-derivative-polynomials-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-polynomials-3-3-2-1">
+<span class="process-math">\(f'(x) = 2x - 4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.a.1"><a href="#subsec-derivative-polynomials-3-3-2" title="Copy heading and permalink for Answer 2.2.3.a.1" aria-label="Copy heading and permalink for Answer 2.2.3.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.3.a"><a href="#subsec-derivative-polynomials-3-3" title="Copy heading and permalink for Task 2.2.3.a" aria-label="Copy heading and permalink for Task 2.2.3.a">🔗</a></div></article><article class="task exercise-like" id="subsec-derivative-polynomials-3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-derivative-polynomials-3-4-1-1">
+<span class="process-math">\(f(x) = 3x^3 - 5x^2 + 7x - 2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-derivative-polynomials-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-polynomials-3-4-2-1">
+<span class="process-math">\(f'(x) = 9x^2 - 10x + 7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.b.1"><a href="#subsec-derivative-polynomials-3-4-2" title="Copy heading and permalink for Answer 2.2.3.b.1" aria-label="Copy heading and permalink for Answer 2.2.3.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.3.b"><a href="#subsec-derivative-polynomials-3-4" title="Copy heading and permalink for Task 2.2.3.b" aria-label="Copy heading and permalink for Task 2.2.3.b">🔗</a></div></article><article class="task exercise-like" id="subsec-derivative-polynomials-3-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-derivative-polynomials-3-5-1-1">
+<span class="process-math">\(f(x) = 3x - \frac{1}{4} x^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-derivative-polynomials-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-polynomials-3-5-2-1">
+<span class="process-math">\(f'(x) = 3 - \frac{3}{4} x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.c.1"><a href="#subsec-derivative-polynomials-3-5-2" title="Copy heading and permalink for Answer 2.2.3.c.1" aria-label="Copy heading and permalink for Answer 2.2.3.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.3.c"><a href="#subsec-derivative-polynomials-3-5" title="Copy heading and permalink for Task 2.2.3.c" aria-label="Copy heading and permalink for Task 2.2.3.c">🔗</a></div></article><article class="task exercise-like" id="subsec-derivative-polynomials-3-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="subsec-derivative-polynomials-3-6-1-1">
+<span class="process-math">\(f(x) = (3x+2)^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-derivative-polynomials-3-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-derivative-polynomials-3-6-2-1">Expand first.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.2.3.d.1"><a href="#subsec-derivative-polynomials-3-6-2" title="Copy heading and permalink for Hint 2.2.3.d.1" aria-label="Copy heading and permalink for Hint 2.2.3.d.1">🔗</a></div>
+</div></details><details id="subsec-derivative-polynomials-3-6-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-derivative-polynomials-3-6-3-1">
+<span class="process-math">\(f'(x) = 18x + 12\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivative-polynomials-3-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.d.1"><a href="#subsec-derivative-polynomials-3-6-3" title="Copy heading and permalink for Answer 2.2.3.d.1" aria-label="Copy heading and permalink for Answer 2.2.3.d.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 2.2.3.d"><a href="#subsec-derivative-polynomials-3-6" title="Copy heading and permalink for Task 2.2.3.d" aria-label="Copy heading and permalink for Task 2.2.3.d">🔗</a></div></article><div class="autopermalink" data-description="Exercise Group 2.2.3: Differentiating Polynomials"><a href="#subsec-derivative-polynomials-3" title="Copy heading and permalink for Exercise Group 2.2.3: Differentiating Polynomials" aria-label="Copy heading and permalink for Exercise Group 2.2.3: Differentiating Polynomials">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.2.4: Derivative of Polynomial Functions"><a href="#subsec-derivative-polynomials" title="Copy heading and permalink for Subsection 2.2.4: Derivative of Polynomial Functions" aria-label="Copy heading and permalink for Subsection 2.2.4: Derivative of Polynomial Functions">🔗</a></div></section><section class="subsection" id="subsec-rational-exponents-radicals"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rational Exponents and Radical Functions</span>
+</h3>
+<div class="para" id="subsec-rational-exponents-radicals-2">The power rule can also be used to differentiate functions with rational exponents, i.e. expressions of the form <span class="process-math">\(\sqrt[b]{x^a} = x^{a/b}\)</span>), and in general any term that can be represented as a power of the variable <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-rational-exponents-radicals-3" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Exercise Group</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiating Radical Functions.</span>
+</h4></summary><article class="project project-like knowl__content"><div class="introduction" id="subsec-rational-exponents-radicals-3-2"><div class="para" id="subsec-rational-exponents-radicals-3-2-1">Differentiate each function.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-rational-exponents-radicals-3-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-rational-exponents-radicals-3-3-1-1">
+<span class="process-math">\(f(x) = 5 \sqrt{x} + \frac{1}{\sqrt{x}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-rational-exponents-radicals-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-rational-exponents-radicals-3-3-2-1">
+<span class="process-math">\(f'(x) = \frac{5}{2\sqrt{x}} - \frac{1}{2 x^{3/2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.4.a.1"><a href="#subsec-rational-exponents-radicals-3-3-2" title="Copy heading and permalink for Answer 2.2.4.a.1" aria-label="Copy heading and permalink for Answer 2.2.4.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.4.a"><a href="#subsec-rational-exponents-radicals-3-3" title="Copy heading and permalink for Task 2.2.4.a" aria-label="Copy heading and permalink for Task 2.2.4.a">🔗</a></div></article><article class="task exercise-like" id="subsec-rational-exponents-radicals-3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-rational-exponents-radicals-3-4-1-1">
+<span class="process-math">\(f(x) = 3x^2 - 5\sqrt{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-rational-exponents-radicals-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-rational-exponents-radicals-3-4-2-1">
+<span class="process-math">\(f'(x) = 6x - \frac{5}{2\sqrt{x}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.4.b.1"><a href="#subsec-rational-exponents-radicals-3-4-2" title="Copy heading and permalink for Answer 2.2.4.b.1" aria-label="Copy heading and permalink for Answer 2.2.4.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.4.b"><a href="#subsec-rational-exponents-radicals-3-4" title="Copy heading and permalink for Task 2.2.4.b" aria-label="Copy heading and permalink for Task 2.2.4.b">🔗</a></div></article><article class="task exercise-like" id="subsec-rational-exponents-radicals-3-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-rational-exponents-radicals-3-5-1-1">
+<span class="process-math">\(f(x) = 5 + 7x^{1/2} - 2x^{-1/3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-rational-exponents-radicals-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-rational-exponents-radicals-3-5-2-1">
+<span class="process-math">\(f'(x) = \frac{7}{2x^{1/2}} + \frac{2}{3x^{4/3}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.4.c.1"><a href="#subsec-rational-exponents-radicals-3-5-2" title="Copy heading and permalink for Answer 2.2.4.c.1" aria-label="Copy heading and permalink for Answer 2.2.4.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.4.c"><a href="#subsec-rational-exponents-radicals-3-5" title="Copy heading and permalink for Task 2.2.4.c" aria-label="Copy heading and permalink for Task 2.2.4.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise Group 2.2.4: Differentiating Radical Functions"><a href="#subsec-rational-exponents-radicals-3" title="Copy heading and permalink for Exercise Group 2.2.4: Differentiating Radical Functions" aria-label="Copy heading and permalink for Exercise Group 2.2.4: Differentiating Radical Functions">🔗</a></div></article></details><div class="para" id="subsec-rational-exponents-radicals-4">In general, if your derivative has negative exponents, it is good practice to rewrite the final answer with positive exponents.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-rational-exponents-radicals-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.2.5: Rational Exponents and Radical Functions"><a href="#subsec-rational-exponents-radicals" title="Copy heading and permalink for Subsection 2.2.5: Rational Exponents and Radical Functions" aria-label="Copy heading and permalink for Subsection 2.2.5: Rational Exponents and Radical Functions">🔗</a></div></section><section class="subsection" id="subsec-simplify-before-differentiating"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Simplifying Before Using Basic Rules</span>
+</h3>
+<div class="para" id="subsec-simplify-before-differentiating-2">Sometimes, you need to simplify the function before you can use the basic rules.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-simplify-before-differentiating-3" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Exercise Group</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Simplify Then Differentiate.</span>
+</h4></summary><article class="project project-like knowl__content"><div class="introduction" id="subsec-simplify-before-differentiating-3-2"><div class="para" id="subsec-simplify-before-differentiating-3-2-1">Differentiate each function.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-simplify-before-differentiating-3-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-simplify-before-differentiating-3-3-1-1">
+<span class="process-math">\(f(x) = \frac{1}{\sqrt{x}} + \sqrt{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-simplify-before-differentiating-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-simplify-before-differentiating-3-3-2-1">
+<span class="process-math">\(f'(x) = -\frac{1}{2x^{3/2}} + \frac{1}{2\sqrt{x}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.5.a.1"><a href="#subsec-simplify-before-differentiating-3-3-2" title="Copy heading and permalink for Answer 2.2.5.a.1" aria-label="Copy heading and permalink for Answer 2.2.5.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.5.a"><a href="#subsec-simplify-before-differentiating-3-3" title="Copy heading and permalink for Task 2.2.5.a" aria-label="Copy heading and permalink for Task 2.2.5.a">🔗</a></div></article><article class="task exercise-like" id="subsec-simplify-before-differentiating-3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-simplify-before-differentiating-3-4-1-1">
+<span class="process-math">\(f(x) = \sqrt{x} + 6 \sqrt[3]{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-simplify-before-differentiating-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-simplify-before-differentiating-3-4-2-1">
+<span class="process-math">\(f'(x) = \frac{1}{2\sqrt{x}} + \frac{2}{x^{2/3}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.5.b.1"><a href="#subsec-simplify-before-differentiating-3-4-2" title="Copy heading and permalink for Answer 2.2.5.b.1" aria-label="Copy heading and permalink for Answer 2.2.5.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.5.b"><a href="#subsec-simplify-before-differentiating-3-4" title="Copy heading and permalink for Task 2.2.5.b" aria-label="Copy heading and permalink for Task 2.2.5.b">🔗</a></div></article><article class="task exercise-like" id="subsec-simplify-before-differentiating-3-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-simplify-before-differentiating-3-5-1-1">
+<span class="process-math">\(f(x) = (x+3)(x-2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-simplify-before-differentiating-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-simplify-before-differentiating-3-5-2-1">
+<span class="process-math">\(f'(x) = 2x+1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.5.c.1"><a href="#subsec-simplify-before-differentiating-3-5-2" title="Copy heading and permalink for Answer 2.2.5.c.1" aria-label="Copy heading and permalink for Answer 2.2.5.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.5.c"><a href="#subsec-simplify-before-differentiating-3-5" title="Copy heading and permalink for Task 2.2.5.c" aria-label="Copy heading and permalink for Task 2.2.5.c">🔗</a></div></article><article class="task exercise-like" id="subsec-simplify-before-differentiating-3-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="subsec-simplify-before-differentiating-3-6-1-1">
+<span class="process-math">\(f(x) = \frac{x^2-6}{2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-simplify-before-differentiating-3-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-simplify-before-differentiating-3-6-2-1">
+<span class="process-math">\(f'(x) = \frac{1}{2} + \frac{3}{x^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.5.d.1"><a href="#subsec-simplify-before-differentiating-3-6-2" title="Copy heading and permalink for Answer 2.2.5.d.1" aria-label="Copy heading and permalink for Answer 2.2.5.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.5.d"><a href="#subsec-simplify-before-differentiating-3-6" title="Copy heading and permalink for Task 2.2.5.d" aria-label="Copy heading and permalink for Task 2.2.5.d">🔗</a></div></article><article class="task exercise-like" id="subsec-simplify-before-differentiating-3-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="subsec-simplify-before-differentiating-3-7-1-1">
+<span class="process-math">\(f(x) = \frac{6x^2-5x}{x^3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-simplify-before-differentiating-3-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-simplify-before-differentiating-3-7-2-1">
+<span class="process-math">\(f'(x) = -\frac{6}{x^2} + \frac{10}{x^3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.5.e.1"><a href="#subsec-simplify-before-differentiating-3-7-2" title="Copy heading and permalink for Answer 2.2.5.e.1" aria-label="Copy heading and permalink for Answer 2.2.5.e.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.5.e"><a href="#subsec-simplify-before-differentiating-3-7" title="Copy heading and permalink for Task 2.2.5.e" aria-label="Copy heading and permalink for Task 2.2.5.e">🔗</a></div></article><article class="task exercise-like" id="subsec-simplify-before-differentiating-3-8"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="subsec-simplify-before-differentiating-3-8-1-1">
+<span class="process-math">\(f(x) = x(x^2 + 3x - 9)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-simplify-before-differentiating-3-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-simplify-before-differentiating-3-8-2-1">
+<span class="process-math">\(f'(x) = 3x^2 + 6x - 9\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.5.f.1"><a href="#subsec-simplify-before-differentiating-3-8-2" title="Copy heading and permalink for Answer 2.2.5.f.1" aria-label="Copy heading and permalink for Answer 2.2.5.f.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.5.f"><a href="#subsec-simplify-before-differentiating-3-8" title="Copy heading and permalink for Task 2.2.5.f" aria-label="Copy heading and permalink for Task 2.2.5.f">🔗</a></div></article><article class="task exercise-like" id="subsec-simplify-before-differentiating-3-9"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="subsec-simplify-before-differentiating-3-9-1-1">
+<span class="process-math">\(f(x) = \frac{x^2 + 5\sqrt{x}}{x^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-simplify-before-differentiating-3-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-simplify-before-differentiating-3-9-2-1">
+<span class="process-math">\(f'(x) = -\frac{15}{2x^{5/2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-simplify-before-differentiating-3-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.5.g.1"><a href="#subsec-simplify-before-differentiating-3-9-2" title="Copy heading and permalink for Answer 2.2.5.g.1" aria-label="Copy heading and permalink for Answer 2.2.5.g.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.5.g"><a href="#subsec-simplify-before-differentiating-3-9" title="Copy heading and permalink for Task 2.2.5.g" aria-label="Copy heading and permalink for Task 2.2.5.g">🔗</a></div></article><div class="autopermalink" data-description="Exercise Group 2.2.5: Simplify Then Differentiate"><a href="#subsec-simplify-before-differentiating-3" title="Copy heading and permalink for Exercise Group 2.2.5: Simplify Then Differentiate" aria-label="Copy heading and permalink for Exercise Group 2.2.5: Simplify Then Differentiate">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.2.6: Simplifying Before Using Basic Rules"><a href="#subsec-simplify-before-differentiating" title="Copy heading and permalink for Subsection 2.2.6: Simplifying Before Using Basic Rules" aria-label="Copy heading and permalink for Subsection 2.2.6: Simplifying Before Using Basic Rules">🔗</a></div></section><div class="autopermalink" data-description="Section 2.2: Basic Derivative Rules"><a href="#sec-basic-derivative-rules" title="Copy heading and permalink for Section 2.2: Basic Derivative Rules" aria-label="Copy heading and permalink for Section 2.2: Basic Derivative Rules">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-the-derivative-function.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-differentiation-techniques.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
