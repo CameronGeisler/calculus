@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-basic-derivative-rules" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Basic Derivative Rules</title>
+
+  <introduction>
+    <p>Calculating derivatives using the limit definition is often tedious and sometimes difficult, especially for more complicated functions. It turns out, there are various patterns and shortcut rules for computing derivatives of various functions, i.e. <term>differentiation rules</term>,</p>
+    <ol>
+      <li><p>Rules to differentiate specific types of functions, that you have learned about in pre-calculus.</p></li>
+      <li><p>Also, rules to differentiate various types of <em>combinations</em> of those functions.</p></li>
+    </ol>
+    <me>\begin{cases} \text{polynomials / powers} \quad x^n \\ \text{rational functions} \quad \frac{p(x)}{q(x)} \\ \text{trigonometric functions} \quad \sin{x}, \cos{x}, \tan{x}, .\dots \\ \text{exponential functions} \quad b^x, e^x \\ \text{logarithmic functions} \quad \log{x} \\ \qquad \vdots \end{cases} \qquad \begin{cases} \text{sum and difference (adding and subtracting)} \\  \text{product (multiplying)} \\ \text{quotient (dividing)} \\ \text{composition (one function inside another)} \end{cases}</me>
+    <p>This could be called <term>systematic differentiation</term>. Combining all of these rules will allow us to compute derivatives of every type of function that is covered in pre-calculus.</p>
+  </introduction>
+
+  <subsection xml:id="subsec-derivative-constant-line">
+    <title>Derivative of Constant and a Line</title>
+
+    <p>Perhaps the most basic function is a constant function.</p>
+
+    <example>
+      <title>Constant Function</title>
+      <p>Consider the function <m>f(x) = 3</m>. This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. <url href="https://www.desmos.com/calculator/ejelchpaql">Graph of <m>f(x)=3</m></url>. Its graph is a horizontal line at <m>y=3</m>, which has slope 0, so we would expect that its derivative would be always 0.</p>
+    </example>
+
+    <p>In general, for a constant function, of the form <m>f(x)=k</m> (where <m>k</m> is some number), its derivative is 0.</p>
+
+    <theorem>
+      <title>Derivative of a Constant Is Zero</title>
+      <statement>
+        <p>If <m>f(x) = k</m> for some number <m>k</m>, then <m>f'(x) = 0</m>. In other words,</p>
+        <me>\boxed{\frac{d}{dx} k = 0}</me>
+      </statement>
+      <proof>
+        <p>Using the definition of the derivative, we have,</p>
+        <md>
+          <mrow>f'(x) \amp= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</mrow>
+          <mrow>\amp= \lim_{h \to 0} \frac{k - k}{h} \amp\amp \text{as $f(x + h) = k$ and $f(x) = k$}</mrow>
+          <mrow>\amp= \lim_{h \to 0} \frac{0}{h}</mrow>
+          <mrow>\amp= \lim_{h \to 0} 0</mrow>
+          <mrow>\amp= 0</mrow>
+        </md>
+      </proof>
+    </theorem>
+
+    <p>In short,</p>
+    <me>\boxed{\text{The derivative of a constant is zero.}}</me>
+
+    <p>A slightly more complicated situation is the case of a line.</p>
+
+    <example>
+      <title>Linear Function</title>
+      <p>Consider the function <m>f(x) = 2x + 3</m>. This is a linear function, because its graph is a line. <url href="https://www.desmos.com/calculator/yjfgw2gxzb">Graph of <m>f(x)=2x+3</m></url>. This line has a slope of 2, so we would expect that its derivative would be always 2.</p>
+    </example>
+
+    <p>In general, a line has a constant slope, so its derivative is the slope of the line.</p>
+
+    <me>\boxed{\text{The derivative of a line is its slope.}}</me>
+
+    <project>
+      <title>Derivatives of Constants and Lines</title>
+      <introduction><p>Find the derivative of each function.</p></introduction>
+      <task><statement><p><m>f(x) = 5</m></p></statement><answer><p><m>f'(x) = 0</m></p></answer></task>
+      <task><statement><p><m>f(x) = -3</m></p></statement><answer><p><m>f'(x) = 0</m></p></answer></task>
+      <task><statement><p><m>f(x) = 7x + 2</m></p></statement><answer><p><m>f'(x) = 7</m></p></answer></task>
+      <task><statement><p><m>f(x) = -4x + 9</m></p></statement><answer><p><m>f'(x) = -4</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{\pi}{2}</m></p></statement><answer><p><m>f'(x) = 0</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-power-rule">
+    <title>Derivative of Power Functions (Power Rule)</title>
+
+    <p>The next basic type of function we will consider are power functions, where the variable is raised to a constant number.</p>
+
+    <example>
+      <title>Discovering the Power Rule Pattern</title>
+      <p>You may recall from a previous section the following derivatives of <m>x</m>, <m>x^2</m>, <m>x^3</m>, and <m>x^4</m>. If not, these can be derived from the limit definition of the derivative. They are,</p>
+      <md>
+        <mrow>\frac{d}{dx} x \amp= 1</mrow>
+        <mrow>\frac{d}{dx} x^2 \amp= 2x</mrow>
+        <mrow>\frac{d}{dx} x^3 \amp= 3x^2</mrow>
+        <mrow>\frac{d}{dx} x^4 \amp= 4x^3</mrow>
+      </md>
+      <p>Observe the pattern for the derivative of these powers of <m>x</m>. The derivative has:</p>
+      <ul>
+        <li><p>A coefficient in the front, which is the exponent of <m>x</m>.</p></li>
+        <li><p>The variable <m>x</m> raised to a exponent that is one less than what it was before.</p></li>
+      </ul>
+      <p>This applies to even the first example <m>\frac{d}{dx} x = 1</m>, as <m>x</m> has an exponent of 1, so the pattern says the derivative should be <m>1 \cdot x^0 = 1</m> (recall: <m>x^0 = 1</m> for any <m>x</m>).</p>
+      <p>It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for <em>any</em> number.</p>
+    </example>
+
+    <theorem>
+      <title>Power Rule for Derivatives</title>
+      <statement>
+        <p>If <m>f(x) = x^n</m> for some number <m>n</m>, then <m>f'(x) = n x^{n-1}</m>. In other words,</p>
+        <me>\boxed{\frac{d}{dx} x^n = n x^{n-1}}</me>
+      </statement>
+    </theorem>
+
+    <p>In other words, to differentiate a function that is some power of the variable <m>x</m>,</p>
+    <ul>
+      <li><p>Bring down the exponent into the <q>front</q> and multiply it</p></li>
+      <li><p>Subtract 1 from the exponent.</p></li>
+    </ul>
+
+    <remark>
+      <title>Power Rule with Reciprocal and Square Root</title>
+      <p>You may recall 2 more examples of derivatives we have seen before, which don't look like powers at first, but can be rewritten as powers in order to use the power rule,</p>
+      <ul>
+        <li><p>For <m>f(x) = \frac{1}{x}</m> (the reciprocal function). You may recall the derivative is <m>f'(x) = -\frac{1}{x^2}</m>. This also follows the power rule, because <m>\frac{1}{x} = x^{-1}</m>.
+          <md>
+            <mrow>\frac{d}{dx} \frac{1}{x} \amp= \frac{d}{dx} x^{-1}</mrow>
+            <mrow>\amp= -x^{-2} \amp\amp \text{by the power rule}</mrow>
+            <mrow>\amp= -\frac{1}{x^2}</mrow>
+          </md></p>
+        </li>
+        <li><p>For <m>f(x) = \sqrt{x}</m>, you may recall the derivative is <m>f'(x) = \frac{1}{2\sqrt{x}}</m>. This also follows the power rule, because <m>\sqrt{x} = x^{1/2}</m>,
+          <md>
+            <mrow>\frac{d}{dx} \sqrt{x} \amp= \frac{d}{dx} x^{1/2}</mrow>
+            <mrow>\amp= \frac{1}{2} x^{-1/2} \amp\amp \text{by the power rule}</mrow>
+            <mrow>\amp= \frac{1}{2\sqrt{x}}</mrow>
+          </md></p>
+        </li>
+      </ul>
+    </remark>
+
+    <project>
+      <title>Power Rule Practice</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = x^5</m></p></statement><answer><p><m>f'(x) = 5x^4</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^{-3}</m></p></statement><answer><p><m>f'(x) = -3x^{-4} = -\frac{3}{x^4}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{2}{x^6}</m></p></statement><answer><p><m>f'(x) = -12x^{-7} =-\frac{12}{x^7}</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^{7/2}</m></p></statement><answer><p><m>f'(x) = \frac{7}{2} x^{5/2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^{\sqrt{2}}</m></p></statement><answer><p><m>f'(x) = \sqrt{2} x^{\sqrt{2} - 1}</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-sum-difference-rule">
+    <title>Derivative of Sums and Differences</title>
+
+    <example>
+      <title>Differentiating Term by Term</title>
+      <p>Consider the derivative of <m>f(x)= 3x^2 + 5x - 7</m>. This function has 3 terms (<m>3x^2</m>, <m>5x</m>, and <m>-7</m>). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of <m>3x^2</m> is <m>6x</m>, the derivative of <m>5x</m> is 5, and the derivative of <m>-7</m> is 0. So, the derivative of <m>f(x)</m> is <m>f'(x) = 6x + 5 + 0 = 6x + 5</m>.</p>
+    </example>
+
+    <p>In general, to differentiate a function with multiple terms,</p>
+    <ul>
+      <li><p>Differentiate each term individually (term-by-term).</p></li>
+      <li><p>For any coefficients (numbers multiplied in the front), keep them in the front (they <q>come along for the ride</q>).</p></li>
+    </ul>
+
+    <p>These two intuitive rules are formalized by the sum rule, difference rule, and constant multiple rule.</p>
+
+    <theorem>
+      <title>Sum/Difference Rule and Constant Multiple Rule</title>
+      <statement>
+        <ul>
+          <li><p><alert>Sum/difference rule</alert>. <q>The derivative of a sum or difference is the sum or difference of the derivatives</q>
+            <me>\boxed{\frac{d}{dx} \left( f(x) + g(x) \right) = \frac{d}{dx} f(x) + \frac{d}{dx} g(x)} \qquad \text{or} \qquad (f + g)'(x) = f'(x) + g'(x)</me></p>
+          </li>
+          <li><p><alert>Constant multiple rule</alert>. <q>The derivative of a constant multiplied by a function is the constant multiplied by the derivative of the function.</q>
+            <me>\boxed{\frac{d}{dx} \left( k f(x) \right) = k \cdot \frac{d}{dx} f(x)} \qquad \text{or} \qquad (kf)'(x) = k f'(x)</me></p>
+          </li>
+        </ul>
+      </statement>
+    </theorem>
+
+    <p>The sum or difference rule also applies to any number of functions, not just 2 functions. This basically means that derivatives can be determined term-by-term.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-derivative-polynomials">
+    <title>Derivative of Polynomial Functions</title>
+
+    <p>This rule can be used to differentiate any polynomial function.</p>
+
+    <project>
+      <title>Differentiating Polynomials</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = x^2 - 4x</m></p></statement><answer><p><m>f'(x) = 2x - 4</m></p></answer></task>
+      <task><statement><p><m>f(x) = 3x^3 - 5x^2 + 7x - 2</m></p></statement><answer><p><m>f'(x) = 9x^2 - 10x + 7</m></p></answer></task>
+      <task><statement><p><m>f(x) = 3x - \frac{1}{4} x^3</m></p></statement><answer><p><m>f'(x) = 3 - \frac{3}{4} x^2</m></p></answer></task>
+      <task><statement><p><m>f(x) = (3x+2)^2</m></p></statement><hint><p>Expand first.</p></hint><answer><p><m>f'(x) = 18x + 12</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-rational-exponents-radicals">
+    <title>Rational Exponents and Radical Functions</title>
+
+    <p>The power rule can also be used to differentiate functions with rational exponents, i.e. expressions of the form <m>\sqrt[b]{x^a} = x^{a/b}</m>), and in general any term that can be represented as a power of the variable <m>x</m>.</p>
+
+    <project>
+      <title>Differentiating Radical Functions</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = 5 \sqrt{x} + \frac{1}{\sqrt{x}}</m></p></statement><answer><p><m>f'(x) = \frac{5}{2\sqrt{x}} - \frac{1}{2 x^{3/2}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 3x^2 - 5\sqrt{x}</m></p></statement><answer><p><m>f'(x) = 6x - \frac{5}{2\sqrt{x}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 5 + 7x^{1/2} - 2x^{-1/3}</m></p></statement><answer><p><m>f'(x) = \frac{7}{2x^{1/2}} + \frac{2}{3x^{4/3}}</m></p></answer></task>
+    </project>
+
+    <p>In general, if your derivative has negative exponents, it is good practice to rewrite the final answer with positive exponents.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-simplify-before-differentiating">
+    <title>Simplifying Before Using Basic Rules</title>
+
+    <p>Sometimes, you need to simplify the function before you can use the basic rules.</p>
+
+    <project>
+      <title>Simplify Then Differentiate</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = \frac{1}{\sqrt{x}} + \sqrt{x}</m></p></statement><answer><p><m>f'(x) = -\frac{1}{2x^{3/2}} + \frac{1}{2\sqrt{x}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x} + 6 \sqrt[3]{x}</m></p></statement><answer><p><m>f'(x) = \frac{1}{2\sqrt{x}} + \frac{2}{x^{2/3}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = (x+3)(x-2)</m></p></statement><answer><p><m>f'(x) = 2x+1</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^2-6}{2x}</m></p></statement><answer><p><m>f'(x) = \frac{1}{2} + \frac{3}{x^2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{6x^2-5x}{x^3}</m></p></statement><answer><p><m>f'(x) = -\frac{6}{x^2} + \frac{10}{x^3}</m></p></answer></task>
+      <task><statement><p><m>f(x) = x(x^2 + 3x - 9)</m></p></statement><answer><p><m>f'(x) = 3x^2 + 6x - 9</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^2 + 5\sqrt{x}}{x^2}</m></p></statement><answer><p><m>f'(x) = -\frac{15}{2x^{5/2}}</m></p></answer></task>
+    </project>
+  </subsection>
+
+</section>
