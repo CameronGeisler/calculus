@@ -8,5 +8,7 @@
   </introduction>
 
   <!-- include sections -->
+  <xi:include href="sec-reverse-chain-rule.ptx"/>
+  <xi:include href="sec-integration-by-substitution.ptx"/>
   <xi:include href="sec-inverse-trigonometric-substitution.ptx"/>
 </chapter>

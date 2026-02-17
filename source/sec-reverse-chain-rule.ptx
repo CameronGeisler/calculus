@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-reverse-chain-rule" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Reverse Chain Rule</title>
+
+  <introduction>
+    <p>With integration, a common situation is when you recognize a basic function you know how to integrate, except the input <m>x</m> has been replaced by something like <m>3x</m>, <m>2x+5</m>, or <m>1-4x</m> (a <em>linear expression</em>). In these cases, the antiderivative has the same shape as usual, but you must make a small adjustment.</p>
+
+    <example>
+      <title>Integral of <m>e^{3x}</m></title>
+      <statement>
+        <p>Consider the integral,</p>
+        <me>\int e^{3x} \,dx</me>
+      </statement>
+      <solution>
+        <p>We know that the integral of <m>e^x</m> is <m>e^x + C</m>, so we might guess that the integral of <m>e^{3x}</m> is <m>e^{3x} + C</m>. However, this is almost correct but not quite. Indeed, checking the antiderivative,</p>
+        <me>\frac{d}{dx} (e^{3x}) = 3e^{3x} \qquad \text{which is not } e^{3x}</me>
+        <p>There is an extra factor of 3. When differentiating <m>e^{3x}</m>, we know that we'd basically differentiate as normal, and then multiply by the derivative of <m>3x</m> which is 3 (by the chain rule), and so the derivative is <m>3e^{3x}</m>. Antiderivatives are like the reverse of derivatives, so instead, we need to divide by 3,</p>
+        <me>\int e^{3x} \,dx = \frac{1}{3} e^{3x} + C</me>
+        <p>Checking the antiderivative, indeed,</p>
+        <md>
+          <mrow>\frac{d}{dx} \brac{\frac{1}{3} e^{3x}} \amp = \frac{1}{3} \cdot 3e^{3x}</mrow>
+          <mrow>\amp = e^{3x}</mrow>
+        </md>
+        <p>which is the original function.</p>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\sin{(2x + 5)}</m></title>
+      <statement>
+        <p>Consider the integral,</p>
+        <me>\int \sin{(2x + 5)} \,dx</me>
+      </statement>
+      <solution>
+        <p>Again, we know the integral of <m>\sin{x}</m> is <m>-\cos{x} + C</m>, so we might guess that the integral of <m>\sin{(2x + 5)}</m> is <m>-\cos{(2x + 5)} + C</m>. However, this is almost correct but not quite. We also have to divide the answer by 2, because differentiating would make an extra factor of 2 (from the chain rule). Then,</p>
+        <me>\int \sin{(2x + 5)} \,dx = -\frac{1}{2}\cos{(2x + 5)} + C</me>
+        <p>Checking the antiderivative verifies that this is correct,</p>
+        <md>
+          <mrow>\frac{d}{dx} \brac{-\frac{1}{2}\cos{(2x + 5)}} \amp = -\frac{1}{2} \cdot -2 \sin{(2x + 5)}</mrow>
+          <mrow>\amp = \sin{(2x + 5)}</mrow>
+        </md>
+        <p>which gives back the original function. Notice that the <m>+5</m> does not change the answer, because the derivative of a constant is 0.</p>
+      </solution>
+    </example>
+
+    <p>In general, if there is a linear expression <m>ax + b</m> inside the function we are integrating, then we need to divide the answer by <m>a</m> to correct for that extra constant factor when differentiating. More precisely, differentiating something with <m>ax+b</m> inside always leads to a factor of <m>a</m> by the chain rule, so when we integrate we <q>undo</q> that factor by dividing by <m>a</m>. The <m>+b</m> does not affect the factor because the derivative of a constant is 0. In short,</p>
+
+    <me>\boxed{\text{If there's just } ax+b \text{ instead of } x \text{, then integrate like normal and put } \frac{1}{a} \text{ in front}}</me>
+
+    <example>
+      <title>Integral of <m>\sec^2(2x)</m></title>
+      <statement>
+        <p>Evaluate <m>\int \sec^2(2x) \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>The antiderivative of <m>\sec^2(x)</m> is <m>\tan(x)</m>. Here we have <m>2x</m> instead of <m>x</m>, so we integrate as normal and divide by the coefficient of <m>x</m>, which is 2,</p>
+        <me>\int \sec^2(2x) \,dx = \frac{1}{2}\tan(2x) + C</me>
+      </solution>
+    </example>
+
+    <project>
+      <title>Basic Reverse Chain Rule Practice</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \cos 2x \,dx</m></p></statement><answer><p><m>\frac{1}{2}\sin 2x+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin 3x \,dx</m></p></statement><answer><p><m>-\frac{1}{3}\cos 3x+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{-5x} \,dx</m></p></statement><answer><p><m>-\frac{1}{5}e^{-5x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sec 2x\tan 2x \,dx</m></p></statement><answer><p><m>\frac{1}{2}\sec 2x+C</m></p></answer></task>
+    </project>
+
+    <p>The same idea applies to powers and logarithms.</p>
+
+    <example>
+      <title>Integral of <m>(1-2x)^9</m></title>
+      <statement>
+        <p>Evaluate <m>\int (1-2x)^9 \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>This integral is of the form <m>u^9</m> (a power), except with <m>1-2x</m> inside (a linear expression). So, we integrate <m>(1-2x)^9</m> as if it were <m>u^9</m>, giving <m>\frac{1}{10}u^{10}</m> (by the power rule), and then divide by the coefficient of <m>x</m>, which is <m>-2</m>,</p>
+        <md>
+          <mrow>\int (1-2x)^9 \,dx \amp = \frac{1}{-2} \cdot \frac{(1-2x)^{10}}{10} + C</mrow>
+          <mrow>\amp = -\frac{1}{20}(1-2x)^{10} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\frac{1}{5-3x}</m></title>
+      <statement>
+        <p>Evaluate <m>\int \frac{1}{5-3x} \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>This integral is of the form <m>\frac{1}{u}</m>, except with <m>5-3x</m> (a linear expression). The antiderivative of <m>\frac{1}{u}</m> is <m>\ln\abs{u}</m>, so we integrate as normal and divide by the coefficient of <m>x</m>, which is <m>-3</m>,</p>
+        <md>
+          <mrow>\int \frac{dx}{5-3x} \amp = \frac{1}{-3} \ln\abs{5-3x} + C</mrow>
+          <mrow>\amp = -\frac{1}{3}\ln\abs{5-3x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\sqrt{1+4x}</m></title>
+      <statement>
+        <p>Evaluate <m>\int \sqrt{1+4x} \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>This integral is of the form <m>\sqrt{u}</m>, except with <m>1+4x</m> (a linear expression). The antiderivative of <m>\sqrt{u}</m> is <m>\frac{2}{3}u^{3/2}</m>, so we integrate as normal and divide by the coefficient of <m>x</m>, which is 4,</p>
+        <md>
+          <mrow>\int \sqrt{1+4x} \,dx \amp = \frac{1}{4} \cdot \frac{2}{3}(1+4x)^{3/2} + C</mrow>
+          <mrow>\amp = \frac{1}{6}(1+4x)^{3/2} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <project>
+      <title>Powers, Logarithms, and Trigonometric Integrals Practice</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int 2(2x+1)^3 \,dx</m></p></statement><answer><p><m>\frac{1}{4}(2x+1)^4 + C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{1}{10x-3} \,dx</m></p></statement><answer><p><m>\frac{1}{10}\ln\abs{10x-3}+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos(1+5x) \,dx</m></p></statement><answer><p><m>\frac{1}{5}\sin(1+5x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{2x+1}\,dx</m></p></statement><answer><p><m>\frac{1}{3}(2x+1)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos(7x+3)\,dx</m></p></statement><answer><p><m>\frac{1}{7}\sin(7x+3)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{3-2x}\,dx</m></p></statement><answer><p><m>-\frac{1}{3}(3-2x)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sec^2(3x+2) \,dx</m></p></statement><answer><p><m>\frac{1}{3}\tan(3x+2)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{x-1}\,dx</m></p></statement><answer><p><m>\frac{2}{3}(x-1)^{3/2}+C</m></p></answer></task>
+    </project>
+
+    <p>In general, we can summarize this rule,</p>
+
+    <theorem xml:id="thm-reverse-chain-rule">
+      <title>Reverse Chain Rule (Linear Inside Rule)</title>
+      <statement><p>If <m>\int f(x) \,dx = F(x)</m>, then <m>\int f(ax + b) \,dx = \frac{1}{a} F(ax + b)</m>.</p></statement>
+    </theorem>
+
+    <p>Here, <m>\int f(x) \,dx = F(x)</m> means that there is some existing integral rule that we know for <m>f(x)</m>, and <m>F(x)</m> is the antiderivative of <m>f(x)</m>. Then, if we have <m>f(ax + b)</m> instead of <m>f(x)</m> (in other words, <m>ax+b</m> instead of just <m>x</m>), we can integrate as normal to get <m>F(ax + b)</m>, and then divide by <m>a</m> to correct for the chain rule. For example,</p>
+    <me>\int e^{ax + b} \,dx = \frac{1}{a} e^{ax + b} + C</me>
+
+    <remark>
+      <p>This rule only works when the inner function is <em>linear</em> (in other words, of the form <m>ax+b</m>), because the derivative of a linear function is a constant. For an inner function that isn't linear, this shortcut does not apply. For example, for <m>\int \cos{(x^2)} \,dx</m>, we cannot just integrate as normal and divide by the derivative of <m>x^2</m> which is <m>2x</m> to get <m>\frac{1}{2x}\sin{(x^2)} + C</m>,</p>
+      <me>\int \cos{(x^2)} \,dx \neq \frac{1}{2x}\sin{(x^2)} + C</me>
+      <p>This is because when we differentiate <m>\frac{1}{2x}\sin{(x^2)} + C</m>, we have to use the product rule, and we will get something more complicated than just <m>\cos{(x^2)}</m>, so this is not the correct antiderivative. We will learn how to integrate some more complicated functions later.</p>
+    </remark>
+  </introduction>
+
+  <subsection xml:id="subsec-rcr-examples">
+    <title>Examples</title>
+
+    <project>
+      <title>Reverse Chain Rule Practice</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int 2(2x+4)^5 \,dx</m></p></statement><answer><p><m>\frac{1}{6}(2x+4)^6+C</m></p></answer></task>
+      <task><statement><p><m>\int \sec 4x\tan 4x \,dx</m></p></statement><answer><p><m>\frac{1}{4}\sec 4x+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{dx}{(1-6x)^4}</m></p></statement><answer><p><m>\frac{1}{18(1-6x)^3}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sec^2(10x+7) \,dx</m></p></statement><answer><p><m>\frac{1}{10}\tan(10x+7)+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{dx}{\sqrt{5x+8}}</m></p></statement><answer><p><m>\frac{2}{5}\sqrt{5x+8}+C</m></p></answer></task>
+      <task><statement><p><m>\int 5\sec^2(5x+1)\,dx</m></p></statement><answer><p><m>\tan(5x+1)+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{1}{\sqrt{5x+4}} \,dx</m></p></statement><answer><p><m>\frac{2}{5}\sqrt{5x+4}+C</m></p></answer></task>
+      <task><statement><p><m>\int 7\sqrt{7x-1}\,dx</m></p></statement><answer><p><m>\frac{2}{3}(7x-1)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos\brac{\frac{\pi x}{2}} \,dx</m></p></statement><answer><p><m>\frac{2}{\pi}\sin\brac{\frac{\pi x}{2}}+C</m></p></answer></task>
+      <task>
+        <statement><p><m>\int 10^{4x+1} \,dx</m></p></statement>
+        <hint><p>Recall that <m>\int b^x \,dx = \frac{b^x}{\ln b}+C</m>.</p></hint>
+        <answer><p><m>\frac{10^{4x+1}}{4\ln 10}+C</m></p></answer>
+      </task>
+      <task>
+        <statement><p><m>\int \csc\brac{\frac{x-\pi}{2}}\cot\brac{\frac{x-\pi}{2}} \,dx</m></p></statement>
+        <hint><p>Recall that <m>\int \csc{x} \cot{x} \,dx = -\csc{x}+C</m>.</p></hint>
+        <answer><p><m>-2\csc\brac{\frac{x-\pi}{2}}+C</m></p></answer>
+      </task>
+      <task><statement><p><m>\int \frac{\sin(2x+1)}{\cos^2(2x+1)} \,dx</m></p></statement><answer><p><m>\frac{1}{2}\sec(2x+1)+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{dx}{ax+b} \ (a\neq 0)</m></p></statement><answer><p><m>\frac{1}{a}\ln\abs{ax+b}+C</m></p></answer></task>
+    </project>
+  </subsection>
+</section>

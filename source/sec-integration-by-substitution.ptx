@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-integration-by-substitution" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Integration by Substitution</title>
+
+  <introduction>
+    <p>Previously, we saw how to integrate functions of the form <m>f(ax + b)</m> by integrating as normal and dividing by <m>a</m> (the reverse chain rule). Integration by substitution generalizes this idea to handle <em>any</em> composite function, not just linear ones.</p>
+
+    <example>
+      <title>Substitution with a Power</title>
+      <statement>
+        <p>Evaluate</p>
+        <me>\int 2x (x^2 + 1)^3 \,dx</me>
+      </statement>
+      <solution>
+        <p>The expression <m>(x^2+1)^3</m> could be expanded, allowing us to use the power rule, but it would be a lot of work.</p>
+        <p>Instead, it turns out we can use substitution. We will define a new variable, named <m>u</m>, in terms of the original variable <m>x</m>. In particular, let <m>u=x^2+1</m> (the expression inside the power). This means the integral will be,</p>
+        <me>\int 2x \cdot u^3 \,dx</me>
+        <p>We also need to replace <m>2x</m> and <m>\,dx</m> with something in terms of <m>u</m>. To do this, we compute <m>du</m>, which is the derivative of <m>u</m> with respect to <m>x</m> times <m>dx</m>. We have,</p>
+        <md>
+          <mrow>\frac{du}{dx} = 2x</mrow>
+          <mrow>du = 2x \,dx</mrow>
+        </md>
+        <p>(You may recall that <m>du</m> and <m>dx</m> are called differentials). This means we can replace <m>2x \,dx</m> with <m>du</m>, and <m>2x \,dx</m> is exactly what we have left in our integral. Then,</p>
+        <me>\int 2x \cdot u^3 \,dx = \int u^3 \,du</me>
+        <p>This is a new integral in terms of <m>u</m> (only), which we can evaluate using the power rule. We have,</p>
+        <me>= \frac{1}{4}u^4 + C</me>
+        <p>Finally, we substitute back <m>u = x^2 + 1</m>, to express our final answer in terms of the original variable <m>x</m>,</p>
+        <me>= \frac{1}{4}(x^2 + 1)^4 + C</me>
+      </solution>
+    </example>
+
+    <example>
+      <title>Substitution with an Exponential</title>
+      <statement>
+        <p>Evaluate</p>
+        <me>\int 3x^2 e^{x^3} \,dx</me>
+      </statement>
+      <solution>
+        <p>Here, it turns out that letting <m>u = x^3</m> works well. This is because then, <m>du = 3x^2 \,dx</m>, which is exactly what we have left in our integral. Then, substituting,</p>
+        <md>
+          <mrow>\int 3x^2 e^{x^3} \,dx \amp= \int e^u \,du \amp\amp \text{substituting $u = x^3$ and $du = 3x^2 \,dx$}</mrow>
+          <mrow>\amp= e^u + C</mrow>
+          <mrow>\amp= e^{x^3} + C \amp\amp \text{substituting back $u = x^3$}</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>In general, a good guideline is to let <m>u</m> be the inner function in a composition. For it to work, the derivative of the inner function must also be there in the integrand. This allows us to transform the integral into an easier integral.</p>
+
+    <project>
+      <title>Exact Match Substitutions</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int 2x(x^2-1)^{5} \,dx</m></p></statement><hint><p><m>u=x^2-1</m></p></hint><answer><p><m>\frac{1}{6}(x^2-1)^{6}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{4x^3}{(x^4+1)^2} \,dx</m></p></statement><hint><p><m>u=x^4+1</m></p></hint><answer><p><m>-\frac{1}{x^4+1}+C</m></p></answer></task>
+      <task><statement><p><m>\int (\cos x)e^{\sin x} \,dx</m></p></statement><hint><p><m>u=\sin x</m></p></hint><answer><p><m>e^{\sin x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^{10}x\cos x \,dx</m></p></statement><hint><p><m>u=\sin x</m></p></hint><answer><p><m>\frac{1}{11}\sin^{11}x+C</m></p></answer></task>
+      <task><statement><p><m>\int (x^2+x)^{10}(2x+1) \,dx</m></p></statement><hint><p><m>u=x^2+x</m></p></hint><answer><p><m>\frac{1}{11}(x^2+x)^{11}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{2x}{(x^2+5)^4} \,dx</m></p></statement><hint><p><m>u=x^2+5</m></p></hint><answer><p><m>-\frac{1}{3(x^2+5)^3}+C</m></p></answer></task>
+      <task><statement><p><m>\int (x^3+x)^5(3x^2+1)\,dx</m></p></statement><hint><p><m>u=x^3+x</m></p></hint><answer><p><m>\frac{1}{6}(x^3+x)^6+C</m></p></answer></task>
+    </project>
+
+    <example>
+      <title>Substitution with a Logarithm</title>
+      <statement>
+        <p>Evaluate <m>\int \frac{(\ln{x})^2}{x} \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>Notice that the inner function is <m>\ln{x}</m>, and its derivative is <m>\frac{1}{x}</m>, which is also in the integrand. Let <m>u = \ln{x}</m>, so <m>du = \frac{1}{x} \,dx</m>. Then,</p>
+        <md>
+          <mrow>\int \frac{(\ln{x})^2}{x} \,dx \amp= \int u^2 \,du</mrow>
+          <mrow>\amp= \frac{1}{3}u^3 + C</mrow>
+          <mrow>\amp= \frac{1}{3}(\ln{x})^3 + C \amp\amp \text{substituting back $u = \ln{x}$}</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Substitution with a Trigonometric Power</title>
+      <statement>
+        <p>Evaluate <m>\int \sin^2 x\cos x \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>Notice that the inner function is <m>\sin x</m> (recall that <m>\sin^2{x}</m> means <m>(\sin x)^2</m>), and its derivative is <m>\cos x</m>, which is also in the integrand. Let <m>u = \sin x</m>, so <m>du = \cos x \,dx</m>. Then,</p>
+        <md>
+          <mrow>\int \sin^2 x\cos x \,dx \amp= \int u^2 \,du</mrow>
+          <mrow>\amp= \frac{1}{3}u^3 + C</mrow>
+          <mrow>\amp= \frac{1}{3}\sin^3 x + C \amp\amp \text{substituting back $u = \sin x$}</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>Sometimes, the derivative of the inner function is not exactly there in the integrand, but it's basically the same, except for a different number. In these cases, we can still use substitution.</p>
+
+    <example>
+      <title>Adjusting for a Constant Factor</title>
+      <statement>
+        <p>Evaluate <m>\int x^2 \cos{(x^3)} \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>Notice that the inner function is <m>x^3</m>, and its derivative is <m>3x^2</m>, and <m>x^2</m> is present in the integrand (but not a 3). Let <m>u = x^3</m>, so <m>du = 3x^2 \,dx</m>. We have <m>x^2 \,dx</m> left over in the integral, so we can solve for that,</p>
+        <md>
+          <mrow>du = 3x^2 \,dx</mrow>
+          <mrow>x^2 \,dx = \frac{1}{3} du</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>\int x^2 \cos{(x^3)} \,dx \amp= \int \cos{(u)} \cdot \frac{1}{3} \,du</mrow>
+          <mrow>\amp= \frac{1}{3} \int \cos{(u)} \,du</mrow>
+          <mrow>\amp= \frac{1}{3} \sin{(u)} + C</mrow>
+          <mrow>\amp= \frac{1}{3} \sin{(x^3)} + C \amp\amp \text{substituting back $u = x^3$}</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Adjusting with Multiplication</title>
+      <statement>
+        <p>Evaluate</p>
+        <me>\int \frac{6x}{(x^2+1)^2} \,dx</me>
+      </statement>
+      <solution>
+        <p>Notice that the inner function is <m>x^2+1</m>, and its derivative is <m>2x</m>, and <m>6x</m> is present in the integrand (which is almost <m>2x</m>, but with a 6 instead of a 2). Let <m>u = x^2 + 1</m>, so <m>du = 2x \,dx</m>. Then, to get <m>6x \,dx</m>, we can multiply both sides by 3,</p>
+        <md>
+          <mrow>du \amp= 2x \,dx</mrow>
+          <mrow>3 du \amp= 6x \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>\int \frac{6x}{(x^2+1)^2} \,dx \amp= \int \frac{1}{u^2} \cdot 3 \,du</mrow>
+          <mrow>\amp= 3 \int u^{-2} \,du</mrow>
+          <mrow>\amp= 3 \brac{-u^{-1}} + C</mrow>
+          <mrow>\amp= -\frac{3}{u} + C</mrow>
+          <mrow>\amp= -\frac{3}{x^2+1} + C \amp\amp \text{substituting back $u = x^2 + 1$}</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Substitution Producing a Logarithm</title>
+      <statement>
+        <p>Evaluate <m>\int \frac{2x}{x^2+4} \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>Here, there doesn't seem to be an inner function. However, the derivative of the entire denominator <m>x^2+4</m> is <m>2x</m>, which is exactly what we have in the integrand. Let <m>u = x^2 + 4</m>, so <m>du = 2x \,dx</m>. Then,</p>
+        <md>
+          <mrow>\int \frac{2x}{x^2+4} \,dx \amp= \int \frac{1}{u} \,du</mrow>
+          <mrow>\amp= \ln|u| + C</mrow>
+          <mrow>\amp= \ln|x^2+4| + C \amp\amp \text{substituting back $u = x^2 + 4$}</mrow>
+        </md>
+        <p>For the final answer, we can drop the absolute value, because <m>x^2 + 4</m> is always positive. Then,</p>
+        <me>\int \frac{2x}{x^2+4} \,dx = \ln(x^2+4) + C</me>
+      </solution>
+    </example>
+
+    <example>
+      <title>Substitution with a Nested Logarithm</title>
+      <statement>
+        <p>Evaluate</p>
+        <me>\int \frac{1}{x \ln{x}} \,dx</me>
+      </statement>
+      <solution>
+        <p>Here, there again doesn't seem to be an inner function. However, in the denominator there is <m>\ln{x}</m>, and its derivative is <m>\frac{1}{x}</m>, which is also in the integrand. Let <m>u = \ln{x}</m>, so <m>du = \frac{1}{x} \,dx</m>. Then,</p>
+        <md>
+          <mrow>\int \frac{1}{x \ln{x}} \,dx \amp= \int \underbrace{\frac{1}{\ln{x}}}_{u} \cdot \underbrace{\frac{1}{x} \,dx}_{du}</mrow>
+          <mrow>\amp= \int \frac{1}{u} \,du</mrow>
+          <mrow>\amp= \ln|u| + C</mrow>
+          <mrow>\amp= \ln|\ln{x}| + C \amp\amp \text{substituting back $u = \ln{x}$}</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>Sometimes, after performing a substitution, there is still <m>x</m> left in the integrand. In some of these cases, we can substitute it as well.</p>
+
+    <example>
+      <title>Substitution with Remaining x</title>
+      <statement>
+        <p>Evaluate <m>\int x\sqrt{x+2} \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>The inner function is <m>x+2</m>, so let <m>u = x + 2</m>, so <m>du = dx</m>.</p>
+        <me>\int x\sqrt{x+2} \,dx = \int x \cdot \sqrt{u} \,du \quad \text{substituting $u = x + 2$ and $du = dx$}</me>
+        <p>After substituting, there is still an <m>x</m>, that isn't captured by the <m>du</m>. However, from <m>u = x + 2</m>, we can isolate <m>x</m>, to get <m>x = u - 2</m>. Then, we can substitute that as well, to get it entirely in terms of <m>u</m>,</p>
+        <md>
+          <mrow>\amp= \int (u - 2)\sqrt{u} \,du</mrow>
+          <mrow>\amp= \int (u^{3/2} - 2u^{1/2}) \,du \amp\amp \text{expanding}</mrow>
+          <mrow>\amp= \frac{2}{5}u^{5/2} - 2 \cdot \frac{2}{3}u^{3/2} + C</mrow>
+          <mrow>\amp= \frac{2}{5}(x+2)^{5/2} - \frac{4}{3}(x+2)^{3/2} + C \amp\amp \text{substituting back $u = x+2$}</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Substitution with Solving for x</title>
+      <statement>
+        <p>Evaluate <m>\int \frac{x^2}{(x-5)^3} \,dx</m>.</p>
+      </statement>
+      <solution>
+        <p>Let <m>u = x - 5</m>, so <m>du = dx</m>,</p>
+        <me>= \int \frac{x^2}{u^3} \,du \quad \text{substituting $u = x - 5$ and $du = dx$}</me>
+        <p>We need to replace <m>x^2</m>, using <m>u=x-5</m> to isolate for <m>x</m> to get <m>x = u + 5</m>. Substituting,</p>
+        <md>
+          <mrow>\amp= \int \frac{(u+5)^2}{u^3} \,du</mrow>
+          <mrow>\amp= \int \frac{u^2 + 10u + 25}{u^3} \,du</mrow>
+          <mrow>\amp= \int \brac{u^{-1} + 10u^{-2} + 25u^{-3}} \,du</mrow>
+          <mrow>\amp= \ln|u| - \frac{10}{u} - \frac{25}{2u^2} + C</mrow>
+          <mrow>\amp= \ln|x-5| - \frac{10}{x-5} - \frac{25}{2(x-5)^2} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <project>
+      <title>Solve-for-x Substitutions</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \frac{x}{\sqrt{x+1}} \,dx</m></p></statement><hint><p><m>u=x+1</m></p></hint><answer><p><m>\frac{2}{3}(x+1)^{3/2}-2(x+1)^{1/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x \sqrt{x-2} \,dx</m></p></statement><hint><p><m>u=x-2</m></p></hint><answer><p><m>\frac{2}{5}(x-2)^{5/2}+\frac{4}{3}(x-2)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x(x-1)^{10} \,dx</m></p></statement><hint><p><m>u=x-1</m></p></hint><answer><p><m>\frac{1}{12}(x-1)^{12}+\frac{1}{11}(x-1)^{11}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sqrt{4-x} \,dx</m></p></statement><hint><p><m>u=4-x</m></p></hint><answer><p><m>-\frac{2}{5}(4-x)^{5/2}+\frac{8}{3}(4-x)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int (x+5)(x-5)^{1/3} \,dx</m></p></statement><hint><p><m>u=x-5</m></p></hint><answer><p><m>\frac{3}{7}(x-5)^{7/3}+\frac{15}{2}(x-5)^{4/3}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sqrt{2x+1}\,dx</m></p></statement><hint><p><m>u=2x+1</m></p></hint><answer><p><m>\frac{1}{10}(2x+1)^{5/2}-\frac{1}{6}(2x+1)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{4x}{\sqrt{2x+3}} \,dx</m></p></statement><hint><p><m>u=2x+3</m></p></hint><answer><p><m>\frac{2}{3}(2x+3)^{3/2}-3\sqrt{2x+3}+C</m></p></answer></task>
+      <task><statement><p><m>\int x(2x+5)^8 \,dx</m></p></statement><hint><p><m>u=2x+5</m></p></hint><answer><p><m>\frac{1}{40}(2x+5)^{10}-\frac{5}{36}(2x+5)^9+C</m></p></answer></task>
+    </project>
+  </introduction>
+
+  <subsection xml:id="subsec-sub-summary">
+    <title>Summary of Integration by Substitution</title>
+
+    <p>In summary, to use integration by substitution:</p>
+    <ol>
+      <li><p>Choose a substitution <m>u = g(x)</m>.</p></li>
+      <li><p>Take the derivative to get <m>du = g'(x) \,dx</m>.</p></li>
+      <li><p>Substitute <m>u = g(x)</m> and <m>du = g'(x) \,dx</m>, to get an integral in terms of the new variable <m>u</m> only.</p></li>
+      <li><p>Evaluate the integral, using antiderivative rules.</p></li>
+      <li><p>Substitute back <m>u = g(x)</m>, to express the final answer in terms of the original variable <m>x</m>. Don't forget to add <m>+C</m> for the constant of integration.</p></li>
+    </ol>
+
+    <p>The most challenging part of integration by substitution is choosing the right substitution <m>u</m>. It is somewhat an art, because there isn't one straightforward rule that works in every scenario. Sometimes, you will choose the wrong <m>u</m>, and that's okay, because you can always try a different substitution if the first one doesn't work out.</p>
+
+    <remark>
+      <p>Your final answer should always be in terms of <m>x</m>, not <m>u</m>. The variable <m>u</m> is just a temporary variable to help you evaluate the integral, and shouldn't be part of the final answer. A common mistake is forgetting to substitute back to <m>x</m> at the end, and leaving the answer in terms of <m>u</m>.</p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="subsec-choosing-u">
+    <title>Principles for Choosing <m>u</m></title>
+
+    <p>Here are some guidelines for choosing the right <m>u</m>.</p>
+
+    <ol>
+      <li>
+        <p><alert>Look for the <q>inner function</q></alert>, and let <m>u</m> be that inner function. Here are some common patterns:</p>
+        <ul>
+          <li><p><alert>Expression inside a power</alert> If you see <m>(\text{expression})^n</m>, try <m>u = \text{expression}</m>.</p></li>
+          <li><p><alert>Inside a function</alert> If you see <m>\sin(\text{expression})</m>, <m>e^{\text{expression}}</m>, or <m>\ln(\text{expression})</m>, try <m>u = \text{expression}</m>.</p></li>
+          <li><p><alert>Entire denominator</alert> If you see <m>\frac{\text{something}}{\text{expression}}</m>, try <m>u = \text{expression}</m>.</p></li>
+          <li><p><alert>Under a root</alert> If you see <m>\sqrt{\text{expression}}</m>, try <m>u = \text{expression}</m>.</p></li>
+        </ul>
+        <p>In general, for a composition <m>f(g(x))</m>, try <m>u = g(x)</m>.</p>
+      </li>
+      <li><p><alert>When in doubt, try the most complicated part</alert>. If no inside is immediately obvious, try letting <m>u</m> be the most <q>complicated</q> piece of the integrand.</p></li>
+      <li>
+        <p><alert>If there is a function and its derivative</alert>, try letting <m>u</m> be the function. For example,</p>
+        <ul>
+          <li><p>If you see <m>\sin x</m> and <m>\cos x</m>, try <m>u = \sin x</m>.</p></li>
+          <li><p>If you see <m>e^x</m> and <m>e^x</m>, try <m>u = e^x</m>.</p></li>
+          <li><p>If you see <m>\ln x</m> and <m>\frac{1}{x}</m>, try <m>u = \ln x</m>.</p></li>
+        </ul>
+      </li>
+      <li><p><alert>If <m>x</m> still remains after substituting</alert>, solve for <m>x</m> in terms of <m>u</m> and substitute that as well. This works especially well when <m>u</m> is a linear function of <m>x</m>.</p></li>
+    </ol>
+
+    <remark>
+      <p>Sometimes, especially for more complicated integrals, multiple choices of <m>u</m> can lead to different-looking but equivalent answers, which are both corect. For example, <m>\int \csc^2 2x\cot 2x \,dx</m> can be solved with <m>u = \cot 2x</m> or <m>u = \csc 2x</m>, yielding <m>-\frac{1}{4}\cot^2 2x + C</m> and <m>-\frac{1}{4}\csc^2 2x + C</m>, respectively. These differ by a constant, so both are correct.</p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="subsec-sub-examples">
+    <title>Examples</title>
+
+    <project>
+      <title>Straightforward Substitutions</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int x(x^2-1)^3 \,dx</m></p></statement><hint><p><m>u=x^2-1</m></p></hint><answer><p><m>\frac{1}{8}(x^2-1)^4+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{x^2} \,dx</m></p></statement><hint><p><m>u=x^2</m></p></hint><answer><p><m>\frac{1}{2}e^{x^2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{x}{x^2+4} \,dx</m></p></statement><hint><p><m>u=x^2+4</m></p></hint><answer><p><m>\frac{1}{2}\ln(x^2+4)+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2\sqrt{x^3+1} \,dx</m></p></statement><hint><p><m>u=x^3+1</m></p></hint><answer><p><m>\frac{2}{9}(x^3+1)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sqrt{1-x^2} \,dx</m></p></statement><hint><p><m>u=1-x^2</m></p></hint><answer><p><m>-\frac{1}{3}(1-x^2)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sin(2x^2) \,dx</m></p></statement><hint><p><m>u=2x^2</m></p></hint><answer><p><m>-\frac{1}{4}\cos(2x^2)+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2 e^{x^3} \,dx</m></p></statement><hint><p><m>u=x^3</m></p></hint><answer><p><m>\frac{1}{3}e^{x^3}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{x^2}{x^3 + 1} \,dx</m></p></statement><hint><p><m>u=x^3+1</m></p></hint><answer><p><m>\frac{1}{3}\ln|x^3+1|+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{2x^2}{\sqrt{1-4x^3}} \,dx</m></p></statement><hint><p><m>u=1-4x^3</m></p></hint><answer><p><m>-\frac{1}{3}\sqrt{1-4x^3}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2(4-x^3)^{2/3} \,dx</m></p></statement><hint><p><m>u=4-x^3</m></p></hint><answer><p><m>-\frac{1}{5}(4-x^3)^{5/3}+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{-x^2} \,dx</m></p></statement><hint><p><m>u=-x^2</m></p></hint><answer><p><m>-\frac{1}{2}e^{-x^2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^3(2+x^4)^5 \,dx</m></p></statement><hint><p><m>u=2+x^4</m></p></hint><answer><p><m>\frac{1}{24}(2+x^4)^6+C</m></p></answer></task>
+      <task><statement><p><m>\int 3x\sqrt{7-3x^2}\,dx</m></p></statement><hint><p><m>u=7-3x^2</m></p></hint><answer><p><m>-\frac{1}{3}(7-3x^2)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^4(x^5+6)^9 \,dx</m></p></statement><hint><p><m>u=x^5+6</m></p></hint><answer><p><m>\frac{1}{50}(x^5+6)^{10}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^3(x^4+16)^6 \,dx</m></p></statement><hint><p><m>u=x^4+16</m></p></hint><answer><p><m>\frac{1}{28}(x^4+16)^7+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sqrt[4]{1-x^2}\,dx</m></p></statement><hint><p><m>u=1-x^2</m></p></hint><answer><p><m>-\frac{2}{5}(1-x^2)^{5/4}+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Compositions</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \frac{\cos(\sqrt{x})}{\sqrt{x}} \,dx</m></p></statement><hint><p><m>u=\sqrt{x}</m></p></hint><answer><p><m>2\sin(\sqrt{x})+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\cos(\ln x)}{x} \,dx</m></p></statement><hint><p><m>u=\ln x</m></p></hint><answer><p><m>\sin(\ln x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin x\sqrt{1+\cos x}\,dx</m></p></statement><hint><p><m>u=1+\cos x</m></p></hint><answer><p><m>-\frac{2}{3}(1+\cos x)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin{x} \cos{(\cos{x})} \,dx</m></p></statement><hint><p><m>u=\cos x</m></p></hint><answer><p><m>-\sin(\cos x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{\cos x}\sin x \,dx</m></p></statement><hint><p><m>u=\cos x</m></p></hint><answer><p><m>-e^{\cos x}+C</m></p></answer></task>
+      <task><statement><p><m>\int e^x\sqrt{1+e^x} \,dx</m></p></statement><hint><p><m>u=1+e^x</m></p></hint><answer><p><m>\frac{2}{3}(1+e^x)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\sec^2\brac{\frac{1}{x}}}{x^2} \,dx</m></p></statement><hint><p><m>u=\frac{1}{x}</m></p></hint><answer><p><m>-\tan\brac{\frac{1}{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{x+2}{\sqrt{x^2+4x}} \,dx</m></p></statement><hint><p><m>u=x^2+4x</m></p></hint><answer><p><m>\sqrt{x^2+4x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{9x^2}{\sqrt{1-x^3}} \,dx</m></p></statement><hint><p><m>u=1-x^3</m></p></hint><answer><p><m>-6\sqrt{1-x^3}+C</m></p></answer></task>
+      <task><statement><p><m>\int (3x+2)(3x^2+4x)^4 \,dx</m></p></statement><hint><p><m>u=3x^2+4x</m></p></hint><answer><p><m>\frac{1}{10}(3x^2+4x)^5+C</m></p></answer></task>
+      <task><statement><p><m>\int (x^2+1)(x^3+3x)^4 \,dx</m></p></statement><hint><p><m>u=x^3+3x</m></p></hint><answer><p><m>\frac{1}{15}(x^3+3x)^5+C</m></p></answer></task>
+      <task><statement><p><m>\int x^9\sin(x^{10}) \,dx</m></p></statement><hint><p><m>u=x^{10}</m></p></hint><answer><p><m>-\frac{1}{10}\cos(x^{10})+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{(1+\sqrt{x})^{1/3}}{\sqrt{x}} \,dx</m></p></statement><hint><p><m>u=1+\sqrt{x}</m></p></hint><answer><p><m>\frac{3}{2}(1+\sqrt{x})^{4/3}+C</m></p></answer></task>
+      <task><statement><p><m>\int 12(x^4+4x^2+1)^2(x^3+2x) \,dx</m></p></statement><hint><p><m>u=x^4+4x^2+1</m></p></hint><answer><p><m>(x^4+4x^2+1)^3+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Advanced Compositions</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \frac{\sin(\sqrt{x})}{\sqrt{x}} \,dx</m></p></statement><hint><p><m>u=\sqrt{x}</m></p></hint><answer><p><m>-2\cos(\sqrt{x})+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin x\sin(\cos x) \,dx</m></p></statement><hint><p><m>u=\cos x</m></p></hint><answer><p><m>\cos(\cos x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^x \brac{2 + 3e^x}^{3/2} \,dx</m></p></statement><hint><p><m>u=2+3e^x</m></p></hint><answer><p><m>\frac{2}{15}(2+3e^x)^{5/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\brac{\sqrt{x}+1}^4}{2\sqrt{x}} \,dx</m></p></statement><hint><p><m>u=\sqrt{x}+1</m></p></hint><answer><p><m>\frac{1}{5}\brac{\sqrt{x}+1}^5+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{8x+6}{2x^2+3x} \,dx</m></p></statement><hint><p><m>u=2x^2+3x</m></p></hint><answer><p><m>2\ln|2x^2+3x|+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\cos\brac{\frac{\pi}{x}}}{x^2} \,dx</m></p></statement><hint><p><m>u=\frac{\pi}{x}</m></p></hint><answer><p><m>-\frac{1}{\pi}\sin\brac{\frac{\pi}{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\ln\sqrt{x}}{x} \,dx</m></p></statement><hint><p><m>u=\ln x</m></p></hint><answer><p><m>\frac{1}{4}(\ln x)^2+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{2}{x(3 + \ln{x})} \,dx</m></p></statement><hint><p><m>u=3+\ln x</m></p></hint><answer><p><m>2\ln|3+\ln x|+C</m></p></answer></task>
+      <task><statement><p><m>\int (x^6-3x^2)^4(x^5-x) \,dx</m></p></statement><hint><p><m>u=x^6-3x^2</m></p></hint><answer><p><m>\frac{1}{30}(x^6-3x^2)^5+C</m></p></answer></task>
+      <task><statement><p><m>\int \brac{x^{3/2}+8}^5\sqrt{x} \,dx</m></p></statement><hint><p><m>u=x^{3/2}+8</m></p></hint><answer><p><m>\frac{1}{9}\brac{x^{3/2}+8}^6+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{e^{2x}}{e^{2x}+1} \,dx</m></p></statement><hint><p><m>u=e^{2x}+1</m></p></hint><answer><p><m>\frac{1}{2}\ln(e^{2x}+1)+C</m></p></answer></task>
+      <task><statement><p><m>\int (1-\cos\brac{\frac{x}{2}})^2\sin\brac{\frac{x}{2}} \,dx</m></p></statement><hint><p><m>u=1-\cos\brac{\frac{x}{2}}</m></p></hint><answer><p><m>\frac{2}{3}\brac{1-\cos\brac{\frac{x}{2}}}^3+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{1}{\sqrt{x}(1+\sqrt{x})^2} \,dx</m></p></statement><hint><p><m>u=1+\sqrt{x}</m></p></hint><answer><p><m>-\frac{2}{1+\sqrt{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{2^x}{2^x+3} \,dx</m></p></statement><hint><p><m>u=2^x+3</m></p></hint><answer><p><m>\frac{1}{\ln 2}\ln(2^x+3)+C</m></p></answer></task>
+      <task><statement><p><m>\int 6x^2 \cdot 4^{x^3} \,dx</m></p></statement><hint><p><m>u=x^3</m></p></hint><answer><p><m>\frac{2}{\ln 4} \cdot 4^{x^3}+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Challenging Substitutions</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int x^{1/2}\sin(x^{3/2}+1) \,dx</m></p></statement><hint><p><m>u=x^{3/2}+1</m></p></hint><answer><p><m>-\frac{2}{3}\cos(x^{3/2}+1)+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{x}{(2x-1)^{2/3}} \,dx</m></p></statement><hint><p><m>u=2x-1</m></p></hint><answer><p><m>\frac{3}{16}(2x-1)^{4/3}+\frac{3}{4}(2x-1)^{1/3}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{1}{x^2}\cos\brac{\frac{1}{x}-1} \,dx</m></p></statement><hint><p><m>u=\frac{1}{x}-1</m></p></hint><answer><p><m>-\sin\brac{\frac{1}{x}-1}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{1}{\sqrt{x}}\cos(\sqrt{x}+3) \,dx</m></p></statement><hint><p><m>u=\sqrt{x}+3</m></p></hint><answer><p><m>2\sin(\sqrt{x}+3)+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2\brac{\frac{x^3}{18}-1}^5 \,dx</m></p></statement><hint><p><m>u=\frac{x^3}{18}-1</m></p></hint><answer><p><m>\brac{\frac{x^3}{18}-1}^6+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2\sqrt{2+x} \,dx</m></p></statement><hint><p><m>u=x+2</m></p></hint><answer><p><m>\frac{2}{7}(x+2)^{7/2}-\frac{8}{5}(x+2)^{5/2}+\frac{8}{3}(x+2)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^4\brac{7-\frac{x^5}{10}}^3 \,dx</m></p></statement><hint><p><m>u=7-\frac{x^5}{10}</m></p></hint><answer><p><m>-\frac{1}{2}\brac{7-\frac{x^5}{10}}^4+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{1}{x^2}\sin\brac{\frac{1}{x}}\cos\brac{\frac{1}{x}} \,dx</m></p></statement><hint><p><m>u=\frac{1}{x}</m></p></hint><answer><p><m>-\frac{1}{2}\sin^2\brac{\frac{1}{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int 5^x\sin(5^x) \,dx</m></p></statement><hint><p><m>u=5^x</m></p></hint><answer><p><m>-\frac{1}{\ln 5}\cos(5^x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{a+bx^2}{\sqrt{3ax+bx^3}} \,dx</m></p></statement><hint><p><m>u=3ax+bx^3</m></p></hint><answer><p><m>\frac{2}{3}\sqrt{3ax+bx^3}+C</m></p></answer></task>
+      <task><statement><p><m>\int (x+1)^2(1-x)^5 \,dx</m></p></statement><hint><p><m>u=1-x</m></p></hint><answer><p><m>-\frac{2}{3}(1-x)^6+\frac{4}{7}(1-x)^7-\frac{1}{8}(1-x)^8+C</m></p></answer></task>
+      <task><statement><p><m>\int x^3\sqrt{x^2+1} \,dx</m></p></statement><hint><p><m>u=x^2+1</m></p></hint><answer><p><m>\frac{1}{5}(x^2+1)^{5/2}-\frac{1}{3}(x^2+1)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{x^3}{\sqrt{x^2+1}} \,dx</m></p></statement><hint><p><m>u=x^2+1</m></p></hint><answer><p><m>\frac{1}{3}(x^2+1)^{3/2}-(x^2+1)^{1/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int (\sin 2x)e^{\sin^2 x} \,dx</m></p></statement><hint><p><m>u=\sin^2 x</m></p></hint><answer><p><m>e^{\sin^2 x}+C</m></p></answer></task>
+      <task><statement><p><m>\int 3x^5\sqrt{x^3+1} \,dx</m></p></statement><hint><p><m>u=x^3+1</m></p></hint><answer><p><m>\frac{2}{5}(x^3+1)^{5/2}-\frac{2}{3}(x^3+1)^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{x^7}{\sqrt{1-x^4}} \,dx</m></p></statement><hint><p><m>u=1-x^4</m></p></hint><answer><p><m>-\frac{2}{5}(1-x^4)^{5/2}+\frac{2}{3}(1-x^4)^{3/2}-2(1-x^4)^{1/2}+C</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-sub-general">
+    <title>Integration by Substitution in General</title>
+
+    <p>Now that we have seen how substitution works in practice, let's analyze why. In fact, integration by substitution is the integral version of the chain rule (for derivatives). Recall that the chain rule says that the derivative of a composite function <m>f(g(x))</m> is,</p>
+    <me>\frac{d}{dx} \brac{f(g(x))} = f'(g(x)) g'(x)</me>
+    <p>Equivalently, this says that <m>f(g(x))</m> is an antiderivative of <m>f'(g(x)) g'(x)</m>, or in other words,</p>
+    <me>\int f'(g(x)) g'(x) \,dx = f(g(x)) + C</me>
+    <p>This is what we did with substitution. We let <m>u=g(x)</m>, so <m>du = g'(x) \,dx</m>. Then,</p>
+    <md>
+      <mrow>\int f'(g(x)) g'(x) \,dx \amp= \int f'(u) \, du \amp\amp \text{substituting $u = g(x)$ and $du = g'(x)\,dx$}</mrow>
+      <mrow>\amp= f(u) + C \amp\amp \text{taking the antiderivative of $f'(u)$ with respect to $u$}</mrow>
+      <mrow>\amp= f(g(x)) + C \amp\amp \text{substituting back $u = g(x)$}</mrow>
+    </md>
+
+    <remark>
+      <p>Integration by substitution is more of a tool for determining indefinite integrals, rather than a theorem. After practicing a lot of substitution, you could do the simpler ones just mentally by inspection (in other words, educated guessing), without explicitly substituting <m>u = g(x)</m>, converting everything to <m>u</m>, integrating in <m>u</m>, and converting back. For example,</p>
+      <me>\int 2x (x^2 - 1)^2 \,dx</me>
+      <p>can be seen to be (after some practice with this technique),</p>
+      <me>\int 2x (x^2 - 1)^2 \,dx = \frac{1}{3}(x^2 - 1)^3 + C</me>
+      <p>Because the derivative is <m>2x</m> which is exactly what we have, so it's like <m>\int u^2 \,du = \frac{1}{3} u^3+C</m>. However, you should probably write out the steps to show your work.</p>
+    </remark>
+
+    <remark>
+      <p>Integration by substitution is very sensitive to changes in the integrand, in that, small changes in the integrand can transform a simple problem that is able to be evaluated using integration by substitution, to an integral which is extremely difficult or even impossible. For example,</p>
+      <me>\int 2x \sin{(x^2)} \,dx</me>
+      <p>is a simple integral that can be evaluated using substitution (using <m>u = x^2</m>), but,</p>
+      <me>\int \sin{(x^2)} \,dx</me>
+      <p>is a very difficult integral, that actually can't be evaluated using any technique that we learn in this course. This is because the derivative of <m>x^2</m> is <m>2x</m>, which is exactly what we have in the first integral, but not in the second integral. In general, all integration techniques are very sensitive to changes in the integrand.</p>
+    </remark>
+  </subsection>
+
+</section>
