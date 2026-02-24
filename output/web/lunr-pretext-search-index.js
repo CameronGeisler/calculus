@@ -802,11 +802,461 @@ var ptx_lunr_docs = [
   "body": " L'Hopital's Rule    L'Hopital's Rule Summary   Determine if the limit is an indeterminate form, and if so, then what form it is.  If it's or , then apply L'Hopital's rule directly.  If it's (or ), flip one of the terms to convert it to or (whichever is more convenient).  If it's , then write it as one fraction first, and then continue.  If it's an indeterminate form with an exponent, like , , or , then first use logarithms.   Visually,      "
 },
 {
+  "id": "sec-reverse-chain-rule",
+  "level": "1",
+  "url": "sec-reverse-chain-rule.html",
+  "type": "Section",
+  "number": "6.1",
+  "title": "Reverse Chain Rule",
+  "body": " Reverse Chain Rule   With integration, a common situation is when you recognize a basic function you know how to integrate, except the input has been replaced by something like , , or (a linear expression ). In these cases, the antiderivative has the same shape as usual, but you must make a small adjustment.   Integral of   Consider the integral,     We know that the integral of is , so we might guess that the integral of is . However, this is almost correct but not quite. Indeed, checking the antiderivative,   There is an extra factor of 3. When differentiating , we know that we'd basically differentiate as normal, and then multiply by the derivative of which is 3 (by the chain rule), and so the derivative is . Antiderivatives are like the reverse of derivatives, so instead, we need to divide by 3,   Checking the antiderivative, indeed,   which is the original function.     Integral of   Consider the integral,     Again, we know the integral of is , so we might guess that the integral of is . However, this is almost correct but not quite. We also have to divide the answer by 2, because differentiating would make an extra factor of 2 (from the chain rule). Then,   Checking the antiderivative verifies that this is correct,   which gives back the original function. Notice that the does not change the answer, because the derivative of a constant is 0.    In general, if there is a linear expression inside the function we are integrating, then we need to divide the answer by to correct for that extra constant factor when differentiating. More precisely, differentiating something with inside always leads to a factor of by the chain rule, so when we integrate we undo that factor by dividing by . The does not affect the factor because the derivative of a constant is 0. In short,    Integral of   Evaluate .    The antiderivative of is . Here we have instead of , so we integrate as normal and divide by the coefficient of , which is 2,      Basic Reverse Chain Rule Practice  Evaluate each integral.       The same idea applies to powers and logarithms.   Integral of   Evaluate .    This integral is of the form (a power), except with inside (a linear expression). So, we integrate as if it were , giving (by the power rule), and then divide by the coefficient of , which is ,      Integral of   Evaluate .    This integral is of the form , except with (a linear expression). The antiderivative of is , so we integrate as normal and divide by the coefficient of , which is ,      Integral of   Evaluate .    This integral is of the form , except with (a linear expression). The antiderivative of is , so we integrate as normal and divide by the coefficient of , which is 4,      Powers, Logarithms, and Trigonometric Integrals Practice  Evaluate each integral.           In general, we can summarize this rule,   Reverse Chain Rule (Linear Inside Rule)  If , then .   Here, means that there is some existing integral rule that we know for , and is the antiderivative of . Then, if we have instead of (in other words, instead of just ), we can integrate as normal to get , and then divide by to correct for the chain rule. For example,    This rule only works when the inner function is linear (in other words, of the form ), because the derivative of a linear function is a constant. For an inner function that isn't linear, this shortcut does not apply. For example, for , we cannot just integrate as normal and divide by the derivative of which is to get ,   This is because when we differentiate , we have to use the product rule, and we will get something more complicated than just , so this is not the correct antiderivative. We will learn how to integrate some more complicated functions later.     Examples   Reverse Chain Rule Practice  Evaluate each integral.             Recall that .      Recall that .        "
+},
+{
+  "id": "sec-reverse-chain-rule-2-2",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-2",
+  "type": "Example",
+  "number": "6.1.1",
+  "title": "Integral of <span class=\"process-math\">\\(e^{3x}\\)<\/span>.",
+  "body": " Integral of   Consider the integral,     We know that the integral of is , so we might guess that the integral of is . However, this is almost correct but not quite. Indeed, checking the antiderivative,   There is an extra factor of 3. When differentiating , we know that we'd basically differentiate as normal, and then multiply by the derivative of which is 3 (by the chain rule), and so the derivative is . Antiderivatives are like the reverse of derivatives, so instead, we need to divide by 3,   Checking the antiderivative, indeed,   which is the original function.   "
+},
+{
+  "id": "sec-reverse-chain-rule-2-3",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-3",
+  "type": "Example",
+  "number": "6.1.2",
+  "title": "Integral of <span class=\"process-math\">\\(\\sin{(2x + 5)}\\)<\/span>.",
+  "body": " Integral of   Consider the integral,     Again, we know the integral of is , so we might guess that the integral of is . However, this is almost correct but not quite. We also have to divide the answer by 2, because differentiating would make an extra factor of 2 (from the chain rule). Then,   Checking the antiderivative verifies that this is correct,   which gives back the original function. Notice that the does not change the answer, because the derivative of a constant is 0.   "
+},
+{
+  "id": "sec-reverse-chain-rule-2-6",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-6",
+  "type": "Example",
+  "number": "6.1.3",
+  "title": "Integral of <span class=\"process-math\">\\(\\sec^2(2x)\\)<\/span>.",
+  "body": " Integral of   Evaluate .    The antiderivative of is . Here we have instead of , so we integrate as normal and divide by the coefficient of , which is 2,    "
+},
+{
+  "id": "sec-reverse-chain-rule-2-7",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-7",
+  "type": "Exercise Group",
+  "number": "6.1.1",
+  "title": "Basic Reverse Chain Rule Practice.",
+  "body": " Basic Reverse Chain Rule Practice  Evaluate each integral.      "
+},
+{
+  "id": "sec-reverse-chain-rule-2-9",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-9",
+  "type": "Example",
+  "number": "6.1.4",
+  "title": "Integral of <span class=\"process-math\">\\((1-2x)^9\\)<\/span>.",
+  "body": " Integral of   Evaluate .    This integral is of the form (a power), except with inside (a linear expression). So, we integrate as if it were , giving (by the power rule), and then divide by the coefficient of , which is ,    "
+},
+{
+  "id": "sec-reverse-chain-rule-2-10",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-10",
+  "type": "Example",
+  "number": "6.1.5",
+  "title": "Integral of <span class=\"process-math\">\\(\\frac{1}{5-3x}\\)<\/span>.",
+  "body": " Integral of   Evaluate .    This integral is of the form , except with (a linear expression). The antiderivative of is , so we integrate as normal and divide by the coefficient of , which is ,    "
+},
+{
+  "id": "sec-reverse-chain-rule-2-11",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-11",
+  "type": "Example",
+  "number": "6.1.6",
+  "title": "Integral of <span class=\"process-math\">\\(\\sqrt{1+4x}\\)<\/span>.",
+  "body": " Integral of   Evaluate .    This integral is of the form , except with (a linear expression). The antiderivative of is , so we integrate as normal and divide by the coefficient of , which is 4,    "
+},
+{
+  "id": "sec-reverse-chain-rule-2-12",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-12",
+  "type": "Exercise Group",
+  "number": "6.1.2",
+  "title": "Powers, Logarithms, and Trigonometric Integrals Practice.",
+  "body": " Powers, Logarithms, and Trigonometric Integrals Practice  Evaluate each integral.          "
+},
+{
+  "id": "thm-reverse-chain-rule",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#thm-reverse-chain-rule",
+  "type": "Theorem",
+  "number": "6.1.7",
+  "title": "Reverse Chain Rule (Linear Inside Rule).",
+  "body": " Reverse Chain Rule (Linear Inside Rule)  If , then .  "
+},
+{
+  "id": "sec-reverse-chain-rule-2-17",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#sec-reverse-chain-rule-2-17",
+  "type": "Remark",
+  "number": "6.1.8",
+  "title": "",
+  "body": " This rule only works when the inner function is linear (in other words, of the form ), because the derivative of a linear function is a constant. For an inner function that isn't linear, this shortcut does not apply. For example, for , we cannot just integrate as normal and divide by the derivative of which is to get ,   This is because when we differentiate , we have to use the product rule, and we will get something more complicated than just , so this is not the correct antiderivative. We will learn how to integrate some more complicated functions later.  "
+},
+{
+  "id": "subsec-rcr-examples-2",
+  "level": "2",
+  "url": "sec-reverse-chain-rule.html#subsec-rcr-examples-2",
+  "type": "Exercise Group",
+  "number": "6.1.3",
+  "title": "Reverse Chain Rule Practice.",
+  "body": " Reverse Chain Rule Practice  Evaluate each integral.             Recall that .      Recall that .      "
+},
+{
+  "id": "sec-integration-by-substitution",
+  "level": "1",
+  "url": "sec-integration-by-substitution.html",
+  "type": "Section",
+  "number": "6.2",
+  "title": "Integration by Substitution",
+  "body": " Integration by Substitution   Previously, we saw how to integrate functions of the form by integrating as normal and dividing by (the reverse chain rule). Integration by substitution generalizes this idea to handle any composite function, not just linear ones.   Substitution with a Power   Evaluate     The expression could be expanded, allowing us to use the power rule, but it would be a lot of work.  Instead, it turns out we can use substitution. We will define a new variable, named , in terms of the original variable . In particular, let (the expression inside the power). This means the integral will be,   We also need to replace and with something in terms of . To do this, we compute , which is the derivative of with respect to times . We have,   (You may recall that and are called differentials). This means we can replace with , and is exactly what we have left in our integral. Then,   This is a new integral in terms of (only), which we can evaluate using the power rule. We have,   Finally, we substitute back , to express our final answer in terms of the original variable ,      Substitution with an Exponential   Evaluate     Here, it turns out that letting works well. This is because then, , which is exactly what we have left in our integral. Then, substituting,     In general, a good guideline is to let be the inner function in a composition. For it to work, the derivative of the inner function must also be there in the integrand. This allows us to transform the integral into an easier integral.   Exact Match Substitutions  Evaluate each integral.           Substitution with a Logarithm   Evaluate .    Notice that the inner function is , and its derivative is , which is also in the integrand. Let , so . Then,      Substitution with a Trigonometric Power   Evaluate .    Notice that the inner function is (recall that means ), and its derivative is , which is also in the integrand. Let , so . Then,     Sometimes, the derivative of the inner function is not exactly there in the integrand, but it's basically the same, except for a different number. In these cases, we can still use substitution.   Adjusting for a Constant Factor   Evaluate .    Notice that the inner function is , and its derivative is , and is present in the integrand (but not a 3). Let , so . We have left over in the integral, so we can solve for that,   Then,      Adjusting with Multiplication   Evaluate     Notice that the inner function is , and its derivative is , and is present in the integrand (which is almost , but with a 6 instead of a 2). Let , so . Then, to get , we can multiply both sides by 3,   Then,      Substitution Producing a Logarithm   Evaluate .    Here, there doesn't seem to be an inner function. However, the derivative of the entire denominator is , which is exactly what we have in the integrand. Let , so . Then,   For the final answer, we can drop the absolute value, because is always positive. Then,      Substitution with a Nested Logarithm   Evaluate     Here, there again doesn't seem to be an inner function. However, in the denominator there is , and its derivative is , which is also in the integrand. Let , so . Then,     Sometimes, after performing a substitution, there is still left in the integrand. In some of these cases, we can substitute it as well.   Substitution with Remaining x   Evaluate .    The inner function is , so let , so .   After substituting, there is still an , that isn't captured by the . However, from , we can isolate , to get . Then, we can substitute that as well, to get it entirely in terms of ,      Substitution with Solving for x   Evaluate .    Let , so ,   We need to replace , using to isolate for to get . Substituting,      Solve-for-x Substitutions  Evaluate each integral.             Summary of Integration by Substitution  In summary, to use integration by substitution:   Choose a substitution .  Take the derivative to get .  Substitute and , to get an integral in terms of the new variable only.  Evaluate the integral, using antiderivative rules.  Substitute back , to express the final answer in terms of the original variable . Don't forget to add for the constant of integration.   The most challenging part of integration by substitution is choosing the right substitution . It is somewhat an art, because there isn't one straightforward rule that works in every scenario. Sometimes, you will choose the wrong , and that's okay, because you can always try a different substitution if the first one doesn't work out.   Your final answer should always be in terms of , not . The variable is just a temporary variable to help you evaluate the integral, and shouldn't be part of the final answer. A common mistake is forgetting to substitute back to at the end, and leaving the answer in terms of .     Principles for Choosing  Here are some guidelines for choosing the right .    Look for the inner function , and let be that inner function. Here are some common patterns:   Expression inside a power If you see , try .  Inside a function If you see , , or , try .  Entire denominator If you see , try .  Under a root If you see , try .   In general, for a composition , try .   When in doubt, try the most complicated part . If no inside is immediately obvious, try letting be the most complicated piece of the integrand.   If there is a function and its derivative , try letting be the function. For example,   If you see and , try .  If you see and , try .  If you see and , try .    If still remains after substituting , solve for in terms of and substitute that as well. This works especially well when is a linear function of .    Sometimes, especially for more complicated integrals, multiple choices of can lead to different-looking but equivalent answers, which are both corect. For example, can be solved with or , yielding and , respectively. These differ by a constant, so both are correct.     Examples   Straightforward Substitutions  Evaluate each integral.                    Compositions  Evaluate each integral.                  Advanced Compositions  Evaluate each integral.                   Challenging Substitutions  Evaluate each integral.                     Integration by Substitution in General  Now that we have seen how substitution works in practice, let's analyze why. In fact, integration by substitution is the integral version of the chain rule (for derivatives). Recall that the chain rule says that the derivative of a composite function is,   Equivalently, this says that is an antiderivative of , or in other words,   This is what we did with substitution. We let , so . Then,    Integration by substitution is more of a tool for determining indefinite integrals, rather than a theorem. After practicing a lot of substitution, you could do the simpler ones just mentally by inspection (in other words, educated guessing), without explicitly substituting , converting everything to , integrating in , and converting back. For example,   can be seen to be (after some practice with this technique),   Because the derivative is which is exactly what we have, so it's like . However, you should probably write out the steps to show your work.    Integration by substitution is very sensitive to changes in the integrand, in that, small changes in the integrand can transform a simple problem that is able to be evaluated using integration by substitution, to an integral which is extremely difficult or even impossible. For example,   is a simple integral that can be evaluated using substitution (using ), but,   is a very difficult integral, that actually can't be evaluated using any technique that we learn in this course. This is because the derivative of is , which is exactly what we have in the first integral, but not in the second integral. In general, all integration techniques are very sensitive to changes in the integrand.    "
+},
+{
+  "id": "sec-integration-by-substitution-2-2",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-2",
+  "type": "Example",
+  "number": "6.2.1",
+  "title": "Substitution with a Power.",
+  "body": " Substitution with a Power   Evaluate     The expression could be expanded, allowing us to use the power rule, but it would be a lot of work.  Instead, it turns out we can use substitution. We will define a new variable, named , in terms of the original variable . In particular, let (the expression inside the power). This means the integral will be,   We also need to replace and with something in terms of . To do this, we compute , which is the derivative of with respect to times . We have,   (You may recall that and are called differentials). This means we can replace with , and is exactly what we have left in our integral. Then,   This is a new integral in terms of (only), which we can evaluate using the power rule. We have,   Finally, we substitute back , to express our final answer in terms of the original variable ,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-3",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-3",
+  "type": "Example",
+  "number": "6.2.2",
+  "title": "Substitution with an Exponential.",
+  "body": " Substitution with an Exponential   Evaluate     Here, it turns out that letting works well. This is because then, , which is exactly what we have left in our integral. Then, substituting,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-5",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-5",
+  "type": "Exercise Group",
+  "number": "6.2.1",
+  "title": "Exact Match Substitutions.",
+  "body": " Exact Match Substitutions  Evaluate each integral.         "
+},
+{
+  "id": "sec-integration-by-substitution-2-6",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-6",
+  "type": "Example",
+  "number": "6.2.3",
+  "title": "Substitution with a Logarithm.",
+  "body": " Substitution with a Logarithm   Evaluate .    Notice that the inner function is , and its derivative is , which is also in the integrand. Let , so . Then,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-7",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-7",
+  "type": "Example",
+  "number": "6.2.4",
+  "title": "Substitution with a Trigonometric Power.",
+  "body": " Substitution with a Trigonometric Power   Evaluate .    Notice that the inner function is (recall that means ), and its derivative is , which is also in the integrand. Let , so . Then,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-9",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-9",
+  "type": "Example",
+  "number": "6.2.5",
+  "title": "Adjusting for a Constant Factor.",
+  "body": " Adjusting for a Constant Factor   Evaluate .    Notice that the inner function is , and its derivative is , and is present in the integrand (but not a 3). Let , so . We have left over in the integral, so we can solve for that,   Then,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-10",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-10",
+  "type": "Example",
+  "number": "6.2.6",
+  "title": "Adjusting with Multiplication.",
+  "body": " Adjusting with Multiplication   Evaluate     Notice that the inner function is , and its derivative is , and is present in the integrand (which is almost , but with a 6 instead of a 2). Let , so . Then, to get , we can multiply both sides by 3,   Then,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-11",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-11",
+  "type": "Example",
+  "number": "6.2.7",
+  "title": "Substitution Producing a Logarithm.",
+  "body": " Substitution Producing a Logarithm   Evaluate .    Here, there doesn't seem to be an inner function. However, the derivative of the entire denominator is , which is exactly what we have in the integrand. Let , so . Then,   For the final answer, we can drop the absolute value, because is always positive. Then,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-12",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-12",
+  "type": "Example",
+  "number": "6.2.8",
+  "title": "Substitution with a Nested Logarithm.",
+  "body": " Substitution with a Nested Logarithm   Evaluate     Here, there again doesn't seem to be an inner function. However, in the denominator there is , and its derivative is , which is also in the integrand. Let , so . Then,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-14",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-14",
+  "type": "Example",
+  "number": "6.2.9",
+  "title": "Substitution with Remaining x.",
+  "body": " Substitution with Remaining x   Evaluate .    The inner function is , so let , so .   After substituting, there is still an , that isn't captured by the . However, from , we can isolate , to get . Then, we can substitute that as well, to get it entirely in terms of ,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-15",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-15",
+  "type": "Example",
+  "number": "6.2.10",
+  "title": "Substitution with Solving for x.",
+  "body": " Substitution with Solving for x   Evaluate .    Let , so ,   We need to replace , using to isolate for to get . Substituting,    "
+},
+{
+  "id": "sec-integration-by-substitution-2-16",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#sec-integration-by-substitution-2-16",
+  "type": "Exercise Group",
+  "number": "6.2.2",
+  "title": "Solve-for-x Substitutions.",
+  "body": " Solve-for-x Substitutions  Evaluate each integral.          "
+},
+{
+  "id": "subsec-sub-summary-5",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#subsec-sub-summary-5",
+  "type": "Remark",
+  "number": "6.2.11",
+  "title": "",
+  "body": " Your final answer should always be in terms of , not . The variable is just a temporary variable to help you evaluate the integral, and shouldn't be part of the final answer. A common mistake is forgetting to substitute back to at the end, and leaving the answer in terms of .  "
+},
+{
+  "id": "subsec-choosing-u-4",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#subsec-choosing-u-4",
+  "type": "Remark",
+  "number": "6.2.12",
+  "title": "",
+  "body": " Sometimes, especially for more complicated integrals, multiple choices of can lead to different-looking but equivalent answers, which are both corect. For example, can be solved with or , yielding and , respectively. These differ by a constant, so both are correct.  "
+},
+{
+  "id": "subsec-sub-examples-2",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#subsec-sub-examples-2",
+  "type": "Exercise Group",
+  "number": "6.2.3",
+  "title": "Straightforward Substitutions.",
+  "body": " Straightforward Substitutions  Evaluate each integral.                  "
+},
+{
+  "id": "subsec-sub-examples-3",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#subsec-sub-examples-3",
+  "type": "Exercise Group",
+  "number": "6.2.4",
+  "title": "Compositions.",
+  "body": " Compositions  Evaluate each integral.                "
+},
+{
+  "id": "subsec-sub-examples-4",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#subsec-sub-examples-4",
+  "type": "Exercise Group",
+  "number": "6.2.5",
+  "title": "Advanced Compositions.",
+  "body": " Advanced Compositions  Evaluate each integral.                 "
+},
+{
+  "id": "subsec-sub-examples-5",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#subsec-sub-examples-5",
+  "type": "Exercise Group",
+  "number": "6.2.6",
+  "title": "Challenging Substitutions.",
+  "body": " Challenging Substitutions  Evaluate each integral.                  "
+},
+{
+  "id": "subsec-sub-general-8",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#subsec-sub-general-8",
+  "type": "Remark",
+  "number": "6.2.13",
+  "title": "",
+  "body": " Integration by substitution is more of a tool for determining indefinite integrals, rather than a theorem. After practicing a lot of substitution, you could do the simpler ones just mentally by inspection (in other words, educated guessing), without explicitly substituting , converting everything to , integrating in , and converting back. For example,   can be seen to be (after some practice with this technique),   Because the derivative is which is exactly what we have, so it's like . However, you should probably write out the steps to show your work.  "
+},
+{
+  "id": "subsec-sub-general-9",
+  "level": "2",
+  "url": "sec-integration-by-substitution.html#subsec-sub-general-9",
+  "type": "Remark",
+  "number": "6.2.14",
+  "title": "",
+  "body": " Integration by substitution is very sensitive to changes in the integrand, in that, small changes in the integrand can transform a simple problem that is able to be evaluated using integration by substitution, to an integral which is extremely difficult or even impossible. For example,   is a simple integral that can be evaluated using substitution (using ), but,   is a very difficult integral, that actually can't be evaluated using any technique that we learn in this course. This is because the derivative of is , which is exactly what we have in the first integral, but not in the second integral. In general, all integration techniques are very sensitive to changes in the integrand.  "
+},
+{
+  "id": "sec-integrals-of-trig-functions",
+  "level": "1",
+  "url": "sec-integrals-of-trig-functions.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "Integrals of Trigonometric Functions",
+  "body": " Integrals of Trigonometric Functions   In this section, we explore the integrals (antiderivatives) of various trigonometric functions. First, recall the antiderivative of sine and cosine,   The integrals of the other trigonometric functions are somewhat more complicated, and require using substitution. First, here are all of them together,   You may get a formula sheet on your final exam with these formulas, or you may be expected to memorize them (or derive them if needed).   A pattern that can help you memorize these antiderivatives, is that the antiderivative of the co functions (cosine, cosecant, cotangent) are similar to their corresponding non-co functions (sine, secant, tangent), except,   They have the opposite sign (so if the non-co function has a positive sign, the co function has a negative sign, and vice versa).   They have similar function parts, but flipped , in that non-co functions become co functions, and co becomes non-co. In particular,    integral of...  non-co-function   co-function                           Integrals of Tangent, Secant, Cosecant, and Cotangent   Integral of Tangent       Note that these two antiderivatives are equivalent, because,     Deriving the Integral of Tangent  To integrate , recall that . We can rewrite it as , and use substitution,   Notice that there is in the denominator, and its derivative is in the numerator (except with a negative sign), so we can use substitution. Then,   Then,     Integral of Secant       Deriving the Integral of Secant  There are multiple ways to integrate , but the most common way is to use a very special trick, of multiplying the numerator and denominator by ,   It turns out that this allows us to use substitution, because there is in the denominator, and its derivative is , which is exactly what is in the numerator. Then,   Then,     Integral of Cosecant       Deriving the Integral of Cosecant  To integrate , we can use the same trick as secant, but this time multiplying the numerator and denominator by ,   Again, this allows us to use substitution, because there is in the denominator, and its derivative is , which is what is in the numerator (except with a negative sign). Then,   Then,     Integral of Cotangent       Note that these two antiderivatives are equivalent, because,     Deriving the Integral of Cotangent  To integrate , it is similar to . We can rewrite it as , and use substitution,   Then,   Then,      Integral of and  Two important trig integrals that come up often are and .   Integrals of Squared Sine and Cosine      These integrals show up often enough that they are helpful to memorize, or at least memorize the method of deriving them.   Integral of   Consider,     Unfortunately, there is no simple substitution that can be used to evaluate this integral (like, for example, ). Also, you can't just integrate as if it were 2 functions multiplied together,,   Instead, we have to use a particular trigonometric identity, called the power-reducing identities. There are 2 of them, one for cosine and one for sine,   As their name suggests, these identities express and (cosine and sine to the 2nd power) in terms of , which is to the 1st power.  These identities can be derived from the double-angle identities for cosine,   If you solve the first equation to isolate for , and the second equation for , you get the power-reducing identities.  Using these identities, we can evaluate the integral of ,   Further, the double-angle identity can be used to rewrite the antiderivative in terms of only single angles ,     The integral of can be evaluated in the same way, using the other power-reducing identity,   Integral of   Consider the integral,     Use the power-reducing identity for sine ,   Again, we can use the double-angle identity to rewrite the antiderivative in terms of only single angles ,     For reference, here are the power-reducing identities again,   You may get these identities on your formula sheet for your exams, or you may need to memorize them.    Examples   Basic Trigonometric Integrals Practice  Evaluate each integral.  Expand, and use the formula for .  Multiply the numerator and denominator by , and split the fraction.  Split the fraction into .  Expand, and use .  Distribute; use and .  Rewrite as and use .    More Trigonometric Integrals Practice  Evaluate each integral.  Multiply numerator and denominator by , and use .  Multiply numerator and denominator by , and use .  Use the sine addition formula .  Rewrite as , then multiply by the conjugate .  Expand, and use and .    "
+},
+{
+  "id": "sec-integrals-of-trig-functions-2-6",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#sec-integrals-of-trig-functions-2-6",
+  "type": "Remark",
+  "number": "6.3.1",
+  "title": "",
+  "body": " A pattern that can help you memorize these antiderivatives, is that the antiderivative of the co functions (cosine, cosecant, cotangent) are similar to their corresponding non-co functions (sine, secant, tangent), except,   They have the opposite sign (so if the non-co function has a positive sign, the co function has a negative sign, and vice versa).   They have similar function parts, but flipped , in that non-co functions become co functions, and co becomes non-co. In particular,    integral of...  non-co-function   co-function                        "
+},
+{
+  "id": "thm-integral-tangent",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integral-tangent",
+  "type": "Theorem",
+  "number": "6.3.2",
+  "title": "Integral of Tangent.",
+  "body": " Integral of Tangent     "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-3",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-3",
+  "type": "Remark",
+  "number": "6.3.3",
+  "title": "",
+  "body": " Note that these two antiderivatives are equivalent, because,   "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-4",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-4",
+  "type": "Example",
+  "number": "6.3.4",
+  "title": "Deriving the Integral of Tangent.",
+  "body": " Deriving the Integral of Tangent  To integrate , recall that . We can rewrite it as , and use substitution,   Notice that there is in the denominator, and its derivative is in the numerator (except with a negative sign), so we can use substitution. Then,   Then,   "
+},
+{
+  "id": "thm-integral-secant",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integral-secant",
+  "type": "Theorem",
+  "number": "6.3.5",
+  "title": "Integral of Secant.",
+  "body": " Integral of Secant     "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-6",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-6",
+  "type": "Example",
+  "number": "6.3.6",
+  "title": "Deriving the Integral of Secant.",
+  "body": " Deriving the Integral of Secant  There are multiple ways to integrate , but the most common way is to use a very special trick, of multiplying the numerator and denominator by ,   It turns out that this allows us to use substitution, because there is in the denominator, and its derivative is , which is exactly what is in the numerator. Then,   Then,   "
+},
+{
+  "id": "thm-integral-cosecant",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integral-cosecant",
+  "type": "Theorem",
+  "number": "6.3.7",
+  "title": "Integral of Cosecant.",
+  "body": " Integral of Cosecant     "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-8",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-8",
+  "type": "Example",
+  "number": "6.3.8",
+  "title": "Deriving the Integral of Cosecant.",
+  "body": " Deriving the Integral of Cosecant  To integrate , we can use the same trick as secant, but this time multiplying the numerator and denominator by ,   Again, this allows us to use substitution, because there is in the denominator, and its derivative is , which is what is in the numerator (except with a negative sign). Then,   Then,   "
+},
+{
+  "id": "thm-integral-cotangent",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integral-cotangent",
+  "type": "Theorem",
+  "number": "6.3.9",
+  "title": "Integral of Cotangent.",
+  "body": " Integral of Cotangent     "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-10",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-10",
+  "type": "Remark",
+  "number": "6.3.10",
+  "title": "",
+  "body": " Note that these two antiderivatives are equivalent, because,   "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-11",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-11",
+  "type": "Example",
+  "number": "6.3.11",
+  "title": "Deriving the Integral of Cotangent.",
+  "body": " Deriving the Integral of Cotangent  To integrate , it is similar to . We can rewrite it as , and use substitution,   Then,   Then,   "
+},
+{
+  "id": "thm-integrals-sin2-cos2",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integrals-sin2-cos2",
+  "type": "Theorem",
+  "number": "6.3.12",
+  "title": "Integrals of Squared Sine and Cosine.",
+  "body": " Integrals of Squared Sine and Cosine     "
+},
+{
+  "id": "subsec-integrals-sin2-cos2-5",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-sin2-cos2-5",
+  "type": "Example",
+  "number": "6.3.13",
+  "title": "Integral of <span class=\"process-math\">\\(\\cos^2{x}\\)<\/span>.",
+  "body": " Integral of   Consider,     Unfortunately, there is no simple substitution that can be used to evaluate this integral (like, for example, ). Also, you can't just integrate as if it were 2 functions multiplied together,,   Instead, we have to use a particular trigonometric identity, called the power-reducing identities. There are 2 of them, one for cosine and one for sine,   As their name suggests, these identities express and (cosine and sine to the 2nd power) in terms of , which is to the 1st power.  These identities can be derived from the double-angle identities for cosine,   If you solve the first equation to isolate for , and the second equation for , you get the power-reducing identities.  Using these identities, we can evaluate the integral of ,   Further, the double-angle identity can be used to rewrite the antiderivative in terms of only single angles ,    "
+},
+{
+  "id": "subsec-integrals-sin2-cos2-7",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-sin2-cos2-7",
+  "type": "Example",
+  "number": "6.3.14",
+  "title": "Integral of <span class=\"process-math\">\\(\\sin^2{x}\\)<\/span>.",
+  "body": " Integral of   Consider the integral,     Use the power-reducing identity for sine ,   Again, we can use the double-angle identity to rewrite the antiderivative in terms of only single angles ,    "
+},
+{
+  "id": "subsec-trig-integrals-examples-2",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-trig-integrals-examples-2",
+  "type": "Exercise Group",
+  "number": "6.3.1",
+  "title": "Basic Trigonometric Integrals Practice.",
+  "body": " Basic Trigonometric Integrals Practice  Evaluate each integral.  Expand, and use the formula for .  Multiply the numerator and denominator by , and split the fraction.  Split the fraction into .  Expand, and use .  Distribute; use and .  Rewrite as and use .  "
+},
+{
+  "id": "subsec-trig-integrals-examples-3",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-trig-integrals-examples-3",
+  "type": "Exercise Group",
+  "number": "6.3.2",
+  "title": "More Trigonometric Integrals Practice.",
+  "body": " More Trigonometric Integrals Practice  Evaluate each integral.  Multiply numerator and denominator by , and use .  Multiply numerator and denominator by , and use .  Use the sine addition formula .  Rewrite as , then multiply by the conjugate .  Expand, and use and .  "
+},
+{
   "id": "sec-inverse-trig-sub",
   "level": "1",
   "url": "sec-inverse-trig-sub.html",
   "type": "Section",
-  "number": "6.1",
+  "number": "6.4",
   "title": "Inverse Trigonometric Substitution",
   "body": " Inverse Trigonometric Substitution   Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form , , or . This method uses trigonometric identities to simplify these integrals.    Summary of Inverse Trigonometric Substitution                                    Identify the form of the substitution (sine, tangent, or secant).  Apply the substitution. Sketch a right triangle and label the sides, to represent the relationships between and .  Simplify the integral.  Integrate with the new variable , using previous strategies, typically a trigonometric integral.  Back-substitute using the inverse trigonometric function to substitute back for .      Examples   Example   Evaluate .    Let , so .               Example   Determine      Example   Determine      Example   Determine       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate      "
 },
@@ -815,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#summary-of-inverse-trigonometric-substitution-2",
   "type": "Table",
-  "number": "6.1.1",
+  "number": "6.4.1",
   "title": "",
   "body": "                            "
 },
@@ -824,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-2",
   "type": "Checkpoint",
-  "number": "6.1.2",
+  "number": "6.4.2",
   "title": "Example.",
   "body": " Example   Evaluate .    Let , so .             "
 },
@@ -833,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-3",
   "type": "Checkpoint",
-  "number": "6.1.3",
+  "number": "6.4.3",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -842,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-4",
   "type": "Checkpoint",
-  "number": "6.1.4",
+  "number": "6.4.4",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -851,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-5",
   "type": "Checkpoint",
-  "number": "6.1.5",
+  "number": "6.4.5",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -860,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-6",
   "type": "Checkpoint",
-  "number": "6.1.6",
+  "number": "6.4.6",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -869,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-7",
   "type": "Checkpoint",
-  "number": "6.1.7",
+  "number": "6.4.7",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -878,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-8",
   "type": "Checkpoint",
-  "number": "6.1.8",
+  "number": "6.4.8",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -887,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-9",
   "type": "Checkpoint",
-  "number": "6.1.9",
+  "number": "6.4.9",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -896,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-10",
   "type": "Checkpoint",
-  "number": "6.1.10",
+  "number": "6.4.10",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -905,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-11",
   "type": "Checkpoint",
-  "number": "6.1.11",
+  "number": "6.4.11",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -914,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-12",
   "type": "Checkpoint",
-  "number": "6.1.12",
+  "number": "6.4.12",
   "title": "",
   "body": "  Evaluate    "
 },
