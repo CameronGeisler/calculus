@@ -1252,11 +1252,281 @@ var ptx_lunr_docs = [
   "body": " More Trigonometric Integrals Practice  Evaluate each integral.  Multiply numerator and denominator by , and use .  Multiply numerator and denominator by , and use .  Use the sine addition formula .  Rewrite as , then multiply by the conjugate .  Expand, and use and .  "
 },
 {
+  "id": "sec-integration-by-parts",
+  "level": "1",
+  "url": "sec-integration-by-parts.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Integration by Parts",
+  "body": " Integration by Parts   Integration by parts (IBP) is another useful technique for evaluating integrals, especially when the integrand is a product of two different types of functions (i.e. 2 functions multiplied together).   When to Use Integration by Parts  For example, integration by parts is useful for:     times exponential  times logarithm  times sine  exponential times sine    IBP is essentially a formula, which says,   It is typically written using differential notation as,   So, is basically the derivative of , and is the derivative of . This formula is used from left to right:   The original integral is of the form (2 things multiplied together)  Then we rewrite it as   And if we do it right, the remaining integral will be easier than the original integral.   In this way, this step only solves part of the original integral. This is why it's called integration by parts .   Evaluating   Consider the integral,     The idea is to break up the integral into two parts, and , such that,   can be integrated easily, and doesn't become more complicated  can be differentiated easily, and its derivative is simpler than itself   In this case, it turns out we should choose and . Then, we can compute and ,         Then, the integral can be rewritten as ,   Therefore,     In general, a good guideline is for choosing and is,   Choose such that its derivative is more simple than itself.  Choose so it can be easily integrated , and when integrated, either becomes simpler or at least not more complicated.    Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself ( has no weird function , it just involves ), and because can be easily integrated to . Then,         Then,     Some integrals require using integration by parts multiple times.   Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to . Then,         Then,   The new integral is less complicated because the power of decreased by one (from 2 to 1). Then, we can use IBP again for ,         Then,      Evaluating   Consider the integral,     Choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to itself. Then,         Then,   The new integral is simpler because the power of decreased by one. Using IBP again,            Each time you use IBP, the power of the polynomial decreases by one, until it eventually reaches 0. This is what makes IBP a useful technique for integrating products of polynomials and other functions.  From the previous examples, we can see that IBP is often useful when the integral is a product of 2 different types of functions.    Evaluating  Evaluate the integral .     Integral of Natural Logarithm  Integration by parts can be used to find the antiderivative of the natural logarithm function .   Evaluating   Consider the integral,     At first, does not look like a product of functions, however, we can think of it as , and choose and . The derivative of is which is simpler than itself, and 1 can be easily integrated to . Then,         Then,     In summary,     Cyclic Examples (Product of Exponential and Trig)   Evaluating   Consider the integral,     Here, it turns out that we could choose either or to be or , and both would work. This is because the derivative and integral of is , and the derivative and integral of is or , so both of them are basically the same in terms of complexity. In this case, we will choose and . Then,         Then,   The second integral is similar to the first except that it has instead of . To evaluate it, we use IBP again,          The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and collect them together as like terms on the left-hand side,   Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,      Evaluating  Evaluate the integral .      Integration by Parts for Definite Integrals  For definite integrals, you also have to evaluate the term at the limits of integration. Otherwise, it is very similar.    Evaluating   Evaluate the integral,            Then,       Summary of Integration by Parts  In summary,   A mnemonic to remember the IBP formula is u ltra- v iolet v oo doo .   Note that integration by parts is a place-holder formula , in that the variables and are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.  In contrast, recall that with substitution, the integral is transformed from to an integral in another variable .  With integration by parts, we do not substitute or , but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of . In this way, you don't have to worry about changing the limits of integration for definite integrals.    With integration by parts, you don't have to worry about the constant of integration until the final answer. That is, when integrating to get , we do not need to include a constant of integration , because there will be a constant introduced by the remaining integral . So, it is easiest to just wait until the very end to include .     Derivation of the Integration by Parts Formula  You may recall that integration by substitution comes from the chain rule for derivatives. In a similar way, integration by parts comes from the product rule for derivatives. Recall the product rule for derivatives, which says that, for two functions, and ,   Taking the antiderivative of both sides gives,   The left-hand side is the integral of the derivative of , so it is just , so we can write,   Then, rearranging this formula to isolate gives,   This is the integration by parts formula, except the convention is to use and instead of and , and to write instead of , and instead of . So, we write it as,   as before.    Guidelines for Choosing and (LIATE)  An important part of using integration by parts is to choose the correct and . Intuitively,   Choose so its derivative is more simple than itself  Choose to be something that is easily integrated, and either becomes simpler or at least not more complicated.   There is a mnemonic for choosing called the LIATE rule (typically pronounced lie-ate ), which is an acronym that stands for:   L : logarithmic functions, e.g. .  I : inverse trigonometric functions, e.g. .  A : algebraic functions, of the form , like polynomial functions ( , etc.) and radical functions ( , etc.).  T : trigonometric functions, e.g. .  E : exponential functions, e.g. , .   The rule is:   Choose to be what is highest on the list  And then will be what is leftover.   Also, don't forget that you can also just choose to be the entire function and , if nothing else seems to work.    Examples   One-Step IBP ( )  Evaluate each integral.                     Definite Integrals, One Step ( )  Evaluate each definite integral.            One-Step Variants ( )  Evaluate each integral.                Cyclic Examples with Exponential and Trigonometric Functions ( )  Evaluate each integral.               Two-Step IBP ( )  Evaluate each integral.             Definite Integrals, One Step ( )  Evaluate each definite integral.          Definite Integrals, Two Steps ( )  Evaluate each definite integral.        Special Techniques ( )  Evaluate each integral.  we can integrate  we can integrate   we can integrate  we can integrate  similar to  similar to  similar to     Inverse Trigonometric Functions ( )  Evaluate each integral.     we can differentiate , as      Three or More Steps ( )  Evaluate each integral.             Definite Integrals ( )  Evaluate each definite integral.   Use first.       More Definite Integrals ( )  Evaluate each definite integral.   (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)     ( is a constant.)      Advanced Examples  Sometimes, a -substitution or trigonometric identity can be used to simplify the integral, which leads to an integral where you can use integration by parts.   Substitution then IBP ( )  Evaluate each integral.    let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to ; cyclic IBP  let , leads to    Evaluating  Evaluate , where is a constant, .     Particle Velocity  A particle has velocity m\/s. Find the distance traveled from time 0 to time .  m    Definite Integrals  Evaluate each definite integral.            Special Tricks  Evaluate each integral.  split the integral as , then use integration by parts on the 2nd integral  let and  let and or    "
+},
+{
+  "id": "sec-integration-by-parts-2-2",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-2",
+  "type": "Example",
+  "number": "6.4.1",
+  "title": "When to Use Integration by Parts.",
+  "body": " When to Use Integration by Parts  For example, integration by parts is useful for:     times exponential  times logarithm  times sine  exponential times sine   "
+},
+{
+  "id": "sec-integration-by-parts-2-12",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-12",
+  "type": "Example",
+  "number": "6.4.2",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x e^x \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     The idea is to break up the integral into two parts, and , such that,   can be integrated easily, and doesn't become more complicated  can be differentiated easily, and its derivative is simpler than itself   In this case, it turns out we should choose and . Then, we can compute and ,         Then, the integral can be rewritten as ,   Therefore,    "
+},
+{
+  "id": "sec-integration-by-parts-2-15",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-15",
+  "type": "Example",
+  "number": "6.4.3",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x \\ln{x} \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself ( has no weird function , it just involves ), and because can be easily integrated to . Then,         Then,    "
+},
+{
+  "id": "sec-integration-by-parts-2-17",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-17",
+  "type": "Example",
+  "number": "6.4.4",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x^2 \\sin{x} \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to . Then,         Then,   The new integral is less complicated because the power of decreased by one (from 2 to 1). Then, we can use IBP again for ,         Then,    "
+},
+{
+  "id": "sec-integration-by-parts-2-18",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-18",
+  "type": "Example",
+  "number": "6.4.5",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x^2 e^x \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     Choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to itself. Then,         Then,   The new integral is simpler because the power of decreased by one. Using IBP again,           "
+},
+{
+  "id": "sec-integration-by-parts-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-3",
+  "type": "Checkpoint",
+  "number": "6.4.6",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x^3 e^x \\,dx\\)<\/span>.",
+  "body": " Evaluating  Evaluate the integral .   "
+},
+{
+  "id": "subsec-ibp-ln-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-ln-3",
+  "type": "Example",
+  "number": "6.4.7",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int \\ln{x} \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     At first, does not look like a product of functions, however, we can think of it as , and choose and . The derivative of is which is simpler than itself, and 1 can be easily integrated to . Then,         Then,    "
+},
+{
+  "id": "subsec-ibp-cyclic-2",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-cyclic-2",
+  "type": "Example",
+  "number": "6.4.8",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int e^x \\sin x \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     Here, it turns out that we could choose either or to be or , and both would work. This is because the derivative and integral of is , and the derivative and integral of is or , so both of them are basically the same in terms of complexity. In this case, we will choose and . Then,         Then,   The second integral is similar to the first except that it has instead of . To evaluate it, we use IBP again,          The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and collect them together as like terms on the left-hand side,   Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,    "
+},
+{
+  "id": "subsec-ibp-cyclic-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-cyclic-3",
+  "type": "Checkpoint",
+  "number": "6.4.9",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int e^x \\cos x \\,dx\\)<\/span>.",
+  "body": " Evaluating  Evaluate the integral .   "
+},
+{
+  "id": "subsec-ibp-definite-4",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-definite-4",
+  "type": "Example",
+  "number": "6.4.10",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int_0^2 3x e^x \\,dx\\)<\/span>.",
+  "body": " Evaluating   Evaluate the integral,            Then,    "
+},
+{
+  "id": "subsec-ibp-summary-5",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-summary-5",
+  "type": "Remark",
+  "number": "6.4.11",
+  "title": "",
+  "body": " Note that integration by parts is a place-holder formula , in that the variables and are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.  In contrast, recall that with substitution, the integral is transformed from to an integral in another variable .  With integration by parts, we do not substitute or , but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of . In this way, you don't have to worry about changing the limits of integration for definite integrals.  "
+},
+{
+  "id": "subsec-ibp-summary-6",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-summary-6",
+  "type": "Remark",
+  "number": "6.4.12",
+  "title": "",
+  "body": " With integration by parts, you don't have to worry about the constant of integration until the final answer. That is, when integrating to get , we do not need to include a constant of integration , because there will be a constant introduced by the remaining integral . So, it is easiest to just wait until the very end to include .  "
+},
+{
+  "id": "subsec-ibp-examples-2",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-2",
+  "type": "Exercise Group",
+  "number": "6.4.1",
+  "title": "One-Step IBP (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " One-Step IBP ( )  Evaluate each integral.                   "
+},
+{
+  "id": "subsec-ibp-examples-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-3",
+  "type": "Exercise Group",
+  "number": "6.4.2",
+  "title": "Definite Integrals, One Step (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " Definite Integrals, One Step ( )  Evaluate each definite integral.          "
+},
+{
+  "id": "subsec-ibp-examples-4",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-4",
+  "type": "Exercise Group",
+  "number": "6.4.3",
+  "title": "One-Step Variants (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " One-Step Variants ( )  Evaluate each integral.              "
+},
+{
+  "id": "subsec-ibp-examples-5",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-5",
+  "type": "Exercise Group",
+  "number": "6.4.4",
+  "title": "Cyclic Examples with Exponential and Trigonometric Functions (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Cyclic Examples with Exponential and Trigonometric Functions ( )  Evaluate each integral.             "
+},
+{
+  "id": "subsec-ibp-examples-6",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-6",
+  "type": "Exercise Group",
+  "number": "6.4.5",
+  "title": "Two-Step IBP (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Two-Step IBP ( )  Evaluate each integral.           "
+},
+{
+  "id": "subsec-ibp-examples-7",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-7",
+  "type": "Exercise Group",
+  "number": "6.4.6",
+  "title": "Definite Integrals, One Step (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " Definite Integrals, One Step ( )  Evaluate each definite integral.        "
+},
+{
+  "id": "subsec-ibp-examples-8",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-8",
+  "type": "Exercise Group",
+  "number": "6.4.7",
+  "title": "Definite Integrals, Two Steps (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Definite Integrals, Two Steps ( )  Evaluate each definite integral.      "
+},
+{
+  "id": "subsec-ibp-examples-9",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-9",
+  "type": "Exercise Group",
+  "number": "6.4.8",
+  "title": "Special Techniques (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Special Techniques ( )  Evaluate each integral.  we can integrate  we can integrate   we can integrate  we can integrate  similar to  similar to  similar to   "
+},
+{
+  "id": "subsec-ibp-examples-10",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-10",
+  "type": "Exercise Group",
+  "number": "6.4.9",
+  "title": "Inverse Trigonometric Functions (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " Inverse Trigonometric Functions ( )  Evaluate each integral.     we can differentiate , as    "
+},
+{
+  "id": "subsec-ibp-examples-11",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-11",
+  "type": "Exercise Group",
+  "number": "6.4.10",
+  "title": "Three or More Steps (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Three or More Steps ( )  Evaluate each integral.           "
+},
+{
+  "id": "subsec-ibp-examples-12",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-12",
+  "type": "Exercise Group",
+  "number": "6.4.11",
+  "title": "Definite Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Definite Integrals ( )  Evaluate each definite integral.   Use first.     "
+},
+{
+  "id": "subsec-ibp-examples-13",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-13",
+  "type": "Exercise Group",
+  "number": "6.4.12",
+  "title": "More Definite Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " More Definite Integrals ( )  Evaluate each definite integral.   (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)     ( is a constant.)   "
+},
+{
+  "id": "subsec-ibp-advanced-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-3",
+  "type": "Exercise Group",
+  "number": "6.4.13",
+  "title": "Substitution then IBP (<span class=\"process-math\">\\(\\star\\star\\star\\star\\)<\/span>).",
+  "body": " Substitution then IBP ( )  Evaluate each integral.    let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to ; cyclic IBP  let , leads to  "
+},
+{
+  "id": "subsec-ibp-advanced-4",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-4",
+  "type": "Checkpoint",
+  "number": "6.4.13",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x^3\\cos(nx)\\,dx\\)<\/span>.",
+  "body": " Evaluating  Evaluate , where is a constant, .   "
+},
+{
+  "id": "subsec-ibp-advanced-5",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-5",
+  "type": "Checkpoint",
+  "number": "6.4.14",
+  "title": "Particle Velocity.",
+  "body": " Particle Velocity  A particle has velocity m\/s. Find the distance traveled from time 0 to time .  m  "
+},
+{
+  "id": "subsec-ibp-advanced-6",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-6",
+  "type": "Exercise Group",
+  "number": "6.4.14",
+  "title": "Definite Integrals.",
+  "body": " Definite Integrals  Evaluate each definite integral.          "
+},
+{
+  "id": "subsec-ibp-advanced-7",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-7",
+  "type": "Exercise Group",
+  "number": "6.4.15",
+  "title": "Special Tricks.",
+  "body": " Special Tricks  Evaluate each integral.  split the integral as , then use integration by parts on the 2nd integral  let and  let and or  "
+},
+{
   "id": "sec-inverse-trig-sub",
   "level": "1",
   "url": "sec-inverse-trig-sub.html",
   "type": "Section",
-  "number": "6.4",
+  "number": "6.5",
   "title": "Inverse Trigonometric Substitution",
   "body": " Inverse Trigonometric Substitution   Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form , , or . This method uses trigonometric identities to simplify these integrals.    Summary of Inverse Trigonometric Substitution                                    Identify the form of the substitution (sine, tangent, or secant).  Apply the substitution. Sketch a right triangle and label the sides, to represent the relationships between and .  Simplify the integral.  Integrate with the new variable , using previous strategies, typically a trigonometric integral.  Back-substitute using the inverse trigonometric function to substitute back for .      Examples   Example   Evaluate .    Let , so .               Example   Determine      Example   Determine      Example   Determine       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate      "
 },
@@ -1265,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#summary-of-inverse-trigonometric-substitution-2",
   "type": "Table",
-  "number": "6.4.1",
+  "number": "6.5.1",
   "title": "",
   "body": "                            "
 },
@@ -1274,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-2",
   "type": "Checkpoint",
-  "number": "6.4.2",
+  "number": "6.5.2",
   "title": "Example.",
   "body": " Example   Evaluate .    Let , so .             "
 },
@@ -1283,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-3",
   "type": "Checkpoint",
-  "number": "6.4.3",
+  "number": "6.5.3",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -1292,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-4",
   "type": "Checkpoint",
-  "number": "6.4.4",
+  "number": "6.5.4",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -1301,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-5",
   "type": "Checkpoint",
-  "number": "6.4.5",
+  "number": "6.5.5",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -1310,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-6",
   "type": "Checkpoint",
-  "number": "6.4.6",
+  "number": "6.5.6",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1319,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-7",
   "type": "Checkpoint",
-  "number": "6.4.7",
+  "number": "6.5.7",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1328,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-8",
   "type": "Checkpoint",
-  "number": "6.4.8",
+  "number": "6.5.8",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1337,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-9",
   "type": "Checkpoint",
-  "number": "6.4.9",
+  "number": "6.5.9",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1346,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-10",
   "type": "Checkpoint",
-  "number": "6.4.10",
+  "number": "6.5.10",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1355,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-11",
   "type": "Checkpoint",
-  "number": "6.4.11",
+  "number": "6.5.11",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1364,7 +1634,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-12",
   "type": "Checkpoint",
-  "number": "6.4.12",
+  "number": "6.5.12",
   "title": "",
   "body": "  Evaluate    "
 },

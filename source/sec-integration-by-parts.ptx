@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-integration-by-parts" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Integration by Parts</title>
+
+  <introduction>
+    <p>Integration by parts (IBP) is another useful technique for evaluating integrals, especially when the integrand is a product of two different types of functions (i.e. 2 functions multiplied together).</p>
+
+    <example>
+      <title>When to Use Integration by Parts</title>
+      <p>For example, integration by parts is useful for:</p>
+      <tabular halign="left">
+        <col width="40%"/>
+        <col width="50%"/>
+        <row><cell><m>\int x e^x \,dx</m></cell><cell><m>x</m> times exponential</cell></row>
+        <row><cell><m>\int x^2 \ln{x} \,dx</m></cell><cell><m>x^2</m> times logarithm</cell></row>
+        <row><cell><m>\int x^3 \sin{x} \,dx</m></cell><cell><m>x^3</m> times sine</cell></row>
+        <row><cell><m>\int e^x \sin{x} \,dx</m></cell><cell>exponential times sine</cell></row>
+      </tabular>
+    </example>
+
+    <p>IBP is essentially a formula, which says,</p>
+    <me>
+      \underbrace{\int u(x) v'(x) \,dx}_{\text{integral of u times v prime}} = \underbrace{u(x) v(x)}_{\text{u times v}} - \underbrace{\int v(x) u'(x) \,dx}_{\text{integral of v times u prime}}
+    </me>
+    <p>It is typically written using differential notation as,</p>
+    <me>\boxed{\int u \,dv = uv - \int v \,du}</me>
+    <p>So, <m>dv</m> is basically the derivative of <m>v</m>, and <m>du</m> is the derivative of <m>u</m>. This formula is used from left to right:</p>
+    <ul>
+      <li><p>The original integral is of the form <m>\int u \,dv</m> (2 things multiplied together)</p></li>
+      <li><p>Then we rewrite it as <m>uv - \int v \,du</m></p></li>
+    </ul>
+    <p>And if we do it right, the remaining integral will be easier than the original integral.</p>
+    <md>
+      <mrow>\underbrace{\int u \,dv }_{\text{difficult integral}} \amp= u v - \underbrace{\int v \,du}_{\text{easier integral}}</mrow>
+    </md>
+    <p>In this way, this step only solves <em>part</em> of the original integral. This is why it's called integration by <em>parts</em>.</p>
+
+    <example>
+      <title>Evaluating <m>\int x e^x \,dx</m></title>
+      <statement>
+        <p>Consider the integral,</p>
+        <me>\int x e^x \,dx</me>
+      </statement>
+      <solution>
+        <p>The idea is to break up the integral into two parts, <m>u</m> and <m>dv</m>, such that,</p>
+        <ul>
+          <li><p><m>dv</m> can be integrated easily, and doesn't become more complicated</p></li>
+          <li><p><m>u</m> can be differentiated easily, and its derivative is simpler than itself</p></li>
+        </ul>
+        <p>In this case, it turns out we should choose <m>u = x</m> and <m>dv = e^x \,dx</m>. Then, we can compute <m>du</m> and <m>v</m>,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = x</m></cell><cell><m>v = e^x</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = dx</m></cell><cell><m>dv = e^x \,dx</m></cell></row>
+        </tabular>
+        <p>Then, the integral can be rewritten as <m>uv - \int v \,du</m>,</p>
+        <md>
+          <mrow>\int x e^x \,dx \amp= \underbrace{x}_{u} \cdot \underbrace{e^x}_{v} - \int \underbrace{e^x}_{v} \cdot \underbrace{dx}_{du}</mrow>
+          <mrow>\amp= x e^x - e^x + C \amp\amp \text{evaluate the remaining integral}</mrow>
+        </md>
+        <p>Therefore,</p>
+        <me>\int x e^x \,dx = x e^x - e^x + C</me>
+      </solution>
+    </example>
+
+    <p>In general, a good guideline is for choosing <m>u</m> and <m>dv</m> is,</p>
+    <ul>
+      <li><p>Choose <m>u</m> such that its derivative is <em>more simple</em> than <m>u</m> itself.</p></li>
+      <li><p>Choose <m>dv</m> so it can be <em>easily integrated</em>, and when integrated, either becomes simpler or at least not more complicated.</p></li>
+    </ul>
+
+    <example>
+      <title>Evaluating <m>\int x \ln{x} \,dx</m></title>
+      <statement>
+        <p>Consider the integral,</p>
+        <me>\int x \ln{x} \,dx</me>
+      </statement>
+      <solution>
+        <p>We can choose <m>u = \ln{x}</m> and <m>dv = x \,dx</m>, because the derivative of <m>\ln{x}</m> is <m>\frac{1}{x}</m> which is simpler than itself (<m>\frac{1}{x}</m> has no weird function <m>\ln</m>, it just involves <m>x</m>), and because <m>x</m> can be easily integrated to <m>\frac{1}{2} x^2</m>. Then,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = \ln{x}</m></cell><cell><m>v = \frac{1}{2} x^2</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = \frac{1}{x} \,dx</m></cell><cell><m>dv = x \,dx</m></cell></row>
+        </tabular>
+        <p>Then,</p>
+        <md>
+          <mrow>\int x \ln{x} \,dx \amp= \underbrace{\ln{x}}_{u} \cdot \underbrace{\frac{1}{2} x^2}_{v} - \int \underbrace{\frac{1}{2} x^2}_{v} \cdot \underbrace{\frac{1}{x} \,dx}_{du}</mrow>
+          <mrow>\amp= \frac{1}{2} x^2 \ln{x} - \frac{1}{2} \int x \,dx</mrow>
+          <mrow>\amp= \frac{1}{2} x^2 \ln{x} - \frac{1}{4} x^2 + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>Some integrals require using integration by parts multiple times.</p>
+
+    <example>
+      <title>Evaluating <m>\int x^2 \sin{x} \,dx</m></title>
+      <statement>
+        <p>Consider the integral,</p>
+        <me>\int x^2 \sin{x} \,dx</me>
+      </statement>
+      <solution>
+        <p>We can choose <m>u = x^2</m> and <m>dv = \sin{x} \,dx</m>, because the derivative of <m>x^2</m> is <m>2x</m> which is simpler than itself, and because <m>\sin{x}</m> can be easily integrated to <m>-\cos{x}</m>. Then,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = x^2</m></cell><cell><m>v = -\cos{x}</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = 2x \,dx</m></cell><cell><m>dv = \sin{x} \,dx</m></cell></row>
+        </tabular>
+        <p>Then,</p>
+        <md>
+          <mrow>\int x^2 \sin{x} \,dx \amp= \underbrace{x^2}_{u} \cdot \underbrace{-\cos{x}}_{v} - \int \underbrace{-\cos{x}}_{v} \cdot \underbrace{2x \,dx}_{du}</mrow>
+          <mrow>\amp= -x^2 \cos{x} + 2 \int x \cos{x} \,dx</mrow>
+        </md>
+        <p>The new integral is less complicated because the power of <m>x</m> decreased by one (from 2 to 1). Then, we can use IBP again for <m>\int x \cos{x} \,dx</m>,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = x</m></cell><cell><m>v = \sin{x}</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = dx</m></cell><cell><m>dv = \cos{x} \,dx</m></cell></row>
+        </tabular>
+        <p>Then,</p>
+        <md>
+          <mrow>\int x^2 \sin{x} \,dx \amp= -x^2 \cos{x} + 2 \brac{\underbrace{x}_{u} \cdot \underbrace{\sin{x}}_{v} - \int \underbrace{\sin{x}}_{v} \cdot \underbrace{dx}_{du}}</mrow>
+          <mrow>\amp= -x^2 \cos{x} + 2 \brac{x \sin{x} + \cos{x}} + C</mrow>
+          <mrow>\amp= -x^2 \cos{x} + 2x \sin{x} + 2 \cos{x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Evaluating <m>\int x^2 e^x \,dx</m></title>
+      <statement>
+        <p>Consider the integral,</p>
+        <me>\int x^2 e^x \,dx</me>
+      </statement>
+      <solution>
+        <p>Choose <m>u = x^2</m> and <m>dv = e^x \,dx</m>, because the derivative of <m>x^2</m> is <m>2x</m> which is simpler than itself, and because <m>e^x</m> can be easily integrated to itself. Then,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = x^2</m></cell><cell><m>v = e^x</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = 2x \,dx</m></cell><cell><m>dv = e^x \,dx</m></cell></row>
+        </tabular>
+        <p>Then,</p>
+        <md>
+          <mrow>\amp= \underbrace{x^2}_{u} \cdot \underbrace{e^x}_{v} - \int \underbrace{e^x}_{v} \cdot \underbrace{2x \,dx}_{du}</mrow>
+          <mrow>\amp= x^2 e^x - 2 \int x e^x \,dx</mrow>
+        </md>
+        <p>The new integral is simpler because the power of <m>x</m> decreased by one. Using IBP again,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = x</m></cell><cell><m>v = e^x</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = dx</m></cell><cell><m>dv = e^x \,dx</m></cell></row>
+        </tabular>
+        <md>
+          <mrow>\amp= x^2 e^x - 2 \brac{\underbrace{x}_{u} \cdot \underbrace{e^x}_{v} - \int \underbrace{e^x}_{v} \cdot \underbrace{dx}_{du}}</mrow>
+          <mrow>\amp= x^2 e^x - 2 \brac{x e^x - e^x} + C</mrow>
+          <mrow>\amp= x^2 e^x - 2x e^x + 2e^x + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>Each time you use IBP, the power of the polynomial decreases by one, until it eventually reaches 0. This is what makes IBP a useful technique for integrating products of polynomials and other functions.</p>
+
+    <p>From the previous examples, we can see that IBP is often useful when the integral is a product of 2 different types of functions.</p>
+  </introduction>
+
+  <exercise>
+    <title>Evaluating <m>\int x^3 e^x \,dx</m></title>
+    <statement><p>Evaluate the integral <m>\int x^3 e^x \,dx</m>.</p></statement>
+    <answer><p><m>\int x^3 e^x \,dx = x^3 e^x - 3x^2 e^x + 6x e^x - 6e^x + C</m></p></answer>
+  </exercise>
+
+  <subsection xml:id="subsec-ibp-ln">
+    <title>Integral of Natural Logarithm</title>
+    <p>Integration by parts can be used to find the antiderivative of the natural logarithm function <m>\ln{x}</m>.</p>
+
+    <example>
+      <title>Evaluating <m>\int \ln{x} \,dx</m></title>
+      <statement>
+        <p>Consider the integral,</p>
+        <me>\int \ln{x} \,dx</me>
+      </statement>
+      <solution>
+        <p>At first, <m>\ln{x}</m> does not look like a product of functions, however, we can think of it as <m>\ln{x} \cdot 1</m>, and choose <m>u = \ln{x}</m> and <m>dv = 1 \,dx</m>. The derivative of <m>\ln{x}</m> is <m>\frac{1}{x}</m> which is simpler than itself, and 1 can be easily integrated to <m>x</m>. Then,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = \ln{x}</m></cell><cell><m>v = x</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = \frac{1}{x} \,dx</m></cell><cell><m>dv = dx</m></cell></row>
+        </tabular>
+        <p>Then,</p>
+        <md>
+          <mrow>\int \ln{x} \,dx \amp= \underbrace{\ln{x}}_{u} \cdot \underbrace{x}_{v} - \int \underbrace{x}_{v} \cdot \underbrace{\frac{1}{x} \,dx}_{du}</mrow>
+          <mrow>\amp= x \ln{x} - x + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>In summary,</p>
+    <me>\boxed{\int \ln{x} \,dx = x \ln{x} - x + C}</me>
+  </subsection>
+
+  <subsection xml:id="subsec-ibp-cyclic">
+    <title>Cyclic Examples (Product of Exponential and Trig)</title>
+
+    <example>
+      <title>Evaluating <m>\int e^x \sin x \,dx</m></title>
+      <statement>
+        <p>Consider the integral,</p>
+        <me>\int e^x \sin x \,dx</me>
+      </statement>
+      <solution>
+        <p>Here, it turns out that we could choose either <m>u</m> or <m>dv</m> to be <m>e^x</m> or <m>\sin x</m>, and both would work. This is because the derivative and integral of <m>e^x</m> is <m>e^x</m>, and the derivative and integral of <m>\sin x</m> is <m>\cos{x}</m> or <m>-\cos x</m>, so both of them are basically the same in terms of complexity. In this case, we will choose <m>u = e^x</m> and <m>dv = \sin x \,dx</m>. Then,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = e^x</m></cell><cell><m>v = -\cos x</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = e^x \,dx</m></cell><cell><m>dv = \sin x \,dx</m></cell></row>
+        </tabular>
+        <p>Then,</p>
+        <md>
+          <mrow>\int e^x \sin x \,dx \amp= -\underbrace{e^x}_{u} \underbrace{\cos x}_{v} - \int -\underbrace{e^x}_{u} \underbrace{\cos x}_{v} \,dx</mrow>
+          <mrow>\amp= -e^x \cos x + \int e^x \cos x \,dx</mrow>
+        </md>
+        <p>The second integral is similar to the first except that it has <m>\cos x</m> instead of <m>\sin x</m>. To evaluate it, we use IBP again,</p>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = e^x</m></cell><cell><m>v = \sin x</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = e^x \,dx</m></cell><cell><m>dv = \cos x \,dx</m></cell></row>
+        </tabular>
+        <md>
+          <mrow>\int e^x \sin x \,dx \amp= -e^x \cos x + \brac{\underbrace{e^x}_{u} \underbrace{\sin x}_{v} - \int \underbrace{e^x}_{u} \underbrace{\sin x}_{v} \,dx}</mrow>
+          <mrow>\amp= e^x \sin x - e^x \cos x - \int e^x \sin x \,dx</mrow>
+        </md>
+        <p>The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and <q>collect</q> them together as like terms on the left-hand side,</p>
+        <md>
+          <mrow>\int e^x \sin x \,dx \amp= e^x \sin x - e^x \cos x - \int e^x \sin x \,dx</mrow>
+          <mrow>2 \int e^x \sin x \,dx \amp= e^x \sin x - e^x \cos x</mrow>
+        </md>
+        <p>Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,</p>
+        <me>\int e^x \sin x \,dx = \frac{1}{2} e^x \sin x - \frac{1}{2} e^x \cos x + C</me>
+      </solution>
+    </example>
+
+    <exercise>
+      <title>Evaluating <m>\int e^x \cos x \,dx</m></title>
+      <statement><p>Evaluate the integral <m>\int e^x \cos x \,dx</m>.</p></statement>
+      <answer><p><m>\int e^x \cos x \,dx = \frac{1}{2} e^x \sin x + \frac{1}{2} e^x \cos x + C</m></p></answer>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-ibp-definite">
+    <title>Integration by Parts for Definite Integrals</title>
+    <p>For definite integrals, you also have to evaluate the <m>uv</m> term at the limits of integration. Otherwise, it is very similar.</p>
+    <me>\boxed{\int_a^b u \,dv = \eval{uv}_a^b - \int_a^b v \,du}</me>
+
+    <example>
+      <title>Evaluating <m>\int_0^2 3x e^x \,dx</m></title>
+      <statement>
+        <p>Evaluate the integral,</p>
+        <me>\int_0^2 3x e^x \,dx</me>
+      </statement>
+      <solution>
+        <tabular halign="center">
+          <col width="30%"/>
+          <col width="30%"/>
+          <row><cell><m>u = 3x</m></cell><cell><m>v = e^x</m></cell></row>
+          <row><cell><m>\big\downarrow</m></cell><cell><m>\big\uparrow</m></cell></row>
+          <row><cell><m>du = 3 \,dx</m></cell><cell><m>dv = e^x \,dx</m></cell></row>
+        </tabular>
+        <p>Then,</p>
+        <md>
+          <mrow>\int_0^2 3x e^x \,dx \amp= \eval{3x e^x}_0^2 - \int_0^2 3 e^x \,dx</mrow>
+          <mrow>\amp= 6 e^2 - 0 - \brac{3 e^2 - 3 e^0}</mrow>
+          <mrow>\amp= 3 e^2 + 3</mrow>
+        </md>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-ibp-summary">
+    <title>Summary of Integration by Parts</title>
+    <p>In summary,</p>
+    <me>\boxed{\int u \,dv = uv - \int v \,du}</me>
+    <p>A mnemonic to remember the IBP formula is <q><alert>u</alert>ltra-<alert>v</alert>iolet <alert>v</alert>oo<alert>doo</alert></q>.</p>
+
+    <remark>
+      <p>Note that integration by parts is a <em>place-holder formula</em>, in that the variables <m>u</m> and <m>v</m> are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.</p>
+      <p>In contrast, recall that with substitution, the integral is transformed from <m>x</m> to an integral in another variable <m>u</m>.</p>
+      <p>With integration by parts, we do not substitute <m>u</m> or <m>v</m>, but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of <m>x</m>. In this way, you don't have to worry about changing the limits of integration for definite integrals.</p>
+    </remark>
+
+    <remark>
+      <p>With integration by parts, you don't have to worry about the constant of integration <m>+C</m> until the final answer. That is, when integrating <m>v'</m> to get <m>v</m>, we do not need to include a constant of integration <m>+C</m>, because there will be a constant introduced by the remaining integral <m>\int v \,du</m>. So, it is easiest to just wait until the very end to include <m>+C</m>.</p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="subsec-ibp-derivation">
+    <title>Derivation of the Integration by Parts Formula</title>
+    <p>You may recall that integration by substitution comes from the chain rule for derivatives. In a similar way, integration by parts comes from the product rule for derivatives. Recall the product rule for derivatives, which says that, for two functions, <m>f(x)</m> and <m>g(x)</m>,</p>
+    <md>
+      <mrow>\frac{d}{dx} (f(x) g(x)) \amp= f'(x) g(x) + f(x) g'(x) \qquad \text{or, more simply,} \qquad \frac{d}{dx} (fg) = f' g + f g'</mrow>
+    </md>
+    <p>Taking the antiderivative of both sides gives,</p>
+    <me>\int \frac{d}{dx} (f g) \,dx = \int f' g \,dx + \int f g' \,dx</me>
+    <p>The left-hand side is the integral of the derivative of <m>f g</m>, so it is just <m>f g</m>, so we can write,</p>
+    <me>f g = \int f' g \,dx + \int f g' \,dx</me>
+    <p>Then, rearranging this formula to isolate <m>\int f g' \,dx</m> gives,</p>
+    <me>\int f g' \,dx = f g - \int g f' \,dx</me>
+    <p>This is the integration by parts formula, except the convention is to use <m>u</m> and <m>v</m> instead of <m>f</m> and <m>g</m>, and to write <m>dv</m> instead of <m>v' dx</m>, and <m>du</m> instead of <m>u' dx</m>. So, we write it as,</p>
+    <me>\int u \,dv = uv - \int v \,du</me>
+    <p>as before.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-ibp-liate">
+    <title>Guidelines for Choosing <m>u</m> and <m>dv</m> (LIATE)</title>
+    <p>An important part of using integration by parts is to choose the correct <m>u</m> and <m>dv</m>. Intuitively,</p>
+    <ul>
+      <li><p>Choose <m>u</m> so its derivative is <em>more simple</em> than itself</p></li>
+      <li><p>Choose <m>\,dv</m> to be something that is easily integrated, and either becomes simpler or at least not more complicated.</p></li>
+    </ul>
+    <p>There is a mnemonic for choosing <m>u</m> called the LIATE rule (typically pronounced <q>lie-ate</q>), which is an acronym that stands for:</p>
+    <ul>
+      <li><p><alert>L</alert>: logarithmic functions, e.g. <m>\ln{x}, \log_2{x}, \log{x}</m>.</p></li>
+      <li><p><alert>I</alert>: inverse trigonometric functions, e.g. <m>\arcsin{x}, \arccos{x}, \arctan{x}</m>.</p></li>
+      <li><p><alert>A</alert>: algebraic functions, of the form <m>x^n</m>, like polynomial functions (<m>x^2, x^3, x^4</m>, etc.) and radical functions (<m>x^{1/2}, x^{1/3}, x^{2/3}</m>, etc.).</p></li>
+      <li><p><alert>T</alert>: trigonometric functions, e.g. <m>\sin{x}, \cos{x}, \tan{x}</m>.</p></li>
+      <li><p><alert>E</alert>: exponential functions, e.g. <m>e^x</m>, <m>b^x</m>.</p></li>
+    </ul>
+    <p>The rule is:</p>
+    <ul>
+      <li><p>Choose <m>u</m> to be what is <em>highest</em> on the list</p></li>
+      <li><p>And then <m>dv</m> will be what is leftover.</p></li>
+    </ul>
+    <p>Also, don't forget that you can also just choose <m>u</m> to be the entire function and <m>dv = 1</m>, if nothing else seems to work.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-ibp-examples">
+    <title>Examples</title>
+
+    <project>
+      <title>One-Step IBP (<m>\star</m>)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int x\sin x\,dx</m></p></statement><answer><p><m>-x\cos x+\sin x+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{-x}\,dx</m></p></statement><answer><p><m>-xe^{-x}-e^{-x}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sin(2x)\,dx</m></p></statement><answer><p><m>-\frac{1}{2}x\cos(2x)+\frac{1}{4}\sin(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2\ln x\,dx</m></p></statement><answer><p><m>\frac{1}{3}x^3\ln x-\frac{1}{9}x^3+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{2x}\,dx</m></p></statement><answer><p><m>\frac{1}{2}xe^{2x}-\frac{1}{4}e^{2x}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\cos(5x)\,dx</m></p></statement><answer><p><m>\frac{1}{5}x\sin(5x)+\frac{1}{25}\cos(5x)+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{3x}\,dx</m></p></statement><answer><p><m>\frac{1}{3}xe^{3x}-\frac{1}{9}e^{3x}+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{-2x}\,dx</m></p></statement><answer><p><m>-\frac{1}{2}xe^{-2x}-\frac{1}{4}e^{-2x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{x}\ln x\,dx</m></p></statement><answer><p><m>\frac{2}{3}x^{3/2}\ln x-\frac{4}{9}x^{3/2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^4\ln x\,dx</m></p></statement><answer><p><m>\frac{1}{5}x^5\ln x-\frac{1}{25}x^5+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sin\brac{\frac{x}{2}}\,dx</m></p></statement><answer><p><m>-2x\cos\brac{\frac{x}{2}}+4\sin\brac{\frac{x}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{-3x}\,dx</m></p></statement><answer><p><m>-\frac{1}{3}xe^{-3x}-\frac{1}{9}e^{-3x}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\ln(10x)\,dx</m></p></statement><answer><p><m>\frac{1}{2}x^2\ln(10x)-\frac{1}{4}x^2+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{5x}\,dx</m></p></statement><answer><p><m>\frac{1}{5}xe^{5x}-\frac{1}{25}e^{5x}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^9\ln x\,dx</m></p></statement><answer><p><m>\frac{1}{10}x^{10}\ln x-\frac{1}{100}x^{10}+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{6x}\,dx</m></p></statement><answer><p><m>\frac{1}{6}xe^{6x}-\frac{1}{36}e^{6x}+C</m></p></answer></task>
+      <task><statement><p><m>\int xe^{x/5}\,dx</m></p></statement><answer><p><m>5xe^{x/5}-25e^{x/5}+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Definite Integrals, One Step (<m>\star</m>)</title>
+      <introduction><p>Evaluate each definite integral.</p></introduction>
+      <task><statement><p><m>\int_0^\pi x\sin x\,dx</m></p></statement><answer><p><m>\pi</m></p></answer></task>
+      <task><statement><p><m>\int_1^2 x\ln x\,dx</m></p></statement><answer><p><m>2\ln 2-\frac{3}{4}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\ln 2} xe^x\,dx</m></p></statement><answer><p><m>2\ln 2-1</m></p></answer></task>
+      <task><statement><p><m>\int_1^e \ln(2x)\,dx</m></p></statement><answer><p><m>1+e\ln{2}-\ln{2}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\pi/2} x\cos(2x)\,dx</m></p></statement><answer><p><m>-\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\int_1^2 x^2\ln x\,dx</m></p></statement><answer><p><m>\frac{8}{3}\ln{2} - \frac{7}{9}</m></p></answer></task>
+      <task><statement><p><m>\int_{-\pi/4}^{\pi/6} (2x+1)\sin(6x)\,dx</m></p></statement><answer><p><m>\frac{\pi}{18} + \frac{1}{9}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{1/2} x\cos(\pi x)\,dx</m></p></statement><answer><p><m>\frac{1}{2\pi} - \frac{1}{\pi^2}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>One-Step Variants (<m>\star</m>)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int x\cos(\pi x)\,dx</m></p></statement><answer><p><m>\frac{1}{\pi}x\sin(\pi x)+\frac{1}{\pi^2}\cos(\pi x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \ln\sqrt{x}\,dx</m></p></statement><answer><p><m>\frac{1}{2}x\ln x-\frac{1}{2}x+C</m></p></answer></task>
+      <task><statement><p><m>\int 3x\ln(4x)\,dx</m></p></statement><answer><p><m>\frac{3}{2}x^2\ln(4x)-\frac{3}{4}x^2+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\ln x}{x^2}\,dx</m></p></statement><hint><p><m>\frac{\ln{x}}{x^2}= \ln{x} \cdot x^{-2}</m></p></hint><answer><p><m>-\frac{\ln x}{x}-\frac{1}{x}+C</m></p></answer></task>
+      <task><statement><p><m>\int (x-2)\ln x\,dx</m></p></statement><answer><p><m>\frac{1}{2}x^2\ln x-2x\ln x-\frac{1}{4}x^2+2x+C</m></p></answer></task>
+      <task><statement><p><m>\int x\ln(x^2)\,dx</m></p></statement><answer><p><m>\frac{1}{2}x^2\ln(x^2)-\frac{1}{2}x^2+C</m></p></answer></task>
+      <task><statement><p><m>\int \ln(7x-6)\,dx</m></p></statement><answer><p><m>\brac{x-\frac{6}{7}}\ln|7x-6|-x+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\ln x}{x^{10}}\,dx</m></p></statement><hint><p><m>\frac{\ln{x}}{x^{10}}= \ln{x} \cdot x^{-10}</m></p></hint><answer><p><m>-\frac{\ln x}{9x^9}-\frac{1}{81x^9}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\cdot 3^x\,dx</m></p></statement><answer><p><m>\frac{1}{\ln 3}x\cdot 3^x-\frac{1}{(\ln 3)^2}\cdot 3^x+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{x}{10^x}\,dx</m></p></statement><hint><p><m>\frac{x}{10^x} = x \cdot 10^{-x}</m></p></hint><answer><p><m>-\frac{x}{10^x\ln 10}-\frac{1}{10^x(\ln 10)^2}+C</m></p></answer></task>
+      <task><statement><p><m>\int (x-1)\sin(\pi x)\,dx</m></p></statement><answer><p><m>\frac{1}{\pi}(1-x)\cos(\pi x)+\frac{1}{\pi^2}\sin(\pi x)+C</m></p></answer></task>
+      <task><statement><p><m>\int (2x+4)\cos(2x)\,dx</m></p></statement><answer><p><m>x\sin(2x)+2\sin(2x)+\frac{1}{2}\cos(2x)+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Cyclic Examples with Exponential and Trigonometric Functions (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int e^{-x}\cos x\,dx</m></p></statement><answer><p><m>\frac{1}{2}e^{-x}\sin x-\frac{1}{2}e^{-x}\cos x+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{2x}\sin(3x)\,dx</m></p></statement><answer><p><m>\frac{2}{13}e^{2x}\sin(3x)-\frac{3}{13}e^{2x}\cos(3x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{3x}\cos(2x)\,dx</m></p></statement><answer><p><m>\frac{2}{13}e^{3x}\sin(2x)+\frac{3}{13}e^{3x}\cos(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{-x}\cos(2x)\,dx</m></p></statement><answer><p><m>\frac{2}{5}e^{-x}\sin(2x)-\frac{1}{5}e^{-x}\cos(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{-x}\sin(4x)\,dx</m></p></statement><answer><p><m>-\frac{1}{17}e^{-x}\sin(4x)-\frac{4}{17}e^{-x}\cos(4x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{2x}\cos x\,dx</m></p></statement><answer><p><m>\frac{2}{5}e^{2x}\cos x+\frac{1}{5}e^{2x}\sin x+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{2x}\cos(3x)\,dx</m></p></statement><answer><p><m>\frac{2}{13}e^{2x}\cos(3x)+\frac{3}{13}e^{2x}\sin(3x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{-2x}\sin(2x)\,dx</m></p></statement><answer><p><m>-\frac{1}{4}e^{-2x}\sin(2x)-\frac{1}{4}e^{-2x}\cos(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{-2x}\sin(6x)\,dx</m></p></statement><answer><p><m>-\frac{1}{20}e^{-2x}\sin(6x)-\frac{3}{20}e^{-2x}\cos(6x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{6x}\sin(4x)\,dx</m></p></statement><answer><p><m>\frac{3}{26}e^{6x}\sin(4x)-\frac{1}{13}e^{6x}\cos(4x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{5x}\cos(5x)\,dx</m></p></statement><answer><p><m>\frac{1}{10}e^{5x}\cos(5x)+\frac{1}{10}e^{5x}\sin(5x)+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Two-Step IBP (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int x^2\cos x\,dx</m></p></statement><answer><p><m>x^2\sin x+2x\cos x-2\sin x+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2e^{-x}\,dx</m></p></statement><answer><p><m>-x^2e^{-x}-2xe^{-x}-2e^{-x}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2\sin(2x)\,dx</m></p></statement><answer><p><m>-\frac{1}{2}x^2\cos(2x)+\frac{1}{2}x\sin(2x)+\frac{1}{4}\cos(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2e^{4x}\,dx</m></p></statement><answer><p><m>\frac{1}{4}x^2e^{4x}-\frac{1}{8}xe^{4x}+\frac{1}{32}e^{4x}+C</m></p></answer></task>
+      <task><statement><p><m>\int (x^2-5x)e^x\,dx</m></p></statement><answer><p><m>x^2e^x-7xe^x+7e^x+C</m></p></answer></task>
+      <task><statement><p><m>\int (x^2+2x)\cos x\,dx</m></p></statement><answer><p><m>x^2\sin x+2x\sin x-2\sin x+2x\cos x+2\cos x+C</m></p></answer></task>
+      <task><statement><p><m>\int (x^2-2x+1)e^{2x}\,dx</m></p></statement><answer><p><m>\frac{1}{2}x^2e^{2x}-\frac{3}{2}xe^{2x}+\frac{5}{4}e^{2x}+C</m></p></answer></task>
+      <task><statement><p><m>\int (x^2+x+1)e^x\,dx</m></p></statement><answer><p><m>x^2e^x-xe^x+2e^x+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2\sin(\beta x)\,dx</m></p></statement><answer><p><m>-\frac{1}{\beta}x^2\cos(\beta x)+\frac{2}{\beta^2}x\sin(\beta x)+\frac{2}{\beta^3}\cos(\beta x)+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Definite Integrals, One Step (<m>\star</m>)</title>
+      <introduction><p>Evaluate each definite integral.</p></introduction>
+      <task><statement><p><m>\int_0^1 \arcsin x\,dx</m></p></statement><answer><p><m>\frac{\pi}{2}-1</m></p></answer></task>
+      <task><statement><p><m>\int_1^5 \frac{\ln x}{x^2}\,dx</m></p></statement><answer><p><m>\frac{4-\ln 5}{5}</m></p></answer></task>
+      <task><statement><p><m>\int_1^5 \frac{x}{e^x}\,dx</m></p></statement><answer><p><m>\frac{2}{e}-\frac{6}{e^5}</m></p></answer></task>
+      <task><statement><p><m>\int_{-1}^1 xe^{-x}\,dx</m></p></statement><answer><p><m>-\frac{2}{e}</m></p></answer></task>
+      <task><statement><p><m>\int_1^2 xe^{-2x}\,dx</m></p></statement><answer><p><m>\frac{3e^2-5}{4e^4}</m></p></answer></task>
+      <task><statement><p><m>\int_{\pi/2}^\pi x\sin x\,dx</m></p></statement><answer><p><m>\pi-1</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Definite Integrals, Two Steps (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each definite integral.</p></introduction>
+      <task><statement><p><m>\int_0^{\pi/2} x^2\sin(2x)\,dx</m></p></statement><answer><p><m>\frac{\pi^2}{8}-\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>\int_0^1 x^2e^x\,dx</m></p></statement><answer><p><m>e-2</m></p></answer></task>
+      <task><statement><p><m>\int_0^1 (x^2+1)e^{-x}\,dx</m></p></statement><answer><p><m>3-\frac{6}{e}</m></p></answer></task>
+      <task><statement><p><m>\int_0^\pi e^x\sin x\,dx</m></p></statement><answer><p><m>\frac{1}{2}e^{\pi} + \frac{1}{2}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Special Techniques (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int x\sec^2 x\,dx</m></p></statement><hint><p>we can integrate <m>\sec^2{x}</m></p></hint><answer><p><m>x\tan x+\ln|\cos x|+C</m></p></answer></task>
+      <task><statement><p><m>\int x\csc^2 x\,dx</m></p></statement><hint><p>we can integrate <m>\csc^2{x}</m></p></hint><answer><p><m>-x\cot x+\ln|\sin x|+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sin x\cos x\,dx</m></p></statement><hint><p><m>\sin x\cos x = \frac{\sin(2x)}{2}</m></p></hint><answer><p><m>-\frac{1}{4}x\cos(2x)+\frac{1}{8}\sin(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sec x\tan x\,dx</m></p></statement><hint><p>we can integrate <m>\sec x\tan x</m></p></hint><answer><p><m>x\sec x-\ln|\sec x+\tan x|+C</m></p></answer></task>
+      <task><statement><p><m>\int x\csc x\cot x\,dx</m></p></statement><hint><p>we can integrate <m>\csc x\cot x</m></p></hint><answer><p><m>-x\csc x+\ln|\csc x-\cot x|+C</m></p></answer></task>
+      <task><statement><p><m>\int (\ln x)^2\,dx</m></p></statement><hint><p>similar to <m>\int \ln{x} \,dx</m></p></hint><answer><p><m>x(\ln x)^2-2x\ln x+2x+C</m></p></answer></task>
+      <task><statement><p><m>\int (\ln(x+1))^2\,dx</m></p></statement><hint><p>similar to <m>\int (\ln x)^2 \,dx</m></p></hint><answer><p><m>x(\ln(x+1))^2+(\ln(x+1))^2-2x\ln(x+1)-2\ln(x+1)+2x+2+C</m></p></answer></task>
+      <task><statement><p><m>\int x\ln(x-1)\,dx</m></p></statement><hint><p>similar to <m>\int x\ln x \,dx</m></p></hint><answer><p><m>\frac{x^2-1}{2}\ln|x-1|-\frac{x^2}{4}-\frac{x}{2}+C</m></p></answer></task>
+      <task><statement><p><m>\int 4x\sec^2(2x)\,dx</m></p></statement><answer><p><m>2x\tan(2x)+\ln|\cos(2x)|+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Inverse Trigonometric Functions (<m>\star</m>)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int (\arcsin x)^2\,dx</m></p></statement><answer><p><m>x(\arcsin x)^2-2x+2\sqrt{1-x^2}\arcsin x+C</m></p></answer></task>
+      <task><statement><p><m>\int \arctan(2x)\,dx</m></p></statement><answer><p><m>x\arctan(2x)-\frac{1}{4}\ln(4x^2+1)+C</m></p></answer></task>
+      <task><statement><p><m>\int x\arctan x\,dx</m></p></statement><answer><p><m>\frac{1}{2}(x^2+1)\arctan x-\frac{1}{2}x+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sec^{-1}x\,dx</m></p></statement><hint><p>we can differentiate <m>\sec^{-1}x</m>, as <m>\frac{d}{dx} \sec^{-1}{x} = \frac{1}{x\sqrt{x^2-1}}</m></p></hint><answer><p><m>\frac{1}{2}x^2\sec^{-1}x-\frac{1}{2}\sqrt{x^2-1}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\arctan(7x)\,dx</m></p></statement><answer><p><m>\frac{1}{98}(49x^2+1)\arctan(7x)-\frac{1}{14}x+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2\tan^{-1}\brac{\frac{x}{2}}\,dx</m></p></statement><answer><p><m>\frac{1}{3}x^3 \tan^{-1}\brac{\frac{x}{2}}-\frac{1}{3}x^2+\frac{4}{3}\ln(x^2+4)+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Three or More Steps (<m>\star\star\star</m>)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int x^3\sin x\,dx</m></p></statement><answer><p><m>-x^3\cos x+3x^2\sin x+6x\cos x-6\sin x+C</m></p></answer></task>
+      <task><statement><p><m>\int x^3\cos x\,dx</m></p></statement><answer><p><m>x^3\sin x+3x^2\cos x-6x\sin x-6\cos x+C</m></p></answer></task>
+      <task><statement><p><m>\int x^4e^{-x}\,dx</m></p></statement><answer><p><m>-x^4e^{-x}-4x^3e^{-x}-12x^2e^{-x}-24xe^{-x}-24e^{-x}+C</m></p></answer></task>
+      <task><statement><p><m>\int 4x^3e^{2x}\,dx</m></p></statement><answer><p><m>2x^3e^{2x}-3x^2e^{2x}+3xe^{2x}-\frac{3}{2}e^{2x}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^5e^x\,dx</m></p></statement><answer><p><m>x^5e^x-5x^4e^x+20x^3e^x-60x^2e^x+120xe^x-120e^x+C</m></p></answer></task>
+      <task><statement><p><m>\int x(\ln x)^2\,dx</m></p></statement><answer><p><m>\frac{1}{2}x^2(\ln x)^2-\frac{1}{2}x^2\ln x+\frac{1}{4}x^2+C</m></p></answer></task>
+      <task><statement><p><m>\int x^2(\ln x)^2\,dx</m></p></statement><answer><p><m>\frac{1}{3}x^3(\ln x)^2-\frac{2}{9}x^3\ln x+\frac{2}{27}x^3+C</m></p></answer></task>
+      <task><statement><p><m>\int x^3e^{8x}\,dx</m></p></statement><answer><p><m>\frac{1}{8}x^3e^{8x}-\frac{3}{64}x^2e^{8x}+\frac{3}{256}xe^{8x}-\frac{3}{2048}e^{8x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \ln(x+x^2)\,dx</m></p></statement><answer><p><m>x\ln x+x\ln(x+1)+\ln(x+1)-2x+C</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Definite Integrals (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each definite integral.</p></introduction>
+      <task><statement><p><m>\int_0^{2\pi} x^2\sin(2x)\,dx</m></p></statement><answer><p><m>-2\pi^2</m></p></answer></task>
+      <task><statement><p><m>\int_0^\pi x\sin x\cos x\,dx</m></p></statement><hint><p>Use <m>\sin x\cos x=\frac{1}{2}\sin(2x)</m> first.</p></hint><answer><p><m>-\frac{\pi}{4}</m></p></answer></task>
+      <task><statement><p><m>\int_1^2 \frac{(\ln x)^2}{x^3}\,dx</m></p></statement><answer><p><m>\frac{3}{16}-\frac{\ln 2}{8}-\frac{(\ln 2)^2}{8}</m></p></answer></task>
+      <task><statement><p><m>\int_1^2 x^4(\ln x)^2\,dx</m></p></statement><answer><p><m>\frac{32(\ln 2)^2}{5}-\frac{64\ln 2}{25}+\frac{62}{125}</m></p></answer></task>
+      <task><statement><p><m>\int_0^1 x^2\cdot 2^x\,dx</m></p></statement><answer><p><m>\frac{2(\ln 2-1)^2}{(\ln 2)^3}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>More Definite Integrals (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each definite integral.</p></introduction>
+      <task><statement><p><m>\int_1^e x^3\ln x\,dx</m></p></statement><answer><p><m>\frac{3e^4+1}{16}</m></p></answer></task>
+      <task><statement><p><m>\int_{-\pi/4}^{\pi/4} x^2\sin x\,dx</m></p></statement><answer><p><m>0</m> (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)</p></answer></task>
+      <task><statement><p><m>\int_1^{e^2} x^2\ln x\,dx</m></p></statement><answer><p><m>\frac{5e^6+1}{9}</m></p></answer></task>
+      <task><statement><p><m>\int_0^1 x^3e^x\,dx</m></p></statement><answer><p><m>6-2e</m></p></answer></task>
+      <task><statement><p><m>\int_0^t \frac{x}{e^x}\,dx</m></p></statement><answer><p><m>1-(t+1)e^{-t}</m></p></answer></task>
+      <task><statement><p><m>\int_0^t e^x\sin(t-x)\,dx</m> (<m>t</m> is a constant.)</p></statement><answer><p><m>\frac{e^t-\sin t-\cos t}{2}</m></p></answer></task>
+      <task><statement><p><m>\int_{-\pi/2}^{\pi/2} e^{2x}\cos x\,dx</m></p></statement><answer><p><m>\frac{e^\pi+e^{-\pi}}{5}</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-ibp-advanced">
+    <title>Advanced Examples</title>
+    <p>Sometimes, a <m>u</m>-substitution or trigonometric identity can be used to simplify the integral, which leads to an integral where you can use integration by parts.</p>
+
+    <project>
+      <title>Substitution then IBP (<m>\star\star\star\star</m>)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int x\tan^2 x\,dx</m></p></statement><hint><p><m>\tan^2 x = \sec^2 x-1</m></p></hint><answer><p><m>x\tan x-\ln|\sec x|-\frac{x^2}{2}+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sin^2 x\,dx</m></p></statement><hint><p><m>\sin^2 x = \frac{1-\cos(2x)}{2}</m></p></hint><answer><p><m>\frac{1}{4}x^2-\frac{1}{4}x\sin(2x)-\frac{1}{8}\cos(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{\sqrt{x}}\,dx</m></p></statement><hint><p>let <m>u=\sqrt{x}</m>, leads to <m>\int 2ue^u\,du</m></p></hint><answer><p><m>2\sqrt{x}\,e^{\sqrt{x}}-2e^{\sqrt{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin\brac{\sqrt{x}}\,dx</m></p></statement><hint><p>let <m>u=\sqrt{x}</m>, leads to <m>\int 2u\sin u\,du</m></p></hint><answer><p><m>-2\sqrt{x}\cos\brac{\sqrt{x}}+2\sin\brac{\sqrt{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos\brac{\sqrt{x}}\,dx</m></p></statement><hint><p>let <m>u=\sqrt{x}</m>, leads to <m>\int 2u\cos u\,du</m></p></hint><answer><p><m>2\sqrt{x}\sin\brac{\sqrt{x}}+2\cos\brac{\sqrt{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{x}\,e^{\sqrt{x}}\,dx</m></p></statement><hint><p>let <m>u=\sqrt{x}</m>, leads to <m>\int 2u^2e^u\,du</m></p></hint><answer><p><m>2xe^{\sqrt{x}}-4\sqrt{x}\,e^{\sqrt{x}}+4e^{\sqrt{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin(\ln x)\,dx</m></p></statement><hint><p>let <m>u=\ln x</m>, leads to <m>\int e^u\sin u\,du</m>; cyclic IBP</p></hint><answer><p><m>\frac{1}{2}x\sin(\ln x)-\frac{1}{2}x\cos(\ln x)+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{2x}\sin(e^x)\,dx</m></p></statement><hint><p>let <m>u=e^x</m>, leads to <m>\int u\sin u\,du</m></p></hint><answer><p><m>\sin(e^x)-e^x\cos(e^x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \arctan\brac{\sqrt{x}}\,dx</m></p></statement><hint><p>let <m>u=\sqrt{x}</m>, leads to <m>\int 2u\arctan u\,du</m></p></hint><answer><p><m>x\arctan\brac{\sqrt{x}}+\arctan\brac{\sqrt{x}}-\sqrt{x}+C</m></p></answer></task>
+      <task><statement><p><m>\int x^5e^{x^3}\,dx</m></p></statement><hint><p>let <m>u=x^3</m>, leads to <m>\int \frac{1}{3}ue^u\,du</m></p></hint><answer><p><m>\frac{1}{3}x^3e^{x^3}-\frac{1}{3}e^{x^3}+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{\sqrt{3x+9}}\,dx</m></p></statement><hint><p>let <m>u=\sqrt{3x+9}</m>, leads to <m>\int \frac{2}{3}ue^u\,du</m></p></hint><answer><p><m>\frac{2}{3}\sqrt{3x+9}\,e^{\sqrt{3x+9}}-\frac{2}{3}e^{\sqrt{3x+9}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin(\ln(5x))\,dx</m></p></statement><hint><p>let <m>u=\ln(5x)</m>, leads to <m>\int \frac{1}{5}e^u\sin u\,du</m>; cyclic IBP</p></hint><answer><p><m>\frac{1}{2}x\sin(\ln(5x))-\frac{1}{2}x\cos(\ln(5x))+C</m></p></answer></task>
+      <task><statement><p><m>\int e^{3x}\sin(e^x)\,dx</m></p></statement><hint><p>let <m>u=e^x</m>, leads to <m>\int u^2\sin u\,du</m>; cyclic IBP</p></hint><answer><p><m>-e^{2x}\cos(e^x)+2e^x\sin(e^x)+2\cos(e^x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{x}\sin^{-1}\brac{\sqrt{x}}\,dx</m></p></statement><hint><p>let <m>u=\sqrt{x}</m>, leads to <m>\int 2u^2\arcsin u\,du</m></p></hint><answer><p><m>\frac{2}{3}x\sqrt{x}\sin^{-1}\brac{\sqrt{x}}+\frac{2}{9}x\sqrt{1-x}+\frac{4}{9}\sqrt{1-x}+C</m></p></answer></task>
+    </project>
+
+    <exercise>
+      <title>Evaluating <m>\int x^3\cos(nx)\,dx</m></title>
+      <statement><p>Evaluate <m>\int x^3\cos(nx)\,dx</m>, where <m>n</m> is a constant, <m>n \neq 0</m>.</p></statement>
+      <answer><p><m>\frac{1}{n} x^3\sin(nx)+\frac{3}{n^2}x^2\cos(nx)-\frac{6}{n^3}x\sin(nx)-\frac{6}{n^4}\cos(nx)+C</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Particle Velocity</title>
+      <statement><p>A particle has velocity <m>v(t)=t^2e^{-4t}</m> m/s. Find the distance traveled from time 0 to time <m>t</m>.</p></statement>
+      <answer><p><m>\frac{1}{32}-\frac{1}{4}t^2e^{-4t}-\frac{1}{8}te^{-4t}-\frac{1}{32}e^{-4t}</m> m</p></answer>
+    </exercise>
+
+    <project>
+      <title>Definite Integrals</title>
+      <introduction><p>Evaluate each definite integral.</p></introduction>
+      <task><statement><p><m>\int_{-\pi/2}^{\pi/2} x^3\sin x\,dx</m></p></statement><answer><p><m>\frac{3\pi^2}{2}-12</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\pi/3} \sin x\ln(\cos x)\,dx</m></p></statement><answer><p><m>\frac{\ln 2-1}{2}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\pi/2} x^3\cos(2x)\,dx</m></p></statement><answer><p><m>\frac{3}{4}-\frac{3\pi^2}{16}</m></p></answer></task>
+      <task><statement><p><m>\int_{2/\sqrt{3}}^2 x\sec^{-1}x\,dx</m></p></statement><answer><p><m>\frac{5\pi}{9}-\frac{\sqrt{3}}{3}</m></p></answer></task>
+      <task><statement><p><m>\int_1^2 \frac{\ln x}{x^7}\,dx</m></p></statement><answer><p><m>\frac{21-2\ln 2}{768}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{1/\sqrt{2}} 2x\sin^{-1}(x^2)\,dx</m></p></statement><answer><p><m>\frac{\pi}{12}+\frac{\sqrt{3}}{2}-1</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\pi/3} x\tan^2 x\,dx</m></p></statement><answer><p><m>\frac{\pi\sqrt{3}}{3}-\ln 2-\frac{\pi^2}{18}</m></p></answer></task>
+      <task><statement><p><m>\int_1^{\sqrt{3}} \arctan\brac{\frac{1}{x}} \,dx</m></p></statement><answer><p><m>\frac{\pi(2\sqrt{3}-3)}{12}+\frac{\ln 2}{2}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Special Tricks</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int (1+2x^2)e^{x^2}\,dx</m></p></statement><hint><p>split the integral as <m>\int e^{x^2} \,dx + \int 2x^2 e^{x^2} \,dx</m>, then use integration by parts on the 2nd integral</p></hint><answer><p><m>xe^{x^2}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{xe^x}{(x+1)^2}\,dx</m></p></statement><hint><p>let <m>u=xe^x</m> and <m>dv=\frac{1}{(x+1)^2}\,dx</m></p></hint><answer><p><m>\frac{e^x}{x+1}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{xe^{2x}}{(1+2x)^2}\,dx</m></p></statement><hint><p>let <m>u=xe^{2x}</m> and <m>dv=\frac{1}{(1+2x)^2}\,dx</m></p></hint><answer><p><m>\frac{e^{2x}}{4}-\frac{xe^{2x}}{2(2x+1)}+C</m> or <m>\frac{e^{2x}}{4(2x+1)}+C</m></p></answer></task>
+    </project>
+  </subsection>
+
+</section>

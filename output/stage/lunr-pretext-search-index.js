@@ -1099,11 +1099,164 @@ var ptx_lunr_docs = [
   "body": " Integration by substitution is very sensitive to changes in the integrand, in that, small changes in the integrand can transform a simple problem that is able to be evaluated using integration by substitution, to an integral which is extremely difficult or even impossible. For example,   is a simple integral that can be evaluated using substitution (using ), but,   is a very difficult integral, that actually can't be evaluated using any technique that we learn in this course. This is because the derivative of is , which is exactly what we have in the first integral, but not in the second integral. In general, all integration techniques are very sensitive to changes in the integrand.  "
 },
 {
+  "id": "sec-integrals-of-trig-functions",
+  "level": "1",
+  "url": "sec-integrals-of-trig-functions.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "Integrals of Trigonometric Functions",
+  "body": " Integrals of Trigonometric Functions   In this section, we explore the integrals (antiderivatives) of various trigonometric functions. First, recall the antiderivative of sine and cosine,   The integrals of the other trigonometric functions are somewhat more complicated, and require using substitution. First, here are all of them together,   You may get a formula sheet on your final exam with these formulas, or you may be expected to memorize them (or derive them if needed).   A pattern that can help you memorize these antiderivatives, is that the antiderivative of the co functions (cosine, cosecant, cotangent) are similar to their corresponding non-co functions (sine, secant, tangent), except,   They have the opposite sign (so if the non-co function has a positive sign, the co function has a negative sign, and vice versa).   They have similar function parts, but flipped , in that non-co functions become co functions, and co becomes non-co. In particular,    integral of...  non-co-function   co-function                           Integrals of Tangent, Secant, Cosecant, and Cotangent   Integral of Tangent       Note that these two antiderivatives are equivalent, because,     Deriving the Integral of Tangent  To integrate , recall that . We can rewrite it as , and use substitution,   Notice that there is in the denominator, and its derivative is in the numerator (except with a negative sign), so we can use substitution. Then,   Then,     Integral of Secant       Deriving the Integral of Secant  There are multiple ways to integrate , but the most common way is to use a very special trick, of multiplying the numerator and denominator by ,   It turns out that this allows us to use substitution, because there is in the denominator, and its derivative is , which is exactly what is in the numerator. Then,   Then,     Integral of Cosecant       Deriving the Integral of Cosecant  To integrate , we can use the same trick as secant, but this time multiplying the numerator and denominator by ,   Again, this allows us to use substitution, because there is in the denominator, and its derivative is , which is what is in the numerator (except with a negative sign). Then,   Then,     Integral of Cotangent       Note that these two antiderivatives are equivalent, because,     Deriving the Integral of Cotangent  To integrate , it is similar to . We can rewrite it as , and use substitution,   Then,   Then,      Integral of and  Two important trig integrals that come up often are and .   Integrals of Squared Sine and Cosine      These integrals show up often enough that they are helpful to memorize, or at least memorize the method of deriving them.   Integral of   Consider,     Unfortunately, there is no simple substitution that can be used to evaluate this integral (like, for example, ). Also, you can't just integrate as if it were 2 functions multiplied together,,   Instead, we have to use a particular trigonometric identity, called the power-reducing identities. There are 2 of them, one for cosine and one for sine,   As their name suggests, these identities express and (cosine and sine to the 2nd power) in terms of , which is to the 1st power.  These identities can be derived from the double-angle identities for cosine,   If you solve the first equation to isolate for , and the second equation for , you get the power-reducing identities.  Using these identities, we can evaluate the integral of ,   Further, the double-angle identity can be used to rewrite the antiderivative in terms of only single angles ,     The integral of can be evaluated in the same way, using the other power-reducing identity,   Integral of   Consider the integral,     Use the power-reducing identity for sine ,   Again, we can use the double-angle identity to rewrite the antiderivative in terms of only single angles ,     For reference, here are the power-reducing identities again,   You may get these identities on your formula sheet for your exams, or you may need to memorize them.    Examples   Basic Trigonometric Integrals Practice  Evaluate each integral.  Expand, and use the formula for .  Multiply the numerator and denominator by , and split the fraction.  Split the fraction into .  Expand, and use .  Distribute; use and .  Rewrite as and use .    More Trigonometric Integrals Practice  Evaluate each integral.  Multiply numerator and denominator by , and use .  Multiply numerator and denominator by , and use .  Use the sine addition formula .  Rewrite as , then multiply by the conjugate .  Expand, and use and .    "
+},
+{
+  "id": "sec-integrals-of-trig-functions-2-6",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#sec-integrals-of-trig-functions-2-6",
+  "type": "Remark",
+  "number": "6.3.1",
+  "title": "",
+  "body": " A pattern that can help you memorize these antiderivatives, is that the antiderivative of the co functions (cosine, cosecant, cotangent) are similar to their corresponding non-co functions (sine, secant, tangent), except,   They have the opposite sign (so if the non-co function has a positive sign, the co function has a negative sign, and vice versa).   They have similar function parts, but flipped , in that non-co functions become co functions, and co becomes non-co. In particular,    integral of...  non-co-function   co-function                        "
+},
+{
+  "id": "thm-integral-tangent",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integral-tangent",
+  "type": "Theorem",
+  "number": "6.3.2",
+  "title": "Integral of Tangent.",
+  "body": " Integral of Tangent     "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-3",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-3",
+  "type": "Remark",
+  "number": "6.3.3",
+  "title": "",
+  "body": " Note that these two antiderivatives are equivalent, because,   "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-4",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-4",
+  "type": "Example",
+  "number": "6.3.4",
+  "title": "Deriving the Integral of Tangent.",
+  "body": " Deriving the Integral of Tangent  To integrate , recall that . We can rewrite it as , and use substitution,   Notice that there is in the denominator, and its derivative is in the numerator (except with a negative sign), so we can use substitution. Then,   Then,   "
+},
+{
+  "id": "thm-integral-secant",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integral-secant",
+  "type": "Theorem",
+  "number": "6.3.5",
+  "title": "Integral of Secant.",
+  "body": " Integral of Secant     "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-6",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-6",
+  "type": "Example",
+  "number": "6.3.6",
+  "title": "Deriving the Integral of Secant.",
+  "body": " Deriving the Integral of Secant  There are multiple ways to integrate , but the most common way is to use a very special trick, of multiplying the numerator and denominator by ,   It turns out that this allows us to use substitution, because there is in the denominator, and its derivative is , which is exactly what is in the numerator. Then,   Then,   "
+},
+{
+  "id": "thm-integral-cosecant",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integral-cosecant",
+  "type": "Theorem",
+  "number": "6.3.7",
+  "title": "Integral of Cosecant.",
+  "body": " Integral of Cosecant     "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-8",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-8",
+  "type": "Example",
+  "number": "6.3.8",
+  "title": "Deriving the Integral of Cosecant.",
+  "body": " Deriving the Integral of Cosecant  To integrate , we can use the same trick as secant, but this time multiplying the numerator and denominator by ,   Again, this allows us to use substitution, because there is in the denominator, and its derivative is , which is what is in the numerator (except with a negative sign). Then,   Then,   "
+},
+{
+  "id": "thm-integral-cotangent",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integral-cotangent",
+  "type": "Theorem",
+  "number": "6.3.9",
+  "title": "Integral of Cotangent.",
+  "body": " Integral of Cotangent     "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-10",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-10",
+  "type": "Remark",
+  "number": "6.3.10",
+  "title": "",
+  "body": " Note that these two antiderivatives are equivalent, because,   "
+},
+{
+  "id": "subsec-integrals-tan-sec-csc-cot-11",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-11",
+  "type": "Example",
+  "number": "6.3.11",
+  "title": "Deriving the Integral of Cotangent.",
+  "body": " Deriving the Integral of Cotangent  To integrate , it is similar to . We can rewrite it as , and use substitution,   Then,   Then,   "
+},
+{
+  "id": "thm-integrals-sin2-cos2",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#thm-integrals-sin2-cos2",
+  "type": "Theorem",
+  "number": "6.3.12",
+  "title": "Integrals of Squared Sine and Cosine.",
+  "body": " Integrals of Squared Sine and Cosine     "
+},
+{
+  "id": "subsec-integrals-sin2-cos2-5",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-sin2-cos2-5",
+  "type": "Example",
+  "number": "6.3.13",
+  "title": "Integral of <span class=\"process-math\">\\(\\cos^2{x}\\)<\/span>.",
+  "body": " Integral of   Consider,     Unfortunately, there is no simple substitution that can be used to evaluate this integral (like, for example, ). Also, you can't just integrate as if it were 2 functions multiplied together,,   Instead, we have to use a particular trigonometric identity, called the power-reducing identities. There are 2 of them, one for cosine and one for sine,   As their name suggests, these identities express and (cosine and sine to the 2nd power) in terms of , which is to the 1st power.  These identities can be derived from the double-angle identities for cosine,   If you solve the first equation to isolate for , and the second equation for , you get the power-reducing identities.  Using these identities, we can evaluate the integral of ,   Further, the double-angle identity can be used to rewrite the antiderivative in terms of only single angles ,    "
+},
+{
+  "id": "subsec-integrals-sin2-cos2-7",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-integrals-sin2-cos2-7",
+  "type": "Example",
+  "number": "6.3.14",
+  "title": "Integral of <span class=\"process-math\">\\(\\sin^2{x}\\)<\/span>.",
+  "body": " Integral of   Consider the integral,     Use the power-reducing identity for sine ,   Again, we can use the double-angle identity to rewrite the antiderivative in terms of only single angles ,    "
+},
+{
+  "id": "subsec-trig-integrals-examples-2",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-trig-integrals-examples-2",
+  "type": "Exercise Group",
+  "number": "6.3.1",
+  "title": "Basic Trigonometric Integrals Practice.",
+  "body": " Basic Trigonometric Integrals Practice  Evaluate each integral.  Expand, and use the formula for .  Multiply the numerator and denominator by , and split the fraction.  Split the fraction into .  Expand, and use .  Distribute; use and .  Rewrite as and use .  "
+},
+{
+  "id": "subsec-trig-integrals-examples-3",
+  "level": "2",
+  "url": "sec-integrals-of-trig-functions.html#subsec-trig-integrals-examples-3",
+  "type": "Exercise Group",
+  "number": "6.3.2",
+  "title": "More Trigonometric Integrals Practice.",
+  "body": " More Trigonometric Integrals Practice  Evaluate each integral.  Multiply numerator and denominator by , and use .  Multiply numerator and denominator by , and use .  Use the sine addition formula .  Rewrite as , then multiply by the conjugate .  Expand, and use and .  "
+},
+{
   "id": "sec-inverse-trig-sub",
   "level": "1",
   "url": "sec-inverse-trig-sub.html",
   "type": "Section",
-  "number": "6.3",
+  "number": "6.4",
   "title": "Inverse Trigonometric Substitution",
   "body": " Inverse Trigonometric Substitution   Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form , , or . This method uses trigonometric identities to simplify these integrals.    Summary of Inverse Trigonometric Substitution                                    Identify the form of the substitution (sine, tangent, or secant).  Apply the substitution. Sketch a right triangle and label the sides, to represent the relationships between and .  Simplify the integral.  Integrate with the new variable , using previous strategies, typically a trigonometric integral.  Back-substitute using the inverse trigonometric function to substitute back for .      Examples   Example   Evaluate .    Let , so .               Example   Determine      Example   Determine      Example   Determine       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate      "
 },
@@ -1112,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#summary-of-inverse-trigonometric-substitution-2",
   "type": "Table",
-  "number": "6.3.1",
+  "number": "6.4.1",
   "title": "",
   "body": "                            "
 },
@@ -1121,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-2",
   "type": "Checkpoint",
-  "number": "6.3.2",
+  "number": "6.4.2",
   "title": "Example.",
   "body": " Example   Evaluate .    Let , so .             "
 },
@@ -1130,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-3",
   "type": "Checkpoint",
-  "number": "6.3.3",
+  "number": "6.4.3",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -1139,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-4",
   "type": "Checkpoint",
-  "number": "6.3.4",
+  "number": "6.4.4",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -1148,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-5",
   "type": "Checkpoint",
-  "number": "6.3.5",
+  "number": "6.4.5",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -1157,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-6",
   "type": "Checkpoint",
-  "number": "6.3.6",
+  "number": "6.4.6",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1166,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-7",
   "type": "Checkpoint",
-  "number": "6.3.7",
+  "number": "6.4.7",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1175,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-8",
   "type": "Checkpoint",
-  "number": "6.3.8",
+  "number": "6.4.8",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1184,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-9",
   "type": "Checkpoint",
-  "number": "6.3.9",
+  "number": "6.4.9",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1193,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-10",
   "type": "Checkpoint",
-  "number": "6.3.10",
+  "number": "6.4.10",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1202,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-11",
   "type": "Checkpoint",
-  "number": "6.3.11",
+  "number": "6.4.11",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -1211,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-12",
   "type": "Checkpoint",
-  "number": "6.3.12",
+  "number": "6.4.12",
   "title": "",
   "body": "  Evaluate    "
 },
