@@ -9,7 +9,7 @@
       <li><p>Rules to differentiate specific types of functions, that you have learned about in pre-calculus.</p></li>
       <li><p>Also, rules to differentiate various types of <em>combinations</em> of those functions.</p></li>
     </ol>
-    <me>\begin{cases} \text{polynomials / powers} \quad x^n \\ \text{rational functions} \quad \frac{p(x)}{q(x)} \\ \text{trigonometric functions} \quad \sin{x}, \cos{x}, \tan{x}, .\dots \\ \text{exponential functions} \quad b^x, e^x \\ \text{logarithmic functions} \quad \log{x} \\ \qquad \vdots \end{cases} \qquad \begin{cases} \text{sum and difference (adding and subtracting)} \\  \text{product (multiplying)} \\ \text{quotient (dividing)} \\ \text{composition (one function inside another)} \end{cases}</me>
+    <me>\begin{cases} \text{polynomials / powers} \quad x^n \\ \text{rational functions} \quad \frac{p(x)}{q(x)} \\ \text{trigonometric functions} \quad \sin{x}, \cos{x}, \tan{x}, \dots \\ \text{exponential functions} \quad b^x, e^x \\ \text{logarithmic functions} \quad \log{x} \\ \qquad \vdots \end{cases} \qquad \begin{cases} \text{sum and difference (adding and subtracting)} \\ \text{product (multiplying)} \\ \text{quotient (dividing)} \\ \text{composition (one function inside another)} \end{cases}</me>
     <p>This could be called <term>systematic differentiation</term>. Combining all of these rules will allow us to compute derivatives of every type of function that is covered in pre-calculus.</p>
   </introduction>
 
@@ -20,15 +20,32 @@
 
     <example>
       <title>Constant Function</title>
-      <p>Consider the function <m>f(x) = 3</m>. This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. <url href="https://www.desmos.com/calculator/ejelchpaql">Graph of <m>f(x)=3</m></url>. Its graph is a horizontal line at <m>y=3</m>, which has slope 0, so we would expect that its derivative would be always 0.</p>
+      <p>Consider the function <m>f(x) = 3</m>. This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. <url href="https://www.desmos.com/calculator/ejelchpaql">Graph of <m>f(x)=3</m></url>. Its graph is a horizontal line at <m>y=3</m>, which has slope 0, so we would expect that its derivative would be always 0. Indeed,</p>
+      <me>\frac{d}{dx} (3) = 0</me>
     </example>
 
-    <p>In general, for a constant function, of the form <m>f(x)=k</m> (where <m>k</m> is some number), its derivative is 0.</p>
+    <p>In general, for a constant function, of the form <m>f(x)=k</m> (where <m>k</m> is some number), its derivative is 0, because its graph is a horizontal line, which has slope 0.</p>
+
+    <image width="50%">
+      <latex-image>
+        \begin{tikzpicture}[scale=0.9]
+          \draw[-&gt;] (-0.3,0) -- (4.0,0) node[right] {$x$};
+          \draw[-&gt;] (0,-0.3) -- (0,2.5) node[above] {$y$};
+          \draw[thick, red] (-0.2,1.5) -- (3.8,1.5);
+          \node[above] at (3.0,1.5) {$f(x) = c$};
+          \draw (0.05,1.5) -- (-0.05,1.5) node[left] {$c$};
+          \fill (1.8,1.5) circle (2pt);
+          \draw[dashed] (1.8,0) -- (1.8,1.5);
+          \node[below] at (1.8,0) {$x$};
+          \node[draw, font=\small] at (3.0,0.7) {slope $= f'(x) = 0$};
+        \end{tikzpicture}
+      </latex-image>
+    </image>
 
     <theorem>
       <title>Derivative of a Constant Is Zero</title>
       <statement>
-        <p>If <m>f(x) = k</m> for some number <m>k</m>, then <m>f'(x) = 0</m>. In other words,</p>
+        <p>If <m>f(x) = k</m> where <m>k</m> is some number, then <m>f'(x) = 0</m>. In other words,</p>
         <me>\boxed{\frac{d}{dx} k = 0}</me>
       </statement>
       <proof>
@@ -44,7 +61,7 @@
     </theorem>
 
     <p>In short,</p>
-    <me>\boxed{\text{The derivative of a constant is zero.}}</me>
+    <me>\boxed{\text{"The derivative of a constant is zero."}}</me>
 
     <p>A slightly more complicated situation is the case of a line.</p>
 
@@ -55,7 +72,7 @@
 
     <p>In general, a line has a constant slope, so its derivative is the slope of the line.</p>
 
-    <me>\boxed{\text{The derivative of a line is its slope.}}</me>
+    <me>\boxed{\text{"The derivative of a line is its slope."}}</me>
 
     <project>
       <title>Derivatives of Constants and Lines</title>
@@ -63,13 +80,14 @@
       <task><statement><p><m>f(x) = 5</m></p></statement><answer><p><m>f'(x) = 0</m></p></answer></task>
       <task><statement><p><m>f(x) = -3</m></p></statement><answer><p><m>f'(x) = 0</m></p></answer></task>
       <task><statement><p><m>f(x) = 7x + 2</m></p></statement><answer><p><m>f'(x) = 7</m></p></answer></task>
+      <task><statement><p><m>f(x) = x - 3</m></p></statement><answer><p><m>f'(x) = 1</m></p></answer></task>
       <task><statement><p><m>f(x) = -4x + 9</m></p></statement><answer><p><m>f'(x) = -4</m></p></answer></task>
       <task><statement><p><m>f(x) = \frac{\pi}{2}</m></p></statement><answer><p><m>f'(x) = 0</m></p></answer></task>
     </project>
   </subsection>
 
   <subsection xml:id="subsec-power-rule">
-    <title>Derivative of Power Functions (Power Rule)</title>
+    <title>Derivative of Power Functions (The Power Rule)</title>
 
     <p>The next basic type of function we will consider are power functions, where the variable is raised to a constant number.</p>
 
@@ -85,56 +103,82 @@
       <p>Observe the pattern for the derivative of these powers of <m>x</m>. The derivative has:</p>
       <ul>
         <li><p>A coefficient in the front, which is the exponent of <m>x</m>.</p></li>
-        <li><p>The variable <m>x</m> raised to a exponent that is one less than what it was before.</p></li>
+        <li><p>The variable <m>x</m> raised to an exponent that is one less than what it was before.</p></li>
       </ul>
       <p>This applies to even the first example <m>\frac{d}{dx} x = 1</m>, as <m>x</m> has an exponent of 1, so the pattern says the derivative should be <m>1 \cdot x^0 = 1</m> (recall: <m>x^0 = 1</m> for any <m>x</m>).</p>
       <p>It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for <em>any</em> number.</p>
     </example>
 
-    <theorem>
+    <theorem xml:id="thm-power-rule">
       <title>Power Rule for Derivatives</title>
       <statement>
         <p>If <m>f(x) = x^n</m> for some number <m>n</m>, then <m>f'(x) = n x^{n-1}</m>. In other words,</p>
-        <me>\boxed{\frac{d}{dx} x^n = n x^{n-1}}</me>
+        <me>\boxed{\frac{d}{dx} x^n = n x^{n-1}} \qquad \text{for any number $n$}</me>
       </statement>
     </theorem>
 
     <p>In other words, to differentiate a function that is some power of the variable <m>x</m>,</p>
     <ul>
-      <li><p>Bring down the exponent into the <q>front</q> and multiply it</p></li>
+      <li><p>Bring down the exponent into the <q>front</q> and multiply it.</p></li>
       <li><p>Subtract 1 from the exponent.</p></li>
     </ul>
 
+    <project>
+      <title>Basic Power Rule Practice</title>
+      <introduction><p>Find the derivative of each function.</p></introduction>
+      <task><statement><p><m>f(x) = x^5</m></p></statement><answer><p><m>f'(x) = 5x^4</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^7</m></p></statement><answer><p><m>f'(x) = 7x^6</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^{100}</m></p></statement><answer><p><m>f'(x) = 100x^{99}</m></p></answer></task>
+    </project>
+
     <remark>
-      <title>Power Rule with Reciprocal and Square Root</title>
-      <p>You may recall 2 more examples of derivatives we have seen before, which don't look like powers at first, but can be rewritten as powers in order to use the power rule,</p>
-      <ul>
-        <li><p>For <m>f(x) = \frac{1}{x}</m> (the reciprocal function). You may recall the derivative is <m>f'(x) = -\frac{1}{x^2}</m>. This also follows the power rule, because <m>\frac{1}{x} = x^{-1}</m>.
-          <md>
-            <mrow>\frac{d}{dx} \frac{1}{x} \amp= \frac{d}{dx} x^{-1}</mrow>
-            <mrow>\amp= -x^{-2} \amp\amp \text{by the power rule}</mrow>
-            <mrow>\amp= -\frac{1}{x^2}</mrow>
-          </md></p>
-        </li>
-        <li><p>For <m>f(x) = \sqrt{x}</m>, you may recall the derivative is <m>f'(x) = \frac{1}{2\sqrt{x}}</m>. This also follows the power rule, because <m>\sqrt{x} = x^{1/2}</m>,
-          <md>
-            <mrow>\frac{d}{dx} \sqrt{x} \amp= \frac{d}{dx} x^{1/2}</mrow>
-            <mrow>\amp= \frac{1}{2} x^{-1/2} \amp\amp \text{by the power rule}</mrow>
-            <mrow>\amp= \frac{1}{2\sqrt{x}}</mrow>
-          </md></p>
-        </li>
-      </ul>
+      <p>For the reciprocal function <m>f(x) = \frac{1}{x}</m>, you may recall its derivative is <m>f'(x) = -\frac{1}{x^2}</m>. This also follows the power rule, because <m>\frac{1}{x} = x^{-1}</m>.</p>
+      <md>
+        <mrow>\frac{d}{dx} \frac{1}{x} \amp= \frac{d}{dx} x^{-1}</mrow>
+        <mrow>\amp= -x^{-2} \amp\amp \text{by the power rule}</mrow>
+        <mrow>\amp= -\frac{1}{x^2}</mrow>
+      </md>
     </remark>
 
     <project>
-      <title>Power Rule Practice</title>
+      <title>Negative Exponent Practice</title>
       <introduction><p>Differentiate each function.</p></introduction>
-      <task><statement><p><m>f(x) = x^5</m></p></statement><answer><p><m>f'(x) = 5x^4</m></p></answer></task>
       <task><statement><p><m>f(x) = x^{-3}</m></p></statement><answer><p><m>f'(x) = -3x^{-4} = -\frac{3}{x^4}</m></p></answer></task>
-      <task><statement><p><m>f(x) = \frac{2}{x^6}</m></p></statement><answer><p><m>f'(x) = -12x^{-7} =-\frac{12}{x^7}</m></p></answer></task>
-      <task><statement><p><m>f(x) = x^{7/2}</m></p></statement><answer><p><m>f'(x) = \frac{7}{2} x^{5/2}</m></p></answer></task>
-      <task><statement><p><m>f(x) = x^{\sqrt{2}}</m></p></statement><answer><p><m>f'(x) = \sqrt{2} x^{\sqrt{2} - 1}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{2}{x^6}</m></p></statement><answer><p><m>f'(x) = -12x^{-7} = -\frac{12}{x^7}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{5}{x^4}</m></p></statement><answer><p><m>f'(x) = -\frac{20}{x^5}</m></p></answer></task>
+      <task><statement><p><m>f(x) = cx^{-7}</m>, where <m>c</m> is a constant</p></statement><answer><p><m>f'(x) = -7cx^{-8}</m></p></answer></task>
     </project>
+  </subsection>
+
+  <subsection xml:id="subsec-constant-multiple-rule">
+    <title>Derivative of a Constant Multiple</title>
+
+    <p>Next, it turns out that if we have a constant multiplied by a function, then that number can be kept in the front, and we can just differentiate the function as normal.</p>
+
+    <project>
+      <title>Constant Multiple Practice</title>
+      <introduction><p>Differentiate.</p></introduction>
+      <task><statement><p><m>f(x) = 8x^3</m></p></statement><answer><p><m>f'(x) = 24x^2</m></p></answer></task>
+      <task><statement><p><m>f(x) = 6x^{8/3}</m></p></statement><answer><p><m>f'(x) = 16x^{5/3}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 3x^2</m></p></statement><answer><p><m>f'(x) = 6x</m></p></answer></task>
+      <task><statement><p><m>f(x) = 5x^3</m></p></statement><answer><p><m>f'(x) = 15x^2</m></p></answer></task>
+      <task><statement><p><m>f(x) = 8x</m></p></statement><answer><p><m>f'(x) = 8</m></p></answer></task>
+      <task><statement><p><m>f(x) = 6\sqrt{x}</m></p></statement><answer><p><m>f'(x) = \frac{3}{\sqrt{x}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 2^{40}</m></p></statement><answer><p><m>f'(x) = 0</m></p></answer></task>
+      <task><statement><p><m>f(x) = 4\pi x^2</m></p></statement><answer><p><m>f'(x) = 8\pi x</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{5}{6}x^{12}</m></p></statement><answer><p><m>f'(x) = 10x^{11}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 100x^2</m></p></statement><answer><p><m>f'(x) = 200x</m></p></answer></task>
+    </project>
+
+    <p>This is formalized by the constant multiple rule.</p>
+
+    <theorem xml:id="thm-constant-multiple-rule">
+      <title>Constant Multiple Rule</title>
+      <statement>
+        <p><q>The derivative of a constant multiplied by a function is that constant multiplied by the derivative of the function.</q></p>
+        <me>\boxed{\frac{d}{dx} \brac{k f(x)} = k \cdot \frac{d}{dx} f(x)} \qquad \text{or} \qquad (k \cdot f(x))' = k f'(x)</me>
+      </statement>
+    </theorem>
   </subsection>
 
   <subsection xml:id="subsec-sum-difference-rule">
@@ -142,7 +186,7 @@
 
     <example>
       <title>Differentiating Term by Term</title>
-      <p>Consider the derivative of <m>f(x)= 3x^2 + 5x - 7</m>. This function has 3 terms (<m>3x^2</m>, <m>5x</m>, and <m>-7</m>). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of <m>3x^2</m> is <m>6x</m>, the derivative of <m>5x</m> is 5, and the derivative of <m>-7</m> is 0. So, the derivative of <m>f(x)</m> is <m>f'(x) = 6x + 5 + 0 = 6x + 5</m>.</p>
+      <p>Consider the derivative of <m>f(x) = 3x^2 + 5x - 7</m>. This function has 3 terms (<m>3x^2</m>, <m>5x</m>, and <m>-7</m>). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of <m>3x^2</m> is <m>6x</m>, the derivative of <m>5x</m> is 5, and the derivative of <m>-7</m> is 0. So, the derivative of <m>f(x)</m> is <m>f'(x) = 6x + 5 + 0 = 6x + 5</m>.</p>
     </example>
 
     <p>In general, to differentiate a function with multiple terms,</p>
@@ -151,29 +195,28 @@
       <li><p>For any coefficients (numbers multiplied in the front), keep them in the front (they <q>come along for the ride</q>).</p></li>
     </ul>
 
-    <p>These two intuitive rules are formalized by the sum rule, difference rule, and constant multiple rule.</p>
+    <p>These two intuitive rules are formalized by the sum rule and difference rule.</p>
 
     <theorem>
-      <title>Sum/Difference Rule and Constant Multiple Rule</title>
+      <title>Sum/Difference Rule</title>
       <statement>
+        <p><q>The derivative of a sum or difference is the sum or difference of the derivatives.</q></p>
         <ul>
-          <li><p><alert>Sum/difference rule</alert>. <q>The derivative of a sum or difference is the sum or difference of the derivatives</q>
-            <me>\boxed{\frac{d}{dx} \left( f(x) + g(x) \right) = \frac{d}{dx} f(x) + \frac{d}{dx} g(x)} \qquad \text{or} \qquad (f + g)'(x) = f'(x) + g'(x)</me></p>
-          </li>
-          <li><p><alert>Constant multiple rule</alert>. <q>The derivative of a constant multiplied by a function is the constant multiplied by the derivative of the function.</q>
-            <me>\boxed{\frac{d}{dx} \left( k f(x) \right) = k \cdot \frac{d}{dx} f(x)} \qquad \text{or} \qquad (kf)'(x) = k f'(x)</me></p>
-          </li>
+          <li><p><me>\boxed{\frac{d}{dx} \brac{f(x) + g(x)} = \frac{d}{dx} f(x) + \frac{d}{dx} g(x)}</me></p></li>
+          <li><p><me>\boxed{\frac{d}{dx} \brac{f(x) - g(x)} = \frac{d}{dx} f(x) - \frac{d}{dx} g(x)}</me></p></li>
         </ul>
       </statement>
     </theorem>
 
-    <p>The sum or difference rule also applies to any number of functions, not just 2 functions. This basically means that derivatives can be determined term-by-term.</p>
+    <p>The sum or difference rule also applies to any number of functions, not just 2 functions. In other words,</p>
+    <me>\frac{d}{dx} \brac{f + g + h} = \frac{d}{dx} f + \frac{d}{dx} g + \frac{d}{dx} h</me>
+    <p>This basically means that derivatives can be determined term-by-term.</p>
   </subsection>
 
   <subsection xml:id="subsec-derivative-polynomials">
     <title>Derivative of Polynomial Functions</title>
 
-    <p>This rule can be used to differentiate any polynomial function.</p>
+    <p>We can now differentiate any polynomial function, using the previous rules.</p>
 
     <project>
       <title>Differentiating Polynomials</title>
@@ -181,42 +224,571 @@
       <task><statement><p><m>f(x) = x^2 - 4x</m></p></statement><answer><p><m>f'(x) = 2x - 4</m></p></answer></task>
       <task><statement><p><m>f(x) = 3x^3 - 5x^2 + 7x - 2</m></p></statement><answer><p><m>f'(x) = 9x^2 - 10x + 7</m></p></answer></task>
       <task><statement><p><m>f(x) = 3x - \frac{1}{4} x^3</m></p></statement><answer><p><m>f'(x) = 3 - \frac{3}{4} x^2</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^3 - x^2</m></p></statement><answer><p><m>f'(x) = 3x^2 - 2x</m></p></answer></task>
+      <task><statement><p><m>f(x) = -x^2 + 5x + 8</m></p></statement><answer><p><m>f'(x) = -2x + 5</m></p></answer></task>
+      <task><statement><p><m>f(x) = 4x - 7</m></p></statement><answer><p><m>f'(x) = 4</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^2 + 4x</m></p></statement><answer><p><m>f'(x) = 2x + 4</m></p></answer></task>
       <task><statement><p><m>f(x) = (3x+2)^2</m></p></statement><hint><p>Expand first.</p></hint><answer><p><m>f'(x) = 18x + 12</m></p></answer></task>
     </project>
   </subsection>
 
   <subsection xml:id="subsec-rational-exponents-radicals">
-    <title>Rational Exponents and Radical Functions</title>
+    <title>Derivatives with Rational Exponents and Radical Functions</title>
 
-    <p>The power rule can also be used to differentiate functions with rational exponents, i.e. expressions of the form <m>\sqrt[b]{x^a} = x^{a/b}</m>), and in general any term that can be represented as a power of the variable <m>x</m>.</p>
+    <p>The power rule can also be used to differentiate functions with rational exponents (i.e. exponents which are fractions), and in general any term that can be represented as a power of the variable <m>x</m>.</p>
 
-    <project>
-      <title>Differentiating Radical Functions</title>
-      <introduction><p>Differentiate each function.</p></introduction>
-      <task><statement><p><m>f(x) = 5 \sqrt{x} + \frac{1}{\sqrt{x}}</m></p></statement><answer><p><m>f'(x) = \frac{5}{2\sqrt{x}} - \frac{1}{2 x^{3/2}}</m></p></answer></task>
-      <task><statement><p><m>f(x) = 3x^2 - 5\sqrt{x}</m></p></statement><answer><p><m>f'(x) = 6x - \frac{5}{2\sqrt{x}}</m></p></answer></task>
-      <task><statement><p><m>f(x) = 5 + 7x^{1/2} - 2x^{-1/3}</m></p></statement><answer><p><m>f'(x) = \frac{7}{2x^{1/2}} + \frac{2}{3x^{4/3}}</m></p></answer></task>
-    </project>
+    <remark>
+      <p>Recall that,</p>
+      <ul>
+        <li><p><m>\sqrt{x} = x^{1/2}</m>, <m>\sqrt[3]{x} = x^{1/3}</m>, and in general, <m>\sqrt[n]{x} = x^{1/n}</m>.</p></li>
+        <li><p><m>\sqrt[n]{x^m} = x^{m/n}</m>.</p></li>
+      </ul>
+    </remark>
+
+    <example>
+      <title>Differentiating the Square Root</title>
+      <p>For the square root function <m>f(x) = \sqrt{x}</m>, you may recall its derivative is <m>f'(x) = \frac{1}{2\sqrt{x}}</m>. This also follows the power rule, because <m>\sqrt{x} = x^{1/2}</m>,</p>
+      <md>
+        <mrow>\frac{d}{dx} \sqrt{x} \amp= \frac{d}{dx} x^{1/2}</mrow>
+        <mrow>\amp= \frac{1}{2} x^{-1/2} \amp\amp \text{by the power rule}</mrow>
+        <mrow>\amp= \frac{1}{2\sqrt{x}}</mrow>
+      </md>
+    </example>
 
     <p>In general, if your derivative has negative exponents, it is good practice to rewrite the final answer with positive exponents.</p>
+
+    <project>
+      <title>Rational Exponents and Radicals</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = 5\sqrt{x} + \frac{1}{\sqrt{x}}</m></p></statement><answer><p><m>f'(x) = \frac{5}{2\sqrt{x}} - \frac{1}{2x^{3/2}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 3x^2 - 5\sqrt{x}</m></p></statement><answer><p><m>f'(x) = 6x - \frac{5}{2\sqrt{x}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt[3]{x}</m></p></statement><answer><p><m>f'(x) = \frac{1}{3x^{2/3}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 5 + 7x^{1/2} - 2x^{-1/3}</m></p></statement><answer><p><m>f'(x) = \frac{7}{2x^{1/2}} + \frac{2}{3x^{4/3}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^{7/2}</m></p></statement><answer><p><m>f'(x) = \frac{7}{2} x^{5/2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x^3}</m></p></statement><answer><p><m>f'(x) = \frac{3}{2} x^{1/2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^{\sqrt{2}}</m></p></statement><hint><p>The same power rule applies: bring down the exponent, and subtract 1.</p></hint><answer><p><m>f'(x) = \sqrt{2}\, x^{\sqrt{2} - 1}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x^{2+\pi}}</m></p></statement><answer><p><m>f'(x) = \frac{2+\pi}{2} x^{\pi/2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 3x^{5/3}</m></p></statement><answer><p><m>f'(x) = 5x^{2/3}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{\sqrt{x}}{4}</m></p></statement><answer><p><m>f'(x) = \frac{1}{8\sqrt{x}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 2x^{-3/4}</m></p></statement><answer><p><m>f'(x) = -\frac{3}{2}x^{-7/4}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{1}{\sqrt{x}} + \sqrt{x}</m></p></statement><answer><p><m>f'(x) = -\frac{1}{2x^{3/2}} + \frac{1}{2\sqrt{x}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x} + 6\sqrt[3]{x}</m></p></statement><answer><p><m>f'(x) = \frac{1}{2\sqrt{x}} + \frac{2}{x^{2/3}}</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-practice-differentiate">
+    <title>Practice: Differentiate</title>
+
+    <project>
+      <title>Positive Integer Exponents</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = 3x^5 - 6x^4 + 2</m></p></statement><answer><p><m>f'(x) = 15x^4 - 24x^3</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^{10} + 25x^5 - 50</m></p></statement><answer><p><m>f'(x) = 10x^9 + 125x^4</m></p></answer></task>
+      <task><statement><p><m>f(x) = 2x^3 + 5x^2 - 4x - 3.75</m></p></statement><answer><p><m>f'(x) = 6x^2 + 10x - 4</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{1}{5}x^5 + \frac{1}{3}x^3 - \frac{1}{2}x^2 + 1</m></p></statement><answer><p><m>f'(x) = x^4 + x^2 - x</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{26}{5}x + \frac{23}{10}</m></p></statement><answer><p><m>f'(x) = \frac{26}{5}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{7}{4}x^2 - 3x + 12</m></p></statement><answer><p><m>f'(x) = \frac{7}{2}x - 3</m></p></answer></task>
+      <task><statement><p><m>f(x) = 2x^3 - 3x^2 - 4x</m></p></statement><answer><p><m>f'(x) = 6x^2 - 6x - 4</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{7}{5}x^5 - \frac{5}{2}x^2 + \frac{67}{10}</m></p></statement><answer><p><m>f'(x) = 7x^4 - 5x</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^2}{2} + 1</m></p></statement><answer><p><m>f'(x) = x</m></p></answer></task>
+      <task><statement><p><m>f(x) = 3x^4 + 7x</m></p></statement><answer><p><m>f'(x) = 12x^3 + 7</m></p></answer></task>
+      <task><statement><p><m>f(x) = 6x^5 - \frac{5}{2}x^2 + x + 5</m></p></statement><answer><p><m>f'(x) = 30x^4 - 5x + 1</m></p></answer></task>
+      <task><statement><p><m>f(x) = 2x^3 + 3x^2 + 10x</m></p></statement><answer><p><m>f'(x) = 6x^2 + 6x + 10</m></p></answer></task>
+      <task><statement><p><m>f(x) = 6x^4 - 5x^3 - 2x + 17</m></p></statement><answer><p><m>f'(x) = 24x^3 - 15x^2 - 2</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Negative Exponents</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = x^2 - \frac{2}{x^2}</m></p></statement><answer><p><m>f'(x) = 2x + \frac{4}{x^3}</m></p></answer></task>
+      <task><statement><p><m>y = x^5 - 6x^{-5}</m></p></statement><answer><p><m>\frac{dy}{dx} = 5x^4 + \frac{30}{x^6}</m></p></answer></task>
+      <task><statement><p><m>y = \frac{6}{x^3} + \frac{2}{x^2} - 3</m></p></statement><answer><p><m>y' = -\frac{18}{x^4} - \frac{4}{x^3}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Fractional Exponents and Radicals</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = \sqrt{x} - 5x^4</m></p></statement><answer><p><m>f'(x) = \frac{1}{2\sqrt{x}} - 20x^3</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x} + \sqrt[3]{x} + \sqrt[4]{x}</m></p></statement><answer><p><m>f'(x) = \frac{1}{2\sqrt{x}} + \frac{1}{3x^{2/3}} + \frac{1}{4x^{3/4}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^{5/3} - x^{2/3}</m></p></statement><answer><p><m>f'(x) = \frac{5}{3}x^{2/3} - \frac{2}{3}x^{-1/3}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x} - x</m></p></statement><answer><p><m>f'(x) = \frac{1}{2\sqrt{x}} - 1</m></p></answer></task>
+      <task><statement><p><m>y = 4x^{-1/2} - \frac{6}{x}</m></p></statement><answer><p><m>y' = -\frac{2}{x^{3/2}} + \frac{6}{x^2}</m></p></answer></task>
+      <task><statement><p><m>y = 9x^{-2} + 3\sqrt{x}</m></p></statement><answer><p><m>y' = -\frac{18}{x^3} + \frac{3}{2\sqrt{x}}</m></p></answer></task>
+      <task><statement><p><m>y = \sqrt{x} + 6\sqrt{x^3} + \sqrt{2}</m></p></statement><answer><p><m>y' = \frac{1}{2\sqrt{x}} + 9\sqrt{x}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 6\sqrt{x} - 4x^3 + 9</m></p></statement><answer><p><m>f'(x) = \frac{3}{\sqrt{x}} - 12x^2</m></p></answer></task>
+      <task><statement><p><m>f(x) = 4\sqrt{x} - \frac{1}{4}x^4 + x + 1</m></p></statement><answer><p><m>f'(x) = \frac{2}{\sqrt{x}} - x^3 + 1</m></p></answer></task>
+      <task><statement><p><m>f(x) = 2x^4 + \sqrt{x}</m></p></statement><answer><p><m>f'(x) = 8x^3 + \frac{1}{2\sqrt{x}}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Evaluating the Derivative</title>
+      <introduction><p>Determine <m>f'(a)</m> for the given function <m>f(x)</m> at the given value of <m>a</m>.</p></introduction>
+      <task><statement><p><m>f(x) = x^3 - \sqrt{x}</m>, <m>a = 4</m></p></statement><answer><p><m>f'(4) = \frac{191}{4}</m></p></answer></task>
+      <task><statement><p><m>f(x) = 7 - 6\sqrt{x} + 5x^{2/3}</m>, <m>a = 64</m></p></statement><answer><p><m>f'(64) = \frac{11}{24}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Slope of the Tangent</title>
+      <introduction><p>Determine the slope of the tangent to each curve at the given point.</p></introduction>
+      <task><statement><p><m>y = 3x^4</m>, <m>(1, 3)</m></p></statement><answer><p><m>12</m></p></answer></task>
+      <task><statement><p><m>y = \frac{1}{x^5}</m>, <m>(-1, -1)</m></p></statement><answer><p><m>-5</m></p></answer></task>
+      <task><statement><p><m>y = \frac{2}{x}</m>, <m>(-2, -1)</m></p></statement><answer><p><m>-\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>y = \sqrt{16x^3}</m>, <m>(4, 32)</m></p></statement><answer><p><m>12</m></p></answer></task>
+      <task><statement><p><m>y = 2x^3 + 3x</m>, <m>x = 1</m></p></statement><answer><p><m>9</m></p></answer></task>
+      <task><statement><p><m>y = 2\sqrt{x} + 5</m>, <m>x = 4</m></p></statement><answer><p><m>\frac{1}{2}</m></p></answer></task>
+      <task><statement><p><m>y = \frac{16}{x^2}</m>, <m>x = -2</m></p></statement><answer><p><m>4</m></p></answer></task>
+      <task><statement><p><m>y = x^{-3}\brac{x^{-1} + 1}</m>, <m>x = 1</m></p></statement><answer><p><m>-7</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-practice-tangent-lines">
+    <title>Practice: Tangent Lines</title>
+
+    <project>
+      <title>Tangent Line Equations</title>
+      <introduction><p>Find an equation of the tangent line to each function at the given point.</p></introduction>
+      <task><statement><p><m>f(x) = x^2</m> at <m>(1, 1)</m></p></statement><answer><p><m>y - 1 = 2(x-1)</m> or <m>y = 2x - 1</m></p></answer></task>
+      <task><statement><p><m>y = x^3 + 4</m> at the point <m>(1, 5)</m></p></statement><answer><p><m>y - 5 = 3(x-1)</m> or <m>y = 3x + 2</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x}</m> at <m>(4, 2)</m></p></statement><answer><p><m>y - 2 = \frac{1}{4}(x-4)</m> or <m>y = \frac{1}{4}x + 1</m></p></answer></task>
+      <task><statement><p><m>f(x) = 5\sqrt[3]{x}</m> at <m>x = 64</m></p></statement><answer><p><m>y - 20 = \frac{5}{48}(x-64)</m> or <m>y = \frac{5}{48}x + \frac{40}{3}</m></p></answer></task>
+      <task><statement><p><m>y = x^3 - x^2 + x - 1</m>, <m>(1, 0)</m></p></statement><answer><p><m>y = 2x - 2</m></p></answer></task>
+      <task><statement><p><m>y = 7\sqrt{x} - 3x</m>, <m>(1, 4)</m></p></statement><answer><p><m>y = \frac{1}{2}x + \frac{7}{2}</m></p></answer></task>
+      <task><statement><p><m>y = x + \frac{6}{x}</m>, <m>(2, 5)</m></p></statement><answer><p><m>y = -\frac{1}{2}x + 6</m></p></answer></task>
+      <task><statement><p><m>y = (x^2+1)^2</m>, <m>(-1, 4)</m></p></statement><answer><p><m>y = -8x - 4</m></p></answer></task>
+      <task><statement><p><m>y = 2x - \frac{1}{x}</m> at <m>P(0.5, -1)</m></p></statement><answer><p><m>y = 6x - 4</m></p></answer></task>
+      <task><statement><p><m>y = \frac{3}{x^2} - \frac{4}{x^3}</m> at <m>P(-1, 7)</m></p></statement><answer><p><m>y = 18x + 25</m></p></answer></task>
+      <task><statement><p><m>y = \sqrt{3x^3}</m> at <m>P(3, 9)</m></p></statement><answer><p><m>y = \frac{9}{2}x - \frac{9}{2}</m></p></answer></task>
+      <task><statement><p><m>y = \frac{1}{x}\brac{x^2 + \frac{1}{x}}</m> at <m>P(1, 2)</m></p></statement><answer><p><m>y = -x + 3</m></p></answer></task>
+      <task><statement><p><m>y = \brac{\sqrt{x} - 2}\brac{3\sqrt{x} + 8}</m> at <m>P(4, 0)</m></p></statement><answer><p><m>y = \frac{7}{2}x - 14</m></p></answer></task>
+      <task><statement><p><m>y = \frac{\sqrt{x} - 2}{\sqrt[3]{x}}</m> at <m>P(1, -1)</m></p></statement><answer><p><m>y = \frac{5}{6}x - \frac{11}{6}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Horizontal Tangent Lines</title>
+      <introduction><p>Find all points on the graph where the tangent line is horizontal.</p></introduction>
+      <task><statement><p><m>f(x) = -x^3 + 3x^2 - 2</m></p></statement><answer><p><m>(0, -2)</m> and <m>(2, 2)</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^4 - 2x^2 + 2</m></p></statement><answer><p><m>(-1, 1)</m>, <m>(0, 2)</m>, <m>(1, 1)</m></p></answer></task>
+      <task><statement><p><m>y = x^3 + 3x^2 - 24x + 1</m></p></statement><answer><p><m>(-4, 81)</m> and <m>(2, -27)</m></p></answer></task>
+    </project>
   </subsection>
 
   <subsection xml:id="subsec-simplify-before-differentiating">
     <title>Simplifying Before Using Basic Rules</title>
 
-    <p>Sometimes, you need to simplify the function before you can use the basic rules.</p>
+    <p>Sometimes, you need to rewrite the function first before you can use the basic rules. In particular, write it as a sum of multiple terms.</p>
 
     <project>
+      <title>Expand Then Differentiate</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = (x+3)(x-2)</m></p></statement><answer><p><m>f'(x) = 2x + 1</m></p></answer></task>
+      <task><statement><p><m>f(x) = x(x^2 + 3x - 9)</m></p></statement><answer><p><m>f'(x) = 3x^2 + 6x - 9</m></p></answer></task>
+      <task><statement><p><m>f(x) = \brac{\frac{x}{2}}^4</m></p></statement><answer><p><m>f'(x) = \frac{x^3}{4}</m></p></answer></task>
+      <task><statement><p><m>f(x) = (\sqrt{x}+1)(\sqrt{x}-1)</m></p></statement><answer><p><m>f'(x) = 1</m></p></answer></task>
+      <task><statement><p><m>f(x) = (2x+1)(3x^2+2)</m></p></statement><answer><p><m>f'(x) = 18x^2 + 6x + 4</m></p></answer></task>
+      <task><statement><p><m>f(x) = (x^2+1)^2</m></p></statement><answer><p><m>f'(x) = 4x^3 + 4x</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^2(1-2x)</m></p></statement><answer><p><m>f'(x) = 2x - 6x^2</m></p></answer></task>
+      <task><statement><p><m>f(x) = 5(x^2)^4</m></p></statement><answer><p><m>f'(x) = 40x^7</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Divide Then Differentiate</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = \frac{x^2-6}{2x}</m></p></statement><answer><p><m>f'(x) = \frac{1}{2} + \frac{3}{x^2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = (3x+1)^2</m></p></statement><answer><p><m>f'(x) = 18x + 6</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{6x^2-5x}{x^3}</m></p></statement><answer><p><m>f'(x) = -\frac{6}{x^2} + \frac{10}{x^3}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x}\brac{\sqrt{x} - x^{3/2}}</m></p></statement><answer><p><m>f'(x) = 1 - 2x</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^2 + 5\sqrt{x}}{x^2}</m></p></statement><answer><p><m>f'(x) = -\frac{15}{2x^{5/2}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^3-x}{x}</m></p></statement><answer><p><m>f'(x) = 2x</m></p></answer></task>
+      <task><statement><p><m>f(x) = (x-1)(x+6)</m></p></statement><answer><p><m>f'(x) = 2x + 5</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{12x^3-8x^2+12x}{4x}</m></p></statement><answer><p><m>f'(x) = 6x - 2</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x+1}{\sqrt{x}}</m></p></statement><answer><p><m>f'(x) = \frac{1}{2\sqrt{x}} - \frac{1}{2x^{3/2}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = (2x+3)(x+4)</m></p></statement><answer><p><m>f'(x) = 4x + 11</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^5-3x^2}{2x}</m>, <m>x \gt 0</m></p></statement><answer><p><m>f'(x) = 2x^3 - \frac{3}{2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = (3x-1)(x+2)</m></p></statement><answer><p><m>f'(x) = 6x + 5</m></p></answer></task>
+      <task><statement><p><m>f(x) = x^2(x^2-2x)</m></p></statement><answer><p><m>f'(x) = 4x^3 - 6x^2</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{1+\sqrt{x}}{x}</m></p></statement><answer><p><m>f'(x) = -\frac{1}{x^2} - \frac{1}{2x^{3/2}}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Mixed Simplification</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = \brac{x - \frac{2}{\sqrt{x}}}^2</m></p></statement><answer><p><m>f'(x) = 2x - \frac{2}{\sqrt{x}} - \frac{4}{x^2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt{x}(2+3x)</m></p></statement><answer><p><m>f'(x) = \frac{1}{\sqrt{x}} + \frac{9\sqrt{x}}{2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = (5x^3+3x+1)(x^2+3)</m></p></statement><answer><p><m>f'(x) = 25x^4 + 54x^2 + 2x + 9</m></p></answer></task>
+      <task><statement><p><m>f(x) = \sqrt[3]{x}(2+x)</m></p></statement><answer><p><m>f'(x) = \frac{4}{3}x^{1/3} + \frac{2}{3}x^{-2/3}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{\sqrt{x}+x}{x^2}</m></p></statement><answer><p><m>f'(x) = -\frac{3}{2}x^{-5/2} - x^{-2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = (1+x)^3</m></p></statement><answer><p><m>f'(x) = 3x^2 + 6x + 3</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^2+4x+3}{\sqrt{x}}</m></p></statement><answer><p><m>f'(x) = \frac{3}{2}\sqrt{x} + \frac{2}{\sqrt{x}} - \frac{3}{2}x^{-3/2}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Abstract Functions</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = \sqrt{5x} + \frac{\sqrt{7}}{x}</m></p></statement><answer><p><m>f'(x) = \frac{\sqrt{5}}{2\sqrt{x}} - \frac{\sqrt{7}}{x^2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = (1+x^{-1})^2</m></p></statement><answer><p><m>f'(x) = -\frac{2}{x^2} - \frac{2}{x^3}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{A+Bx+Cx^2}{x^2}</m></p></statement><answer><p><m>f'(x) = -\frac{2A}{x^3} - \frac{B}{x^2}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{1+16x^2}{(4x)^3}</m></p></statement><answer><p><m>f'(x) = -\frac{3}{64x^4} - \frac{1}{4x^2}</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-examples-tangent-lines">
+    <title>Examples</title>
+
+    <exercise>
+      <title>Parabola Slope</title>
+      <statement><p>At what point on the parabola <m>y = 3x^2</m> is the slope of the tangent line equal to 24?</p></statement>
+      <answer><p><m>(4, 48)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Parallel Tangent on Hyperbola</title>
+      <statement><p>Find all points on the graph of <m>y = \frac{12}{x}</m> where the tangent line is parallel to the line <m>3x+y=0</m>.</p></statement>
+      <answer><p><m>(2, 6)</m> and <m>(-2, -6)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Parallel Tangent on Quartic</title>
+      <statement><p>Find all points on the graph of <m>y = x^4 - 25x + 2</m> where the tangent line is parallel to the line <m>7x - y = 2</m>.</p></statement>
+      <answer><p><m>(2, -32)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Parallel Tangent on Cube Root</title>
+      <statement><p>Find all points on the graph of <m>y = \frac{3}{\sqrt[3]{x}}</m> where the tangent line is parallel to the line <m>x + 16y + 3 = 0</m>.</p></statement>
+      <answer><p><m>x = -8</m> and <m>x = 8</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Parallel Tangent on Parabola</title>
+      <statement><p>Find all points on the graph of <m>f(x) = 3x^2 - 4x</m> where the tangent line is parallel to the line <m>y = 8x + 5</m>.</p></statement>
+      <answer><p><m>(2, 4)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Parallel Tangent on Cubic</title>
+      <statement><p>Find all points on the graph of <m>f(x) = \frac{1}{3}x^3 - \frac{3}{2}x^2 + 1</m> where the tangent line is parallel to the line <m>8x - 2y = 1</m>.</p></statement>
+      <answer><p><m>\brac{-1, -\frac{5}{6}}</m> and <m>\brac{4, -\frac{5}{3}}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Parallel Tangent on Power Function</title>
+      <statement><p>Find the point on the curve <m>y = x\sqrt{x}</m> where the tangent line is parallel to the line <m>6x - y = 4</m>.</p></statement>
+      <answer><p><m>(16, 64)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>No Tangent with Given Slope</title>
+      <statement><p>Show that the curve <m>y = 10x^3 + 4x + 2</m> has no tangent lines with slope 3.</p></statement>
+      <hint><p>Solve <m>y' = 30x^2 + 4 = 3</m>.</p></hint>
+      <answer><p>The equation becomes <m>x^2 = -\frac{1}{30}</m>, which has no real solution.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Normal Line</title>
+      <statement><p>Determine the equation of the normal to the graph of <m>y = \frac{3}{x^2} - \frac{4}{x^3}</m> at <m>(-1, 7)</m>. (A normal line is perpendicular to the tangent line at the point of tangency.)</p></statement>
+      <answer><p>The tangent slope is 18, so the normal slope is <m>-\frac{1}{18}</m> and the normal line is <m>y = -\frac{1}{18}x + \frac{125}{18}</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Same Slope?</title>
+      <statement><p>Do the functions <m>y = \frac{1}{x}</m> and <m>y = x^3</m> ever have the same slope? If so, where?</p></statement>
+      <answer><p>No, they never have the same slope (there is no real solution).</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Perpendicular Tangents</title>
+      <statement><p>Show that the tangent lines to <m>y = x^2</m> at <m>(2, 4)</m> and <m>\brac{-\frac{1}{8}, \frac{1}{64}}</m> are perpendicular.</p></statement>
+      <answer><p>The slopes of the tangent lines are <m>4</m> and <m>-\frac{1}{4}</m>, and since <m>4 \cdot \brac{-\frac{1}{4}} = -1</m>, the tangent lines are perpendicular.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Point Where Slope Equals 5</title>
+      <statement><p>Determine the point on the parabola <m>y = -x^2 + 3x + 4</m> where the slope of the tangent is 5.</p></statement>
+      <answer><p><m>(-1, 0)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Points Where Slope Equals 12</title>
+      <statement><p>Determine the coordinates of the points on the graph of <m>y = x^3 + 2</m> at which the slope of the tangent is 12.</p></statement>
+      <answer><p><m>(-2, -6)</m> and <m>(2, 10)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Two Tangents with Given Slope</title>
+      <statement><p>Show that there are two tangents to the curve <m>y = \frac{1}{5}x^5 - 10x</m> that have a slope of 6.</p></statement>
+      <answer><p>The tangency points occur at <m>x = -2</m> and <m>x = 2</m>, giving tangent lines <m>y = 6x + \frac{128}{5}</m> and <m>y = 6x - \frac{128}{5}</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find the Constant</title>
+      <statement><p>Determine the value of <m>a</m>, given that the line <m>ax - 4y + 21 = 0</m> is tangent to the graph of <m>y = \frac{a}{x^2}</m> at <m>x = -2</m>.</p></statement>
+      <answer><p><m>a = 7</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Slope Locations on Parabola</title>
+      <statement>
+        <p>Let <m>f(x) = x^2 - 6x + 5</m>.</p>
+      </statement>
+      <task><statement><p>Find the values of <m>x</m> for which the slope of the curve <m>y = f(x)</m> is 0.</p></statement><answer><p><m>x = 3</m></p></answer></task>
+      <task><statement><p>Find the values of <m>x</m> for which the slope of the curve <m>y = f(x)</m> is 2.</p></statement><answer><p><m>x = 4</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Slope Locations on Cubic</title>
+      <statement>
+        <p>Let <m>f(x) = x^3 - 27x + 5</m>.</p>
+      </statement>
+      <task><statement><p>Find the values of <m>x</m> for which the slope of the curve <m>y = f(x)</m> is 0.</p></statement><answer><p><m>x = -3, 3</m></p></answer></task>
+      <task><statement><p>Find the values of <m>x</m> for which the slope of the curve <m>y = f(x)</m> is 21.</p></statement><answer><p><m>x = -4, 4</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Slope Conditions</title>
+      <statement>
+        <p>Let <m>f(x) = 2x^3 - 3x^2 - 12x + 4</m>.</p>
+      </statement>
+      <task><statement><p>Find all points on the graph of <m>f</m> at which the tangent line is horizontal.</p></statement><answer><p><m>(-1, 11)</m> and <m>(2, -16)</m></p></answer></task>
+      <task><statement><p>Find all points on the graph of <m>f</m> at which the tangent line has slope 60.</p></statement><answer><p><m>(-3, -41)</m> and <m>(4, 36)</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Slope Conditions, Radical Function</title>
+      <statement>
+        <p>Let <m>f(x) = 4\sqrt{x} - x</m>.</p>
+      </statement>
+      <task><statement><p>Find all points on the graph of <m>f</m> at which the tangent line is horizontal.</p></statement><answer><p><m>(4, 4)</m></p></answer></task>
+      <task><statement><p>Find all points on the graph of <m>f</m> at which the tangent line has slope <m>-\frac{1}{2}</m>.</p></statement><answer><p><m>(16, 0)</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Find the Parabola</title>
+      <statement><p>Find the parabola with equation <m>y = ax^2 + bx</m> whose tangent line at <m>(1, 1)</m> has equation <m>y = 3x - 2</m>.</p></statement>
+      <hint><p>Use <m>f(1) = 1</m> and <m>f'(1) = 3</m>.</p></hint>
+      <answer><p><m>y = 2x^2 - x</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find Constants for Tangent</title>
+      <statement><p>For what values of <m>a</m> and <m>b</m> is the line <m>2x + y = b</m> tangent to the parabola <m>y = ax^2</m> when <m>x = 2</m>?</p></statement>
+      <hint><p>Match the slope and the point at <m>x = 2</m>.</p></hint>
+      <answer><p><m>a = -\frac{1}{2}</m> and <m>b = 2</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find p and q</title>
+      <statement><p>The graph of <m>f(x) = \frac{p}{\sqrt{x}} + q\sqrt{x}</m> has a horizontal tangent line at the point <m>(4, 12)</m>. Find the values of <m>p</m> and <m>q</m>.</p></statement>
+      <hint><p>Use <m>f(4) = 12</m> and <m>f'(4) = 0</m>.</p></hint>
+      <answer><p><m>p = 12</m> and <m>q = 3</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find a and b for Tangent</title>
+      <statement><p>Determine the values of <m>a</m> and <m>b</m> such that the line <m>y = 5x + 6</m> is tangent to the graph of <m>f(x) = ax - \frac{b}{x}</m> at the point where <m>x = 1</m>.</p></statement>
+      <hint><p>Use <m>f(1) = 11</m> and <m>f'(1) = 5</m>.</p></hint>
+      <answer><p><m>a = 8</m> and <m>b = -3</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent at Origin, Second Intersection</title>
+      <task><statement><p>Find an equation for the line that is tangent to the curve <m>y = x^3 - 6x^2 + 5x</m> at the origin.</p></statement><hint><p>Use <m>y' = 3x^2 - 12x + 5</m> and evaluate at <m>x = 0</m>.</p></hint><answer><p><m>y = 5x</m></p></answer></task>
+      <task><statement><p>The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point.</p></statement><hint><p>Solve <m>x^3 - 6x^2 + 5x = 5x</m>.</p></hint><answer><p><m>(6, 30)</m></p></answer></task>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-examples-arbitrary-point">
+    <title>Examples: Tangent Lines at an Arbitrary Point</title>
+
+    <exercise>
+      <title>Tangent Through External Point</title>
+      <statement><p>Find the equation of the tangent line(s) to <m>y = x^2</m> that passes through the point <m>(1, -3)</m>.</p></statement>
+      <hint><p>Find the tangent line at an arbitrary point (say, <m>a</m>), and then find the value of <m>a</m> such that the tangent line passes through <m>(1, -3)</m>.</p></hint>
+      <answer><p><m>y - 9 = 6(x-3)</m> and <m>y - 1 = -2(x+1)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Through External Point II</title>
+      <statement><p>Find the equation of the tangent line(s) to <m>y = 3x^2</m> that passes through the point <m>(2, 9)</m>.</p></statement>
+      <answer><p><m>y - 3 = 6(x-1)</m> and <m>y - 27 = 18(x-3)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Through Point on Hyperbola</title>
+      <statement><p>The tangent at point <m>P</m> on the curve <m>y = \frac{1}{x}</m> passes through <m>(4, 0)</m>. Find the coordinates of <m>P</m>.</p></statement>
+      <answer><p><m>\brac{2, \frac{1}{2}}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Lines Through External Point, Parabola</title>
+      <statement><p>Find the equations of both lines that pass through the point <m>P(2, 9)</m> and are tangent to the parabola <m>y = 2x - x^2</m>.</p></statement>
+      <answer><p><m>y = -8x + 25</m> and <m>y = 4x + 1</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Lines Through Origin</title>
+      <statement><p>Find the equations of both lines that pass through the origin and are tangent to the parabola <m>y = 1 + x^2</m>.</p></statement>
+      <answer><p><m>y = 2x</m> and <m>y = -2x</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Intersection Points</title>
+      <statement><p>Find the <m>x</m>-coordinates of the points on the curve <m>y = \frac{1}{x}</m> where the tangents from the point <m>(1, -1)</m> intersect the curve.</p></statement>
+      <answer><p><m>x = -1 + \sqrt{2}</m> and <m>x = -1 - \sqrt{2}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangents to Parabola Through Given Points</title>
+      <statement><p>Determine the equations of the tangents to the curve <m>y = 2x^2 + 3</m> that pass through the following points.</p></statement>
+      <task><statement><p>Point <m>(2, 3)</m></p></statement><answer><p><m>y = 3</m> and <m>y = 16x - 29</m></p></answer></task>
+      <task><statement><p>Point <m>(2, -7)</m></p></statement><answer><p><m>y = -4x + 1</m> and <m>y = 20x - 47</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Through Point, Parabola</title>
+      <statement><p>Find the coordinates of the points on the parabola <m>y = x^2</m> where its tangent line passes through the point <m>(0, -4)</m>.</p></statement>
+      <hint><p>The tangent to <m>y = x^2</m> at <m>x = a</m> is <m>y - a^2 = 2a(x-a)</m>, and it must pass through <m>(0, -4)</m>.</p></hint>
+      <answer><p>The points are <m>(-2, 4)</m> and <m>(2, 4)</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Lines Through Point Tangent to Parabola</title>
+      <task><statement><p>Find equations of both lines through the point <m>(2, -3)</m> that are tangent to the parabola <m>y = x^2 + x</m>.</p></statement><hint><p>The tangent at <m>x = a</m> has equation <m>y = (2a+1)x - a^2</m>, and it must pass through <m>(2, -3)</m>.</p></hint><answer><p><m>y = -x - 1</m> and <m>y = 11x - 25</m></p></answer></task>
+      <task><statement><p>Show that there is no line through the point <m>(2, 7)</m> that is tangent to the parabola.</p></statement><hint><p>Use <m>y = (2a+1)x - a^2</m> and require it to pass through <m>(2, 7)</m>, then check whether <m>a</m> is real.</p></hint><answer><p>No tangent line exists.</p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Y-Intercept of Tangent</title>
+      <statement><p>Let <m>k</m> be the <m>y</m>-intercept of the tangent line to the graph of <m>f(x) = x^2 + x</m> passing through the point <m>(1, -2)</m>. Find the value of <m>k</m>.</p></statement>
+      <hint><p>The tangent at <m>x = a</m> is <m>y = (2a+1)x - a^2</m>, and it must pass through <m>(1, -2)</m>.</p></hint>
+      <answer><p><m>k = -1</m> or <m>k = -9</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Points with Tangent Through Given Point</title>
+      <statement><p>Find all points <m>(x, y)</m> on the graph of <m>f(x) = x^2</m> with tangent lines passing through the point <m>(3, 8)</m>.</p></statement>
+      <answer><p><m>(2, 4)</m> and <m>(4, 16)</m></p></answer>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-practice-advanced">
+    <title>Practice: Advanced</title>
+
+    <exercise>
+      <title>Steeper Tangent</title>
+      <statement><p>Find all values of <m>x</m> such that the tangent line to the graph of <m>f(x) = 3x^2 - 5x + 4</m> is steeper than the tangent line of <m>g(x) = \frac{1}{3}x^3</m>.</p></statement>
+      <hint><p><m>f'(x) \gt g'(x)</m> leads to a quadratic inequality <m>x^2 - 6x + 5 \lt 0</m>.</p></hint>
+      <answer><p><m>1 \lt x \lt 5</m>, or the interval <m>(1, 5)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Y-Intercept from X-Intercept</title>
+      <statement><p>A tangent line to the graph of <m>f(x) = 2\sqrt{x}</m> has an <m>x</m>-intercept of <m>-9</m>. Find the <m>y</m>-intercept of this tangent line.</p></statement>
+      <hint><p>The tangent at <m>x = a</m> has equation <m>y = \frac{1}{\sqrt{a}}x + \sqrt{a}</m>, so its <m>x</m>-intercept is <m>-a</m>.</p></hint>
+      <answer><p>The <m>y</m>-intercept is 3.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find c: Line Tangent to Radical Curve</title>
+      <statement><p>Find the value of <m>c</m> such that the line <m>y = \frac{3}{2}x + 6</m> is tangent to the curve <m>y = c\sqrt{x}</m>.</p></statement>
+      <hint><p>At the tangency point <m>x = a</m>, solve <m>\frac{c}{2\sqrt{a}} = \frac{3}{2}</m> and <m>c\sqrt{a} = \frac{3}{2}a + 6</m>.</p></hint>
+      <answer><p><m>c = 6</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find c: Line Tangent to Parabola</title>
+      <statement><p>What is the value of <m>c</m> such that the line <m>y = 2x + 3</m> is tangent to the parabola <m>y = cx^2</m>?</p></statement>
+      <hint><p>At the tangency point <m>x = a</m>, solve <m>2ca = 2</m> and <m>ca^2 = 2a + 3</m>.</p></hint>
+      <answer><p><m>c = -\frac{1}{3}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent at Point, Second Intersection</title>
+      <task><statement><p>Find an equation for the line that is tangent to the curve <m>y = x^3 - x</m> at the point <m>(-1, 0)</m>.</p></statement><hint><p>Use <m>y' = 3x^2 - 1</m> and <m>y - y_0 = m(x - x_0)</m>.</p></hint><answer><p><m>y = 2x + 2</m></p></answer></task>
+      <task><statement><p>The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point.</p></statement><hint><p>Solve <m>x^3 - x = 2x + 2</m>.</p></hint><answer><p><m>(2, 6)</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Abstract Function Differentiation</title>
+      <introduction><p>Differentiate each function.</p></introduction>
+      <task><statement><p><m>f(x) = Ax^3 + Bx^2 + Cx</m></p></statement><answer><p><m>f'(x) = 3Ax^2 + 2Bx + C</m></p></answer></task>
+      <task><statement><p><m>f(x) = a + \frac{b}{x} + \frac{c}{x^2}</m></p></statement><answer><p><m>f'(x) = -\frac{b}{x^2} - \frac{2c}{x^3}</m></p></answer></task>
+    </exercise>
+
+    <exercise>
       <title>Simplify Then Differentiate</title>
       <introduction><p>Differentiate each function.</p></introduction>
-      <task><statement><p><m>f(x) = \frac{1}{\sqrt{x}} + \sqrt{x}</m></p></statement><answer><p><m>f'(x) = -\frac{1}{2x^{3/2}} + \frac{1}{2\sqrt{x}}</m></p></answer></task>
-      <task><statement><p><m>f(x) = \sqrt{x} + 6 \sqrt[3]{x}</m></p></statement><answer><p><m>f'(x) = \frac{1}{2\sqrt{x}} + \frac{2}{x^{2/3}}</m></p></answer></task>
-      <task><statement><p><m>f(x) = (x+3)(x-2)</m></p></statement><answer><p><m>f'(x) = 2x+1</m></p></answer></task>
-      <task><statement><p><m>f(x) = \frac{x^2-6}{2x}</m></p></statement><answer><p><m>f'(x) = \frac{1}{2} + \frac{3}{x^2}</m></p></answer></task>
-      <task><statement><p><m>f(x) = \frac{6x^2-5x}{x^3}</m></p></statement><answer><p><m>f'(x) = -\frac{6}{x^2} + \frac{10}{x^3}</m></p></answer></task>
-      <task><statement><p><m>f(x) = x(x^2 + 3x - 9)</m></p></statement><answer><p><m>f'(x) = 3x^2 + 6x - 9</m></p></answer></task>
-      <task><statement><p><m>f(x) = \frac{x^2 + 5\sqrt{x}}{x^2}</m></p></statement><answer><p><m>f'(x) = -\frac{15}{2x^{5/2}}</m></p></answer></task>
-    </project>
+      <task><statement><p><m>f(x) = \frac{x^2-1}{x-1}</m></p></statement><answer><p><m>f'(x) = 1</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^3-6x^2+8x}{x^2-2x}</m></p></statement><answer><p><m>f'(x) = 1</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x-a}{\sqrt{x}-\sqrt{a}}</m>, where <m>a</m> is a positive constant</p></statement><answer><p><m>f'(x) = \frac{1}{2\sqrt{x}}</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{x^2-2ax+a^2}{x-a}</m>, where <m>a</m> is a constant</p></statement><answer><p><m>f'(x) = 1</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Using Known Derivatives</title>
+      <task>
+        <statement><p>Suppose <m>f(3) = 1</m> and <m>f'(3) = 4</m>. Let <m>g(x) = x^2 + f(x)</m> and <m>h(x) = 3f(x)</m>. (a) Find an equation of the line tangent to <m>y = g(x)</m> at <m>x = 3</m>. (b) Find an equation of the line tangent to <m>y = h(x)</m> at <m>x = 3</m>.</p></statement>
+        <answer><p>(a) <m>y = 10x - 20</m>. (b) <m>y = 12x - 33</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p>Suppose the line tangent to the graph of <m>f</m> at <m>x = 2</m> is <m>y = 4x + 1</m> and the line tangent to the graph of <m>g</m> at <m>x = 2</m> has slope 3 and passes through <m>(0, -2)</m>. Find an equation of the line tangent to each curve at <m>x = 2</m>. (a) <m>y = f(x) + g(x)</m>. (b) <m>y = f(x) - 2g(x)</m>. (c) <m>y = 4f(x)</m>.</p></statement>
+        <answer><p>(a) <m>y = 7x - 1</m>. (b) <m>y = -2x + 5</m>. (c) <m>y = 16x + 4</m>.</p></answer>
+      </task>
+      <task>
+        <statement><p>Find the equation of the line tangent to the curve <m>y = x + \sqrt{x}</m> that has slope 2.</p></statement>
+        <answer><p><m>y = 2x + \frac{1}{4}</m></p></answer>
+      </task>
+      <task>
+        <statement><p>Determine the constants <m>b</m> and <m>c</m> such that the line tangent to <m>f(x) = x^2 + bx + c</m> at <m>x = 1</m> is <m>y = 4x + 2</m>.</p></statement>
+        <answer><p><m>b = 2</m>, <m>c = 3</m></p></answer>
+      </task>
+    </exercise>
+
+    <exercise>
+      <title>Find a Second-Degree Polynomial</title>
+      <statement><p>Find a second-degree polynomial <m>P</m> such that <m>P(2) = 5</m>, <m>P'(2) = 3</m>, and <m>P''(2) = 2</m>.</p></statement>
+      <hint><p>Let <m>P(x) = ax^2 + bx + c</m> and use <m>P'(x) = 2ax + b</m> and <m>P''(x) = 2a</m>.</p></hint>
+      <answer><p><m>P(x) = x^2 - x + 3</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find a Cubic Function</title>
+      <statement><p>Find a cubic function <m>y = ax^3 + bx^2 + cx + d</m> whose graph has horizontal tangents at the points <m>(-2, 6)</m> and <m>(2, 0)</m>.</p></statement>
+      <hint><p>Use <m>f(-2) = 6</m>, <m>f(2) = 0</m>, and <m>f'(-2) = 0</m>, <m>f'(2) = 0</m>.</p></hint>
+      <answer><p><m>y = \frac{3}{16}x^3 - \frac{9}{4}x + 3</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find a Parabola from Slope Conditions</title>
+      <statement><p>Find a parabola with equation <m>y = ax^2 + bx + c</m> that has slope 4 at <m>x = 1</m>, slope <m>-8</m> at <m>x = -1</m>, and passes through the point <m>(2, 15)</m>.</p></statement>
+      <hint><p>Use <m>y'(x) = 2ax + b</m> with <m>y'(1) = 4</m> and <m>y'(-1) = -8</m>, then use <m>y(2) = 15</m>.</p></hint>
+      <answer><p><m>y = 3x^2 - 2x + 7</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Find a,b,c,d from Tangent Conditions</title>
+      <statement><p>Suppose the curve <m>y = x^4 + ax^3 + bx^2 + cx + d</m> has a tangent line when <m>x = 0</m> with equation <m>y = 2x + 1</m> and a tangent line when <m>x = 1</m> with equation <m>y = 2 - 3x</m>. Find the values of <m>a, b, c, d</m>.</p></statement>
+      <hint><p>Use <m>f(0) = 1</m>, <m>f'(0) = 2</m>, <m>f(1) = -1</m>, and <m>f'(1) = -3</m>.</p></hint>
+      <answer><p><m>a = 1</m>, <m>b = -6</m>, <m>c = 2</m>, <m>d = 1</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent to Line at Origin</title>
+      <statement><p>The curve <m>y = ax^2 + bx + c</m> passes through the point <m>(1, 2)</m> and is tangent to the line <m>y = x</m> at the origin. Find <m>a, b, c</m>.</p></statement>
+      <answer><p><m>a = 1</m>, <m>b = 1</m>, <m>c = 0</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Common Tangent of Two Curves</title>
+      <statement><p>The curves <m>y = x^2 + ax + b</m> and <m>y = cx - x^2</m> have a common tangent line at the point <m>(1, 0)</m>. Find <m>a, b, c</m>.</p></statement>
+      <answer><p><m>a = -3</m>, <m>b = 2</m>, <m>c = 1</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>nth Derivative Pattern</title>
+      <statement><p>Find the <m>n</m>th derivative of each function by calculating the first few derivatives and observing the pattern that occurs.</p></statement>
+      <task><statement><p><m>f(x) = x^n</m></p></statement><hint><p>Differentiate repeatedly to get <m>f^{(k)}(x) = n(n-1)\cdots(n-k+1)x^{n-k}</m>.</p></hint><answer><p><m>f^{(n)}(x) = n!</m></p></answer></task>
+      <task><statement><p><m>f(x) = \frac{1}{x}</m></p></statement><hint><p>Write <m>f(x) = x^{-1}</m> and differentiate repeatedly to see the alternating signs and factorial pattern.</p></hint><answer><p><m>f^{(n)}(x) = \frac{(-1)^n n!}{x^{n+1}}</m></p></answer></task>
+    </exercise>
   </subsection>
 
 </section>
