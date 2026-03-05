@@ -376,7 +376,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Basic Derivative Rules",
-  "body": " Basic Derivative Rules   Calculating derivatives using the limit definition is often tedious and sometimes difficult, especially for more complicated functions. It turns out, there are various patterns and shortcut rules for computing derivatives of various functions, i.e. differentiation rules ,   Rules to differentiate specific types of functions, that you have learned about in pre-calculus.  Also, rules to differentiate various types of combinations of those functions.    This could be called systematic differentiation . Combining all of these rules will allow us to compute derivatives of every type of function that is covered in pre-calculus.    Derivative of Constant and a Line  Perhaps the most basic function is a constant function.   Constant Function  Consider the function . This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. Graph of . Its graph is a horizontal line at , which has slope 0, so we would expect that its derivative would be always 0.   In general, for a constant function, of the form (where is some number), its derivative is 0.   Derivative of a Constant Is Zero   If for some number , then . In other words,     Using the definition of the derivative, we have,     In short,   A slightly more complicated situation is the case of a line.   Linear Function  Consider the function . This is a linear function, because its graph is a line. Graph of . This line has a slope of 2, so we would expect that its derivative would be always 2.   In general, a line has a constant slope, so its derivative is the slope of the line.    Derivatives of Constants and Lines  Find the derivative of each function.          Derivative of Power Functions (Power Rule)  The next basic type of function we will consider are power functions, where the variable is raised to a constant number.   Discovering the Power Rule Pattern  You may recall from a previous section the following derivatives of , , , and . If not, these can be derived from the limit definition of the derivative. They are,   Observe the pattern for the derivative of these powers of . The derivative has:   A coefficient in the front, which is the exponent of .  The variable raised to a exponent that is one less than what it was before.   This applies to even the first example , as has an exponent of 1, so the pattern says the derivative should be (recall: for any ).  It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for any number.    Power Rule for Derivatives   If for some number , then . In other words,     In other words, to differentiate a function that is some power of the variable ,   Bring down the exponent into the front and multiply it  Subtract 1 from the exponent.    Power Rule with Reciprocal and Square Root  You may recall 2 more examples of derivatives we have seen before, which don't look like powers at first, but can be rewritten as powers in order to use the power rule,   For (the reciprocal function). You may recall the derivative is . This also follows the power rule, because .   For , you may recall the derivative is . This also follows the power rule, because ,      Power Rule Practice  Differentiate each function.          Derivative of Sums and Differences   Differentiating Term by Term  Consider the derivative of . This function has 3 terms ( , , and ). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of is , the derivative of is 5, and the derivative of is 0. So, the derivative of is .   In general, to differentiate a function with multiple terms,   Differentiate each term individually (term-by-term).  For any coefficients (numbers multiplied in the front), keep them in the front (they come along for the ride ).   These two intuitive rules are formalized by the sum rule, difference rule, and constant multiple rule.   Sum\/Difference Rule and Constant Multiple Rule    Sum\/difference rule . The derivative of a sum or difference is the sum or difference of the derivatives    Constant multiple rule . The derivative of a constant multiplied by a function is the constant multiplied by the derivative of the function.       The sum or difference rule also applies to any number of functions, not just 2 functions. This basically means that derivatives can be determined term-by-term.    Derivative of Polynomial Functions  This rule can be used to differentiate any polynomial function.   Differentiating Polynomials  Differentiate each function.     Expand first.     Rational Exponents and Radical Functions  The power rule can also be used to differentiate functions with rational exponents, i.e. expressions of the form ), and in general any term that can be represented as a power of the variable .   Differentiating Radical Functions  Differentiate each function.      In general, if your derivative has negative exponents, it is good practice to rewrite the final answer with positive exponents.    Simplifying Before Using Basic Rules  Sometimes, you need to simplify the function before you can use the basic rules.   Simplify Then Differentiate  Differentiate each function.           "
+  "body": " Basic Derivative Rules   Calculating derivatives using the limit definition is often tedious and sometimes difficult, especially for more complicated functions. It turns out, there are various patterns and shortcut rules for computing derivatives of various functions, i.e. differentiation rules ,   Rules to differentiate specific types of functions, that you have learned about in pre-calculus.  Also, rules to differentiate various types of combinations of those functions.    This could be called systematic differentiation . Combining all of these rules will allow us to compute derivatives of every type of function that is covered in pre-calculus.    Derivative of Constant and a Line  Perhaps the most basic function is a constant function.   Constant Function  Consider the function . This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. Graph of . Its graph is a horizontal line at , which has slope 0, so we would expect that its derivative would be always 0. Indeed,    In general, for a constant function, of the form (where is some number), its derivative is 0, because its graph is a horizontal line, which has slope 0.      Derivative of a Constant Is Zero   If where is some number, then . In other words,     Using the definition of the derivative, we have,     In short,   A slightly more complicated situation is the case of a line.   Linear Function  Consider the function . This is a linear function, because its graph is a line. Graph of . This line has a slope of 2, so we would expect that its derivative would be always 2.   In general, a line has a constant slope, so its derivative is the slope of the line.    Derivatives of Constants and Lines  Find the derivative of each function.           Derivative of Power Functions (The Power Rule)  The next basic type of function we will consider are power functions, where the variable is raised to a constant number.   Discovering the Power Rule Pattern  You may recall from a previous section the following derivatives of , , , and . If not, these can be derived from the limit definition of the derivative. They are,   Observe the pattern for the derivative of these powers of . The derivative has:   A coefficient in the front, which is the exponent of .  The variable raised to an exponent that is one less than what it was before.   This applies to even the first example , as has an exponent of 1, so the pattern says the derivative should be (recall: for any ).  It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for any number.    Power Rule for Derivatives   If for some number , then . In other words,     In other words, to differentiate a function that is some power of the variable ,   Bring down the exponent into the front and multiply it.  Subtract 1 from the exponent.    Basic Power Rule Practice  Find the derivative of each function.       For the reciprocal function , you may recall its derivative is . This also follows the power rule, because .     Negative Exponent Practice  Differentiate each function.     , where is a constant     Derivative of a Constant Multiple  Next, it turns out that if we have a constant multiplied by a function, then that number can be kept in the front, and we can just differentiate the function as normal.   Constant Multiple Practice  Differentiate.             This is formalized by the constant multiple rule.   Constant Multiple Rule   The derivative of a constant multiplied by a function is that constant multiplied by the derivative of the function.       Derivative of Sums and Differences   Differentiating Term by Term  Consider the derivative of . This function has 3 terms ( , , and ). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of is , the derivative of is 5, and the derivative of is 0. So, the derivative of is .   In general, to differentiate a function with multiple terms,   Differentiate each term individually (term-by-term).  For any coefficients (numbers multiplied in the front), keep them in the front (they come along for the ride ).   These two intuitive rules are formalized by the sum rule and difference rule.   Sum\/Difference Rule   The derivative of a sum or difference is the sum or difference of the derivatives.        The sum or difference rule also applies to any number of functions, not just 2 functions. In other words,   This basically means that derivatives can be determined term-by-term.    Derivative of Polynomial Functions  We can now differentiate any polynomial function, using the previous rules.   Differentiating Polynomials  Differentiate each function.         Expand first.     Derivatives with Rational Exponents and Radical Functions  The power rule can also be used to differentiate functions with rational exponents (i.e. exponents which are fractions), and in general any term that can be represented as a power of the variable .   Recall that,   , , and in general, .  .     Differentiating the Square Root  For the square root function , you may recall its derivative is . This also follows the power rule, because ,    In general, if your derivative has negative exponents, it is good practice to rewrite the final answer with positive exponents.   Rational Exponents and Radicals  Differentiate each function.        The same power rule applies: bring down the exponent, and subtract 1.           Practice: Differentiate   Positive Integer Exponents  Differentiate each function.                 Negative Exponents  Differentiate each function.       Fractional Exponents and Radicals  Differentiate each function.              Evaluating the Derivative  Determine for the given function at the given value of .  ,  ,    Slope of the Tangent  Determine the slope of the tangent to each curve at the given point.  ,  ,  ,  ,  ,  ,  ,  ,     Practice: Tangent Lines   Tangent Line Equations  Find an equation of the tangent line to each function at the given point.  at or  at the point or  at or  at or  ,  ,  ,  ,  at  at  at  at  at  at    Horizontal Tangent Lines  Find all points on the graph where the tangent line is horizontal.  and  , ,  and     Simplifying Before Using Basic Rules  Sometimes, you need to rewrite the function first before you can use the basic rules. In particular, write it as a sum of multiple terms.   Expand Then Differentiate  Differentiate each function.            Divide Then Differentiate  Differentiate each function.            ,       Mixed Simplification  Differentiate each function.           Abstract Functions  Differentiate each function.         Examples   Parabola Slope  At what point on the parabola is the slope of the tangent line equal to 24?     Parallel Tangent on Hyperbola  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Quartic  Find all points on the graph of where the tangent line is parallel to the line .     Parallel Tangent on Cube Root  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Parabola  Find all points on the graph of where the tangent line is parallel to the line .     Parallel Tangent on Cubic  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Power Function  Find the point on the curve where the tangent line is parallel to the line .     No Tangent with Given Slope  Show that the curve has no tangent lines with slope 3.  Solve .  The equation becomes , which has no real solution.    Normal Line  Determine the equation of the normal to the graph of at . (A normal line is perpendicular to the tangent line at the point of tangency.)  The tangent slope is 18, so the normal slope is and the normal line is .    Same Slope?  Do the functions and ever have the same slope? If so, where?  No, they never have the same slope (there is no real solution).    Perpendicular Tangents  Show that the tangent lines to at and are perpendicular.  The slopes of the tangent lines are and , and since , the tangent lines are perpendicular.    Point Where Slope Equals 5  Determine the point on the parabola where the slope of the tangent is 5.     Points Where Slope Equals 12  Determine the coordinates of the points on the graph of at which the slope of the tangent is 12.  and    Two Tangents with Given Slope  Show that there are two tangents to the curve that have a slope of 6.  The tangency points occur at and , giving tangent lines and .    Find the Constant  Determine the value of , given that the line is tangent to the graph of at .     Slope Locations on Parabola   Let .   Find the values of for which the slope of the curve is 0.  Find the values of for which the slope of the curve is 2.    Slope Locations on Cubic   Let .   Find the values of for which the slope of the curve is 0.  Find the values of for which the slope of the curve is 21.    Tangent Slope Conditions   Let .   Find all points on the graph of at which the tangent line is horizontal. and  Find all points on the graph of at which the tangent line has slope 60. and    Tangent Slope Conditions, Radical Function   Let .   Find all points on the graph of at which the tangent line is horizontal.  Find all points on the graph of at which the tangent line has slope .    Find the Parabola  Find the parabola with equation whose tangent line at has equation .  Use and .     Find Constants for Tangent  For what values of and is the line tangent to the parabola when ?  Match the slope and the point at .  and    Find p and q  The graph of has a horizontal tangent line at the point . Find the values of and .  Use and .  and    Find a and b for Tangent  Determine the values of and such that the line is tangent to the graph of at the point where .  Use and .  and    Tangent at Origin, Second Intersection  Find an equation for the line that is tangent to the curve at the origin. Use and evaluate at .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .     Examples: Tangent Lines at an Arbitrary Point   Tangent Through External Point  Find the equation of the tangent line(s) to that passes through the point .  Find the tangent line at an arbitrary point (say, ), and then find the value of such that the tangent line passes through .  and    Tangent Through External Point II  Find the equation of the tangent line(s) to that passes through the point .  and    Tangent Through Point on Hyperbola  The tangent at point on the curve passes through . Find the coordinates of .     Tangent Lines Through External Point, Parabola  Find the equations of both lines that pass through the point and are tangent to the parabola .  and    Tangent Lines Through Origin  Find the equations of both lines that pass through the origin and are tangent to the parabola .  and    Tangent Intersection Points  Find the -coordinates of the points on the curve where the tangents from the point intersect the curve.  and    Tangents to Parabola Through Given Points  Determine the equations of the tangents to the curve that pass through the following points.  Point and  Point and    Tangent Through Point, Parabola  Find the coordinates of the points on the parabola where its tangent line passes through the point .  The tangent to at is , and it must pass through .  The points are and .    Lines Through Point Tangent to Parabola  Find equations of both lines through the point that are tangent to the parabola . The tangent at has equation , and it must pass through . and  Show that there is no line through the point that is tangent to the parabola. Use and require it to pass through , then check whether is real. No tangent line exists.    Y-Intercept of Tangent  Let be the -intercept of the tangent line to the graph of passing through the point . Find the value of .  The tangent at is , and it must pass through .  or    Points with Tangent Through Given Point  Find all points on the graph of with tangent lines passing through the point .  and     Practice: Advanced   Steeper Tangent  Find all values of such that the tangent line to the graph of is steeper than the tangent line of .  leads to a quadratic inequality .  , or the interval    Y-Intercept from X-Intercept  A tangent line to the graph of has an -intercept of . Find the -intercept of this tangent line.  The tangent at has equation , so its -intercept is .  The -intercept is 3.    Find c: Line Tangent to Radical Curve  Find the value of such that the line is tangent to the curve .  At the tangency point , solve and .     Find c: Line Tangent to Parabola  What is the value of such that the line is tangent to the parabola ?  At the tangency point , solve and .     Tangent at Point, Second Intersection  Find an equation for the line that is tangent to the curve at the point . Use and .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .    Abstract Function Differentiation  Differentiate each function.      Simplify Then Differentiate  Differentiate each function.    , where is a positive constant  , where is a constant    Using Known Derivatives   Suppose and . Let and . (a) Find an equation of the line tangent to at . (b) Find an equation of the line tangent to at .  (a) . (b) .    Suppose the line tangent to the graph of at is and the line tangent to the graph of at has slope 3 and passes through . Find an equation of the line tangent to each curve at . (a) . (b) . (c) .  (a) . (b) . (c) .    Find the equation of the line tangent to the curve that has slope 2.     Determine the constants and such that the line tangent to at is .  ,     Find a Second-Degree Polynomial  Find a second-degree polynomial such that , , and .  Let and use and .     Find a Cubic Function  Find a cubic function whose graph has horizontal tangents at the points and .  Use , , and , .     Find a Parabola from Slope Conditions  Find a parabola with equation that has slope 4 at , slope at , and passes through the point .  Use with and , then use .     Find a,b,c,d from Tangent Conditions  Suppose the curve has a tangent line when with equation and a tangent line when with equation . Find the values of .  Use , , , and .  , , ,    Tangent to Line at Origin  The curve passes through the point and is tangent to the line at the origin. Find .  , ,    Common Tangent of Two Curves  The curves and have a common tangent line at the point . Find .  , ,    nth Derivative Pattern  Find the th derivative of each function by calculating the first few derivatives and observing the pattern that occurs.  Differentiate repeatedly to get .  Write and differentiate repeatedly to see the alternating signs and factorial pattern.    "
 },
 {
   "id": "sec-basic-derivative-rules-2-1",
@@ -403,34 +403,34 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.2.1",
   "title": "Constant Function.",
-  "body": " Constant Function  Consider the function . This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. Graph of . Its graph is a horizontal line at , which has slope 0, so we would expect that its derivative would be always 0.  "
+  "body": " Constant Function  Consider the function . This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. Graph of . Its graph is a horizontal line at , which has slope 0, so we would expect that its derivative would be always 0. Indeed,   "
 },
 {
-  "id": "subsec-derivative-constant-line-5",
+  "id": "subsec-derivative-constant-line-6",
   "level": "2",
-  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-5",
+  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-6",
   "type": "Theorem",
   "number": "2.2.2",
   "title": "Derivative of a Constant Is Zero.",
-  "body": " Derivative of a Constant Is Zero   If for some number , then . In other words,     Using the definition of the derivative, we have,    "
+  "body": " Derivative of a Constant Is Zero   If where is some number, then . In other words,     Using the definition of the derivative, we have,    "
 },
 {
-  "id": "subsec-derivative-constant-line-9",
+  "id": "subsec-derivative-constant-line-10",
   "level": "2",
-  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-9",
+  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-10",
   "type": "Example",
   "number": "2.2.3",
   "title": "Linear Function.",
   "body": " Linear Function  Consider the function . This is a linear function, because its graph is a line. Graph of . This line has a slope of 2, so we would expect that its derivative would be always 2.  "
 },
 {
-  "id": "subsec-derivative-constant-line-12",
+  "id": "subsec-derivative-constant-line-13",
   "level": "2",
-  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-12",
+  "url": "sec-basic-derivative-rules.html#subsec-derivative-constant-line-13",
   "type": "Exercise Group",
   "number": "2.2.1",
   "title": "Derivatives of Constants and Lines.",
-  "body": " Derivatives of Constants and Lines  Find the derivative of each function.       "
+  "body": " Derivatives of Constants and Lines  Find the derivative of each function.        "
 },
 {
   "id": "subsec-power-rule-3",
@@ -439,12 +439,12 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.2.4",
   "title": "Discovering the Power Rule Pattern.",
-  "body": " Discovering the Power Rule Pattern  You may recall from a previous section the following derivatives of , , , and . If not, these can be derived from the limit definition of the derivative. They are,   Observe the pattern for the derivative of these powers of . The derivative has:   A coefficient in the front, which is the exponent of .  The variable raised to a exponent that is one less than what it was before.   This applies to even the first example , as has an exponent of 1, so the pattern says the derivative should be (recall: for any ).  It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for any number.  "
+  "body": " Discovering the Power Rule Pattern  You may recall from a previous section the following derivatives of , , , and . If not, these can be derived from the limit definition of the derivative. They are,   Observe the pattern for the derivative of these powers of . The derivative has:   A coefficient in the front, which is the exponent of .  The variable raised to an exponent that is one less than what it was before.   This applies to even the first example , as has an exponent of 1, so the pattern says the derivative should be (recall: for any ).  It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for any number.  "
 },
 {
-  "id": "subsec-power-rule-4",
+  "id": "thm-power-rule",
   "level": "2",
-  "url": "sec-basic-derivative-rules.html#subsec-power-rule-4",
+  "url": "sec-basic-derivative-rules.html#thm-power-rule",
   "type": "Theorem",
   "number": "2.2.5",
   "title": "Power Rule for Derivatives.",
@@ -454,26 +454,53 @@ var ptx_lunr_docs = [
   "id": "subsec-power-rule-7",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-power-rule-7",
-  "type": "Remark",
-  "number": "2.2.6",
-  "title": "Power Rule with Reciprocal and Square Root.",
-  "body": " Power Rule with Reciprocal and Square Root  You may recall 2 more examples of derivatives we have seen before, which don't look like powers at first, but can be rewritten as powers in order to use the power rule,   For (the reciprocal function). You may recall the derivative is . This also follows the power rule, because .   For , you may recall the derivative is . This also follows the power rule, because ,    "
+  "type": "Exercise Group",
+  "number": "2.2.2",
+  "title": "Basic Power Rule Practice.",
+  "body": " Basic Power Rule Practice  Find the derivative of each function.     "
 },
 {
   "id": "subsec-power-rule-8",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-power-rule-8",
+  "type": "Remark",
+  "number": "2.2.6",
+  "title": "",
+  "body": " For the reciprocal function , you may recall its derivative is . This also follows the power rule, because .   "
+},
+{
+  "id": "subsec-power-rule-9",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-power-rule-9",
   "type": "Exercise Group",
-  "number": "2.2.2",
-  "title": "Power Rule Practice.",
-  "body": " Power Rule Practice  Differentiate each function.       "
+  "number": "2.2.3",
+  "title": "Negative Exponent Practice.",
+  "body": " Negative Exponent Practice  Differentiate each function.     , where is a constant  "
+},
+{
+  "id": "subsec-constant-multiple-rule-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-constant-multiple-rule-3",
+  "type": "Exercise Group",
+  "number": "2.2.4",
+  "title": "Constant Multiple Practice.",
+  "body": " Constant Multiple Practice  Differentiate.            "
+},
+{
+  "id": "thm-constant-multiple-rule",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#thm-constant-multiple-rule",
+  "type": "Theorem",
+  "number": "2.2.7",
+  "title": "Constant Multiple Rule.",
+  "body": " Constant Multiple Rule   The derivative of a constant multiplied by a function is that constant multiplied by the derivative of the function.    "
 },
 {
   "id": "subsec-sum-difference-rule-2",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-sum-difference-rule-2",
   "type": "Example",
-  "number": "2.2.7",
+  "number": "2.2.8",
   "title": "Differentiating Term by Term.",
   "body": " Differentiating Term by Term  Consider the derivative of . This function has 3 terms ( , , and ). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of is , the derivative of is 5, and the derivative of is 0. So, the derivative of is .  "
 },
@@ -482,36 +509,594 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-sum-difference-rule-6",
   "type": "Theorem",
-  "number": "2.2.8",
-  "title": "Sum\/Difference Rule and Constant Multiple Rule.",
-  "body": " Sum\/Difference Rule and Constant Multiple Rule    Sum\/difference rule . The derivative of a sum or difference is the sum or difference of the derivatives    Constant multiple rule . The derivative of a constant multiplied by a function is the constant multiplied by the derivative of the function.      "
+  "number": "2.2.9",
+  "title": "Sum\/Difference Rule.",
+  "body": " Sum\/Difference Rule   The derivative of a sum or difference is the sum or difference of the derivatives.       "
 },
 {
   "id": "subsec-derivative-polynomials-3",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-derivative-polynomials-3",
   "type": "Exercise Group",
-  "number": "2.2.3",
+  "number": "2.2.5",
   "title": "Differentiating Polynomials.",
-  "body": " Differentiating Polynomials  Differentiate each function.     Expand first.  "
+  "body": " Differentiating Polynomials  Differentiate each function.         Expand first.  "
 },
 {
   "id": "subsec-rational-exponents-radicals-3",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-rational-exponents-radicals-3",
+  "type": "Remark",
+  "number": "2.2.10",
+  "title": "",
+  "body": " Recall that,   , , and in general, .  .   "
+},
+{
+  "id": "subsec-rational-exponents-radicals-4",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-rational-exponents-radicals-4",
+  "type": "Example",
+  "number": "2.2.11",
+  "title": "Differentiating the Square Root.",
+  "body": " Differentiating the Square Root  For the square root function , you may recall its derivative is . This also follows the power rule, because ,   "
+},
+{
+  "id": "subsec-rational-exponents-radicals-6",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-rational-exponents-radicals-6",
   "type": "Exercise Group",
-  "number": "2.2.4",
-  "title": "Differentiating Radical Functions.",
-  "body": " Differentiating Radical Functions  Differentiate each function.     "
+  "number": "2.2.6",
+  "title": "Rational Exponents and Radicals.",
+  "body": " Rational Exponents and Radicals  Differentiate each function.        The same power rule applies: bring down the exponent, and subtract 1.        "
+},
+{
+  "id": "subsec-practice-differentiate-2",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-differentiate-2",
+  "type": "Exercise Group",
+  "number": "2.2.7",
+  "title": "Positive Integer Exponents.",
+  "body": " Positive Integer Exponents  Differentiate each function.               "
+},
+{
+  "id": "subsec-practice-differentiate-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-differentiate-3",
+  "type": "Exercise Group",
+  "number": "2.2.8",
+  "title": "Negative Exponents.",
+  "body": " Negative Exponents  Differentiate each function.     "
+},
+{
+  "id": "subsec-practice-differentiate-4",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-differentiate-4",
+  "type": "Exercise Group",
+  "number": "2.2.9",
+  "title": "Fractional Exponents and Radicals.",
+  "body": " Fractional Exponents and Radicals  Differentiate each function.            "
+},
+{
+  "id": "subsec-practice-differentiate-5",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-differentiate-5",
+  "type": "Exercise Group",
+  "number": "2.2.10",
+  "title": "Evaluating the Derivative.",
+  "body": " Evaluating the Derivative  Determine for the given function at the given value of .  ,  ,  "
+},
+{
+  "id": "subsec-practice-differentiate-6",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-differentiate-6",
+  "type": "Exercise Group",
+  "number": "2.2.11",
+  "title": "Slope of the Tangent.",
+  "body": " Slope of the Tangent  Determine the slope of the tangent to each curve at the given point.  ,  ,  ,  ,  ,  ,  ,  ,  "
+},
+{
+  "id": "subsec-practice-tangent-lines-2",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-tangent-lines-2",
+  "type": "Exercise Group",
+  "number": "2.2.12",
+  "title": "Tangent Line Equations.",
+  "body": " Tangent Line Equations  Find an equation of the tangent line to each function at the given point.  at or  at the point or  at or  at or  ,  ,  ,  ,  at  at  at  at  at  at  "
+},
+{
+  "id": "subsec-practice-tangent-lines-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-tangent-lines-3",
+  "type": "Exercise Group",
+  "number": "2.2.13",
+  "title": "Horizontal Tangent Lines.",
+  "body": " Horizontal Tangent Lines  Find all points on the graph where the tangent line is horizontal.  and  , ,  and  "
 },
 {
   "id": "subsec-simplify-before-differentiating-3",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-simplify-before-differentiating-3",
   "type": "Exercise Group",
-  "number": "2.2.5",
+  "number": "2.2.14",
+  "title": "Expand Then Differentiate.",
+  "body": " Expand Then Differentiate  Differentiate each function.          "
+},
+{
+  "id": "subsec-simplify-before-differentiating-4",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-simplify-before-differentiating-4",
+  "type": "Exercise Group",
+  "number": "2.2.15",
+  "title": "Divide Then Differentiate.",
+  "body": " Divide Then Differentiate  Differentiate each function.            ,     "
+},
+{
+  "id": "subsec-simplify-before-differentiating-5",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-simplify-before-differentiating-5",
+  "type": "Exercise Group",
+  "number": "2.2.16",
+  "title": "Mixed Simplification.",
+  "body": " Mixed Simplification  Differentiate each function.         "
+},
+{
+  "id": "subsec-simplify-before-differentiating-6",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-simplify-before-differentiating-6",
+  "type": "Exercise Group",
+  "number": "2.2.17",
+  "title": "Abstract Functions.",
+  "body": " Abstract Functions  Differentiate each function.      "
+},
+{
+  "id": "subsec-examples-tangent-lines-2",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-2",
+  "type": "Checkpoint",
+  "number": "2.2.12",
+  "title": "Parabola Slope.",
+  "body": " Parabola Slope  At what point on the parabola is the slope of the tangent line equal to 24?   "
+},
+{
+  "id": "subsec-examples-tangent-lines-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-3",
+  "type": "Checkpoint",
+  "number": "2.2.13",
+  "title": "Parallel Tangent on Hyperbola.",
+  "body": " Parallel Tangent on Hyperbola  Find all points on the graph of where the tangent line is parallel to the line .  and  "
+},
+{
+  "id": "subsec-examples-tangent-lines-4",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-4",
+  "type": "Checkpoint",
+  "number": "2.2.14",
+  "title": "Parallel Tangent on Quartic.",
+  "body": " Parallel Tangent on Quartic  Find all points on the graph of where the tangent line is parallel to the line .   "
+},
+{
+  "id": "subsec-examples-tangent-lines-5",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-5",
+  "type": "Checkpoint",
+  "number": "2.2.15",
+  "title": "Parallel Tangent on Cube Root.",
+  "body": " Parallel Tangent on Cube Root  Find all points on the graph of where the tangent line is parallel to the line .  and  "
+},
+{
+  "id": "subsec-examples-tangent-lines-6",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-6",
+  "type": "Checkpoint",
+  "number": "2.2.16",
+  "title": "Parallel Tangent on Parabola.",
+  "body": " Parallel Tangent on Parabola  Find all points on the graph of where the tangent line is parallel to the line .   "
+},
+{
+  "id": "subsec-examples-tangent-lines-7",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-7",
+  "type": "Checkpoint",
+  "number": "2.2.17",
+  "title": "Parallel Tangent on Cubic.",
+  "body": " Parallel Tangent on Cubic  Find all points on the graph of where the tangent line is parallel to the line .  and  "
+},
+{
+  "id": "subsec-examples-tangent-lines-8",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-8",
+  "type": "Checkpoint",
+  "number": "2.2.18",
+  "title": "Parallel Tangent on Power Function.",
+  "body": " Parallel Tangent on Power Function  Find the point on the curve where the tangent line is parallel to the line .   "
+},
+{
+  "id": "subsec-examples-tangent-lines-9",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-9",
+  "type": "Checkpoint",
+  "number": "2.2.19",
+  "title": "No Tangent with Given Slope.",
+  "body": " No Tangent with Given Slope  Show that the curve has no tangent lines with slope 3.  Solve .  The equation becomes , which has no real solution.  "
+},
+{
+  "id": "subsec-examples-tangent-lines-10",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-10",
+  "type": "Checkpoint",
+  "number": "2.2.20",
+  "title": "Normal Line.",
+  "body": " Normal Line  Determine the equation of the normal to the graph of at . (A normal line is perpendicular to the tangent line at the point of tangency.)  The tangent slope is 18, so the normal slope is and the normal line is .  "
+},
+{
+  "id": "subsec-examples-tangent-lines-11",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-11",
+  "type": "Checkpoint",
+  "number": "2.2.21",
+  "title": "Same Slope?",
+  "body": " Same Slope?  Do the functions and ever have the same slope? If so, where?  No, they never have the same slope (there is no real solution).  "
+},
+{
+  "id": "subsec-examples-tangent-lines-12",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-12",
+  "type": "Checkpoint",
+  "number": "2.2.22",
+  "title": "Perpendicular Tangents.",
+  "body": " Perpendicular Tangents  Show that the tangent lines to at and are perpendicular.  The slopes of the tangent lines are and , and since , the tangent lines are perpendicular.  "
+},
+{
+  "id": "subsec-examples-tangent-lines-13",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-13",
+  "type": "Checkpoint",
+  "number": "2.2.23",
+  "title": "Point Where Slope Equals 5.",
+  "body": " Point Where Slope Equals 5  Determine the point on the parabola where the slope of the tangent is 5.   "
+},
+{
+  "id": "subsec-examples-tangent-lines-14",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-14",
+  "type": "Checkpoint",
+  "number": "2.2.24",
+  "title": "Points Where Slope Equals 12.",
+  "body": " Points Where Slope Equals 12  Determine the coordinates of the points on the graph of at which the slope of the tangent is 12.  and  "
+},
+{
+  "id": "subsec-examples-tangent-lines-15",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-15",
+  "type": "Checkpoint",
+  "number": "2.2.25",
+  "title": "Two Tangents with Given Slope.",
+  "body": " Two Tangents with Given Slope  Show that there are two tangents to the curve that have a slope of 6.  The tangency points occur at and , giving tangent lines and .  "
+},
+{
+  "id": "subsec-examples-tangent-lines-16",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-16",
+  "type": "Checkpoint",
+  "number": "2.2.26",
+  "title": "Find the Constant.",
+  "body": " Find the Constant  Determine the value of , given that the line is tangent to the graph of at .   "
+},
+{
+  "id": "subsec-examples-tangent-lines-17",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-17",
+  "type": "Checkpoint",
+  "number": "2.2.27",
+  "title": "Slope Locations on Parabola.",
+  "body": " Slope Locations on Parabola   Let .   Find the values of for which the slope of the curve is 0.  Find the values of for which the slope of the curve is 2.  "
+},
+{
+  "id": "subsec-examples-tangent-lines-18",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-18",
+  "type": "Checkpoint",
+  "number": "2.2.28",
+  "title": "Slope Locations on Cubic.",
+  "body": " Slope Locations on Cubic   Let .   Find the values of for which the slope of the curve is 0.  Find the values of for which the slope of the curve is 21.  "
+},
+{
+  "id": "subsec-examples-tangent-lines-19",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-19",
+  "type": "Checkpoint",
+  "number": "2.2.29",
+  "title": "Tangent Slope Conditions.",
+  "body": " Tangent Slope Conditions   Let .   Find all points on the graph of at which the tangent line is horizontal. and  Find all points on the graph of at which the tangent line has slope 60. and  "
+},
+{
+  "id": "subsec-examples-tangent-lines-20",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-20",
+  "type": "Checkpoint",
+  "number": "2.2.30",
+  "title": "Tangent Slope Conditions, Radical Function.",
+  "body": " Tangent Slope Conditions, Radical Function   Let .   Find all points on the graph of at which the tangent line is horizontal.  Find all points on the graph of at which the tangent line has slope .  "
+},
+{
+  "id": "subsec-examples-tangent-lines-21",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-21",
+  "type": "Checkpoint",
+  "number": "2.2.31",
+  "title": "Find the Parabola.",
+  "body": " Find the Parabola  Find the parabola with equation whose tangent line at has equation .  Use and .   "
+},
+{
+  "id": "subsec-examples-tangent-lines-22",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-22",
+  "type": "Checkpoint",
+  "number": "2.2.32",
+  "title": "Find Constants for Tangent.",
+  "body": " Find Constants for Tangent  For what values of and is the line tangent to the parabola when ?  Match the slope and the point at .  and  "
+},
+{
+  "id": "subsec-examples-tangent-lines-23",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-23",
+  "type": "Checkpoint",
+  "number": "2.2.33",
+  "title": "Find p and q.",
+  "body": " Find p and q  The graph of has a horizontal tangent line at the point . Find the values of and .  Use and .  and  "
+},
+{
+  "id": "subsec-examples-tangent-lines-24",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-24",
+  "type": "Checkpoint",
+  "number": "2.2.34",
+  "title": "Find a and b for Tangent.",
+  "body": " Find a and b for Tangent  Determine the values of and such that the line is tangent to the graph of at the point where .  Use and .  and  "
+},
+{
+  "id": "subsec-examples-tangent-lines-25",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-tangent-lines-25",
+  "type": "Checkpoint",
+  "number": "2.2.35",
+  "title": "Tangent at Origin, Second Intersection.",
+  "body": " Tangent at Origin, Second Intersection  Find an equation for the line that is tangent to the curve at the origin. Use and evaluate at .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-2",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-2",
+  "type": "Checkpoint",
+  "number": "2.2.36",
+  "title": "Tangent Through External Point.",
+  "body": " Tangent Through External Point  Find the equation of the tangent line(s) to that passes through the point .  Find the tangent line at an arbitrary point (say, ), and then find the value of such that the tangent line passes through .  and  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-3",
+  "type": "Checkpoint",
+  "number": "2.2.37",
+  "title": "Tangent Through External Point II.",
+  "body": " Tangent Through External Point II  Find the equation of the tangent line(s) to that passes through the point .  and  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-4",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-4",
+  "type": "Checkpoint",
+  "number": "2.2.38",
+  "title": "Tangent Through Point on Hyperbola.",
+  "body": " Tangent Through Point on Hyperbola  The tangent at point on the curve passes through . Find the coordinates of .   "
+},
+{
+  "id": "subsec-examples-arbitrary-point-5",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-5",
+  "type": "Checkpoint",
+  "number": "2.2.39",
+  "title": "Tangent Lines Through External Point, Parabola.",
+  "body": " Tangent Lines Through External Point, Parabola  Find the equations of both lines that pass through the point and are tangent to the parabola .  and  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-6",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-6",
+  "type": "Checkpoint",
+  "number": "2.2.40",
+  "title": "Tangent Lines Through Origin.",
+  "body": " Tangent Lines Through Origin  Find the equations of both lines that pass through the origin and are tangent to the parabola .  and  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-7",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-7",
+  "type": "Checkpoint",
+  "number": "2.2.41",
+  "title": "Tangent Intersection Points.",
+  "body": " Tangent Intersection Points  Find the -coordinates of the points on the curve where the tangents from the point intersect the curve.  and  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-8",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-8",
+  "type": "Checkpoint",
+  "number": "2.2.42",
+  "title": "Tangents to Parabola Through Given Points.",
+  "body": " Tangents to Parabola Through Given Points  Determine the equations of the tangents to the curve that pass through the following points.  Point and  Point and  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-9",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-9",
+  "type": "Checkpoint",
+  "number": "2.2.43",
+  "title": "Tangent Through Point, Parabola.",
+  "body": " Tangent Through Point, Parabola  Find the coordinates of the points on the parabola where its tangent line passes through the point .  The tangent to at is , and it must pass through .  The points are and .  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-10",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-10",
+  "type": "Checkpoint",
+  "number": "2.2.44",
+  "title": "Lines Through Point Tangent to Parabola.",
+  "body": " Lines Through Point Tangent to Parabola  Find equations of both lines through the point that are tangent to the parabola . The tangent at has equation , and it must pass through . and  Show that there is no line through the point that is tangent to the parabola. Use and require it to pass through , then check whether is real. No tangent line exists.  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-11",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-11",
+  "type": "Checkpoint",
+  "number": "2.2.45",
+  "title": "Y-Intercept of Tangent.",
+  "body": " Y-Intercept of Tangent  Let be the -intercept of the tangent line to the graph of passing through the point . Find the value of .  The tangent at is , and it must pass through .  or  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-12",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-12",
+  "type": "Checkpoint",
+  "number": "2.2.46",
+  "title": "Points with Tangent Through Given Point.",
+  "body": " Points with Tangent Through Given Point  Find all points on the graph of with tangent lines passing through the point .  and  "
+},
+{
+  "id": "subsec-practice-advanced-2",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-2",
+  "type": "Checkpoint",
+  "number": "2.2.47",
+  "title": "Steeper Tangent.",
+  "body": " Steeper Tangent  Find all values of such that the tangent line to the graph of is steeper than the tangent line of .  leads to a quadratic inequality .  , or the interval  "
+},
+{
+  "id": "subsec-practice-advanced-3",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-3",
+  "type": "Checkpoint",
+  "number": "2.2.48",
+  "title": "Y-Intercept from X-Intercept.",
+  "body": " Y-Intercept from X-Intercept  A tangent line to the graph of has an -intercept of . Find the -intercept of this tangent line.  The tangent at has equation , so its -intercept is .  The -intercept is 3.  "
+},
+{
+  "id": "subsec-practice-advanced-4",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-4",
+  "type": "Checkpoint",
+  "number": "2.2.49",
+  "title": "Find c: Line Tangent to Radical Curve.",
+  "body": " Find c: Line Tangent to Radical Curve  Find the value of such that the line is tangent to the curve .  At the tangency point , solve and .   "
+},
+{
+  "id": "subsec-practice-advanced-5",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-5",
+  "type": "Checkpoint",
+  "number": "2.2.50",
+  "title": "Find c: Line Tangent to Parabola.",
+  "body": " Find c: Line Tangent to Parabola  What is the value of such that the line is tangent to the parabola ?  At the tangency point , solve and .   "
+},
+{
+  "id": "subsec-practice-advanced-6",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-6",
+  "type": "Checkpoint",
+  "number": "2.2.51",
+  "title": "Tangent at Point, Second Intersection.",
+  "body": " Tangent at Point, Second Intersection  Find an equation for the line that is tangent to the curve at the point . Use and .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .  "
+},
+{
+  "id": "subsec-practice-advanced-7",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-7",
+  "type": "Checkpoint",
+  "number": "2.2.52",
+  "title": "Abstract Function Differentiation.",
+  "body": " Abstract Function Differentiation  Differentiate each function.    "
+},
+{
+  "id": "subsec-practice-advanced-8",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-8",
+  "type": "Checkpoint",
+  "number": "2.2.53",
   "title": "Simplify Then Differentiate.",
-  "body": " Simplify Then Differentiate  Differentiate each function.         "
+  "body": " Simplify Then Differentiate  Differentiate each function.    , where is a positive constant  , where is a constant  "
+},
+{
+  "id": "subsec-practice-advanced-9",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-9",
+  "type": "Checkpoint",
+  "number": "2.2.54",
+  "title": "Using Known Derivatives.",
+  "body": " Using Known Derivatives   Suppose and . Let and . (a) Find an equation of the line tangent to at . (b) Find an equation of the line tangent to at .  (a) . (b) .    Suppose the line tangent to the graph of at is and the line tangent to the graph of at has slope 3 and passes through . Find an equation of the line tangent to each curve at . (a) . (b) . (c) .  (a) . (b) . (c) .    Find the equation of the line tangent to the curve that has slope 2.     Determine the constants and such that the line tangent to at is .  ,   "
+},
+{
+  "id": "subsec-practice-advanced-10",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-10",
+  "type": "Checkpoint",
+  "number": "2.2.55",
+  "title": "Find a Second-Degree Polynomial.",
+  "body": " Find a Second-Degree Polynomial  Find a second-degree polynomial such that , , and .  Let and use and .   "
+},
+{
+  "id": "subsec-practice-advanced-11",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-11",
+  "type": "Checkpoint",
+  "number": "2.2.56",
+  "title": "Find a Cubic Function.",
+  "body": " Find a Cubic Function  Find a cubic function whose graph has horizontal tangents at the points and .  Use , , and , .   "
+},
+{
+  "id": "subsec-practice-advanced-12",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-12",
+  "type": "Checkpoint",
+  "number": "2.2.57",
+  "title": "Find a Parabola from Slope Conditions.",
+  "body": " Find a Parabola from Slope Conditions  Find a parabola with equation that has slope 4 at , slope at , and passes through the point .  Use with and , then use .   "
+},
+{
+  "id": "subsec-practice-advanced-13",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-13",
+  "type": "Checkpoint",
+  "number": "2.2.58",
+  "title": "Find a,b,c,d from Tangent Conditions.",
+  "body": " Find a,b,c,d from Tangent Conditions  Suppose the curve has a tangent line when with equation and a tangent line when with equation . Find the values of .  Use , , , and .  , , ,  "
+},
+{
+  "id": "subsec-practice-advanced-14",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-14",
+  "type": "Checkpoint",
+  "number": "2.2.59",
+  "title": "Tangent to Line at Origin.",
+  "body": " Tangent to Line at Origin  The curve passes through the point and is tangent to the line at the origin. Find .  , ,  "
+},
+{
+  "id": "subsec-practice-advanced-15",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-15",
+  "type": "Checkpoint",
+  "number": "2.2.60",
+  "title": "Common Tangent of Two Curves.",
+  "body": " Common Tangent of Two Curves  The curves and have a common tangent line at the point . Find .  , ,  "
+},
+{
+  "id": "subsec-practice-advanced-16",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-16",
+  "type": "Checkpoint",
+  "number": "2.2.61",
+  "title": "nth Derivative Pattern.",
+  "body": " nth Derivative Pattern  Find the th derivative of each function by calculating the first few derivatives and observing the pattern that occurs.  Differentiate repeatedly to get .  Write and differentiate repeatedly to see the alternating signs and factorial pattern.  "
 },
 {
   "id": "sec-implicit-differentiation",
