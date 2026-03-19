@@ -6,5 +6,6 @@
   <!-- include sections -->
   <xi:include href="./sec-the-derivative-function.ptx" />
   <xi:include href="./sec-basic-derivative-rules.ptx" />
+  <xi:include href="./sec-differentiability.ptx" />
 
 </chapter>

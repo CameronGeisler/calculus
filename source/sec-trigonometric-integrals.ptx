@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-trigonometric-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Trigonometric Integrals</title>
+
+  <introduction>
+    <p>In this section, we continue analyzing integrals involving trigonometric functions. In particular, we consider integrals involving higher powers and products of trigonometric functions.</p>
+  </introduction>
+
+  <subsection xml:id="subsec-powers-sin-cos">
+    <title>Powers of Sine and Cosine</title>
+
+    <p>Recall that previously, we did the integrals <m>\int \sin^2{x} \,dx</m> and <m>\int \cos^2{x} \,dx</m> using the power-reducing identities (<url href="https://camerongeisler.github.io/calculus/sec-integrals-of-trig-functions.html#thm-integrals-sin2-cos2">Integrals of Sine and Cosine Squared</url>). We can also evaluate integrals of higher powers of sine and cosine. We'll start with the next higher power, <m>\int \sin^3{x} \,dx</m> and <m>\int \cos^3{x} \,dx</m>, and then move on to the 4th power, and then the general case.</p>
+
+    <example>
+      <title>3rd Power of Cosine</title>
+      <statement><p>Evaluate <m>\int \cos^3{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>It turns out that we would like to make a substitution, either <m>u = \cos{x}</m>, or <m>u = \sin{x}</m>. Notice that if we separate out one factor of <m>\cos{x}</m> to the right,</p>
+        <md>
+          <mrow>\int \cos^3{x} \,dx \amp= \int \cos^2{x} \cdot \cos{x} \,dx</mrow>
+        </md>
+        <p>Then, we can use the Pythagorean identity <m>\cos^2{x} = 1 - \sin^2{x}</m> to rewrite <m>\cos^2{x}</m> in terms of sine,</p>
+        <md>
+          <mrow>\amp= \int (1 - \sin^2{x}) \cdot \cos{x} \,dx</mrow>
+        </md>
+        <p>Then, the substitution <m>u = \sin{x}</m> gives <m>du = \cos{x} \,dx</m>, and <m>\cos{x} \,dx</m> is perfectly there on the right side to be replaced by <m>du</m>. Then,</p>
+        <md>
+          <mrow>\amp= \int (1 - u^2) \,du</mrow>
+          <mrow>\amp= u - \frac{1}{3}u^3 + C</mrow>
+          <mrow>\amp= \sin{x} - \frac{1}{3}\sin^3{x} + C</mrow>
+        </md>
+        <p>Therefore,</p>
+        <me>\boxed{\int \cos^3{x} \,dx = \sin{x} - \frac{1}{3}\sin^3{x} + C}</me>
+      </solution>
+    </example>
+
+    <example>
+      <title>3rd Power of Sine</title>
+      <statement><p>Evaluate <m>\int \sin^3{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>We can use a technique similar to <m>\int \cos^3{x} \,dx</m>. Separate out one factor of <m>\sin{x}</m>, and then use the Pythagorean identity <m>\sin^2{x} = 1 - \cos^2{x}</m> to rewrite <m>\sin^2{x}</m> in terms of cosine,</p>
+        <md>
+          <mrow>\int \sin^3{x} \,dx \amp= \int (1 - \cos^2{x}) \sin{x} \,dx</mrow>
+        </md>
+        <p>Then, <m>u = \cos{x}</m>, <m>du = -\sin{x} \,dx</m> gives,</p>
+        <md>
+          <mrow>\amp= \int (1 - u^2) (-\,du)</mrow>
+          <mrow>\amp= \int (u^2 - 1) \,du</mrow>
+          <mrow>\amp= \frac{1}{3}u^3 - u + C</mrow>
+          <mrow>\amp= \frac{1}{3}\cos^3{x} - \cos{x} + C</mrow>
+        </md>
+        <p>Therefore,</p>
+        <me>\boxed{\int \sin^3{x} \,dx = \frac{1}{3}\cos^3{x} - \cos{x} + C}</me>
+      </solution>
+    </example>
+
+    <example>
+      <title>4th Power of Cosine</title>
+      <statement><p>Evaluate <m>\int \cos^4{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>Here, the previous technique will not work, because if we separate out one factor of <m>\cos{x}</m>, then we will be left with <m>\cos^3{x}</m>, which we can't convert to sine using <m>\cos^2{x} = 1 - \sin^2{x}</m>.</p>
+        <p>Instead, it turns out the correct technique is similar to the one we used to evaluate <m>\int \cos^2{x} \,dx</m>, which is to use the power-reducing identity. First, we can write <m>\cos^4{x}</m> as <m>\brac{\cos^2{x}}^2</m>, and then use the power-reducing identity for <m>\cos^2{x}</m>,</p>
+        <md>
+          <mrow>\cos^4{x} = \brac{\cos^2{x}}^2 \amp= \brac{\frac{1 + \cos{(2x)}}{2}}^2</mrow>
+          <mrow>\amp= \frac{1 + 2 \cos{(2x)} + \cos^2{(2x)}}{4} \amp\amp\text{expanding}</mrow>
+          <mrow>\amp= \frac{1}{4} + \frac{1}{2} \cos{(2x)} + \frac{1}{4} \cos^2{(2x)} \amp\amp\text{simplifying}</mrow>
+        </md>
+        <p>Here, we have reduced the power of cosine from 4 to 2, but we still have <m>\cos^2{(2x)}</m>, so we can apply the power-reducing identity again to <m>\cos^2{(2x)}</m>,</p>
+        <md>
+          <mrow>\amp= \frac{1}{4} + \frac{1}{2} \cos{(2x)} + \frac{1}{4} \cdot \frac{1 + \cos{(4x)}}{2} \amp\amp\text{using power-reducing identity again}</mrow>
+          <mrow>\amp= \frac{3}{8} + \frac{1}{2} \cos{(2x)} + \frac{1}{8} \cos{(4x)} \amp\amp\text{simplifying}</mrow>
+        </md>
+        <p>Then, putting it all together,</p>
+        <md>
+          <mrow>\int \cos^4{x} \,dx \amp= \int \brac{\frac{3}{8} + \frac{1}{2} \cos{(2x)} + \frac{1}{8} \cos{(4x)}} \,dx</mrow>
+          <mrow>\amp= \frac{3}{8}x + \frac{1}{4} \sin{(2x)} + \frac{1}{32} \sin{(4x)} + C</mrow>
+        </md>
+        <p>Therefore,</p>
+        <me>\boxed{\int \cos^4{x} \,dx = \frac{3}{8}x + \frac{1}{4} \sin{(2x)} + \frac{1}{32} \sin{(4x)} + C}</me>
+      </solution>
+    </example>
+
+    <remark>
+      <p>Interestingly, the integral <m>\int \cos^4{x} \,dx</m> results in a <q>non-trigonometric</q> term (the linear term <m>\frac{3x}{8}</m>), which had not occurred in the previous cases. This tends to happen when integrating even powers.</p>
+    </remark>
+
+    <example>
+      <title>4th Power of Sine</title>
+      <statement><p>Evaluate <m>\int \sin^4{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>Using the same method as <m>\int \cos^4{x} \,dx</m>, we can write <m>\sin^4{x}</m> as <m>\brac{\sin^2{x}}^2</m>, and then use the power-reducing identity for <m>\sin^2{x}</m>,</p>
+        <md>
+          <mrow>\sin^4{x} = \brac{\sin^2{x}}^2 = \brac{\frac{1 - \cos{(2x)}}{2}}^2 \amp= \frac{1 - 2 \cos{(2x)} + \cos^2{(2x)}}{4}</mrow>
+          <mrow>\amp= \frac{1}{4} - \frac{1}{2} \cos{(2x)} + \frac{1}{4} \cos^2{(2x)} \amp\amp\text{simplifying}</mrow>
+          <mrow>\amp= \frac{1}{4} - \frac{1}{2} \cos{(2x)} + \frac{1}{4} \cdot \frac{1 + \cos{(4x)}}{2} \amp\amp\text{using power-reducing identity again}</mrow>
+          <mrow>\amp= \frac{3}{8} - \frac{1}{2} \cos{(2x)} + \frac{1}{8} \cos{(4x)} \amp\amp\text{simplifying}</mrow>
+        </md>
+        <p>Then, putting it all together,</p>
+        <md>
+          <mrow>\int \sin^4{x} \,dx \amp= \int \brac{\frac{3}{8} - \frac{1}{2} \cos{(2x)} + \frac{1}{8} \cos{(4x)}} \,dx</mrow>
+          <mrow>\amp= \frac{3}{8} x - \frac{1}{4} \sin{(2x)} + \frac{1}{32} \sin{(4x)} + C</mrow>
+        </md>
+        <p>Therefore,</p>
+        <me>\boxed{\int \sin^4{x} \,dx = \frac{3}{8} x - \frac{1}{4} \sin{(2x)} + \frac{1}{32} \sin{(4x)} + C}</me>
+      </solution>
+    </example>
+
+    <p>In general,</p>
+    <ul>
+      <li><p>For odd powers, separate out one factor, and then convert the remaining to the opposite trigonometric function, using <m>\sin^2{x} = 1 - \cos^2{x}</m> or <m>\cos^2{x} = 1 - \sin^2{x}</m>, and then use substitution.</p></li>
+      <li><p>For even powers, use the power-reducing identities to reduce the power to the first power, and then integrate.</p></li>
+    </ul>
+
+    <exercise>
+      <title>5th Power of Cosine</title>
+      <statement><p><m>\int \cos^5{x} \,dx</m></p></statement>
+      <hint><p>Separate out one factor of <m>\cos{x}</m>, and then use the Pythagorean identity <m>\cos^2{x} = 1 - \sin^2{x}</m> to rewrite <m>\cos^4{x}</m> in terms of sine, and then use substitution <m>u=\sin{x}</m>.</p></hint>
+      <answer><p><m>\frac{1}{5} \sin^5{x} - \frac{2}{3} \sin^3{x} + \sin{x} + C</m></p></answer>
+    </exercise>
+
+  </subsection>
+
+  <subsection xml:id="subsec-products-sin-cos">
+    <title>Integral of Products of Powers of Sine and Cosine</title>
+
+    <p>More generally, we can consider integrals with a power of sine multiplied with a power of cosine, of the form,</p>
+    <me>\int \sin^m(x) \cos^n(x) \,dx</me>
+    <p>where <m>m, n</m> are whole numbers. Sometimes, these are called <term>trigonometric integrals</term>, even though they are not the only type of integrals involving trig functions.</p>
+
+    <example>
+      <title>Integral of <m>\sin^4{x} \cos{x}</m></title>
+      <statement><p>Evaluate <m>\int \sin^4{x} \cos{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>We can use substitution, because the derivative of <m>\sin{x}</m> is <m>\cos{x}</m> which is also there. Then,</p>
+        <md>
+          <mrow>u = \sin{x} \quad \longrightarrow \quad du \amp= \cos{x} \,dx</mrow>
+        </md>
+        <md>
+          <mrow>\amp= \int u^4 \,du</mrow>
+          <mrow>\amp= \frac{1}{5} u^5 + C</mrow>
+          <mrow>\amp= \frac{1}{5} \sin^5{x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\sin^3{x} \cos^2{x}</m></title>
+      <statement><p>Evaluate <m>\int \sin^3{x} \cos^2{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>It turns out that again, we can use substitution, because if we separate out one factor of <m>\sin{x}</m> to prepare for substitution,</p>
+        <md>
+          <mrow>\int \sin^3{x} \cos^2{x} \,dx \amp= \int \sin^2{x} \cos^2{x} \cdot \sin{x} \,dx</mrow>
+        </md>
+        <p>Then, we can use the Pythagorean identity <m>\sin^2{x} = 1 - \cos^2{x}</m> to rewrite <m>\sin^2{x}</m> in terms of cosine,</p>
+        <md>
+          <mrow>\amp= \int (1 - \cos^2{x}) \cos^2{x} \cdot \sin{x} \,dx</mrow>
+        </md>
+        <p>Now, the substitution <m>u = \cos{x}</m> will work, because the derivative of <m>\cos{x}</m> is <m>-\sin{x}</m>, and <m>\sin{x} \,dx</m> is perfectly there on the right side to be replaced by <m>du</m> (just account for the negative sign). Then,</p>
+        <md>
+          <mrow>u = \cos{x} \quad \longrightarrow \quad du \amp= -\sin{x} \,dx</mrow>
+          <mrow>-du \amp= \sin{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>\amp= \int \brac{u^2 - u^4} (-\,du)</mrow>
+          <mrow>\amp= \int \brac{-u^2 + u^4} \,du</mrow>
+          <mrow>\amp= -\frac{1}{3}u^3 + \frac{1}{5} u^5 + C</mrow>
+          <mrow>\amp= -\frac{1}{3}\cos^3{x} + \frac{1}{5} \cos^5{x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>In general, if at least one of the exponents on sine or cosine is <em>odd</em>, then we can use this technique, where we separate out one factor of the odd power, and then convert the remaining to the other trig function, using the Pythagorean identity, and then use <m>u</m>-substitution.</p>
+
+    <example>
+      <title>Integral of <m>\sin^3{x} \cos^3{x}</m></title>
+      <statement><p>Evaluate <m>\int \sin^3{x} \cos^3{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>Here, both powers are odd, so we can separate out either power. If we separate out one factor of <m>\cos{x}</m>, then we can use the Pythagorean identity <m>\cos^2{x} = 1 - \sin^2{x}</m> to rewrite <m>\cos^2{x}</m> in terms of sine,</p>
+        <md>
+          <mrow>\amp= \int \sin^3{x} (1 - \sin^2{x}) \cdot \cos{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>u = \sin{x} \quad \longrightarrow \quad du \amp= \cos{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>\amp= \int \brac{u^3 - u^5} \,du</mrow>
+          <mrow>\amp= \frac{1}{4}u^4 - \frac{1}{6} u^6 + C</mrow>
+          <mrow>\amp= \frac{1}{4}\sin^4{x} - \frac{1}{6} \sin^6{x} + C</mrow>
+        </md>
+        <p>Alternatively, if we separate out one factor of <m>\sin{x}</m>, then convert the rest to cosine using <m>\sin^2{x} = 1 - \cos^2{x}</m>,</p>
+        <md>
+          <mrow>\amp= \int (1 - \cos^2{x}) \cos^3{x} \cdot \sin{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>u = \cos{x} \quad \longrightarrow \quad du \amp= -\sin{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>\amp= \int \brac{u^3 - u^5} (-\,du)</mrow>
+          <mrow>\amp= \int \brac{-u^3 + u^5} \,du</mrow>
+          <mrow>\amp= -\frac{1}{4}u^4 + \frac{1}{6} u^6 + C</mrow>
+          <mrow>\amp= -\frac{1}{4}\cos^4{x} + \frac{1}{6} \cos^6{x} + C</mrow>
+        </md>
+        <p>In fact, both of the final answers are correct, and equivalent, even though they look different.</p>
+        <md>
+          <mrow>\int \sin^3{x} \cos^3{x} \,dx \amp= \frac{1}{4}\sin^4{x} - \frac{1}{6} \sin^6{x} + C</mrow>
+          <mrow>\int \sin^3{x} \cos^3{x} \,dx \amp= -\frac{1}{4}\cos^4{x} + \frac{1}{6} \cos^6{x} + C</mrow>
+        </md>
+        <p>In fact, they only differ by a constant. Here is a graph of each: <url href="https://www.desmos.com/calculator/lbu1maefqy">Graph of <m>y=\frac{1}{4}\sin^4{x} - \frac{1}{6} \sin^6{x}</m> and <m>y=-\frac{1}{4}\cos^4{x} + \frac{1}{6} \cos^6{x}</m></url>. Notice that they are the same graph, just with a vertical shift.</p>
+      </solution>
+    </example>
+
+    <p>In general,</p>
+    <ul>
+      <li><p>If both exponents are odd, then you can separate off either sine or cosine.</p></li>
+      <li><p>With each choice, you will get answers which look different, but they will be equivalent.</p></li>
+    </ul>
+
+    <p>If both powers are even, then the integral is more complicated, because we can't use the previous technique. Instead, we can use the power-reducing identities to reduce the powers, and then integrate.</p>
+
+    <example>
+      <title>Integral of <m>\sin^2{x} \cos^2{x}</m></title>
+      <statement><p>Evaluate <m>\int \sin^2{x} \cos^2{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>Here, both exponents are even, so we use the power-reducing identities,</p>
+        <md>
+          <mrow>\int \sin^2{x} \cos^2{x} \,dx \amp= \int \frac{1-\cos{(2x)}}{2} \cdot \frac{1+\cos{(2x)}}{2} \,dx</mrow>
+          <mrow>\amp= \frac{1}{4} \int (1 - \cos{(2x)})(1 + \cos{(2x)}) \,dx \amp\amp\text{simplifying}</mrow>
+          <mrow>\amp= \frac{1}{4} \int (1 - \cos^2{(2x)}) \,dx \amp\amp\text{expanding the brackets}</mrow>
+        </md>
+        <p>There is still <m>\cos^2{(2x)}</m>, which is to the 2nd power, so apply the power-reducing identity again,</p>
+        <md>
+          <mrow>\amp= \frac{1}{4} \int \brac{1 - \frac{1 + \cos{(4x)}}{2}}\,dx</mrow>
+          <mrow>\amp= \frac{1}{4} \int \brac{1 - \frac{1}{2} - \frac{1}{2} \cos{(4x)}}\,dx \amp\amp\text{simplifying}</mrow>
+          <mrow>\amp= \frac{1}{4} \int \brac{\frac{1}{2} - \frac{1}{2} \cos{(4x)}}\,dx \amp\amp\text{simplifying}</mrow>
+          <mrow>\amp= \frac{1}{4} \brac{\frac{1}{2}x - \frac{1}{8}\sin{(4x)}} + C</mrow>
+          <mrow>\amp= \frac{1}{8}x - \frac{1}{32} \sin{(4x)} + C \amp\amp\text{simplifying}</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\sin^2{x} \cos^4{x}</m></title>
+      <statement><p>Evaluate <m>\int \sin^2{x} \cos^4{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>Both exponents are even again. This requires more tedious algebra than the previous example, because the exponents are bigger. But once again, we start with the power-reducing identities,</p>
+        <md>
+          <mrow>\int \sin^2{x} \cos^4{x}\,dx \amp= \int \sin^2{x} \cdot \brac{\cos^2{x}}^2 \,dx</mrow>
+          <mrow>\amp= \int \frac{1-\cos{(2x)}}{2} \cdot \brac{\frac{1+\cos{(2x)}}{2}}^2 \,dx</mrow>
+        </md>
+        <p>We want to simplify as much as possible before integrating,</p>
+        <md>
+          <mrow>\amp= \frac{1}{8} \int \brac{1-\cos{(2x)}}(1+\cos{(2x)})^2\,dx \amp\amp\text{simplifying}</mrow>
+          <mrow>\amp= \frac{1}{8} \int \brac{1-\cos{(2x)}} (1+ 2\cos{(2x)} + \cos^2{(2x)})\,dx \amp\amp\text{expanding}</mrow>
+          <mrow>\amp= \frac{1}{8} \int \brac{1 + \cos{(2x)} - \cos^2{(2x)} - \cos^3{(2x)}} \,dx \amp\amp\text{expanding, and combining like terms}</mrow>
+        </md>
+        <p>The integral of 1 and <m>\cos{(2x)}</m> are straightforward, but the integral of <m>\cos^2{(2x)}</m> and <m>\cos^3{(2x)}</m> are more complicated,</p>
+        <md>
+          <mrow>\amp= \frac{1}{8} \brac{x + \frac{1}{2} \sin{(2x)} - \int \brac{\cos^2{(2x)} + \cos^3{(2x)}} \,dx}</mrow>
+        </md>
+        <p>Then, for <m>\cos^2{(2x)}</m>, the power is even, so use the power-reducing identity again,</p>
+        <md>
+          <mrow>\int \cos^2{(2x)} \,dx \amp= \int \frac{1 + \cos{(4x)}}{2} \,dx</mrow>
+          <mrow>\amp= \frac{1}{2} \int \brac{1 + \cos{(4x)}} \,dx</mrow>
+          <mrow>\amp= \frac{1}{2} \brac{x + \frac{1}{4} \sin{(4x)}}</mrow>
+          <mrow>\amp= \frac{1}{2}x + \frac{1}{8} \sin{(4x)}</mrow>
+        </md>
+        <p>For <m>\cos^3{(2x)}</m>, the power is odd, so use substitution, by separating out one factor of <m>\cos{(2x)}</m>, and using the Pythagorean identity <m>\cos^2{(2x)} = 1 - \sin^2{(2x)}</m> to rewrite <m>\cos^2{(2x)}</m> in terms of sine,</p>
+        <md>
+          <mrow>\int \cos^3{(2x)} \,dx \amp= \int (1 - \sin^2{(2x)}) \cdot \cos{(2x)} \,dx</mrow>
+          <mrow>\amp= \frac{1}{2} \int (1 - u^2) \,du \amp\amp\text{<m>u = \sin{(2x)}</m>, <m>du = 2 \cos{(2x)} \,dx</m>}</mrow>
+          <mrow>\amp= \frac{1}{2} \brac{u - \frac{1}{3} u^3}</mrow>
+          <mrow>\amp= \frac{1}{2} \sin{(2x)} - \frac{1}{6} \sin^3{(2x)}</mrow>
+        </md>
+        <p>Finally, putting it all together,</p>
+        <md>
+          <mrow>\amp= \frac{1}{8} \brac{x + \frac{1}{2} \sin{(2x)} - \brac{\frac{1}{2}x + \frac{1}{8} \sin{(4x)} + \frac{1}{2} \sin{(2x)} - \frac{1}{6} \sin^3{(2x)}}} + C</mrow>
+          <mrow>\amp= \frac{1}{8} \brac{\frac{1}{2} x - \frac{1}{8} \sin{(4x)} + \frac{1}{6} \sin^3{(2x)}} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>In summary,</p>
+
+    <theorem xml:id="thm-trig-integrals-sin-cos">
+      <title>Trigonometric Integrals</title>
+      <statement>
+        <p>To evaluate an integral of the form <m>\int \sin^m(x) \cos^n(x) \,dx</m>, where <m>m, n</m> are non-negative integers:</p>
+        <ol marker="(a)">
+          <li>
+            <p>If <m>m</m> or <m>n</m> are odd (or both), then separate out one factor of the odd power, and convert the remaining to the other trigonometric function, using,</p>
+            <md>
+              <mrow>\sin^2{x} \amp= 1 - \cos^2{x}</mrow>
+              <mrow>\cos^2{x} \amp= 1 - \sin^2{x}</mrow>
+            </md>
+            <ul>
+              <li><p>Odd power of sine <m>\implies</m> factor out <m>\sin{x}</m> and use <m>u = \cos{x}</m>.</p></li>
+              <li><p>Odd power of cosine <m>\implies</m> factor out <m>\cos{x}</m> and use <m>u = \sin{x}</m>.</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>If <m>m</m> and <m>n</m> are both even, then reduce the powers of the trigonometric functions to the first power, using the power-reducing identities,</p>
+            <md>
+              <mrow>\sin^2{x} \amp= \frac{1-\cos{(2x)}}{2}</mrow>
+              <mrow>\cos^2{x} \amp= \frac{1+\cos{(2x)}}{2}</mrow>
+            </md>
+          </li>
+        </ol>
+      </statement>
+    </theorem>
+
+    <project>
+      <title>Evaluate Each Integral</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \sin^3{x} \cos^4{x} \,dx</m></p></statement><hint><p>Factor out <m>\sin{x}</m>, use <m>\sin^2{x} = 1 - \cos^2{x}</m>, and let <m>u = \cos{x}</m>.</p></hint><answer><p><m>-\frac{1}{5} \cos^5{x} + \frac{1}{7} \cos^7{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^5{x} \cos^3{x} \,dx</m></p></statement><hint><p>Factor out <m>\cos{x}</m>, use <m>\cos^2{x} = 1 - \sin^2{x}</m>, and let <m>u = \sin{x}</m>.</p></hint><answer><p><m>\frac{1}{6} \sin^6{x} - \frac{1}{8} \sin^8{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \cos^7{x} \sin^2{x} \,dx</m></p></statement><hint><p>Factor out <m>\cos{x}</m>, use <m>\cos^2{x} = 1 - \sin^2{x}</m>, expand <m>(1 - u^2)^3</m>, and let <m>u = \sin{x}</m>.</p></hint><answer><p><m>\frac{1}{3} \sin^3{x} - \frac{3}{5} \sin^5{x} + \frac{3}{7} \sin^7{x} - \frac{1}{9} \sin^9{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^4{x} \cos^2{x} \,dx</m></p></statement><hint><p>Both exponents are even, so use power-reducing identities.</p></hint><answer><p><m>\frac{1}{16} x - \frac{1}{64} \sin{(4x)} - \frac{1}{48} \sin^3{(2x)} + C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^3{x} \cos^6{x} \,dx</m></p></statement><hint><p>Factor out <m>\sin{x}</m>, use <m>\sin^2{x} = 1 - \cos^2{x}</m>, and let <m>u = \cos{x}</m>.</p></hint><answer><p><m>-\frac{1}{7} \cos^7{x} + \frac{1}{9} \cos^9{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^6{x} \cos^3{x} \,dx</m></p></statement><hint><p>Factor out <m>\cos{x}</m>, use <m>\cos^2{x} = 1 - \sin^2{x}</m>, and let <m>u = \sin{x}</m>.</p></hint><answer><p><m>\frac{1}{7} \sin^7{x} - \frac{1}{9} \sin^9{x} + C</m></p></answer></task>
+    </project>
+
+  </subsection>
+
+  <subsection xml:id="subsec-powers-tan-sec">
+    <title>Powers of Tangents and Secants</title>
+
+    <p>We can also consider integrals of powers of tangent and secant. The techniques are similar to those for sine and cosine, but there are some differences, because the identities and derivatives are different. First, recall the derivatives of tangent and secant,</p>
+    <md>
+      <mrow>\frac{d}{dx} \tan{x} \amp= \sec^2{x}</mrow>
+      <mrow>\frac{d}{dx} \sec{x} \amp= \sec{x} \tan{x}</mrow>
+    </md>
+    <p>And the Pythagorean identities for tangent and secant,</p>
+    <md>
+      <mrow>\sec^2{x} \amp= \tan^2{x} + 1</mrow>
+      <mrow>\tan^2{x} \amp= \sec^2{x} - 1</mrow>
+    </md>
+
+  </subsection>
+
+  <subsection xml:id="subsec-products-tan-sec">
+    <title>Integral of Products of Powers of Tangents and Secants</title>
+
+    <p>Integrals of a product of powers of tangent and secant can be evaluated using similar methods as for products of sine and cosine. In other words, of the form,</p>
+    <me>\int \tan^{m}(x) \sec^{n}(x) \,dx</me>
+    <p>Intuitively, this is because tangent and secant are related by the Pythagorean identity,</p>
+    <md>
+      <mrow>\sec^2{x} \amp= \tan^2{x} + 1</mrow>
+      <mrow>\tan^2{x} \amp= \sec^2{x} - 1</mrow>
+    </md>
+    <p>This allows us to convert between even powers of tangent and secant (just like we converted between sine and cosine).</p>
+    <p>Also, the derivatives of tangent and secant are related to each other,</p>
+    <md>
+      <mrow>\frac{d}{dx} \tan{x} \amp= \sec^2{x}</mrow>
+      <mrow>\frac{d}{dx} \sec{x} \amp= \sec{x} \tan{x}</mrow>
+    </md>
+    <p>This means that often we can use substitution, with <m>u</m> being either tangent or secant, depending on the situation (just like we used substitution with sine and cosine).</p>
+
+    <example>
+      <title>Tangent Squared</title>
+      <statement><p>We already did <m>\int \sin^2{x} \,dx</m> and <m>\int \cos^2{x} \,dx</m>, so let's consider <m>\int \tan^2{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>This integral requires a bit of a trick. We can use the identity <m>\tan^2{x} + 1 = \sec^2{x}</m>,</p>
+        <md>
+          <mrow>\amp= \int \brac{\sec^2{x} - 1} \,dx</mrow>
+        </md>
+        <p>Then, recall that <m>\int \sec^2{x} \,dx = \tan{x}</m>, so,</p>
+        <md>
+          <mrow>\amp= \tan{x} - x + C</mrow>
+        </md>
+        <p>Thus,</p>
+        <me>\boxed{\int \tan^2{x} \,dx = \tan{x} - x + C}</me>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\tan{x} \sec^2{x}</m></title>
+      <statement><p>Evaluate <m>\int \tan{x} \sec^2{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>The derivative of <m>\tan{x}</m> is <m>\sec^2{x}</m>, so <m>u = \tan{x}</m> will work well. Then, <m>du = \sec^2{x} \,dx</m>. Then,</p>
+        <md>
+          <mrow>\amp= \int u \,du</mrow>
+          <mrow>\amp= \frac{1}{2} u^2 + C</mrow>
+          <mrow>\amp= \frac{1}{2} \tan^2{x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\tan^3{x} \sec^2{x}</m></title>
+      <statement><p>Evaluate <m>\int \tan^3{x} \sec^2{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>Again, the derivative of <m>\tan{x}</m> is <m>\sec^2{x}</m>, so <m>u = \tan{x}</m> will work well. Then, <m>du = \sec^2{x} \,dx</m>. Then,</p>
+        <md>
+          <mrow>\amp= \int u^3 \,du</mrow>
+          <mrow>\amp= \frac{1}{4} u^4 + C</mrow>
+          <mrow>\amp= \frac{1}{4} \tan^4{x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>In general, if we have an expression involving tangent, and also <m>\sec^2{x} \,dx</m>, then we can use substitution with <m>u = \tan{x}</m>.</p>
+
+    <example>
+      <title>Tangent Cubed</title>
+      <statement><p>Evaluate <m>\int \tan^3{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>This also requires a bit of a trick. Separate out <m>\tan{x}</m>, to leave <m>\tan^2{x}</m>, and use the Pythagorean identity <m>\tan^2{x} = \sec^2{x} - 1</m> to rewrite <m>\tan^2{x}</m> in terms of secant,</p>
+        <md>
+          <mrow>\amp= \int \tan^2{x} \cdot \tan{x} \,dx</mrow>
+          <mrow>\amp= \int \brac{\sec^2{x} - 1} \cdot \tan{x} \,dx</mrow>
+          <mrow>\amp= \int \sec^2{x} \tan{x} \,dx - \int \tan{x} \,dx \amp\amp\text{splitting the integral}</mrow>
+        </md>
+        <p>For the 1st integral, we can use substitution with <m>u=\tan{x}</m>, so that <m>du = \sec^2{x} \,dx</m>. For the 2nd integral, this is the <url href="https://camerongeisler.github.io/calculus/sec-integrals-of-trig-functions.html#subsec-integrals-tan-sec-csc-cot-4">Integral of Tangent</url>, which is <m>\ln{\abs{\sec{x}}}</m>. Then,</p>
+        <md>
+          <mrow>\amp= \int u \,du</mrow>
+          <mrow>\amp= \frac{1}{2} u^2 + C</mrow>
+          <mrow>\amp= \frac{1}{2} \tan^2{x} + C</mrow>
+        </md>
+        <p>Putting it all together,</p>
+        <me>\boxed{\int \tan^3{x} \,dx = \frac{\sec^2{x}}{2} - \ln{\abs{\sec{x}}} + C}</me>
+      </solution>
+    </example>
+
+    <example>
+      <title>Tangent 4th Power</title>
+      <statement><p>Evaluate <m>\int \tan^4{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>This is similar to <m>\int \tan^2{x}</m>, because we can convert <m>\tan^4{x}</m> to <m>\tan^2{x} \cdot \tan^2{x}</m>, and then use the Pythagorean identity <m>\tan^2{x} = \sec^2{x} - 1</m> to rewrite one of the <m>\tan^2{x}</m> in terms of secant,</p>
+        <md>
+          <mrow>\amp= \int \tan^2{x} \cdot \tan^2{x} \,dx</mrow>
+          <mrow>\amp= \int \brac{\sec^2{x} - 1} \cdot \tan^2{x} \,dx</mrow>
+          <mrow>\amp= \int \brac{\sec^2{x} \tan^2{x} - \tan^2{x}} \,dx</mrow>
+        </md>
+        <p>Then, splitting the integral,</p>
+        <md>
+          <mrow>\amp= \int \sec^2{x} \tan^2{x} \,dx - \int \tan^2{x} \,dx</mrow>
+        </md>
+        <p>For the 2nd integral, we have seen it before, as this is the Integral of Tangent Squared,</p>
+        <md>
+          <mrow>\int \tan^2{x} \,dx \amp= \int \brac{\sec^2{x} - 1} \,dx</mrow>
+          <mrow>\amp= \tan{x} - x</mrow>
+        </md>
+        <p>For the first integral, we can use substitution, with <m>u = \tan{x}</m>, so that <m>du = \sec^2{x} \,dx</m>. Then,</p>
+        <md>
+          <mrow>\amp= \int u^2 \,du</mrow>
+          <mrow>\amp= \frac{1}{3} u^3 + C</mrow>
+          <mrow>\amp= \frac{1}{3} \tan^3{x} + C</mrow>
+        </md>
+        <p>Therefore,</p>
+        <me>\boxed{\int \tan^4{x} \,dx = \frac{1}{3} \tan^3{x} - \tan{x} + x + C}</me>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\tan^3{x} \sec^4{x}</m></title>
+      <statement><p>Evaluate <m>\int \tan^3{x} \sec^4{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>First, like before, separate off <m>\sec^2{x}</m>, because it is the derivative of <m>\tan{x}</m>, to prepare for the substitution <m>u = \tan{x}</m>,</p>
+        <md>
+          <mrow>\amp= \int \tan^3{x} \sec^2{x} \cdot \sec^2{x} \,dx</mrow>
+        </md>
+        <p>Then, convert the remaining <m>\sec^2{x}</m> to tangent, using the identity <m>\sec^2{x} = 1 + \tan^2{x}</m>,</p>
+        <md>
+          <mrow>\amp= \int \tan^3{x} (1 + \tan^2{x}) \cdot \sec^2{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>u = \tan{x} \quad \longrightarrow \quad du \amp= \sec^2{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>\amp= \int u^3 (1 + u^2) \,du</mrow>
+          <mrow>\amp= \int \brac{u^3 + u^5} \,du</mrow>
+          <mrow>\amp= \frac{1}{4} u^4 + \frac{1}{6} u^6 + C</mrow>
+          <mrow>\amp= \frac{1}{4} \tan^4{x} + \frac{1}{6} \tan^6{x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>This technique of separating off <m>\sec^2{x}</m> works as long as the exponent of secant is even. Otherwise, if the exponent is odd, we'll need a different technique.</p>
+
+    <example>
+      <title>Integral of <m>\tan{x} \sec^3{x}</m></title>
+      <statement><p>Evaluate <m>\int \tan{x} \sec^3{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>Here, the exponent of secant is 3 which is odd, so we can't use the previous technique. This is because if we separate off <m>\sec^2{x}</m>, then,</p>
+        <md>
+          <mrow>\amp= \int \tan{x} \sec{x} \cdot \sec^2{x} \,dx</mrow>
+        </md>
+        <p>We'll have only 1 factor of secant left, which we can't convert to tangent using the Pythagorean identity.</p>
+        <p>However, it turns out we can use the derivative of <m>\sec{x}</m> instead, which is <m>\sec{x} \tan{x}</m>. Separate off <m>\sec{x} \tan{x}</m> to prepare for the substitution <m>u = \sec{x}</m>,</p>
+        <md>
+          <mrow>\amp= \int \sec^2{x} \cdot \sec{x} \tan{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>u = \sec{x} \quad \longrightarrow \quad du \amp= \sec{x} \tan{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>\amp= \int u^2 \,du</mrow>
+          <mrow>\amp= \frac{1}{3} u^3 + C</mrow>
+          <mrow>\amp= \frac{1}{3} \sec^3{x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\tan^3{x} \sec^3{x}</m></title>
+      <statement><p>Evaluate <m>\int \tan^3{x} \sec^3{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>The exponent of secant is 3 which is odd, so like the previous example, we can separate off <m>\sec{x} \tan{x}</m>,</p>
+        <md>
+          <mrow>\amp= \int \tan^2{x} \sec^2{x} \cdot \sec{x} \tan{x} \,dx</mrow>
+        </md>
+        <p>Then, convert the remaining <m>\tan^2{x}</m> to secant, using the identity <m>\tan^2{x} = \sec^2{x} - 1</m>,</p>
+        <md>
+          <mrow>\amp= \int (\sec^2{x} - 1) \sec^2{x} \cdot \sec{x} \tan{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>u = \sec{x} \quad \longrightarrow \quad du \amp= \sec{x} \tan{x} \,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <md>
+          <mrow>\amp= \int (u^2 - 1) u^2 \,du</mrow>
+          <mrow>\amp= \int (u^4 - u^2) \,du</mrow>
+          <mrow>\amp= \frac{1}{5} u^5 - \frac{1}{3} u^3 + C</mrow>
+          <mrow>\amp= \frac{1}{5} \sec^5{x} - \frac{1}{3} \sec^3{x} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <p>In general, this technique of separating out <m>\sec{x} \tan{x}</m> will work when the exponent of secant is odd, <em>and</em> the exponent of tangent is also odd.</p>
+
+    <exercise>
+      <title>Integral of <m>\tan^5{x} \sec^5{x}</m></title>
+      <statement><p><m>\int \tan^5{x} \sec^5{x} \,dx</m></p></statement>
+      <hint><p>Split off <m>\sec{x} \tan{x}</m>, and convert the rest to secant using <m>\tan^2{x} = \sec^2{x} - 1</m>.</p></hint>
+      <answer><p><m>\frac{1}{9} \sec^9{x} - \frac{2}{7} \sec^7{x} + \frac{1}{5} \sec^5{x} + C</m></p></answer>
+    </exercise>
+
+    <p>Lastly, the final situation is if the power of secant is odd, <em>and</em> the power of tangent is even. In this case, the integral is more complicated, and there isn't a simple one-step substitution. You may not ever encounter an integral like this.</p>
+
+    <p>In summary,</p>
+
+    <theorem xml:id="thm-trig-integrals-tan-sec">
+      <title>Integrals of Products of Tangents and Secants</title>
+      <statement>
+        <p>For an integral of the form <m>\int \tan^{m}(x) \sec^{n}(x) \,dx</m>:</p>
+        <ol marker="(a)">
+          <li><p>If <m>n</m> is even (and <m>m</m> is anything), then split off <m>\sec^2{x}</m>, convert the remaining even power to tangent using <m>\sec^2{x} = 1 + \tan^2{x}</m>, and let <m>u = \tan{x}</m>.</p></li>
+          <li><p>If <m>n</m> is odd and <m>m</m> is odd, then split off <m>\sec{x} \tan{x}</m>, convert the remaining even power to secant using <m>\tan^2{x} = \sec^2{x} - 1</m>, and let <m>u = \sec{x}</m>.</p></li>
+          <li><p>If <m>n</m> is odd and <m>m</m> is even, then the integral is more complicated, and there isn't a simple one-step substitution.</p></li>
+        </ol>
+      </statement>
+    </theorem>
+
+    <project>
+      <title>Evaluate Each Integral</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \tan^4{x} \sec^4{x} \,dx</m></p></statement><hint><p>Split off <m>\sec^2{x}</m>, and let <m>u = \tan{x}</m>.</p></hint><answer><p><m>\frac{1}{5} \tan^5{x} + \frac{1}{7} \tan^7{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^3{x} \sec^5{x} \,dx</m></p></statement><hint><p>Split off <m>\sec{x} \tan{x}</m>, and let <m>u = \sec{x}</m>.</p></hint><answer><p><m>\frac{1}{7} \sec^7{x} - \frac{1}{5} \sec^5{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^4{x} \sec^6{x} \,dx</m></p></statement><hint><p>Split off <m>\sec^2{x}</m>, and expand <m>(1 + u^2)^2</m>.</p></hint><answer><p><m>\frac{1}{5} \tan^5{x} + \frac{2}{7} \tan^7{x} + \frac{1}{9} \tan^9{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \sec^4{x} \,dx</m></p></statement><hint><p>Split off <m>\sec^2{x}</m>, and let <m>u = \tan{x}</m>.</p></hint><answer><p><m>\tan{x} + \frac{1}{3} \tan^3{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^5{x} \sec^9{x} \,dx</m></p></statement><hint><p>Split off <m>\sec{x} \tan{x}</m>, and convert the rest to secant using <m>\tan^2{x} = \sec^2{x} - 1</m>.</p></hint><answer><p><m>\frac{1}{13} \sec^{13}{x} - \frac{2}{11} \sec^{11}{x} + \frac{1}{9} \sec^9{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^6{x} \sec^4{x} \,dx</m></p></statement><hint><p>Split off <m>\sec^2{x}</m>, and let <m>u = \tan{x}</m>.</p></hint><answer><p><m>\frac{1}{7} \tan^7{x} + \frac{1}{9} \tan^9{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^2{\brac{\frac{x}{4}}} \sec^2{\brac{\frac{x}{4}}} \,dx</m></p></statement><hint><p>Let <m>u = \tan{\brac{\frac{x}{4}}}</m>, so <m>du = \frac{1}{4} \sec^2{\brac{\frac{x}{4}}} \,dx</m>.</p></hint><answer><p><m>\frac{4}{3} \tan^3{\brac{\frac{x}{4}}} + C</m></p></answer></task>
+    </project>
+
+  </subsection>
+
+  <subsection xml:id="subsec-trig-integrals-examples-2">
+    <title>Examples</title>
+    <project>
+      <title>★ Evaluate Each Integral</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \cos^3 x\sin x \,dx</m></p></statement><hint><p><m>u=\cos{x}</m></p></hint><answer><p><m>-\frac{1}{4}\cos^4 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^5 x \,dx</m></p></statement><hint><p>Separate off <m>\sin{x}</m>, let <m>u=\cos{x}</m>.</p></hint><answer><p><m>-\cos x+\frac{2}{3}\cos^3 x-\frac{1}{5}\cos^5 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^4(2x)\cos(2x) \,dx</m></p></statement><hint><p><m>u=\sin{(2x)}</m></p></hint><answer><p><m>\frac{1}{10}\sin^5(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos^3(20x) \,dx</m></p></statement><hint><p>Separate off <m>\cos{(20x)}</m>, let <m>u=\sin{(20x)}</m>.</p></hint><answer><p><m>\frac{1}{20}\sin(20x)-\frac{1}{60}\sin^3(20x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^2 x\cos^5 x \,dx</m></p></statement><hint><p>Separate off <m>\cos{x}</m>, let <m>u=\sin{x}</m>.</p></hint><answer><p><m>\frac{1}{3}\sin^3 x-\frac{2}{5}\sin^5 x+\frac{1}{7}\sin^7 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos^3 x\sqrt{\sin x}\,dx</m></p></statement><hint><p>Separate off <m>\cos{x}</m>, let <m>u=\sin{x}</m>.</p></hint><answer><p><m>\frac{2}{3}(\sin x)^{\frac{3}{2}}-\frac{2}{7}(\sin x)^{\frac{7}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin x\cos^4 x \,dx</m></p></statement><hint><p><m>u=\cos{x}</m></p></hint><answer><p><m>-\frac{1}{5}\cos^5 x+C</m></p></answer></task>
+      <task><statement><p><m>\int 7\cos^7 x \,dx</m></p></statement><hint><p>Separate off <m>\cos{x}</m>, let <m>u=\sin{x}</m>.</p></hint><answer><p><m>7\sin x-7\sin^3 x+\frac{21}{5}\sin^5 x-\sin^7 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos^3(4x) \,dx</m></p></statement><hint><p>Separate off <m>\cos{(4x)}</m>, let <m>u=\sin{(4x)}</m>.</p></hint><answer><p><m>\frac{1}{4}\sin(4x)-\frac{1}{12}\sin^3(4x)+C</m></p></answer></task>
+      <task><statement><p><m>\int 8\cos^3(2x)\sin(2x) \,dx</m></p></statement><hint><p><m>u=\cos{(2x)}</m></p></hint><answer><p><m>-\cos^4(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\sec x\tan x}{\sqrt{\sec x}} \,dx</m></p></statement><hint><p><m>u=\sec{x}</m></p></hint><answer><p><m>2\sqrt{\sec x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sec^2 x\tan^{\frac{1}{2}}x \,dx</m></p></statement><hint><p><m>u=\tan{x}</m></p></hint><answer><p><m>\frac{2}{3}(\tan x)^{\frac{3}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{\cot x}\csc^2 x \,dx</m></p></statement><hint><p><m>u=\cot{x}</m></p></hint><answer><p><m>-\frac{2}{3}(\cot x)^{3/2}+C</m></p></answer></task>
+    </project>
+    <project>
+      <title>★ Definite Integrals</title>
+      <introduction><p>Evaluate each definite integral.</p></introduction>
+      <task><statement><p><m>\int_0^{\pi/4}\frac{\sin x}{\cos^2 x} \,dx</m></p></statement><hint><p><m>u=\cos{x}</m></p></hint><answer><p><m>\sqrt{2}-1</m></p></answer></task>
+      <task><statement><p><m>\int_{\pi/4}^{\pi/2}\frac{\cos x}{\sin^2 x} \,dx</m></p></statement><hint><p><m>u=\sin{x}</m></p></hint><answer><p><m>\sqrt{2}-1</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\sqrt{\frac{\pi}{2}}}x\sin^3(x^2) \,dx</m></p></statement><answer><p><m>\frac{1}{3}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{2}}\sin^2(2x)\cos^3(2x) \,dx</m></p></statement><answer><p><m>0</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{2}}\cos^3 x\sqrt{\sin^3 x}\,dx</m></p></statement><answer><p><m>\frac{8}{45}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{2}}\sin^7 x \,dx</m></p></statement><hint><p>Separate off <m>\sin{x}</m>, let <m>u=\cos{x}</m>.</p></hint><answer><p><m>\frac{16}{35}</m></p></answer></task>
+      <task><statement><p><m>\int_0^\pi \sin^5\brac{\frac{x}{2}} \,dx</m></p></statement><hint><p>Separate off <m>\sin{\brac{\frac{x}{2}}}</m>, let <m>u=\cos{\brac{\frac{x}{2}}}</m>.</p></hint><answer><p><m>\frac{16}{15}</m></p></answer></task>
+    </project>
+    <project>
+      <title>★★ Evaluate Each Integral</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \sin^5\brac{\frac{x}{3}}\cos\brac{\frac{x}{3}} \,dx</m></p></statement><answer><p><m>\frac{1}{2}\sin^6\brac{\frac{x}{3}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^3 x \cos^{-2}x \,dx</m></p></statement><answer><p><m>\sec x+\cos x+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos^4(2x)\,dx</m></p></statement><answer><p><m>\frac{3}{8}x+\frac{1}{8}\sin(4x)+\frac{1}{64}\sin(8x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^3 x\cos^5 x \,dx</m></p></statement><answer><p><m>\frac{1}{8}\cos^8 x-\frac{1}{6}\cos^6 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^{-\frac{3}{2}}x\cos^3 x \,dx</m></p></statement><answer><p><m>-\frac{2}{\sqrt{\sin x}}-\frac{2}{3}(\sin x)^{\frac{3}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^3 x\cos^{\frac{3}{2}}x \,dx</m></p></statement><answer><p><m>\frac{2}{9}(\cos x)^{\frac{9}{2}}-\frac{2}{5}(\cos x)^{\frac{5}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int 8\cos^4(2\pi x) \,dx</m></p></statement><answer><p><m>3x+\frac{1}{\pi}\sin(4\pi x)+\frac{1}{8\pi}\sin(8\pi x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin^3(mx) \,dx</m></p></statement><answer><p><m>\frac{1}{3m}\cos^3(mx)-\frac{1}{m}\cos(mx)+C</m></p></answer></task>
+      <task><statement><p><m>\int 16\sin^2 x\cos^2 x \,dx</m></p></statement><answer><p><m>2x-\frac{1}{2}\sin(4x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{\cos x}\sin^3 x \,dx</m></p></statement><answer><p><m>\frac{2}{7}(\cos x)^{\frac{7}{2}}-\frac{2}{3}(\cos x)^{\frac{3}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\sin^2\brac{\frac{1}{x}}}{x^2} \,dx</m></p></statement><hint><p><m>u=\frac{1}{x}</m></p></hint><answer><p><m>\frac{1}{4}\sin\brac{\frac{2}{x}}-\frac{1}{2x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \cos^3(2x)\sin^5(2x) \,dx</m></p></statement><answer><p><m>\frac{1}{12}\sin^6(2x)-\frac{1}{16}\sin^8(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{1}{x^2}\cos^2\brac{\frac{1}{x}} \,dx</m></p></statement><hint><p><m>u=\frac{1}{x}</m></p></hint><answer><p><m>-\frac{1}{2x}-\frac{1}{4}\sin\brac{\frac{2}{x}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\sin^3 x}{\cos^4 x}\,dx</m></p></statement><hint><p>Rewrite as <m>\tan x\brac{\sec^3 x-\sec x}</m>, then use <m>u=\sec x</m>.</p></hint><answer><p><m>\frac{1}{3}\sec^3 x-\sec x+C</m></p></answer></task>
+    </project>
+    <project>
+      <title>★★ Powers and Products of Sine and Cosine (Definite Integrals)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int_0^{\frac{\pi}{2}}\cos^5 x \,dx</m></p></statement><answer><p><m>\frac{8}{15}</m></p></answer></task>
+      <task><statement><p><m>\int_{\frac{\pi}{2}}^{\frac{\pi}{4}}\sin^5 x\cos^3 x \,dx</m></p></statement><answer><p><m>-\frac{11}{384}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{2}}\sin^2 x\cos^2 x \,dx</m></p></statement><answer><p><m>\frac{\pi}{16}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{3}}\sin^5 x\cos^{-2}x \,dx</m></p></statement><answer><p><m>\frac{7}{24}</m></p></answer></task>
+      <task><statement><p><m>\int_0^\pi 8\sin^4 x \,dx</m></p></statement><answer><p><m>3\pi</m></p></answer></task>
+      <task><statement><p><m>\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\sin^2(2x)\cos^3(2x)\,dx</m></p></statement><answer><p><m>-\frac{1}{15}</m></p></answer></task>
+      <task><statement><p><m>\int_0^\pi 8\sin^4 x\cos^2 x \,dx</m></p></statement><answer><p><m>\frac{\pi}{2}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{6}} 3\cos^5(3x) \,dx</m></p></statement><answer><p><m>\frac{8}{15}</m></p></answer></task>
+    </project>
+    <project>
+      <title>★★ Powers and Products of Tangent and Secant</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \sec^2 x\tan^2 x \,dx</m></p></statement><answer><p><m>\frac{1}{3}\tan^3 x+C</m></p></answer></task>
+      <task><statement><p><m>\int 10\tan^9 x\sec^2 x \,dx</m></p></statement><answer><p><m>\tan^{10}x+C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^9 x\sec^4 x \,dx</m></p></statement><answer><p><m>\frac{1}{10}\tan^{10}x+\frac{1}{12}\tan^{12}x+C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^5 x\sec^4 x \,dx</m></p></statement><answer><p><m>\frac{1}{6}\tan^6 x+\frac{1}{8}\tan^8 x+C</m></p></answer></task>
+      <task><statement><p><m>\int 6\sec^4 x \,dx</m></p></statement><answer><p><m>2\tan^3 x+6\tan x+C</m></p></answer></task>
+      <task><statement><p><m>\int \sec^6 x \,dx</m></p></statement><answer><p><m>\tan x+\frac{2}{3}\tan^3 x+\frac{1}{5}\tan^5 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \sec^4 x\tan^2 x \,dx</m></p></statement><answer><p><m>\frac{1}{3}\tan^3 x+\frac{1}{5}\tan^5 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^3 x\sec x \,dx</m></p></statement><answer><p><m>\frac{1}{3}\sec^3 x-\sec x+C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^7\brac{\frac{x}{2}}\sec^2\brac{\frac{x}{2}} \,dx</m></p></statement><answer><p><m>\frac{1}{4}\tan^8\brac{\frac{x}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^5 x\sec^3 x \,dx</m></p></statement><answer><p><m>\frac{1}{7}\sec^7 x-\frac{2}{5}\sec^5 x+\frac{1}{3}\sec^3 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \tan(4x)\sec^{\frac{3}{2}}(4x)\,dx</m></p></statement><answer><p><m>\frac{1}{6}(\sec(4x))^{\frac{3}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\sec^2 x}{\tan^5 x} \,dx</m></p></statement><answer><p><m>-\frac{1}{4\tan^4 x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sqrt{\tan x}\sec^4 x \,dx</m></p></statement><answer><p><m>\frac{2}{3}(\tan x)^{\frac{3}{2}}+\frac{2}{7}(\tan x)^{\frac{7}{2}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sec^{-2}x\tan^3 x \,dx</m></p></statement><answer><p><m>\frac{1}{2}\cos^2 x-\ln|\cos x|+C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^3(4x) \,dx</m></p></statement><answer><p><m>\frac{1}{8}\tan^2(4x)-\frac{1}{4}\ln|\sec(4x)|+C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^5 x \,dx</m></p></statement><answer><p><m>\frac{1}{4}\sec^4 x-\sec^2 x+\ln|\sec x|+C</m></p></answer></task>
+      <task><statement><p><m>\int 4\tan^3 x \,dx</m></p></statement><answer><p><m>2\tan^2 x+4\ln|\cos x|+C</m></p></answer></task>
+      <task><statement><p><m>\int 20\tan^6 x \,dx</m></p></statement><answer><p><m>4\tan^5 x-\frac{20}{3}\tan^3 x+20\tan x-20x+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\sec^4(\ln x)}{x} \,dx</m></p></statement><answer><p><m>\tan(\ln x)+\frac{1}{3}\tan^3(\ln x)+C</m></p></answer></task>
+    </project>
+    <project>
+      <title>★★ Powers and Products of Cotangent and Cosecant</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \cot^3{x} \,dx</m></p></statement><hint><p>Use <m>\cot^2{x} = \csc^2{x} - 1</m> to convert the even power of cotangent to cosecant, and then use <m>u = \csc{x}</m>.</p></hint></task>
+      <task><statement><p><m>\int \cot^4 x \,dx</m></p></statement><answer><p><m>x+\cot x-\frac{1}{3}\cot^3 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \csc^{10}x\cot x \,dx</m></p></statement><answer><p><m>-\frac{1}{10}\csc^{10}x+C</m></p></answer></task>
+      <task><statement><p><m>\int \cot^5(3x)\,dx</m></p></statement><answer><p><m>-\frac{1}{12}\cot^4(3x)+\frac{1}{6}\cot^2(3x)+\frac{1}{3}\ln|\sin(3x)|+C</m></p></answer></task>
+      <task><statement><p><m>\int \cot^6(2x) \,dx</m></p></statement><answer><p><m>-\frac{1}{2}\cot(2x)+\frac{1}{6}\cot^3(2x)-\frac{1}{10}\cot^5(2x)-x+C</m></p></answer></task>
+      <task><statement><p><m>\int 8\cot^4 x \,dx</m></p></statement><answer><p><m>8x+8\cot x-\frac{8}{3}\cot^3 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \cot^3 x\csc^4 x \,dx</m></p></statement><answer><p><m>-\frac{1}{4}\cot^4 x-\frac{1}{6}\cot^6 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \csc^{10}x\cot^3 x \,dx</m></p></statement><answer><p><m>-\frac{1}{12}\csc^{12}x+\frac{1}{10}\csc^{10}x+C</m></p></answer></task>
+      <task><statement><p><m>\int (\csc^2 x+\csc^4 x) \,dx</m></p></statement><answer><p><m>-2\cot x-\frac{1}{3}\cot^3 x+C</m></p></answer></task>
+    </project>
+    <project>
+      <title>★★ Tangent, Secant, Cotangent, and Cosecant (Definite Integrals)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int_0^{\frac{\pi}{4}}\tan^2 x\sec^4 x\,dx</m></p></statement><hint><p>Separate off <m>\sec^2{x}</m>, let <m>u=\tan x</m>.</p></hint><answer><p><m>\frac{8}{15}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{4}}\tan^3 x\sec^2 x \,dx</m></p></statement><hint><p><m>u=\tan{x}</m></p></hint><answer><p><m>\frac{1}{4}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{6}}\tan^5(2x)\sec(2x)\,dx</m></p></statement><hint><p>Separate off <m>\tan{(2x)} \sec{(2x)}</m>, let <m>u=\sec{(2x)}</m>.</p></hint><answer><p><m>\frac{19}{15}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{4}}\sec^4 x\,dx</m></p></statement><hint><p>Separate off <m>\sec^2{x}</m>, let <m>u=\tan{x}</m>.</p></hint><answer><p><m>\frac{4}{3}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{4}}\sec^7 x\sin x\,dx</m></p></statement><hint><p>Rewrite <m>\sec^7 x\sin x=\tan x\sec^6 x</m> (tricky!), then use <m>u=\sec x</m>, so <m>du=\sec x\tan x\,dx</m>.</p></hint><answer><p><m>\frac{7}{6}</m></p></answer></task>
+      <task><statement><p><m>\int_{\frac{\pi}{20}}^{\frac{\pi}{10}}\csc^2(5x)\cot^4(5x)\,dx</m></p></statement><hint><p><m>u=\cot(5x)</m></p></hint><answer><p><m>\frac{1}{25}</m></p></answer></task>
+      <task><statement><p><m>\int_0^{\frac{\pi}{8}}(\tan(2x)+\tan^3(2x))\,dx</m></p></statement><hint><p>Split the integral as <m>\int \tan{(2x)} \,dx + \int \tan^3{(2x)} \,dx</m>, or factor to get <m>\tan(2x)\brac{1+\tan^2(2x)}=\tan(2x)\sec^2(2x)</m>, then use <m>u=\tan(2x)</m>.</p></hint><answer><p><m>\frac{1}{4}</m></p></answer></task>
+      <task><statement><p><m>\int_{\frac{\pi}{6}}^{\frac{\pi}{3}}\cot^3 x\,dx</m></p></statement><hint><p>Write <m>\cot^3 x=\cot x(\csc^2 x-1)</m>, then split into <m>\int \cot x\csc^2 x\,dx-\int \cot x\,dx</m>.</p></hint><answer><p><m>\frac{4}{3}-\frac{1}{2}\ln 3</m></p></answer></task>
+      <task><statement><p><m>\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\csc^4 x\,dx</m></p></statement><hint><p>Write <m>\csc^4 x=\csc^2 x(1+\cot^2 x)</m>, then use <m>u=\cot x</m>.</p></hint><answer><p><m>\frac{4}{3}</m></p></answer></task>
+      <task><statement><p><m>\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}6\tan^4 x\,dx</m></p></statement><hint><p>The integrand is even, so can use <m>2\int_0^{\frac{\pi}{4}}6\tan^4 x\,dx</m>, and write <m>\tan^4 x=\brac{\sec^2 x-1}^2</m>.</p></hint><answer><p><m>3\pi-8</m></p></answer></task>
+      <task><statement><p><m>\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\tan^5 x\sec^4 x\,dx</m></p></statement><hint><p>Use <m>u=\tan x</m>, so <m>du=\sec^2 x\,dx</m>, and rewrite <m>\tan^5 x\sec^4 x</m> as <m>\tan^5 x\sec^2 x\brac{\sec^2 x\,dx}=\tan^5 x(1+\tan^2 x)\brac{\sec^2 x\,dx}</m>.</p></hint><answer><p><m>\frac{43}{3}</m></p></answer></task>
+    </project>
+    <project>
+      <title>★★★ Mixed and Challenging Integrals</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \sqrt{x}\sin^2(x^{3/2}-1) \,dx</m></p></statement><hint><p><m>u=x^{3/2}-1</m>, leads to <m>\int \sin^2{u} \,du</m>.</p></hint><answer><p><m>\frac{1}{3}(x^{3/2}-1)-\frac{1}{6}\sin\brac{2(x^{3/2}-1)}+C</m></p></answer></task>
+      <task><statement><p><m>\int \sin(2x) \cos^4{x} \,dx</m></p></statement><hint><p>Use <m>\sin(2x) = 2\sin{x} \cos{x}</m>, leads to <m>\int 2\sin{x} \cos^5{x} \,dx</m>.</p></hint><answer><p><m>-\frac{1}{3} \cos^6{x} + C</m></p></answer></task>
+      <task><statement><p><m>\int x\csc(x^2)\cot(x^2)\,dx</m></p></statement><hint><p>Use <m>u=x^2</m>, leads to <m>\int \csc{u}\cot{u} \,du</m>.</p></hint><answer><p><m>-\frac{1}{2}\csc(x^2)+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\csc^4 x}{\cot^2 x}\,dx</m></p></statement><hint><p>Rewrite in terms of sine and cosine, leads to <m>\int \brac{\sec^2 x+\csc^2 x} \,dx</m>.</p></hint><answer><p><m>\tan x-\cot x+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\csc^2 x}{\cot^3 x}\,dx</m></p></statement><hint><p>Rewrite in terms of sine and cosine, leads to <m>\int \tan x\sec^2 x \,dx</m>, then use <m>u=\tan x</m>.</p></hint><answer><p><m>\frac{1}{2}\tan^2 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{dx}{\cos^2 x\sqrt{1+\tan x}}</m></p></statement><hint><p>Rewrite as <m>\int \frac{\sec^2 x}{\sqrt{1+\tan x}}\,dx</m>, then use <m>u=1+\tan x</m>.</p></hint><answer><p><m>2\sqrt{1+\tan x}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\sin(2x)}{1+\cos^2 x}\,dx</m></p></statement><hint><p>Use <m>\sin(2x)=2\sin x\cos x</m>, then let <m>u=1+\cos^2 x</m>, leads to <m>\int \frac{1}{u} \,du</m>.</p></hint><answer><p><m>-\ln(1+\cos^2 x)+C</m></p></answer></task>
+      <task>
+        <statement>
+          <p><m>\int \csc^2(2x)\cot(2x)\,dx</m> using two methods:</p>
+          <ol marker="(a)">
+            <li><p>Using <m>u=\cot(2x)</m>.</p></li>
+            <li><p>Using <m>u=\csc(2x)</m>.</p></li>
+          </ol>
+        </statement>
+        <hint><p>(a) <m>du=-2\csc^2(2x)\,dx</m>. (b) <m>du=-2\csc(2x)\cot(2x)\,dx</m>, so write the integrand as <m>\csc(2x)\brac{\csc(2x)\cot(2x)\,dx}</m>.</p></hint>
+        <answer><p>(a) <m>-\frac{1}{4}\cot^2(2x)+C</m>. (b) <m>-\frac{1}{4}\csc^2(2x)+C</m>.</p></answer>
+      </task>
+      <task><statement><p><m>\int \frac{\cos(\sqrt{x})}{\sqrt{x}\sin^2(\sqrt{x})}\,dx</m></p></statement><hint><p>Use <m>u=\sin(\sqrt{x})</m>, so <m>du=\frac{\cos(\sqrt{x})}{2\sqrt{x}}\,dx</m>.</p></hint><answer><p><m>-\frac{2}{\sin(\sqrt{x})}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\tan^2 x}{\csc x}\,dx</m></p></statement><hint><p>Rewrite in terms of sine and cosine, leads to <m>\frac{\sin^3 x}{\cos^2 x}=\frac{\sin x(1-\cos^2 x)}{\cos^2 x}</m>, then use <m>u=\cos x</m>.</p></hint><answer><p><m>\sec x+\cos x+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\cot x}{\cos^2 x}\,dx</m></p></statement><hint><p>Rewrite as <m>\frac{\sec^2 x}{\tan x}</m>, then let <m>u=\tan x</m>.</p></hint><answer><p><m>\ln|\tan x|+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\sec^3 x}{\tan x}\,dx</m></p></statement><hint><p>Rewrite in terms of sine and cosine, leads to <m>\frac{1}{\sin x\cos^2 x}=\sec x\tan x+\csc x</m>.</p></hint><answer><p><m>\sec x+\ln\abs{\tan\brac{\frac{x}{2}}}+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\cos x+\sin^3 x}{\sec x}\,dx</m></p></statement><hint><p>Split the fraction, leads to <m>\int \cos^2 x\,dx+\int \sin^3 x\cos x\,dx</m>, then use the power-reducing formula for <m>\cos^2 x</m>, and use <m>u=\sin x</m> for the 2nd integral.</p></hint><answer><p><m>\frac{1}{2}x+\frac{1}{4}\sin(2x)+\frac{1}{4}\sin^4 x+C</m></p></answer></task>
+      <task><statement><p><m>\int \frac{\tan^3(\ln x)}{x}\,dx</m></p></statement><hint><p>Use <m>u=\ln x</m>, then write <m>\tan^3 u=\tan u(\sec^2 u-1)</m>.</p></hint><answer><p><m>\frac{1}{2}\tan^2(\ln x)+\ln\abs{\cos(\ln x)}+C</m></p></answer></task>
+    </project>
+    <project>
+      <title>★★★★ Advanced (Multiple Techniques Required)</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int_{-\frac{\pi}{3}}^0 2\sec^3 x\,dx</m></p></statement><hint><p>Use the formula <m>\int \sec^3 x\,dx=\frac{1}{2}\sec x\tan x+\frac{1}{2}\ln|\sec x+\tan x|+C</m>, then evaluate from <m>-\frac{\pi}{3}</m> to <m>0</m>.</p></hint><answer><p><m>2\sqrt{3}+\ln(2+\sqrt{3})</m></p></answer></task>
+      <task><statement><p><m>\int e^x\sec^3(e^x)\,dx</m></p></statement><hint><p>Use <m>u=e^x</m>, so <m>du=e^x\,dx</m>, then apply the formula for <m>\int \sec^3 u\,du</m>.</p></hint><answer><p><m>\frac{1}{2}\sec(e^x)\tan(e^x)+\frac{1}{2}\ln|\sec(e^x)+\tan(e^x)|+C</m></p></answer></task>
+      <task><statement><p><m>\int x\sin^2 x\,dx</m></p></statement><hint><p>Use <m>\sin^2 x=\frac{1-\cos(2x)}{2}</m>, then integrate <m>\int \frac{x}{2}\,dx-\frac{1}{2}\int x\cos(2x)\,dx</m>, using integration by parts on the second integral.</p></hint><answer><p><m>\frac{1}{4}x^2-\frac{1}{4}x\sin(2x)-\frac{1}{8}\cos(2x)+C</m></p></answer></task>
+      <task><statement><p><m>\int x\cos^3 x\,dx</m></p></statement><hint><p>First rewrite <m>\cos^3 x=\cos x(1-\sin^2 x)</m> and integrate <m>\cos^3 x</m> using <m>u=\sin x</m>, then use integration by parts with <m>u=x</m> and <m>dv=\cos^3 x\,dx</m>.</p></hint><answer><p><m>x\sin x-\frac{1}{3}x\sin^3 x+\frac{2}{3}\cos x+\frac{1}{9}\cos^3 x+C</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-trig-integrals-advanced">
+    <title>More Complicated Tangent and Secant Integrals</title>
+
+    <p>For an integral of tangent and secant, the integral is more complicated if the exponent of secant is odd, and the exponent of tangent is even. In this case, there isn't a straightforward technique, and we have to be creative.</p>
+
+    <example>
+      <title>Secant 3rd Power</title>
+      <statement><p>Evaluate <m>\int \sec^3{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>This is more tricky. It turns out that one way is to use integration by parts, by splitting the integral as,</p>
+        <md>
+          <mrow>\amp= \int \sec{x} \cdot \sec^2{x}\,dx</mrow>
+        </md>
+        <p>Then,</p>
+        <tabular halign="center">
+          <col/><col/>
+          <row><cell><m>u = \sec{x}</m></cell><cell><m>v = \tan{x}</m></cell></row>
+          <row><cell><m>\downarrow</m></cell><cell><m>\uparrow</m></cell></row>
+          <row><cell><m>du = \sec{x} \tan{x} \,dx</m></cell><cell><m>dv = \sec^2{x} \,dx</m></cell></row>
+        </tabular>
+        <p>Then,</p>
+        <md>
+          <mrow>\amp= \sec{x} \tan{x} - \int \tan{x} \cdot \sec{x} \tan{x} \,dx</mrow>
+          <mrow>\amp= \sec{x} \tan{x} - \int \brac{\sec^2{x} - 1} \sec{x} \,dx</mrow>
+          <mrow>\amp= \sec{x} \tan{x} - \int \sec^3{x} \,dx + \int \sec{x} \,dx</mrow>
+        </md>
+        <p>The original integral <m>\int \sec^3{x} \,dx</m> appears on the right-hand side. Then, combining them together,</p>
+        <md>
+          <mrow>2 \int \sec^3{x} \,dx \amp= \sec{x} \tan{x} + \int \sec{x} \,dx</mrow>
+        </md>
+        <p>For <m>\int \sec{x} \,dx</m>, recall that <m>\int \sec{x} \,dx = \ln{\abs{\sec{x} + \tan{x}}} + C</m>. Putting it all together,</p>
+        <md>
+          <mrow>\int \sec^3{x} \,dx \amp= \frac{1}{2} \sec{x} \tan{x} + \frac{1}{2} \ln{\abs{\sec{x} + \tan{x}}} + C</mrow>
+        </md>
+        <p>A very interesting pattern is that on the right-hand side, there is <m>\sec{x} \tan{x}</m> which is the derivative of <m>\sec{x}</m>, and <m>\ln{\abs{\sec{x} + \tan{x}}}</m> which is the integral of <m>\sec{x}</m>. In other words, the integral of secant cubed is the average of the derivative and integral of secant.</p>
+      </solution>
+    </example>
+
+    <example>
+      <title>Integral of <m>\tan^2{x} \sec{x}</m></title>
+      <statement><p>Evaluate <m>\int \tan^2{x} \sec{x} \,dx</m>.</p></statement>
+      <solution>
+        <p>Here, the exponent of secant is 1 which is odd, and the exponent of tangent is 2 which is even, so this is the case where there isn't a straightforward technique. It turns out, the trick is to use the identity <m>\tan^2{x} = \sec^2{x} - 1</m>,</p>
+        <md>
+          <mrow>\amp= \int (\sec^2{x} - 1) \sec{x} \,dx</mrow>
+          <mrow>\amp= \int (\sec^3{x} - \sec{x}) \,dx</mrow>
+          <mrow>\amp= \int \sec^3{x} \,dx - \int \sec{x} \,dx</mrow>
+        </md>
+        <p>These are 2 integrals which we have seen before,</p>
+        <ul>
+          <li><p>For <m>\int \sec^3{x} \,dx</m>, we can use integration by parts, by splitting the integral as <m>\int \sec{x} \cdot \sec^2{x}\,dx</m>.</p></li>
+          <li><p>For <m>\int \sec{x} \,dx</m>, this is a standard integral, and recall that <m>\int \sec{x} \,dx = \ln{\abs{\sec{x} + \tan{x}}} + C</m>.</p></li>
+        </ul>
+        <md>
+          <mrow>\amp= \frac{1}{2} \sec{x} \tan{x} + \frac{1}{2} \ln{\abs{\sec{x} + \tan{x}}} - \ln{\abs{\sec{x} + \tan{x}}} + C</mrow>
+          <mrow>\amp= \frac{1}{2} \sec{x} \tan{x} - \frac{1}{2} \ln{\abs{\sec{x} + \tan{x}}} + C</mrow>
+        </md>
+      </solution>
+    </example>
+
+    <project>
+      <title>Evaluate Each Integral</title>
+      <introduction><p>Evaluate each integral.</p></introduction>
+      <task><statement><p><m>\int \tan^2{x} \sec^3{x} \,dx</m></p></statement><hint><p>Use <m>\tan^2{x} = \sec^2{x} - 1</m>, and split the integral as <m>\int \sec^5{x} \,dx - \int \sec^3{x} \,dx</m>. Use integration by parts on <m>\int \sec^5{x} \,dx</m>, which will result in the same integral appearing <m>\int \tan^2{x} \sec^3{x} \,dx</m>. Solve for the integral.</p></hint><answer><p><m>\frac{1}{4} \sec^3{x} \tan{x} - \frac{1}{8} \sec{x} \tan{x} - \frac{1}{8} \ln{\abs{\sec{x} + \tan{x}}} + C</m></p></answer></task>
+      <task><statement><p><m>\int \tan^4 x\sec^3 x\,dx</m></p></statement><hint><p>Use <m>\tan^4 x=(\sec^2 x-1)^2</m>, expand, and integrate <m>\int \sec^7 x\,dx-2\int \sec^5 x\,dx+\int \sec^3 x\,dx</m> using the reduction formulas for odd powers of secant.</p></hint><answer><p><m>\frac{1}{6}\sec^5 x\tan x-\frac{7}{24}\sec^3 x\tan x+\frac{1}{16}\sec x\tan x+\frac{1}{16}\ln|\sec x+\tan x|+C</m></p></answer></task>
+    </project>
+
+  </subsection>
+
+</section>

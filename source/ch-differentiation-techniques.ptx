@@ -8,6 +8,7 @@
   </introduction> -->
 
   <!-- include sections -->
+  <xi:include href="./sec-product-rule.ptx" />
   <xi:include href="./sec-implicit-differentiation.ptx" />
 
 </chapter>

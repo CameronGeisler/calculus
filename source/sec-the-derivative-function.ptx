@@ -227,24 +227,5 @@
     </exercise>
   </subsection>
 
-  <subsection xml:id="subsec-differentiability">
-    <title>Differentiability</title>
-
-    <example>
-      <title>Domain of the Derivative</title>
-      <p>For <m>f(x)=\sqrt{x}</m>, notice that while its domain is <m>[0,\infty)</m>, its derivative <m>f'(x)</m> is only differentiable on <m>(0,\infty)</m>. In particular, <m>f</m> is not differentiable at <m>x = 0</m>.</p>
-    </example>
-
-    <example>
-      <title>Geometric Visualization of the Derivative</title>
-      <p>There is a nice visualization for this derivative. Let <m>y = x^2</m> represent the area of a square with side length <m>x</m>. Then, for some small increment <m>\Delta x</m>, the added area is <m>\Delta y = 2x \Delta x + (\Delta x)^2</m>. Then,</p>
-      <md>
-        <mrow>\frac{\Delta y}{\Delta x} \amp= \frac{2x \Delta x + (\Delta x)^2}{\Delta x}</mrow>
-        <mrow>\amp= 2x + \Delta x</mrow>
-      </md>
-      <p>Then, as <m>\Delta x \to 0</m>, we get,</p>
-      <me>\frac{dy}{dx} = 2x</me>
-    </example>
-  </subsection>
 
 </section>

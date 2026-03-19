@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-differentiability" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Differentiability</title>
+
+  <introduction>
+    <p>The derivative of a function does not always exist. In other words, we can't always find the slope of the tangent line to a function. This is because the derivative is a limit, and as we've seen, limits do not always exist.</p>
+    <ul>
+      <li><p>If a function has a derivative at <m>x</m>, then we say that <m>f</m> is <term>differentiable</term> at <m>x</m>.</p></li>
+      <li><p>If <m>f</m> does not have a derivative at <m>x</m>, then we say that <m>f</m> is <term>non-differentiable</term> at <m>x</m>.</p></li>
+    </ul>
+    <p>Literally, <q>differentiable</q> means <q>able to be differentiated</q>, which means we can take its derivative.</p>
+
+    <example>
+      <title>Square Root Function</title>
+      <p>For the square root function <m>f(x)=\sqrt{x}</m>, recall its derivative is <m>f'(x) = \frac{1}{2\sqrt{x}}</m> (using the power rule).</p>
+      <ul>
+        <li><p>The domain of <m>f</m> is <m>[0,\infty)</m>, because we can only take the square root of non-negative numbers.</p></li>
+        <li><p>However, the domain of <m>f'</m> is <m>(0,\infty)</m>, because we need to also exclude <m>x=0</m>, because we also cannot divide by zero.</p></li>
+      </ul>
+      <p>In particular, <m>f</m> is not differentiable at <m>x=0</m>. <url href="https://www.desmos.com/calculator/yutdx1tajj">Graph of <m>f(x)=\sqrt{x}</m> and its derivative</url>. Notice that the graph of <m>f</m> at <m>x=0</m> has slopes which are increasingly steep and positive. In other words, they approach <m>\infty</m>. This is why the derivative does not exist at <m>x=0</m>.</p>
+    </example>
+
+    <example>
+      <title>Derivative of Absolute Value Function</title>
+      <p>Consider the derivative of the absolute value function,</p>
+      <me>f(x) = \abs{x} = \begin{cases} x \amp x \geq 0 \\ -x \amp x \lt 0 \end{cases}</me>
+      <p><url href="https://www.desmos.com/calculator/m8e6cefjke">Graph of <m>f(x) = \abs{x}</m></url>. It is a line with slope 1 for <m>x\gt 0</m>, a line with slope <m>-1</m> for <m>x \lt 0</m>, and there is a <q>sharp corner</q> at <m>x = 0</m>. Therefore, we expect that its derivative will be 1 for <m>x \gt 0</m>, <m>-1</m> for <m>x \lt 0</m>. Indeed,</p>
+      <ul>
+        <li><p>For <m>x \gt 0</m>, <m>f'(x) = \frac{d}{dx} x = 1</m></p></li>
+        <li><p>For <m>x \lt 0</m>, <m>f'(x) = \frac{d}{dx} (-x) = -1</m></p></li>
+      </ul>
+      <p>However, at <m>x = 0</m> (the sharp corner), we have to use the limit definition of derivative, because the function is given by two different formulas on either side of <m>x = 0</m>.</p>
+      <p>First, intuitively, the derivative represents the slope of the graph. However, at <m>x=0</m>, the function has two different slopes on each side of <m>x=0</m>. Therefore, we expect that the derivative does not exist at <m>x=0</m>. We can confirm this using the limit definition of derivative,</p>
+      <md>
+        <mrow>f'(0) \amp= \lim_{h \to 0} \frac{\abs{0 + h} - \abs{0}}{h}</mrow>
+        <mrow>\amp= \lim_{h \to 0} \frac{\abs{h}}{h} \amp\amp \text{simplifying}</mrow>
+      </md>
+      <p>You might recognize this limit from one we have seen before: <url href="https://camerongeisler.github.io/calculus/sec-calculating-limits.html#ex-abs-value-intro-1">Limit with Absolute Value</url>, which does not exist. To see this, we can evaluate the limit from the right and from the left,</p>
+      <ul>
+        <li>
+          <p>From the right, as <m>h \to 0+</m>, <m>\abs{h} = h</m>, and so,
+            <me>\lim_{h \to 0+} \frac{\abs{h}}{h} = \lim_{h \to 0+} \frac{h}{h} = \lim_{h \to 0+} 1 = 1</me>
+            Thus, from the right, the slopes approach 1 (this can be confirmed graphically).
+          </p>
+        </li>
+        <li>
+          <p>However, from the left, as <m>h \to 0-</m>, <m>\abs{h} = -h</m>, and so,
+            <me>\lim_{h \to 0-} \frac{\abs{h}}{h} = \lim_{h \to 0-} \frac{-h}{h} = \lim_{h \to 0-} -1 = -1</me>
+            From the left, the slopes approach <m>-1</m>.
+          </p>
+        </li>
+      </ul>
+      <p>Since these one sided limits are not equal, <m>\lim_{h \to 0} \frac{\abs{h}}{h}</m> does not exist, and so the derivative does not exist. In summary,</p>
+      <me>\boxed{\frac{d}{dx} \abs{x} = \begin{cases} 1 \amp x \gt 0 \\ -1 \amp x \lt 0 \end{cases}}</me>
+      <p>Graphically: <url href="https://www.desmos.com/calculator/krnjs3aybs">Graph of <m>f(x)=\abs{x}</m> and its derivative</url>. Notice that the graph of the derivative has a jump discontinuity at <m>x=0</m>.</p>
+      <p>Note: The derivative of the absolute value function can be summarized concisely with a single formula, using the expression <m>\frac{\abs{x}}{x}</m>,</p>
+      <me>\frac{d}{dx} \abs{x} = \frac{\abs{x}}{x} \qquad x \neq 0</me>
+    </example>
+
+    <p>The absolute value function shows that a function can be continuous at a point, but not have a derivative there.</p>
+  </introduction>
+
+  <subsection xml:id="subsec-differentiability-and-continuity">
+    <title>Differentiability and Continuity</title>
+
+    <p>Intuitively, a function is differentiable at <m>x</m> if its graph is <q>smooth</q>. In other words, it is continuous, but also, roughly, it <q>bends</q> gently and consistently, as opposed to having a sudden change in direction.</p>
+
+    <theorem xml:id="thm-differentiability-implies-continuity">
+      <title>Differentiability Implies Continuity</title>
+      <statement>
+        <p>If a function <m>f</m> is differentiable at <m>x=a</m>, then it is continuous at <m>x = a</m>.</p>
+        <ul>
+          <li><p>Equivalently, if <m>f</m> is not continuous at <m>a</m>, then <m>f</m> is not differentiable at <m>a</m>.</p></li>
+        </ul>
+      </statement>
+    </theorem>
+
+    <p>Intuitively, this means that if a function is smooth, then it must be continuous (it can't have a hole, jump, asymptote, etc.)</p>
+
+    <p>However, the reverse direction is not true. In that, if a function is continuous, this does not necessarily mean it will be differentiable.</p>
+
+    <p>To intuitively understand why this is always true, it is helpful to think about the equivalent statement:</p>
+
+    <p>If a function is <em>not</em> continuous at a point (it has a break, jump, or asymptote, etc.), then it must be <em>not</em> be differentiable at that point (the slope of a tangent line can't be found).</p>
+
+    <p>In this way, differentiability is a stronger condition than continuity, in that to be differentiable, you have to be continuous at a bare minimum, and also something more.</p>
+
+    <p>The following four graphs illustrate this. Each level adds a stronger requirement that makes the graph more <q>nice</q>.</p>
+
+    <image width="100%">
+      <latex-image>
+        \begin{tikzpicture}
+        % Graph 1: Not defined (hole)
+        \begin{axis}[
+            at={(0,0)},
+            width=4.5cm, height=4.5cm,
+            axis lines=middle,
+            xtick={1}, ytick=\empty,
+            xmin=-0.5, xmax=2.5, ymin=-0.5, ymax=3,
+            title={\small Not defined},
+            title style={at={(0.5,1.15)}},
+            xlabel={}, ylabel={},
+            every axis plot/.append style={very thick, blue, samples=100}
+        ]
+            \addplot[domain=-0.5:0.9] {x+1};
+            \addplot[domain=1.1:2.5] {x+1};
+            \addplot[only marks, mark=o, mark size=2.5pt, blue] coordinates {(1,2)};
+        \end{axis}
+
+        % Graph 2: Defined but not continuous (jump)
+        \begin{axis}[
+            at={(4.5cm,0)},
+            width=4.5cm, height=4.5cm,
+            axis lines=middle,
+            xtick={1}, ytick=\empty,
+            xmin=-0.5, xmax=2.5, ymin=-0.5, ymax=3,
+            title={\small Defined, not continuous},
+            title style={at={(0.5,1.15)}},
+            xlabel={}, ylabel={},
+            every axis plot/.append style={very thick, blue, samples=100}
+        ]
+            \addplot[domain=-0.5:0.98] {x+1};
+            \addplot[domain=1.02:2.5] {x-0.5};
+            \addplot[only marks, mark=o, mark size=2.5pt, blue] coordinates {(1,2)};
+            \addplot[only marks, mark=*, mark size=2.5pt, blue] coordinates {(1,0.5)};
+        \end{axis}
+
+        % Graph 3: Continuous but not differentiable (corner)
+        \begin{axis}[
+            at={(9cm,0)},
+            width=4.5cm, height=4.5cm,
+            axis lines=middle,
+            xtick={1}, ytick=\empty,
+            xmin=-0.5, xmax=2.5, ymin=-0.5, ymax=3,
+            title={\small Continuous, not differentiable},
+            title style={at={(0.5,1.15)}},
+            xlabel={}, ylabel={},
+            every axis plot/.append style={very thick, blue, samples=100}
+        ]
+            \addplot[domain=-0.5:1] {x+1};
+            \addplot[domain=1:2.5] {-x+3};
+        \end{axis}
+
+        % Graph 4: Differentiable (smooth)
+        \begin{axis}[
+            at={(13.5cm,0)},
+            width=4.5cm, height=4.5cm,
+            axis lines=middle,
+            xtick={1}, ytick=\empty,
+            xmin=-0.5, xmax=2.5, ymin=-0.5, ymax=3,
+            title={\small Differentiable},
+            title style={at={(0.5,1.15)}},
+            xlabel={}, ylabel={},
+            every axis plot/.append style={very thick, blue, samples=100}
+        ]
+            \addplot[domain=-0.5:2.5] {-(x-1)^2 + 2};
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+
+    <p>In summary,</p>
+    <ul>
+      <li><p>Every differentiable function is continuous, but not every continuous function is differentiable.</p></li>
+      <li><p>Every continuous function is defined, but not every defined function is continuous.</p></li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="subsec-differentiability-examples">
+    <title>Examples</title>
+
+    <exercise>
+      <title>Differentiability of <m>x\abs{x}</m></title>
+      <statement><p>For the function <m>f(x)=x \cdot \abs{x}</m>, determine if <m>f</m> is differentiable at <m>x=0</m>.</p></statement>
+      <hint><p>Use the definition of derivative, <m>f'(0) = \lim_{h \to 0} \frac{f(0+h)-f(0)}{h}</m>.</p></hint>
+      <answer><p>Yes, and <m>f'(0)=0</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Continuous but Not Differentiable</title>
+      <statement><p>Give an example of a function that is continuous on <m>-\infty\lt x\lt \infty</m> but is not differentiable at <m>x=3</m>.</p></statement>
+      <hint><p>Think of the absolute value function.</p></hint>
+      <answer><p><m>f(x)=|x-3|</m>.</p></answer>
+    </exercise>
+
+    <project>
+      <title>Domain of <m>f</m> and <m>f'</m></title>
+      <introduction><p>Find <m>f'(x)</m> and state the domains of <m>f</m> and <m>f'</m>.</p></introduction>
+      <task><statement><p><m>f(x)=1+x+\frac{1}{2}x^2+\frac{1}{3}x^3+\frac{1}{4}x^4</m></p></statement><answer><p><m>f'(x)=1+x+x^2+x^3</m>, domain of <m>f</m> is <m>(-\infty,\infty)</m>, domain of <m>f'</m> is <m>(-\infty,\infty)</m>.</p></answer></task>
+      <task><statement><p><m>f(x)=4x-\sqrt[4]{x}</m></p></statement><answer><p><m>f'(x)=4-\frac{1}{4x^{\frac{3}{4}}}</m>, domain of <m>f</m> is <m>[0,\infty)</m>, domain of <m>f'</m> is <m>(0,\infty)</m>.</p></answer></task>
+      <task><statement><p><m>f(x)=x+\frac{\sqrt{10}}{x^5}</m></p></statement><answer><p><m>f'(x)=1-\frac{5\sqrt{10}}{x^6}</m>, domain of <m>f</m> is <m>(-\infty,0)\cup(0,\infty)</m>, domain of <m>f'</m> is <m>(-\infty,0)\cup(0,\infty)</m>.</p></answer></task>
+      <task><statement><p><m>f(x)=\sqrt{x}+\frac{2}{\sqrt{x}}</m></p></statement><answer><p><m>f'(x)=\frac{1}{2\sqrt{x}}-\frac{1}{x\sqrt{x}}</m>, domain of <m>f</m> is <m>(0,\infty)</m>, domain of <m>f'</m> is <m>(0,\infty)</m>.</p></answer></task>
+    </project>
+
+    <exercise>
+      <title>Piecewise Linear and Quadratic</title>
+      <introduction>
+        <p>Let</p>
+        <me>f(x)=\begin{cases}
+            2x+3 \amp \text{if } x\lt -1,\\
+            x^2 \amp \text{if } -1\le x\le 1,\\
+            3-2x \amp \text{if } x\gt 1.
+            \end{cases}</me>
+      </introduction>
+      <task><statement><p>Where is <m>f</m> differentiable?</p></statement><answer><p><m>(-\infty,-1)\cup(-1,1)\cup(1,\infty)</m></p></answer></task>
+      <task><statement><p>Find an expression for <m>f'</m>.</p></statement><answer><p><m>f'(x)=
+          \begin{cases}
+          2 \amp \text{if } x\lt -1,\\
+          2x \amp \text{if } -1\lt x\lt 1,\\
+          -2 \amp \text{if } x\gt 1.
+          \end{cases}</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Graph of <m>\abs{x^2-4}</m></title>
+      <introduction><p>Let <m>f(x) = \abs{x^2-4}</m>.</p></introduction>
+      <task><statement><p>For what values of <m>x</m> is <m>f</m> not differentiable?</p></statement><hint><p>Find where <m>x^2-4=0</m>.</p></hint><answer><p><m>x=-2</m> and <m>x=2</m>.</p></answer></task>
+      <task><statement><p>Find a formula for <m>f'</m>.</p></statement><answer><p><m>f'(x)=
+          \begin{cases}
+          2x \amp \text{if } x\lt -2 \text{ or } x\gt 2,\\
+          -2x \amp \text{if } -2\lt x\lt 2.
+          \end{cases}</m></p></answer></task>
+      <task><statement><p>Sketch the graph of <m>f</m> and <m>f'</m>.</p></statement><hint><p>Use <m>f(x)=x^2-4</m> for <m>|x|\ge 2</m> and <m>f(x)=4-x^2</m> for <m>|x|\le 2</m>.</p></hint><answer><p><m>f</m> is two upward-opening arms for <m>|x|\ge 2</m> and a downward-opening arc on <m>[-2,2]</m>, and <m>f'</m> is <m>2x</m> outside <m>[-2,2]</m> and <m>-2x</m> inside.</p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Piecewise Quadratic and Linear</title>
+      <statement>
+        <p>Let</p>
+        <me>f(x)=\begin{cases}x^2+1 \amp \text{if } x\lt 1,\\ x+1 \amp \text{if } x\ge 1.\end{cases}</me>
+        <p>Is <m>f</m> differentiable at 1? Sketch the graphs of <m>f</m> and <m>f'</m>.</p>
+      </statement>
+      <hint><p>Compare the left and right derivatives at <m>x=1</m>.</p></hint>
+      <answer><p><m>f</m> is not differentiable at 1, and <m>f'(x)=2x</m> for <m>x\lt 1</m> while <m>f'(x)=1</m> for <m>x\gt 1</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Three-Piece Function</title>
+      <statement>
+        <p>Let</p>
+        <me>f(x)=\begin{cases}2x \amp \text{if } x\le 0,\\ 2x-x^2 \amp \text{if } 0\lt x\lt 2,\\ 2-x \amp \text{if } x\ge 2.\end{cases}</me>
+        <p>At what numbers is <m>f</m> differentiable? Give a formula for <m>f'</m> and sketch the graphs of <m>f</m> and <m>f'</m>.</p>
+      </statement>
+      <hint><p>Check differentiability at the junctions <m>x=0</m> and <m>x=2</m>.</p></hint>
+      <answer><p><m>f</m> is differentiable for all <m>x</m> except <m>x=2</m>, and <m>f'(x)=\begin{cases}2 \amp \text{if } x\lt 0,\\ 2-2x \amp \text{if } 0\lt x\lt 2,\\ -1 \amp \text{if } x\gt 2.\end{cases}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Differentiability of <m>\abs{x^2-9}</m></title>
+      <introduction><p>Let <m>f(x) = \abs{x^2-9}</m>.</p></introduction>
+      <task><statement><p>For what values of <m>x</m> is <m>f</m> differentiable?</p></statement><hint><p>Find where <m>x^2-9=0</m>.</p></hint><answer><p>All <m>x</m> except <m>x=-3</m> and <m>x=3</m>.</p></answer></task>
+      <task><statement><p>Find a formula for <m>f'</m>.</p></statement><answer><p><m>f'(x)=\begin{cases}2x \amp \text{if } x\lt -3 \text{ or } x\gt 3,\\ -2x \amp \text{if } -3\lt x\lt 3.\end{cases}</m></p></answer></task>
+      <task><statement><p>Sketch the graphs of <m>f</m> and <m>f'</m>.</p></statement><hint><p>Use <m>f(x)=x^2-9</m> for <m>|x|\ge 3</m> and <m>f(x)=9-x^2</m> for <m>|x|\le 3</m>.</p></hint><answer><p><m>f</m> is two upward-opening arms for <m>|x|\ge 3</m> and a downward-opening arc on <m>[-3,3]</m>, and <m>f'</m> is <m>2x</m> outside <m>[-3,3]</m> and <m>-2x</m> inside.</p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Differentiability of <m>\abs{x^2-1}</m></title>
+      <introduction><p>Let <m>f(x) = \abs{x^2-1}</m>.</p></introduction>
+      <task><statement><p>For what values of <m>x</m> is <m>f</m> not differentiable?</p></statement><hint><p>Find where <m>x^2-1=0</m>.</p></hint><answer><p><m>f</m> is not differentiable at <m>x=-1</m> and <m>x=1</m>.</p></answer></task>
+      <task><statement><p>Find a formula for <m>f'</m>, and sketch the graph of <m>f'</m>.</p></statement><hint><p>Write <m>f</m> as a piecewise function first.</p></hint><answer><p><m>f'(x)=2x</m> for <m>x\lt -1</m> or <m>x\gt 1</m>, <m>f'(x)=-2x</m> for <m>-1\lt x\lt 1</m>, and <m>f'</m> is undefined at <m>x=-1,1</m>.</p></answer></task>
+      <task><statement><p>Find <m>f'(x)</m> at <m>x=-2</m>, 0, and 3.</p></statement><hint><p>Use the formula from part (b).</p></hint><answer><p><m>f'(-2)=-4</m>, <m>f'(0)=0</m>, and <m>f'(3)=6</m>.</p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Sum of Absolute Values</title>
+      <introduction><p>Let <m>f(x)=\abs{x-1}+\abs{x+2}</m>.</p></introduction>
+      <task><statement><p>Where is <m>f(x)</m> not differentiable?</p></statement><hint><p>Find where <m>x-1=0</m> and where <m>x+2=0</m>.</p></hint><answer><p><m>f</m> is not differentiable at <m>x=-2</m> and <m>x=1</m>.</p></answer></task>
+      <task><statement><p>Find a formula for <m>f'</m>.</p></statement><answer><p><m>f'(x)=\begin{cases}-2 \amp \text{if } x\lt -2,\\ 0 \amp \text{if } -2\lt x\lt 1,\\ 2 \amp \text{if } x\gt 1.\end{cases}</m></p></answer></task>
+      <task><statement><p>Sketch the graphs of <m>f</m> and <m>f'</m>.</p></statement><hint><p>Use <m>f(x)=-2x</m> for <m>x\lt -2</m>, <m>f(x)=3</m> for <m>-2\le x\le 1</m>, and <m>f(x)=2x</m> for <m>x\gt 1</m>.</p></hint><answer><p><m>f</m> is a line with slope <m>-2</m> for <m>x\lt -2</m>, a horizontal line at height 3 for <m>-2\le x\le 1</m>, and a line with slope 2 for <m>x\gt 1</m>. The graph of <m>f'</m> is a line with slope 0 at height -2 for <m>x\lt -2</m>, a line with slope 0 at height 0 for <m>-2\lt x\lt 1</m>, and a line with slope 0 at height 2 for <m>x\gt 1</m>.</p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Finding <m>m</m> and <m>b</m> for Differentiability</title>
+      <statement><p>Let <m>f(x)=\begin{cases}x^2 \amp \text{if } x\le 2,\\ mx+b \amp \text{if } x\gt 2.\end{cases}</m> Find the values of <m>m</m> and <m>b</m> that make <m>f</m> differentiable everywhere.</p></statement>
+      <hint><p>The left and right derivatives at <m>x=2</m> must be equal, and <m>f</m> must be continuous at <m>x=2</m>.</p></hint>
+      <answer><p><m>m=4</m> and <m>b=-4</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Finding <m>a</m> for Differentiability</title>
+      <statement>
+        <p>Let</p>
+        <me>g(x)=\begin{cases}ax \amp \text{if } x\lt 0,\\ x^2-3x \amp \text{if } x\ge 0.\end{cases}</me>
+        <p>Find the value of <m>a</m> that makes the following function differentiable for all <m>x</m>-values.</p>
+      </statement>
+      <hint><p>The left and right derivatives at <m>x=0</m> must be equal.</p></hint>
+      <answer><p><m>a=-3</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Finding <m>a</m> and <m>b</m> for Differentiability</title>
+      <statement><p>Find the values of <m>a</m> and <m>b</m> that make the following function differentiable for all <m>x</m>-values. <m>f(x)=\begin{cases}ax+b \amp \text{if } x\gt -1,\\ bx^2-3 \amp \text{if } x\le -1.\end{cases}</m></p></statement>
+      <hint><p>The left and right derivatives at <m>x=-1</m> must be equal, and <m>f</m> must be continuous at <m>x=-1</m>.</p></hint>
+      <answer><p><m>a=6</m> and <m>b=2</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Piecewise Quadratic Derivative</title>
+      <statement>
+        <p>Let</p>
+        <me>f(x)=
+        \begin{cases}
+        x^2+1 \amp \text{if } x\le 0,\\
+        2x^2+x+1 \amp \text{if } x\gt 0.
+        \end{cases}</me>
+        <p>Find the derivative of <m>f(x)</m>.</p>
+      </statement>
+      <answer><p><m>f'(x)=
+        \begin{cases}
+        2x \amp \text{if } x\lt 0,\\
+        4x+1 \amp \text{if } x\gt 0.
+        \end{cases}</m></p></answer>
+    </exercise>
+
+  </subsection>
+
+</section>

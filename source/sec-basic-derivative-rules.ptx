@@ -455,7 +455,7 @@
     <exercise>
       <title>Parallel Tangent on Cube Root</title>
       <statement><p>Find all points on the graph of <m>y = \frac{3}{\sqrt[3]{x}}</m> where the tangent line is parallel to the line <m>x + 16y + 3 = 0</m>.</p></statement>
-      <answer><p><m>x = -8</m> and <m>x = 8</m></p></answer>
+      <answer><p><m>\brac{-8,-\frac{3}{2}}</m> and <m>\brac{8,\frac{3}{2}}</m></p></answer>
     </exercise>
 
     <exercise>
@@ -631,8 +631,16 @@
     </exercise>
 
     <exercise>
+      <title>Tangent with Given Slope</title>
+      <statement><p>Find the equation of the line tangent to the curve <m>y = x + \sqrt{x}</m> that has slope 2.</p></statement>
+      <hint><p>The tangent at <m>x = a</m> has slope <m>1 + \frac{1}{2\sqrt{a}}</m>, which must equal 2.</p></hint>
+      <answer><p><m>y = 2x + \frac{1}{4}</m></p></answer>
+    </exercise>
+
+    <exercise>
       <title>Tangent Intersection Points</title>
       <statement><p>Find the <m>x</m>-coordinates of the points on the curve <m>y = \frac{1}{x}</m> where the tangents from the point <m>(1, -1)</m> intersect the curve.</p></statement>
+      <hint><p>The tangent at <m>x = a</m> has equation <m>y - \frac{1}{a} = -\frac{1}{a^2}(x - a)</m>, and it must pass through <m>(1, -1)</m>.</p></hint>
       <answer><p><m>x = -1 + \sqrt{2}</m> and <m>x = -1 - \sqrt{2}</m></p></answer>
     </exercise>
 
@@ -724,30 +732,39 @@
     </exercise>
 
     <exercise>
-      <title>Using Known Derivatives</title>
-      <task>
-        <statement><p>Suppose <m>f(3) = 1</m> and <m>f'(3) = 4</m>. Let <m>g(x) = x^2 + f(x)</m> and <m>h(x) = 3f(x)</m>. (a) Find an equation of the line tangent to <m>y = g(x)</m> at <m>x = 3</m>. (b) Find an equation of the line tangent to <m>y = h(x)</m> at <m>x = 3</m>.</p></statement>
-        <answer><p>(a) <m>y = 10x - 20</m>. (b) <m>y = 12x - 33</m>.</p></answer>
-      </task>
-      <task>
-        <statement><p>Suppose the line tangent to the graph of <m>f</m> at <m>x = 2</m> is <m>y = 4x + 1</m> and the line tangent to the graph of <m>g</m> at <m>x = 2</m> has slope 3 and passes through <m>(0, -2)</m>. Find an equation of the line tangent to each curve at <m>x = 2</m>. (a) <m>y = f(x) + g(x)</m>. (b) <m>y = f(x) - 2g(x)</m>. (c) <m>y = 4f(x)</m>.</p></statement>
-        <answer><p>(a) <m>y = 7x - 1</m>. (b) <m>y = -2x + 5</m>. (c) <m>y = 16x + 4</m>.</p></answer>
-      </task>
-      <task>
-        <statement><p>Find the equation of the line tangent to the curve <m>y = x + \sqrt{x}</m> that has slope 2.</p></statement>
-        <answer><p><m>y = 2x + \frac{1}{4}</m></p></answer>
-      </task>
-      <task>
-        <statement><p>Determine the constants <m>b</m> and <m>c</m> such that the line tangent to <m>f(x) = x^2 + bx + c</m> at <m>x = 1</m> is <m>y = 4x + 2</m>.</p></statement>
-        <answer><p><m>b = 2</m>, <m>c = 3</m></p></answer>
-      </task>
+      <title>Given Function Values</title>
+      <statement><p>Given that <m>f(4) = 2</m>, <m>g(4) = 5</m>, <m>f'(4) = 6</m>, and <m>g'(4) = -3</m>, find <m>(3f+8g)'(4)</m>.</p></statement>
+      <hint><p><m>= 3f'(4) + 8g'(4) = 3(6) + 8(-3)</m>.</p></hint>
+      <answer><p><m>-6</m></p></answer>
     </exercise>
 
     <exercise>
-      <title>Find a Second-Degree Polynomial</title>
-      <statement><p>Find a second-degree polynomial <m>P</m> such that <m>P(2) = 5</m>, <m>P'(2) = 3</m>, and <m>P''(2) = 2</m>.</p></statement>
-      <hint><p>Let <m>P(x) = ax^2 + bx + c</m> and use <m>P'(x) = 2ax + b</m> and <m>P''(x) = 2a</m>.</p></hint>
-      <answer><p><m>P(x) = x^2 - x + 3</m></p></answer>
+      <title>Point on Curve with Given Tangent</title>
+      <statement><p>Find the point on the curve <m>y = \frac{16}{x^2} - 1</m> that has a tangent line with equation <m>4x - y + 11 = 0</m>.</p></statement>
+      <hint><p>Compare the slope of the line with the derivative of the curve, then check that the point lies on both graphs.</p></hint>
+      <answer><p>The line is <m>y = 4x + 11</m>, so its slope is 4. For the curve, <m>y' = -\frac{32}{x^3}</m>. Setting <m>-\frac{32}{x^3} = 4</m> gives <m>x = -2</m>. Then <m>y = \frac{16}{(-2)^2} - 1 = 3</m>, and the line also gives <m>y = 4(-2) + 11 = 3</m>. So the line is tangent to the curve at <m>(-2, 3)</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Lines Using Known Values</title>
+      <introduction><p>Suppose <m>f(3) = 1</m> and <m>f'(3) = 4</m>. Let <m>g(x) = x^2 + f(x)</m> and <m>h(x) = 3f(x)</m>.</p></introduction>
+      <task><statement><p>Find an equation of the line tangent to <m>y = g(x)</m> at <m>x = 3</m>.</p></statement><answer><p><m>y = 10x - 20</m></p></answer></task>
+      <task><statement><p>Find an equation of the line tangent to <m>y = h(x)</m> at <m>x = 3</m>.</p></statement><answer><p><m>y = 12x - 33</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Tangent Lines from Known Tangent Lines</title>
+      <introduction><p>Suppose the line tangent to the graph of <m>f</m> at <m>x = 2</m> is <m>y = 4x + 1</m> and the line tangent to the graph of <m>g</m> at <m>x = 2</m> has slope 3 and passes through <m>(0, -2)</m>. Find an equation of the line tangent to the following curves at <m>x = 2</m>.</p></introduction>
+      <task><statement><p><m>y = f(x) + g(x)</m></p></statement><answer><p><m>y = 7x - 1</m></p></answer></task>
+      <task><statement><p><m>y = f(x) - 2g(x)</m></p></statement><answer><p><m>y = -2x + 5</m></p></answer></task>
+      <task><statement><p><m>y = 4f(x)</m></p></statement><answer><p><m>y = 16x + 4</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Determine Constants b and c</title>
+      <statement><p>Determine the constants <m>b</m> and <m>c</m> such that the line tangent to <m>f(x) = x^2 + bx + c</m> at <m>x = 1</m> is <m>y = 4x + 2</m>.</p></statement>
+      <hint><p>The tangent line at <m>x = 1</m> has slope <m>2 + b</m> and passes through the point <m>(1, 1+b+c)</m>. So, we require <m>2+b=4</m> and <m>1+b+c=6</m>.</p></hint>
+      <answer><p><m>b = 2</m>, <m>c = 3</m></p></answer>
     </exercise>
 
     <exercise>
@@ -778,17 +795,30 @@
     </exercise>
 
     <exercise>
-      <title>Common Tangent of Two Curves</title>
-      <statement><p>The curves <m>y = x^2 + ax + b</m> and <m>y = cx - x^2</m> have a common tangent line at the point <m>(1, 0)</m>. Find <m>a, b, c</m>.</p></statement>
-      <answer><p><m>a = -3</m>, <m>b = 2</m>, <m>c = 1</m></p></answer>
+      <title>Quadratic with Horizontal Tangent</title>
+      <statement><p>Determine a quadratic function <m>f(x) = ax^2 + bx + c</m> if its graph passes through the point <m>(2, 19)</m> and it has a horizontal tangent at <m>(-1, -8)</m>.</p></statement>
+      <hint><p>Use <m>f(2) = 19</m>, <m>f(-1) = -8</m>, and <m>f'(-1) = 0</m>.</p></hint>
+      <answer><p><m>f(x) = 3x^2 + 6x - 5</m></p></answer>
     </exercise>
 
     <exercise>
-      <title>nth Derivative Pattern</title>
-      <statement><p>Find the <m>n</m>th derivative of each function by calculating the first few derivatives and observing the pattern that occurs.</p></statement>
-      <task><statement><p><m>f(x) = x^n</m></p></statement><hint><p>Differentiate repeatedly to get <m>f^{(k)}(x) = n(n-1)\cdots(n-k+1)x^{n-k}</m>.</p></hint><answer><p><m>f^{(n)}(x) = n!</m></p></answer></task>
-      <task><statement><p><m>f(x) = \frac{1}{x}</m></p></statement><hint><p>Write <m>f(x) = x^{-1}</m> and differentiate repeatedly to see the alternating signs and factorial pattern.</p></hint><answer><p><m>f^{(n)}(x) = \frac{(-1)^n n!}{x^{n+1}}</m></p></answer></task>
+      <title>Common Tangent of Two Curves</title>
+      <statement><p>The curves <m>y = x^2 + ax + b</m> and <m>y = cx - x^2</m> have a common tangent line at the point <m>(1, 0)</m>. Find <m>a, b, c</m>.</p></statement>
+      <hint><p>Use <m>f(1) = 0</m>, <m>g(1) = 0</m>, and <m>f'(1) = g'(1)</m>.</p></hint>
+      <answer><p><m>a = -3</m>, <m>b = 2</m>, <m>c = 1</m></p></answer>
     </exercise>
+
+  </subsection>
+
+  <subsection xml:id="subsec-disguised-derivatives">
+    <title>Disguised Derivative Examples</title>
+
+    <project>
+      <title>Limits as Disguised Derivatives</title>
+      <introduction><p>Evaluate each limit by first converting it to a derivative at a particular <m>x</m>-value.</p></introduction>
+      <task><statement><p><m>\displaystyle\lim_{x \to 1} \frac{x^{50}-1}{x-1}</m></p></statement><hint><p>This is the definition of <m>\frac{d}{dx}(x^{50})\big|_{x=1} = 50x^{49}\big|_{x=1}</m>.</p></hint><answer><p><m>50</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\lim_{x \to -1} \frac{x^{2/9}-1}{x+1}</m></p></statement><hint><p>This is the definition of <m>\frac{d}{dx}(x^{2/9})\big|_{x=-1} = \frac{2}{9}x^{-7/9}\big|_{x=-1}</m>.</p></hint><answer><p><m>-\frac{2}{9}</m></p></answer></task>
+    </project>
   </subsection>
 
 </section>
