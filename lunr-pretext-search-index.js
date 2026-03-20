@@ -187,7 +187,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "The Derivative Function",
-  "body": " The Derivative Function   Recall that previously, we found the instantaneous rate of change of a function, which is the slope of the tangent line to the graph of the function, using a limit of the form,   This limit is very important in calculus, so it is given a name and a concise notation, called the derivative .   Derivative at a Point   The derivative of at , denoted by (read as prime of ), is given by,      Derivative at a Specific Point  Find the derivative of at .   Therefore, .   If we want to find the slope of the tangent line at many different values of , then this way of using the definition for each value of is not very efficient.  Instead, we can calculate the derivative at an arbitrary value of , which will give us a formula for the slope of the tangent at any value of .   Squaring Function  Find the derivative of at an arbitrary value of . To do this, instead of plugging in a specific value for , we will just leave it as ,   Therefore, . This means that the slope of the tangent line to the graph of at any value of is . For example, at , the slope of the tangent line is , which is what we found in the previous example.  This allows us to create a table of values for the slope of the tangent line at different values of ,                            This gives the slope at each of these values of . This means that the derivative is itself a function, which takes in a value of , and outputs the slope of the tangent line at that value of . Here is a graph: Graph of and its derivative . At each value of , the slope of the tangent line to the graph of is given by the -value of .   In general, the derivative of a function is not just a number, but is itself a function.    The Derivative as a Function   Derivative Function   Let be a function. The derivative of , denoted by , is another function, defined by,    The derivative is read as prime and as prime of .  The action of finding the derivative of a function is often called taking the derivative or differentiating .      Reciprocal Function  Consider the derivative of ,   To simplify this difference quotient, we first simplify the complex fraction, by clearing denominators, by multiplying numerator and denominator by ,   Therefore, . Observe the relationship between and its derivative: Graph of and its derivative . Notice that:   The slope of the tangent of is negative for all values of , which corresponds to the derivative being negative (or, ).  As gets larger, the slope of the tangent line gets closer to , which corresponds to the derivative getting closer to (or, as ).     Square Root Function  Consider the derivative of ,   Then, the goal is to cancel the factor of in the denominator. It turns out that the correct next algebraic step is a technique called rationalizing the numerator . You may recall rationalizing the denominator, which involves multiplying numerator and denominator in order to eliminate a square root in the denominator. Here, we can use a similar technique with the goal of removing the square roots in the numerator. In this case, we multiply by the conjugate of the numerator, which is ,   Observe the relationship between and its derivative: Desmos .   The slope of starts out large and positive, and then as increases, the slope becomes smaller but still positive.  This corresponds to the derivative being positive for all , and getting closer to 0 as gets larger (or, as ).      Derivative Using Limit Definition   Derivative at a Specific Value  For each function, find the value of the derivative for the given value of .        Derivatives of Polynomial Functions  Find the derivative of each function, using the limit definition of the derivative.           Derivatives of Rational Functions  Find the derivative of each function, using the limit definition of the derivative.       Derivatives of Square Root Functions  Find the derivative of each function, using the limit definition of the derivative.        Tangent Line from Given Values  Find the equation of the tangent line of at , given that and .  or    Finding Derivative from Tangent Line Equation  Suppose that the tangent line to at has equation . Find and .  and    Derivative of  For the function , show that exists. What is the value?      Advanced Examples   Tangent Lines Through an External Point  Determine the equations of both lines that are tangent to the graph of and pass through the point .  and    Continuous but Not Differentiable  Give an example of a function that is continuous on but is not differentiable at .     Tangent Parallel to a Line  At what point on the graph of is the tangent parallel to ?     Evaluating a Limit Using Derivative Information  If and , find .      Differentiability   Domain of the Derivative  For , notice that while its domain is , its derivative is only differentiable on . In particular, is not differentiable at .    Geometric Visualization of the Derivative  There is a nice visualization for this derivative. Let represent the area of a square with side length . Then, for some small increment , the added area is . Then,   Then, as , we get,     "
+  "body": " The Derivative Function   Recall that previously, we found the instantaneous rate of change of a function, which is the slope of the tangent line to the graph of the function, using a limit of the form,   This limit is very important in calculus, so it is given a name and a concise notation, called the derivative .   Derivative at a Point   The derivative of at , denoted by (read as prime of ), is given by,      Derivative at a Specific Point  Find the derivative of at .   Therefore, .   If we want to find the slope of the tangent line at many different values of , then this way of using the definition for each value of is not very efficient.  Instead, we can calculate the derivative at an arbitrary value of , which will give us a formula for the slope of the tangent at any value of .   Squaring Function  Find the derivative of at an arbitrary value of . To do this, instead of plugging in a specific value for , we will just leave it as ,   Therefore, . This means that the slope of the tangent line to the graph of at any value of is . For example, at , the slope of the tangent line is , which is what we found in the previous example.  This allows us to create a table of values for the slope of the tangent line at different values of ,                            This gives the slope at each of these values of . This means that the derivative is itself a function, which takes in a value of , and outputs the slope of the tangent line at that value of . Here is a graph: Graph of and its derivative . At each value of , the slope of the tangent line to the graph of is given by the -value of .   In general, the derivative of a function is not just a number, but is itself a function.    The Derivative as a Function   Derivative Function   Let be a function. The derivative of , denoted by , is another function, defined by,    The derivative is read as prime and as prime of .  The action of finding the derivative of a function is often called taking the derivative or differentiating .      Reciprocal Function  Consider the derivative of ,   To simplify this difference quotient, we first simplify the complex fraction, by clearing denominators, by multiplying numerator and denominator by ,   Therefore, . Observe the relationship between and its derivative: Graph of and its derivative . Notice that:   The slope of the tangent of is negative for all values of , which corresponds to the derivative being negative (or, ).  As gets larger, the slope of the tangent line gets closer to , which corresponds to the derivative getting closer to (or, as ).     Square Root Function  Consider the derivative of ,   Then, the goal is to cancel the factor of in the denominator. It turns out that the correct next algebraic step is a technique called rationalizing the numerator . You may recall rationalizing the denominator, which involves multiplying numerator and denominator in order to eliminate a square root in the denominator. Here, we can use a similar technique with the goal of removing the square roots in the numerator. In this case, we multiply by the conjugate of the numerator, which is ,   Observe the relationship between and its derivative: Desmos .   The slope of starts out large and positive, and then as increases, the slope becomes smaller but still positive.  This corresponds to the derivative being positive for all , and getting closer to 0 as gets larger (or, as ).      Derivative Using Limit Definition   Derivative at a Specific Value  For each function, find the value of the derivative for the given value of .        Derivatives of Polynomial Functions  Find the derivative of each function, using the limit definition of the derivative.           Derivatives of Rational Functions  Find the derivative of each function, using the limit definition of the derivative.       Derivatives of Square Root Functions  Find the derivative of each function, using the limit definition of the derivative.        Tangent Line from Given Values  Find the equation of the tangent line of at , given that and .  or    Finding Derivative from Tangent Line Equation  Suppose that the tangent line to at has equation . Find and .  and    Derivative of  For the function , show that exists. What is the value?      Advanced Examples   Tangent Lines Through an External Point  Determine the equations of both lines that are tangent to the graph of and pass through the point .  and    Continuous but Not Differentiable  Give an example of a function that is continuous on but is not differentiable at .     Tangent Parallel to a Line  At what point on the graph of is the tangent parallel to ?     Evaluating a Limit Using Derivative Information  If and , find .     "
 },
 {
   "id": "sec-the-derivative-function-2-3",
@@ -352,31 +352,13 @@ var ptx_lunr_docs = [
   "body": " Evaluating a Limit Using Derivative Information  If and , find .   "
 },
 {
-  "id": "subsec-differentiability-2",
-  "level": "2",
-  "url": "sec-the-derivative-function.html#subsec-differentiability-2",
-  "type": "Example",
-  "number": "2.1.14",
-  "title": "Domain of the Derivative.",
-  "body": " Domain of the Derivative  For , notice that while its domain is , its derivative is only differentiable on . In particular, is not differentiable at .  "
-},
-{
-  "id": "subsec-differentiability-3",
-  "level": "2",
-  "url": "sec-the-derivative-function.html#subsec-differentiability-3",
-  "type": "Example",
-  "number": "2.1.15",
-  "title": "Geometric Visualization of the Derivative.",
-  "body": " Geometric Visualization of the Derivative  There is a nice visualization for this derivative. Let represent the area of a square with side length . Then, for some small increment , the added area is . Then,   Then, as , we get,   "
-},
-{
   "id": "sec-basic-derivative-rules",
   "level": "1",
   "url": "sec-basic-derivative-rules.html",
   "type": "Section",
   "number": "2.2",
   "title": "Basic Derivative Rules",
-  "body": " Basic Derivative Rules   Calculating derivatives using the limit definition is often tedious and sometimes difficult, especially for more complicated functions. It turns out, there are various patterns and shortcut rules for computing derivatives of various functions, i.e. differentiation rules ,   Rules to differentiate specific types of functions, that you have learned about in pre-calculus.  Also, rules to differentiate various types of combinations of those functions.    This could be called systematic differentiation . Combining all of these rules will allow us to compute derivatives of every type of function that is covered in pre-calculus.    Derivative of Constant and a Line  Perhaps the most basic function is a constant function.   Constant Function  Consider the function . This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. Graph of . Its graph is a horizontal line at , which has slope 0, so we would expect that its derivative would be always 0. Indeed,    In general, for a constant function, of the form (where is some number), its derivative is 0, because its graph is a horizontal line, which has slope 0.      Derivative of a Constant Is Zero   If where is some number, then . In other words,     Using the definition of the derivative, we have,     In short,   A slightly more complicated situation is the case of a line.   Linear Function  Consider the function . This is a linear function, because its graph is a line. Graph of . This line has a slope of 2, so we would expect that its derivative would be always 2.   In general, a line has a constant slope, so its derivative is the slope of the line.    Derivatives of Constants and Lines  Find the derivative of each function.           Derivative of Power Functions (The Power Rule)  The next basic type of function we will consider are power functions, where the variable is raised to a constant number.   Discovering the Power Rule Pattern  You may recall from a previous section the following derivatives of , , , and . If not, these can be derived from the limit definition of the derivative. They are,   Observe the pattern for the derivative of these powers of . The derivative has:   A coefficient in the front, which is the exponent of .  The variable raised to an exponent that is one less than what it was before.   This applies to even the first example , as has an exponent of 1, so the pattern says the derivative should be (recall: for any ).  It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for any number.    Power Rule for Derivatives   If for some number , then . In other words,     In other words, to differentiate a function that is some power of the variable ,   Bring down the exponent into the front and multiply it.  Subtract 1 from the exponent.    Basic Power Rule Practice  Find the derivative of each function.       For the reciprocal function , you may recall its derivative is . This also follows the power rule, because .     Negative Exponent Practice  Differentiate each function.     , where is a constant     Derivative of a Constant Multiple  Next, it turns out that if we have a constant multiplied by a function, then that number can be kept in the front, and we can just differentiate the function as normal.   Constant Multiple Practice  Differentiate.             This is formalized by the constant multiple rule.   Constant Multiple Rule   The derivative of a constant multiplied by a function is that constant multiplied by the derivative of the function.       Derivative of Sums and Differences   Differentiating Term by Term  Consider the derivative of . This function has 3 terms ( , , and ). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of is , the derivative of is 5, and the derivative of is 0. So, the derivative of is .   In general, to differentiate a function with multiple terms,   Differentiate each term individually (term-by-term).  For any coefficients (numbers multiplied in the front), keep them in the front (they come along for the ride ).   These two intuitive rules are formalized by the sum rule and difference rule.   Sum\/Difference Rule   The derivative of a sum or difference is the sum or difference of the derivatives.        The sum or difference rule also applies to any number of functions, not just 2 functions. In other words,   This basically means that derivatives can be determined term-by-term.    Derivative of Polynomial Functions  We can now differentiate any polynomial function, using the previous rules.   Differentiating Polynomials  Differentiate each function.         Expand first.     Derivatives with Rational Exponents and Radical Functions  The power rule can also be used to differentiate functions with rational exponents (i.e. exponents which are fractions), and in general any term that can be represented as a power of the variable .   Recall that,   , , and in general, .  .     Differentiating the Square Root  For the square root function , you may recall its derivative is . This also follows the power rule, because ,    In general, if your derivative has negative exponents, it is good practice to rewrite the final answer with positive exponents.   Rational Exponents and Radicals  Differentiate each function.        The same power rule applies: bring down the exponent, and subtract 1.           Practice: Differentiate   Positive Integer Exponents  Differentiate each function.                 Negative Exponents  Differentiate each function.       Fractional Exponents and Radicals  Differentiate each function.              Evaluating the Derivative  Determine for the given function at the given value of .  ,  ,    Slope of the Tangent  Determine the slope of the tangent to each curve at the given point.  ,  ,  ,  ,  ,  ,  ,  ,     Practice: Tangent Lines   Tangent Line Equations  Find an equation of the tangent line to each function at the given point.  at or  at the point or  at or  at or  ,  ,  ,  ,  at  at  at  at  at  at    Horizontal Tangent Lines  Find all points on the graph where the tangent line is horizontal.  and  , ,  and     Simplifying Before Using Basic Rules  Sometimes, you need to rewrite the function first before you can use the basic rules. In particular, write it as a sum of multiple terms.   Expand Then Differentiate  Differentiate each function.            Divide Then Differentiate  Differentiate each function.            ,       Mixed Simplification  Differentiate each function.           Abstract Functions  Differentiate each function.         Examples   Parabola Slope  At what point on the parabola is the slope of the tangent line equal to 24?     Parallel Tangent on Hyperbola  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Quartic  Find all points on the graph of where the tangent line is parallel to the line .     Parallel Tangent on Cube Root  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Parabola  Find all points on the graph of where the tangent line is parallel to the line .     Parallel Tangent on Cubic  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Power Function  Find the point on the curve where the tangent line is parallel to the line .     No Tangent with Given Slope  Show that the curve has no tangent lines with slope 3.  Solve .  The equation becomes , which has no real solution.    Normal Line  Determine the equation of the normal to the graph of at . (A normal line is perpendicular to the tangent line at the point of tangency.)  The tangent slope is 18, so the normal slope is and the normal line is .    Same Slope?  Do the functions and ever have the same slope? If so, where?  No, they never have the same slope (there is no real solution).    Perpendicular Tangents  Show that the tangent lines to at and are perpendicular.  The slopes of the tangent lines are and , and since , the tangent lines are perpendicular.    Point Where Slope Equals 5  Determine the point on the parabola where the slope of the tangent is 5.     Points Where Slope Equals 12  Determine the coordinates of the points on the graph of at which the slope of the tangent is 12.  and    Two Tangents with Given Slope  Show that there are two tangents to the curve that have a slope of 6.  The tangency points occur at and , giving tangent lines and .    Find the Constant  Determine the value of , given that the line is tangent to the graph of at .     Slope Locations on Parabola   Let .   Find the values of for which the slope of the curve is 0.  Find the values of for which the slope of the curve is 2.    Slope Locations on Cubic   Let .   Find the values of for which the slope of the curve is 0.  Find the values of for which the slope of the curve is 21.    Tangent Slope Conditions   Let .   Find all points on the graph of at which the tangent line is horizontal. and  Find all points on the graph of at which the tangent line has slope 60. and    Tangent Slope Conditions, Radical Function   Let .   Find all points on the graph of at which the tangent line is horizontal.  Find all points on the graph of at which the tangent line has slope .    Find the Parabola  Find the parabola with equation whose tangent line at has equation .  Use and .     Find Constants for Tangent  For what values of and is the line tangent to the parabola when ?  Match the slope and the point at .  and    Find p and q  The graph of has a horizontal tangent line at the point . Find the values of and .  Use and .  and    Find a and b for Tangent  Determine the values of and such that the line is tangent to the graph of at the point where .  Use and .  and    Tangent at Origin, Second Intersection  Find an equation for the line that is tangent to the curve at the origin. Use and evaluate at .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .     Examples: Tangent Lines at an Arbitrary Point   Tangent Through External Point  Find the equation of the tangent line(s) to that passes through the point .  Find the tangent line at an arbitrary point (say, ), and then find the value of such that the tangent line passes through .  and    Tangent Through External Point II  Find the equation of the tangent line(s) to that passes through the point .  and    Tangent Through Point on Hyperbola  The tangent at point on the curve passes through . Find the coordinates of .     Tangent Lines Through External Point, Parabola  Find the equations of both lines that pass through the point and are tangent to the parabola .  and    Tangent Lines Through Origin  Find the equations of both lines that pass through the origin and are tangent to the parabola .  and    Tangent Intersection Points  Find the -coordinates of the points on the curve where the tangents from the point intersect the curve.  and    Tangents to Parabola Through Given Points  Determine the equations of the tangents to the curve that pass through the following points.  Point and  Point and    Tangent Through Point, Parabola  Find the coordinates of the points on the parabola where its tangent line passes through the point .  The tangent to at is , and it must pass through .  The points are and .    Lines Through Point Tangent to Parabola  Find equations of both lines through the point that are tangent to the parabola . The tangent at has equation , and it must pass through . and  Show that there is no line through the point that is tangent to the parabola. Use and require it to pass through , then check whether is real. No tangent line exists.    Y-Intercept of Tangent  Let be the -intercept of the tangent line to the graph of passing through the point . Find the value of .  The tangent at is , and it must pass through .  or    Points with Tangent Through Given Point  Find all points on the graph of with tangent lines passing through the point .  and     Practice: Advanced   Steeper Tangent  Find all values of such that the tangent line to the graph of is steeper than the tangent line of .  leads to a quadratic inequality .  , or the interval    Y-Intercept from X-Intercept  A tangent line to the graph of has an -intercept of . Find the -intercept of this tangent line.  The tangent at has equation , so its -intercept is .  The -intercept is 3.    Find c: Line Tangent to Radical Curve  Find the value of such that the line is tangent to the curve .  At the tangency point , solve and .     Find c: Line Tangent to Parabola  What is the value of such that the line is tangent to the parabola ?  At the tangency point , solve and .     Tangent at Point, Second Intersection  Find an equation for the line that is tangent to the curve at the point . Use and .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .    Abstract Function Differentiation  Differentiate each function.      Simplify Then Differentiate  Differentiate each function.    , where is a positive constant  , where is a constant    Using Known Derivatives   Suppose and . Let and . (a) Find an equation of the line tangent to at . (b) Find an equation of the line tangent to at .  (a) . (b) .    Suppose the line tangent to the graph of at is and the line tangent to the graph of at has slope 3 and passes through . Find an equation of the line tangent to each curve at . (a) . (b) . (c) .  (a) . (b) . (c) .    Find the equation of the line tangent to the curve that has slope 2.     Determine the constants and such that the line tangent to at is .  ,     Find a Second-Degree Polynomial  Find a second-degree polynomial such that , , and .  Let and use and .     Find a Cubic Function  Find a cubic function whose graph has horizontal tangents at the points and .  Use , , and , .     Find a Parabola from Slope Conditions  Find a parabola with equation that has slope 4 at , slope at , and passes through the point .  Use with and , then use .     Find a,b,c,d from Tangent Conditions  Suppose the curve has a tangent line when with equation and a tangent line when with equation . Find the values of .  Use , , , and .  , , ,    Tangent to Line at Origin  The curve passes through the point and is tangent to the line at the origin. Find .  , ,    Common Tangent of Two Curves  The curves and have a common tangent line at the point . Find .  , ,    nth Derivative Pattern  Find the th derivative of each function by calculating the first few derivatives and observing the pattern that occurs.  Differentiate repeatedly to get .  Write and differentiate repeatedly to see the alternating signs and factorial pattern.    "
+  "body": " Basic Derivative Rules   Calculating derivatives using the limit definition is often tedious and sometimes difficult, especially for more complicated functions. It turns out, there are various patterns and shortcut rules for computing derivatives of various functions, i.e. differentiation rules ,   Rules to differentiate specific types of functions, that you have learned about in pre-calculus.  Also, rules to differentiate various types of combinations of those functions.    This could be called systematic differentiation . Combining all of these rules will allow us to compute derivatives of every type of function that is covered in pre-calculus.    Derivative of Constant and a Line  Perhaps the most basic function is a constant function.   Constant Function  Consider the function . This is a constant function, because it always outputs the same value, no matter what the input is. In particular, it always outputs the value 3. Graph of . Its graph is a horizontal line at , which has slope 0, so we would expect that its derivative would be always 0. Indeed,    In general, for a constant function, of the form (where is some number), its derivative is 0, because its graph is a horizontal line, which has slope 0.      Derivative of a Constant Is Zero   If where is some number, then . In other words,     Using the definition of the derivative, we have,     In short,   A slightly more complicated situation is the case of a line.   Linear Function  Consider the function . This is a linear function, because its graph is a line. Graph of . This line has a slope of 2, so we would expect that its derivative would be always 2.   In general, a line has a constant slope, so its derivative is the slope of the line.    Derivatives of Constants and Lines  Find the derivative of each function.           Derivative of Power Functions (The Power Rule)  The next basic type of function we will consider are power functions, where the variable is raised to a constant number.   Discovering the Power Rule Pattern  You may recall from a previous section the following derivatives of , , , and . If not, these can be derived from the limit definition of the derivative. They are,   Observe the pattern for the derivative of these powers of . The derivative has:   A coefficient in the front, which is the exponent of .  The variable raised to an exponent that is one less than what it was before.   This applies to even the first example , as has an exponent of 1, so the pattern says the derivative should be (recall: for any ).  It turns out that this rule holds in general, for any whole number (like 1, 2, 3, etc.), but in fact, for any number.    Power Rule for Derivatives   If for some number , then . In other words,     In other words, to differentiate a function that is some power of the variable ,   Bring down the exponent into the front and multiply it.  Subtract 1 from the exponent.    Basic Power Rule Practice  Find the derivative of each function.       For the reciprocal function , you may recall its derivative is . This also follows the power rule, because .     Negative Exponent Practice  Differentiate each function.     , where is a constant     Derivative of a Constant Multiple  Next, it turns out that if we have a constant multiplied by a function, then that number can be kept in the front, and we can just differentiate the function as normal.   Constant Multiple Practice  Differentiate.             This is formalized by the constant multiple rule.   Constant Multiple Rule   The derivative of a constant multiplied by a function is that constant multiplied by the derivative of the function.       Derivative of Sums and Differences   Differentiating Term by Term  Consider the derivative of . This function has 3 terms ( , , and ). It turns out, if a function has multiple terms (multiple things added or subtracted together), we can find the derivative of each term separately. The derivative of is , the derivative of is 5, and the derivative of is 0. So, the derivative of is .   In general, to differentiate a function with multiple terms,   Differentiate each term individually (term-by-term).  For any coefficients (numbers multiplied in the front), keep them in the front (they come along for the ride ).   These two intuitive rules are formalized by the sum rule and difference rule.   Sum\/Difference Rule   The derivative of a sum or difference is the sum or difference of the derivatives.        The sum or difference rule also applies to any number of functions, not just 2 functions. In other words,   This basically means that derivatives can be determined term-by-term.    Derivative of Polynomial Functions  We can now differentiate any polynomial function, using the previous rules.   Differentiating Polynomials  Differentiate each function.         Expand first.     Derivatives with Rational Exponents and Radical Functions  The power rule can also be used to differentiate functions with rational exponents (i.e. exponents which are fractions), and in general any term that can be represented as a power of the variable .   Recall that,   , , and in general, .  .     Differentiating the Square Root  For the square root function , you may recall its derivative is . This also follows the power rule, because ,    In general, if your derivative has negative exponents, it is good practice to rewrite the final answer with positive exponents.   Rational Exponents and Radicals  Differentiate each function.        The same power rule applies: bring down the exponent, and subtract 1.           Practice: Differentiate   Positive Integer Exponents  Differentiate each function.                 Negative Exponents  Differentiate each function.       Fractional Exponents and Radicals  Differentiate each function.              Evaluating the Derivative  Determine for the given function at the given value of .  ,  ,    Slope of the Tangent  Determine the slope of the tangent to each curve at the given point.  ,  ,  ,  ,  ,  ,  ,  ,     Practice: Tangent Lines   Tangent Line Equations  Find an equation of the tangent line to each function at the given point.  at or  at the point or  at or  at or  ,  ,  ,  ,  at  at  at  at  at  at    Horizontal Tangent Lines  Find all points on the graph where the tangent line is horizontal.  and  , ,  and     Simplifying Before Using Basic Rules  Sometimes, you need to rewrite the function first before you can use the basic rules. In particular, write it as a sum of multiple terms.   Expand Then Differentiate  Differentiate each function.            Divide Then Differentiate  Differentiate each function.            ,       Mixed Simplification  Differentiate each function.           Abstract Functions  Differentiate each function.         Examples   Parabola Slope  At what point on the parabola is the slope of the tangent line equal to 24?     Parallel Tangent on Hyperbola  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Quartic  Find all points on the graph of where the tangent line is parallel to the line .     Parallel Tangent on Cube Root  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Parabola  Find all points on the graph of where the tangent line is parallel to the line .     Parallel Tangent on Cubic  Find all points on the graph of where the tangent line is parallel to the line .  and    Parallel Tangent on Power Function  Find the point on the curve where the tangent line is parallel to the line .     No Tangent with Given Slope  Show that the curve has no tangent lines with slope 3.  Solve .  The equation becomes , which has no real solution.    Normal Line  Determine the equation of the normal to the graph of at . (A normal line is perpendicular to the tangent line at the point of tangency.)  The tangent slope is 18, so the normal slope is and the normal line is .    Same Slope?  Do the functions and ever have the same slope? If so, where?  No, they never have the same slope (there is no real solution).    Perpendicular Tangents  Show that the tangent lines to at and are perpendicular.  The slopes of the tangent lines are and , and since , the tangent lines are perpendicular.    Point Where Slope Equals 5  Determine the point on the parabola where the slope of the tangent is 5.     Points Where Slope Equals 12  Determine the coordinates of the points on the graph of at which the slope of the tangent is 12.  and    Two Tangents with Given Slope  Show that there are two tangents to the curve that have a slope of 6.  The tangency points occur at and , giving tangent lines and .    Find the Constant  Determine the value of , given that the line is tangent to the graph of at .     Slope Locations on Parabola   Let .   Find the values of for which the slope of the curve is 0.  Find the values of for which the slope of the curve is 2.    Slope Locations on Cubic   Let .   Find the values of for which the slope of the curve is 0.  Find the values of for which the slope of the curve is 21.    Tangent Slope Conditions   Let .   Find all points on the graph of at which the tangent line is horizontal. and  Find all points on the graph of at which the tangent line has slope 60. and    Tangent Slope Conditions, Radical Function   Let .   Find all points on the graph of at which the tangent line is horizontal.  Find all points on the graph of at which the tangent line has slope .    Find the Parabola  Find the parabola with equation whose tangent line at has equation .  Use and .     Find Constants for Tangent  For what values of and is the line tangent to the parabola when ?  Match the slope and the point at .  and    Find p and q  The graph of has a horizontal tangent line at the point . Find the values of and .  Use and .  and    Find a and b for Tangent  Determine the values of and such that the line is tangent to the graph of at the point where .  Use and .  and    Tangent at Origin, Second Intersection  Find an equation for the line that is tangent to the curve at the origin. Use and evaluate at .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .     Examples: Tangent Lines at an Arbitrary Point   Tangent Through External Point  Find the equation of the tangent line(s) to that passes through the point .  Find the tangent line at an arbitrary point (say, ), and then find the value of such that the tangent line passes through .  and    Tangent Through External Point II  Find the equation of the tangent line(s) to that passes through the point .  and    Tangent Through Point on Hyperbola  The tangent at point on the curve passes through . Find the coordinates of .     Tangent Lines Through External Point, Parabola  Find the equations of both lines that pass through the point and are tangent to the parabola .  and    Tangent Lines Through Origin  Find the equations of both lines that pass through the origin and are tangent to the parabola .  and    Tangent with Given Slope  Find the equation of the line tangent to the curve that has slope 2.  The tangent at has slope , which must equal 2.     Tangent Intersection Points  Find the -coordinates of the points on the curve where the tangents from the point intersect the curve.  The tangent at has equation , and it must pass through .  and    Tangents to Parabola Through Given Points  Determine the equations of the tangents to the curve that pass through the following points.  Point and  Point and    Tangent Through Point, Parabola  Find the coordinates of the points on the parabola where its tangent line passes through the point .  The tangent to at is , and it must pass through .  The points are and .    Lines Through Point Tangent to Parabola  Find equations of both lines through the point that are tangent to the parabola . The tangent at has equation , and it must pass through . and  Show that there is no line through the point that is tangent to the parabola. Use and require it to pass through , then check whether is real. No tangent line exists.    Y-Intercept of Tangent  Let be the -intercept of the tangent line to the graph of passing through the point . Find the value of .  The tangent at is , and it must pass through .  or    Points with Tangent Through Given Point  Find all points on the graph of with tangent lines passing through the point .  and     Practice: Advanced   Steeper Tangent  Find all values of such that the tangent line to the graph of is steeper than the tangent line of .  leads to a quadratic inequality .  , or the interval    Y-Intercept from X-Intercept  A tangent line to the graph of has an -intercept of . Find the -intercept of this tangent line.  The tangent at has equation , so its -intercept is .  The -intercept is 3.    Find c: Line Tangent to Radical Curve  Find the value of such that the line is tangent to the curve .  At the tangency point , solve and .     Find c: Line Tangent to Parabola  What is the value of such that the line is tangent to the parabola ?  At the tangency point , solve and .     Tangent at Point, Second Intersection  Find an equation for the line that is tangent to the curve at the point . Use and .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .    Abstract Function Differentiation  Differentiate each function.      Simplify Then Differentiate  Differentiate each function.    , where is a positive constant  , where is a constant    Given Function Values  Given that , , , and , find .  .     Point on Curve with Given Tangent  Find the point on the curve that has a tangent line with equation .  Compare the slope of the line with the derivative of the curve, then check that the point lies on both graphs.  The line is , so its slope is 4. For the curve, . Setting gives . Then , and the line also gives . So the line is tangent to the curve at .    Tangent Lines Using Known Values  Suppose and . Let and .  Find an equation of the line tangent to at .  Find an equation of the line tangent to at .    Tangent Lines from Known Tangent Lines  Suppose the line tangent to the graph of at is and the line tangent to the graph of at has slope 3 and passes through . Find an equation of the line tangent to the following curves at .       Determine Constants b and c  Determine the constants and such that the line tangent to at is .  The tangent line at has slope and passes through the point . So, we require and .  ,    Find a Cubic Function  Find a cubic function whose graph has horizontal tangents at the points and .  Use , , and , .     Find a Parabola from Slope Conditions  Find a parabola with equation that has slope 4 at , slope at , and passes through the point .  Use with and , then use .     Find a,b,c,d from Tangent Conditions  Suppose the curve has a tangent line when with equation and a tangent line when with equation . Find the values of .  Use , , , and .  , , ,    Tangent to Line at Origin  The curve passes through the point and is tangent to the line at the origin. Find .  , ,    Quadratic with Horizontal Tangent  Determine a quadratic function if its graph passes through the point and it has a horizontal tangent at .  Use , , and .     Common Tangent of Two Curves  The curves and have a common tangent line at the point . Find .  Use , , and .  , ,     Disguised Derivative Examples   Limits as Disguised Derivatives  Evaluate each limit by first converting it to a derivative at a particular -value.  This is the definition of .  This is the definition of .    "
 },
 {
   "id": "sec-basic-derivative-rules-2-1",
@@ -915,8 +897,8 @@ var ptx_lunr_docs = [
   "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-7",
   "type": "Checkpoint",
   "number": "2.2.41",
-  "title": "Tangent Intersection Points.",
-  "body": " Tangent Intersection Points  Find the -coordinates of the points on the curve where the tangents from the point intersect the curve.  and  "
+  "title": "Tangent with Given Slope.",
+  "body": " Tangent with Given Slope  Find the equation of the line tangent to the curve that has slope 2.  The tangent at has slope , which must equal 2.   "
 },
 {
   "id": "subsec-examples-arbitrary-point-8",
@@ -924,8 +906,8 @@ var ptx_lunr_docs = [
   "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-8",
   "type": "Checkpoint",
   "number": "2.2.42",
-  "title": "Tangents to Parabola Through Given Points.",
-  "body": " Tangents to Parabola Through Given Points  Determine the equations of the tangents to the curve that pass through the following points.  Point and  Point and  "
+  "title": "Tangent Intersection Points.",
+  "body": " Tangent Intersection Points  Find the -coordinates of the points on the curve where the tangents from the point intersect the curve.  The tangent at has equation , and it must pass through .  and  "
 },
 {
   "id": "subsec-examples-arbitrary-point-9",
@@ -933,8 +915,8 @@ var ptx_lunr_docs = [
   "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-9",
   "type": "Checkpoint",
   "number": "2.2.43",
-  "title": "Tangent Through Point, Parabola.",
-  "body": " Tangent Through Point, Parabola  Find the coordinates of the points on the parabola where its tangent line passes through the point .  The tangent to at is , and it must pass through .  The points are and .  "
+  "title": "Tangents to Parabola Through Given Points.",
+  "body": " Tangents to Parabola Through Given Points  Determine the equations of the tangents to the curve that pass through the following points.  Point and  Point and  "
 },
 {
   "id": "subsec-examples-arbitrary-point-10",
@@ -942,8 +924,8 @@ var ptx_lunr_docs = [
   "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-10",
   "type": "Checkpoint",
   "number": "2.2.44",
-  "title": "Lines Through Point Tangent to Parabola.",
-  "body": " Lines Through Point Tangent to Parabola  Find equations of both lines through the point that are tangent to the parabola . The tangent at has equation , and it must pass through . and  Show that there is no line through the point that is tangent to the parabola. Use and require it to pass through , then check whether is real. No tangent line exists.  "
+  "title": "Tangent Through Point, Parabola.",
+  "body": " Tangent Through Point, Parabola  Find the coordinates of the points on the parabola where its tangent line passes through the point .  The tangent to at is , and it must pass through .  The points are and .  "
 },
 {
   "id": "subsec-examples-arbitrary-point-11",
@@ -951,8 +933,8 @@ var ptx_lunr_docs = [
   "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-11",
   "type": "Checkpoint",
   "number": "2.2.45",
-  "title": "Y-Intercept of Tangent.",
-  "body": " Y-Intercept of Tangent  Let be the -intercept of the tangent line to the graph of passing through the point . Find the value of .  The tangent at is , and it must pass through .  or  "
+  "title": "Lines Through Point Tangent to Parabola.",
+  "body": " Lines Through Point Tangent to Parabola  Find equations of both lines through the point that are tangent to the parabola . The tangent at has equation , and it must pass through . and  Show that there is no line through the point that is tangent to the parabola. Use and require it to pass through , then check whether is real. No tangent line exists.  "
 },
 {
   "id": "subsec-examples-arbitrary-point-12",
@@ -960,6 +942,15 @@ var ptx_lunr_docs = [
   "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-12",
   "type": "Checkpoint",
   "number": "2.2.46",
+  "title": "Y-Intercept of Tangent.",
+  "body": " Y-Intercept of Tangent  Let be the -intercept of the tangent line to the graph of passing through the point . Find the value of .  The tangent at is , and it must pass through .  or  "
+},
+{
+  "id": "subsec-examples-arbitrary-point-13",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-examples-arbitrary-point-13",
+  "type": "Checkpoint",
+  "number": "2.2.47",
   "title": "Points with Tangent Through Given Point.",
   "body": " Points with Tangent Through Given Point  Find all points on the graph of with tangent lines passing through the point .  and  "
 },
@@ -968,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-2",
   "type": "Checkpoint",
-  "number": "2.2.47",
+  "number": "2.2.48",
   "title": "Steeper Tangent.",
   "body": " Steeper Tangent  Find all values of such that the tangent line to the graph of is steeper than the tangent line of .  leads to a quadratic inequality .  , or the interval  "
 },
@@ -977,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-3",
   "type": "Checkpoint",
-  "number": "2.2.48",
+  "number": "2.2.49",
   "title": "Y-Intercept from X-Intercept.",
   "body": " Y-Intercept from X-Intercept  A tangent line to the graph of has an -intercept of . Find the -intercept of this tangent line.  The tangent at has equation , so its -intercept is .  The -intercept is 3.  "
 },
@@ -986,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-4",
   "type": "Checkpoint",
-  "number": "2.2.49",
+  "number": "2.2.50",
   "title": "Find c: Line Tangent to Radical Curve.",
   "body": " Find c: Line Tangent to Radical Curve  Find the value of such that the line is tangent to the curve .  At the tangency point , solve and .   "
 },
@@ -995,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-5",
   "type": "Checkpoint",
-  "number": "2.2.50",
+  "number": "2.2.51",
   "title": "Find c: Line Tangent to Parabola.",
   "body": " Find c: Line Tangent to Parabola  What is the value of such that the line is tangent to the parabola ?  At the tangency point , solve and .   "
 },
@@ -1004,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-6",
   "type": "Checkpoint",
-  "number": "2.2.51",
+  "number": "2.2.52",
   "title": "Tangent at Point, Second Intersection.",
   "body": " Tangent at Point, Second Intersection  Find an equation for the line that is tangent to the curve at the point . Use and .  The tangent line from part (a) intersects the curve at another point. Find the coordinates of this point. Solve .  "
 },
@@ -1013,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-7",
   "type": "Checkpoint",
-  "number": "2.2.52",
+  "number": "2.2.53",
   "title": "Abstract Function Differentiation.",
   "body": " Abstract Function Differentiation  Differentiate each function.    "
 },
@@ -1022,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-8",
   "type": "Checkpoint",
-  "number": "2.2.53",
+  "number": "2.2.54",
   "title": "Simplify Then Differentiate.",
   "body": " Simplify Then Differentiate  Differentiate each function.    , where is a positive constant  , where is a constant  "
 },
@@ -1031,79 +1022,628 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-9",
   "type": "Checkpoint",
-  "number": "2.2.54",
-  "title": "Using Known Derivatives.",
-  "body": " Using Known Derivatives   Suppose and . Let and . (a) Find an equation of the line tangent to at . (b) Find an equation of the line tangent to at .  (a) . (b) .    Suppose the line tangent to the graph of at is and the line tangent to the graph of at has slope 3 and passes through . Find an equation of the line tangent to each curve at . (a) . (b) . (c) .  (a) . (b) . (c) .    Find the equation of the line tangent to the curve that has slope 2.     Determine the constants and such that the line tangent to at is .  ,   "
+  "number": "2.2.55",
+  "title": "Given Function Values.",
+  "body": " Given Function Values  Given that , , , and , find .  .   "
 },
 {
   "id": "subsec-practice-advanced-10",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-10",
   "type": "Checkpoint",
-  "number": "2.2.55",
-  "title": "Find a Second-Degree Polynomial.",
-  "body": " Find a Second-Degree Polynomial  Find a second-degree polynomial such that , , and .  Let and use and .   "
+  "number": "2.2.56",
+  "title": "Point on Curve with Given Tangent.",
+  "body": " Point on Curve with Given Tangent  Find the point on the curve that has a tangent line with equation .  Compare the slope of the line with the derivative of the curve, then check that the point lies on both graphs.  The line is , so its slope is 4. For the curve, . Setting gives . Then , and the line also gives . So the line is tangent to the curve at .  "
 },
 {
   "id": "subsec-practice-advanced-11",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-11",
   "type": "Checkpoint",
-  "number": "2.2.56",
-  "title": "Find a Cubic Function.",
-  "body": " Find a Cubic Function  Find a cubic function whose graph has horizontal tangents at the points and .  Use , , and , .   "
+  "number": "2.2.57",
+  "title": "Tangent Lines Using Known Values.",
+  "body": " Tangent Lines Using Known Values  Suppose and . Let and .  Find an equation of the line tangent to at .  Find an equation of the line tangent to at .  "
 },
 {
   "id": "subsec-practice-advanced-12",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-12",
   "type": "Checkpoint",
-  "number": "2.2.57",
-  "title": "Find a Parabola from Slope Conditions.",
-  "body": " Find a Parabola from Slope Conditions  Find a parabola with equation that has slope 4 at , slope at , and passes through the point .  Use with and , then use .   "
+  "number": "2.2.58",
+  "title": "Tangent Lines from Known Tangent Lines.",
+  "body": " Tangent Lines from Known Tangent Lines  Suppose the line tangent to the graph of at is and the line tangent to the graph of at has slope 3 and passes through . Find an equation of the line tangent to the following curves at .     "
 },
 {
   "id": "subsec-practice-advanced-13",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-13",
   "type": "Checkpoint",
-  "number": "2.2.58",
-  "title": "Find a,b,c,d from Tangent Conditions.",
-  "body": " Find a,b,c,d from Tangent Conditions  Suppose the curve has a tangent line when with equation and a tangent line when with equation . Find the values of .  Use , , , and .  , , ,  "
+  "number": "2.2.59",
+  "title": "Determine Constants b and c.",
+  "body": " Determine Constants b and c  Determine the constants and such that the line tangent to at is .  The tangent line at has slope and passes through the point . So, we require and .  ,  "
 },
 {
   "id": "subsec-practice-advanced-14",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-14",
   "type": "Checkpoint",
-  "number": "2.2.59",
-  "title": "Tangent to Line at Origin.",
-  "body": " Tangent to Line at Origin  The curve passes through the point and is tangent to the line at the origin. Find .  , ,  "
+  "number": "2.2.60",
+  "title": "Find a Cubic Function.",
+  "body": " Find a Cubic Function  Find a cubic function whose graph has horizontal tangents at the points and .  Use , , and , .   "
 },
 {
   "id": "subsec-practice-advanced-15",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-15",
   "type": "Checkpoint",
-  "number": "2.2.60",
-  "title": "Common Tangent of Two Curves.",
-  "body": " Common Tangent of Two Curves  The curves and have a common tangent line at the point . Find .  , ,  "
+  "number": "2.2.61",
+  "title": "Find a Parabola from Slope Conditions.",
+  "body": " Find a Parabola from Slope Conditions  Find a parabola with equation that has slope 4 at , slope at , and passes through the point .  Use with and , then use .   "
 },
 {
   "id": "subsec-practice-advanced-16",
   "level": "2",
   "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-16",
   "type": "Checkpoint",
-  "number": "2.2.61",
-  "title": "nth Derivative Pattern.",
-  "body": " nth Derivative Pattern  Find the th derivative of each function by calculating the first few derivatives and observing the pattern that occurs.  Differentiate repeatedly to get .  Write and differentiate repeatedly to see the alternating signs and factorial pattern.  "
+  "number": "2.2.62",
+  "title": "Find a,b,c,d from Tangent Conditions.",
+  "body": " Find a,b,c,d from Tangent Conditions  Suppose the curve has a tangent line when with equation and a tangent line when with equation . Find the values of .  Use , , , and .  , , ,  "
+},
+{
+  "id": "subsec-practice-advanced-17",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-17",
+  "type": "Checkpoint",
+  "number": "2.2.63",
+  "title": "Tangent to Line at Origin.",
+  "body": " Tangent to Line at Origin  The curve passes through the point and is tangent to the line at the origin. Find .  , ,  "
+},
+{
+  "id": "subsec-practice-advanced-18",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-18",
+  "type": "Checkpoint",
+  "number": "2.2.64",
+  "title": "Quadratic with Horizontal Tangent.",
+  "body": " Quadratic with Horizontal Tangent  Determine a quadratic function if its graph passes through the point and it has a horizontal tangent at .  Use , , and .   "
+},
+{
+  "id": "subsec-practice-advanced-19",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-practice-advanced-19",
+  "type": "Checkpoint",
+  "number": "2.2.65",
+  "title": "Common Tangent of Two Curves.",
+  "body": " Common Tangent of Two Curves  The curves and have a common tangent line at the point . Find .  Use , , and .  , ,  "
+},
+{
+  "id": "subsec-disguised-derivatives-2",
+  "level": "2",
+  "url": "sec-basic-derivative-rules.html#subsec-disguised-derivatives-2",
+  "type": "Exercise Group",
+  "number": "2.2.18",
+  "title": "Limits as Disguised Derivatives.",
+  "body": " Limits as Disguised Derivatives  Evaluate each limit by first converting it to a derivative at a particular -value.  This is the definition of .  This is the definition of .  "
+},
+{
+  "id": "sec-differentiability",
+  "level": "1",
+  "url": "sec-differentiability.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Differentiability",
+  "body": " Differentiability   The derivative of a function does not always exist. In other words, we can't always find the slope of the tangent line to a function. This is because the derivative is a limit, and as we've seen, limits do not always exist.   If a function has a derivative at , then we say that is differentiable at .  If does not have a derivative at , then we say that is non-differentiable at .   Literally, differentiable means able to be differentiated , which means we can take its derivative.   Square Root Function  For the square root function , recall its derivative is (using the power rule).   The domain of is , because we can only take the square root of non-negative numbers.  However, the domain of is , because we need to also exclude , because we also cannot divide by zero.   In particular, is not differentiable at . Graph of and its derivative . Notice that the graph of at has slopes which are increasingly steep and positive. In other words, they approach . This is why the derivative does not exist at .    Derivative of Absolute Value Function  Consider the derivative of the absolute value function,   Graph of . It is a line with slope 1 for , a line with slope for , and there is a sharp corner at . Therefore, we expect that its derivative will be 1 for , for . Indeed,   For ,  For ,   However, at (the sharp corner), we have to use the limit definition of derivative, because the function is given by two different formulas on either side of .  First, intuitively, the derivative represents the slope of the graph. However, at , the function has two different slopes on each side of . Therefore, we expect that the derivative does not exist at . We can confirm this using the limit definition of derivative,   You might recognize this limit from one we have seen before: Limit with Absolute Value , which does not exist. To see this, we can evaluate the limit from the right and from the left,    From the right, as , , and so, Thus, from the right, the slopes approach 1 (this can be confirmed graphically).    However, from the left, as , , and so, From the left, the slopes approach .    Since these one sided limits are not equal, does not exist, and so the derivative does not exist. In summary,   Graphically: Graph of and its derivative . Notice that the graph of the derivative has a jump discontinuity at .  Note: The derivative of the absolute value function can be summarized concisely with a single formula, using the expression ,    The absolute value function shows that a function can be continuous at a point, but not have a derivative there.    Differentiability and Continuity  Intuitively, a function is differentiable at if its graph is smooth . In other words, it is continuous, but also, roughly, it bends gently and consistently, as opposed to having a sudden change in direction.   Differentiability Implies Continuity   If a function is differentiable at , then it is continuous at .   Equivalently, if is not continuous at , then is not differentiable at .     Intuitively, this means that if a function is smooth, then it must be continuous (it can't have a hole, jump, asymptote, etc.)  However, the reverse direction is not true. In that, if a function is continuous, this does not necessarily mean it will be differentiable.  To intuitively understand why this is always true, it is helpful to think about the equivalent statement:  If a function is not continuous at a point (it has a break, jump, or asymptote, etc.), then it must be not be differentiable at that point (the slope of a tangent line can't be found).  In this way, differentiability is a stronger condition than continuity, in that to be differentiable, you have to be continuous at a bare minimum, and also something more.  The following four graphs illustrate this. Each level adds a stronger requirement that makes the graph more nice .     In summary,   Every differentiable function is continuous, but not every continuous function is differentiable.  Every continuous function is defined, but not every defined function is continuous.     Examples   Differentiability of  For the function , determine if is differentiable at .  Use the definition of derivative, .  Yes, and .    Continuous but Not Differentiable  Give an example of a function that is continuous on but is not differentiable at .  Think of the absolute value function.  .    Domain of and  Find and state the domains of and .  , domain of is , domain of is .  , domain of is , domain of is .  , domain of is , domain of is .  , domain of is , domain of is .    Piecewise Linear and Quadratic   Let    Where is differentiable?  Find an expression for .    Graph of  Let .  For what values of is not differentiable? Find where . and .  Find a formula for .  Sketch the graph of and . Use for and for . is two upward-opening arms for and a downward-opening arc on , and is outside and inside.    Piecewise Quadratic and Linear   Let   Is differentiable at 1? Sketch the graphs of and .   Compare the left and right derivatives at .  is not differentiable at 1, and for while for .    Three-Piece Function   Let   At what numbers is differentiable? Give a formula for and sketch the graphs of and .   Check differentiability at the junctions and .  is differentiable for all except , and    Differentiability of  Let .  For what values of is differentiable? Find where . All except and .  Find a formula for .  Sketch the graphs of and . Use for and for . is two upward-opening arms for and a downward-opening arc on , and is outside and inside.    Differentiability of  Let .  For what values of is not differentiable? Find where . is not differentiable at and .  Find a formula for , and sketch the graph of . Write as a piecewise function first. for or , for , and is undefined at .  Find at , 0, and 3. Use the formula from part (b). , , and .    Sum of Absolute Values  Let .  Where is not differentiable? Find where and where . is not differentiable at and .  Find a formula for .  Sketch the graphs of and . Use for , for , and for . is a line with slope for , a horizontal line at height 3 for , and a line with slope 2 for . The graph of is a line with slope 0 at height -2 for , a line with slope 0 at height 0 for , and a line with slope 0 at height 2 for .    Finding and for Differentiability  Let Find the values of and that make differentiable everywhere.  The left and right derivatives at must be equal, and must be continuous at .  and .    Finding for Differentiability   Let   Find the value of that makes the following function differentiable for all -values.   The left and right derivatives at must be equal.  .    Finding and for Differentiability  Find the values of and that make the following function differentiable for all -values.  The left and right derivatives at must be equal, and must be continuous at .  and .    Piecewise Quadratic Derivative   Let   Find the derivative of .      "
+},
+{
+  "id": "sec-differentiability-2-2-1-1",
+  "level": "2",
+  "url": "sec-differentiability.html#sec-differentiability-2-2-1-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "differentiable "
+},
+{
+  "id": "sec-differentiability-2-2-2-1",
+  "level": "2",
+  "url": "sec-differentiability.html#sec-differentiability-2-2-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "non-differentiable "
+},
+{
+  "id": "sec-differentiability-2-4",
+  "level": "2",
+  "url": "sec-differentiability.html#sec-differentiability-2-4",
+  "type": "Example",
+  "number": "2.3.1",
+  "title": "Square Root Function.",
+  "body": " Square Root Function  For the square root function , recall its derivative is (using the power rule).   The domain of is , because we can only take the square root of non-negative numbers.  However, the domain of is , because we need to also exclude , because we also cannot divide by zero.   In particular, is not differentiable at . Graph of and its derivative . Notice that the graph of at has slopes which are increasingly steep and positive. In other words, they approach . This is why the derivative does not exist at .  "
+},
+{
+  "id": "sec-differentiability-2-5",
+  "level": "2",
+  "url": "sec-differentiability.html#sec-differentiability-2-5",
+  "type": "Example",
+  "number": "2.3.2",
+  "title": "Derivative of Absolute Value Function.",
+  "body": " Derivative of Absolute Value Function  Consider the derivative of the absolute value function,   Graph of . It is a line with slope 1 for , a line with slope for , and there is a sharp corner at . Therefore, we expect that its derivative will be 1 for , for . Indeed,   For ,  For ,   However, at (the sharp corner), we have to use the limit definition of derivative, because the function is given by two different formulas on either side of .  First, intuitively, the derivative represents the slope of the graph. However, at , the function has two different slopes on each side of . Therefore, we expect that the derivative does not exist at . We can confirm this using the limit definition of derivative,   You might recognize this limit from one we have seen before: Limit with Absolute Value , which does not exist. To see this, we can evaluate the limit from the right and from the left,    From the right, as , , and so, Thus, from the right, the slopes approach 1 (this can be confirmed graphically).    However, from the left, as , , and so, From the left, the slopes approach .    Since these one sided limits are not equal, does not exist, and so the derivative does not exist. In summary,   Graphically: Graph of and its derivative . Notice that the graph of the derivative has a jump discontinuity at .  Note: The derivative of the absolute value function can be summarized concisely with a single formula, using the expression ,   "
+},
+{
+  "id": "thm-differentiability-implies-continuity",
+  "level": "2",
+  "url": "sec-differentiability.html#thm-differentiability-implies-continuity",
+  "type": "Theorem",
+  "number": "2.3.3",
+  "title": "Differentiability Implies Continuity.",
+  "body": " Differentiability Implies Continuity   If a function is differentiable at , then it is continuous at .   Equivalently, if is not continuous at , then is not differentiable at .    "
+},
+{
+  "id": "subsec-differentiability-examples-2",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-2",
+  "type": "Checkpoint",
+  "number": "2.3.4",
+  "title": "Differentiability of <span class=\"process-math\">\\(x\\abs{x}\\)<\/span>.",
+  "body": " Differentiability of  For the function , determine if is differentiable at .  Use the definition of derivative, .  Yes, and .  "
+},
+{
+  "id": "subsec-differentiability-examples-3",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-3",
+  "type": "Checkpoint",
+  "number": "2.3.5",
+  "title": "Continuous but Not Differentiable.",
+  "body": " Continuous but Not Differentiable  Give an example of a function that is continuous on but is not differentiable at .  Think of the absolute value function.  .  "
+},
+{
+  "id": "subsec-differentiability-examples-4",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-4",
+  "type": "Exercise Group",
+  "number": "2.3.1",
+  "title": "Domain of <span class=\"process-math\">\\(f\\)<\/span> and <span class=\"process-math\">\\(f'\\)<\/span>.",
+  "body": " Domain of and  Find and state the domains of and .  , domain of is , domain of is .  , domain of is , domain of is .  , domain of is , domain of is .  , domain of is , domain of is .  "
+},
+{
+  "id": "subsec-differentiability-examples-5",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-5",
+  "type": "Checkpoint",
+  "number": "2.3.6",
+  "title": "Piecewise Linear and Quadratic.",
+  "body": " Piecewise Linear and Quadratic   Let    Where is differentiable?  Find an expression for .  "
+},
+{
+  "id": "subsec-differentiability-examples-6",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-6",
+  "type": "Checkpoint",
+  "number": "2.3.7",
+  "title": "Graph of <span class=\"process-math\">\\(\\abs{x^2-4}\\)<\/span>.",
+  "body": " Graph of  Let .  For what values of is not differentiable? Find where . and .  Find a formula for .  Sketch the graph of and . Use for and for . is two upward-opening arms for and a downward-opening arc on , and is outside and inside.  "
+},
+{
+  "id": "subsec-differentiability-examples-7",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-7",
+  "type": "Checkpoint",
+  "number": "2.3.8",
+  "title": "Piecewise Quadratic and Linear.",
+  "body": " Piecewise Quadratic and Linear   Let   Is differentiable at 1? Sketch the graphs of and .   Compare the left and right derivatives at .  is not differentiable at 1, and for while for .  "
+},
+{
+  "id": "subsec-differentiability-examples-8",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-8",
+  "type": "Checkpoint",
+  "number": "2.3.9",
+  "title": "Three-Piece Function.",
+  "body": " Three-Piece Function   Let   At what numbers is differentiable? Give a formula for and sketch the graphs of and .   Check differentiability at the junctions and .  is differentiable for all except , and  "
+},
+{
+  "id": "subsec-differentiability-examples-9",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-9",
+  "type": "Checkpoint",
+  "number": "2.3.10",
+  "title": "Differentiability of <span class=\"process-math\">\\(\\abs{x^2-9}\\)<\/span>.",
+  "body": " Differentiability of  Let .  For what values of is differentiable? Find where . All except and .  Find a formula for .  Sketch the graphs of and . Use for and for . is two upward-opening arms for and a downward-opening arc on , and is outside and inside.  "
+},
+{
+  "id": "subsec-differentiability-examples-10",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-10",
+  "type": "Checkpoint",
+  "number": "2.3.11",
+  "title": "Differentiability of <span class=\"process-math\">\\(\\abs{x^2-1}\\)<\/span>.",
+  "body": " Differentiability of  Let .  For what values of is not differentiable? Find where . is not differentiable at and .  Find a formula for , and sketch the graph of . Write as a piecewise function first. for or , for , and is undefined at .  Find at , 0, and 3. Use the formula from part (b). , , and .  "
+},
+{
+  "id": "subsec-differentiability-examples-11",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-11",
+  "type": "Checkpoint",
+  "number": "2.3.12",
+  "title": "Sum of Absolute Values.",
+  "body": " Sum of Absolute Values  Let .  Where is not differentiable? Find where and where . is not differentiable at and .  Find a formula for .  Sketch the graphs of and . Use for , for , and for . is a line with slope for , a horizontal line at height 3 for , and a line with slope 2 for . The graph of is a line with slope 0 at height -2 for , a line with slope 0 at height 0 for , and a line with slope 0 at height 2 for .  "
+},
+{
+  "id": "subsec-differentiability-examples-12",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-12",
+  "type": "Checkpoint",
+  "number": "2.3.13",
+  "title": "Finding <span class=\"process-math\">\\(m\\)<\/span> and <span class=\"process-math\">\\(b\\)<\/span> for Differentiability.",
+  "body": " Finding and for Differentiability  Let Find the values of and that make differentiable everywhere.  The left and right derivatives at must be equal, and must be continuous at .  and .  "
+},
+{
+  "id": "subsec-differentiability-examples-13",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-13",
+  "type": "Checkpoint",
+  "number": "2.3.14",
+  "title": "Finding <span class=\"process-math\">\\(a\\)<\/span> for Differentiability.",
+  "body": " Finding for Differentiability   Let   Find the value of that makes the following function differentiable for all -values.   The left and right derivatives at must be equal.  .  "
+},
+{
+  "id": "subsec-differentiability-examples-14",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-14",
+  "type": "Checkpoint",
+  "number": "2.3.15",
+  "title": "Finding <span class=\"process-math\">\\(a\\)<\/span> and <span class=\"process-math\">\\(b\\)<\/span> for Differentiability.",
+  "body": " Finding and for Differentiability  Find the values of and that make the following function differentiable for all -values.  The left and right derivatives at must be equal, and must be continuous at .  and .  "
+},
+{
+  "id": "subsec-differentiability-examples-15",
+  "level": "2",
+  "url": "sec-differentiability.html#subsec-differentiability-examples-15",
+  "type": "Checkpoint",
+  "number": "2.3.16",
+  "title": "Piecewise Quadratic Derivative.",
+  "body": " Piecewise Quadratic Derivative   Let   Find the derivative of .    "
+},
+{
+  "id": "sec-product-rule",
+  "level": "1",
+  "url": "sec-product-rule.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "The Product Rule",
+  "body": " The Product Rule   The rule for differentiating a product of functions is slightly more complicated than the previous rules.   The Derivative of a Product Is Not the Product of the Derivatives  One might at first glance think that the derivative of a product of two functions should be the product of the derivatives. Especially because the derivative of a sum is the sum of the derivatives (sum rule). Unfortunately, this is not true. In other words,   For example, if and , the derivative of the product is,   However, and , so , which is not the same as .    Product Rule    Or, with the function arguments,   Or,     Intuitively, if we call the 1st function and the 2nd function, then it says the derivative of their product is,   It's like writing the product twice, and each time you take the derivative of exactly one of the functions.   Note that because the two terms are added, their order doesn't matter. So .    Simple Product (Expanding Also Works)   Find the derivative of .    This is the product of and , so the product rule says,   Then, we can expand and simplify,   In this case, you may recognize that we could have expanded the function first, and then differentiated term by term,   Then,   Both methods give the same answer. Here, expanding first is a bit simpler, because the expansion isn't too challenging.     More Complicated Product   Find the derivative of .    In this case, expanding is more complicated, so the product rule would work better.   This is a valid final answer. If we need the derivative at a specific point, say , we can plug in directly without expanding,   This is much faster than trying to expand everything first.     Product with Radicals   Differentiate .    Expanding is a bit complicated here, because there are 2 radicals. Instead, we can use the product rule,   This is a valid final answer, however, if you wanted to plug in a specific value of , it is helpful to rewrite the exponents as positive,   Note that and .    In general,   Expand first if it's simple to do, and would make the function simpler.  Use the product rule if the expansion is complicated and would take a long time.   Later on, we'll see that there are many situations where you can't expand.    Examples   Product Rule (No Simplification)  Find each derivative, using the product rule. No need to simplify your answer.         Product Rule Two Ways  Find each derivative in two ways: using the product rule, and by expanding first. Verify that both answers are equal, by simplifying.           Evaluate at a Point  Evaluate each derivative at the given point.  ,  ,  , find  ,  ,  ,  ,    Tangent Lines  Find the equation of the tangent line to the given curve at the given point.  at  at    Differentiate and Simplify  Find each derivative and simplify.                 Differentiate and Simplify (Radicals)  Find each derivative and simplify.          Differentiate and Simplify (More Radicals)  Find each derivative and simplify.       Differentiate with Constants  Find each derivative and simplify.  , where are constants  , where and are constants    Negative Exponents  Find each derivative.         . Hint: Rewrite as and use power rule.     Slope with Negative Exponents  Find the slope of at .     Derivative Two Ways  If , find two ways: (a) by using the Product Rule, and (b) by expanding first.     Derivative at a Point  Find each derivative at the given point.  ,  ,    Horizontal Tangent (Linear Factors)  Find the points where the tangent to is horizontal.     Horizontal Tangent (Repeated Factor)  Find the points where the tangent to is horizontal.      Extended Product Rule (3 or More Factors)  The product rule can be extended to 3 functions multiplied together. It turns out that,   Observe the pattern: there are 3 terms, and in each term, exactly one of the functions is differentiated, and the other two are left unchanged.   This rule comes from using the product rule twice. First, we can think of as (the function together, multiplied by ). Then, applying the product rule to , we get,   Then, for , we can apply the product rule again, to get,     Three-Factor Product Rule  Find each derivative, using the product rule for 3 functions, and simplify.      Three-Factor Derivative at a Point  Find the derivative of at .      Product Rule with Given Function Values   Given Function Values  Find the indicated derivative using the given function values.  , , , . Find .  , , , . Find .  , , , . Find .  , , , . Find where .  , , , . Find .    Tangent Line from Given Values  Find the equation of the tangent line to the graph of at , given that , , , .  , .      Advanced Examples   Derivative with Unknown Function  If is a differentiable function, find an expression for the derivative of each of the following functions.        Slope of xf(x)  Find the slope of the tangent line to at , given , .  .     Tangent to xf(x)  Given that , , and . Find the tangent to at .  , .     Tangent to x²f(x)  Given that , , . Find the tangent to at .  , .     Tangent Using Given Tangent  The tangent to at is . Find the tangent to at .  , ; , point .     Second Derivative  Given that and for all , find .  , so .     Tangent from Two Tangent Lines  The tangent to at is and the tangent to at is . Find the tangent to at .  , , , ; , point .     Derivative of [f(x)]²  Show that , using the product rule with .  Use part (a) to differentiate .    Derivative of [f(x)]³  Show that , using the product rule for 3 functions.     In fact, the pattern for the derivative of a product of 3 functions continues for any number of functions. For example, for 4 functions, say, , we have,   In general, for functions, say, ,     f'(0) for n-Factor Product  If , find .  Use the general product rule, and plug in .  , which is the sum of the first natural numbers, which is equal to .    "
+},
+{
+  "id": "sec-product-rule-2-2",
+  "level": "2",
+  "url": "sec-product-rule.html#sec-product-rule-2-2",
+  "type": "Example",
+  "number": "3.1.1",
+  "title": "The Derivative of a Product Is Not the Product of the Derivatives.",
+  "body": " The Derivative of a Product Is Not the Product of the Derivatives  One might at first glance think that the derivative of a product of two functions should be the product of the derivatives. Especially because the derivative of a sum is the sum of the derivatives (sum rule). Unfortunately, this is not true. In other words,   For example, if and , the derivative of the product is,   However, and , so , which is not the same as .  "
+},
+{
+  "id": "thm-product-rule",
+  "level": "2",
+  "url": "sec-product-rule.html#thm-product-rule",
+  "type": "Theorem",
+  "number": "3.1.2",
+  "title": "Product Rule.",
+  "body": " Product Rule    Or, with the function arguments,   Or,    "
+},
+{
+  "id": "sec-product-rule-2-7",
+  "level": "2",
+  "url": "sec-product-rule.html#sec-product-rule-2-7",
+  "type": "Remark",
+  "number": "3.1.3",
+  "title": "",
+  "body": " Note that because the two terms are added, their order doesn't matter. So .  "
+},
+{
+  "id": "sec-product-rule-2-8",
+  "level": "2",
+  "url": "sec-product-rule.html#sec-product-rule-2-8",
+  "type": "Example",
+  "number": "3.1.4",
+  "title": "Simple Product (Expanding Also Works).",
+  "body": " Simple Product (Expanding Also Works)   Find the derivative of .    This is the product of and , so the product rule says,   Then, we can expand and simplify,   In this case, you may recognize that we could have expanded the function first, and then differentiated term by term,   Then,   Both methods give the same answer. Here, expanding first is a bit simpler, because the expansion isn't too challenging.   "
+},
+{
+  "id": "sec-product-rule-2-9",
+  "level": "2",
+  "url": "sec-product-rule.html#sec-product-rule-2-9",
+  "type": "Example",
+  "number": "3.1.5",
+  "title": "More Complicated Product.",
+  "body": " More Complicated Product   Find the derivative of .    In this case, expanding is more complicated, so the product rule would work better.   This is a valid final answer. If we need the derivative at a specific point, say , we can plug in directly without expanding,   This is much faster than trying to expand everything first.   "
+},
+{
+  "id": "sec-product-rule-2-10",
+  "level": "2",
+  "url": "sec-product-rule.html#sec-product-rule-2-10",
+  "type": "Example",
+  "number": "3.1.6",
+  "title": "Product with Radicals.",
+  "body": " Product with Radicals   Differentiate .    Expanding is a bit complicated here, because there are 2 radicals. Instead, we can use the product rule,   This is a valid final answer, however, if you wanted to plug in a specific value of , it is helpful to rewrite the exponents as positive,   Note that and .   "
+},
+{
+  "id": "subsec-product-rule-examples-2",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-2",
+  "type": "Exercise Group",
+  "number": "3.1.1",
+  "title": "Product Rule (No Simplification).",
+  "body": " Product Rule (No Simplification)  Find each derivative, using the product rule. No need to simplify your answer.       "
+},
+{
+  "id": "subsec-product-rule-examples-3",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-3",
+  "type": "Exercise Group",
+  "number": "3.1.2",
+  "title": "Product Rule Two Ways.",
+  "body": " Product Rule Two Ways  Find each derivative in two ways: using the product rule, and by expanding first. Verify that both answers are equal, by simplifying.         "
+},
+{
+  "id": "subsec-product-rule-examples-4",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-4",
+  "type": "Exercise Group",
+  "number": "3.1.3",
+  "title": "Evaluate at a Point.",
+  "body": " Evaluate at a Point  Evaluate each derivative at the given point.  ,  ,  , find  ,  ,  ,  ,  "
+},
+{
+  "id": "subsec-product-rule-examples-5",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-5",
+  "type": "Exercise Group",
+  "number": "3.1.4",
+  "title": "Tangent Lines.",
+  "body": " Tangent Lines  Find the equation of the tangent line to the given curve at the given point.  at  at  "
+},
+{
+  "id": "subsec-product-rule-examples-6",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-6",
+  "type": "Exercise Group",
+  "number": "3.1.5",
+  "title": "Differentiate and Simplify.",
+  "body": " Differentiate and Simplify  Find each derivative and simplify.               "
+},
+{
+  "id": "subsec-product-rule-examples-7",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-7",
+  "type": "Exercise Group",
+  "number": "3.1.6",
+  "title": "Differentiate and Simplify (Radicals).",
+  "body": " Differentiate and Simplify (Radicals)  Find each derivative and simplify.        "
+},
+{
+  "id": "subsec-product-rule-examples-8",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-8",
+  "type": "Exercise Group",
+  "number": "3.1.7",
+  "title": "Differentiate and Simplify (More Radicals).",
+  "body": " Differentiate and Simplify (More Radicals)  Find each derivative and simplify.     "
+},
+{
+  "id": "subsec-product-rule-examples-9",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-9",
+  "type": "Exercise Group",
+  "number": "3.1.8",
+  "title": "Differentiate with Constants.",
+  "body": " Differentiate with Constants  Find each derivative and simplify.  , where are constants  , where and are constants  "
+},
+{
+  "id": "subsec-product-rule-examples-10",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-10",
+  "type": "Exercise Group",
+  "number": "3.1.9",
+  "title": "Negative Exponents.",
+  "body": " Negative Exponents  Find each derivative.         . Hint: Rewrite as and use power rule.   "
+},
+{
+  "id": "subsec-product-rule-examples-11",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-11",
+  "type": "Checkpoint",
+  "number": "3.1.7",
+  "title": "Slope with Negative Exponents.",
+  "body": " Slope with Negative Exponents  Find the slope of at .   "
+},
+{
+  "id": "subsec-product-rule-examples-12",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-12",
+  "type": "Checkpoint",
+  "number": "3.1.8",
+  "title": "Derivative Two Ways.",
+  "body": " Derivative Two Ways  If , find two ways: (a) by using the Product Rule, and (b) by expanding first.   "
+},
+{
+  "id": "subsec-product-rule-examples-13",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-13",
+  "type": "Exercise Group",
+  "number": "3.1.10",
+  "title": "Derivative at a Point.",
+  "body": " Derivative at a Point  Find each derivative at the given point.  ,  ,  "
+},
+{
+  "id": "subsec-product-rule-examples-14",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-14",
+  "type": "Checkpoint",
+  "number": "3.1.9",
+  "title": "Horizontal Tangent (Linear Factors).",
+  "body": " Horizontal Tangent (Linear Factors)  Find the points where the tangent to is horizontal.   "
+},
+{
+  "id": "subsec-product-rule-examples-15",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-examples-15",
+  "type": "Checkpoint",
+  "number": "3.1.10",
+  "title": "Horizontal Tangent (Repeated Factor).",
+  "body": " Horizontal Tangent (Repeated Factor)  Find the points where the tangent to is horizontal.   "
+},
+{
+  "id": "subsec-extended-product-rule-5",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-extended-product-rule-5",
+  "type": "Remark",
+  "number": "3.1.11",
+  "title": "",
+  "body": " This rule comes from using the product rule twice. First, we can think of as (the function together, multiplied by ). Then, applying the product rule to , we get,   Then, for , we can apply the product rule again, to get,   "
+},
+{
+  "id": "subsec-extended-product-rule-6",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-extended-product-rule-6",
+  "type": "Exercise Group",
+  "number": "3.1.11",
+  "title": "Three-Factor Product Rule.",
+  "body": " Three-Factor Product Rule  Find each derivative, using the product rule for 3 functions, and simplify.    "
+},
+{
+  "id": "subsec-extended-product-rule-7",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-extended-product-rule-7",
+  "type": "Checkpoint",
+  "number": "3.1.12",
+  "title": "Three-Factor Derivative at a Point.",
+  "body": " Three-Factor Derivative at a Point  Find the derivative of at .   "
+},
+{
+  "id": "subsec-product-rule-given-values-2",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-given-values-2",
+  "type": "Exercise Group",
+  "number": "3.1.12",
+  "title": "Given Function Values.",
+  "body": " Given Function Values  Find the indicated derivative using the given function values.  , , , . Find .  , , , . Find .  , , , . Find .  , , , . Find where .  , , , . Find .  "
+},
+{
+  "id": "subsec-product-rule-given-values-3",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-given-values-3",
+  "type": "Checkpoint",
+  "number": "3.1.13",
+  "title": "Tangent Line from Given Values.",
+  "body": " Tangent Line from Given Values  Find the equation of the tangent line to the graph of at , given that , , , .  , .   "
+},
+{
+  "id": "subsec-product-rule-advanced-2",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-2",
+  "type": "Checkpoint",
+  "number": "3.1.14",
+  "title": "Derivative with Unknown Function.",
+  "body": " Derivative with Unknown Function  If is a differentiable function, find an expression for the derivative of each of the following functions.      "
+},
+{
+  "id": "subsec-product-rule-advanced-3",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-3",
+  "type": "Checkpoint",
+  "number": "3.1.15",
+  "title": "Slope of xf(x).",
+  "body": " Slope of xf(x)  Find the slope of the tangent line to at , given , .  .   "
+},
+{
+  "id": "subsec-product-rule-advanced-4",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-4",
+  "type": "Checkpoint",
+  "number": "3.1.16",
+  "title": "Tangent to xf(x).",
+  "body": " Tangent to xf(x)  Given that , , and . Find the tangent to at .  , .   "
+},
+{
+  "id": "subsec-product-rule-advanced-5",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-5",
+  "type": "Checkpoint",
+  "number": "3.1.17",
+  "title": "Tangent to x²f(x).",
+  "body": " Tangent to x²f(x)  Given that , , . Find the tangent to at .  , .   "
+},
+{
+  "id": "subsec-product-rule-advanced-6",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-6",
+  "type": "Checkpoint",
+  "number": "3.1.18",
+  "title": "Tangent Using Given Tangent.",
+  "body": " Tangent Using Given Tangent  The tangent to at is . Find the tangent to at .  , ; , point .   "
+},
+{
+  "id": "subsec-product-rule-advanced-7",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-7",
+  "type": "Checkpoint",
+  "number": "3.1.19",
+  "title": "Second Derivative.",
+  "body": " Second Derivative  Given that and for all , find .  , so .   "
+},
+{
+  "id": "subsec-product-rule-advanced-8",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-8",
+  "type": "Checkpoint",
+  "number": "3.1.20",
+  "title": "Tangent from Two Tangent Lines.",
+  "body": " Tangent from Two Tangent Lines  The tangent to at is and the tangent to at is . Find the tangent to at .  , , , ; , point .   "
+},
+{
+  "id": "subsec-product-rule-advanced-9",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-9",
+  "type": "Checkpoint",
+  "number": "3.1.21",
+  "title": "Derivative of [f(x)]².",
+  "body": " Derivative of [f(x)]²  Show that , using the product rule with .  Use part (a) to differentiate .  "
+},
+{
+  "id": "subsec-product-rule-advanced-10",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-10",
+  "type": "Checkpoint",
+  "number": "3.1.22",
+  "title": "Derivative of [f(x)]³.",
+  "body": " Derivative of [f(x)]³  Show that , using the product rule for 3 functions.   "
+},
+{
+  "id": "subsec-product-rule-advanced-11",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-11",
+  "type": "Remark",
+  "number": "3.1.23",
+  "title": "",
+  "body": " In fact, the pattern for the derivative of a product of 3 functions continues for any number of functions. For example, for 4 functions, say, , we have,   In general, for functions, say, ,   "
+},
+{
+  "id": "subsec-product-rule-advanced-12",
+  "level": "2",
+  "url": "sec-product-rule.html#subsec-product-rule-advanced-12",
+  "type": "Checkpoint",
+  "number": "3.1.24",
+  "title": "f’(0) for n-Factor Product.",
+  "body": " f'(0) for n-Factor Product  If , find .  Use the general product rule, and plug in .  , which is the sum of the first natural numbers, which is equal to .  "
 },
 {
   "id": "sec-implicit-differentiation",
   "level": "1",
   "url": "sec-implicit-differentiation.html",
   "type": "Section",
-  "number": "3.1",
+  "number": "3.2",
   "title": "Implicit Differentiation",
   "body": " Implicit Differentiation    Implicit Curves and Their Slopes  The slope of the curve is given by the derivative . However, not all curves are defined by explicit functions, where is isolated and is given as a function of . Some functions are implicit , defined by a relation between and . For example,   Basically,   Explicit means is isolated.  Implicit means the is not isolated, so the and terms are mixed together.    For example, a circle with radius 1 centered at the origin (the unit circle) has the equation,   For the entire graph, this is not a function, because it fails the vertical line test. However, it is still something which we could create tangent lines for.  We want to take derivatives of these kinds of curves. To do so, one strategy would be to isolate , and then take the derivative like we have done previously. In this case,   This leads to two different functions, say and . The first is for the top semicircle, and the second is for the bottom semicircle ( Desmos link ).   For some equations, it is possible to solve for as an explicit function (or possibly multiple functions) of . However, in many other more complicated cases, this is difficult or actually algebraically impossible.  In fact, it is not necessary to solve for explicitly to find the derivative. Instead, we can use a technique called implicit differentiation .   Motivational Example: Circle  Consider the unit circle, with equation . The idea is that we can take the derivative of both sides of the equation,   As usual,   (power rule) and,  (derivative of a constant is zero)   However, is a bit different, because represents a function of , so instead of , we could more precisely write , like,   This means that is like a composition of function, with as the inner function, and the square is the outer function. This means we have to use the chain rule,   Then, the equation becomes,   Then, we want to solve for the derivative , so we can isolate it in the equation,   This means that for any point on the unit circle, the slope of the tangent line at that point is . For example, for the point , the derivative (slope) at that point is,   Note that is included in the formula for the derivative (not just ), and this is totally normal and ok.  Also, we can use the derivative formula to find where the graph has a horizontal tangent, and also where it has a vertical tangent.   There is a horizontal tangent if , or . This means that . Plugging this into the curve equation , we get , so . So, and . This should make sense graphically.  For vertical tangents, this is basically where the derivative is undefined, because of division by 0. Here, it is when . Plugging this into the equation, we get , so , and so the points are and .     Horizontal Parabolas  Consider the equation (or ). This equation represents a horizontal parabola. We could solve this equation for , by taking the square root of both sides to get . In other words, this defines two functions of , and . We could take the derivative of each individually, to get,   Instead, using implicit differentiation, we can take the derivative of both together. Differentiate both sides of the equation,     Folium of Descartes  The equation represents a curve called the folium of Descartes ( folium is Latin for leaf ). Notice that and are mixed together, so this is an implicit equation. It is technically possible to solve for in this formula, however this requires advanced techniques, and the explicit expression is very complicated, making the derivative tedious to compute. Instead, using implicit differentiation, take the derivative of both sides,   Then, solving for ,   Then, for example, for the point on the curve (you can verify that is indeed on the curve, by plugging it into the equation , and verifying that both sides are equal),   Then, the equation of the tangent line at is,   We can also consider where on this curve has a horizontal tangent line. This occurs when , or,   This occurs when the numerator is equal to 0, or , or . This doesn't give a particular point, but instead a relationship between and . Combining this with the original curve equation, this forms like a system of equations,   Then, solving this will give us the points where the tangent line is horizontal.   Then, substituting back into the equation , we get and . Therefore, there is a horizontal tangent at and .     Summary of Implicit Differentiation  In summary, to do implicit differentiation:   Differentiate both sides (with respect to ), i.e. take of both sides .   When differentiating any term involving , treat as a function of , and use the chain rule (basically, multiply by at the end). Keep in mind that,    Solve for (isolate ) in the equation.   Some notes:   You can use either or to represent the derivative of with respect to . The latter notation is a bit more compact.  With implicit differentiation, the derivative is usually in terms of both  and  . This means, to evaluate the derivative at a particular point, it is necessary to know both coordinates. In contrast, the derivative of an explicit function only requires .  We can think of the derivative as an operator that we can apply to both sides of the equation. This is analogous to how we can square both sides, or take the logarithm of both sides.  Implicit differentiation also has the advantage that it leads to one formula for the derivative, that applies to all points on the graph, even if the graph may have 2 or 3 or even more separate function equations.     Horizontal and Vertical Tangents   Horizontal tangents occur when .  Vertical tangents occur when is undefined.   For a curve with ,   Horizontal tangents when .  Vertical tangents when .   Note: technically, if both the numerator and denominator are 0, then this is a separate case and the regular rules don't apply.   "
 },
@@ -1139,7 +1679,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-implicit-differentiation.html#ex-circle-intro",
   "type": "Example",
-  "number": "3.1.1",
+  "number": "3.2.1",
   "title": "",
   "body": " For example, a circle with radius 1 centered at the origin (the unit circle) has the equation,   For the entire graph, this is not a function, because it fails the vertical line test. However, it is still something which we could create tangent lines for.  We want to take derivatives of these kinds of curves. To do so, one strategy would be to isolate , and then take the derivative like we have done previously. In this case,   This leads to two different functions, say and . The first is for the top semicircle, and the second is for the bottom semicircle ( Desmos link ).  "
 },
@@ -1148,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-implicit-differentiation.html#ex-motivational-circle",
   "type": "Example",
-  "number": "3.1.2",
+  "number": "3.2.2",
   "title": "Motivational Example: Circle.",
   "body": " Motivational Example: Circle  Consider the unit circle, with equation . The idea is that we can take the derivative of both sides of the equation,   As usual,   (power rule) and,  (derivative of a constant is zero)   However, is a bit different, because represents a function of , so instead of , we could more precisely write , like,   This means that is like a composition of function, with as the inner function, and the square is the outer function. This means we have to use the chain rule,   Then, the equation becomes,   Then, we want to solve for the derivative , so we can isolate it in the equation,   This means that for any point on the unit circle, the slope of the tangent line at that point is . For example, for the point , the derivative (slope) at that point is,   Note that is included in the formula for the derivative (not just ), and this is totally normal and ok.  Also, we can use the derivative formula to find where the graph has a horizontal tangent, and also where it has a vertical tangent.   There is a horizontal tangent if , or . This means that . Plugging this into the curve equation , we get , so . So, and . This should make sense graphically.  For vertical tangents, this is basically where the derivative is undefined, because of division by 0. Here, it is when . Plugging this into the equation, we get , so , and so the points are and .   "
 },
@@ -1157,7 +1697,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-implicit-differentiation.html#ex-horizontal-parabolas",
   "type": "Example",
-  "number": "3.1.3",
+  "number": "3.2.3",
   "title": "Horizontal Parabolas.",
   "body": " Horizontal Parabolas  Consider the equation (or ). This equation represents a horizontal parabola. We could solve this equation for , by taking the square root of both sides to get . In other words, this defines two functions of , and . We could take the derivative of each individually, to get,   Instead, using implicit differentiation, we can take the derivative of both together. Differentiate both sides of the equation,   "
 },
@@ -1166,7 +1706,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-implicit-differentiation.html#ex-folium-descartes",
   "type": "Example",
-  "number": "3.1.4",
+  "number": "3.2.4",
   "title": "Folium of Descartes.",
   "body": " Folium of Descartes  The equation represents a curve called the folium of Descartes ( folium is Latin for leaf ). Notice that and are mixed together, so this is an implicit equation. It is technically possible to solve for in this formula, however this requires advanced techniques, and the explicit expression is very complicated, making the derivative tedious to compute. Instead, using implicit differentiation, take the derivative of both sides,   Then, solving for ,   Then, for example, for the point on the curve (you can verify that is indeed on the curve, by plugging it into the equation , and verifying that both sides are equal),   Then, the equation of the tangent line at is,   We can also consider where on this curve has a horizontal tangent line. This occurs when , or,   This occurs when the numerator is equal to 0, or , or . This doesn't give a particular point, but instead a relationship between and . Combining this with the original curve equation, this forms like a system of equations,   Then, solving this will give us the points where the tangent line is horizontal.   Then, substituting back into the equation , we get and . Therefore, there is a horizontal tangent at and .  "
 },
@@ -1837,11 +2377,353 @@ var ptx_lunr_docs = [
   "body": " More Trigonometric Integrals Practice  Evaluate each integral.  Multiply numerator and denominator by , and use .  Multiply numerator and denominator by , and use .  Use the sine addition formula .  Rewrite as , then multiply by the conjugate .  Expand, and use and .  "
 },
 {
+  "id": "sec-trigonometric-integrals",
+  "level": "1",
+  "url": "sec-trigonometric-integrals.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Trigonometric Integrals",
+  "body": " Trigonometric Integrals   In this section, we continue analyzing integrals involving trigonometric functions. In particular, we consider integrals involving higher powers and products of trigonometric functions.    Powers of Sine and Cosine  Recall that previously, we did the integrals and using the power-reducing identities ( Integrals of Sine and Cosine Squared ). We can also evaluate integrals of higher powers of sine and cosine. We'll start with the next higher power, and , and then move on to the 4th power, and then the general case.   3rd Power of Cosine  Evaluate .   It turns out that we would like to make a substitution, either , or . Notice that if we separate out one factor of to the right,   Then, we can use the Pythagorean identity to rewrite in terms of sine,   Then, the substitution gives , and is perfectly there on the right side to be replaced by . Then,   Therefore,      3rd Power of Sine  Evaluate .   We can use a technique similar to . Separate out one factor of , and then use the Pythagorean identity to rewrite in terms of cosine,   Then, , gives,   Therefore,      4th Power of Cosine  Evaluate .   Here, the previous technique will not work, because if we separate out one factor of , then we will be left with , which we can't convert to sine using .  Instead, it turns out the correct technique is similar to the one we used to evaluate , which is to use the power-reducing identity. First, we can write as , and then use the power-reducing identity for ,   Here, we have reduced the power of cosine from 4 to 2, but we still have , so we can apply the power-reducing identity again to ,   Then, putting it all together,   Therefore,      Interestingly, the integral results in a non-trigonometric term (the linear term ), which had not occurred in the previous cases. This tends to happen when integrating even powers.    4th Power of Sine  Evaluate .   Using the same method as , we can write as , and then use the power-reducing identity for ,   Then, putting it all together,   Therefore,     In general,   For odd powers, separate out one factor, and then convert the remaining to the opposite trigonometric function, using or , and then use substitution.  For even powers, use the power-reducing identities to reduce the power to the first power, and then integrate.    5th Power of Cosine   Separate out one factor of , and then use the Pythagorean identity to rewrite in terms of sine, and then use substitution .      Integral of Products of Powers of Sine and Cosine  More generally, we can consider integrals with a power of sine multiplied with a power of cosine, of the form,   where are whole numbers. Sometimes, these are called trigonometric integrals , even though they are not the only type of integrals involving trig functions.   Integral of  Evaluate .   We can use substitution, because the derivative of is which is also there. Then,       Integral of  Evaluate .   It turns out that again, we can use substitution, because if we separate out one factor of to prepare for substitution,   Then, we can use the Pythagorean identity to rewrite in terms of cosine,   Now, the substitution will work, because the derivative of is , and is perfectly there on the right side to be replaced by (just account for the negative sign). Then,   Then,     In general, if at least one of the exponents on sine or cosine is odd , then we can use this technique, where we separate out one factor of the odd power, and then convert the remaining to the other trig function, using the Pythagorean identity, and then use -substitution.   Integral of  Evaluate .   Here, both powers are odd, so we can separate out either power. If we separate out one factor of , then we can use the Pythagorean identity to rewrite in terms of sine,   Then,   Then,   Alternatively, if we separate out one factor of , then convert the rest to cosine using ,   Then,   Then,   In fact, both of the final answers are correct, and equivalent, even though they look different.   In fact, they only differ by a constant. Here is a graph of each: Graph of and . Notice that they are the same graph, just with a vertical shift.    In general,   If both exponents are odd, then you can separate off either sine or cosine.  With each choice, you will get answers which look different, but they will be equivalent.   If both powers are even, then the integral is more complicated, because we can't use the previous technique. Instead, we can use the power-reducing identities to reduce the powers, and then integrate.   Integral of  Evaluate .   Here, both exponents are even, so we use the power-reducing identities,   There is still , which is to the 2nd power, so apply the power-reducing identity again,      Integral of  Evaluate .   Both exponents are even again. This requires more tedious algebra than the previous example, because the exponents are bigger. But once again, we start with the power-reducing identities,   We want to simplify as much as possible before integrating,   The integral of 1 and are straightforward, but the integral of and are more complicated,   Then, for , the power is even, so use the power-reducing identity again,   For , the power is odd, so use substitution, by separating out one factor of , and using the Pythagorean identity to rewrite in terms of sine,   Finally, putting it all together,     In summary,   Trigonometric Integrals   To evaluate an integral of the form , where are non-negative integers:    If or are odd (or both), then separate out one factor of the odd power, and convert the remaining to the other trigonometric function, using,    Odd power of sine factor out and use .  Odd power of cosine factor out and use .     If and are both even, then reduce the powers of the trigonometric functions to the first power, using the power-reducing identities,        Evaluate Each Integral  Evaluate each integral.  Factor out , use , and let .  Factor out , use , and let .  Factor out , use , expand , and let .  Both exponents are even, so use power-reducing identities.  Factor out , use , and let .  Factor out , use , and let .     Powers of Tangents and Secants  We can also consider integrals of powers of tangent and secant. The techniques are similar to those for sine and cosine, but there are some differences, because the identities and derivatives are different. First, recall the derivatives of tangent and secant,   And the Pythagorean identities for tangent and secant,     Integral of Products of Powers of Tangents and Secants  Integrals of a product of powers of tangent and secant can be evaluated using similar methods as for products of sine and cosine. In other words, of the form,   Intuitively, this is because tangent and secant are related by the Pythagorean identity,   This allows us to convert between even powers of tangent and secant (just like we converted between sine and cosine).  Also, the derivatives of tangent and secant are related to each other,   This means that often we can use substitution, with being either tangent or secant, depending on the situation (just like we used substitution with sine and cosine).   Tangent Squared  We already did and , so let's consider .   This integral requires a bit of a trick. We can use the identity ,   Then, recall that , so,   Thus,      Integral of  Evaluate .   The derivative of is , so will work well. Then, . Then,      Integral of  Evaluate .   Again, the derivative of is , so will work well. Then, . Then,     In general, if we have an expression involving tangent, and also , then we can use substitution with .   Tangent Cubed  Evaluate .   This also requires a bit of a trick. Separate out , to leave , and use the Pythagorean identity to rewrite in terms of secant,   For the 1st integral, we can use substitution with , so that . For the 2nd integral, this is the Integral of Tangent , which is . Then,   Putting it all together,      Tangent 4th Power  Evaluate .   This is similar to , because we can convert to , and then use the Pythagorean identity to rewrite one of the in terms of secant,   Then, splitting the integral,   For the 2nd integral, we have seen it before, as this is the Integral of Tangent Squared,   For the first integral, we can use substitution, with , so that . Then,   Therefore,      Integral of  Evaluate .   First, like before, separate off , because it is the derivative of , to prepare for the substitution ,   Then, convert the remaining to tangent, using the identity ,   Then,   Then,     This technique of separating off works as long as the exponent of secant is even. Otherwise, if the exponent is odd, we'll need a different technique.   Integral of  Evaluate .   Here, the exponent of secant is 3 which is odd, so we can't use the previous technique. This is because if we separate off , then,   We'll have only 1 factor of secant left, which we can't convert to tangent using the Pythagorean identity.  However, it turns out we can use the derivative of instead, which is . Separate off to prepare for the substitution ,   Then,   Then,      Integral of  Evaluate .   The exponent of secant is 3 which is odd, so like the previous example, we can separate off ,   Then, convert the remaining to secant, using the identity ,   Then,   Then,     In general, this technique of separating out will work when the exponent of secant is odd, and the exponent of tangent is also odd.   Integral of   Split off , and convert the rest to secant using .    Lastly, the final situation is if the power of secant is odd, and the power of tangent is even. In this case, the integral is more complicated, and there isn't a simple one-step substitution. You may not ever encounter an integral like this.  In summary,   Integrals of Products of Tangents and Secants   For an integral of the form :   If is even (and is anything), then split off , convert the remaining even power to tangent using , and let .  If is odd and is odd, then split off , convert the remaining even power to secant using , and let .  If is odd and is even, then the integral is more complicated, and there isn't a simple one-step substitution.      Evaluate Each Integral  Evaluate each integral.  Split off , and let .  Split off , and let .  Split off , and expand .  Split off , and let .  Split off , and convert the rest to secant using .  Split off , and let .  Let , so .     Examples   ★ Evaluate Each Integral  Evaluate each integral.   Separate off , let .   Separate off , let .  Separate off , let .  Separate off , let .   Separate off , let .  Separate off , let .        ★ Definite Integrals  Evaluate each definite integral.       Separate off , let .  Separate off , let .    ★★ Evaluate Each Integral  Evaluate each integral.               Rewrite as , then use .    ★★ Powers and Products of Sine and Cosine (Definite Integrals)  Evaluate each integral.            ★★ Powers and Products of Tangent and Secant  Evaluate each integral.                       ★★ Powers and Products of Cotangent and Cosecant  Evaluate each integral.  Use to convert the even power of cotangent to cosecant, and then use .            ★★ Tangent, Secant, Cotangent, and Cosecant (Definite Integrals)  Evaluate each integral.  Separate off , let .   Separate off , let .  Separate off , let .  Rewrite (tricky!), then use , so .   Split the integral as , or factor to get , then use .  Write , then split into .  Write , then use .  The integrand is even, so can use , and write .  Use , so , and rewrite as .    ★★★ Mixed and Challenging Integrals  Evaluate each integral.  , leads to .  Use , leads to .  Use , leads to .  Rewrite in terms of sine and cosine, leads to .  Rewrite in terms of sine and cosine, leads to , then use .  Rewrite as , then use .  Use , then let , leads to .    using two methods:   Using .  Using .    (a) . (b) , so write the integrand as .  (a) . (b) .   Use , so .  Rewrite in terms of sine and cosine, leads to , then use .  Rewrite as , then let .  Rewrite in terms of sine and cosine, leads to .  Split the fraction, leads to , then use the power-reducing formula for , and use for the 2nd integral.  Use , then write .    ★★★★ Advanced (Multiple Techniques Required)  Evaluate each integral.  Use the formula , then evaluate from to .  Use , so , then apply the formula for .  Use , then integrate , using integration by parts on the second integral.  First rewrite and integrate using , then use integration by parts with and .     More Complicated Tangent and Secant Integrals  For an integral of tangent and secant, the integral is more complicated if the exponent of secant is odd, and the exponent of tangent is even. In this case, there isn't a straightforward technique, and we have to be creative.   Secant 3rd Power  Evaluate .   This is more tricky. It turns out that one way is to use integration by parts, by splitting the integral as,   Then,        Then,   The original integral appears on the right-hand side. Then, combining them together,   For , recall that . Putting it all together,   A very interesting pattern is that on the right-hand side, there is which is the derivative of , and which is the integral of . In other words, the integral of secant cubed is the average of the derivative and integral of secant.     Integral of  Evaluate .   Here, the exponent of secant is 1 which is odd, and the exponent of tangent is 2 which is even, so this is the case where there isn't a straightforward technique. It turns out, the trick is to use the identity ,   These are 2 integrals which we have seen before,   For , we can use integration by parts, by splitting the integral as .  For , this is a standard integral, and recall that .       Evaluate Each Integral  Evaluate each integral.  Use , and split the integral as . Use integration by parts on , which will result in the same integral appearing . Solve for the integral.  Use , expand, and integrate using the reduction formulas for odd powers of secant.    "
+},
+{
+  "id": "subsec-powers-sin-cos-3",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-3",
+  "type": "Example",
+  "number": "6.4.1",
+  "title": "3rd Power of Cosine.",
+  "body": " 3rd Power of Cosine  Evaluate .   It turns out that we would like to make a substitution, either , or . Notice that if we separate out one factor of to the right,   Then, we can use the Pythagorean identity to rewrite in terms of sine,   Then, the substitution gives , and is perfectly there on the right side to be replaced by . Then,   Therefore,    "
+},
+{
+  "id": "subsec-powers-sin-cos-4",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-4",
+  "type": "Example",
+  "number": "6.4.2",
+  "title": "3rd Power of Sine.",
+  "body": " 3rd Power of Sine  Evaluate .   We can use a technique similar to . Separate out one factor of , and then use the Pythagorean identity to rewrite in terms of cosine,   Then, , gives,   Therefore,    "
+},
+{
+  "id": "subsec-powers-sin-cos-5",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-5",
+  "type": "Example",
+  "number": "6.4.3",
+  "title": "4th Power of Cosine.",
+  "body": " 4th Power of Cosine  Evaluate .   Here, the previous technique will not work, because if we separate out one factor of , then we will be left with , which we can't convert to sine using .  Instead, it turns out the correct technique is similar to the one we used to evaluate , which is to use the power-reducing identity. First, we can write as , and then use the power-reducing identity for ,   Here, we have reduced the power of cosine from 4 to 2, but we still have , so we can apply the power-reducing identity again to ,   Then, putting it all together,   Therefore,    "
+},
+{
+  "id": "subsec-powers-sin-cos-6",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-6",
+  "type": "Remark",
+  "number": "6.4.4",
+  "title": "",
+  "body": " Interestingly, the integral results in a non-trigonometric term (the linear term ), which had not occurred in the previous cases. This tends to happen when integrating even powers.  "
+},
+{
+  "id": "subsec-powers-sin-cos-7",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-7",
+  "type": "Example",
+  "number": "6.4.5",
+  "title": "4th Power of Sine.",
+  "body": " 4th Power of Sine  Evaluate .   Using the same method as , we can write as , and then use the power-reducing identity for ,   Then, putting it all together,   Therefore,    "
+},
+{
+  "id": "subsec-powers-sin-cos-10",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-10",
+  "type": "Checkpoint",
+  "number": "6.4.6",
+  "title": "5th Power of Cosine.",
+  "body": " 5th Power of Cosine   Separate out one factor of , and then use the Pythagorean identity to rewrite in terms of sine, and then use substitution .   "
+},
+{
+  "id": "subsec-products-sin-cos-4",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "trigonometric integrals "
+},
+{
+  "id": "subsec-products-sin-cos-5",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-5",
+  "type": "Example",
+  "number": "6.4.7",
+  "title": "Integral of <span class=\"process-math\">\\(\\sin^4{x} \\cos{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   We can use substitution, because the derivative of is which is also there. Then,     "
+},
+{
+  "id": "subsec-products-sin-cos-6",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-6",
+  "type": "Example",
+  "number": "6.4.8",
+  "title": "Integral of <span class=\"process-math\">\\(\\sin^3{x} \\cos^2{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   It turns out that again, we can use substitution, because if we separate out one factor of to prepare for substitution,   Then, we can use the Pythagorean identity to rewrite in terms of cosine,   Now, the substitution will work, because the derivative of is , and is perfectly there on the right side to be replaced by (just account for the negative sign). Then,   Then,    "
+},
+{
+  "id": "subsec-products-sin-cos-8",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-8",
+  "type": "Example",
+  "number": "6.4.9",
+  "title": "Integral of <span class=\"process-math\">\\(\\sin^3{x} \\cos^3{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   Here, both powers are odd, so we can separate out either power. If we separate out one factor of , then we can use the Pythagorean identity to rewrite in terms of sine,   Then,   Then,   Alternatively, if we separate out one factor of , then convert the rest to cosine using ,   Then,   Then,   In fact, both of the final answers are correct, and equivalent, even though they look different.   In fact, they only differ by a constant. Here is a graph of each: Graph of and . Notice that they are the same graph, just with a vertical shift.   "
+},
+{
+  "id": "subsec-products-sin-cos-12",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-12",
+  "type": "Example",
+  "number": "6.4.10",
+  "title": "Integral of <span class=\"process-math\">\\(\\sin^2{x} \\cos^2{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   Here, both exponents are even, so we use the power-reducing identities,   There is still , which is to the 2nd power, so apply the power-reducing identity again,    "
+},
+{
+  "id": "subsec-products-sin-cos-13",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-13",
+  "type": "Example",
+  "number": "6.4.11",
+  "title": "Integral of <span class=\"process-math\">\\(\\sin^2{x} \\cos^4{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   Both exponents are even again. This requires more tedious algebra than the previous example, because the exponents are bigger. But once again, we start with the power-reducing identities,   We want to simplify as much as possible before integrating,   The integral of 1 and are straightforward, but the integral of and are more complicated,   Then, for , the power is even, so use the power-reducing identity again,   For , the power is odd, so use substitution, by separating out one factor of , and using the Pythagorean identity to rewrite in terms of sine,   Finally, putting it all together,    "
+},
+{
+  "id": "thm-trig-integrals-sin-cos",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#thm-trig-integrals-sin-cos",
+  "type": "Theorem",
+  "number": "6.4.12",
+  "title": "Trigonometric Integrals.",
+  "body": " Trigonometric Integrals   To evaluate an integral of the form , where are non-negative integers:    If or are odd (or both), then separate out one factor of the odd power, and convert the remaining to the other trigonometric function, using,    Odd power of sine factor out and use .  Odd power of cosine factor out and use .     If and are both even, then reduce the powers of the trigonometric functions to the first power, using the power-reducing identities,      "
+},
+{
+  "id": "subsec-products-sin-cos-16",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-16",
+  "type": "Exercise Group",
+  "number": "6.4.1",
+  "title": "Evaluate Each Integral.",
+  "body": " Evaluate Each Integral  Evaluate each integral.  Factor out , use , and let .  Factor out , use , and let .  Factor out , use , expand , and let .  Both exponents are even, so use power-reducing identities.  Factor out , use , and let .  Factor out , use , and let .  "
+},
+{
+  "id": "subsec-products-tan-sec-10",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-10",
+  "type": "Example",
+  "number": "6.4.13",
+  "title": "Tangent Squared.",
+  "body": " Tangent Squared  We already did and , so let's consider .   This integral requires a bit of a trick. We can use the identity ,   Then, recall that , so,   Thus,    "
+},
+{
+  "id": "subsec-products-tan-sec-11",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-11",
+  "type": "Example",
+  "number": "6.4.14",
+  "title": "Integral of <span class=\"process-math\">\\(\\tan{x} \\sec^2{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   The derivative of is , so will work well. Then, . Then,    "
+},
+{
+  "id": "subsec-products-tan-sec-12",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-12",
+  "type": "Example",
+  "number": "6.4.15",
+  "title": "Integral of <span class=\"process-math\">\\(\\tan^3{x} \\sec^2{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   Again, the derivative of is , so will work well. Then, . Then,    "
+},
+{
+  "id": "subsec-products-tan-sec-14",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-14",
+  "type": "Example",
+  "number": "6.4.16",
+  "title": "Tangent Cubed.",
+  "body": " Tangent Cubed  Evaluate .   This also requires a bit of a trick. Separate out , to leave , and use the Pythagorean identity to rewrite in terms of secant,   For the 1st integral, we can use substitution with , so that . For the 2nd integral, this is the Integral of Tangent , which is . Then,   Putting it all together,    "
+},
+{
+  "id": "subsec-products-tan-sec-15",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-15",
+  "type": "Example",
+  "number": "6.4.17",
+  "title": "Tangent 4th Power.",
+  "body": " Tangent 4th Power  Evaluate .   This is similar to , because we can convert to , and then use the Pythagorean identity to rewrite one of the in terms of secant,   Then, splitting the integral,   For the 2nd integral, we have seen it before, as this is the Integral of Tangent Squared,   For the first integral, we can use substitution, with , so that . Then,   Therefore,    "
+},
+{
+  "id": "subsec-products-tan-sec-16",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-16",
+  "type": "Example",
+  "number": "6.4.18",
+  "title": "Integral of <span class=\"process-math\">\\(\\tan^3{x} \\sec^4{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   First, like before, separate off , because it is the derivative of , to prepare for the substitution ,   Then, convert the remaining to tangent, using the identity ,   Then,   Then,    "
+},
+{
+  "id": "subsec-products-tan-sec-18",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-18",
+  "type": "Example",
+  "number": "6.4.19",
+  "title": "Integral of <span class=\"process-math\">\\(\\tan{x} \\sec^3{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   Here, the exponent of secant is 3 which is odd, so we can't use the previous technique. This is because if we separate off , then,   We'll have only 1 factor of secant left, which we can't convert to tangent using the Pythagorean identity.  However, it turns out we can use the derivative of instead, which is . Separate off to prepare for the substitution ,   Then,   Then,    "
+},
+{
+  "id": "subsec-products-tan-sec-19",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-19",
+  "type": "Example",
+  "number": "6.4.20",
+  "title": "Integral of <span class=\"process-math\">\\(\\tan^3{x} \\sec^3{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   The exponent of secant is 3 which is odd, so like the previous example, we can separate off ,   Then, convert the remaining to secant, using the identity ,   Then,   Then,    "
+},
+{
+  "id": "subsec-products-tan-sec-21",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-21",
+  "type": "Checkpoint",
+  "number": "6.4.21",
+  "title": "Integral of <span class=\"process-math\">\\(\\tan^5{x} \\sec^5{x}\\)<\/span>.",
+  "body": " Integral of   Split off , and convert the rest to secant using .   "
+},
+{
+  "id": "thm-trig-integrals-tan-sec",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#thm-trig-integrals-tan-sec",
+  "type": "Theorem",
+  "number": "6.4.22",
+  "title": "Integrals of Products of Tangents and Secants.",
+  "body": " Integrals of Products of Tangents and Secants   For an integral of the form :   If is even (and is anything), then split off , convert the remaining even power to tangent using , and let .  If is odd and is odd, then split off , convert the remaining even power to secant using , and let .  If is odd and is even, then the integral is more complicated, and there isn't a simple one-step substitution.    "
+},
+{
+  "id": "subsec-products-tan-sec-25",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-25",
+  "type": "Exercise Group",
+  "number": "6.4.2",
+  "title": "Evaluate Each Integral.",
+  "body": " Evaluate Each Integral  Evaluate each integral.  Split off , and let .  Split off , and let .  Split off , and expand .  Split off , and let .  Split off , and convert the rest to secant using .  Split off , and let .  Let , so .  "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-2",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-2",
+  "type": "Exercise Group",
+  "number": "6.4.3",
+  "title": "★ Evaluate Each Integral.",
+  "body": " ★ Evaluate Each Integral  Evaluate each integral.   Separate off , let .   Separate off , let .  Separate off , let .  Separate off , let .   Separate off , let .  Separate off , let .      "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-3",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-3",
+  "type": "Exercise Group",
+  "number": "6.4.4",
+  "title": "★ Definite Integrals.",
+  "body": " ★ Definite Integrals  Evaluate each definite integral.       Separate off , let .  Separate off , let .  "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-4",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-4",
+  "type": "Exercise Group",
+  "number": "6.4.5",
+  "title": "★★ Evaluate Each Integral.",
+  "body": " ★★ Evaluate Each Integral  Evaluate each integral.               Rewrite as , then use .  "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-5",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-5",
+  "type": "Exercise Group",
+  "number": "6.4.6",
+  "title": "★★ Powers and Products of Sine and Cosine (Definite Integrals).",
+  "body": " ★★ Powers and Products of Sine and Cosine (Definite Integrals)  Evaluate each integral.          "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-6",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-6",
+  "type": "Exercise Group",
+  "number": "6.4.7",
+  "title": "★★ Powers and Products of Tangent and Secant.",
+  "body": " ★★ Powers and Products of Tangent and Secant  Evaluate each integral.                     "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-7",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-7",
+  "type": "Exercise Group",
+  "number": "6.4.8",
+  "title": "★★ Powers and Products of Cotangent and Cosecant.",
+  "body": " ★★ Powers and Products of Cotangent and Cosecant  Evaluate each integral.  Use to convert the even power of cotangent to cosecant, and then use .          "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-8",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-8",
+  "type": "Exercise Group",
+  "number": "6.4.9",
+  "title": "★★ Tangent, Secant, Cotangent, and Cosecant (Definite Integrals).",
+  "body": " ★★ Tangent, Secant, Cotangent, and Cosecant (Definite Integrals)  Evaluate each integral.  Separate off , let .   Separate off , let .  Separate off , let .  Rewrite (tricky!), then use , so .   Split the integral as , or factor to get , then use .  Write , then split into .  Write , then use .  The integrand is even, so can use , and write .  Use , so , and rewrite as .  "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-9",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-9",
+  "type": "Exercise Group",
+  "number": "6.4.10",
+  "title": "★★★ Mixed and Challenging Integrals.",
+  "body": " ★★★ Mixed and Challenging Integrals  Evaluate each integral.  , leads to .  Use , leads to .  Use , leads to .  Rewrite in terms of sine and cosine, leads to .  Rewrite in terms of sine and cosine, leads to , then use .  Rewrite as , then use .  Use , then let , leads to .    using two methods:   Using .  Using .    (a) . (b) , so write the integrand as .  (a) . (b) .   Use , so .  Rewrite in terms of sine and cosine, leads to , then use .  Rewrite as , then let .  Rewrite in terms of sine and cosine, leads to .  Split the fraction, leads to , then use the power-reducing formula for , and use for the 2nd integral.  Use , then write .  "
+},
+{
+  "id": "subsec-trig-integrals-examples-2-10",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-10",
+  "type": "Exercise Group",
+  "number": "6.4.11",
+  "title": "★★★★ Advanced (Multiple Techniques Required).",
+  "body": " ★★★★ Advanced (Multiple Techniques Required)  Evaluate each integral.  Use the formula , then evaluate from to .  Use , so , then apply the formula for .  Use , then integrate , using integration by parts on the second integral.  First rewrite and integrate using , then use integration by parts with and .  "
+},
+{
+  "id": "subsec-trig-integrals-advanced-3",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-advanced-3",
+  "type": "Example",
+  "number": "6.4.23",
+  "title": "Secant 3rd Power.",
+  "body": " Secant 3rd Power  Evaluate .   This is more tricky. It turns out that one way is to use integration by parts, by splitting the integral as,   Then,        Then,   The original integral appears on the right-hand side. Then, combining them together,   For , recall that . Putting it all together,   A very interesting pattern is that on the right-hand side, there is which is the derivative of , and which is the integral of . In other words, the integral of secant cubed is the average of the derivative and integral of secant.   "
+},
+{
+  "id": "subsec-trig-integrals-advanced-4",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-advanced-4",
+  "type": "Example",
+  "number": "6.4.24",
+  "title": "Integral of <span class=\"process-math\">\\(\\tan^2{x} \\sec{x}\\)<\/span>.",
+  "body": " Integral of  Evaluate .   Here, the exponent of secant is 1 which is odd, and the exponent of tangent is 2 which is even, so this is the case where there isn't a straightforward technique. It turns out, the trick is to use the identity ,   These are 2 integrals which we have seen before,   For , we can use integration by parts, by splitting the integral as .  For , this is a standard integral, and recall that .     "
+},
+{
+  "id": "subsec-trig-integrals-advanced-5",
+  "level": "2",
+  "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-advanced-5",
+  "type": "Exercise Group",
+  "number": "6.4.12",
+  "title": "Evaluate Each Integral.",
+  "body": " Evaluate Each Integral  Evaluate each integral.  Use , and split the integral as . Use integration by parts on , which will result in the same integral appearing . Solve for the integral.  Use , expand, and integrate using the reduction formulas for odd powers of secant.  "
+},
+{
   "id": "sec-integration-by-parts",
   "level": "1",
   "url": "sec-integration-by-parts.html",
   "type": "Section",
-  "number": "6.4",
+  "number": "6.5",
   "title": "Integration by Parts",
   "body": " Integration by Parts   Integration by parts (IBP) is another useful technique for evaluating integrals, especially when the integrand is a product of two different types of functions (i.e. 2 functions multiplied together).   When to Use Integration by Parts  For example, integration by parts is useful for:     times exponential  times logarithm  times sine  exponential times sine    IBP is essentially a formula, which says,   It is typically written using differential notation as,   So, is basically the derivative of , and is the derivative of . This formula is used from left to right:   The original integral is of the form (2 things multiplied together)  Then we rewrite it as   And if we do it right, the remaining integral will be easier than the original integral.   In this way, this step only solves part of the original integral. This is why it's called integration by parts .   Evaluating   Consider the integral,     The idea is to break up the integral into two parts, and , such that,   can be integrated easily, and doesn't become more complicated  can be differentiated easily, and its derivative is simpler than itself   In this case, it turns out we should choose and . Then, we can compute and ,         Then, the integral can be rewritten as ,   Therefore,     In general, a good guideline is for choosing and is,   Choose such that its derivative is more simple than itself.  Choose so it can be easily integrated , and when integrated, either becomes simpler or at least not more complicated.    Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself ( has no weird function , it just involves ), and because can be easily integrated to . Then,         Then,     Some integrals require using integration by parts multiple times.   Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to . Then,         Then,   The new integral is less complicated because the power of decreased by one (from 2 to 1). Then, we can use IBP again for ,         Then,      Evaluating   Consider the integral,     Choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to itself. Then,         Then,   The new integral is simpler because the power of decreased by one. Using IBP again,            Each time you use IBP, the power of the polynomial decreases by one, until it eventually reaches 0. This is what makes IBP a useful technique for integrating products of polynomials and other functions.  From the previous examples, we can see that IBP is often useful when the integral is a product of 2 different types of functions.    Evaluating  Evaluate the integral .     Integral of Natural Logarithm  Integration by parts can be used to find the antiderivative of the natural logarithm function .   Evaluating   Consider the integral,     At first, does not look like a product of functions, however, we can think of it as , and choose and . The derivative of is which is simpler than itself, and 1 can be easily integrated to . Then,         Then,     In summary,     Cyclic Examples (Product of Exponential and Trig)   Evaluating   Consider the integral,     Here, it turns out that we could choose either or to be or , and both would work. This is because the derivative and integral of is , and the derivative and integral of is or , so both of them are basically the same in terms of complexity. In this case, we will choose and . Then,         Then,   The second integral is similar to the first except that it has instead of . To evaluate it, we use IBP again,          The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and collect them together as like terms on the left-hand side,   Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,      Evaluating  Evaluate the integral .      Integration by Parts for Definite Integrals  For definite integrals, you also have to evaluate the term at the limits of integration. Otherwise, it is very similar.    Evaluating   Evaluate the integral,            Then,       Summary of Integration by Parts  In summary,   A mnemonic to remember the IBP formula is u ltra- v iolet v oo doo .   Note that integration by parts is a place-holder formula , in that the variables and are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.  In contrast, recall that with substitution, the integral is transformed from to an integral in another variable .  With integration by parts, we do not substitute or , but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of . In this way, you don't have to worry about changing the limits of integration for definite integrals.    With integration by parts, you don't have to worry about the constant of integration until the final answer. That is, when integrating to get , we do not need to include a constant of integration , because there will be a constant introduced by the remaining integral . So, it is easiest to just wait until the very end to include .     Derivation of the Integration by Parts Formula  You may recall that integration by substitution comes from the chain rule for derivatives. In a similar way, integration by parts comes from the product rule for derivatives. Recall the product rule for derivatives, which says that, for two functions, and ,   Taking the antiderivative of both sides gives,   The left-hand side is the integral of the derivative of , so it is just , so we can write,   Then, rearranging this formula to isolate gives,   This is the integration by parts formula, except the convention is to use and instead of and , and to write instead of , and instead of . So, we write it as,   as before.    Guidelines for Choosing and (LIATE)  An important part of using integration by parts is to choose the correct and . Intuitively,   Choose so its derivative is more simple than itself  Choose to be something that is easily integrated, and either becomes simpler or at least not more complicated.   There is a mnemonic for choosing called the LIATE rule (typically pronounced lie-ate ), which is an acronym that stands for:   L : logarithmic functions, e.g. .  I : inverse trigonometric functions, e.g. .  A : algebraic functions, of the form , like polynomial functions ( , etc.) and radical functions ( , etc.).  T : trigonometric functions, e.g. .  E : exponential functions, e.g. , .   The rule is:   Choose to be what is highest on the list  And then will be what is leftover.   Also, don't forget that you can also just choose to be the entire function and , if nothing else seems to work.    Examples   One-Step IBP ( )  Evaluate each integral.                     Definite Integrals, One Step ( )  Evaluate each definite integral.            One-Step Variants ( )  Evaluate each integral.                Cyclic Examples with Exponential and Trigonometric Functions ( )  Evaluate each integral.               Two-Step IBP ( )  Evaluate each integral.             Definite Integrals, One Step ( )  Evaluate each definite integral.          Definite Integrals, Two Steps ( )  Evaluate each definite integral.        Special Techniques ( )  Evaluate each integral.  we can integrate  we can integrate   we can integrate  we can integrate  similar to  similar to  similar to     Inverse Trigonometric Functions ( )  Evaluate each integral.     we can differentiate , as      Three or More Steps ( )  Evaluate each integral.             Definite Integrals ( )  Evaluate each definite integral.   Use first.       More Definite Integrals ( )  Evaluate each definite integral.   (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)     ( is a constant.)      Advanced Examples  Sometimes, a -substitution or trigonometric identity can be used to simplify the integral, which leads to an integral where you can use integration by parts.   Substitution then IBP ( )  Evaluate each integral.    let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to ; cyclic IBP  let , leads to    Evaluating  Evaluate , where is a constant, .     Particle Velocity  A particle has velocity m\/s. Find the distance traveled from time 0 to time .  m    Definite Integrals  Evaluate each definite integral.            Special Tricks  Evaluate each integral.  split the integral as , then use integration by parts on the 2nd integral  let and  let and or    "
 },
@@ -1850,7 +2732,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-2",
   "type": "Example",
-  "number": "6.4.1",
+  "number": "6.5.1",
   "title": "When to Use Integration by Parts.",
   "body": " When to Use Integration by Parts  For example, integration by parts is useful for:     times exponential  times logarithm  times sine  exponential times sine   "
 },
@@ -1859,7 +2741,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-12",
   "type": "Example",
-  "number": "6.4.2",
+  "number": "6.5.2",
   "title": "Evaluating <span class=\"process-math\">\\(\\int x e^x \\,dx\\)<\/span>.",
   "body": " Evaluating   Consider the integral,     The idea is to break up the integral into two parts, and , such that,   can be integrated easily, and doesn't become more complicated  can be differentiated easily, and its derivative is simpler than itself   In this case, it turns out we should choose and . Then, we can compute and ,         Then, the integral can be rewritten as ,   Therefore,    "
 },
@@ -1868,7 +2750,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-15",
   "type": "Example",
-  "number": "6.4.3",
+  "number": "6.5.3",
   "title": "Evaluating <span class=\"process-math\">\\(\\int x \\ln{x} \\,dx\\)<\/span>.",
   "body": " Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself ( has no weird function , it just involves ), and because can be easily integrated to . Then,         Then,    "
 },
@@ -1877,7 +2759,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-17",
   "type": "Example",
-  "number": "6.4.4",
+  "number": "6.5.4",
   "title": "Evaluating <span class=\"process-math\">\\(\\int x^2 \\sin{x} \\,dx\\)<\/span>.",
   "body": " Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to . Then,         Then,   The new integral is less complicated because the power of decreased by one (from 2 to 1). Then, we can use IBP again for ,         Then,    "
 },
@@ -1886,7 +2768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-18",
   "type": "Example",
-  "number": "6.4.5",
+  "number": "6.5.5",
   "title": "Evaluating <span class=\"process-math\">\\(\\int x^2 e^x \\,dx\\)<\/span>.",
   "body": " Evaluating   Consider the integral,     Choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to itself. Then,         Then,   The new integral is simpler because the power of decreased by one. Using IBP again,           "
 },
@@ -1895,7 +2777,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#sec-integration-by-parts-3",
   "type": "Checkpoint",
-  "number": "6.4.6",
+  "number": "6.5.6",
   "title": "Evaluating <span class=\"process-math\">\\(\\int x^3 e^x \\,dx\\)<\/span>.",
   "body": " Evaluating  Evaluate the integral .   "
 },
@@ -1904,7 +2786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-ln-3",
   "type": "Example",
-  "number": "6.4.7",
+  "number": "6.5.7",
   "title": "Evaluating <span class=\"process-math\">\\(\\int \\ln{x} \\,dx\\)<\/span>.",
   "body": " Evaluating   Consider the integral,     At first, does not look like a product of functions, however, we can think of it as , and choose and . The derivative of is which is simpler than itself, and 1 can be easily integrated to . Then,         Then,    "
 },
@@ -1913,7 +2795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-cyclic-2",
   "type": "Example",
-  "number": "6.4.8",
+  "number": "6.5.8",
   "title": "Evaluating <span class=\"process-math\">\\(\\int e^x \\sin x \\,dx\\)<\/span>.",
   "body": " Evaluating   Consider the integral,     Here, it turns out that we could choose either or to be or , and both would work. This is because the derivative and integral of is , and the derivative and integral of is or , so both of them are basically the same in terms of complexity. In this case, we will choose and . Then,         Then,   The second integral is similar to the first except that it has instead of . To evaluate it, we use IBP again,          The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and collect them together as like terms on the left-hand side,   Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,    "
 },
@@ -1922,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-cyclic-3",
   "type": "Checkpoint",
-  "number": "6.4.9",
+  "number": "6.5.9",
   "title": "Evaluating <span class=\"process-math\">\\(\\int e^x \\cos x \\,dx\\)<\/span>.",
   "body": " Evaluating  Evaluate the integral .   "
 },
@@ -1931,7 +2813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-definite-4",
   "type": "Example",
-  "number": "6.4.10",
+  "number": "6.5.10",
   "title": "Evaluating <span class=\"process-math\">\\(\\int_0^2 3x e^x \\,dx\\)<\/span>.",
   "body": " Evaluating   Evaluate the integral,            Then,    "
 },
@@ -1940,7 +2822,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-summary-5",
   "type": "Remark",
-  "number": "6.4.11",
+  "number": "6.5.11",
   "title": "",
   "body": " Note that integration by parts is a place-holder formula , in that the variables and are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.  In contrast, recall that with substitution, the integral is transformed from to an integral in another variable .  With integration by parts, we do not substitute or , but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of . In this way, you don't have to worry about changing the limits of integration for definite integrals.  "
 },
@@ -1949,7 +2831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-summary-6",
   "type": "Remark",
-  "number": "6.4.12",
+  "number": "6.5.12",
   "title": "",
   "body": " With integration by parts, you don't have to worry about the constant of integration until the final answer. That is, when integrating to get , we do not need to include a constant of integration , because there will be a constant introduced by the remaining integral . So, it is easiest to just wait until the very end to include .  "
 },
@@ -1958,7 +2840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-2",
   "type": "Exercise Group",
-  "number": "6.4.1",
+  "number": "6.5.1",
   "title": "One-Step IBP (<span class=\"process-math\">\\(\\star\\)<\/span>).",
   "body": " One-Step IBP ( )  Evaluate each integral.                   "
 },
@@ -1967,7 +2849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-3",
   "type": "Exercise Group",
-  "number": "6.4.2",
+  "number": "6.5.2",
   "title": "Definite Integrals, One Step (<span class=\"process-math\">\\(\\star\\)<\/span>).",
   "body": " Definite Integrals, One Step ( )  Evaluate each definite integral.          "
 },
@@ -1976,7 +2858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-4",
   "type": "Exercise Group",
-  "number": "6.4.3",
+  "number": "6.5.3",
   "title": "One-Step Variants (<span class=\"process-math\">\\(\\star\\)<\/span>).",
   "body": " One-Step Variants ( )  Evaluate each integral.              "
 },
@@ -1985,7 +2867,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-5",
   "type": "Exercise Group",
-  "number": "6.4.4",
+  "number": "6.5.4",
   "title": "Cyclic Examples with Exponential and Trigonometric Functions (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
   "body": " Cyclic Examples with Exponential and Trigonometric Functions ( )  Evaluate each integral.             "
 },
@@ -1994,7 +2876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-6",
   "type": "Exercise Group",
-  "number": "6.4.5",
+  "number": "6.5.5",
   "title": "Two-Step IBP (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
   "body": " Two-Step IBP ( )  Evaluate each integral.           "
 },
@@ -2003,7 +2885,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-7",
   "type": "Exercise Group",
-  "number": "6.4.6",
+  "number": "6.5.6",
   "title": "Definite Integrals, One Step (<span class=\"process-math\">\\(\\star\\)<\/span>).",
   "body": " Definite Integrals, One Step ( )  Evaluate each definite integral.        "
 },
@@ -2012,7 +2894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-8",
   "type": "Exercise Group",
-  "number": "6.4.7",
+  "number": "6.5.7",
   "title": "Definite Integrals, Two Steps (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
   "body": " Definite Integrals, Two Steps ( )  Evaluate each definite integral.      "
 },
@@ -2021,7 +2903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-9",
   "type": "Exercise Group",
-  "number": "6.4.8",
+  "number": "6.5.8",
   "title": "Special Techniques (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
   "body": " Special Techniques ( )  Evaluate each integral.  we can integrate  we can integrate   we can integrate  we can integrate  similar to  similar to  similar to   "
 },
@@ -2030,7 +2912,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-10",
   "type": "Exercise Group",
-  "number": "6.4.9",
+  "number": "6.5.9",
   "title": "Inverse Trigonometric Functions (<span class=\"process-math\">\\(\\star\\)<\/span>).",
   "body": " Inverse Trigonometric Functions ( )  Evaluate each integral.     we can differentiate , as    "
 },
@@ -2039,7 +2921,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-11",
   "type": "Exercise Group",
-  "number": "6.4.10",
+  "number": "6.5.10",
   "title": "Three or More Steps (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
   "body": " Three or More Steps ( )  Evaluate each integral.           "
 },
@@ -2048,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-12",
   "type": "Exercise Group",
-  "number": "6.4.11",
+  "number": "6.5.11",
   "title": "Definite Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
   "body": " Definite Integrals ( )  Evaluate each definite integral.   Use first.     "
 },
@@ -2057,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-examples-13",
   "type": "Exercise Group",
-  "number": "6.4.12",
+  "number": "6.5.12",
   "title": "More Definite Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
   "body": " More Definite Integrals ( )  Evaluate each definite integral.   (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)     ( is a constant.)   "
 },
@@ -2066,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-advanced-3",
   "type": "Exercise Group",
-  "number": "6.4.13",
+  "number": "6.5.13",
   "title": "Substitution then IBP (<span class=\"process-math\">\\(\\star\\star\\star\\star\\)<\/span>).",
   "body": " Substitution then IBP ( )  Evaluate each integral.    let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to ; cyclic IBP  let , leads to  "
 },
@@ -2075,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-advanced-4",
   "type": "Checkpoint",
-  "number": "6.4.13",
+  "number": "6.5.13",
   "title": "Evaluating <span class=\"process-math\">\\(\\int x^3\\cos(nx)\\,dx\\)<\/span>.",
   "body": " Evaluating  Evaluate , where is a constant, .   "
 },
@@ -2084,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-advanced-5",
   "type": "Checkpoint",
-  "number": "6.4.14",
+  "number": "6.5.14",
   "title": "Particle Velocity.",
   "body": " Particle Velocity  A particle has velocity m\/s. Find the distance traveled from time 0 to time .  m  "
 },
@@ -2093,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-advanced-6",
   "type": "Exercise Group",
-  "number": "6.4.14",
+  "number": "6.5.14",
   "title": "Definite Integrals.",
   "body": " Definite Integrals  Evaluate each definite integral.          "
 },
@@ -2102,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-integration-by-parts.html#subsec-ibp-advanced-7",
   "type": "Exercise Group",
-  "number": "6.4.15",
+  "number": "6.5.15",
   "title": "Special Tricks.",
   "body": " Special Tricks  Evaluate each integral.  split the integral as , then use integration by parts on the 2nd integral  let and  let and or  "
 },
@@ -2111,7 +2993,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-inverse-trig-sub.html",
   "type": "Section",
-  "number": "6.5",
+  "number": "6.6",
   "title": "Inverse Trigonometric Substitution",
   "body": " Inverse Trigonometric Substitution   Inverse trigonometric substitution is a technique used to evaluate integrals that contain expressions of the form , , or . This method uses trigonometric identities to simplify these integrals.    Summary of Inverse Trigonometric Substitution                                    Identify the form of the substitution (sine, tangent, or secant).  Apply the substitution. Sketch a right triangle and label the sides, to represent the relationships between and .  Simplify the integral.  Integrate with the new variable , using previous strategies, typically a trigonometric integral.  Back-substitute using the inverse trigonometric function to substitute back for .      Examples   Example   Evaluate .    Let , so .               Example   Determine      Example   Determine      Example   Determine       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate       Evaluate      "
 },
@@ -2120,7 +3002,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#summary-of-inverse-trigonometric-substitution-2",
   "type": "Table",
-  "number": "6.5.1",
+  "number": "6.6.1",
   "title": "",
   "body": "                            "
 },
@@ -2129,7 +3011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-2",
   "type": "Checkpoint",
-  "number": "6.5.2",
+  "number": "6.6.2",
   "title": "Example.",
   "body": " Example   Evaluate .    Let , so .             "
 },
@@ -2138,7 +3020,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-3",
   "type": "Checkpoint",
-  "number": "6.5.3",
+  "number": "6.6.3",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -2147,7 +3029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-4",
   "type": "Checkpoint",
-  "number": "6.5.4",
+  "number": "6.6.4",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -2156,7 +3038,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-5",
   "type": "Checkpoint",
-  "number": "6.5.5",
+  "number": "6.6.5",
   "title": "Example.",
   "body": " Example   Determine    "
 },
@@ -2165,7 +3047,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-6",
   "type": "Checkpoint",
-  "number": "6.5.6",
+  "number": "6.6.6",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -2174,7 +3056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-7",
   "type": "Checkpoint",
-  "number": "6.5.7",
+  "number": "6.6.7",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -2183,7 +3065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-8",
   "type": "Checkpoint",
-  "number": "6.5.8",
+  "number": "6.6.8",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -2192,7 +3074,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-9",
   "type": "Checkpoint",
-  "number": "6.5.9",
+  "number": "6.6.9",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -2201,7 +3083,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-10",
   "type": "Checkpoint",
-  "number": "6.5.10",
+  "number": "6.6.10",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -2210,7 +3092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-11",
   "type": "Checkpoint",
-  "number": "6.5.11",
+  "number": "6.6.11",
   "title": "",
   "body": "  Evaluate    "
 },
@@ -2219,7 +3101,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-inverse-trig-sub.html#examples-12",
   "type": "Checkpoint",
-  "number": "6.5.12",
+  "number": "6.6.12",
   "title": "",
   "body": "  Evaluate    "
 },
