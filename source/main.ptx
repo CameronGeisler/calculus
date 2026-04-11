@@ -42,6 +42,8 @@
         <xi:include href="./ch-series-representation-of-functions.ptx"/>
         <xi:include href="./ch-differential-equations.ptx"/>
 
+        <xi:include href="./ch-vector-fields-and-line-integrals.ptx"/>
+
         <!-- Of course you will want to add more chapters as you proceed-->
     </book>
 </pretext>

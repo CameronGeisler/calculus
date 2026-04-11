@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-line-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Line Integrals</title>
+
+  <subsection xml:id="subsec-line-integrals-motivation">
+    <title>Motivation for Line Integrals</title>
+
+    <p>Recall that we have considered various types of integrals.</p>
+    <ul>
+      <li><p>The definite integral <m>\int_a^b f(x) \,dx</m> is an integral over an interval <m>[a,b]</m> in <m>\mathbb{R}</m></p></li>
+      <li><p>A double integral <m>\iint_D f(x,y) \,dA</m> is an integral over a region <m>D</m> in <m>\mathbb{R}^2</m></p></li>
+      <li><p>A triple integral <m>\iiint_D f(x,y,z) \,dV</m> is an integral over a region <m>D</m> in <m>\mathbb{R}^3</m>.</p></li>
+    </ul>
+    <p>Intuitively,</p>
+    <ul>
+      <li><p>The integral <m>\int_a^b \,dx</m> (where <m>f(x) = 1</m>) can be thought of as summing up small changes in <m>x</m>, over the interval <m>[a,b]</m>.</p></li>
+      <li><p>More generally, the integral <m>\int_a^b f(x) \,dx</m> can be thought of as summing up the products <m>f(x)</m> and a small change in <m>x</m>, over <m>[a,b]</m>.</p></li>
+    </ul>
+    <p>Physically, this can be thought of as a quantity distributed along the <m>x</m>-axis between <m>a</m> and <m>b</m>, with line density <m>f(x)</m> at each point <m>x</m>, and finding the total quantity by summing up, over <m>[a,b]</m>, the products,</p>
+    <me>\text{quantity} = \text{density} \times \text{width} = f(x) \times \,dx</me>
+    <p>In a similar way,</p>
+    <ul>
+      <li><p>Double integrals <m>\iint_R f(x,y) \,dA</m> can be thought of as summing up the products of function values <m>f(x,y)</m> and small pieces of area <m>\,dA</m>, over the region <m>R</m>.</p></li>
+      <li><p>Triple integrals <m>\iiint_R f(x,y,z) \,dV</m> can be thought of as summing up the products of function values <m>f(x,y,z)</m> and small pieces of volume <m>\,dV</m>, over the region <m>R</m>.</p></li>
+    </ul>
+    <p>In fact, to be consistent with the double and triple integral notation, we could write <m>\int_a^b f(x) \,dx</m> as <m>\int_I f(x) \,dx</m>, where <m>I = [a,b]</m> is the <q>interval of integration</q>.</p>
+
+    <p>All integrals share the theme of being a sum, over a domain, of a product of a function with a small piece of that domain. Here, we will consider a <em>line integral</em>, which is an integral over a curve.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-line-integrals-definition">
+    <title>Line Integrals</title>
+
+    <p>Consider a mass distributed along a curve in the plane or 3-space, with mass density <m>f</m> at each point along the curve. For example, a wire with varying mass density along its length. We want to find the total mass of the wire. To do this, we can find the sum, along the curve, of the product of the function value <m>f</m> and a small segment of the curve.</p>
+
+    <p>Consider a curve <m>\mathcal{C}</m> in the plane, with parametrization <m>\vec{r}(t)</m>, <m>a \leq t \leq b</m>, and let <m>f(x,y)</m> be the density at each point <m>(x,y)</m>. Partition the interval <m>[a,b]</m> into <m>a = t_0 \lt t_1 \lt \dots \lt t_n = b</m>. This partition divides the curve into <m>n</m> small arcs (or <q>subarcs</q>). On each arc, choose a sample point <m>(x(t_k^*), y(t_k^*))</m> and let <m>\Delta s_k</m> denote the arc length of the <m>k</m>th piece, where <m>k=1,2, \dots, n</m>.</p>
+
+    <image width="85%">
+      <latex-image>
+        \begin{tikzpicture}
+            % --- Top: Curve C in the xy-plane ---
+            \draw[-&gt;, thick] (-0.5,0) -- (11,0) node[right] {$x$};
+            \draw[-&gt;, thick] (0,-0.5) -- (0,6.5) node[above] {$y$};
+
+            % Curve C
+            \draw[blue, very thick]
+                (0.8,1.2) .. controls (1.0,1.8) and (1.3,2.4) .. (1.6,2.6)
+                .. controls (1.9,2.8) and (2.1,2.5) .. (2.4,2.2)
+                .. controls (2.8,1.8) and (3.2,1.6) .. (3.6,2.0)
+                .. controls (4.0,2.4) and (4.4,3.2) .. (5.0,3.6)
+                .. controls (5.4,3.9) and (5.7,4.2) .. (6.0,4.0)
+                .. controls (6.4,3.7) and (6.8,3.4) .. (7.2,3.8)
+                .. controls (7.6,4.2) and (8.0,4.8) .. (8.4,5.0)
+                .. controls (8.7,5.1) and (8.9,5.4) .. (9.2,5.6)
+                .. controls (9.5,5.8) and (9.8,5.6) .. (10.0,5.8);
+
+            % Curve label
+            \node[blue, right] at (3,6) {$\mathcal{C}: \vec{r}(t),\; a \le t \le b$};
+
+            % Early partition points
+            \fill[red] (0.8,1.2) circle (2.5pt);
+            \fill[red] (1.6,2.6) circle (2.5pt);
+            \fill[red] (2.4,2.2) circle (2.5pt);
+
+            % Middle partition points
+            \fill[red] (5.0,3.6) circle (2.5pt);
+            \fill[red] (6.0,4.0) circle (2.5pt);
+
+            % Late partition points
+            \fill[red] (9.2,5.6) circle (2.5pt);
+            \fill[red] (10.0,5.8) circle (2.5pt);
+
+            % Labels for key points
+            \node[below left, font=\small] at (2.2,1) {$(x(t_0), y(t_0))$};
+            \node[below left, font=\small] at (4.8,3.9) {$(x(t_{k\!-\!1}), y(t_{k\!-\!1}))$};
+            \node[right, font=\small] at (5.8,4.6) {$(x(t_k), y(t_k))$};
+            \node[above left, font=\small] at (12.0,6) {$(x(t_n), y(t_n))$};
+
+            % Highlight the k-th arc segment
+            \draw[orange, line width=2.5pt]
+                (5.0,3.6) .. controls (5.4,3.9) and (5.7,4.2) .. (6.0,4.0);
+
+            % Delta s_k label
+            \node[orange, above, font=\small] at (5.3,4.2) {$\Delta s_k$};
+
+            % Sample point on highlighted arc
+            \fill[green!50!black] (5.5,3.95) circle (3pt);
+            \node[green!50!black, below right, font=\small] at (5.1,3.55) {$(x(t_k^*), y(t_k^*))$};
+
+            % Dots in the gaps
+            \node[font=\large] at (3.7,1.4) {$\cdots$};
+            \node[font=\large] at (8.2,4.2) {$\cdots$};
+
+            % --- Bottom: Parameter t-axis ---
+            \draw[-&gt;, thick] (0,-2.2) -- (11,-2.2) node[right] {$t$};
+
+            % Early ticks
+            \foreach \x in {0.8, 1.6, 2.4} {
+                \draw[thick] (\x,-2.05) -- (\x,-2.35);
+            }
+            % Middle ticks
+            \foreach \x in {5.0, 6.0} {
+                \draw[thick] (\x,-2.05) -- (\x,-2.35);
+            }
+            % Late ticks
+            \foreach \x in {9.2, 10.0} {
+                \draw[thick] (\x,-2.05) -- (\x,-2.35);
+            }
+
+            % Tick labels
+            \node[below, font=\small] at (0.8,-2.35) {$t_0\!=\!a$};
+            \node[below, font=\small] at (1.6,-2.35) {$t_1$};
+            \node[below, font=\small] at (2.4,-2.35) {$t_2$};
+            \node[below, font=\small] at (5.0,-2.35) {$t_{k-1}$};
+            \node[below, font=\small] at (6.0,-2.35) {$t_k$};
+            \node[below, font=\small] at (9.2,-2.35) {$t_{n\!-\!1}$};
+            \node[below, font=\small] at (10.0,-2.35) {$t_n\!=\!b$};
+
+            % Highlight k-th interval
+            \draw[orange, line width=2.5pt] (5.0,-2.2) -- (6.0,-2.2);
+
+            % Sample point t_k^*
+            \fill[green!50!black] (5.5,-2.2) circle (3pt);
+            \node[above, green!50!black, font=\small] at (5.5,-1.85) {$t_k^*$};
+
+            % Dots in gaps on t-axis
+            \node[font=\large] at (3.7,-2) {$\cdots$};
+            \node[font=\large] at (7.6,-2) {$\cdots$};
+
+            % Partition dots on t-axis
+            \fill[red] (0.8,-2.2) circle (2.5pt);
+            \fill[red] (1.6,-2.2) circle (2.5pt);
+            \fill[red] (2.4,-2.2) circle (2.5pt);
+            \fill[red] (5.0,-2.2) circle (2.5pt);
+            \fill[red] (6.0,-2.2) circle (2.5pt);
+            \fill[red] (9.2,-2.2) circle (2.5pt);
+            \fill[red] (10.0,-2.2) circle (2.5pt);
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+
+    <p>Then, the mass of the <m>k</m>th piece of the wire is approximately,</p>
+    <md>
+      <mrow>\text{mass} \amp\approx \text{density} \times \text{length}</mrow>
+      <mrow>\amp= f(x(t_k^{*}), y(t_k^{*})) \cdot \Delta s_k</mrow>
+    </md>
+    <p>Then, the total mass of the wire is approximated by the sum of all the pieces,</p>
+    <me>S_n = \sum_{k=1}^n f(x(t_k^{*}), y(t_k^{*})) \, \Delta s_k</me>
+    <p>This is a Riemann sum of <m>f(x,y)</m> with respect to arc length, so as <m>n \to \infty</m> (and the maximum <m>\Delta s_k \to 0</m>), the sum intuitively approaches the exact mass of the wire.</p>
+
+    <definition xml:id="def-line-integral">
+      <title>Line Integral</title>
+      <statement>
+        <p>The <term>line integral</term> of <m>f</m> along <m>\mathcal{C}</m> is given by,</p>
+        <me>\boxed{\int_{\mathcal{C}} f(x,y) \,ds = \lim_{n \to \infty} \sum_{k=1}^n f(x(t_k^{*}), y(t_k^{*})) \, \Delta s_k}</me>
+      </statement>
+    </definition>
+
+    <p>If <m>f</m> is the linear mass density (mass per unit length), then,</p>
+    <me>\text{total mass of the wire} = \int_{\mathcal{C}} f(x,y) \,ds</me>
+
+    <p>More generally, a line integral can represent any quantity distributed along a curve, with density <m>f</m> at each point. For example,</p>
+    <ul>
+      <li><p>Total charge along a wire with charge density <m>f</m></p></li>
+      <li><p>Total amount of some substance distributed along a curve with density <m>f</m>.</p></li>
+    </ul>
+
+    <remark>
+      <p>Sometimes, we use the more compact notations for a line integral,</p>
+      <me>\int_C f(\vec{r}(t)) \,ds \qquad \text{or} \qquad \int_C f \,ds</me>
+    </remark>
+
+    <remark>
+      <p>Recall that a curve <m>\mathcal{C}</m> is <em>smooth</em> if it has a parametrization <m>\vec{r}(t)</m> such that <m>\vec{r}'(t)</m> is continuous and <m>\vec{r}'(t) \neq \vec{0}</m> for all <m>t</m> in the interval of parametrization.</p>
+    </remark>
+
+    <remark>
+      <p>If <m>\mathcal{C}</m> is piecewise smooth, and <m>f</m> is continuous on <m>\mathcal{C}</m>, then the line integral will exist, and will be equal to the sum of the line integrals along each smooth arc.</p>
+    </remark>
+
+    <p>If <m>\mathcal{C}</m> is a closed curve, then the line integral is often written with a circle on the integral sign, as</p>
+    <me>\oint_{\mathcal{C}} f(x,y,z) \,ds</me>
+    <p>This is just for emphasis, and does not change the meaning of the integral.</p>
+
+    <p>Line integrals are actually better described as <q>curve integrals</q>, because they are integrals over a curve, which is not necessarily a line.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-line-integrals-geometric">
+    <title>Geometric Interpretation of Line Integral</title>
+
+    <p>The line integral <m>\int_C f(x,y)\,ds</m> also has a geometric interpretation: it is the area of the vertical, curtain-like surface between the curve <m>C</m> in the <m>xy</m>-plane and the curve <m>z = f(x,y)</m> above it. Intuitively, imagine a vertical <q>wall</q> or <q>fence</q> standing on the curve <m>C</m>, whose height at each point <m>(x,y)</m> is <m>f(x,y)</m>. The line integral gives the total area of one side of this wall. It's like a lateral surface area.</p>
+
+    <image width="75%">
+      <latex-image>
+        \begin{tikzpicture}[scale=1.0,
+            x={(-0.7cm,-0.5cm)},
+            y={(1cm,0cm)},
+            z={(0cm,1cm)},
+        ]
+            % Axes
+            \draw[-&gt;, thick] (0,0,0) -- (5.5,0,0) node[below left] {$x$};
+            \draw[-&gt;, thick] (0,0,0) -- (0,7,0) node[right] {$y$};
+            \draw[-&gt;, thick] (0,0,0) -- (0,0,5) node[above] {$z$};
+
+            % Curtain: individual quad strips
+            \foreach \t in {0,1,...,39} {
+                \pgfmathsetmacro{\xa}{0.5 + \t*0.1}
+                \pgfmathsetmacro{\ya}{3 + 2.5*sin(\t*10)}
+                \pgfmathsetmacro{\za}{2.5 + 1.2*sin(\t*5 + 40)}
+                \pgfmathsetmacro{\xb}{0.5 + (\t+1)*0.1}
+                \pgfmathsetmacro{\yb}{3 + 2.5*sin((\t+1)*10)}
+                \pgfmathsetmacro{\zb}{2.5 + 1.2*sin((\t+1)*5 + 40)}
+                \fill[cyan!20, draw=none, opacity=0.7]
+                    (\xa,\ya,0) -- (\xa,\ya,\za) -- (\xb,\yb,\zb) -- (\xb,\yb,0) -- cycle;
+            }
+
+            % Vertical slat lines
+            \foreach \t in {0,2,...,40} {
+                \pgfmathsetmacro{\xx}{0.5 + \t*0.1}
+                \pgfmathsetmacro{\yy}{3 + 2.5*sin(\t*10)}
+                \pgfmathsetmacro{\zz}{2.5 + 1.2*sin(\t*5 + 40)}
+                \draw[cyan!50, thin] (\xx,\yy,0) -- (\xx,\yy,\zz);
+            }
+
+            % Base curve C
+            \foreach \t in {0,1,...,39} {
+                \pgfmathsetmacro{\xa}{0.5 + \t*0.1}
+                \pgfmathsetmacro{\ya}{3 + 2.5*sin(\t*10)}
+                \pgfmathsetmacro{\xb}{0.5 + (\t+1)*0.1}
+                \pgfmathsetmacro{\yb}{3 + 2.5*sin((\t+1)*10)}
+                \draw[blue, very thick] (\xa,\ya,0) -- (\xb,\yb,0);
+            }
+            \node[blue, above left, font=\small] at (0.5,4.5,0) {$t = a$};
+            \pgfmathsetmacro{\xcl}{0.5 + 40*0.1}
+            \pgfmathsetmacro{\ycl}{3 + 2.5*sin(40*10)}
+            \node[blue, right, font=\normalsize] at (\xcl,\ycl,0) {$\mathcal{C}$};
+            \node[blue, below, font=\small] at (\xcl,\ycl,0) {$t = b$};
+
+            % Top curve
+            \foreach \t in {0,1,...,39} {
+                \pgfmathsetmacro{\xa}{0.5 + \t*0.1}
+                \pgfmathsetmacro{\ya}{3 + 2.5*sin(\t*10)}
+                \pgfmathsetmacro{\za}{2.5 + 1.2*sin(\t*5 + 40)}
+                \pgfmathsetmacro{\xb}{0.5 + (\t+1)*0.1}
+                \pgfmathsetmacro{\yb}{3 + 2.5*sin((\t+1)*10)}
+                \pgfmathsetmacro{\zb}{2.5 + 1.2*sin((\t+1)*5 + 40)}
+                \draw[red, very thick] (\xa,\ya,\za) -- (\xb,\yb,\zb);
+            }
+            \pgfmathsetmacro{\xfl}{0.5 + 8*0.1}
+            \pgfmathsetmacro{\yfl}{3 + 2.5*sin(8*10)}
+            \pgfmathsetmacro{\zfl}{2.5 + 1.2*sin(8*5 + 40)}
+            \node[red, above right, font=\normalsize] at (\xfl,\yfl,\zfl) {$z = f(x,y)$};
+
+            % Delta s_k on base
+            \foreach \t in {16,17} {
+                \pgfmathsetmacro{\xa}{0.5 + \t*0.1}
+                \pgfmathsetmacro{\ya}{3 + 2.5*sin(\t*10)}
+                \pgfmathsetmacro{\xb}{0.5 + (\t+1)*0.1}
+                \pgfmathsetmacro{\yb}{3 + 2.5*sin((\t+1)*10)}
+                \draw[orange, line width=3pt] (\xa,\ya,0) -- (\xb,\yb,0);
+            }
+            \pgfmathsetmacro{\xds}{0.5 + 17*0.1}
+            \pgfmathsetmacro{\yds}{3 + 2.5*sin(17*10)}
+            \node[orange, below, font=\small] at (\xds,\yds,0) {$\Delta s_k$};
+
+            % Height arrow
+            \pgfmathsetmacro{\xh}{0.5 + 17*0.1}
+            \pgfmathsetmacro{\yh}{3 + 2.5*sin(17*10)}
+            \pgfmathsetmacro{\zh}{2.5 + 1.2*sin(17*5 + 40)}
+            \draw[&lt;-&gt;, thick, green!50!black] (\xh,\yh,0.1) -- (\xh,\yh,\zh-0.1);
+            \node[green!50!black, right, font=\small] at (\xh,\yh,{\zh/2}) {$f(x,y)$};
+
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+
+    <p>Each thin vertical strip of the curtain has approximate area <m>f(x(t_k^*), y(t_k^*)) \cdot \Delta s_k</m> (height times width). Summing all the strips and taking the limit gives the line integral <m>\int_C f(x,y)\,ds</m>.</p>
+
+    <p>This works as long as <m>f(x,y) \geq 0</m>, otherwise the line integral can be thought of as a signed area (similar to the regular definite integral).</p>
+
+    <p>Here is a Desmos link, where you can visualize the line integral as a curtain, for any function and any curve: <url href="https://www.desmos.com/3d/ejlhpamybl">Line Integral Visualization</url>.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-evaluating-line-integrals">
+    <title>Evaluating Line Integrals</title>
+
+    <p>The line integral of <m>f</m> along <m>\mathcal{C}</m> is not a typical integral, because the variable of integration is the arc length parameter <m>s</m>. To evaluate it, we need to express <m>ds</m> in terms of a parametrization <m>t</m> of the curve.</p>
+
+    <p>Let <m>\mathcal{C}</m> be a curve with parametrization <m>\vec{r}(t) = \vecii{x(t)}{y(t)}</m>, <m>a \leq t \leq b</m>.</p>
+
+    <p>Recall that the arc length of the curve <m>\mathcal{C}</m> is given by,</p>
+    <me>\boxed{\int_{\mathcal{C}} \,ds = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2} \,dt = \int_a^b \abs{\vec{r}'(t)} \,dt}</me>
+    <p>In particular, the arc length element <m>ds</m> is related to <m>dt</m> by,</p>
+    <me>ds = \abs{\vec{r}'(t)} \,dt = \sqrt{(x'(t))^2 + (y'(t))^2} \,dt</me>
+
+    <p>In a similar way, the line integral of <m>f</m> over <m>\mathcal{C}</m> can be expressed in terms of the parameter <m>t</m>.</p>
+
+    <theorem xml:id="thm-evaluating-line-integrals">
+      <statement>
+        <p>Let the density function <m>f(x,y)</m> be continuous on <m>\mathcal{C}</m>. Then, the line integral of <m>f</m> over <m>\mathcal{C}</m> is given by,</p>
+        <me>\boxed{\int_{\mathcal{C}} f(x,y) \,ds = \int_a^b f(x(t), y(t)) \sqrt{(x'(t))^2 + (y'(t))^2} \,dt = \int_a^b f(\vec{r}(t)) \abs{\vec{r}'(t)} \,dt}</me>
+      </statement>
+    </theorem>
+
+    <p>From this perspective, arc length is a special case of the more general line integral. If the density function is <m>f(x,y)=1</m>, the line integral reduces to the arc length of the curve. All of this works as long as <m>\mathcal{C}</m> is smooth, or at least piecewise smooth, and <m>f</m> is continuous on <m>\mathcal{C}</m>.</p>
+
+    <remark>
+      <p>In fact, the value of the line integral is independent of the parametrization of <m>\mathcal{C}</m>, and its orientation. In other words, even if we traverse the curve in the opposite direction, the line integral will have the same value. This is unlike the standard <m>\int_a^b f(x) \,dx</m>, where reversing the limits of integration changes the sign of the integral. This is because the line integral is a sum of products of function values and arc length elements, and the arc length element <m>ds</m> is always positive, regardless of the direction of traversal.</p>
+    </remark>
+
+    <remark>
+      <p>The line integral is a generalization of the <q>regular</q> definite integral. In the special case where <m>\mathcal{C}</m> is the <m>x</m>-axis from <m>x = a</m> to <m>x = b</m>, it can be parameterized by <m>\vec{r}(t) = \vecii{t}{0}</m> for <m>a \leq t \leq b</m>, so <m>\abs{\vec{r}'(t)} = 1</m>. Then, the integral becomes,</p>
+      <me>\int_{\mathcal{C}} f(x,y) \,ds = \int_a^b f(t,0) \,dt</me>
+      <p>This is just the usual definite integral of <m>f(x,0)</m> from <m>a</m> to <m>b</m> (labeling <m>t</m> as <m>x</m>).</p>
+    </remark>
+
+    <p>When setting up a line integral, often the most difficult part is finding a parametrization of the curve <m>\mathcal{C}</m>.</p>
+  </subsection>
+
+  <subsection xml:id="subsec-line-integrals-in-space">
+    <title>Line Integrals in Space</title>
+
+    <p>Line integrals can be extended to curves in 3-space. Again, consider a mass distributed along a curve <m>\mathcal{C}</m> in 3-space (like a wire), with mass density <m>f(x,y,z)</m> at each point <m>(x,y,z)</m>. Then, the total mass of the wire can be found by summing up, along the curve, the products of the density <m>f</m> and small segments of the curve. Let <m>\mathcal{C}</m> have parametrization <m>\vec{r}(t) = \veciii{x(t)}{y(t)}{z(t)}</m>, <m>a \leq t \leq b</m>. Then,</p>
+    <me>\int_{\mathcal{C}} f(x,y,z) \,ds = \lim_{n \to \infty} \sum_{k=1}^n f(x(t_k^{*}), y(t_k^{*}), z(t_k^{*})) \, \Delta s_k</me>
+    <p>Similarly, to evaluate this integral,</p>
+    <me>\boxed{\int_{\mathcal{C}} f(x,y,z) \,ds = \int_a^b f(x(t), y(t), z(t)) \sqrt{(x'(t))^2 + (y'(t))^2 + (z'(t))^2} \,dt = \int_a^b f(\vec{r}(t)) \cdot \abs{\vec{r}'(t)} \,dt}</me>
+
+    <p>The integrals in the plane and in space can both be written in the compact form with vector notation,</p>
+    <me>\int_a^b f(\vec{r}(t)) \cdot \abs{\vec{r}'(t)} \,dt</me>
+  </subsection>
+
+  <subsection xml:id="subsec-line-integrals-examples">
+    <title>Examples</title>
+
+    <exercise>
+      <title>True or False</title>
+      <introduction><p>Determine whether each statement is true or false.</p></introduction>
+      <task><statement><p>If a curve has a parametric description <m>r(t)=\langle x(t),y(t),z(t) \rangle</m>, where <m>t</m> is the arc length, then <m>|r'(t)|=1</m></p></statement><answer><p>True</p></answer></task>
+    </exercise>
+
+    <project>
+      <title>Line Integrals Along Given Paths (<m>\star</m>)</title>
+      <introduction><p>Evaluate the line integral along the given path <m>C</m>.</p></introduction>
+      <task><statement><p><m>\int_C xy\,ds</m>, <m>C:\mathbf{r}(t)=4t\,\mathbf{i}+3t\,\mathbf{j}</m>, <m>0\le t\le 1</m></p></statement><answer><p><m>20</m></p></answer></task>
+      <task><statement><p><m>\int_C xy^3 ds</m>, where <m>C</m> is the quarter-circle <m>r(t)=\langle 2\cos t,2\sin t \rangle</m>, <m>0 \le t \le \frac{\pi}{2}</m></p></statement><answer><p><m>8</m></p></answer></task>
+      <task><statement><p><m>\int_C 3(x-y)\,ds</m>, <m>C:\mathbf{r}(t)=t\,\mathbf{i}+(2-t)\,\mathbf{j}</m>, <m>0\le t\le 2</m></p></statement><answer><p><m>0</m></p></answer></task>
+      <task><statement><p><m>\int_C (x^2-2y^2) ds</m>, where <m>C</m> is the line segment <m>r(t)=\left\langle \frac{t}{\sqrt{2}},\frac{t}{\sqrt{2}} \right\rangle</m>, <m>0 \le t \le 4</m></p></statement><answer><p><m>-\frac{32}{3}</m></p></answer></task>
+      <task><statement><p><m>\int_C xy\, ds</m>, where <m>C</m> is the unit circle <m>r(t)=\langle \cos t,\sin t \rangle</m>, <m>0 \le t \le 2\pi</m></p></statement><answer><p><m>0</m></p></answer></task>
+      <task><statement><p><m>\int_C (2x+y)\, ds</m>, where <m>C</m> is the line segment <m>r(t)=\langle 3t,4t \rangle</m>, <m>0 \le t \le 2</m></p></statement><answer><p><m>100</m></p></answer></task>
+      <task><statement><p><m>\int_C x\, ds</m>, where <m>C</m> is the curve <m>r(t)=\langle t^3,4t \rangle</m>, <m>0 \le t \le 1</m></p></statement><answer><p><m>\frac{61}{54}</m></p></answer></task>
+      <task><statement><p><m>\int_C 3x\cos y\, ds</m>, where <m>C</m> is the curve <m>r(t)=\langle \sin t,t \rangle</m>, <m>0 \le t \le \frac{\pi}{2}</m></p></statement><answer><p><m>2\sqrt{2}-1</m></p></answer></task>
+      <task><statement><p><m>\int_C (x-y+3)\, ds</m>, where <m>C</m> is the curve <m>r(t)=(\cos t)\,\mathbf{i}+(\sin t)\,\mathbf{j}</m>, <m>0\le t\le 2\pi</m></p></statement><answer><p><m>6\pi</m></p></answer></task>
+      <task><statement><p><m>\int_C y^3\, ds</m>, <m>C: x=t^3,\ y=t</m>, <m>0\le t\le 2</m></p></statement><answer><p><m>\frac{145\sqrt{145}-1}{54}</m></p></answer></task>
+      <task><statement><p><m>\int_C xy\, ds</m>, <m>C: x=t^2,\ y=2t</m>, <m>0\le t\le 1</m></p></statement><answer><p><m>\frac{8(\sqrt{2}+1)}{15}</m></p></answer></task>
+      <task><statement><p><m>\int_C \frac{x^2}{y^{4/3}}\,ds</m>, where <m>C</m> is the curve <m>x=t^2</m>, <m>y=t^3</m>, for <m>1\le t\le 2</m></p></statement><answer><p><m>\frac{80\sqrt{10}-13\sqrt{13}}{27}</m></p></answer></task>
+      <task><statement><p>Find the line integral of <m>f(x,y)=\frac{\sqrt{y}}{x}</m> along the curve <m>r(t)=t^3\,\mathbf{i}+t^4\,\mathbf{j}</m>, <m>\frac{1}{2}\le t\le 1</m></p></statement><answer><p><m>\frac{125-13\sqrt{13}}{48}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Line Integrals in 3D (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each line integral along the given path <m>C</m>.</p></introduction>
+      <task><statement><p><m>\int_C (x^2+y^2+z^2)\,ds</m>, <m>C:\mathbf{r}(t)=\sin t\,\mathbf{i}+\cos t\,\mathbf{j}+2\,\mathbf{k}</m>, <m>0\le t\le \frac{\pi}{2}</m></p></statement><answer><p><m>\frac{5\pi}{2}</m></p></answer></task>
+      <task><statement><p><m>\int_C 2xyz\,ds</m>, <m>C:\mathbf{r}(t)=12t\,\mathbf{i}+5t\,\mathbf{j}+84t\,\mathbf{k}</m>, <m>0\le t\le 1</m></p></statement><answer><p><m>214200</m></p></answer></task>
+      <task><statement><p><m>\int_C (y-z)\, ds</m>, where <m>C</m> is the helix <m>r(t)=\langle 3\cos t,3\sin t,4t \rangle</m>, <m>0 \le t \le 2\pi</m></p></statement><answer><p><m>-40\pi^2</m></p></answer></task>
+      <task><statement><p><m>\int_C (x-y+2z)\, ds</m>, where <m>C</m> is the circle <m>r(t)=\langle 1,3\cos t,3\sin t \rangle</m>, <m>0 \le t \le 2\pi</m></p></statement><answer><p><m>6\pi</m></p></answer></task>
+      <task><statement><p><m>\int_C (x^2-y+3z)\,ds</m>, where <m>C</m> is the line segment from <m>(0,0,0)</m> to <m>(1,2,1)</m></p></statement><answer><p><m>\frac{5\sqrt{6}}{6}</m></p></answer></task>
+      <task><statement><p><m>\int_C (x+y)\,ds</m>, where <m>C</m> is parametrized by <m>\mathbf{r}(t) = \langle at, bt, ct \rangle</m>, <m>0 \le t \le m</m></p></statement><answer><p><m>\frac{(a+b)\sqrt{a^2+b^2+c^2}}{2}\,m^2</m></p></answer></task>
+      <task><statement><p><m>\int_C (x+y)\,ds</m>, where <m>C</m> is the straight-line segment <m>x=t</m>, <m>y=1-t</m>, <m>z=0</m>, from <m>(0,1,0)</m> to <m>(1,0,0)</m></p></statement><answer><p><m>\sqrt{2}</m></p></answer></task>
+      <task><statement><p><m>\int_C (x-y+z-2)\,ds</m>, where <m>C</m> is the straight-line segment <m>x=t</m>, <m>y=1-t</m>, <m>z=1</m>, from <m>(0,1,1)</m> to <m>(1,0,1)</m></p></statement><answer><p><m>-\sqrt{2}</m></p></answer></task>
+      <task><statement><p><m>\int_C (xy+y+z)\,ds</m> along the curve <m>r(t)=2t\,\mathbf{i}+t\,\mathbf{j}+(2-2t)\,\mathbf{k}</m>, <m>0\le t\le 1</m></p></statement><answer><p><m>\frac{13}{2}</m></p></answer></task>
+      <task><statement><p><m>\int_C \sqrt{x^2+y^2}\,ds</m> along the curve <m>r(t)=(4\cos t)\,\mathbf{i}+(4\sin t)\,\mathbf{j}+3t\,\mathbf{k}</m>, <m>-2\pi\le t\le 2\pi</m></p></statement><answer><p><m>80\pi</m></p></answer></task>
+      <task><statement><p><m>\int_C (x+y+z)\,ds</m> over the straight-line segment from <m>(1,2,3)</m> to <m>(0,-1,1)</m></p></statement><answer><p><m>3\sqrt{14}</m></p></answer></task>
+      <task><statement><p><m>\int_C \frac{\sqrt3}{x^2+y^2+z^2}\,ds</m> over the curve <m>r(t)=t\,\mathbf{i}+t\,\mathbf{j}+t\,\mathbf{k}</m>, <m>1\le t\lt\infty</m></p></statement><answer><p><m>1</m></p></answer></task>
+      <task><statement><p><m>\int_C y\,ds</m>, where <m>C</m> is parametrized by <m>\mathbf{r}(t) = \langle t^2, t, t^2 \rangle</m>, <m>0 \le t \le 1</m></p></statement><answer><p><m>\frac{13}{12}</m></p></answer></task>
+      <task><statement><p><m>\int_C xyz\, ds</m>, <m>C: x=2\sin t,\ y=t,\ z=-2\cos t</m>, <m>0\le t\le \pi</m></p></statement><answer><p><m>\pi\sqrt{5}</m></p></answer></task>
+      <task><statement><p><m>\int_C (2x+9z)\,ds</m>, <m>C: x=t,\ y=t^2,\ z=t^3</m>, <m>0\le t\le 1</m></p></statement><answer><p><m>\frac{14\sqrt{14}-1}{6}</m></p></answer></task>
+      <task><statement><p><m>\int_C xe^{yz}\, ds</m>, where <m>C</m> is the curve <m>r(t)=\langle t,2t,-2t \rangle</m>, <m>0 \le t \le 2</m></p></statement><answer><p><m>\frac{3}{8}\brac{1-e^{-16}}</m></p></answer></task>
+      <task><statement><p><m>\int_C (x+y+z)\, ds</m>, where <m>C</m> is the semicircle <m>r(t)=\langle 2\cos t,0,2\sin t \rangle</m>, <m>0 \le t \le \pi</m></p></statement><answer><p><m>8</m></p></answer></task>
+      <task><statement><p><m>\int_C \frac{1}{y}\,ds</m>, where <m>C</m> is parametrized by <m>\mathbf{r}(t) = \langle 2, 2e^t, e^{2t} \rangle</m>, <m>-1 \le t \le 1</m></p></statement><answer><p><m>\frac{3e}{2}+\frac{1}{2e}</m></p></answer></task>
+    </project>
+
+    <exercise>
+      <title>Two Paths for <m>\int_C x\,ds</m> (<m>\star</m>)</title>
+      <introduction><p>Evaluate <m>\int_C x\,ds</m>, where <m>C</m> is</p></introduction>
+      <task><statement><p>the straight-line segment <m>x=t</m>, <m>y=\frac{t}{2}</m>, from <m>(0,0)</m> to <m>(4,2)</m></p></statement><answer><p><m>4\sqrt5</m></p></answer></task>
+      <task><statement><p>the parabolic curve <m>x=t</m>, <m>y=t^2</m>, from <m>(0,0)</m> to <m>(2,4)</m></p></statement><answer><p><m>\frac{17\sqrt{17}-1}{12}</m></p></answer></task>
+    </exercise>
+
+    <project>
+      <title>Line Integrals on Various Curves (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each line integral, where <m>C</m> is the given curve.</p></introduction>
+      <task><statement><p><m>\int_C (x^2+y^2)\,ds</m>, where <m>C</m> is the line segment from the origin to <m>(2,1)</m></p></statement><answer><p><m>\frac{5\sqrt{5}}{3}</m></p></answer></task>
+      <task><statement><p><m>\int_C xy^4\, ds</m>, <m>C</m> is the right half of the circle <m>x^2+y^2=16</m></p></statement><answer><p><m>\frac{8192}{5}</m></p></answer></task>
+      <task><statement><p><m>\int_C x\sin y\, ds</m>, <m>C</m> is the line segment from <m>(0,3)</m> to <m>(4,6)</m></p></statement><answer><p><m>\frac{20}{9}(\sin 6-\sin 3-3\cos 6)</m></p></answer></task>
+      <task><statement><p><m>\int_C (x^2y^3-\sqrt{x})\,ds</m>, <m>C</m> is the arc of the curve <m>y=\sqrt{x}</m> from <m>(1,1)</m> to <m>(4,2)</m></p></statement><answer><p><m>\frac{137411\sqrt{17}+1525\sqrt{5}}{5040}</m></p></answer></task>
+      <task><statement><p><m>\int_C (x^2+y^2)\, ds</m>, where <m>C</m> is the circle of radius 4 centered at <m>(0,0)</m></p></statement><answer><p><m>128\pi</m></p></answer></task>
+      <task><statement><p><m>\int_C xy\, ds</m>, where <m>C</m> is the portion of the ellipse <m>\frac{x^2}{4}+\frac{y^2}{16}=1</m> in the first quadrant, oriented counterclockwise</p></statement><answer><p><m>\frac{112}{9}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Integrating Functions Over Curves (<m>\star\star</m>)</title>
+      <introduction><p>Integrate <m>f</m> over the given curve <m>C</m>.</p></introduction>
+      <task><statement><p><m>f(x,y)=\frac{x^3}{y}</m>, <m>C:y=\frac{x^2}{2}</m>, <m>0\le x\le 2</m></p></statement><answer><p><m>\frac{2}{3}(5\sqrt5-1)</m></p></answer></task>
+      <task><statement><p><m>f(x,y)=\frac{x+y^2}{\sqrt{1+x^2}}</m>, <m>C:y=\frac{x^2}{2}</m> from <m>(1,\frac{1}{2})</m> to <m>(0,0)</m></p></statement><answer><p><m>\frac{11}{20}</m></p></answer></task>
+      <task><statement><p><m>f(x,y)=x+y</m>, <m>C:x^2+y^2=4</m> in the first quadrant from <m>(2,0)</m> to <m>(0,2)</m></p></statement><answer><p><m>8</m></p></answer></task>
+      <task><statement><p><m>f(x,y)=x^2-y</m>, <m>C:x^2+y^2=4</m> in the first quadrant from <m>(0,2)</m> to <m>(\sqrt2,\sqrt2)</m></p></statement><answer><p><m>\pi-2-2\sqrt2</m></p></answer></task>
+      <task><statement><p>Find the line integral of <m>f(x,y)=ye^{x^2}</m> along the curve <m>r(t)=4t\,\mathbf{i}-3t\,\mathbf{j}</m>, <m>-1\le t\le 2</m></p></statement><answer><p><m>\frac{15}{32}\brac{e^{16}-e^{64}}</m></p></answer></task>
+    </project>
+
+    <exercise>
+      <title>Two Paths for <m>\int_C \sqrt{x+2y}\,ds</m> (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate <m>\int_C \sqrt{x+2y}\,ds</m>, where <m>C</m> is</p></introduction>
+      <task><statement><p>the straight-line segment <m>x=t</m>, <m>y=4t</m>, from <m>(0,0)</m> to <m>(1,4)</m></p></statement><answer><p><m>2\sqrt{17}</m></p></answer></task>
+      <task><statement><p><m>C_1\cup C_2</m>, where <m>C_1</m> is the line segment from <m>(0,0)</m> to <m>(1,0)</m> and <m>C_2</m> is the line segment from <m>(1,0)</m> to <m>(1,2)</m></p></statement><answer><p><m>\frac{5\sqrt5+1}{3}</m></p></answer></task>
+    </exercise>
+
+    <project>
+      <title>Scalar Line Integrals (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate each scalar line integral.</p></introduction>
+      <task><statement><p><m>\int_C (x^2+y^2)\, ds</m>, where <m>C</m> is the line segment from <m>(0,0)</m> to <m>(5,5)</m></p></statement><answer><p><m>\frac{250\sqrt{2}}{3}</m></p></answer></task>
+      <task><statement><p><m>\int_C \frac{x}{x^2+y^2}\, ds</m>, where <m>C</m> is the line segment from <m>(1,1)</m> to <m>(10,10)</m></p></statement><answer><p><m>\frac{\sqrt{2}}{2}\ln 10</m></p></answer></task>
+      <task><statement><p><m>\int_C (xy)^{\frac{1}{3}}\, ds</m>, where <m>C</m> is the curve <m>y=x^2</m>, <m>0 \le x \le 1</m></p></statement><answer><p><m>\frac{5\sqrt{5}-1}{12}</m></p></answer></task>
+      <task><statement><p><m>\int_C (2x-3y)\, ds</m>, where <m>C</m> is the line segment from <m>(-1,0)</m> to <m>(0,1)</m> followed by the line segment from <m>(0,1)</m> to <m>(1,0)</m></p></statement><answer><p><m>-3\sqrt{2}</m></p></answer></task>
+      <task><statement><p><m>\int_C \frac{xy}{z}\, ds</m>, where <m>C</m> is the line segment from <m>(1,4,1)</m> to <m>(3,6,3)</m></p></statement><answer><p><m>10\sqrt{3}</m></p></answer></task>
+      <task><statement><p><m>\int_C xz\, ds</m>, where <m>C</m> is the line segment from <m>(0,0,0)</m> to <m>(3,2,6)</m> followed by the line segment from <m>(3,2,6)</m> to <m>(7,9,10)</m></p></statement><answer><p><m>414</m></p></answer></task>
+      <task><statement><p><m>\int_C xyz^2\, ds</m>, <m>C</m> is the line segment from <m>(-1,5,0)</m> to <m>(1,6,4)</m></p></statement><answer><p><m>\frac{236\sqrt{21}}{15}</m></p></answer></task>
+      <task><statement><p><m>\int_C xe^{yz}\, ds</m>, <m>C</m> is the line segment from <m>(0,0,0)</m> to <m>(1,2,3)</m></p></statement><answer><p><m>\frac{\sqrt{14}(e^6-1)}{12}</m></p></answer></task>
+    </project>
+
+    <project>
+      <title><m>\int_C (x^2+y^2)\,ds</m> for Various Paths (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate <m>\int_C (x^2+y^2)\, ds</m> for each path <m>C</m>.</p></introduction>
+      <task><statement><p><m>C</m>: line segment from <m>(0,0)</m> to <m>(1,1)</m></p></statement><hint><p><m>\mathbf{r}(t)=\langle t,t\rangle</m>, <m>0\le t\le 1</m></p></hint><answer><p><m>\frac{2\sqrt{2}}{3}</m></p></answer></task>
+      <task><statement><p><m>C</m>: line segment from <m>(0,0)</m> to <m>(2,4)</m></p></statement><hint><p><m>\mathbf{r}(t)=\langle 2t,4t\rangle</m>, <m>0\le t\le 1</m></p></hint><answer><p><m>\frac{40\sqrt{5}}{3}</m></p></answer></task>
+      <task><statement><p><m>C</m>: counterclockwise around the circle <m>x^2+y^2=1</m> from <m>(1,0)</m> to <m>(0,1)</m></p></statement><hint><p><m>\mathbf{r}(t)=\langle \cos t,\sin t\rangle</m>, <m>0\le t\le \frac{\pi}{2}</m></p></hint><answer><p><m>\frac{\pi}{2}</m></p></answer></task>
+      <task><statement><p><m>C</m>: counterclockwise around the circle <m>x^2+y^2=4</m> from <m>(2,0)</m> to <m>(-2,0)</m></p></statement><hint><p><m>\mathbf{r}(t)=\langle 2\cos t,2\sin t\rangle</m>, <m>0\le t\le \pi</m></p></hint><answer><p><m>8\pi</m></p></answer></task>
+    </project>
+
+    <project>
+      <title><m>\int_C \brac{2x+3\sqrt{y}}\,ds</m> for Various Paths (<m>\star\star</m>)</title>
+      <introduction><p>Evaluate <m>\int_C \brac{2x+3\sqrt{y}}\,ds</m> for each path <m>C</m>.</p></introduction>
+      <task><statement><p><m>C</m>: line segments from <m>(0,0)</m> to <m>(1,0)</m> and <m>(1,0)</m> to <m>(2,4)</m></p></statement><hint><p><m>\mathbf{r}_1(t)=\langle t,0\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_2(t)=\langle 1+t,4t\rangle</m>, <m>0\le t\le 1</m></p></hint><answer><p><m>1+7\sqrt{17}</m></p></answer></task>
+      <task><statement><p><m>C</m>: line segments from <m>(0,1)</m> to <m>(0,4)</m> and <m>(0,4)</m> to <m>(3,3)</m></p></statement><hint><p><m>\mathbf{r}_1(t)=\langle 0,1+3t\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_2(t)=\langle 3t,4-t\rangle</m>, <m>0\le t\le 1</m></p></hint><answer><p><m>14+19\sqrt{10}-6\sqrt{30}</m></p></answer></task>
+      <task><statement><p><m>C</m>: counterclockwise around the triangle with vertices <m>(0,0)</m>, <m>(1,0)</m>, and <m>(0,1)</m></p></statement><hint><p><m>\mathbf{r}_1(t)=\langle t,0\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_2(t)=\langle 1-t,t\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_3(t)=\langle 0,1-t\rangle</m>, <m>0\le t\le 1</m></p></hint><answer><p><m>3+3\sqrt{2}</m></p></answer></task>
+      <task><statement><p><m>C</m>: counterclockwise around the square with vertices <m>(0,0)</m>, <m>(2,0)</m>, <m>(2,2)</m>, and <m>(0,2)</m></p></statement><hint><p><m>\mathbf{r}_1(t)=\langle 2t,0\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_2(t)=\langle 2,2t\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_3(t)=\langle 2-2t,2\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_4(t)=\langle 0,2-2t\rangle</m>, <m>0\le t\le 1</m></p></hint><answer><p><m>16+14\sqrt{2}</m></p></answer></task>
+    </project>
+
+    <exercise>
+      <title>Triangular Path in 3D (<m>\star\star\star</m>)</title>
+      <statement>
+        <p>Evaluate <m>\int_C \brac{2x+y^2-z}\,ds</m> for the path <m>C</m> shown in the figure.</p>
+        <image width="40%">
+          <latex-image>
+            \begin{tikzpicture}[scale=1.05,&gt;=Stealth]
+                \coordinate (O) at (0,0);
+                \coordinate (X) at (-2.2,-1.1);
+                \coordinate (Y) at (2.6,-1.1);
+                \coordinate (Z) at (0,2.3);
+                \coordinate (A) at (-1.6,-0.8);
+                \coordinate (B) at (-1.6,1.0);
+
+                \fill[gray!15] (O)--(X)--($(X)+(Y)$)--(Y)--cycle;
+                \draw[-&gt;,gray] (O)--(X) node[left] {$x$};
+                \draw[-&gt;,gray] (O)--(Y) node[right] {$y$};
+                \draw[-&gt;,gray] (O)--(Z) node[above] {$z$};
+
+                \fill (O) circle (2pt) node[right] {$(0,0,0)$};
+                \fill (A) circle (2pt) node[left] {$(1,0,0)$};
+                \fill (B) circle (2pt) node[left] {$(1,0,1)$};
+
+                \draw[very thick,postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrow{Stealth}}}] (A)--(B);
+                \draw[very thick,postaction={decorate},decoration={markings,mark=at position 0.45 with {\arrow{Stealth}}}] (B)--(O);
+                \draw[very thick,postaction={decorate},decoration={markings,mark=at position 0.55 with {\arrow{Stealth}}}] (O)--(A);
+
+                \node at (-1.1,0.2) {$C$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <hint><p>Use the three line segments <m>(1,0,0)\to(1,0,1)\to(0,0,0)\to(1,0,0)</m>, <m>\mathbf{r}_1(t)=\langle 1,0,t\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_2(t)=\langle 1-t,0,1-t\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_3(t)=\langle t,0,0\rangle</m>, <m>0\le t\le 1</m>.</p></hint>
+      <answer><p><m>\frac{5+\sqrt{2}}{2}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Triangular Path in 3D, Part 2 (<m>\star\star\star</m>)</title>
+      <statement>
+        <p>Evaluate <m>\int_C \brac{2x+y^2-z}\,ds</m> for the path <m>C</m> shown in the figure.</p>
+        <image width="40%">
+          <latex-image>
+            \begin{tikzpicture}[scale=1.05,&gt;=Stealth]
+                \coordinate (O) at (0,0);
+                \coordinate (X) at (-2.2,-1.1);
+                \coordinate (Y) at (2.6,-1.1);
+                \coordinate (Z) at (0,2.3);
+                \coordinate (A) at (1.6,-0.8);
+                \coordinate (B) at (1.6,1.0);
+
+                \fill[gray!15] (O)--(X)--($(X)+(Y)$)--(Y)--cycle;
+                \draw[-&gt;,gray] (O)--(X) node[left] {$x$};
+                \draw[-&gt;,gray] (O)--(Y) node[right] {$y$};
+                \draw[-&gt;,gray] (O)--(Z) node[above] {$z$};
+
+                \fill (O) circle (2pt) node[left] {$(0,0,0)$};
+                \fill (A) circle (2pt) node[right] {$(0,1,0)$};
+                \fill (B) circle (2pt) node[right] {$(0,1,1)$};
+
+                \draw[very thick,postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrow{Stealth}}}] (O)--(A);
+                \draw[very thick,postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrow{Stealth}}}] (A)--(B);
+                \draw[very thick,postaction={decorate},decoration={markings,mark=at position 0.55 with {\arrow{Stealth}}}] (B)--(O);
+
+                \node at (0.9,0.25) {$C$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <hint><p>Use the three line segments <m>(0,0,0)\to(0,1,0)\to(0,1,1)\to(0,0,0)</m>, <m>\mathbf{r}_1(t)=\langle 0,t,0\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_2(t)=\langle 0,1,t\rangle</m>, <m>0\le t\le 1</m>; <m>\mathbf{r}_3(t)=\langle 0,1-t,1-t\rangle</m>, <m>0\le t\le 1</m>.</p></hint>
+      <answer><p><m>\frac{5-\sqrt{2}}{6}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Piecewise Path <m>C_1 \cup C_2</m> (<m>\star\star\star</m>)</title>
+      <statement>
+        <p>Integrate <m>f(x,y,z)=x+\sqrt{y}-z^2</m> over the path <m>C_1</m> followed by <m>C_2</m> from <m>(0,0,0)</m> to <m>(1,1,1)</m>, where <m>C_1:r(t)=t\,\mathbf{i}+t^2\,\mathbf{j}</m>, <m>0\le t\le 1</m>, and <m>C_2:r(t)=\mathbf{i}+\mathbf{j}+t\,\mathbf{k}</m>, <m>0\le t\le 1</m>.</p>
+        <image width="35%">
+          <latex-image>
+            \begin{tikzpicture}[scale=1.0,&gt;=Stealth]
+                \draw[-&gt;] (0,0) -- (-1.4,-1.1) node[below] {$x$};
+                \draw[-&gt;] (0,0) -- (2.4,0) node[right] {$y$};
+                \draw[-&gt;] (0,0) -- (0,2.4) node[above] {$z$};
+
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (1.7,-1.0);
+                \coordinate (B) at (1.7,1.15);
+
+                \fill[blue] (O) circle (2pt);
+                \fill[blue] (A) circle (2pt);
+                \fill[blue] (B) circle (2pt);
+
+                \node[left] at (O) {$(0,0,0)$};
+                \node[below right] at (A) {$(1,1,0)$};
+                \node[right] at (B) {$(1,1,1)$};
+
+                \draw[blue,thick,-&gt;] (O) .. controls (0.1,-1.1) and (1.0,-1.5) .. node[below] {$C_1$} (A);
+                \draw[blue,thick,-&gt;] (A) -- node[right] {$C_2$} (B);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <hint><p>Use <m>\int_{C_1} (2t)\sqrt{1+4t^2}\,dt+\int_{C_2} (2-t^2)\,dt</m>.</p></hint>
+      <answer><p><m>\frac{5\sqrt5+9}{6}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Piecewise Path <m>C_1 \cup C_2 \cup C_3</m> (<m>\star\star\star</m>)</title>
+      <statement>
+        <p>Integrate <m>f(x,y,z)=x+\sqrt{y}-z^2</m> over the path <m>C_1</m> followed by <m>C_2</m> followed by <m>C_3</m> from <m>(0,0,0)</m> to <m>(1,1,1)</m>, where <m>C_1:r(t)=t\,\mathbf{k}</m>, <m>0\le t\le 1</m>, <m>C_2:r(t)=t\,\mathbf{j}+\mathbf{k}</m>, <m>0\le t\le 1</m>, and <m>C_3:r(t)=t\,\mathbf{i}+\mathbf{j}+\mathbf{k}</m>, <m>0\le t\le 1</m>.</p>
+        <image width="35%">
+          <latex-image>
+            \begin{tikzpicture}[scale=1.0,&gt;=Stealth]
+                \draw[-&gt;] (0,0) -- (-1.3,-1.0) node[below] {$x$};
+                \draw[-&gt;] (0,0) -- (2.5,0) node[right] {$y$};
+                \draw[-&gt;] (0,0) -- (0,2.6) node[above] {$z$};
+
+                \coordinate (O) at (0,0);
+                \coordinate (P) at (0,2.0);
+                \coordinate (Q) at (2.1,1.45);
+                \coordinate (R) at (3.4,0.65);
+
+                \fill[blue] (O) circle (2pt);
+                \fill[blue] (P) circle (2pt);
+                \fill[blue] (Q) circle (2pt);
+                \fill[blue] (R) circle (2pt);
+
+                \node[left] at (O) {$(0,0,0)$};
+                \node[left] at (P) {$(0,0,1)$};
+                \node[above] at (Q) {$(0,1,1)$};
+                \node[right] at (R) {$(1,1,1)$};
+
+                \draw[blue,thick,-&gt;] (O) -- node[left] {$C_1$} (P);
+                \draw[blue,thick,-&gt;] (P) -- node[above] {$C_2$} (Q);
+                \draw[blue,thick,-&gt;] (Q) -- node[below] {$C_3$} (R);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <hint><p>Use <m>\int_{C_1} (-t^2)\,dt+\int_{C_2} (\sqrt{t}-1)\,dt+\int_{C_3} t\,dt</m>.</p></hint>
+      <answer><p><m>-\frac{1}{6}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Closed Curve with Parabola and Line (<m>\star\star\star</m>)</title>
+      <statement>
+        <p>Evaluate <m>\int_C (x+\sqrt{y})\,ds</m>, where <m>C</m> is given in the accompanying figure.</p>
+        <image width="35%">
+          <latex-image>
+            \begin{tikzpicture}[scale=2.2,&gt;=Stealth]
+                \draw[-&gt;] (-0.15,0) -- (1.25,0) node[right] {$x$};
+                \draw[-&gt;] (0,-0.15) -- (0,1.25) node[above] {$y$};
+
+                \draw[blue,thick,-&gt;] plot[smooth,domain=0:1,samples=100] (\x,{\x*\x});
+                \draw[blue,thick,-&gt;] plot[smooth,domain=1:0,samples=2] (\x,\x);
+
+                \fill[blue] (0,0) circle (1pt);
+                \fill[blue] (1,1) circle (1pt);
+                \node[below left] at (0,0) {$(0,0)$};
+                \node[above right] at (1,1) {$(1,1)$};
+                \node at (0.3,0.7) {$y=x$};
+                \node at (1,0.3) {$y=x^2$};
+                \node at (0.78,1) {$C$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <hint><p>Add the integrals over the line segment <m>y=x</m> and the parabola <m>y=x^2</m>.</p></hint>
+      <answer><p><m>\frac{5\sqrt5-1+7\sqrt2}{6}</m></p></answer>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="subsec-line-integrals-advanced">
+    <title>Advanced Examples</title>
+
+    <exercise>
+      <title>Integral Over a Diagonal Line (<m>\star\star\star</m>)</title>
+      <statement><p>Integrate <m>f(x,y,z)=\frac{x+y+z}{x^2+y^2+z^2}</m> over the path <m>r(t)=t\,\mathbf{i}+t\,\mathbf{j}+t\,\mathbf{k}</m>, <m>0\lt a\le t\le b</m></p></statement>
+      <answer><p><m>\sqrt3\ln\frac{b}{a}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Integral Over a Circle in the <m>yz</m>-Plane (<m>\star\star\star</m>)</title>
+      <statement><p>Integrate <m>f(x,y,z)=-\sqrt{x^2+z^2}</m> over the circle <m>r(t)=(a\cos t)\,\mathbf{j}+(a\sin t)\,\mathbf{k}</m>, <m>0\le t\le 2\pi</m></p></statement>
+      <answer><p><m>-4a^2</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Integral Over a Square Path (<m>\star\star\star\star</m>)</title>
+      <statement>
+        <p>Evaluate <m>\int_C \frac{1}{x^2+y^2+1}\,ds</m>, where <m>C</m> is given in the accompanying figure.</p>
+        <image width="35%">
+          <latex-image>
+            \begin{tikzpicture}[scale=2.0,&gt;=Stealth]
+                \draw[-&gt;] (-0.15,0) -- (1.35,0) node[right] {$x$};
+                \draw[-&gt;] (0,-0.15) -- (0,1.35) node[above] {$y$};
+
+                \draw[blue,thick,-&gt;] (0,0) -- (1,0);
+                \draw[blue,thick,-&gt;] (1,0) -- (1,1);
+                \draw[blue,thick,-&gt;] (1,1) -- (0,1);
+                \draw[blue,thick,-&gt;] (0,1) -- (0,0);
+
+                \fill[blue] (0,0) circle (1.2pt);
+                \fill[blue] (1,0) circle (1.2pt);
+                \fill[blue] (1,1) circle (1.2pt);
+                \fill[blue] (0,1) circle (1.2pt);
+
+                \node[below left] at (0,0) {$(0,0)$};
+                \node[below right] at (1,0) {$(1,0)$};
+                \node[above right] at (1,1) {$(1,1)$};
+                \node[above left] at (0,1) {$(0,1)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <hint><p>Split the square into its four sides and add the four scalar line integrals.</p></hint>
+      <answer><p><m>\frac{\pi}{2}+\sqrt2\arctan\brac{\frac{1}{\sqrt2}}</m></p></answer>
+    </exercise>
+
+    <project>
+      <title>Technology-Assisted Line Integrals (<m>\star\star\star\star</m>)</title>
+      <introduction><p>Evaluate each line integral with respect to arc length, using technology.</p></introduction>
+      <task><statement><p><m>\int_C x\sin(y+z)\,ds</m>, where <m>C</m> has parametric equations <m>x=t^2</m>, <m>y=t^3</m>, <m>z=t^4</m>, <m>0\le t\le 5</m></p></statement><answer><p><m>\approx 15.0074</m></p></answer></task>
+      <task><statement><p><m>\int_C ze^{-xy}\,ds</m>, where <m>C</m> has parametric equations <m>x=t</m>, <m>y=t^2</m>, <m>z=e^{-t}</m>, <m>0\le t\le 1</m></p></statement><answer><p><m>\approx 0.8208</m></p></answer></task>
+      <task><statement><p><m>\int_C z\ln(x+y)\,ds</m>, where <m>C</m> has parametric equations <m>x=1+3t</m>, <m>y=2+t^2</m>, <m>z=t^4</m>, <m>-1\le t\le 1</m></p></statement><answer><p><m>\approx 1.7260</m></p></answer></task>
+      <task><statement><p><m>\int_C x^3y^2z\,ds</m>, where <m>C</m> is the curve with parametric equations <m>x=e^{-t}\cos 4t</m>, <m>y=e^{-t}\sin 4t</m>, <m>z=e^{-t}</m>, <m>0\le t\le 2\pi</m></p></statement><answer><p><m>\frac{172704\sqrt{2}}{5632705}\brac{1-e^{-14\pi}}</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-line-integrals-applications">
+    <title>Applications: Mass, Center of Mass, and Area</title>
+
+    <project>
+      <title>Mass of a Spring</title>
+      <introduction><p>Find the total mass of a spring with density <m>\rho</m> in the shape of the circular helix <m>\mathbf{r}(t)=2\cos t\,\mathbf{i}+2\sin t\,\mathbf{j}+t\,\mathbf{k}</m>, <m>0\le t\le 4\pi</m>.</p></introduction>
+      <task><statement><p><m>\rho(x,y,z)=\frac{1}{2}(x^2+y^2+z^2)</m></p></statement><answer><p><m>\frac{8\sqrt{5}\pi(3+4\pi^2)}{3}</m></p></answer></task>
+      <task><statement><p><m>\rho(x,y,z)=z</m></p></statement><answer><p><m>8\sqrt{5}\pi^2</m></p></answer></task>
+    </project>
+
+    <exercise>
+      <title>Mass of a Helix Spring</title>
+      <statement><p>Find the total mass of a spring in the shape of the helix <m>\mathbf{r}(t)=\cos t\,\mathbf{i}+\sin t\,\mathbf{j}+t\,\mathbf{k}</m>, <m>0 \le t \le 6\pi</m>, with density <m>\rho(x,y,z) = 1 + z</m></p></statement>
+      <answer><p><m>6\pi\sqrt{2}(3\pi+1)</m></p></answer>
+    </exercise>
+
+    <project>
+      <title>Mass of a Wire</title>
+      <introduction><p>Find the total mass of the wire with density <m>\rho</m> whose shape is modeled by <m>\mathbf{r}</m>.</p></introduction>
+      <task><statement><p><m>\mathbf{r}(t)=\cos t\,\mathbf{i}+\sin t\,\mathbf{j}</m>, <m>0\le t\le \pi</m>, <m>\rho(x,y)=x+y+2</m></p></statement><answer><p><m>2+2\pi</m></p></answer></task>
+      <task><statement><p><m>\mathbf{r}(t)=t^2\,\mathbf{i}+2t\,\mathbf{j}</m>, <m>0\le t\le 1</m>, <m>\rho(x,y)=\frac{3}{4}y</m></p></statement><answer><p><m>2\sqrt{2}-1</m></p></answer></task>
+      <task><statement><p><m>\mathbf{r}(t)=t^2\,\mathbf{i}+2t\,\mathbf{j}+t\,\mathbf{k}</m>, <m>1\le t\le 3</m>, <m>\rho(x,y,z)=kz</m> (<m>k\gt 0</m>)</p></statement><answer><p><m>\frac{k(41\sqrt{41}-27)}{12}</m></p></answer></task>
+      <task><statement><p><m>\mathbf{r}(t)=2\cos t\,\mathbf{i}+2\sin t\,\mathbf{j}+3t\,\mathbf{k}</m>, <m>0\le t\le 2\pi</m>, <m>\rho(x,y,z)=k+z</m> (<m>k\gt 0</m>)</p></statement><answer><p><m>2\sqrt{13}\pi(k+3\pi)</m></p></answer></task>
+      <task><statement><p><m>\mathbf{r}(t)=3t\,\mathbf{i}+3t^2\,\mathbf{j}+2t^3\,\mathbf{k}</m>, <m>0\le t\le 1</m>, <m>\rho(t)=1+t</m></p></statement><answer><p><m>9</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>Mass and Center of Mass</title>
+      <introduction><p>Find the mass and center of mass of each wire.</p></introduction>
+      <task><statement><p>A thin wire is bent into the shape of a semicircle <m>x^2+y^2=4</m>, <m>x\ge 0</m>. If the linear density is a constant <m>k</m>, find the mass and center of mass of the wire</p></statement><answer><p><m>m=2\pi k</m>, center of mass <m>\brac{\frac{4}{\pi},0}</m></p></answer></task>
+      <task><statement><p>A thin wire has the shape of the first-quadrant part of the circle with center at the origin and radius <m>a</m>. If the density function is <m>\rho(x,y)=kxy</m>, find the mass and center of mass of the wire</p></statement><answer><p><m>m=\frac{1}{2}ka^3</m>, center of mass <m>\brac{\frac{2a}{3},\frac{2a}{3}}</m></p></answer></task>
+      <task><statement><p>Find the mass and center of mass of a wire in the shape of the helix <m>x=t</m>, <m>y=\cos t</m>, <m>z=\sin t</m>, <m>0\le t\le 2\pi</m>, if the density at any point is equal to the square of the distance from the origin</p></statement><answer><p><m>m=\frac{2\sqrt{2}\pi}{3}\brac{3+4\pi^2}</m>, center of mass <m>\brac{\frac{3\pi+6\pi^3}{3+4\pi^2},\frac{6}{3+4\pi^2},\frac{-6\pi}{3+4\pi^2}}</m></p></answer></task>
+    </project>
+
+    <exercise>
+      <title>Center of Mass Formulas</title>
+      <introduction><p></p></introduction>
+      <task><statement><p>Write the formulas for the center of mass <m>(\bar{x},\bar{y},\bar{z})</m> of a thin wire in the shape of a space curve <m>C</m> if the wire has density function <m>\rho(x,y,z)</m></p></statement><answer><p><m>m=\int_C \rho\,ds</m>, <m>\bar{x}=\frac{1}{m}\int_C x\rho\,ds</m>, <m>\bar{y}=\frac{1}{m}\int_C y\rho\,ds</m>, <m>\bar{z}=\frac{1}{m}\int_C z\rho\,ds</m></p></answer></task>
+      <task><statement><p>Find the center of mass of a wire in the shape of the helix <m>x=2\sin t</m>, <m>y=2\cos t</m>, <m>z=3t</m>, <m>0\le t\le 2\pi</m>, if the density is a constant <m>k</m></p></statement><answer><p><m>\brac{0,0,3\pi}</m></p></answer></task>
+    </exercise>
+
+    <exercise>
+      <title>Painting a Circular Fence</title>
+      <statement><p>The base of a circular fence with radius 10 m is given by <m>x=10\cos t</m>, <m>y=10\sin t</m>. The height of the fence at position <m>(x,y)</m> is given by the function <m>h(x,y)=4+0.01(x^2-y^2)</m>, so the height varies from 3 m to 5 m. Suppose that 1 L of paint covers 100 m<m>^2</m>. Sketch the fence and determine how much paint is required to paint both sides of the fence.</p></statement>
+      <answer><p>Total area <m>160\pi</m> m<m>^2</m>, so the paint required is <m>\frac{8\pi}{5}</m> L <m>\approx 5.03</m> L.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Area of a Winding Wall</title>
+      <statement><p>Find the area of one side of the <q>winding wall</q> standing perpendicularly on the curve <m>y=x^2</m>, <m>0\le x\le 2</m>, and beneath the curve on the surface <m>f(x,y)=x+\sqrt{y}</m></p></statement>
+      <answer><p><m>\frac{17\sqrt{17}-1}{6}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Area of a Wall</title>
+      <statement><p>Find the area of one side of the <q>wall</q> standing perpendicularly on the curve <m>2x+3y=6</m>, <m>0\le x\le 6</m>, and beneath the curve on the surface <m>f(x,y)=4+3x+2y</m></p></statement>
+      <answer><p><m>26\sqrt{13}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Mass of a Wire (1)</title>
+      <statement><p>Find the mass of a wire that lies along the curve <m>r(t)=(t^2-1)\,\mathbf{j}+2t\,\mathbf{k}</m>, <m>0\le t\le 1</m>, if the density is <m>\delta=\frac{3}{2}t</m></p></statement>
+      <answer><p><m>2\sqrt2-1</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Mass of a Wire (2)</title>
+      <statement><p>Find the mass of a thin wire lying along the curve <m>r(t)=\sqrt2 t\,\mathbf{i}+\sqrt2 t\,\mathbf{j}+(4-t^2)\,\mathbf{k}</m>, <m>0\le t\le 1</m>, if the density is <m>\delta=3t</m></p></statement>
+      <answer><p><m>4\sqrt2-2</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Mass of a Wire (3)</title>
+      <statement><p>Find the mass of the same wire if the density is <m>\delta=1</m></p></statement>
+      <answer><p><m>\sqrt2+\ln(1+\sqrt2)</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Center of Mass of a Wire</title>
+      <statement>
+        <p>A wire of density <m>\delta(x,y,z)=15\sqrt{y+2}</m> lies along the curve <m>r(t)=(t^2-1)\,\mathbf{j}+2t\,\mathbf{k}</m>, <m>-1\le t\le 1</m>. Find its center of mass. Then sketch the curve and center of mass together.</p>
+        <image width="40%">
+          <latex-image>
+            \begin{tikzpicture}[scale=1.0,&gt;=Stealth]
+                \draw[-&gt;] (-1.6,0) -- (1.6,0) node[right] {$y$};
+                \draw[-&gt;] (0,-2.5) -- (0,2.5) node[above] {$z$};
+
+                \draw[blue,thick] plot[smooth,domain=-2:2,samples=100] ({(\x*\x)/4 - 1},{\x});
+
+                \fill[blue] (-1,0) circle (2pt);
+                \fill[blue] (0,2) circle (2pt);
+                \fill[blue] (0,-2) circle (2pt);
+                \fill[red] (-0.6,0) circle (2pt);
+
+                \node[below] at (-1,0) {$(-1,0)$};
+                \node[right] at (0,2) {$(0,2)$};
+                \node[right] at (0,-2) {$(0,-2)$};
+                \node[above] at (-0.6,0) {$\bar{P}$};
+                \node at (-0.25,1.55) {$y=\frac{z^2}{4}-1$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+      <hint><p>Here <m>x=0</m>, <m>y=t^2-1</m>, <m>z=2t</m>, and <m>dm=15\sqrt{t^2+1}\cdot 2\sqrt{t^2+1}\,dt=30(t^2+1)\,dt</m>.</p></hint>
+      <answer><p>The center of mass is <m>\brac{0,-\frac{3}{5},0}</m>.</p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Center of Mass with Variable Density</title>
+      <statement><p>Find the center of mass of a thin wire lying along the curve <m>r(t)=t\,\mathbf{i}+2t\,\mathbf{j}+\frac{2}{3}t^{3/2}\,\mathbf{k}</m>, <m>0\le t\le 2</m>, if the density is <m>\delta=3\sqrt{5+t}</m></p></statement>
+      <hint><p>Since <m>|r'(t)|=\sqrt{5+t}</m>, we get <m>dm=3(5+t)\,dt</m>.</p></hint>
+      <answer><p><m>\brac{\frac{19}{18},\frac{19}{9},\frac{4\sqrt2}{7}}</m></p></answer>
+    </exercise>
+
+    <exercise>
+      <title>Line Integral with <m>dx</m> and <m>dy</m></title>
+      <statement><p>Evaluate <m>\int_C xy\,dx + x^2\,dy</m>, where <m>C</m> is the parabola <m>y = x^2</m> from the origin to <m>(1,1)</m></p></statement>
+      <answer><p><m>\frac{3}{4}</m></p></answer>
+    </exercise>
+  </subsection>
+
+</section>

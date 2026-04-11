@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-vector-fields-and-line-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Vector Fields, Line Integrals, and Green's Theorem</title>
+
+  <xi:include href="sec-line-integrals.ptx"/>
+</chapter>

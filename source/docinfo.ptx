@@ -27,6 +27,11 @@
     
     \newcommand{\Area}[1]{\operatorname{Area}\left( #1 \right)}
 
+    %% Vectors
+    \newcommand{\vecii}[2]{\left\langle #1, #2 \right\rangle}
+    \newcommand{\veciii}[3]{\left\langle #1, #2, #3 \right\rangle}
+    \renewcommand{\vec}[1]{\mathbf{#1}}
+
     %% Standard number sets
     \newcommand{\N}{\mathbb N}
     \newcommand{\Z}{\mathbb Z}
