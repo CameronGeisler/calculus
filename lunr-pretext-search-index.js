@@ -3106,11 +3106,308 @@ var ptx_lunr_docs = [
   "body": "  Evaluate    "
 },
 {
+  "id": "sec-nth-term-test",
+  "level": "1",
+  "url": "sec-nth-term-test.html",
+  "type": "Section",
+  "number": "7.1",
+  "title": "nth Term Test for Divergence",
+  "body": " nth Term Test for Divergence   Geometric series and telescoping series are the 2 main examples of series that we can find their sums exactly. However, for most series, we cannot find their sums exactly, and we need to use tests to determine whether they converge or diverge.  This first test we will learn basically says that if the terms of a series do not eventually become small, then the series cannot converge.   Limit of the nth term of a convergent series  If the series converges, then .    nth Term Test for Divergence  If (or does not exist), then the series diverges.   Intuitively, for a series to converge, recall that its partial sums must approach a single number. This can only happen if the numbers you're adding eventually become smaller and smaller, so they change the sum by less and less. If the terms do not become small, then the partial sums can't approach a limit, and the series diverges.           Divergence of n\/(2n+1)  Consider the series,   The terms do not approach zero, because,   Therefore, by the th term test, the series diverges. Intuitively, consider its partial sums: Partial Sums of . Notice that the partial sums grow and grow, and don't approach a single number. Intuitively, since the terms approach , the series is like adding a number close to over and over again. Therefore, the series is going to diverge.    Oscillating Series  Consider the series,   This series diverges, because its partial sums will be,   After we add 1, the sum becomes 1, and after we add -1, the sum becomes 0, and so on. In particular, we could say that the partial sums are given by,   The limit of the partial sums as does not exist, and therefore the sum diverges. Alternatively, we can use the th term test. The limit does not exist, and so by the th term test, the series diverges.    Divergence of n^2\/(n^2-1)  Consider the series,   As , , and so by the th term test, the series diverges.    Divergence of cos(2\/n)  Consider the series   We have   Therefore, by the th term test, the series diverges.   In summary,   In fact, the reverse direction (the converse) of this statement is not true, in that if the terms of a sequence become small ( ), it is not necessarily true that the series always converges. In other words, if the terms eventually become small, the th term test is inconclusive.   The nth term test is also sometimes called the divergence test , because it can only be used to show a series diverges.     Harmonic Series   Harmonic Series   The harmonic series , is the sum of the reciprocals of the natural numbers,      This series is called the harmonic series, because it is related to the harmonics of a vibrating string. The th harmonic of a vibrating string is the frequency that is times the fundamental frequency, and the amplitude of the th harmonic is proportional to .   In fact, the harmonic series diverges, even though its terms become small. Intuitively, consider its partial sums: Partial Sums of the Harmonic Series up to terms . Notice that the partial sums grow and grow, even if they grow slowly. You might recognize the pattern of partial sums looks like a logarithmic function (like ), and indeed, the th partial sum of the harmonic series is approximately , which goes to infinity as . Therefore, the harmonic series diverges.  In summary,    Inconclusive Test for n\/(n^2+1)  Consider the series,   As , , and so by the th term test, the test is inconclusive. In fact, this series diverges (we will see how to show this later on).    Divergence of ln(1\/n)  Consider the series,   As , , and so , which is not 0. Therefore, by the th term test, the series diverges.     Examples   nth Term Test (★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Inconclusive, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because    nth Term Test (★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Inconclusive, because  Diverges, because  Diverges, because    nth Term Test (★★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Inconclusive, because  Rewrite as and use . Diverges, because  Rewrite as and use . Diverges, because  Recall that . Diverges, because     Advanced Examples   Advanced Examples (★★★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Rewrite as and use , or rewrite as and use . Diverges, because  Diverges  Rewrite as and use . Diverges, because  The numerator has factors of , while the denominator has factors decreasing from to 1, so the top grows faster. Or, rewrite as and notice every factor is at least 1, so the terms do not approach 0. Diverges, because    "
+},
+{
+  "id": "sec-nth-term-test-2-3",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-3",
+  "type": "Theorem",
+  "number": "7.1.1",
+  "title": "Limit of the nth term of a convergent series.",
+  "body": " Limit of the nth term of a convergent series  If the series converges, then .  "
+},
+{
+  "id": "sec-nth-term-test-2-4",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-4",
+  "type": "Theorem",
+  "number": "7.1.2",
+  "title": "nth Term Test for Divergence.",
+  "body": " nth Term Test for Divergence  If (or does not exist), then the series diverges.  "
+},
+{
+  "id": "sec-nth-term-test-2-7",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-7",
+  "type": "Example",
+  "number": "7.1.3",
+  "title": "Divergence of n\/(2n+1).",
+  "body": " Divergence of n\/(2n+1)  Consider the series,   The terms do not approach zero, because,   Therefore, by the th term test, the series diverges. Intuitively, consider its partial sums: Partial Sums of . Notice that the partial sums grow and grow, and don't approach a single number. Intuitively, since the terms approach , the series is like adding a number close to over and over again. Therefore, the series is going to diverge.  "
+},
+{
+  "id": "sec-nth-term-test-2-8",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-8",
+  "type": "Example",
+  "number": "7.1.4",
+  "title": "Oscillating Series.",
+  "body": " Oscillating Series  Consider the series,   This series diverges, because its partial sums will be,   After we add 1, the sum becomes 1, and after we add -1, the sum becomes 0, and so on. In particular, we could say that the partial sums are given by,   The limit of the partial sums as does not exist, and therefore the sum diverges. Alternatively, we can use the th term test. The limit does not exist, and so by the th term test, the series diverges.  "
+},
+{
+  "id": "sec-nth-term-test-2-9",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-9",
+  "type": "Example",
+  "number": "7.1.5",
+  "title": "Divergence of n^2\/(n^2-1).",
+  "body": " Divergence of n^2\/(n^2-1)  Consider the series,   As , , and so by the th term test, the series diverges.  "
+},
+{
+  "id": "sec-nth-term-test-2-10",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-10",
+  "type": "Example",
+  "number": "7.1.6",
+  "title": "Divergence of cos(2\/n).",
+  "body": " Divergence of cos(2\/n)  Consider the series   We have   Therefore, by the th term test, the series diverges.  "
+},
+{
+  "id": "sec-nth-term-test-2-14",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-14",
+  "type": "Remark",
+  "number": "7.1.7",
+  "title": "",
+  "body": " The nth term test is also sometimes called the divergence test , because it can only be used to show a series diverges.  "
+},
+{
+  "id": "subsec-harmonic-series-2",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-harmonic-series-2",
+  "type": "Definition",
+  "number": "7.1.8",
+  "title": "Harmonic Series.",
+  "body": " Harmonic Series   The harmonic series , is the sum of the reciprocals of the natural numbers,    "
+},
+{
+  "id": "subsec-harmonic-series-3",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-harmonic-series-3",
+  "type": "Remark",
+  "number": "7.1.9",
+  "title": "",
+  "body": " This series is called the harmonic series, because it is related to the harmonics of a vibrating string. The th harmonic of a vibrating string is the frequency that is times the fundamental frequency, and the amplitude of the th harmonic is proportional to .  "
+},
+{
+  "id": "subsec-harmonic-series-7",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-harmonic-series-7",
+  "type": "Example",
+  "number": "7.1.10",
+  "title": "Inconclusive Test for n\/(n^2+1).",
+  "body": " Inconclusive Test for n\/(n^2+1)  Consider the series,   As , , and so by the th term test, the test is inconclusive. In fact, this series diverges (we will see how to show this later on).  "
+},
+{
+  "id": "subsec-harmonic-series-8",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-harmonic-series-8",
+  "type": "Example",
+  "number": "7.1.11",
+  "title": "Divergence of ln(1\/n).",
+  "body": " Divergence of ln(1\/n)  Consider the series,   As , , and so , which is not 0. Therefore, by the th term test, the series diverges.  "
+},
+{
+  "id": "subsec-nth-term-examples-2",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-nth-term-examples-2",
+  "type": "Exercise Group",
+  "number": "7.1.1",
+  "title": "nth Term Test (★).",
+  "body": " nth Term Test (★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Inconclusive, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  "
+},
+{
+  "id": "subsec-nth-term-examples-3",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-nth-term-examples-3",
+  "type": "Exercise Group",
+  "number": "7.1.2",
+  "title": "nth Term Test (★★).",
+  "body": " nth Term Test (★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Inconclusive, because  Diverges, because  Diverges, because  "
+},
+{
+  "id": "subsec-nth-term-examples-4",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-nth-term-examples-4",
+  "type": "Exercise Group",
+  "number": "7.1.3",
+  "title": "nth Term Test (★★★).",
+  "body": " nth Term Test (★★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Inconclusive, because  Rewrite as and use . Diverges, because  Rewrite as and use . Diverges, because  Recall that . Diverges, because  "
+},
+{
+  "id": "subsec-nth-term-advanced-2",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-nth-term-advanced-2",
+  "type": "Exercise Group",
+  "number": "7.1.4",
+  "title": "Advanced Examples (★★★★).",
+  "body": " Advanced Examples (★★★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Rewrite as and use , or rewrite as and use . Diverges, because  Diverges  Rewrite as and use . Diverges, because  The numerator has factors of , while the denominator has factors decreasing from to 1, so the top grows faster. Or, rewrite as and notice every factor is at least 1, so the terms do not approach 0. Diverges, because  "
+},
+{
+  "id": "sec-telescoping-series",
+  "level": "1",
+  "url": "sec-telescoping-series.html",
+  "type": "Section",
+  "number": "7.2",
+  "title": "Telescoping Series",
+  "body": " Telescoping Series   Besides geometric series, there is another special type of series called a telescoping series . Many telescoping series also have a finite sum that we can compute exactly, because of a cancellation pattern.  If a series has partial sums which are telescoping sums, then we can determine a closed-form formula for the partial sums, and evaluate the series using limits.   Sum of 1\/n(n+1)  Consider the series,   The term can be rewritten as two fractions, using partial fraction decomposition,   Solving for and , we get , so,   Then, consider the partial sums of the series, which are given by,   Notice that the s cancel out, the s also cancel out, etc. In general, each negative term is cancelled out by the positive term 1 term to the right. Then, the only terms that are not cancelled out are the leading and the ending . Therefore,   This is a formula which gives the partial sum of the series for any . In other words, this formula gives the sum of the first terms of the series. For example,   Recall that the sum of a series is the limit of its partial sums as . Notice that the partial sums are approaching 1. In particular, as ,     Multiplying the above sum by 2 gives a famous series,   The sequence are the so-called triangular numbers , so this series is the sum of the reciprocals of the triangular numbers. From above, its sum is,   This sum was posed to Leibniz in 1672 by Christiaan Huygens , Dutch mathematician and physicist. He evaluated it by considering the series divided by 2, then wrote it as a telescoping sum. Also, Jacob Bernoulli studied this series around 1689, an determined the sum to be 2.   In general, the idea is that if a series can be written as the difference between two terms that are similar, then most of them will cancel out, and we can find the sum of the series by finding the limit of the partial sums.   Sum of 1\/(n^2-1)  Consider the series,   We can also use partial fraction decomposition to split the term into two fractions, by factoring the denominator.   Solving for and , we get , so,   We can factor out the for simplicity, and focus on the part involving ,   Then, the partial sums are given by,   Then, expanding,   Notice that the s cancel, the s also cancel, etc. In general, each negative term is cancelled out by the positive term 3 terms to the right. Then, the only terms left are the leading , and the ending and . Then,   Then, as ,   Therefore, the series converges to .    The Bernoulli brothers found that,   However, they couldn't solve (a similar series, but without in the denominator), which is much more difficult to evaluate.    Telescoping with Gap 2  Consider the series,   Notice the series starts at , not . The partial sums are,   The s cancel out, s also, etc. In general, each negative term cancels out with the positive term 3 terms to the right. In the end, only the and are left, along with and . Then,   Then, as ,   Therefore, the series converges to .   Telescoping series don't always converge, as in the next example.   A Divergent Telescoping Series  Consider the series,   We can't use partial fraction decomposition here, but instead we use the logarithm property , to rewrite it as,   Notice again that we have the difference between 2 terms that are similar. The partial sums are,   Each of the negative terms is cancelled out by the positive term 1 term to the right. Then, the only terms that are not cancelled out are the leading (recall ) and the ending . Therefore,   Then, as ,   Therefore, the series diverges to .     Summary of Telescoping Series    Rewrite the term as a difference of 2 terms (if it isn't already), often using partial fraction decomposition.  Write out the first few terms (like ), and the last few terms ( ) to see the cancellation pattern.  Observe the cancellation pattern : Each positive term cancels out with the negative term 1\/2\/3\/4 to its right . Cancel out the terms. Typically, you'll be left with a few at the start, and a few at the end.  Take the limit of the simplified partial sum as .    You can write out as many terms as you need to recognize the pattern. If the pattern is not immediately obvious, then try writing out more terms.  To recognize that a series is telescoping, the 2 main things to look for are:  Are two similar terms being subtracted?  Or, can you do partial fraction decomposition?      Examples   Telescoping Series (★)  Find the sum of each telescoping series, or show that it diverges.      Diverges to   Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .    Telescoping Series (★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, ,  Partial fractions, ,  Partial fractions, ,  Partial fractions, ,    Partial Fractions (★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .    Partial Fractions (★★)  Find the sum of each telescoping series using partial fractions.  Partial fractions,  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .    Mixed Telescoping (★★)  Find the sum of each telescoping series, or show that it diverges.    Diverges to   Log property, Diverges to   Diverges to      Mixed Telescoping (★★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .   Diverges  Partial fractions, .        Advanced Examples   Advanced Telescoping (★★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .  Partial fractions, .  Log property, Diverges to  Partial fractions, ,    Special Functions (★★★)  Find the sum of each telescoping series, or show that it diverges.    Simplify, .  Log product.    Parametric Series (★★★)  Find the sum of each telescoping series involving parameters.  , where is a positive integer Partial fractions.  , where is a positive integer Partial fractions.    "
+},
+{
+  "id": "sec-telescoping-series-2-1",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "telescoping series "
+},
+{
+  "id": "sec-telescoping-series-2-3",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-3",
+  "type": "Example",
+  "number": "7.2.1",
+  "title": "Sum of 1\/n(n+1).",
+  "body": " Sum of 1\/n(n+1)  Consider the series,   The term can be rewritten as two fractions, using partial fraction decomposition,   Solving for and , we get , so,   Then, consider the partial sums of the series, which are given by,   Notice that the s cancel out, the s also cancel out, etc. In general, each negative term is cancelled out by the positive term 1 term to the right. Then, the only terms that are not cancelled out are the leading and the ending . Therefore,   This is a formula which gives the partial sum of the series for any . In other words, this formula gives the sum of the first terms of the series. For example,   Recall that the sum of a series is the limit of its partial sums as . Notice that the partial sums are approaching 1. In particular, as ,   "
+},
+{
+  "id": "sec-telescoping-series-2-4",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-4",
+  "type": "Remark",
+  "number": "7.2.2",
+  "title": "",
+  "body": " Multiplying the above sum by 2 gives a famous series,   The sequence are the so-called triangular numbers , so this series is the sum of the reciprocals of the triangular numbers. From above, its sum is,   This sum was posed to Leibniz in 1672 by Christiaan Huygens , Dutch mathematician and physicist. He evaluated it by considering the series divided by 2, then wrote it as a telescoping sum. Also, Jacob Bernoulli studied this series around 1689, an determined the sum to be 2.  "
+},
+{
+  "id": "sec-telescoping-series-2-6",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-6",
+  "type": "Example",
+  "number": "7.2.3",
+  "title": "Sum of 1\/(n^2-1).",
+  "body": " Sum of 1\/(n^2-1)  Consider the series,   We can also use partial fraction decomposition to split the term into two fractions, by factoring the denominator.   Solving for and , we get , so,   We can factor out the for simplicity, and focus on the part involving ,   Then, the partial sums are given by,   Then, expanding,   Notice that the s cancel, the s also cancel, etc. In general, each negative term is cancelled out by the positive term 3 terms to the right. Then, the only terms left are the leading , and the ending and . Then,   Then, as ,   Therefore, the series converges to .  "
+},
+{
+  "id": "sec-telescoping-series-2-7",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-7",
+  "type": "Remark",
+  "number": "7.2.4",
+  "title": "",
+  "body": " The Bernoulli brothers found that,   However, they couldn't solve (a similar series, but without in the denominator), which is much more difficult to evaluate.  "
+},
+{
+  "id": "sec-telescoping-series-2-8",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-8",
+  "type": "Example",
+  "number": "7.2.5",
+  "title": "Telescoping with Gap 2.",
+  "body": " Telescoping with Gap 2  Consider the series,   Notice the series starts at , not . The partial sums are,   The s cancel out, s also, etc. In general, each negative term cancels out with the positive term 3 terms to the right. In the end, only the and are left, along with and . Then,   Then, as ,   Therefore, the series converges to .  "
+},
+{
+  "id": "sec-telescoping-series-2-10",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-10",
+  "type": "Example",
+  "number": "7.2.6",
+  "title": "A Divergent Telescoping Series.",
+  "body": " A Divergent Telescoping Series  Consider the series,   We can't use partial fraction decomposition here, but instead we use the logarithm property , to rewrite it as,   Notice again that we have the difference between 2 terms that are similar. The partial sums are,   Each of the negative terms is cancelled out by the positive term 1 term to the right. Then, the only terms that are not cancelled out are the leading (recall ) and the ending . Therefore,   Then, as ,   Therefore, the series diverges to .  "
+},
+{
+  "id": "subsec-telescoping-examples-2",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-2",
+  "type": "Exercise Group",
+  "number": "7.2.1",
+  "title": "Telescoping Series (★).",
+  "body": " Telescoping Series (★)  Find the sum of each telescoping series, or show that it diverges.      Diverges to   Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  "
+},
+{
+  "id": "subsec-telescoping-examples-3",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-3",
+  "type": "Exercise Group",
+  "number": "7.2.2",
+  "title": "Telescoping Series (★).",
+  "body": " Telescoping Series (★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, ,  Partial fractions, ,  Partial fractions, ,  Partial fractions, ,  "
+},
+{
+  "id": "subsec-telescoping-examples-4",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-4",
+  "type": "Exercise Group",
+  "number": "7.2.3",
+  "title": "Partial Fractions (★★).",
+  "body": " Partial Fractions (★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  "
+},
+{
+  "id": "subsec-telescoping-examples-5",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-5",
+  "type": "Exercise Group",
+  "number": "7.2.4",
+  "title": "Partial Fractions (★★).",
+  "body": " Partial Fractions (★★)  Find the sum of each telescoping series using partial fractions.  Partial fractions,  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  "
+},
+{
+  "id": "subsec-telescoping-examples-6",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-6",
+  "type": "Exercise Group",
+  "number": "7.2.5",
+  "title": "Mixed Telescoping (★★).",
+  "body": " Mixed Telescoping (★★)  Find the sum of each telescoping series, or show that it diverges.    Diverges to   Log property, Diverges to   Diverges to    "
+},
+{
+  "id": "subsec-telescoping-examples-7",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-7",
+  "type": "Exercise Group",
+  "number": "7.2.6",
+  "title": "Mixed Telescoping (★★★).",
+  "body": " Mixed Telescoping (★★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .   Diverges  Partial fractions, .     "
+},
+{
+  "id": "subsec-telescoping-advanced-2",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-advanced-2",
+  "type": "Exercise Group",
+  "number": "7.2.7",
+  "title": "Advanced Telescoping (★★★).",
+  "body": " Advanced Telescoping (★★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .  Partial fractions, .  Log property, Diverges to  Partial fractions, ,  "
+},
+{
+  "id": "subsec-telescoping-advanced-3",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-advanced-3",
+  "type": "Exercise Group",
+  "number": "7.2.8",
+  "title": "Special Functions (★★★).",
+  "body": " Special Functions (★★★)  Find the sum of each telescoping series, or show that it diverges.    Simplify, .  Log product.  "
+},
+{
+  "id": "subsec-telescoping-advanced-4",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-advanced-4",
+  "type": "Exercise Group",
+  "number": "7.2.9",
+  "title": "Parametric Series (★★★).",
+  "body": " Parametric Series (★★★)  Find the sum of each telescoping series involving parameters.  , where is a positive integer Partial fractions.  , where is a positive integer Partial fractions.  "
+},
+{
   "id": "sec-summary-of-series",
   "level": "1",
   "url": "sec-summary-of-series.html",
   "type": "Section",
-  "number": "7.1",
+  "number": "7.3",
   "title": "Summary of Series",
   "body": " Summary of Series   In previous sections, we explored various methods for determining if an infinite series converges or diverges. Also, in a few limited cases, it is possible to determine the exact value of the convergent series.  The culmination of the series chapter is to be able to take a given series and determine if it converges or diverges. Most problems won't tell you which test to use, so you'll have to be able to use pattern recognition to figure out which test applies. This is similar to how evaluating integrals involves pattern recognition for which technique to use. For each of these questions, you should:    State convergence or divergence,  Specify which test you used, and,  Why it can be applied.      Choosing Which Test to Use      Do the terms not approach 0?   If or the limit does not exist, use the th-term test for divergence: the series diverges immediately.     Are there exponents of ?  Could be a geometric series . Rewrite in the form . With common ratio ,     converges   diverges    The sum is (if it converges)     Are two similar terms being subtracted? Or can you do partial-fraction decomposition ? Could be telescoping. Write the partial sum explicitly, then take . Often used for simple rational functions, or with quadratic denominators that are factorable.     Can it be written as a power of ?   Consider the -series . Use the -series test: converges if , diverges if . Should be second-nature in order to help with the comparison tests.     Is there a fraction, with a numerator or denominator with more than one term? Especially a rational function, or generally terms involving fractions. Consider comparison tests . Use asymptotic comparison (keeping only the dominant term). Use the direct or limit comparison test: compare to a simpler series (usually a -series or geometric).    Use direct comparison, if it's easy enough.  Use limit comparison if direct comparison is too difficult. Calculate . If , then and behave the same.       Has factorials ( ) and\/or exponentials ( )? Especially mixed with powers ( ) or double exponentials ( ).   Use the ratio test : compute .     converges (absolutely)   diverges   inconclusive (try another test)       Has a double power? With in the exponent and  in the base (like or of the form ).   Use the root test : compute .     converges (absolutely)   diverges   inconclusive (try another test)    Note: Don't confuse this with a geometric series , which has a constant base.     Has an alternating factor (like or )?    Use the alternating series test : if and is decreasing, then the series converges (conditionally).     Can be integrated easily, maybe using -substitution?  Use the integral test : convergence of is the same as .       Overall Remarks    Some series can be shown to converge or diverge using multiple different tests (which give you the same conclusion). However, one method may be easier or harder than the other.  Always check if the terms approach 0. The divergence test is the easiest to apply (because it only involves taking a limit), and it can lead to a quick conclusion of divergence. It is often forgotten by students.     "
 },
@@ -3119,7 +3416,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-series-review.html",
   "type": "Section",
-  "number": "7.2",
+  "number": "7.4",
   "title": "Series Review",
   "body": " Series Review   The three main question types for series (and sequences) problems are:  Find the limit of the sequence, or determine if the sequence diverges.  Determine if series converges or diverges.  Find the value of the sum of the series, or determine if it diverges.  Determine if series converges absolutely, converges conditionally, or diverges.      Exercises    Limit of sequences   Find the limit of each sequence, or determine if the sequence diverges.                                                                                                                                 Convergence of series   Determine if each series converges or diverges.                                             Sum of a series   Find the value of the sum of each series, or determine if it diverges. Simplify your answer completely.                        Absolute convergence and conditional convergence   Determine if each series converges absolutely, converges conditionally, or diverges.                     "
 },
@@ -3128,7 +3425,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-3",
   "type": "Exercise",
-  "number": "7.2.1.1",
+  "number": "7.4.1.1",
   "title": "",
   "body": "  "
 },
@@ -3137,7 +3434,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-4",
   "type": "Exercise",
-  "number": "7.2.1.2",
+  "number": "7.4.1.2",
   "title": "",
   "body": "  "
 },
@@ -3146,7 +3443,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-5",
   "type": "Exercise",
-  "number": "7.2.1.3",
+  "number": "7.4.1.3",
   "title": "",
   "body": "  "
 },
@@ -3155,7 +3452,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-6",
   "type": "Exercise",
-  "number": "7.2.1.4",
+  "number": "7.4.1.4",
   "title": "",
   "body": "  "
 },
@@ -3164,7 +3461,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-7",
   "type": "Exercise",
-  "number": "7.2.1.5",
+  "number": "7.4.1.5",
   "title": "",
   "body": "  "
 },
@@ -3173,7 +3470,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-8",
   "type": "Exercise",
-  "number": "7.2.1.6",
+  "number": "7.4.1.6",
   "title": "",
   "body": "  "
 },
@@ -3182,7 +3479,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-9",
   "type": "Exercise",
-  "number": "7.2.1.7",
+  "number": "7.4.1.7",
   "title": "",
   "body": "  "
 },
@@ -3191,7 +3488,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-10",
   "type": "Exercise",
-  "number": "7.2.1.8",
+  "number": "7.4.1.8",
   "title": "",
   "body": "  "
 },
@@ -3200,7 +3497,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-11",
   "type": "Exercise",
-  "number": "7.2.1.9",
+  "number": "7.4.1.9",
   "title": "",
   "body": "  "
 },
@@ -3209,7 +3506,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-12",
   "type": "Exercise",
-  "number": "7.2.1.10",
+  "number": "7.4.1.10",
   "title": "",
   "body": "  "
 },
@@ -3218,7 +3515,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-13",
   "type": "Exercise",
-  "number": "7.2.1.11",
+  "number": "7.4.1.11",
   "title": "",
   "body": "  "
 },
@@ -3227,7 +3524,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-14",
   "type": "Exercise",
-  "number": "7.2.1.12",
+  "number": "7.4.1.12",
   "title": "",
   "body": "  "
 },
@@ -3236,7 +3533,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-15",
   "type": "Exercise",
-  "number": "7.2.1.13",
+  "number": "7.4.1.13",
   "title": "",
   "body": "  "
 },
@@ -3245,7 +3542,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-16",
   "type": "Exercise",
-  "number": "7.2.1.14",
+  "number": "7.4.1.14",
   "title": "",
   "body": "  "
 },
@@ -3254,7 +3551,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-17",
   "type": "Exercise",
-  "number": "7.2.1.15",
+  "number": "7.4.1.15",
   "title": "",
   "body": "  "
 },
@@ -3263,7 +3560,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-18",
   "type": "Exercise",
-  "number": "7.2.1.16",
+  "number": "7.4.1.16",
   "title": "",
   "body": "  "
 },
@@ -3272,7 +3569,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-19",
   "type": "Exercise",
-  "number": "7.2.1.17",
+  "number": "7.4.1.17",
   "title": "",
   "body": "  "
 },
@@ -3281,7 +3578,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-20",
   "type": "Exercise",
-  "number": "7.2.1.18",
+  "number": "7.4.1.18",
   "title": "",
   "body": "  "
 },
@@ -3290,7 +3587,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-21",
   "type": "Exercise",
-  "number": "7.2.1.19",
+  "number": "7.4.1.19",
   "title": "",
   "body": "  "
 },
@@ -3299,7 +3596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-22",
   "type": "Exercise",
-  "number": "7.2.1.20",
+  "number": "7.4.1.20",
   "title": "",
   "body": "  "
 },
@@ -3308,7 +3605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-23",
   "type": "Exercise",
-  "number": "7.2.1.21",
+  "number": "7.4.1.21",
   "title": "",
   "body": "  "
 },
@@ -3317,7 +3614,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-24",
   "type": "Exercise",
-  "number": "7.2.1.22",
+  "number": "7.4.1.22",
   "title": "",
   "body": "  "
 },
@@ -3326,7 +3623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-25",
   "type": "Exercise",
-  "number": "7.2.1.23",
+  "number": "7.4.1.23",
   "title": "",
   "body": "  "
 },
@@ -3335,7 +3632,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-26",
   "type": "Exercise",
-  "number": "7.2.1.24",
+  "number": "7.4.1.24",
   "title": "",
   "body": "  "
 },
@@ -3344,7 +3641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-27",
   "type": "Exercise",
-  "number": "7.2.1.25",
+  "number": "7.4.1.25",
   "title": "",
   "body": "  "
 },
@@ -3353,7 +3650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-28",
   "type": "Exercise",
-  "number": "7.2.1.26",
+  "number": "7.4.1.26",
   "title": "",
   "body": "  "
 },
@@ -3362,7 +3659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-29",
   "type": "Exercise",
-  "number": "7.2.1.27",
+  "number": "7.4.1.27",
   "title": "",
   "body": "  "
 },
@@ -3371,7 +3668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-30",
   "type": "Exercise",
-  "number": "7.2.1.28",
+  "number": "7.4.1.28",
   "title": "",
   "body": "  "
 },
@@ -3380,7 +3677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-31",
   "type": "Exercise",
-  "number": "7.2.1.29",
+  "number": "7.4.1.29",
   "title": "",
   "body": "  "
 },
@@ -3389,7 +3686,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-32",
   "type": "Exercise",
-  "number": "7.2.1.30",
+  "number": "7.4.1.30",
   "title": "",
   "body": "  "
 },
@@ -3398,7 +3695,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-33",
   "type": "Exercise",
-  "number": "7.2.1.31",
+  "number": "7.4.1.31",
   "title": "",
   "body": "  "
 },
@@ -3407,7 +3704,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-34",
   "type": "Exercise",
-  "number": "7.2.1.32",
+  "number": "7.4.1.32",
   "title": "",
   "body": "  "
 },
@@ -3416,7 +3713,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-35",
   "type": "Exercise",
-  "number": "7.2.1.33",
+  "number": "7.4.1.33",
   "title": "",
   "body": "  "
 },
@@ -3425,7 +3722,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-36",
   "type": "Exercise",
-  "number": "7.2.1.34",
+  "number": "7.4.1.34",
   "title": "",
   "body": "  "
 },
@@ -3434,7 +3731,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-37",
   "type": "Exercise",
-  "number": "7.2.1.35",
+  "number": "7.4.1.35",
   "title": "",
   "body": "  "
 },
@@ -3443,7 +3740,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-38",
   "type": "Exercise",
-  "number": "7.2.1.36",
+  "number": "7.4.1.36",
   "title": "",
   "body": "      "
 },
@@ -3452,7 +3749,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-39",
   "type": "Exercise",
-  "number": "7.2.1.37",
+  "number": "7.4.1.37",
   "title": "",
   "body": "  "
 },
@@ -3461,7 +3758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-40",
   "type": "Exercise",
-  "number": "7.2.1.38",
+  "number": "7.4.1.38",
   "title": "",
   "body": "  "
 },
@@ -3470,7 +3767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-41",
   "type": "Exercise",
-  "number": "7.2.1.39",
+  "number": "7.4.1.39",
   "title": "",
   "body": "  "
 },
@@ -3479,7 +3776,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-42",
   "type": "Exercise",
-  "number": "7.2.1.40",
+  "number": "7.4.1.40",
   "title": "",
   "body": "  "
 },
@@ -3488,7 +3785,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-3",
   "type": "Exercise",
-  "number": "7.2.1.41",
+  "number": "7.4.1.41",
   "title": "",
   "body": ""
 },
@@ -3497,7 +3794,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-4",
   "type": "Exercise",
-  "number": "7.2.1.42",
+  "number": "7.4.1.42",
   "title": "",
   "body": ""
 },
@@ -3506,7 +3803,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-5",
   "type": "Exercise",
-  "number": "7.2.1.43",
+  "number": "7.4.1.43",
   "title": "",
   "body": ""
 },
@@ -3515,7 +3812,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-6",
   "type": "Exercise",
-  "number": "7.2.1.44",
+  "number": "7.4.1.44",
   "title": "",
   "body": ""
 },
@@ -3524,7 +3821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-7",
   "type": "Exercise",
-  "number": "7.2.1.45",
+  "number": "7.4.1.45",
   "title": "",
   "body": ""
 },
@@ -3533,7 +3830,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-8",
   "type": "Exercise",
-  "number": "7.2.1.46",
+  "number": "7.4.1.46",
   "title": "",
   "body": ""
 },
@@ -3542,7 +3839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-9",
   "type": "Exercise",
-  "number": "7.2.1.47",
+  "number": "7.4.1.47",
   "title": "",
   "body": ""
 },
@@ -3551,7 +3848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-10",
   "type": "Exercise",
-  "number": "7.2.1.48",
+  "number": "7.4.1.48",
   "title": "",
   "body": ""
 },
@@ -3560,7 +3857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-11",
   "type": "Exercise",
-  "number": "7.2.1.49",
+  "number": "7.4.1.49",
   "title": "",
   "body": ""
 },
@@ -3569,7 +3866,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-12",
   "type": "Exercise",
-  "number": "7.2.1.50",
+  "number": "7.4.1.50",
   "title": "",
   "body": ""
 },
@@ -3578,7 +3875,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-13",
   "type": "Exercise",
-  "number": "7.2.1.51",
+  "number": "7.4.1.51",
   "title": "",
   "body": ""
 },
@@ -3587,7 +3884,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-14",
   "type": "Exercise",
-  "number": "7.2.1.52",
+  "number": "7.4.1.52",
   "title": "",
   "body": ""
 },
@@ -3596,7 +3893,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-15",
   "type": "Exercise",
-  "number": "7.2.1.53",
+  "number": "7.4.1.53",
   "title": "",
   "body": ""
 },
@@ -3605,7 +3902,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-16",
   "type": "Exercise",
-  "number": "7.2.1.54",
+  "number": "7.4.1.54",
   "title": "",
   "body": ""
 },
@@ -3614,7 +3911,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-17",
   "type": "Exercise",
-  "number": "7.2.1.55",
+  "number": "7.4.1.55",
   "title": "",
   "body": ""
 },
@@ -3623,7 +3920,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-18",
   "type": "Exercise",
-  "number": "7.2.1.56",
+  "number": "7.4.1.56",
   "title": "",
   "body": ""
 },
@@ -3632,7 +3929,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-19",
   "type": "Exercise",
-  "number": "7.2.1.57",
+  "number": "7.4.1.57",
   "title": "",
   "body": ""
 },
@@ -3641,7 +3938,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-20",
   "type": "Exercise",
-  "number": "7.2.1.58",
+  "number": "7.4.1.58",
   "title": "",
   "body": ""
 },
@@ -3650,7 +3947,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-21",
   "type": "Exercise",
-  "number": "7.2.1.59",
+  "number": "7.4.1.59",
   "title": "",
   "body": ""
 },
@@ -3659,7 +3956,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-22",
   "type": "Exercise",
-  "number": "7.2.1.60",
+  "number": "7.4.1.60",
   "title": "",
   "body": ""
 },
@@ -3668,7 +3965,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-23",
   "type": "Exercise",
-  "number": "7.2.1.61",
+  "number": "7.4.1.61",
   "title": "",
   "body": ""
 },
@@ -3677,7 +3974,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-24",
   "type": "Exercise",
-  "number": "7.2.1.62",
+  "number": "7.4.1.62",
   "title": "",
   "body": ""
 },
@@ -3686,7 +3983,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-25",
   "type": "Exercise",
-  "number": "7.2.1.63",
+  "number": "7.4.1.63",
   "title": "",
   "body": ""
 },
@@ -3695,7 +3992,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-26",
   "type": "Exercise",
-  "number": "7.2.1.64",
+  "number": "7.4.1.64",
   "title": "",
   "body": ""
 },
@@ -3704,7 +4001,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-27",
   "type": "Exercise",
-  "number": "7.2.1.65",
+  "number": "7.4.1.65",
   "title": "",
   "body": ""
 },
@@ -3713,7 +4010,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-28",
   "type": "Exercise",
-  "number": "7.2.1.66",
+  "number": "7.4.1.66",
   "title": "",
   "body": ""
 },
@@ -3722,7 +4019,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-29",
   "type": "Exercise",
-  "number": "7.2.1.67",
+  "number": "7.4.1.67",
   "title": "",
   "body": ""
 },
@@ -3731,7 +4028,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-30",
   "type": "Exercise",
-  "number": "7.2.1.68",
+  "number": "7.4.1.68",
   "title": "",
   "body": ""
 },
@@ -3740,7 +4037,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-31",
   "type": "Exercise",
-  "number": "7.2.1.69",
+  "number": "7.4.1.69",
   "title": "",
   "body": ""
 },
@@ -3749,7 +4046,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-32",
   "type": "Exercise",
-  "number": "7.2.1.70",
+  "number": "7.4.1.70",
   "title": "",
   "body": ""
 },
@@ -3758,7 +4055,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-33",
   "type": "Exercise",
-  "number": "7.2.1.71",
+  "number": "7.4.1.71",
   "title": "",
   "body": ""
 },
@@ -3767,7 +4064,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-34",
   "type": "Exercise",
-  "number": "7.2.1.72",
+  "number": "7.4.1.72",
   "title": "",
   "body": ""
 },
@@ -3776,7 +4073,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-35",
   "type": "Exercise",
-  "number": "7.2.1.73",
+  "number": "7.4.1.73",
   "title": "",
   "body": ""
 },
@@ -3785,7 +4082,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-36",
   "type": "Exercise",
-  "number": "7.2.1.74",
+  "number": "7.4.1.74",
   "title": "",
   "body": ""
 },
@@ -3794,7 +4091,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-37",
   "type": "Exercise",
-  "number": "7.2.1.75",
+  "number": "7.4.1.75",
   "title": "",
   "body": ""
 },
@@ -3803,7 +4100,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-38",
   "type": "Exercise",
-  "number": "7.2.1.76",
+  "number": "7.4.1.76",
   "title": "",
   "body": ""
 },
@@ -3812,7 +4109,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-39",
   "type": "Exercise",
-  "number": "7.2.1.77",
+  "number": "7.4.1.77",
   "title": "",
   "body": ""
 },
@@ -3821,7 +4118,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-40",
   "type": "Exercise",
-  "number": "7.2.1.78",
+  "number": "7.4.1.78",
   "title": "",
   "body": ""
 },
@@ -3830,7 +4127,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-41",
   "type": "Exercise",
-  "number": "7.2.1.79",
+  "number": "7.4.1.79",
   "title": "",
   "body": ""
 },
@@ -3839,7 +4136,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-42",
   "type": "Exercise",
-  "number": "7.2.1.80",
+  "number": "7.4.1.80",
   "title": "",
   "body": ""
 },
@@ -3848,7 +4145,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-3",
   "type": "Exercise",
-  "number": "7.2.1.81",
+  "number": "7.4.1.81",
   "title": "",
   "body": ""
 },
@@ -3857,7 +4154,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-4",
   "type": "Exercise",
-  "number": "7.2.1.82",
+  "number": "7.4.1.82",
   "title": "",
   "body": ""
 },
@@ -3866,7 +4163,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-5",
   "type": "Exercise",
-  "number": "7.2.1.83",
+  "number": "7.4.1.83",
   "title": "",
   "body": ""
 },
@@ -3875,7 +4172,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-6",
   "type": "Exercise",
-  "number": "7.2.1.84",
+  "number": "7.4.1.84",
   "title": "",
   "body": ""
 },
@@ -3884,7 +4181,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-7",
   "type": "Exercise",
-  "number": "7.2.1.85",
+  "number": "7.4.1.85",
   "title": "",
   "body": ""
 },
@@ -3893,7 +4190,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-8",
   "type": "Exercise",
-  "number": "7.2.1.86",
+  "number": "7.4.1.86",
   "title": "",
   "body": ""
 },
@@ -3902,7 +4199,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-9",
   "type": "Exercise",
-  "number": "7.2.1.87",
+  "number": "7.4.1.87",
   "title": "",
   "body": ""
 },
@@ -3911,7 +4208,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-10",
   "type": "Exercise",
-  "number": "7.2.1.88",
+  "number": "7.4.1.88",
   "title": "",
   "body": ""
 },
@@ -3920,7 +4217,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-11",
   "type": "Exercise",
-  "number": "7.2.1.89",
+  "number": "7.4.1.89",
   "title": "",
   "body": ""
 },
@@ -3929,7 +4226,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-12",
   "type": "Exercise",
-  "number": "7.2.1.90",
+  "number": "7.4.1.90",
   "title": "",
   "body": ""
 },
@@ -3938,7 +4235,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-13",
   "type": "Exercise",
-  "number": "7.2.1.91",
+  "number": "7.4.1.91",
   "title": "",
   "body": ""
 },
@@ -3947,7 +4244,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-14",
   "type": "Exercise",
-  "number": "7.2.1.92",
+  "number": "7.4.1.92",
   "title": "",
   "body": ""
 },
@@ -3956,7 +4253,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-15",
   "type": "Exercise",
-  "number": "7.2.1.93",
+  "number": "7.4.1.93",
   "title": "",
   "body": ""
 },
@@ -3965,7 +4262,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-16",
   "type": "Exercise",
-  "number": "7.2.1.94",
+  "number": "7.4.1.94",
   "title": "",
   "body": ""
 },
@@ -3974,7 +4271,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-17",
   "type": "Exercise",
-  "number": "7.2.1.95",
+  "number": "7.4.1.95",
   "title": "",
   "body": ""
 },
@@ -3983,7 +4280,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-18",
   "type": "Exercise",
-  "number": "7.2.1.96",
+  "number": "7.4.1.96",
   "title": "",
   "body": ""
 },
@@ -3992,7 +4289,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-19",
   "type": "Exercise",
-  "number": "7.2.1.97",
+  "number": "7.4.1.97",
   "title": "",
   "body": ""
 },
@@ -4001,7 +4298,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-20",
   "type": "Exercise",
-  "number": "7.2.1.98",
+  "number": "7.4.1.98",
   "title": "",
   "body": ""
 },
@@ -4010,7 +4307,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-21",
   "type": "Exercise",
-  "number": "7.2.1.99",
+  "number": "7.4.1.99",
   "title": "",
   "body": ""
 },
@@ -4019,7 +4316,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-3",
   "type": "Exercise",
-  "number": "7.2.1.100",
+  "number": "7.4.1.100",
   "title": "",
   "body": ""
 },
@@ -4028,7 +4325,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-4",
   "type": "Exercise",
-  "number": "7.2.1.101",
+  "number": "7.4.1.101",
   "title": "",
   "body": ""
 },
@@ -4037,7 +4334,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-5",
   "type": "Exercise",
-  "number": "7.2.1.102",
+  "number": "7.4.1.102",
   "title": "",
   "body": ""
 },
@@ -4046,7 +4343,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-6",
   "type": "Exercise",
-  "number": "7.2.1.103",
+  "number": "7.4.1.103",
   "title": "",
   "body": ""
 },
@@ -4055,7 +4352,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-7",
   "type": "Exercise",
-  "number": "7.2.1.104",
+  "number": "7.4.1.104",
   "title": "",
   "body": ""
 },
@@ -4064,7 +4361,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-8",
   "type": "Exercise",
-  "number": "7.2.1.105",
+  "number": "7.4.1.105",
   "title": "",
   "body": ""
 },
@@ -4073,7 +4370,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-9",
   "type": "Exercise",
-  "number": "7.2.1.106",
+  "number": "7.4.1.106",
   "title": "",
   "body": ""
 },
@@ -4082,7 +4379,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-10",
   "type": "Exercise",
-  "number": "7.2.1.107",
+  "number": "7.4.1.107",
   "title": "",
   "body": ""
 },
@@ -4091,7 +4388,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-11",
   "type": "Exercise",
-  "number": "7.2.1.108",
+  "number": "7.4.1.108",
   "title": "",
   "body": ""
 },
@@ -4100,7 +4397,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-12",
   "type": "Exercise",
-  "number": "7.2.1.109",
+  "number": "7.4.1.109",
   "title": "",
   "body": ""
 },
@@ -4109,7 +4406,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-13",
   "type": "Exercise",
-  "number": "7.2.1.110",
+  "number": "7.4.1.110",
   "title": "",
   "body": ""
 },
@@ -4118,7 +4415,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-14",
   "type": "Exercise",
-  "number": "7.2.1.111",
+  "number": "7.4.1.111",
   "title": "",
   "body": ""
 },
@@ -4127,7 +4424,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-15",
   "type": "Exercise",
-  "number": "7.2.1.112",
+  "number": "7.4.1.112",
   "title": "",
   "body": ""
 },
@@ -4136,7 +4433,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-16",
   "type": "Exercise",
-  "number": "7.2.1.113",
+  "number": "7.4.1.113",
   "title": "",
   "body": ""
 },
@@ -4145,7 +4442,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-17",
   "type": "Exercise",
-  "number": "7.2.1.114",
+  "number": "7.4.1.114",
   "title": "",
   "body": ""
 },
