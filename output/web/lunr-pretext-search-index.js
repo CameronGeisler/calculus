@@ -2377,11 +2377,281 @@ var ptx_lunr_docs = [
   "body": " More Trigonometric Integrals Practice  Evaluate each integral.  Multiply numerator and denominator by , and use .  Multiply numerator and denominator by , and use .  Use the sine addition formula .  Rewrite as , then multiply by the conjugate .  Expand, and use and .  "
 },
 {
+  "id": "sec-integration-by-parts",
+  "level": "1",
+  "url": "sec-integration-by-parts.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Integration by Parts",
+  "body": " Integration by Parts   Integration by parts (IBP) is another useful technique for evaluating integrals, especially when the integrand is a product of two different types of functions (i.e. 2 functions multiplied together).   When to Use Integration by Parts  For example, integration by parts is useful for:     times exponential  times logarithm  times sine  exponential times sine    IBP is essentially a formula, which says,   It is typically written using differential notation as,   So, is basically the derivative of , and is the derivative of . This formula is used from left to right:   The original integral is of the form (2 things multiplied together)  Then we rewrite it as   And if we do it right, the remaining integral will be easier than the original integral.   In this way, this step only solves part of the original integral. This is why it's called integration by parts .   Evaluating   Consider the integral,     The idea is to break up the integral into two parts, and , such that,   can be integrated easily, and doesn't become more complicated  can be differentiated easily, and its derivative is simpler than itself   In this case, it turns out we should choose and . Then, we can compute and ,         Then, the integral can be rewritten as ,   Therefore,     In general, a good guideline is for choosing and is,   Choose such that its derivative is more simple than itself.  Choose so it can be easily integrated , and when integrated, either becomes simpler or at least not more complicated.    Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself ( has no weird function , it just involves ), and because can be easily integrated to . Then,         Then,     Some integrals require using integration by parts multiple times.   Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to . Then,         Then,   The new integral is less complicated because the power of decreased by one (from 2 to 1). Then, we can use IBP again for ,         Then,      Evaluating   Consider the integral,     Choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to itself. Then,         Then,   The new integral is simpler because the power of decreased by one. Using IBP again,            Each time you use IBP, the power of the polynomial decreases by one, until it eventually reaches 0. This is what makes IBP a useful technique for integrating products of polynomials and other functions.  From the previous examples, we can see that IBP is often useful when the integral is a product of 2 different types of functions.    Evaluating  Evaluate the integral .     Integral of Natural Logarithm  Integration by parts can be used to find the antiderivative of the natural logarithm function .   Evaluating   Consider the integral,     At first, does not look like a product of functions, however, we can think of it as , and choose and . The derivative of is which is simpler than itself, and 1 can be easily integrated to . Then,         Then,     In summary,     Cyclic Examples (Product of Exponential and Trig)   Evaluating   Consider the integral,     Here, it turns out that we could choose either or to be or , and both would work. This is because the derivative and integral of is , and the derivative and integral of is or , so both of them are basically the same in terms of complexity. In this case, we will choose and . Then,         Then,   The second integral is similar to the first except that it has instead of . To evaluate it, we use IBP again,          The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and collect them together as like terms on the left-hand side,   Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,      Evaluating  Evaluate the integral .      Integration by Parts for Definite Integrals  For definite integrals, you also have to evaluate the term at the limits of integration. Otherwise, it is very similar.    Evaluating   Evaluate the integral,            Then,       Summary of Integration by Parts  In summary,   A mnemonic to remember the IBP formula is u ltra- v iolet v oo doo .   Note that integration by parts is a place-holder formula , in that the variables and are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.  In contrast, recall that with substitution, the integral is transformed from to an integral in another variable .  With integration by parts, we do not substitute or , but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of . In this way, you don't have to worry about changing the limits of integration for definite integrals.    With integration by parts, you don't have to worry about the constant of integration until the final answer. That is, when integrating to get , we do not need to include a constant of integration , because there will be a constant introduced by the remaining integral . So, it is easiest to just wait until the very end to include .     Derivation of the Integration by Parts Formula  You may recall that integration by substitution comes from the chain rule for derivatives. In a similar way, integration by parts comes from the product rule for derivatives. Recall the product rule for derivatives, which says that, for two functions, and ,   Taking the antiderivative of both sides gives,   The left-hand side is the integral of the derivative of , so it is just , so we can write,   Then, rearranging this formula to isolate gives,   This is the integration by parts formula, except the convention is to use and instead of and , and to write instead of , and instead of . So, we write it as,   as before.    Guidelines for Choosing and (LIATE)  An important part of using integration by parts is to choose the correct and . Intuitively,   Choose so its derivative is more simple than itself  Choose to be something that is easily integrated, and either becomes simpler or at least not more complicated.   There is a mnemonic for choosing called the LIATE rule (typically pronounced lie-ate ), which is an acronym that stands for:   L : logarithmic functions, e.g. .  I : inverse trigonometric functions, e.g. .  A : algebraic functions, of the form , like polynomial functions ( , etc.) and radical functions ( , etc.).  T : trigonometric functions, e.g. .  E : exponential functions, e.g. , .   The rule is:   Choose to be what is highest on the list  And then will be what is leftover.   Also, don't forget that you can also just choose to be the entire function and , if nothing else seems to work.    Examples   One-Step IBP ( )  Evaluate each integral.                     Definite Integrals, One Step ( )  Evaluate each definite integral.            One-Step Variants ( )  Evaluate each integral.                Cyclic Examples with Exponential and Trigonometric Functions ( )  Evaluate each integral.               Two-Step IBP ( )  Evaluate each integral.             Definite Integrals, One Step ( )  Evaluate each definite integral.          Definite Integrals, Two Steps ( )  Evaluate each definite integral.        Special Techniques ( )  Evaluate each integral.  we can integrate  we can integrate   we can integrate  we can integrate  similar to  similar to  similar to     Inverse Trigonometric Functions ( )  Evaluate each integral.     we can differentiate , as      Three or More Steps ( )  Evaluate each integral.             Definite Integrals ( )  Evaluate each definite integral.   Use first.       More Definite Integrals ( )  Evaluate each definite integral.   (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)     ( is a constant.)      Advanced Examples  Sometimes, a -substitution or trigonometric identity can be used to simplify the integral, which leads to an integral where you can use integration by parts.   Substitution then IBP ( )  Evaluate each integral.    let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to ; cyclic IBP  let , leads to    Evaluating  Evaluate , where is a constant, .     Particle Velocity  A particle has velocity m\/s. Find the distance traveled from time 0 to time .  m    Definite Integrals  Evaluate each definite integral.            Special Tricks  Evaluate each integral.  split the integral as , then use integration by parts on the 2nd integral  let and  let and or    "
+},
+{
+  "id": "sec-integration-by-parts-2-2",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-2",
+  "type": "Example",
+  "number": "6.4.1",
+  "title": "When to Use Integration by Parts.",
+  "body": " When to Use Integration by Parts  For example, integration by parts is useful for:     times exponential  times logarithm  times sine  exponential times sine   "
+},
+{
+  "id": "sec-integration-by-parts-2-12",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-12",
+  "type": "Example",
+  "number": "6.4.2",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x e^x \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     The idea is to break up the integral into two parts, and , such that,   can be integrated easily, and doesn't become more complicated  can be differentiated easily, and its derivative is simpler than itself   In this case, it turns out we should choose and . Then, we can compute and ,         Then, the integral can be rewritten as ,   Therefore,    "
+},
+{
+  "id": "sec-integration-by-parts-2-15",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-15",
+  "type": "Example",
+  "number": "6.4.3",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x \\ln{x} \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself ( has no weird function , it just involves ), and because can be easily integrated to . Then,         Then,    "
+},
+{
+  "id": "sec-integration-by-parts-2-17",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-17",
+  "type": "Example",
+  "number": "6.4.4",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x^2 \\sin{x} \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to . Then,         Then,   The new integral is less complicated because the power of decreased by one (from 2 to 1). Then, we can use IBP again for ,         Then,    "
+},
+{
+  "id": "sec-integration-by-parts-2-18",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-18",
+  "type": "Example",
+  "number": "6.4.5",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x^2 e^x \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     Choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to itself. Then,         Then,   The new integral is simpler because the power of decreased by one. Using IBP again,           "
+},
+{
+  "id": "sec-integration-by-parts-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#sec-integration-by-parts-3",
+  "type": "Checkpoint",
+  "number": "6.4.6",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x^3 e^x \\,dx\\)<\/span>.",
+  "body": " Evaluating  Evaluate the integral .   "
+},
+{
+  "id": "subsec-ibp-ln-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-ln-3",
+  "type": "Example",
+  "number": "6.4.7",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int \\ln{x} \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     At first, does not look like a product of functions, however, we can think of it as , and choose and . The derivative of is which is simpler than itself, and 1 can be easily integrated to . Then,         Then,    "
+},
+{
+  "id": "subsec-ibp-cyclic-2",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-cyclic-2",
+  "type": "Example",
+  "number": "6.4.8",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int e^x \\sin x \\,dx\\)<\/span>.",
+  "body": " Evaluating   Consider the integral,     Here, it turns out that we could choose either or to be or , and both would work. This is because the derivative and integral of is , and the derivative and integral of is or , so both of them are basically the same in terms of complexity. In this case, we will choose and . Then,         Then,   The second integral is similar to the first except that it has instead of . To evaluate it, we use IBP again,          The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and collect them together as like terms on the left-hand side,   Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,    "
+},
+{
+  "id": "subsec-ibp-cyclic-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-cyclic-3",
+  "type": "Checkpoint",
+  "number": "6.4.9",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int e^x \\cos x \\,dx\\)<\/span>.",
+  "body": " Evaluating  Evaluate the integral .   "
+},
+{
+  "id": "subsec-ibp-definite-4",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-definite-4",
+  "type": "Example",
+  "number": "6.4.10",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int_0^2 3x e^x \\,dx\\)<\/span>.",
+  "body": " Evaluating   Evaluate the integral,            Then,    "
+},
+{
+  "id": "subsec-ibp-summary-5",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-summary-5",
+  "type": "Remark",
+  "number": "6.4.11",
+  "title": "",
+  "body": " Note that integration by parts is a place-holder formula , in that the variables and are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.  In contrast, recall that with substitution, the integral is transformed from to an integral in another variable .  With integration by parts, we do not substitute or , but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of . In this way, you don't have to worry about changing the limits of integration for definite integrals.  "
+},
+{
+  "id": "subsec-ibp-summary-6",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-summary-6",
+  "type": "Remark",
+  "number": "6.4.12",
+  "title": "",
+  "body": " With integration by parts, you don't have to worry about the constant of integration until the final answer. That is, when integrating to get , we do not need to include a constant of integration , because there will be a constant introduced by the remaining integral . So, it is easiest to just wait until the very end to include .  "
+},
+{
+  "id": "subsec-ibp-examples-2",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-2",
+  "type": "Exercise Group",
+  "number": "6.4.1",
+  "title": "One-Step IBP (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " One-Step IBP ( )  Evaluate each integral.                   "
+},
+{
+  "id": "subsec-ibp-examples-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-3",
+  "type": "Exercise Group",
+  "number": "6.4.2",
+  "title": "Definite Integrals, One Step (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " Definite Integrals, One Step ( )  Evaluate each definite integral.          "
+},
+{
+  "id": "subsec-ibp-examples-4",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-4",
+  "type": "Exercise Group",
+  "number": "6.4.3",
+  "title": "One-Step Variants (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " One-Step Variants ( )  Evaluate each integral.              "
+},
+{
+  "id": "subsec-ibp-examples-5",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-5",
+  "type": "Exercise Group",
+  "number": "6.4.4",
+  "title": "Cyclic Examples with Exponential and Trigonometric Functions (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Cyclic Examples with Exponential and Trigonometric Functions ( )  Evaluate each integral.             "
+},
+{
+  "id": "subsec-ibp-examples-6",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-6",
+  "type": "Exercise Group",
+  "number": "6.4.5",
+  "title": "Two-Step IBP (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Two-Step IBP ( )  Evaluate each integral.           "
+},
+{
+  "id": "subsec-ibp-examples-7",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-7",
+  "type": "Exercise Group",
+  "number": "6.4.6",
+  "title": "Definite Integrals, One Step (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " Definite Integrals, One Step ( )  Evaluate each definite integral.        "
+},
+{
+  "id": "subsec-ibp-examples-8",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-8",
+  "type": "Exercise Group",
+  "number": "6.4.7",
+  "title": "Definite Integrals, Two Steps (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Definite Integrals, Two Steps ( )  Evaluate each definite integral.      "
+},
+{
+  "id": "subsec-ibp-examples-9",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-9",
+  "type": "Exercise Group",
+  "number": "6.4.8",
+  "title": "Special Techniques (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Special Techniques ( )  Evaluate each integral.  we can integrate  we can integrate   we can integrate  we can integrate  similar to  similar to  similar to   "
+},
+{
+  "id": "subsec-ibp-examples-10",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-10",
+  "type": "Exercise Group",
+  "number": "6.4.9",
+  "title": "Inverse Trigonometric Functions (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " Inverse Trigonometric Functions ( )  Evaluate each integral.     we can differentiate , as    "
+},
+{
+  "id": "subsec-ibp-examples-11",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-11",
+  "type": "Exercise Group",
+  "number": "6.4.10",
+  "title": "Three or More Steps (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Three or More Steps ( )  Evaluate each integral.           "
+},
+{
+  "id": "subsec-ibp-examples-12",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-12",
+  "type": "Exercise Group",
+  "number": "6.4.11",
+  "title": "Definite Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Definite Integrals ( )  Evaluate each definite integral.   Use first.     "
+},
+{
+  "id": "subsec-ibp-examples-13",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-examples-13",
+  "type": "Exercise Group",
+  "number": "6.4.12",
+  "title": "More Definite Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " More Definite Integrals ( )  Evaluate each definite integral.   (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)     ( is a constant.)   "
+},
+{
+  "id": "subsec-ibp-advanced-3",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-3",
+  "type": "Exercise Group",
+  "number": "6.4.13",
+  "title": "Substitution then IBP (<span class=\"process-math\">\\(\\star\\star\\star\\star\\)<\/span>).",
+  "body": " Substitution then IBP ( )  Evaluate each integral.    let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to ; cyclic IBP  let , leads to  "
+},
+{
+  "id": "subsec-ibp-advanced-4",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-4",
+  "type": "Checkpoint",
+  "number": "6.4.13",
+  "title": "Evaluating <span class=\"process-math\">\\(\\int x^3\\cos(nx)\\,dx\\)<\/span>.",
+  "body": " Evaluating  Evaluate , where is a constant, .   "
+},
+{
+  "id": "subsec-ibp-advanced-5",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-5",
+  "type": "Checkpoint",
+  "number": "6.4.14",
+  "title": "Particle Velocity.",
+  "body": " Particle Velocity  A particle has velocity m\/s. Find the distance traveled from time 0 to time .  m  "
+},
+{
+  "id": "subsec-ibp-advanced-6",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-6",
+  "type": "Exercise Group",
+  "number": "6.4.14",
+  "title": "Definite Integrals.",
+  "body": " Definite Integrals  Evaluate each definite integral.          "
+},
+{
+  "id": "subsec-ibp-advanced-7",
+  "level": "2",
+  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-7",
+  "type": "Exercise Group",
+  "number": "6.4.15",
+  "title": "Special Tricks.",
+  "body": " Special Tricks  Evaluate each integral.  split the integral as , then use integration by parts on the 2nd integral  let and  let and or  "
+},
+{
   "id": "sec-trigonometric-integrals",
   "level": "1",
   "url": "sec-trigonometric-integrals.html",
   "type": "Section",
-  "number": "6.4",
+  "number": "6.5",
   "title": "Trigonometric Integrals",
   "body": " Trigonometric Integrals   In this section, we continue analyzing integrals involving trigonometric functions. In particular, we consider integrals involving higher powers and products of trigonometric functions.    Powers of Sine and Cosine  Recall that previously, we did the integrals and using the power-reducing identities ( Integrals of Sine and Cosine Squared ). We can also evaluate integrals of higher powers of sine and cosine. We'll start with the next higher power, and , and then move on to the 4th power, and then the general case.   3rd Power of Cosine  Evaluate .   It turns out that we would like to make a substitution, either , or . Notice that if we separate out one factor of to the right,   Then, we can use the Pythagorean identity to rewrite in terms of sine,   Then, the substitution gives , and is perfectly there on the right side to be replaced by . Then,   Therefore,      3rd Power of Sine  Evaluate .   We can use a technique similar to . Separate out one factor of , and then use the Pythagorean identity to rewrite in terms of cosine,   Then, , gives,   Therefore,      4th Power of Cosine  Evaluate .   Here, the previous technique will not work, because if we separate out one factor of , then we will be left with , which we can't convert to sine using .  Instead, it turns out the correct technique is similar to the one we used to evaluate , which is to use the power-reducing identity. First, we can write as , and then use the power-reducing identity for ,   Here, we have reduced the power of cosine from 4 to 2, but we still have , so we can apply the power-reducing identity again to ,   Then, putting it all together,   Therefore,      Interestingly, the integral results in a non-trigonometric term (the linear term ), which had not occurred in the previous cases. This tends to happen when integrating even powers.    4th Power of Sine  Evaluate .   Using the same method as , we can write as , and then use the power-reducing identity for ,   Then, putting it all together,   Therefore,     In general,   For odd powers, separate out one factor, and then convert the remaining to the opposite trigonometric function, using or , and then use substitution.  For even powers, use the power-reducing identities to reduce the power to the first power, and then integrate.    5th Power of Cosine   Separate out one factor of , and then use the Pythagorean identity to rewrite in terms of sine, and then use substitution .      Integral of Products of Powers of Sine and Cosine  More generally, we can consider integrals with a power of sine multiplied with a power of cosine, of the form,   where are whole numbers. Sometimes, these are called trigonometric integrals , even though they are not the only type of integrals involving trig functions.   Integral of  Evaluate .   We can use substitution, because the derivative of is which is also there. Then,       Integral of  Evaluate .   It turns out that again, we can use substitution, because if we separate out one factor of to prepare for substitution,   Then, we can use the Pythagorean identity to rewrite in terms of cosine,   Now, the substitution will work, because the derivative of is , and is perfectly there on the right side to be replaced by (just account for the negative sign). Then,   Then,     In general, if at least one of the exponents on sine or cosine is odd , then we can use this technique, where we separate out one factor of the odd power, and then convert the remaining to the other trig function, using the Pythagorean identity, and then use -substitution.   Integral of  Evaluate .   Here, both powers are odd, so we can separate out either power. If we separate out one factor of , then we can use the Pythagorean identity to rewrite in terms of sine,   Then,   Then,   Alternatively, if we separate out one factor of , then convert the rest to cosine using ,   Then,   Then,   In fact, both of the final answers are correct, and equivalent, even though they look different.   In fact, they only differ by a constant. Here is a graph of each: Graph of and . Notice that they are the same graph, just with a vertical shift.    In general,   If both exponents are odd, then you can separate off either sine or cosine.  With each choice, you will get answers which look different, but they will be equivalent.   If both powers are even, then the integral is more complicated, because we can't use the previous technique. Instead, we can use the power-reducing identities to reduce the powers, and then integrate.   Integral of  Evaluate .   Here, both exponents are even, so we use the power-reducing identities,   There is still , which is to the 2nd power, so apply the power-reducing identity again,      Integral of  Evaluate .   Both exponents are even again. This requires more tedious algebra than the previous example, because the exponents are bigger. But once again, we start with the power-reducing identities,   We want to simplify as much as possible before integrating,   The integral of 1 and are straightforward, but the integral of and are more complicated,   Then, for , the power is even, so use the power-reducing identity again,   For , the power is odd, so use substitution, by separating out one factor of , and using the Pythagorean identity to rewrite in terms of sine,   Finally, putting it all together,     In summary,   Trigonometric Integrals   To evaluate an integral of the form , where are non-negative integers:    If or are odd (or both), then separate out one factor of the odd power, and convert the remaining to the other trigonometric function, using,    Odd power of sine factor out and use .  Odd power of cosine factor out and use .     If and are both even, then reduce the powers of the trigonometric functions to the first power, using the power-reducing identities,        Evaluate Each Integral  Evaluate each integral.  Factor out , use , and let .  Factor out , use , and let .  Factor out , use , expand , and let .  Both exponents are even, so use power-reducing identities.  Factor out , use , and let .  Factor out , use , and let .     Powers of Tangents and Secants  We can also consider integrals of powers of tangent and secant. The techniques are similar to those for sine and cosine, but there are some differences, because the identities and derivatives are different. First, recall the derivatives of tangent and secant,   And the Pythagorean identities for tangent and secant,     Integral of Products of Powers of Tangents and Secants  Integrals of a product of powers of tangent and secant can be evaluated using similar methods as for products of sine and cosine. In other words, of the form,   Intuitively, this is because tangent and secant are related by the Pythagorean identity,   This allows us to convert between even powers of tangent and secant (just like we converted between sine and cosine).  Also, the derivatives of tangent and secant are related to each other,   This means that often we can use substitution, with being either tangent or secant, depending on the situation (just like we used substitution with sine and cosine).   Tangent Squared  We already did and , so let's consider .   This integral requires a bit of a trick. We can use the identity ,   Then, recall that , so,   Thus,      Integral of  Evaluate .   The derivative of is , so will work well. Then, . Then,      Integral of  Evaluate .   Again, the derivative of is , so will work well. Then, . Then,     In general, if we have an expression involving tangent, and also , then we can use substitution with .   Tangent Cubed  Evaluate .   This also requires a bit of a trick. Separate out , to leave , and use the Pythagorean identity to rewrite in terms of secant,   For the 1st integral, we can use substitution with , so that . For the 2nd integral, this is the Integral of Tangent , which is . Then,   Putting it all together,      Tangent 4th Power  Evaluate .   This is similar to , because we can convert to , and then use the Pythagorean identity to rewrite one of the in terms of secant,   Then, splitting the integral,   For the 2nd integral, we have seen it before, as this is the Integral of Tangent Squared,   For the first integral, we can use substitution, with , so that . Then,   Therefore,      Integral of  Evaluate .   First, like before, separate off , because it is the derivative of , to prepare for the substitution ,   Then, convert the remaining to tangent, using the identity ,   Then,   Then,     This technique of separating off works as long as the exponent of secant is even. Otherwise, if the exponent is odd, we'll need a different technique.   Integral of  Evaluate .   Here, the exponent of secant is 3 which is odd, so we can't use the previous technique. This is because if we separate off , then,   We'll have only 1 factor of secant left, which we can't convert to tangent using the Pythagorean identity.  However, it turns out we can use the derivative of instead, which is . Separate off to prepare for the substitution ,   Then,   Then,      Integral of  Evaluate .   The exponent of secant is 3 which is odd, so like the previous example, we can separate off ,   Then, convert the remaining to secant, using the identity ,   Then,   Then,     In general, this technique of separating out will work when the exponent of secant is odd, and the exponent of tangent is also odd.   Integral of   Split off , and convert the rest to secant using .    Lastly, the final situation is if the power of secant is odd, and the power of tangent is even. In this case, the integral is more complicated, and there isn't a simple one-step substitution. You may not ever encounter an integral like this.  In summary,   Integrals of Products of Tangents and Secants   For an integral of the form :   If is even (and is anything), then split off , convert the remaining even power to tangent using , and let .  If is odd and is odd, then split off , convert the remaining even power to secant using , and let .  If is odd and is even, then the integral is more complicated, and there isn't a simple one-step substitution.      Evaluate Each Integral  Evaluate each integral.  Split off , and let .  Split off , and let .  Split off , and expand .  Split off , and let .  Split off , and convert the rest to secant using .  Split off , and let .  Let , so .     Examples   ★ Evaluate Each Integral  Evaluate each integral.   Separate off , let .   Separate off , let .  Separate off , let .  Separate off , let .   Separate off , let .  Separate off , let .        ★ Definite Integrals  Evaluate each definite integral.       Separate off , let .  Separate off , let .    ★★ Evaluate Each Integral  Evaluate each integral.               Rewrite as , then use .    ★★ Powers and Products of Sine and Cosine (Definite Integrals)  Evaluate each integral.            ★★ Powers and Products of Tangent and Secant  Evaluate each integral.                       ★★ Powers and Products of Cotangent and Cosecant  Evaluate each integral.  Use to convert the even power of cotangent to cosecant, and then use .            ★★ Tangent, Secant, Cotangent, and Cosecant (Definite Integrals)  Evaluate each integral.  Separate off , let .   Separate off , let .  Separate off , let .  Rewrite (tricky!), then use , so .   Split the integral as , or factor to get , then use .  Write , then split into .  Write , then use .  The integrand is even, so can use , and write .  Use , so , and rewrite as .    ★★★ Mixed and Challenging Integrals  Evaluate each integral.  , leads to .  Use , leads to .  Use , leads to .  Rewrite in terms of sine and cosine, leads to .  Rewrite in terms of sine and cosine, leads to , then use .  Rewrite as , then use .  Use , then let , leads to .    using two methods:   Using .  Using .    (a) . (b) , so write the integrand as .  (a) . (b) .   Use , so .  Rewrite in terms of sine and cosine, leads to , then use .  Rewrite as , then let .  Rewrite in terms of sine and cosine, leads to .  Split the fraction, leads to , then use the power-reducing formula for , and use for the 2nd integral.  Use , then write .    ★★★★ Advanced (Multiple Techniques Required)  Evaluate each integral.  Use the formula , then evaluate from to .  Use , so , then apply the formula for .  Use , then integrate , using integration by parts on the second integral.  First rewrite and integrate using , then use integration by parts with and .     More Complicated Tangent and Secant Integrals  For an integral of tangent and secant, the integral is more complicated if the exponent of secant is odd, and the exponent of tangent is even. In this case, there isn't a straightforward technique, and we have to be creative.   Secant 3rd Power  Evaluate .   This is more tricky. It turns out that one way is to use integration by parts, by splitting the integral as,   Then,        Then,   The original integral appears on the right-hand side. Then, combining them together,   For , recall that . Putting it all together,   A very interesting pattern is that on the right-hand side, there is which is the derivative of , and which is the integral of . In other words, the integral of secant cubed is the average of the derivative and integral of secant.     Integral of  Evaluate .   Here, the exponent of secant is 1 which is odd, and the exponent of tangent is 2 which is even, so this is the case where there isn't a straightforward technique. It turns out, the trick is to use the identity ,   These are 2 integrals which we have seen before,   For , we can use integration by parts, by splitting the integral as .  For , this is a standard integral, and recall that .       Evaluate Each Integral  Evaluate each integral.  Use , and split the integral as . Use integration by parts on , which will result in the same integral appearing . Solve for the integral.  Use , expand, and integrate using the reduction formulas for odd powers of secant.    "
 },
@@ -2390,7 +2660,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-3",
   "type": "Example",
-  "number": "6.4.1",
+  "number": "6.5.1",
   "title": "3rd Power of Cosine.",
   "body": " 3rd Power of Cosine  Evaluate .   It turns out that we would like to make a substitution, either , or . Notice that if we separate out one factor of to the right,   Then, we can use the Pythagorean identity to rewrite in terms of sine,   Then, the substitution gives , and is perfectly there on the right side to be replaced by . Then,   Therefore,    "
 },
@@ -2399,7 +2669,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-4",
   "type": "Example",
-  "number": "6.4.2",
+  "number": "6.5.2",
   "title": "3rd Power of Sine.",
   "body": " 3rd Power of Sine  Evaluate .   We can use a technique similar to . Separate out one factor of , and then use the Pythagorean identity to rewrite in terms of cosine,   Then, , gives,   Therefore,    "
 },
@@ -2408,7 +2678,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-5",
   "type": "Example",
-  "number": "6.4.3",
+  "number": "6.5.3",
   "title": "4th Power of Cosine.",
   "body": " 4th Power of Cosine  Evaluate .   Here, the previous technique will not work, because if we separate out one factor of , then we will be left with , which we can't convert to sine using .  Instead, it turns out the correct technique is similar to the one we used to evaluate , which is to use the power-reducing identity. First, we can write as , and then use the power-reducing identity for ,   Here, we have reduced the power of cosine from 4 to 2, but we still have , so we can apply the power-reducing identity again to ,   Then, putting it all together,   Therefore,    "
 },
@@ -2417,7 +2687,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-6",
   "type": "Remark",
-  "number": "6.4.4",
+  "number": "6.5.4",
   "title": "",
   "body": " Interestingly, the integral results in a non-trigonometric term (the linear term ), which had not occurred in the previous cases. This tends to happen when integrating even powers.  "
 },
@@ -2426,7 +2696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-7",
   "type": "Example",
-  "number": "6.4.5",
+  "number": "6.5.5",
   "title": "4th Power of Sine.",
   "body": " 4th Power of Sine  Evaluate .   Using the same method as , we can write as , and then use the power-reducing identity for ,   Then, putting it all together,   Therefore,    "
 },
@@ -2435,7 +2705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-powers-sin-cos-10",
   "type": "Checkpoint",
-  "number": "6.4.6",
+  "number": "6.5.6",
   "title": "5th Power of Cosine.",
   "body": " 5th Power of Cosine   Separate out one factor of , and then use the Pythagorean identity to rewrite in terms of sine, and then use substitution .   "
 },
@@ -2453,7 +2723,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-5",
   "type": "Example",
-  "number": "6.4.7",
+  "number": "6.5.7",
   "title": "Integral of <span class=\"process-math\">\\(\\sin^4{x} \\cos{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   We can use substitution, because the derivative of is which is also there. Then,     "
 },
@@ -2462,7 +2732,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-6",
   "type": "Example",
-  "number": "6.4.8",
+  "number": "6.5.8",
   "title": "Integral of <span class=\"process-math\">\\(\\sin^3{x} \\cos^2{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   It turns out that again, we can use substitution, because if we separate out one factor of to prepare for substitution,   Then, we can use the Pythagorean identity to rewrite in terms of cosine,   Now, the substitution will work, because the derivative of is , and is perfectly there on the right side to be replaced by (just account for the negative sign). Then,   Then,    "
 },
@@ -2471,7 +2741,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-8",
   "type": "Example",
-  "number": "6.4.9",
+  "number": "6.5.9",
   "title": "Integral of <span class=\"process-math\">\\(\\sin^3{x} \\cos^3{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   Here, both powers are odd, so we can separate out either power. If we separate out one factor of , then we can use the Pythagorean identity to rewrite in terms of sine,   Then,   Then,   Alternatively, if we separate out one factor of , then convert the rest to cosine using ,   Then,   Then,   In fact, both of the final answers are correct, and equivalent, even though they look different.   In fact, they only differ by a constant. Here is a graph of each: Graph of and . Notice that they are the same graph, just with a vertical shift.   "
 },
@@ -2480,7 +2750,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-12",
   "type": "Example",
-  "number": "6.4.10",
+  "number": "6.5.10",
   "title": "Integral of <span class=\"process-math\">\\(\\sin^2{x} \\cos^2{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   Here, both exponents are even, so we use the power-reducing identities,   There is still , which is to the 2nd power, so apply the power-reducing identity again,    "
 },
@@ -2489,7 +2759,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-13",
   "type": "Example",
-  "number": "6.4.11",
+  "number": "6.5.11",
   "title": "Integral of <span class=\"process-math\">\\(\\sin^2{x} \\cos^4{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   Both exponents are even again. This requires more tedious algebra than the previous example, because the exponents are bigger. But once again, we start with the power-reducing identities,   We want to simplify as much as possible before integrating,   The integral of 1 and are straightforward, but the integral of and are more complicated,   Then, for , the power is even, so use the power-reducing identity again,   For , the power is odd, so use substitution, by separating out one factor of , and using the Pythagorean identity to rewrite in terms of sine,   Finally, putting it all together,    "
 },
@@ -2498,7 +2768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#thm-trig-integrals-sin-cos",
   "type": "Theorem",
-  "number": "6.4.12",
+  "number": "6.5.12",
   "title": "Trigonometric Integrals.",
   "body": " Trigonometric Integrals   To evaluate an integral of the form , where are non-negative integers:    If or are odd (or both), then separate out one factor of the odd power, and convert the remaining to the other trigonometric function, using,    Odd power of sine factor out and use .  Odd power of cosine factor out and use .     If and are both even, then reduce the powers of the trigonometric functions to the first power, using the power-reducing identities,      "
 },
@@ -2507,7 +2777,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-sin-cos-16",
   "type": "Exercise Group",
-  "number": "6.4.1",
+  "number": "6.5.1",
   "title": "Evaluate Each Integral.",
   "body": " Evaluate Each Integral  Evaluate each integral.  Factor out , use , and let .  Factor out , use , and let .  Factor out , use , expand , and let .  Both exponents are even, so use power-reducing identities.  Factor out , use , and let .  Factor out , use , and let .  "
 },
@@ -2516,7 +2786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-10",
   "type": "Example",
-  "number": "6.4.13",
+  "number": "6.5.13",
   "title": "Tangent Squared.",
   "body": " Tangent Squared  We already did and , so let's consider .   This integral requires a bit of a trick. We can use the identity ,   Then, recall that , so,   Thus,    "
 },
@@ -2525,7 +2795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-11",
   "type": "Example",
-  "number": "6.4.14",
+  "number": "6.5.14",
   "title": "Integral of <span class=\"process-math\">\\(\\tan{x} \\sec^2{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   The derivative of is , so will work well. Then, . Then,    "
 },
@@ -2534,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-12",
   "type": "Example",
-  "number": "6.4.15",
+  "number": "6.5.15",
   "title": "Integral of <span class=\"process-math\">\\(\\tan^3{x} \\sec^2{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   Again, the derivative of is , so will work well. Then, . Then,    "
 },
@@ -2543,7 +2813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-14",
   "type": "Example",
-  "number": "6.4.16",
+  "number": "6.5.16",
   "title": "Tangent Cubed.",
   "body": " Tangent Cubed  Evaluate .   This also requires a bit of a trick. Separate out , to leave , and use the Pythagorean identity to rewrite in terms of secant,   For the 1st integral, we can use substitution with , so that . For the 2nd integral, this is the Integral of Tangent , which is . Then,   Putting it all together,    "
 },
@@ -2552,7 +2822,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-15",
   "type": "Example",
-  "number": "6.4.17",
+  "number": "6.5.17",
   "title": "Tangent 4th Power.",
   "body": " Tangent 4th Power  Evaluate .   This is similar to , because we can convert to , and then use the Pythagorean identity to rewrite one of the in terms of secant,   Then, splitting the integral,   For the 2nd integral, we have seen it before, as this is the Integral of Tangent Squared,   For the first integral, we can use substitution, with , so that . Then,   Therefore,    "
 },
@@ -2561,7 +2831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-16",
   "type": "Example",
-  "number": "6.4.18",
+  "number": "6.5.18",
   "title": "Integral of <span class=\"process-math\">\\(\\tan^3{x} \\sec^4{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   First, like before, separate off , because it is the derivative of , to prepare for the substitution ,   Then, convert the remaining to tangent, using the identity ,   Then,   Then,    "
 },
@@ -2570,7 +2840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-18",
   "type": "Example",
-  "number": "6.4.19",
+  "number": "6.5.19",
   "title": "Integral of <span class=\"process-math\">\\(\\tan{x} \\sec^3{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   Here, the exponent of secant is 3 which is odd, so we can't use the previous technique. This is because if we separate off , then,   We'll have only 1 factor of secant left, which we can't convert to tangent using the Pythagorean identity.  However, it turns out we can use the derivative of instead, which is . Separate off to prepare for the substitution ,   Then,   Then,    "
 },
@@ -2579,7 +2849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-19",
   "type": "Example",
-  "number": "6.4.20",
+  "number": "6.5.20",
   "title": "Integral of <span class=\"process-math\">\\(\\tan^3{x} \\sec^3{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   The exponent of secant is 3 which is odd, so like the previous example, we can separate off ,   Then, convert the remaining to secant, using the identity ,   Then,   Then,    "
 },
@@ -2588,7 +2858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-21",
   "type": "Checkpoint",
-  "number": "6.4.21",
+  "number": "6.5.21",
   "title": "Integral of <span class=\"process-math\">\\(\\tan^5{x} \\sec^5{x}\\)<\/span>.",
   "body": " Integral of   Split off , and convert the rest to secant using .   "
 },
@@ -2597,7 +2867,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#thm-trig-integrals-tan-sec",
   "type": "Theorem",
-  "number": "6.4.22",
+  "number": "6.5.22",
   "title": "Integrals of Products of Tangents and Secants.",
   "body": " Integrals of Products of Tangents and Secants   For an integral of the form :   If is even (and is anything), then split off , convert the remaining even power to tangent using , and let .  If is odd and is odd, then split off , convert the remaining even power to secant using , and let .  If is odd and is even, then the integral is more complicated, and there isn't a simple one-step substitution.    "
 },
@@ -2606,7 +2876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-products-tan-sec-25",
   "type": "Exercise Group",
-  "number": "6.4.2",
+  "number": "6.5.2",
   "title": "Evaluate Each Integral.",
   "body": " Evaluate Each Integral  Evaluate each integral.  Split off , and let .  Split off , and let .  Split off , and expand .  Split off , and let .  Split off , and convert the rest to secant using .  Split off , and let .  Let , so .  "
 },
@@ -2615,7 +2885,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-2",
   "type": "Exercise Group",
-  "number": "6.4.3",
+  "number": "6.5.3",
   "title": "★ Evaluate Each Integral.",
   "body": " ★ Evaluate Each Integral  Evaluate each integral.   Separate off , let .   Separate off , let .  Separate off , let .  Separate off , let .   Separate off , let .  Separate off , let .      "
 },
@@ -2624,7 +2894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-3",
   "type": "Exercise Group",
-  "number": "6.4.4",
+  "number": "6.5.4",
   "title": "★ Definite Integrals.",
   "body": " ★ Definite Integrals  Evaluate each definite integral.       Separate off , let .  Separate off , let .  "
 },
@@ -2633,7 +2903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-4",
   "type": "Exercise Group",
-  "number": "6.4.5",
+  "number": "6.5.5",
   "title": "★★ Evaluate Each Integral.",
   "body": " ★★ Evaluate Each Integral  Evaluate each integral.               Rewrite as , then use .  "
 },
@@ -2642,7 +2912,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-5",
   "type": "Exercise Group",
-  "number": "6.4.6",
+  "number": "6.5.6",
   "title": "★★ Powers and Products of Sine and Cosine (Definite Integrals).",
   "body": " ★★ Powers and Products of Sine and Cosine (Definite Integrals)  Evaluate each integral.          "
 },
@@ -2651,7 +2921,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-6",
   "type": "Exercise Group",
-  "number": "6.4.7",
+  "number": "6.5.7",
   "title": "★★ Powers and Products of Tangent and Secant.",
   "body": " ★★ Powers and Products of Tangent and Secant  Evaluate each integral.                     "
 },
@@ -2660,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-7",
   "type": "Exercise Group",
-  "number": "6.4.8",
+  "number": "6.5.8",
   "title": "★★ Powers and Products of Cotangent and Cosecant.",
   "body": " ★★ Powers and Products of Cotangent and Cosecant  Evaluate each integral.  Use to convert the even power of cotangent to cosecant, and then use .          "
 },
@@ -2669,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-8",
   "type": "Exercise Group",
-  "number": "6.4.9",
+  "number": "6.5.9",
   "title": "★★ Tangent, Secant, Cotangent, and Cosecant (Definite Integrals).",
   "body": " ★★ Tangent, Secant, Cotangent, and Cosecant (Definite Integrals)  Evaluate each integral.  Separate off , let .   Separate off , let .  Separate off , let .  Rewrite (tricky!), then use , so .   Split the integral as , or factor to get , then use .  Write , then split into .  Write , then use .  The integrand is even, so can use , and write .  Use , so , and rewrite as .  "
 },
@@ -2678,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-9",
   "type": "Exercise Group",
-  "number": "6.4.10",
+  "number": "6.5.10",
   "title": "★★★ Mixed and Challenging Integrals.",
   "body": " ★★★ Mixed and Challenging Integrals  Evaluate each integral.  , leads to .  Use , leads to .  Use , leads to .  Rewrite in terms of sine and cosine, leads to .  Rewrite in terms of sine and cosine, leads to , then use .  Rewrite as , then use .  Use , then let , leads to .    using two methods:   Using .  Using .    (a) . (b) , so write the integrand as .  (a) . (b) .   Use , so .  Rewrite in terms of sine and cosine, leads to , then use .  Rewrite as , then let .  Rewrite in terms of sine and cosine, leads to .  Split the fraction, leads to , then use the power-reducing formula for , and use for the 2nd integral.  Use , then write .  "
 },
@@ -2687,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-examples-2-10",
   "type": "Exercise Group",
-  "number": "6.4.11",
+  "number": "6.5.11",
   "title": "★★★★ Advanced (Multiple Techniques Required).",
   "body": " ★★★★ Advanced (Multiple Techniques Required)  Evaluate each integral.  Use the formula , then evaluate from to .  Use , so , then apply the formula for .  Use , then integrate , using integration by parts on the second integral.  First rewrite and integrate using , then use integration by parts with and .  "
 },
@@ -2696,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-advanced-3",
   "type": "Example",
-  "number": "6.4.23",
+  "number": "6.5.23",
   "title": "Secant 3rd Power.",
   "body": " Secant 3rd Power  Evaluate .   This is more tricky. It turns out that one way is to use integration by parts, by splitting the integral as,   Then,        Then,   The original integral appears on the right-hand side. Then, combining them together,   For , recall that . Putting it all together,   A very interesting pattern is that on the right-hand side, there is which is the derivative of , and which is the integral of . In other words, the integral of secant cubed is the average of the derivative and integral of secant.   "
 },
@@ -2705,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-advanced-4",
   "type": "Example",
-  "number": "6.4.24",
+  "number": "6.5.24",
   "title": "Integral of <span class=\"process-math\">\\(\\tan^2{x} \\sec{x}\\)<\/span>.",
   "body": " Integral of  Evaluate .   Here, the exponent of secant is 1 which is odd, and the exponent of tangent is 2 which is even, so this is the case where there isn't a straightforward technique. It turns out, the trick is to use the identity ,   These are 2 integrals which we have seen before,   For , we can use integration by parts, by splitting the integral as .  For , this is a standard integral, and recall that .     "
 },
@@ -2714,279 +2984,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-trigonometric-integrals.html#subsec-trig-integrals-advanced-5",
   "type": "Exercise Group",
-  "number": "6.4.12",
+  "number": "6.5.12",
   "title": "Evaluate Each Integral.",
   "body": " Evaluate Each Integral  Evaluate each integral.  Use , and split the integral as . Use integration by parts on , which will result in the same integral appearing . Solve for the integral.  Use , expand, and integrate using the reduction formulas for odd powers of secant.  "
-},
-{
-  "id": "sec-integration-by-parts",
-  "level": "1",
-  "url": "sec-integration-by-parts.html",
-  "type": "Section",
-  "number": "6.5",
-  "title": "Integration by Parts",
-  "body": " Integration by Parts   Integration by parts (IBP) is another useful technique for evaluating integrals, especially when the integrand is a product of two different types of functions (i.e. 2 functions multiplied together).   When to Use Integration by Parts  For example, integration by parts is useful for:     times exponential  times logarithm  times sine  exponential times sine    IBP is essentially a formula, which says,   It is typically written using differential notation as,   So, is basically the derivative of , and is the derivative of . This formula is used from left to right:   The original integral is of the form (2 things multiplied together)  Then we rewrite it as   And if we do it right, the remaining integral will be easier than the original integral.   In this way, this step only solves part of the original integral. This is why it's called integration by parts .   Evaluating   Consider the integral,     The idea is to break up the integral into two parts, and , such that,   can be integrated easily, and doesn't become more complicated  can be differentiated easily, and its derivative is simpler than itself   In this case, it turns out we should choose and . Then, we can compute and ,         Then, the integral can be rewritten as ,   Therefore,     In general, a good guideline is for choosing and is,   Choose such that its derivative is more simple than itself.  Choose so it can be easily integrated , and when integrated, either becomes simpler or at least not more complicated.    Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself ( has no weird function , it just involves ), and because can be easily integrated to . Then,         Then,     Some integrals require using integration by parts multiple times.   Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to . Then,         Then,   The new integral is less complicated because the power of decreased by one (from 2 to 1). Then, we can use IBP again for ,         Then,      Evaluating   Consider the integral,     Choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to itself. Then,         Then,   The new integral is simpler because the power of decreased by one. Using IBP again,            Each time you use IBP, the power of the polynomial decreases by one, until it eventually reaches 0. This is what makes IBP a useful technique for integrating products of polynomials and other functions.  From the previous examples, we can see that IBP is often useful when the integral is a product of 2 different types of functions.    Evaluating  Evaluate the integral .     Integral of Natural Logarithm  Integration by parts can be used to find the antiderivative of the natural logarithm function .   Evaluating   Consider the integral,     At first, does not look like a product of functions, however, we can think of it as , and choose and . The derivative of is which is simpler than itself, and 1 can be easily integrated to . Then,         Then,     In summary,     Cyclic Examples (Product of Exponential and Trig)   Evaluating   Consider the integral,     Here, it turns out that we could choose either or to be or , and both would work. This is because the derivative and integral of is , and the derivative and integral of is or , so both of them are basically the same in terms of complexity. In this case, we will choose and . Then,         Then,   The second integral is similar to the first except that it has instead of . To evaluate it, we use IBP again,          The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and collect them together as like terms on the left-hand side,   Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,      Evaluating  Evaluate the integral .      Integration by Parts for Definite Integrals  For definite integrals, you also have to evaluate the term at the limits of integration. Otherwise, it is very similar.    Evaluating   Evaluate the integral,            Then,       Summary of Integration by Parts  In summary,   A mnemonic to remember the IBP formula is u ltra- v iolet v oo doo .   Note that integration by parts is a place-holder formula , in that the variables and are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.  In contrast, recall that with substitution, the integral is transformed from to an integral in another variable .  With integration by parts, we do not substitute or , but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of . In this way, you don't have to worry about changing the limits of integration for definite integrals.    With integration by parts, you don't have to worry about the constant of integration until the final answer. That is, when integrating to get , we do not need to include a constant of integration , because there will be a constant introduced by the remaining integral . So, it is easiest to just wait until the very end to include .     Derivation of the Integration by Parts Formula  You may recall that integration by substitution comes from the chain rule for derivatives. In a similar way, integration by parts comes from the product rule for derivatives. Recall the product rule for derivatives, which says that, for two functions, and ,   Taking the antiderivative of both sides gives,   The left-hand side is the integral of the derivative of , so it is just , so we can write,   Then, rearranging this formula to isolate gives,   This is the integration by parts formula, except the convention is to use and instead of and , and to write instead of , and instead of . So, we write it as,   as before.    Guidelines for Choosing and (LIATE)  An important part of using integration by parts is to choose the correct and . Intuitively,   Choose so its derivative is more simple than itself  Choose to be something that is easily integrated, and either becomes simpler or at least not more complicated.   There is a mnemonic for choosing called the LIATE rule (typically pronounced lie-ate ), which is an acronym that stands for:   L : logarithmic functions, e.g. .  I : inverse trigonometric functions, e.g. .  A : algebraic functions, of the form , like polynomial functions ( , etc.) and radical functions ( , etc.).  T : trigonometric functions, e.g. .  E : exponential functions, e.g. , .   The rule is:   Choose to be what is highest on the list  And then will be what is leftover.   Also, don't forget that you can also just choose to be the entire function and , if nothing else seems to work.    Examples   One-Step IBP ( )  Evaluate each integral.                     Definite Integrals, One Step ( )  Evaluate each definite integral.            One-Step Variants ( )  Evaluate each integral.                Cyclic Examples with Exponential and Trigonometric Functions ( )  Evaluate each integral.               Two-Step IBP ( )  Evaluate each integral.             Definite Integrals, One Step ( )  Evaluate each definite integral.          Definite Integrals, Two Steps ( )  Evaluate each definite integral.        Special Techniques ( )  Evaluate each integral.  we can integrate  we can integrate   we can integrate  we can integrate  similar to  similar to  similar to     Inverse Trigonometric Functions ( )  Evaluate each integral.     we can differentiate , as      Three or More Steps ( )  Evaluate each integral.             Definite Integrals ( )  Evaluate each definite integral.   Use first.       More Definite Integrals ( )  Evaluate each definite integral.   (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)     ( is a constant.)      Advanced Examples  Sometimes, a -substitution or trigonometric identity can be used to simplify the integral, which leads to an integral where you can use integration by parts.   Substitution then IBP ( )  Evaluate each integral.    let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to ; cyclic IBP  let , leads to    Evaluating  Evaluate , where is a constant, .     Particle Velocity  A particle has velocity m\/s. Find the distance traveled from time 0 to time .  m    Definite Integrals  Evaluate each definite integral.            Special Tricks  Evaluate each integral.  split the integral as , then use integration by parts on the 2nd integral  let and  let and or    "
-},
-{
-  "id": "sec-integration-by-parts-2-2",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-2",
-  "type": "Example",
-  "number": "6.5.1",
-  "title": "When to Use Integration by Parts.",
-  "body": " When to Use Integration by Parts  For example, integration by parts is useful for:     times exponential  times logarithm  times sine  exponential times sine   "
-},
-{
-  "id": "sec-integration-by-parts-2-12",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-12",
-  "type": "Example",
-  "number": "6.5.2",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int x e^x \\,dx\\)<\/span>.",
-  "body": " Evaluating   Consider the integral,     The idea is to break up the integral into two parts, and , such that,   can be integrated easily, and doesn't become more complicated  can be differentiated easily, and its derivative is simpler than itself   In this case, it turns out we should choose and . Then, we can compute and ,         Then, the integral can be rewritten as ,   Therefore,    "
-},
-{
-  "id": "sec-integration-by-parts-2-15",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-15",
-  "type": "Example",
-  "number": "6.5.3",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int x \\ln{x} \\,dx\\)<\/span>.",
-  "body": " Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself ( has no weird function , it just involves ), and because can be easily integrated to . Then,         Then,    "
-},
-{
-  "id": "sec-integration-by-parts-2-17",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-17",
-  "type": "Example",
-  "number": "6.5.4",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int x^2 \\sin{x} \\,dx\\)<\/span>.",
-  "body": " Evaluating   Consider the integral,     We can choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to . Then,         Then,   The new integral is less complicated because the power of decreased by one (from 2 to 1). Then, we can use IBP again for ,         Then,    "
-},
-{
-  "id": "sec-integration-by-parts-2-18",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#sec-integration-by-parts-2-18",
-  "type": "Example",
-  "number": "6.5.5",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int x^2 e^x \\,dx\\)<\/span>.",
-  "body": " Evaluating   Consider the integral,     Choose and , because the derivative of is which is simpler than itself, and because can be easily integrated to itself. Then,         Then,   The new integral is simpler because the power of decreased by one. Using IBP again,           "
-},
-{
-  "id": "sec-integration-by-parts-3",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#sec-integration-by-parts-3",
-  "type": "Checkpoint",
-  "number": "6.5.6",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int x^3 e^x \\,dx\\)<\/span>.",
-  "body": " Evaluating  Evaluate the integral .   "
-},
-{
-  "id": "subsec-ibp-ln-3",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-ln-3",
-  "type": "Example",
-  "number": "6.5.7",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int \\ln{x} \\,dx\\)<\/span>.",
-  "body": " Evaluating   Consider the integral,     At first, does not look like a product of functions, however, we can think of it as , and choose and . The derivative of is which is simpler than itself, and 1 can be easily integrated to . Then,         Then,    "
-},
-{
-  "id": "subsec-ibp-cyclic-2",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-cyclic-2",
-  "type": "Example",
-  "number": "6.5.8",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int e^x \\sin x \\,dx\\)<\/span>.",
-  "body": " Evaluating   Consider the integral,     Here, it turns out that we could choose either or to be or , and both would work. This is because the derivative and integral of is , and the derivative and integral of is or , so both of them are basically the same in terms of complexity. In this case, we will choose and . Then,         Then,   The second integral is similar to the first except that it has instead of . To evaluate it, we use IBP again,          The resulting integral is actually the same as the original integral we started with. This means that, like an equation, we can add the integral to both sides, and collect them together as like terms on the left-hand side,   Then, to solve for the desired integral, divide both sides by 2, and also finally add the constant of integration,    "
-},
-{
-  "id": "subsec-ibp-cyclic-3",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-cyclic-3",
-  "type": "Checkpoint",
-  "number": "6.5.9",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int e^x \\cos x \\,dx\\)<\/span>.",
-  "body": " Evaluating  Evaluate the integral .   "
-},
-{
-  "id": "subsec-ibp-definite-4",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-definite-4",
-  "type": "Example",
-  "number": "6.5.10",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int_0^2 3x e^x \\,dx\\)<\/span>.",
-  "body": " Evaluating   Evaluate the integral,            Then,    "
-},
-{
-  "id": "subsec-ibp-summary-5",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-summary-5",
-  "type": "Remark",
-  "number": "6.5.11",
-  "title": "",
-  "body": " Note that integration by parts is a place-holder formula , in that the variables and are just place-holders for the functions we choose, and they are not new variables that we are substituting into the integral.  In contrast, recall that with substitution, the integral is transformed from to an integral in another variable .  With integration by parts, we do not substitute or , but instead just use the formula as a pattern to replace the given integral with an equivalent integral, still in terms of . In this way, you don't have to worry about changing the limits of integration for definite integrals.  "
-},
-{
-  "id": "subsec-ibp-summary-6",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-summary-6",
-  "type": "Remark",
-  "number": "6.5.12",
-  "title": "",
-  "body": " With integration by parts, you don't have to worry about the constant of integration until the final answer. That is, when integrating to get , we do not need to include a constant of integration , because there will be a constant introduced by the remaining integral . So, it is easiest to just wait until the very end to include .  "
-},
-{
-  "id": "subsec-ibp-examples-2",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-2",
-  "type": "Exercise Group",
-  "number": "6.5.1",
-  "title": "One-Step IBP (<span class=\"process-math\">\\(\\star\\)<\/span>).",
-  "body": " One-Step IBP ( )  Evaluate each integral.                   "
-},
-{
-  "id": "subsec-ibp-examples-3",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-3",
-  "type": "Exercise Group",
-  "number": "6.5.2",
-  "title": "Definite Integrals, One Step (<span class=\"process-math\">\\(\\star\\)<\/span>).",
-  "body": " Definite Integrals, One Step ( )  Evaluate each definite integral.          "
-},
-{
-  "id": "subsec-ibp-examples-4",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-4",
-  "type": "Exercise Group",
-  "number": "6.5.3",
-  "title": "One-Step Variants (<span class=\"process-math\">\\(\\star\\)<\/span>).",
-  "body": " One-Step Variants ( )  Evaluate each integral.              "
-},
-{
-  "id": "subsec-ibp-examples-5",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-5",
-  "type": "Exercise Group",
-  "number": "6.5.4",
-  "title": "Cyclic Examples with Exponential and Trigonometric Functions (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
-  "body": " Cyclic Examples with Exponential and Trigonometric Functions ( )  Evaluate each integral.             "
-},
-{
-  "id": "subsec-ibp-examples-6",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-6",
-  "type": "Exercise Group",
-  "number": "6.5.5",
-  "title": "Two-Step IBP (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
-  "body": " Two-Step IBP ( )  Evaluate each integral.           "
-},
-{
-  "id": "subsec-ibp-examples-7",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-7",
-  "type": "Exercise Group",
-  "number": "6.5.6",
-  "title": "Definite Integrals, One Step (<span class=\"process-math\">\\(\\star\\)<\/span>).",
-  "body": " Definite Integrals, One Step ( )  Evaluate each definite integral.        "
-},
-{
-  "id": "subsec-ibp-examples-8",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-8",
-  "type": "Exercise Group",
-  "number": "6.5.7",
-  "title": "Definite Integrals, Two Steps (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
-  "body": " Definite Integrals, Two Steps ( )  Evaluate each definite integral.      "
-},
-{
-  "id": "subsec-ibp-examples-9",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-9",
-  "type": "Exercise Group",
-  "number": "6.5.8",
-  "title": "Special Techniques (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
-  "body": " Special Techniques ( )  Evaluate each integral.  we can integrate  we can integrate   we can integrate  we can integrate  similar to  similar to  similar to   "
-},
-{
-  "id": "subsec-ibp-examples-10",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-10",
-  "type": "Exercise Group",
-  "number": "6.5.9",
-  "title": "Inverse Trigonometric Functions (<span class=\"process-math\">\\(\\star\\)<\/span>).",
-  "body": " Inverse Trigonometric Functions ( )  Evaluate each integral.     we can differentiate , as    "
-},
-{
-  "id": "subsec-ibp-examples-11",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-11",
-  "type": "Exercise Group",
-  "number": "6.5.10",
-  "title": "Three or More Steps (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
-  "body": " Three or More Steps ( )  Evaluate each integral.           "
-},
-{
-  "id": "subsec-ibp-examples-12",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-12",
-  "type": "Exercise Group",
-  "number": "6.5.11",
-  "title": "Definite Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
-  "body": " Definite Integrals ( )  Evaluate each definite integral.   Use first.     "
-},
-{
-  "id": "subsec-ibp-examples-13",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-examples-13",
-  "type": "Exercise Group",
-  "number": "6.5.12",
-  "title": "More Definite Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
-  "body": " More Definite Integrals ( )  Evaluate each definite integral.   (you might notice a shortcut: it is an odd function on a symmetric interval, so the integral is equal to 0)     ( is a constant.)   "
-},
-{
-  "id": "subsec-ibp-advanced-3",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-3",
-  "type": "Exercise Group",
-  "number": "6.5.13",
-  "title": "Substitution then IBP (<span class=\"process-math\">\\(\\star\\star\\star\\star\\)<\/span>).",
-  "body": " Substitution then IBP ( )  Evaluate each integral.    let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to  let , leads to  let , leads to  let , leads to  let , leads to ; cyclic IBP  let , leads to ; cyclic IBP  let , leads to  "
-},
-{
-  "id": "subsec-ibp-advanced-4",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-4",
-  "type": "Checkpoint",
-  "number": "6.5.13",
-  "title": "Evaluating <span class=\"process-math\">\\(\\int x^3\\cos(nx)\\,dx\\)<\/span>.",
-  "body": " Evaluating  Evaluate , where is a constant, .   "
-},
-{
-  "id": "subsec-ibp-advanced-5",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-5",
-  "type": "Checkpoint",
-  "number": "6.5.14",
-  "title": "Particle Velocity.",
-  "body": " Particle Velocity  A particle has velocity m\/s. Find the distance traveled from time 0 to time .  m  "
-},
-{
-  "id": "subsec-ibp-advanced-6",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-6",
-  "type": "Exercise Group",
-  "number": "6.5.14",
-  "title": "Definite Integrals.",
-  "body": " Definite Integrals  Evaluate each definite integral.          "
-},
-{
-  "id": "subsec-ibp-advanced-7",
-  "level": "2",
-  "url": "sec-integration-by-parts.html#subsec-ibp-advanced-7",
-  "type": "Exercise Group",
-  "number": "6.5.15",
-  "title": "Special Tricks.",
-  "body": " Special Tricks  Evaluate each integral.  split the integral as , then use integration by parts on the 2nd integral  let and  let and or  "
 },
 {
   "id": "sec-inverse-trig-sub",
@@ -3106,11 +3106,308 @@ var ptx_lunr_docs = [
   "body": "  Evaluate    "
 },
 {
+  "id": "sec-nth-term-test",
+  "level": "1",
+  "url": "sec-nth-term-test.html",
+  "type": "Section",
+  "number": "7.1",
+  "title": "nth Term Test for Divergence",
+  "body": " nth Term Test for Divergence   Geometric series and telescoping series are the 2 main examples of series that we can find their sums exactly. However, for most series, we cannot find their sums exactly, and we need to use tests to determine whether they converge or diverge.  This first test we will learn basically says that if the terms of a series do not eventually become small, then the series cannot converge.   Limit of the nth term of a convergent series  If the series converges, then .    nth Term Test for Divergence  If (or does not exist), then the series diverges.   Intuitively, for a series to converge, recall that its partial sums must approach a single number. This can only happen if the numbers you're adding eventually become smaller and smaller, so they change the sum by less and less. If the terms do not become small, then the partial sums can't approach a limit, and the series diverges.           Divergence of n\/(2n+1)  Consider the series,   The terms do not approach zero, because,   Therefore, by the th term test, the series diverges. Intuitively, consider its partial sums: Partial Sums of . Notice that the partial sums grow and grow, and don't approach a single number. Intuitively, since the terms approach , the series is like adding a number close to over and over again. Therefore, the series is going to diverge.    Oscillating Series  Consider the series,   This series diverges, because its partial sums will be,   After we add 1, the sum becomes 1, and after we add -1, the sum becomes 0, and so on. In particular, we could say that the partial sums are given by,   The limit of the partial sums as does not exist, and therefore the sum diverges. Alternatively, we can use the th term test. The limit does not exist, and so by the th term test, the series diverges.    Divergence of n^2\/(n^2-1)  Consider the series,   As , , and so by the th term test, the series diverges.    Divergence of cos(2\/n)  Consider the series   We have   Therefore, by the th term test, the series diverges.   In summary,   In fact, the reverse direction (the converse) of this statement is not true, in that if the terms of a sequence become small ( ), it is not necessarily true that the series always converges. In other words, if the terms eventually become small, the th term test is inconclusive.   The nth term test is also sometimes called the divergence test , because it can only be used to show a series diverges.     Harmonic Series   Harmonic Series   The harmonic series , is the sum of the reciprocals of the natural numbers,      This series is called the harmonic series, because it is related to the harmonics of a vibrating string. The th harmonic of a vibrating string is the frequency that is times the fundamental frequency, and the amplitude of the th harmonic is proportional to .   In fact, the harmonic series diverges, even though its terms become small. Intuitively, consider its partial sums: Partial Sums of the Harmonic Series up to terms . Notice that the partial sums grow and grow, even if they grow slowly. You might recognize the pattern of partial sums looks like a logarithmic function (like ), and indeed, the th partial sum of the harmonic series is approximately , which goes to infinity as . Therefore, the harmonic series diverges.  In summary,    Inconclusive Test for n\/(n^2+1)  Consider the series,   As , , and so by the th term test, the test is inconclusive. In fact, this series diverges (we will see how to show this later on).    Divergence of ln(1\/n)  Consider the series,   As , , and so , which is not 0. Therefore, by the th term test, the series diverges.     Examples   nth Term Test (★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Inconclusive, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because    nth Term Test (★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Inconclusive, because  Diverges, because  Diverges, because    nth Term Test (★★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Inconclusive, because  Rewrite as and use . Diverges, because  Rewrite as and use . Diverges, because  Recall that . Diverges, because     Advanced Examples   Advanced Examples (★★★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Rewrite as and use , or rewrite as and use . Diverges, because  Diverges  Rewrite as and use . Diverges, because  The numerator has factors of , while the denominator has factors decreasing from to 1, so the top grows faster. Or, rewrite as and notice every factor is at least 1, so the terms do not approach 0. Diverges, because    "
+},
+{
+  "id": "sec-nth-term-test-2-3",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-3",
+  "type": "Theorem",
+  "number": "7.1.1",
+  "title": "Limit of the nth term of a convergent series.",
+  "body": " Limit of the nth term of a convergent series  If the series converges, then .  "
+},
+{
+  "id": "sec-nth-term-test-2-4",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-4",
+  "type": "Theorem",
+  "number": "7.1.2",
+  "title": "nth Term Test for Divergence.",
+  "body": " nth Term Test for Divergence  If (or does not exist), then the series diverges.  "
+},
+{
+  "id": "sec-nth-term-test-2-7",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-7",
+  "type": "Example",
+  "number": "7.1.3",
+  "title": "Divergence of n\/(2n+1).",
+  "body": " Divergence of n\/(2n+1)  Consider the series,   The terms do not approach zero, because,   Therefore, by the th term test, the series diverges. Intuitively, consider its partial sums: Partial Sums of . Notice that the partial sums grow and grow, and don't approach a single number. Intuitively, since the terms approach , the series is like adding a number close to over and over again. Therefore, the series is going to diverge.  "
+},
+{
+  "id": "sec-nth-term-test-2-8",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-8",
+  "type": "Example",
+  "number": "7.1.4",
+  "title": "Oscillating Series.",
+  "body": " Oscillating Series  Consider the series,   This series diverges, because its partial sums will be,   After we add 1, the sum becomes 1, and after we add -1, the sum becomes 0, and so on. In particular, we could say that the partial sums are given by,   The limit of the partial sums as does not exist, and therefore the sum diverges. Alternatively, we can use the th term test. The limit does not exist, and so by the th term test, the series diverges.  "
+},
+{
+  "id": "sec-nth-term-test-2-9",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-9",
+  "type": "Example",
+  "number": "7.1.5",
+  "title": "Divergence of n^2\/(n^2-1).",
+  "body": " Divergence of n^2\/(n^2-1)  Consider the series,   As , , and so by the th term test, the series diverges.  "
+},
+{
+  "id": "sec-nth-term-test-2-10",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-10",
+  "type": "Example",
+  "number": "7.1.6",
+  "title": "Divergence of cos(2\/n).",
+  "body": " Divergence of cos(2\/n)  Consider the series   We have   Therefore, by the th term test, the series diverges.  "
+},
+{
+  "id": "sec-nth-term-test-2-14",
+  "level": "2",
+  "url": "sec-nth-term-test.html#sec-nth-term-test-2-14",
+  "type": "Remark",
+  "number": "7.1.7",
+  "title": "",
+  "body": " The nth term test is also sometimes called the divergence test , because it can only be used to show a series diverges.  "
+},
+{
+  "id": "subsec-harmonic-series-2",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-harmonic-series-2",
+  "type": "Definition",
+  "number": "7.1.8",
+  "title": "Harmonic Series.",
+  "body": " Harmonic Series   The harmonic series , is the sum of the reciprocals of the natural numbers,    "
+},
+{
+  "id": "subsec-harmonic-series-3",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-harmonic-series-3",
+  "type": "Remark",
+  "number": "7.1.9",
+  "title": "",
+  "body": " This series is called the harmonic series, because it is related to the harmonics of a vibrating string. The th harmonic of a vibrating string is the frequency that is times the fundamental frequency, and the amplitude of the th harmonic is proportional to .  "
+},
+{
+  "id": "subsec-harmonic-series-7",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-harmonic-series-7",
+  "type": "Example",
+  "number": "7.1.10",
+  "title": "Inconclusive Test for n\/(n^2+1).",
+  "body": " Inconclusive Test for n\/(n^2+1)  Consider the series,   As , , and so by the th term test, the test is inconclusive. In fact, this series diverges (we will see how to show this later on).  "
+},
+{
+  "id": "subsec-harmonic-series-8",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-harmonic-series-8",
+  "type": "Example",
+  "number": "7.1.11",
+  "title": "Divergence of ln(1\/n).",
+  "body": " Divergence of ln(1\/n)  Consider the series,   As , , and so , which is not 0. Therefore, by the th term test, the series diverges.  "
+},
+{
+  "id": "subsec-nth-term-examples-2",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-nth-term-examples-2",
+  "type": "Exercise Group",
+  "number": "7.1.1",
+  "title": "nth Term Test (★).",
+  "body": " nth Term Test (★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Inconclusive, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  "
+},
+{
+  "id": "subsec-nth-term-examples-3",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-nth-term-examples-3",
+  "type": "Exercise Group",
+  "number": "7.1.2",
+  "title": "nth Term Test (★★).",
+  "body": " nth Term Test (★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Diverges, because  Inconclusive, because  Diverges, because  Diverges, because  "
+},
+{
+  "id": "subsec-nth-term-examples-4",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-nth-term-examples-4",
+  "type": "Exercise Group",
+  "number": "7.1.3",
+  "title": "nth Term Test (★★★).",
+  "body": " nth Term Test (★★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Diverges, because  Diverges, because  Inconclusive, because  Rewrite as and use . Diverges, because  Rewrite as and use . Diverges, because  Recall that . Diverges, because  "
+},
+{
+  "id": "subsec-nth-term-advanced-2",
+  "level": "2",
+  "url": "sec-nth-term-test.html#subsec-nth-term-advanced-2",
+  "type": "Exercise Group",
+  "number": "7.1.4",
+  "title": "Advanced Examples (★★★★).",
+  "body": " Advanced Examples (★★★★)  Use the th term test to determine if each series diverges, or if the test is inconclusive.  Rewrite as and use , or rewrite as and use . Diverges, because  Diverges  Rewrite as and use . Diverges, because  The numerator has factors of , while the denominator has factors decreasing from to 1, so the top grows faster. Or, rewrite as and notice every factor is at least 1, so the terms do not approach 0. Diverges, because  "
+},
+{
+  "id": "sec-telescoping-series",
+  "level": "1",
+  "url": "sec-telescoping-series.html",
+  "type": "Section",
+  "number": "7.2",
+  "title": "Telescoping Series",
+  "body": " Telescoping Series   Besides geometric series, there is another special type of series called a telescoping series . Many telescoping series also have a finite sum that we can compute exactly, because of a cancellation pattern.  If a series has partial sums which are telescoping sums, then we can determine a closed-form formula for the partial sums, and evaluate the series using limits.   Sum of 1\/n(n+1)  Consider the series,   The term can be rewritten as two fractions, using partial fraction decomposition,   Solving for and , we get , so,   Then, consider the partial sums of the series, which are given by,   Notice that the s cancel out, the s also cancel out, etc. In general, each negative term is cancelled out by the positive term 1 term to the right. Then, the only terms that are not cancelled out are the leading and the ending . Therefore,   This is a formula which gives the partial sum of the series for any . In other words, this formula gives the sum of the first terms of the series. For example,   Recall that the sum of a series is the limit of its partial sums as . Notice that the partial sums are approaching 1. In particular, as ,     Multiplying the above sum by 2 gives a famous series,   The sequence are the so-called triangular numbers , so this series is the sum of the reciprocals of the triangular numbers. From above, its sum is,   This sum was posed to Leibniz in 1672 by Christiaan Huygens , Dutch mathematician and physicist. He evaluated it by considering the series divided by 2, then wrote it as a telescoping sum. Also, Jacob Bernoulli studied this series around 1689, an determined the sum to be 2.   In general, the idea is that if a series can be written as the difference between two terms that are similar, then most of them will cancel out, and we can find the sum of the series by finding the limit of the partial sums.   Sum of 1\/(n^2-1)  Consider the series,   We can also use partial fraction decomposition to split the term into two fractions, by factoring the denominator.   Solving for and , we get , so,   We can factor out the for simplicity, and focus on the part involving ,   Then, the partial sums are given by,   Then, expanding,   Notice that the s cancel, the s also cancel, etc. In general, each negative term is cancelled out by the positive term 3 terms to the right. Then, the only terms left are the leading , and the ending and . Then,   Then, as ,   Therefore, the series converges to .    The Bernoulli brothers found that,   However, they couldn't solve (a similar series, but without in the denominator), which is much more difficult to evaluate.    Telescoping with Gap 2  Consider the series,   Notice the series starts at , not . The partial sums are,   The s cancel out, s also, etc. In general, each negative term cancels out with the positive term 3 terms to the right. In the end, only the and are left, along with and . Then,   Then, as ,   Therefore, the series converges to .   Telescoping series don't always converge, as in the next example.   A Divergent Telescoping Series  Consider the series,   We can't use partial fraction decomposition here, but instead we use the logarithm property , to rewrite it as,   Notice again that we have the difference between 2 terms that are similar. The partial sums are,   Each of the negative terms is cancelled out by the positive term 1 term to the right. Then, the only terms that are not cancelled out are the leading (recall ) and the ending . Therefore,   Then, as ,   Therefore, the series diverges to .     Summary of Telescoping Series    Rewrite the term as a difference of 2 terms (if it isn't already), often using partial fraction decomposition.  Write out the first few terms (like ), and the last few terms ( ) to see the cancellation pattern.  Observe the cancellation pattern : Each positive term cancels out with the negative term 1\/2\/3\/4 to its right . Cancel out the terms. Typically, you'll be left with a few at the start, and a few at the end.  Take the limit of the simplified partial sum as .    You can write out as many terms as you need to recognize the pattern. If the pattern is not immediately obvious, then try writing out more terms.  To recognize that a series is telescoping, the 2 main things to look for are:  Are two similar terms being subtracted?  Or, can you do partial fraction decomposition?      Examples   Telescoping Series (★)  Find the sum of each telescoping series, or show that it diverges.      Diverges to   Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .    Telescoping Series (★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, ,  Partial fractions, ,  Partial fractions, ,  Partial fractions, ,    Partial Fractions (★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .    Partial Fractions (★★)  Find the sum of each telescoping series using partial fractions.  Partial fractions,  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .    Mixed Telescoping (★★)  Find the sum of each telescoping series, or show that it diverges.    Diverges to   Log property, Diverges to   Diverges to      Mixed Telescoping (★★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .   Diverges  Partial fractions, .        Advanced Examples   Advanced Telescoping (★★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .  Partial fractions, .  Log property, Diverges to  Partial fractions, ,    Special Functions (★★★)  Find the sum of each telescoping series, or show that it diverges.    Simplify, .  Log product.    Parametric Series (★★★)  Find the sum of each telescoping series involving parameters.  , where is a positive integer Partial fractions.  , where is a positive integer Partial fractions.    "
+},
+{
+  "id": "sec-telescoping-series-2-1",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "telescoping series "
+},
+{
+  "id": "sec-telescoping-series-2-3",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-3",
+  "type": "Example",
+  "number": "7.2.1",
+  "title": "Sum of 1\/n(n+1).",
+  "body": " Sum of 1\/n(n+1)  Consider the series,   The term can be rewritten as two fractions, using partial fraction decomposition,   Solving for and , we get , so,   Then, consider the partial sums of the series, which are given by,   Notice that the s cancel out, the s also cancel out, etc. In general, each negative term is cancelled out by the positive term 1 term to the right. Then, the only terms that are not cancelled out are the leading and the ending . Therefore,   This is a formula which gives the partial sum of the series for any . In other words, this formula gives the sum of the first terms of the series. For example,   Recall that the sum of a series is the limit of its partial sums as . Notice that the partial sums are approaching 1. In particular, as ,   "
+},
+{
+  "id": "sec-telescoping-series-2-4",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-4",
+  "type": "Remark",
+  "number": "7.2.2",
+  "title": "",
+  "body": " Multiplying the above sum by 2 gives a famous series,   The sequence are the so-called triangular numbers , so this series is the sum of the reciprocals of the triangular numbers. From above, its sum is,   This sum was posed to Leibniz in 1672 by Christiaan Huygens , Dutch mathematician and physicist. He evaluated it by considering the series divided by 2, then wrote it as a telescoping sum. Also, Jacob Bernoulli studied this series around 1689, an determined the sum to be 2.  "
+},
+{
+  "id": "sec-telescoping-series-2-6",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-6",
+  "type": "Example",
+  "number": "7.2.3",
+  "title": "Sum of 1\/(n^2-1).",
+  "body": " Sum of 1\/(n^2-1)  Consider the series,   We can also use partial fraction decomposition to split the term into two fractions, by factoring the denominator.   Solving for and , we get , so,   We can factor out the for simplicity, and focus on the part involving ,   Then, the partial sums are given by,   Then, expanding,   Notice that the s cancel, the s also cancel, etc. In general, each negative term is cancelled out by the positive term 3 terms to the right. Then, the only terms left are the leading , and the ending and . Then,   Then, as ,   Therefore, the series converges to .  "
+},
+{
+  "id": "sec-telescoping-series-2-7",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-7",
+  "type": "Remark",
+  "number": "7.2.4",
+  "title": "",
+  "body": " The Bernoulli brothers found that,   However, they couldn't solve (a similar series, but without in the denominator), which is much more difficult to evaluate.  "
+},
+{
+  "id": "sec-telescoping-series-2-8",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-8",
+  "type": "Example",
+  "number": "7.2.5",
+  "title": "Telescoping with Gap 2.",
+  "body": " Telescoping with Gap 2  Consider the series,   Notice the series starts at , not . The partial sums are,   The s cancel out, s also, etc. In general, each negative term cancels out with the positive term 3 terms to the right. In the end, only the and are left, along with and . Then,   Then, as ,   Therefore, the series converges to .  "
+},
+{
+  "id": "sec-telescoping-series-2-10",
+  "level": "2",
+  "url": "sec-telescoping-series.html#sec-telescoping-series-2-10",
+  "type": "Example",
+  "number": "7.2.6",
+  "title": "A Divergent Telescoping Series.",
+  "body": " A Divergent Telescoping Series  Consider the series,   We can't use partial fraction decomposition here, but instead we use the logarithm property , to rewrite it as,   Notice again that we have the difference between 2 terms that are similar. The partial sums are,   Each of the negative terms is cancelled out by the positive term 1 term to the right. Then, the only terms that are not cancelled out are the leading (recall ) and the ending . Therefore,   Then, as ,   Therefore, the series diverges to .  "
+},
+{
+  "id": "subsec-telescoping-examples-2",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-2",
+  "type": "Exercise Group",
+  "number": "7.2.1",
+  "title": "Telescoping Series (★).",
+  "body": " Telescoping Series (★)  Find the sum of each telescoping series, or show that it diverges.      Diverges to   Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  "
+},
+{
+  "id": "subsec-telescoping-examples-3",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-3",
+  "type": "Exercise Group",
+  "number": "7.2.2",
+  "title": "Telescoping Series (★).",
+  "body": " Telescoping Series (★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, ,  Partial fractions, ,  Partial fractions, ,  Partial fractions, ,  "
+},
+{
+  "id": "subsec-telescoping-examples-4",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-4",
+  "type": "Exercise Group",
+  "number": "7.2.3",
+  "title": "Partial Fractions (★★).",
+  "body": " Partial Fractions (★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  "
+},
+{
+  "id": "subsec-telescoping-examples-5",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-5",
+  "type": "Exercise Group",
+  "number": "7.2.4",
+  "title": "Partial Fractions (★★).",
+  "body": " Partial Fractions (★★)  Find the sum of each telescoping series using partial fractions.  Partial fractions,  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  Partial fractions, .  "
+},
+{
+  "id": "subsec-telescoping-examples-6",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-6",
+  "type": "Exercise Group",
+  "number": "7.2.5",
+  "title": "Mixed Telescoping (★★).",
+  "body": " Mixed Telescoping (★★)  Find the sum of each telescoping series, or show that it diverges.    Diverges to   Log property, Diverges to   Diverges to    "
+},
+{
+  "id": "subsec-telescoping-examples-7",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-examples-7",
+  "type": "Exercise Group",
+  "number": "7.2.6",
+  "title": "Mixed Telescoping (★★★).",
+  "body": " Mixed Telescoping (★★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .   Diverges  Partial fractions, .     "
+},
+{
+  "id": "subsec-telescoping-advanced-2",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-advanced-2",
+  "type": "Exercise Group",
+  "number": "7.2.7",
+  "title": "Advanced Telescoping (★★★).",
+  "body": " Advanced Telescoping (★★★)  Find the sum of each telescoping series, or show that it diverges.  Partial fractions, .  Partial fractions, .  Log property, Diverges to  Partial fractions, ,  "
+},
+{
+  "id": "subsec-telescoping-advanced-3",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-advanced-3",
+  "type": "Exercise Group",
+  "number": "7.2.8",
+  "title": "Special Functions (★★★).",
+  "body": " Special Functions (★★★)  Find the sum of each telescoping series, or show that it diverges.    Simplify, .  Log product.  "
+},
+{
+  "id": "subsec-telescoping-advanced-4",
+  "level": "2",
+  "url": "sec-telescoping-series.html#subsec-telescoping-advanced-4",
+  "type": "Exercise Group",
+  "number": "7.2.9",
+  "title": "Parametric Series (★★★).",
+  "body": " Parametric Series (★★★)  Find the sum of each telescoping series involving parameters.  , where is a positive integer Partial fractions.  , where is a positive integer Partial fractions.  "
+},
+{
   "id": "sec-summary-of-series",
   "level": "1",
   "url": "sec-summary-of-series.html",
   "type": "Section",
-  "number": "7.1",
+  "number": "7.3",
   "title": "Summary of Series",
   "body": " Summary of Series   In previous sections, we explored various methods for determining if an infinite series converges or diverges. Also, in a few limited cases, it is possible to determine the exact value of the convergent series.  The culmination of the series chapter is to be able to take a given series and determine if it converges or diverges. Most problems won't tell you which test to use, so you'll have to be able to use pattern recognition to figure out which test applies. This is similar to how evaluating integrals involves pattern recognition for which technique to use. For each of these questions, you should:    State convergence or divergence,  Specify which test you used, and,  Why it can be applied.      Choosing Which Test to Use      Do the terms not approach 0?   If or the limit does not exist, use the th-term test for divergence: the series diverges immediately.     Are there exponents of ?  Could be a geometric series . Rewrite in the form . With common ratio ,     converges   diverges    The sum is (if it converges)     Are two similar terms being subtracted? Or can you do partial-fraction decomposition ? Could be telescoping. Write the partial sum explicitly, then take . Often used for simple rational functions, or with quadratic denominators that are factorable.     Can it be written as a power of ?   Consider the -series . Use the -series test: converges if , diverges if . Should be second-nature in order to help with the comparison tests.     Is there a fraction, with a numerator or denominator with more than one term? Especially a rational function, or generally terms involving fractions. Consider comparison tests . Use asymptotic comparison (keeping only the dominant term). Use the direct or limit comparison test: compare to a simpler series (usually a -series or geometric).    Use direct comparison, if it's easy enough.  Use limit comparison if direct comparison is too difficult. Calculate . If , then and behave the same.       Has factorials ( ) and\/or exponentials ( )? Especially mixed with powers ( ) or double exponentials ( ).   Use the ratio test : compute .     converges (absolutely)   diverges   inconclusive (try another test)       Has a double power? With in the exponent and  in the base (like or of the form ).   Use the root test : compute .     converges (absolutely)   diverges   inconclusive (try another test)    Note: Don't confuse this with a geometric series , which has a constant base.     Has an alternating factor (like or )?    Use the alternating series test : if and is decreasing, then the series converges (conditionally).     Can be integrated easily, maybe using -substitution?  Use the integral test : convergence of is the same as .       Overall Remarks    Some series can be shown to converge or diverge using multiple different tests (which give you the same conclusion). However, one method may be easier or harder than the other.  Always check if the terms approach 0. The divergence test is the easiest to apply (because it only involves taking a limit), and it can lead to a quick conclusion of divergence. It is often forgotten by students.     "
 },
@@ -3119,7 +3416,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-series-review.html",
   "type": "Section",
-  "number": "7.2",
+  "number": "7.4",
   "title": "Series Review",
   "body": " Series Review   The three main question types for series (and sequences) problems are:  Find the limit of the sequence, or determine if the sequence diverges.  Determine if series converges or diverges.  Find the value of the sum of the series, or determine if it diverges.  Determine if series converges absolutely, converges conditionally, or diverges.      Exercises    Limit of sequences   Find the limit of each sequence, or determine if the sequence diverges.                                                                                                                                 Convergence of series   Determine if each series converges or diverges.                                             Sum of a series   Find the value of the sum of each series, or determine if it diverges. Simplify your answer completely.                        Absolute convergence and conditional convergence   Determine if each series converges absolutely, converges conditionally, or diverges.                     "
 },
@@ -3128,7 +3425,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-3",
   "type": "Exercise",
-  "number": "7.2.1.1",
+  "number": "7.4.1.1",
   "title": "",
   "body": "  "
 },
@@ -3137,7 +3434,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-4",
   "type": "Exercise",
-  "number": "7.2.1.2",
+  "number": "7.4.1.2",
   "title": "",
   "body": "  "
 },
@@ -3146,7 +3443,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-5",
   "type": "Exercise",
-  "number": "7.2.1.3",
+  "number": "7.4.1.3",
   "title": "",
   "body": "  "
 },
@@ -3155,7 +3452,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-6",
   "type": "Exercise",
-  "number": "7.2.1.4",
+  "number": "7.4.1.4",
   "title": "",
   "body": "  "
 },
@@ -3164,7 +3461,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-7",
   "type": "Exercise",
-  "number": "7.2.1.5",
+  "number": "7.4.1.5",
   "title": "",
   "body": "  "
 },
@@ -3173,7 +3470,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-8",
   "type": "Exercise",
-  "number": "7.2.1.6",
+  "number": "7.4.1.6",
   "title": "",
   "body": "  "
 },
@@ -3182,7 +3479,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-9",
   "type": "Exercise",
-  "number": "7.2.1.7",
+  "number": "7.4.1.7",
   "title": "",
   "body": "  "
 },
@@ -3191,7 +3488,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-10",
   "type": "Exercise",
-  "number": "7.2.1.8",
+  "number": "7.4.1.8",
   "title": "",
   "body": "  "
 },
@@ -3200,7 +3497,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-11",
   "type": "Exercise",
-  "number": "7.2.1.9",
+  "number": "7.4.1.9",
   "title": "",
   "body": "  "
 },
@@ -3209,7 +3506,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-12",
   "type": "Exercise",
-  "number": "7.2.1.10",
+  "number": "7.4.1.10",
   "title": "",
   "body": "  "
 },
@@ -3218,7 +3515,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-13",
   "type": "Exercise",
-  "number": "7.2.1.11",
+  "number": "7.4.1.11",
   "title": "",
   "body": "  "
 },
@@ -3227,7 +3524,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-14",
   "type": "Exercise",
-  "number": "7.2.1.12",
+  "number": "7.4.1.12",
   "title": "",
   "body": "  "
 },
@@ -3236,7 +3533,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-15",
   "type": "Exercise",
-  "number": "7.2.1.13",
+  "number": "7.4.1.13",
   "title": "",
   "body": "  "
 },
@@ -3245,7 +3542,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-16",
   "type": "Exercise",
-  "number": "7.2.1.14",
+  "number": "7.4.1.14",
   "title": "",
   "body": "  "
 },
@@ -3254,7 +3551,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-17",
   "type": "Exercise",
-  "number": "7.2.1.15",
+  "number": "7.4.1.15",
   "title": "",
   "body": "  "
 },
@@ -3263,7 +3560,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-18",
   "type": "Exercise",
-  "number": "7.2.1.16",
+  "number": "7.4.1.16",
   "title": "",
   "body": "  "
 },
@@ -3272,7 +3569,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-19",
   "type": "Exercise",
-  "number": "7.2.1.17",
+  "number": "7.4.1.17",
   "title": "",
   "body": "  "
 },
@@ -3281,7 +3578,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-20",
   "type": "Exercise",
-  "number": "7.2.1.18",
+  "number": "7.4.1.18",
   "title": "",
   "body": "  "
 },
@@ -3290,7 +3587,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-21",
   "type": "Exercise",
-  "number": "7.2.1.19",
+  "number": "7.4.1.19",
   "title": "",
   "body": "  "
 },
@@ -3299,7 +3596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-22",
   "type": "Exercise",
-  "number": "7.2.1.20",
+  "number": "7.4.1.20",
   "title": "",
   "body": "  "
 },
@@ -3308,7 +3605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-23",
   "type": "Exercise",
-  "number": "7.2.1.21",
+  "number": "7.4.1.21",
   "title": "",
   "body": "  "
 },
@@ -3317,7 +3614,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-24",
   "type": "Exercise",
-  "number": "7.2.1.22",
+  "number": "7.4.1.22",
   "title": "",
   "body": "  "
 },
@@ -3326,7 +3623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-25",
   "type": "Exercise",
-  "number": "7.2.1.23",
+  "number": "7.4.1.23",
   "title": "",
   "body": "  "
 },
@@ -3335,7 +3632,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-26",
   "type": "Exercise",
-  "number": "7.2.1.24",
+  "number": "7.4.1.24",
   "title": "",
   "body": "  "
 },
@@ -3344,7 +3641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-27",
   "type": "Exercise",
-  "number": "7.2.1.25",
+  "number": "7.4.1.25",
   "title": "",
   "body": "  "
 },
@@ -3353,7 +3650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-28",
   "type": "Exercise",
-  "number": "7.2.1.26",
+  "number": "7.4.1.26",
   "title": "",
   "body": "  "
 },
@@ -3362,7 +3659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-29",
   "type": "Exercise",
-  "number": "7.2.1.27",
+  "number": "7.4.1.27",
   "title": "",
   "body": "  "
 },
@@ -3371,7 +3668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-30",
   "type": "Exercise",
-  "number": "7.2.1.28",
+  "number": "7.4.1.28",
   "title": "",
   "body": "  "
 },
@@ -3380,7 +3677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-31",
   "type": "Exercise",
-  "number": "7.2.1.29",
+  "number": "7.4.1.29",
   "title": "",
   "body": "  "
 },
@@ -3389,7 +3686,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-32",
   "type": "Exercise",
-  "number": "7.2.1.30",
+  "number": "7.4.1.30",
   "title": "",
   "body": "  "
 },
@@ -3398,7 +3695,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-33",
   "type": "Exercise",
-  "number": "7.2.1.31",
+  "number": "7.4.1.31",
   "title": "",
   "body": "  "
 },
@@ -3407,7 +3704,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-34",
   "type": "Exercise",
-  "number": "7.2.1.32",
+  "number": "7.4.1.32",
   "title": "",
   "body": "  "
 },
@@ -3416,7 +3713,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-35",
   "type": "Exercise",
-  "number": "7.2.1.33",
+  "number": "7.4.1.33",
   "title": "",
   "body": "  "
 },
@@ -3425,7 +3722,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-36",
   "type": "Exercise",
-  "number": "7.2.1.34",
+  "number": "7.4.1.34",
   "title": "",
   "body": "  "
 },
@@ -3434,7 +3731,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-37",
   "type": "Exercise",
-  "number": "7.2.1.35",
+  "number": "7.4.1.35",
   "title": "",
   "body": "  "
 },
@@ -3443,7 +3740,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-38",
   "type": "Exercise",
-  "number": "7.2.1.36",
+  "number": "7.4.1.36",
   "title": "",
   "body": "      "
 },
@@ -3452,7 +3749,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-39",
   "type": "Exercise",
-  "number": "7.2.1.37",
+  "number": "7.4.1.37",
   "title": "",
   "body": "  "
 },
@@ -3461,7 +3758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-40",
   "type": "Exercise",
-  "number": "7.2.1.38",
+  "number": "7.4.1.38",
   "title": "",
   "body": "  "
 },
@@ -3470,7 +3767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-41",
   "type": "Exercise",
-  "number": "7.2.1.39",
+  "number": "7.4.1.39",
   "title": "",
   "body": "  "
 },
@@ -3479,7 +3776,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-1-42",
   "type": "Exercise",
-  "number": "7.2.1.40",
+  "number": "7.4.1.40",
   "title": "",
   "body": "  "
 },
@@ -3488,7 +3785,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-3",
   "type": "Exercise",
-  "number": "7.2.1.41",
+  "number": "7.4.1.41",
   "title": "",
   "body": ""
 },
@@ -3497,7 +3794,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-4",
   "type": "Exercise",
-  "number": "7.2.1.42",
+  "number": "7.4.1.42",
   "title": "",
   "body": ""
 },
@@ -3506,7 +3803,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-5",
   "type": "Exercise",
-  "number": "7.2.1.43",
+  "number": "7.4.1.43",
   "title": "",
   "body": ""
 },
@@ -3515,7 +3812,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-6",
   "type": "Exercise",
-  "number": "7.2.1.44",
+  "number": "7.4.1.44",
   "title": "",
   "body": ""
 },
@@ -3524,7 +3821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-7",
   "type": "Exercise",
-  "number": "7.2.1.45",
+  "number": "7.4.1.45",
   "title": "",
   "body": ""
 },
@@ -3533,7 +3830,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-8",
   "type": "Exercise",
-  "number": "7.2.1.46",
+  "number": "7.4.1.46",
   "title": "",
   "body": ""
 },
@@ -3542,7 +3839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-9",
   "type": "Exercise",
-  "number": "7.2.1.47",
+  "number": "7.4.1.47",
   "title": "",
   "body": ""
 },
@@ -3551,7 +3848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-10",
   "type": "Exercise",
-  "number": "7.2.1.48",
+  "number": "7.4.1.48",
   "title": "",
   "body": ""
 },
@@ -3560,7 +3857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-11",
   "type": "Exercise",
-  "number": "7.2.1.49",
+  "number": "7.4.1.49",
   "title": "",
   "body": ""
 },
@@ -3569,7 +3866,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-12",
   "type": "Exercise",
-  "number": "7.2.1.50",
+  "number": "7.4.1.50",
   "title": "",
   "body": ""
 },
@@ -3578,7 +3875,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-13",
   "type": "Exercise",
-  "number": "7.2.1.51",
+  "number": "7.4.1.51",
   "title": "",
   "body": ""
 },
@@ -3587,7 +3884,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-14",
   "type": "Exercise",
-  "number": "7.2.1.52",
+  "number": "7.4.1.52",
   "title": "",
   "body": ""
 },
@@ -3596,7 +3893,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-15",
   "type": "Exercise",
-  "number": "7.2.1.53",
+  "number": "7.4.1.53",
   "title": "",
   "body": ""
 },
@@ -3605,7 +3902,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-16",
   "type": "Exercise",
-  "number": "7.2.1.54",
+  "number": "7.4.1.54",
   "title": "",
   "body": ""
 },
@@ -3614,7 +3911,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-17",
   "type": "Exercise",
-  "number": "7.2.1.55",
+  "number": "7.4.1.55",
   "title": "",
   "body": ""
 },
@@ -3623,7 +3920,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-18",
   "type": "Exercise",
-  "number": "7.2.1.56",
+  "number": "7.4.1.56",
   "title": "",
   "body": ""
 },
@@ -3632,7 +3929,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-19",
   "type": "Exercise",
-  "number": "7.2.1.57",
+  "number": "7.4.1.57",
   "title": "",
   "body": ""
 },
@@ -3641,7 +3938,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-20",
   "type": "Exercise",
-  "number": "7.2.1.58",
+  "number": "7.4.1.58",
   "title": "",
   "body": ""
 },
@@ -3650,7 +3947,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-21",
   "type": "Exercise",
-  "number": "7.2.1.59",
+  "number": "7.4.1.59",
   "title": "",
   "body": ""
 },
@@ -3659,7 +3956,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-22",
   "type": "Exercise",
-  "number": "7.2.1.60",
+  "number": "7.4.1.60",
   "title": "",
   "body": ""
 },
@@ -3668,7 +3965,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-23",
   "type": "Exercise",
-  "number": "7.2.1.61",
+  "number": "7.4.1.61",
   "title": "",
   "body": ""
 },
@@ -3677,7 +3974,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-24",
   "type": "Exercise",
-  "number": "7.2.1.62",
+  "number": "7.4.1.62",
   "title": "",
   "body": ""
 },
@@ -3686,7 +3983,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-25",
   "type": "Exercise",
-  "number": "7.2.1.63",
+  "number": "7.4.1.63",
   "title": "",
   "body": ""
 },
@@ -3695,7 +3992,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-26",
   "type": "Exercise",
-  "number": "7.2.1.64",
+  "number": "7.4.1.64",
   "title": "",
   "body": ""
 },
@@ -3704,7 +4001,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-27",
   "type": "Exercise",
-  "number": "7.2.1.65",
+  "number": "7.4.1.65",
   "title": "",
   "body": ""
 },
@@ -3713,7 +4010,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-28",
   "type": "Exercise",
-  "number": "7.2.1.66",
+  "number": "7.4.1.66",
   "title": "",
   "body": ""
 },
@@ -3722,7 +4019,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-29",
   "type": "Exercise",
-  "number": "7.2.1.67",
+  "number": "7.4.1.67",
   "title": "",
   "body": ""
 },
@@ -3731,7 +4028,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-30",
   "type": "Exercise",
-  "number": "7.2.1.68",
+  "number": "7.4.1.68",
   "title": "",
   "body": ""
 },
@@ -3740,7 +4037,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-31",
   "type": "Exercise",
-  "number": "7.2.1.69",
+  "number": "7.4.1.69",
   "title": "",
   "body": ""
 },
@@ -3749,7 +4046,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-32",
   "type": "Exercise",
-  "number": "7.2.1.70",
+  "number": "7.4.1.70",
   "title": "",
   "body": ""
 },
@@ -3758,7 +4055,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-33",
   "type": "Exercise",
-  "number": "7.2.1.71",
+  "number": "7.4.1.71",
   "title": "",
   "body": ""
 },
@@ -3767,7 +4064,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-34",
   "type": "Exercise",
-  "number": "7.2.1.72",
+  "number": "7.4.1.72",
   "title": "",
   "body": ""
 },
@@ -3776,7 +4073,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-35",
   "type": "Exercise",
-  "number": "7.2.1.73",
+  "number": "7.4.1.73",
   "title": "",
   "body": ""
 },
@@ -3785,7 +4082,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-36",
   "type": "Exercise",
-  "number": "7.2.1.74",
+  "number": "7.4.1.74",
   "title": "",
   "body": ""
 },
@@ -3794,7 +4091,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-37",
   "type": "Exercise",
-  "number": "7.2.1.75",
+  "number": "7.4.1.75",
   "title": "",
   "body": ""
 },
@@ -3803,7 +4100,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-38",
   "type": "Exercise",
-  "number": "7.2.1.76",
+  "number": "7.4.1.76",
   "title": "",
   "body": ""
 },
@@ -3812,7 +4109,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-39",
   "type": "Exercise",
-  "number": "7.2.1.77",
+  "number": "7.4.1.77",
   "title": "",
   "body": ""
 },
@@ -3821,7 +4118,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-40",
   "type": "Exercise",
-  "number": "7.2.1.78",
+  "number": "7.4.1.78",
   "title": "",
   "body": ""
 },
@@ -3830,7 +4127,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-41",
   "type": "Exercise",
-  "number": "7.2.1.79",
+  "number": "7.4.1.79",
   "title": "",
   "body": ""
 },
@@ -3839,7 +4136,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-2-42",
   "type": "Exercise",
-  "number": "7.2.1.80",
+  "number": "7.4.1.80",
   "title": "",
   "body": ""
 },
@@ -3848,7 +4145,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-3",
   "type": "Exercise",
-  "number": "7.2.1.81",
+  "number": "7.4.1.81",
   "title": "",
   "body": ""
 },
@@ -3857,7 +4154,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-4",
   "type": "Exercise",
-  "number": "7.2.1.82",
+  "number": "7.4.1.82",
   "title": "",
   "body": ""
 },
@@ -3866,7 +4163,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-5",
   "type": "Exercise",
-  "number": "7.2.1.83",
+  "number": "7.4.1.83",
   "title": "",
   "body": ""
 },
@@ -3875,7 +4172,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-6",
   "type": "Exercise",
-  "number": "7.2.1.84",
+  "number": "7.4.1.84",
   "title": "",
   "body": ""
 },
@@ -3884,7 +4181,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-7",
   "type": "Exercise",
-  "number": "7.2.1.85",
+  "number": "7.4.1.85",
   "title": "",
   "body": ""
 },
@@ -3893,7 +4190,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-8",
   "type": "Exercise",
-  "number": "7.2.1.86",
+  "number": "7.4.1.86",
   "title": "",
   "body": ""
 },
@@ -3902,7 +4199,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-9",
   "type": "Exercise",
-  "number": "7.2.1.87",
+  "number": "7.4.1.87",
   "title": "",
   "body": ""
 },
@@ -3911,7 +4208,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-10",
   "type": "Exercise",
-  "number": "7.2.1.88",
+  "number": "7.4.1.88",
   "title": "",
   "body": ""
 },
@@ -3920,7 +4217,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-11",
   "type": "Exercise",
-  "number": "7.2.1.89",
+  "number": "7.4.1.89",
   "title": "",
   "body": ""
 },
@@ -3929,7 +4226,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-12",
   "type": "Exercise",
-  "number": "7.2.1.90",
+  "number": "7.4.1.90",
   "title": "",
   "body": ""
 },
@@ -3938,7 +4235,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-13",
   "type": "Exercise",
-  "number": "7.2.1.91",
+  "number": "7.4.1.91",
   "title": "",
   "body": ""
 },
@@ -3947,7 +4244,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-14",
   "type": "Exercise",
-  "number": "7.2.1.92",
+  "number": "7.4.1.92",
   "title": "",
   "body": ""
 },
@@ -3956,7 +4253,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-15",
   "type": "Exercise",
-  "number": "7.2.1.93",
+  "number": "7.4.1.93",
   "title": "",
   "body": ""
 },
@@ -3965,7 +4262,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-16",
   "type": "Exercise",
-  "number": "7.2.1.94",
+  "number": "7.4.1.94",
   "title": "",
   "body": ""
 },
@@ -3974,7 +4271,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-17",
   "type": "Exercise",
-  "number": "7.2.1.95",
+  "number": "7.4.1.95",
   "title": "",
   "body": ""
 },
@@ -3983,7 +4280,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-18",
   "type": "Exercise",
-  "number": "7.2.1.96",
+  "number": "7.4.1.96",
   "title": "",
   "body": ""
 },
@@ -3992,7 +4289,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-19",
   "type": "Exercise",
-  "number": "7.2.1.97",
+  "number": "7.4.1.97",
   "title": "",
   "body": ""
 },
@@ -4001,7 +4298,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-20",
   "type": "Exercise",
-  "number": "7.2.1.98",
+  "number": "7.4.1.98",
   "title": "",
   "body": ""
 },
@@ -4010,7 +4307,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-3-21",
   "type": "Exercise",
-  "number": "7.2.1.99",
+  "number": "7.4.1.99",
   "title": "",
   "body": ""
 },
@@ -4019,7 +4316,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-3",
   "type": "Exercise",
-  "number": "7.2.1.100",
+  "number": "7.4.1.100",
   "title": "",
   "body": ""
 },
@@ -4028,7 +4325,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-4",
   "type": "Exercise",
-  "number": "7.2.1.101",
+  "number": "7.4.1.101",
   "title": "",
   "body": ""
 },
@@ -4037,7 +4334,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-5",
   "type": "Exercise",
-  "number": "7.2.1.102",
+  "number": "7.4.1.102",
   "title": "",
   "body": ""
 },
@@ -4046,7 +4343,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-6",
   "type": "Exercise",
-  "number": "7.2.1.103",
+  "number": "7.4.1.103",
   "title": "",
   "body": ""
 },
@@ -4055,7 +4352,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-7",
   "type": "Exercise",
-  "number": "7.2.1.104",
+  "number": "7.4.1.104",
   "title": "",
   "body": ""
 },
@@ -4064,7 +4361,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-8",
   "type": "Exercise",
-  "number": "7.2.1.105",
+  "number": "7.4.1.105",
   "title": "",
   "body": ""
 },
@@ -4073,7 +4370,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-9",
   "type": "Exercise",
-  "number": "7.2.1.106",
+  "number": "7.4.1.106",
   "title": "",
   "body": ""
 },
@@ -4082,7 +4379,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-10",
   "type": "Exercise",
-  "number": "7.2.1.107",
+  "number": "7.4.1.107",
   "title": "",
   "body": ""
 },
@@ -4091,7 +4388,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-11",
   "type": "Exercise",
-  "number": "7.2.1.108",
+  "number": "7.4.1.108",
   "title": "",
   "body": ""
 },
@@ -4100,7 +4397,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-12",
   "type": "Exercise",
-  "number": "7.2.1.109",
+  "number": "7.4.1.109",
   "title": "",
   "body": ""
 },
@@ -4109,7 +4406,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-13",
   "type": "Exercise",
-  "number": "7.2.1.110",
+  "number": "7.4.1.110",
   "title": "",
   "body": ""
 },
@@ -4118,7 +4415,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-14",
   "type": "Exercise",
-  "number": "7.2.1.111",
+  "number": "7.4.1.111",
   "title": "",
   "body": ""
 },
@@ -4127,7 +4424,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-15",
   "type": "Exercise",
-  "number": "7.2.1.112",
+  "number": "7.4.1.112",
   "title": "",
   "body": ""
 },
@@ -4136,7 +4433,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-16",
   "type": "Exercise",
-  "number": "7.2.1.113",
+  "number": "7.4.1.113",
   "title": "",
   "body": ""
 },
@@ -4145,7 +4442,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-series-review.html#sec-series-review-3-2-4-17",
   "type": "Exercise",
-  "number": "7.2.1.114",
+  "number": "7.4.1.114",
   "title": "",
   "body": ""
 },
@@ -4562,6 +4859,375 @@ var ptx_lunr_docs = [
   "number": "9",
   "title": "Differential Equations",
   "body": " Differential Equations     "
+},
+{
+  "id": "sec-line-integrals",
+  "level": "1",
+  "url": "sec-line-integrals.html",
+  "type": "Section",
+  "number": "10.1",
+  "title": "Line Integrals",
+  "body": " Line Integrals   Motivation for Line Integrals  Recall that we have considered various types of integrals.   The definite integral is an integral over an interval in  A double integral is an integral over a region in  A triple integral is an integral over a region in .   Intuitively,   The integral (where ) can be thought of as summing up small changes in , over the interval .  More generally, the integral can be thought of as summing up the products and a small change in , over .   Physically, this can be thought of as a quantity distributed along the -axis between and , with line density at each point , and finding the total quantity by summing up, over , the products,   In a similar way,   Double integrals can be thought of as summing up the products of function values and small pieces of area , over the region .  Triple integrals can be thought of as summing up the products of function values and small pieces of volume , over the region .   In fact, to be consistent with the double and triple integral notation, we could write as , where is the interval of integration .  All integrals share the theme of being a sum, over a domain, of a product of a function with a small piece of that domain. Here, we will consider a line integral , which is an integral over a curve.    Line Integrals  Consider a mass distributed along a curve in the plane or 3-space, with mass density at each point along the curve. For example, a wire with varying mass density along its length. We want to find the total mass of the wire. To do this, we can find the sum, along the curve, of the product of the function value and a small segment of the curve.  Consider a curve in the plane, with parametrization , , and let be the density at each point . Partition the interval into . This partition divides the curve into small arcs (or subarcs ). On each arc, choose a sample point and let denote the arc length of the th piece, where .     Then, the mass of the th piece of the wire is approximately,   Then, the total mass of the wire is approximated by the sum of all the pieces,   This is a Riemann sum of with respect to arc length, so as (and the maximum ), the sum intuitively approaches the exact mass of the wire.   Line Integral   The line integral of along is given by,     If is the linear mass density (mass per unit length), then,   More generally, a line integral can represent any quantity distributed along a curve, with density at each point. For example,   Total charge along a wire with charge density  Total amount of some substance distributed along a curve with density .    Sometimes, we use the more compact notations for a line integral,     Recall that a curve is smooth if it has a parametrization such that is continuous and for all in the interval of parametrization.    If is piecewise smooth, and is continuous on , then the line integral will exist, and will be equal to the sum of the line integrals along each smooth arc.   If is a closed curve, then the line integral is often written with a circle on the integral sign, as   This is just for emphasis, and does not change the meaning of the integral.  Line integrals are actually better described as curve integrals , because they are integrals over a curve, which is not necessarily a line.    Geometric Interpretation of Line Integral  The line integral also has a geometric interpretation: it is the area of the vertical, curtain-like surface between the curve in the -plane and the curve above it. Intuitively, imagine a vertical wall or fence standing on the curve , whose height at each point is . The line integral gives the total area of one side of this wall. It's like a lateral surface area.     Each thin vertical strip of the curtain has approximate area (height times width). Summing all the strips and taking the limit gives the line integral .  This works as long as , otherwise the line integral can be thought of as a signed area (similar to the regular definite integral).  Here is a Desmos link, where you can visualize the line integral as a curtain, for any function and any curve: Line Integral Visualization .    Evaluating Line Integrals  The line integral of along is not a typical integral, because the variable of integration is the arc length parameter . To evaluate it, we need to express in terms of a parametrization of the curve.  Let be a curve with parametrization , .  Recall that the arc length of the curve is given by,   In particular, the arc length element is related to by,   In a similar way, the line integral of over can be expressed in terms of the parameter .    Let the density function be continuous on . Then, the line integral of over is given by,     From this perspective, arc length is a special case of the more general line integral. If the density function is , the line integral reduces to the arc length of the curve. All of this works as long as is smooth, or at least piecewise smooth, and is continuous on .   In fact, the value of the line integral is independent of the parametrization of , and its orientation. In other words, even if we traverse the curve in the opposite direction, the line integral will have the same value. This is unlike the standard , where reversing the limits of integration changes the sign of the integral. This is because the line integral is a sum of products of function values and arc length elements, and the arc length element is always positive, regardless of the direction of traversal.    The line integral is a generalization of the regular definite integral. In the special case where is the -axis from to , it can be parameterized by for , so . Then, the integral becomes,   This is just the usual definite integral of from to (labeling as ).   When setting up a line integral, often the most difficult part is finding a parametrization of the curve .    Line Integrals in Space  Line integrals can be extended to curves in 3-space. Again, consider a mass distributed along a curve in 3-space (like a wire), with mass density at each point . Then, the total mass of the wire can be found by summing up, along the curve, the products of the density and small segments of the curve. Let have parametrization , . Then,   Similarly, to evaluate this integral,   The integrals in the plane and in space can both be written in the compact form with vector notation,     Examples   True or False  Determine whether each statement is true or false.  If a curve has a parametric description , where is the arc length, then True    Line Integrals Along Given Paths ( )  Evaluate the line integral along the given path .  , ,  , where is the quarter-circle ,  , ,  , where is the line segment ,  , where is the unit circle ,  , where is the line segment ,  , where is the curve ,  , where is the curve ,  , where is the curve ,  , ,  , ,  , where is the curve , , for  Find the line integral of along the curve ,    Line Integrals in 3D ( )  Evaluate each line integral along the given path .  , ,  , ,  , where is the helix ,  , where is the circle ,  , where is the line segment from to  , where is parametrized by ,  , where is the straight-line segment , , , from to  , where is the straight-line segment , , , from to  along the curve ,  along the curve ,  over the straight-line segment from to  over the curve ,  , where is parametrized by ,  , ,  , ,  , where is the curve ,  , where is the semicircle ,  , where is parametrized by ,    Two Paths for ( )  Evaluate , where is  the straight-line segment , , from to  the parabolic curve , , from to    Line Integrals on Various Curves ( )  Evaluate each line integral, where is the given curve.  , where is the line segment from the origin to  , is the right half of the circle  , is the line segment from to  , is the arc of the curve from to  , where is the circle of radius 4 centered at  , where is the portion of the ellipse in the first quadrant, oriented counterclockwise    Integrating Functions Over Curves ( )  Integrate over the given curve .  , ,  , from to  , in the first quadrant from to  , in the first quadrant from to  Find the line integral of along the curve ,    Two Paths for ( )  Evaluate , where is  the straight-line segment , , from to  , where is the line segment from to and is the line segment from to    Scalar Line Integrals ( )  Evaluate each scalar line integral.  , where is the line segment from to  , where is the line segment from to  , where is the curve ,  , where is the line segment from to followed by the line segment from to  , where is the line segment from to  , where is the line segment from to followed by the line segment from to  , is the line segment from to  , is the line segment from to    for Various Paths ( )  Evaluate for each path .  : line segment from to ,  : line segment from to ,  : counterclockwise around the circle from to ,  : counterclockwise around the circle from to ,    for Various Paths ( )  Evaluate for each path .  : line segments from to and to , ; ,  : line segments from to and to , ; ,  : counterclockwise around the triangle with vertices , , and , ; , ; ,  : counterclockwise around the square with vertices , , , and , ; , ; , ; ,    Triangular Path in 3D ( )   Evaluate for the path shown in the figure.      Use the three line segments , , ; , ; , .     Triangular Path in 3D, Part 2 ( )   Evaluate for the path shown in the figure.      Use the three line segments , , ; , ; , .     Piecewise Path ( )   Integrate over the path followed by from to , where , , and , .      Use .     Piecewise Path ( )   Integrate over the path followed by followed by from to , where , , , , and , .      Use .     Closed Curve with Parabola and Line ( )   Evaluate , where is given in the accompanying figure.      Add the integrals over the line segment and the parabola .      Advanced Examples   Integral Over a Diagonal Line ( )  Integrate over the path ,     Integral Over a Circle in the -Plane ( )  Integrate over the circle ,     Integral Over a Square Path ( )   Evaluate , where is given in the accompanying figure.      Split the square into its four sides and add the four scalar line integrals.     Technology-Assisted Line Integrals ( )  Evaluate each line integral with respect to arc length, using technology.  , where has parametric equations , , ,  , where has parametric equations , , ,  , where has parametric equations , , ,  , where is the curve with parametric equations , , ,     Applications: Mass, Center of Mass, and Area   Mass of a Spring  Find the total mass of a spring with density in the shape of the circular helix , .      Mass of a Helix Spring  Find the total mass of a spring in the shape of the helix , , with density     Mass of a Wire  Find the total mass of the wire with density whose shape is modeled by .  , ,  , ,  , , ( )  , , ( )  , ,    Mass and Center of Mass  Find the mass and center of mass of each wire.  A thin wire is bent into the shape of a semicircle , . If the linear density is a constant , find the mass and center of mass of the wire , center of mass  A thin wire has the shape of the first-quadrant part of the circle with center at the origin and radius . If the density function is , find the mass and center of mass of the wire , center of mass  Find the mass and center of mass of a wire in the shape of the helix , , , , if the density at any point is equal to the square of the distance from the origin , center of mass    Center of Mass Formulas   Write the formulas for the center of mass of a thin wire in the shape of a space curve if the wire has density function , , ,  Find the center of mass of a wire in the shape of the helix , , , , if the density is a constant    Painting a Circular Fence  The base of a circular fence with radius 10 m is given by , . The height of the fence at position is given by the function , so the height varies from 3 m to 5 m. Suppose that 1 L of paint covers 100 m . Sketch the fence and determine how much paint is required to paint both sides of the fence.  Total area m , so the paint required is L L.    Area of a Winding Wall  Find the area of one side of the winding wall standing perpendicularly on the curve , , and beneath the curve on the surface     Area of a Wall  Find the area of one side of the wall standing perpendicularly on the curve , , and beneath the curve on the surface     Mass of a Wire (1)  Find the mass of a wire that lies along the curve , , if the density is     Mass of a Wire (2)  Find the mass of a thin wire lying along the curve , , if the density is     Mass of a Wire (3)  Find the mass of the same wire if the density is     Center of Mass of a Wire   A wire of density lies along the curve , . Find its center of mass. Then sketch the curve and center of mass together.      Here , , , and .  The center of mass is .    Center of Mass with Variable Density  Find the center of mass of a thin wire lying along the curve , , if the density is  Since , we get .     Line Integral with and  Evaluate , where is the parabola from the origin to     "
+},
+{
+  "id": "def-line-integral",
+  "level": "2",
+  "url": "sec-line-integrals.html#def-line-integral",
+  "type": "Definition",
+  "number": "10.1.1",
+  "title": "Line Integral.",
+  "body": " Line Integral   The line integral of along is given by,    "
+},
+{
+  "id": "subsec-line-integrals-definition-15",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-definition-15",
+  "type": "Remark",
+  "number": "10.1.2",
+  "title": "",
+  "body": " Sometimes, we use the more compact notations for a line integral,   "
+},
+{
+  "id": "subsec-line-integrals-definition-16",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-definition-16",
+  "type": "Remark",
+  "number": "10.1.3",
+  "title": "",
+  "body": " Recall that a curve is smooth if it has a parametrization such that is continuous and for all in the interval of parametrization.  "
+},
+{
+  "id": "subsec-line-integrals-definition-17",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-definition-17",
+  "type": "Remark",
+  "number": "10.1.4",
+  "title": "",
+  "body": " If is piecewise smooth, and is continuous on , then the line integral will exist, and will be equal to the sum of the line integrals along each smooth arc.  "
+},
+{
+  "id": "thm-evaluating-line-integrals",
+  "level": "2",
+  "url": "sec-line-integrals.html#thm-evaluating-line-integrals",
+  "type": "Theorem",
+  "number": "10.1.5",
+  "title": "",
+  "body": "  Let the density function be continuous on . Then, the line integral of over is given by,    "
+},
+{
+  "id": "subsec-evaluating-line-integrals-11",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-evaluating-line-integrals-11",
+  "type": "Remark",
+  "number": "10.1.6",
+  "title": "",
+  "body": " In fact, the value of the line integral is independent of the parametrization of , and its orientation. In other words, even if we traverse the curve in the opposite direction, the line integral will have the same value. This is unlike the standard , where reversing the limits of integration changes the sign of the integral. This is because the line integral is a sum of products of function values and arc length elements, and the arc length element is always positive, regardless of the direction of traversal.  "
+},
+{
+  "id": "subsec-evaluating-line-integrals-12",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-evaluating-line-integrals-12",
+  "type": "Remark",
+  "number": "10.1.7",
+  "title": "",
+  "body": " The line integral is a generalization of the regular definite integral. In the special case where is the -axis from to , it can be parameterized by for , so . Then, the integral becomes,   This is just the usual definite integral of from to (labeling as ).  "
+},
+{
+  "id": "subsec-line-integrals-examples-2",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-2",
+  "type": "Checkpoint",
+  "number": "10.1.8",
+  "title": "True or False.",
+  "body": " True or False  Determine whether each statement is true or false.  If a curve has a parametric description , where is the arc length, then True  "
+},
+{
+  "id": "subsec-line-integrals-examples-3",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-3",
+  "type": "Exercise Group",
+  "number": "10.1.1",
+  "title": "Line Integrals Along Given Paths (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " Line Integrals Along Given Paths ( )  Evaluate the line integral along the given path .  , ,  , where is the quarter-circle ,  , ,  , where is the line segment ,  , where is the unit circle ,  , where is the line segment ,  , where is the curve ,  , where is the curve ,  , where is the curve ,  , ,  , ,  , where is the curve , , for  Find the line integral of along the curve ,  "
+},
+{
+  "id": "subsec-line-integrals-examples-4",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-4",
+  "type": "Exercise Group",
+  "number": "10.1.2",
+  "title": "Line Integrals in 3D (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Line Integrals in 3D ( )  Evaluate each line integral along the given path .  , ,  , ,  , where is the helix ,  , where is the circle ,  , where is the line segment from to  , where is parametrized by ,  , where is the straight-line segment , , , from to  , where is the straight-line segment , , , from to  along the curve ,  along the curve ,  over the straight-line segment from to  over the curve ,  , where is parametrized by ,  , ,  , ,  , where is the curve ,  , where is the semicircle ,  , where is parametrized by ,  "
+},
+{
+  "id": "subsec-line-integrals-examples-5",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-5",
+  "type": "Checkpoint",
+  "number": "10.1.9",
+  "title": "Two Paths for <span class=\"process-math\">\\(\\int_C x\\,ds\\)<\/span> (<span class=\"process-math\">\\(\\star\\)<\/span>).",
+  "body": " Two Paths for ( )  Evaluate , where is  the straight-line segment , , from to  the parabolic curve , , from to  "
+},
+{
+  "id": "subsec-line-integrals-examples-6",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-6",
+  "type": "Exercise Group",
+  "number": "10.1.3",
+  "title": "Line Integrals on Various Curves (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Line Integrals on Various Curves ( )  Evaluate each line integral, where is the given curve.  , where is the line segment from the origin to  , is the right half of the circle  , is the line segment from to  , is the arc of the curve from to  , where is the circle of radius 4 centered at  , where is the portion of the ellipse in the first quadrant, oriented counterclockwise  "
+},
+{
+  "id": "subsec-line-integrals-examples-7",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-7",
+  "type": "Exercise Group",
+  "number": "10.1.4",
+  "title": "Integrating Functions Over Curves (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Integrating Functions Over Curves ( )  Integrate over the given curve .  , ,  , from to  , in the first quadrant from to  , in the first quadrant from to  Find the line integral of along the curve ,  "
+},
+{
+  "id": "subsec-line-integrals-examples-8",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-8",
+  "type": "Checkpoint",
+  "number": "10.1.10",
+  "title": "Two Paths for <span class=\"process-math\">\\(\\int_C \\sqrt{x+2y}\\,ds\\)<\/span> (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Two Paths for ( )  Evaluate , where is  the straight-line segment , , from to  , where is the line segment from to and is the line segment from to  "
+},
+{
+  "id": "subsec-line-integrals-examples-9",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-9",
+  "type": "Exercise Group",
+  "number": "10.1.5",
+  "title": "Scalar Line Integrals (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " Scalar Line Integrals ( )  Evaluate each scalar line integral.  , where is the line segment from to  , where is the line segment from to  , where is the curve ,  , where is the line segment from to followed by the line segment from to  , where is the line segment from to  , where is the line segment from to followed by the line segment from to  , is the line segment from to  , is the line segment from to  "
+},
+{
+  "id": "subsec-line-integrals-examples-10",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-10",
+  "type": "Exercise Group",
+  "number": "10.1.6",
+  "title": "<span class=\"process-math\">\\(\\int_C (x^2+y^2)\\,ds\\)<\/span> for Various Paths (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " for Various Paths ( )  Evaluate for each path .  : line segment from to ,  : line segment from to ,  : counterclockwise around the circle from to ,  : counterclockwise around the circle from to ,  "
+},
+{
+  "id": "subsec-line-integrals-examples-11",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-11",
+  "type": "Exercise Group",
+  "number": "10.1.7",
+  "title": "<span class=\"process-math\">\\(\\int_C \\brac{2x+3\\sqrt{y}}\\,ds\\)<\/span> for Various Paths (<span class=\"process-math\">\\(\\star\\star\\)<\/span>).",
+  "body": " for Various Paths ( )  Evaluate for each path .  : line segments from to and to , ; ,  : line segments from to and to , ; ,  : counterclockwise around the triangle with vertices , , and , ; , ; ,  : counterclockwise around the square with vertices , , , and , ; , ; , ; ,  "
+},
+{
+  "id": "subsec-line-integrals-examples-12",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-12",
+  "type": "Checkpoint",
+  "number": "10.1.11",
+  "title": "Triangular Path in 3D (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Triangular Path in 3D ( )   Evaluate for the path shown in the figure.      Use the three line segments , , ; , ; , .   "
+},
+{
+  "id": "subsec-line-integrals-examples-13",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-13",
+  "type": "Checkpoint",
+  "number": "10.1.12",
+  "title": "Triangular Path in 3D, Part 2 (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Triangular Path in 3D, Part 2 ( )   Evaluate for the path shown in the figure.      Use the three line segments , , ; , ; , .   "
+},
+{
+  "id": "subsec-line-integrals-examples-14",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-14",
+  "type": "Checkpoint",
+  "number": "10.1.13",
+  "title": "Piecewise Path <span class=\"process-math\">\\(C_1 \\cup C_2\\)<\/span> (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Piecewise Path ( )   Integrate over the path followed by from to , where , , and , .      Use .   "
+},
+{
+  "id": "subsec-line-integrals-examples-15",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-15",
+  "type": "Checkpoint",
+  "number": "10.1.14",
+  "title": "Piecewise Path <span class=\"process-math\">\\(C_1 \\cup C_2 \\cup C_3\\)<\/span> (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Piecewise Path ( )   Integrate over the path followed by followed by from to , where , , , , and , .      Use .   "
+},
+{
+  "id": "subsec-line-integrals-examples-16",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-examples-16",
+  "type": "Checkpoint",
+  "number": "10.1.15",
+  "title": "Closed Curve with Parabola and Line (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Closed Curve with Parabola and Line ( )   Evaluate , where is given in the accompanying figure.      Add the integrals over the line segment and the parabola .   "
+},
+{
+  "id": "subsec-line-integrals-advanced-2",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-advanced-2",
+  "type": "Checkpoint",
+  "number": "10.1.16",
+  "title": "Integral Over a Diagonal Line (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Integral Over a Diagonal Line ( )  Integrate over the path ,   "
+},
+{
+  "id": "subsec-line-integrals-advanced-3",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-advanced-3",
+  "type": "Checkpoint",
+  "number": "10.1.17",
+  "title": "Integral Over a Circle in the <span class=\"process-math\">\\(yz\\)<\/span>-Plane (<span class=\"process-math\">\\(\\star\\star\\star\\)<\/span>).",
+  "body": " Integral Over a Circle in the -Plane ( )  Integrate over the circle ,   "
+},
+{
+  "id": "subsec-line-integrals-advanced-4",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-advanced-4",
+  "type": "Checkpoint",
+  "number": "10.1.18",
+  "title": "Integral Over a Square Path (<span class=\"process-math\">\\(\\star\\star\\star\\star\\)<\/span>).",
+  "body": " Integral Over a Square Path ( )   Evaluate , where is given in the accompanying figure.      Split the square into its four sides and add the four scalar line integrals.   "
+},
+{
+  "id": "subsec-line-integrals-advanced-5",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-advanced-5",
+  "type": "Exercise Group",
+  "number": "10.1.8",
+  "title": "Technology-Assisted Line Integrals (<span class=\"process-math\">\\(\\star\\star\\star\\star\\)<\/span>).",
+  "body": " Technology-Assisted Line Integrals ( )  Evaluate each line integral with respect to arc length, using technology.  , where has parametric equations , , ,  , where has parametric equations , , ,  , where has parametric equations , , ,  , where is the curve with parametric equations , , ,  "
+},
+{
+  "id": "subsec-line-integrals-applications-2",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-2",
+  "type": "Exercise Group",
+  "number": "10.1.9",
+  "title": "Mass of a Spring.",
+  "body": " Mass of a Spring  Find the total mass of a spring with density in the shape of the circular helix , .    "
+},
+{
+  "id": "subsec-line-integrals-applications-3",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-3",
+  "type": "Checkpoint",
+  "number": "10.1.19",
+  "title": "Mass of a Helix Spring.",
+  "body": " Mass of a Helix Spring  Find the total mass of a spring in the shape of the helix , , with density   "
+},
+{
+  "id": "subsec-line-integrals-applications-4",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-4",
+  "type": "Exercise Group",
+  "number": "10.1.10",
+  "title": "Mass of a Wire.",
+  "body": " Mass of a Wire  Find the total mass of the wire with density whose shape is modeled by .  , ,  , ,  , , ( )  , , ( )  , ,  "
+},
+{
+  "id": "subsec-line-integrals-applications-5",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-5",
+  "type": "Exercise Group",
+  "number": "10.1.11",
+  "title": "Mass and Center of Mass.",
+  "body": " Mass and Center of Mass  Find the mass and center of mass of each wire.  A thin wire is bent into the shape of a semicircle , . If the linear density is a constant , find the mass and center of mass of the wire , center of mass  A thin wire has the shape of the first-quadrant part of the circle with center at the origin and radius . If the density function is , find the mass and center of mass of the wire , center of mass  Find the mass and center of mass of a wire in the shape of the helix , , , , if the density at any point is equal to the square of the distance from the origin , center of mass  "
+},
+{
+  "id": "subsec-line-integrals-applications-6",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-6",
+  "type": "Checkpoint",
+  "number": "10.1.20",
+  "title": "Center of Mass Formulas.",
+  "body": " Center of Mass Formulas   Write the formulas for the center of mass of a thin wire in the shape of a space curve if the wire has density function , , ,  Find the center of mass of a wire in the shape of the helix , , , , if the density is a constant  "
+},
+{
+  "id": "subsec-line-integrals-applications-7",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-7",
+  "type": "Checkpoint",
+  "number": "10.1.21",
+  "title": "Painting a Circular Fence.",
+  "body": " Painting a Circular Fence  The base of a circular fence with radius 10 m is given by , . The height of the fence at position is given by the function , so the height varies from 3 m to 5 m. Suppose that 1 L of paint covers 100 m . Sketch the fence and determine how much paint is required to paint both sides of the fence.  Total area m , so the paint required is L L.  "
+},
+{
+  "id": "subsec-line-integrals-applications-8",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-8",
+  "type": "Checkpoint",
+  "number": "10.1.22",
+  "title": "Area of a Winding Wall.",
+  "body": " Area of a Winding Wall  Find the area of one side of the winding wall standing perpendicularly on the curve , , and beneath the curve on the surface   "
+},
+{
+  "id": "subsec-line-integrals-applications-9",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-9",
+  "type": "Checkpoint",
+  "number": "10.1.23",
+  "title": "Area of a Wall.",
+  "body": " Area of a Wall  Find the area of one side of the wall standing perpendicularly on the curve , , and beneath the curve on the surface   "
+},
+{
+  "id": "subsec-line-integrals-applications-10",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-10",
+  "type": "Checkpoint",
+  "number": "10.1.24",
+  "title": "Mass of a Wire (1).",
+  "body": " Mass of a Wire (1)  Find the mass of a wire that lies along the curve , , if the density is   "
+},
+{
+  "id": "subsec-line-integrals-applications-11",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-11",
+  "type": "Checkpoint",
+  "number": "10.1.25",
+  "title": "Mass of a Wire (2).",
+  "body": " Mass of a Wire (2)  Find the mass of a thin wire lying along the curve , , if the density is   "
+},
+{
+  "id": "subsec-line-integrals-applications-12",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-12",
+  "type": "Checkpoint",
+  "number": "10.1.26",
+  "title": "Mass of a Wire (3).",
+  "body": " Mass of a Wire (3)  Find the mass of the same wire if the density is   "
+},
+{
+  "id": "subsec-line-integrals-applications-13",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-13",
+  "type": "Checkpoint",
+  "number": "10.1.27",
+  "title": "Center of Mass of a Wire.",
+  "body": " Center of Mass of a Wire   A wire of density lies along the curve , . Find its center of mass. Then sketch the curve and center of mass together.      Here , , , and .  The center of mass is .  "
+},
+{
+  "id": "subsec-line-integrals-applications-14",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-14",
+  "type": "Checkpoint",
+  "number": "10.1.28",
+  "title": "Center of Mass with Variable Density.",
+  "body": " Center of Mass with Variable Density  Find the center of mass of a thin wire lying along the curve , , if the density is  Since , we get .   "
+},
+{
+  "id": "subsec-line-integrals-applications-15",
+  "level": "2",
+  "url": "sec-line-integrals.html#subsec-line-integrals-applications-15",
+  "type": "Checkpoint",
+  "number": "10.1.29",
+  "title": "Line Integral with <span class=\"process-math\">\\(dx\\)<\/span> and <span class=\"process-math\">\\(dy\\)<\/span>.",
+  "body": " Line Integral with and  Evaluate , where is the parabola from the origin to   "
 }
 ]
 

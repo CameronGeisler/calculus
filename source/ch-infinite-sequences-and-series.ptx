@@ -8,6 +8,8 @@
   </introduction>
 
   <!-- include sections -->
+  <xi:include href="sec-nth-term-test.ptx"/>
+  <xi:include href="sec-telescoping-series.ptx"/>
   <xi:include href="sec-summary-of-series.ptx"/>
   <xi:include href="sec-series-review.ptx"/>
 

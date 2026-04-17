@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-nth-term-test" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>nth Term Test for Divergence</title>
+
+  <introduction>
+    <p>
+      Geometric series and telescoping series are the 2 main examples of series that we can find their sums exactly. However, for most series, we cannot find their sums exactly, and we need to use tests to determine whether they converge or diverge.
+    </p>
+    <p>
+      This first test we will learn basically says that if the terms of a series do not eventually become small, then the series cannot converge.
+    </p>
+
+    <theorem>
+      <title>Limit of the nth term of a convergent series</title>
+      <statement><p>If the series <m>\sum a_n</m> converges, then <m>\lim_{n \to \infty} a_n = 0</m>.</p></statement>
+    </theorem>
+
+    <theorem>
+      <title>nth Term Test for Divergence</title>
+      <statement><p>If <m>\lim_{n \to \infty} a_n \neq 0</m> (or does not exist), then the series <m>\sum a_n</m> diverges.</p></statement>
+    </theorem>
+
+    <p>
+      Intuitively, for a series to converge, recall that its partial sums must approach a single number. This can only happen if the numbers you're adding eventually become smaller and smaller, so they change the sum by less and less. If the terms do not become small, then the partial sums can't approach a limit, and the series diverges.
+    </p>
+
+    <sidebyside widths="48% 48%">
+      <image>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.85]
+            % Axes
+            \draw[-&gt;] (0,0) -- (7,0) node[below] {$n$};
+            \draw[-&gt;] (0,0) -- (0,4.5) node[left] {$s_n$};
+            % Limit line
+            \draw[dashed, gray] (0,4) -- (7,4) node[right] {$L$};
+            % L-shaped steps (horizontal then vertical)
+            \draw[-&gt;, thin, gray!70] (1,1) -- (2,1);
+            \draw[-&gt;, thin, gray!70] (2,1) -- (2,2);
+            \draw[-&gt;, thin, gray!70] (2,2) -- (3,2);
+            \draw[-&gt;, thin, gray!70] (3,2) -- (3,2.75);
+            \draw[-&gt;, thin, gray!70] (3,2.75) -- (4,2.75);
+            \draw[-&gt;, thin, gray!70] (4,2.75) -- (4,3.25);
+            \draw[-&gt;, thin, gray!70] (4,3.25) -- (5,3.25);
+            \draw[-&gt;, thin, gray!70] (5,3.25) -- (5,3.55);
+            \draw[-&gt;, thin, gray!70] (5,3.55) -- (6,3.55);
+            \draw[-&gt;, thin, gray!70] (6,3.55) -- (6,3.75);
+            % Brace labels for vertical steps
+            \draw[decorate, decoration={brace, mirror, amplitude=3pt}] (2.1,1) -- (2.1,2) node[midway, right=3pt] {\footnotesize $a_2$};
+            \draw[decorate, decoration={brace, mirror, amplitude=3pt}] (3.1,2) -- (3.1,2.75) node[midway, right=3pt] {\footnotesize $a_3$};
+            \draw[decorate, decoration={brace, mirror, amplitude=2pt}] (4.1,2.75) -- (4.1,3.25) node[midway, right=3pt] {\footnotesize $a_4$};
+            % Dots
+            \foreach \x/\y in {1/1, 2/2, 3/2.75, 4/3.25, 5/3.55, 6/3.75} {
+                \fill (\x,\y) circle (2.5pt);
+            }
+            % Title
+            \node[below] at (3.5,-0.5) {Convergent: terms get smaller and smaller};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+      <image>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.85]
+            % Axes
+            \draw[-&gt;] (0,0) -- (7,0) node[below] {$n$};
+            \draw[-&gt;] (0,0) -- (0,4.5) node[left] {$s_n$};
+            % L-shaped steps
+            \draw[-&gt;, thin, gray!70] (1,0.5) -- (2,0.5);
+            \draw[-&gt;, thin, gray!70] (2,0.5) -- (2,1.05);
+            \draw[-&gt;, thin, gray!70] (2,1.05) -- (3,1.05);
+            \draw[-&gt;, thin, gray!70] (3,1.05) -- (3,1.55);
+            \draw[-&gt;, thin, gray!70] (3,1.55) -- (4,1.55);
+            \draw[-&gt;, thin, gray!70] (4,1.55) -- (4,2.1);
+            \draw[-&gt;, thin, gray!70] (4,2.1) -- (5,2.1);
+            \draw[-&gt;, thin, gray!70] (5,2.1) -- (5,2.6);
+            \draw[-&gt;, thin, gray!70] (5,2.6) -- (6,2.6);
+            \draw[-&gt;, thin, gray!70] (6,2.6) -- (6,3.15);
+            % Brace labels for vertical steps
+            \draw[decorate, decoration={brace, mirror, amplitude=3pt}] (2.1,0.5) -- (2.1,1.05) node[midway, right=3pt] {\footnotesize $a_2$};
+            \draw[decorate, decoration={brace, mirror, amplitude=3pt}] (3.1,1.05) -- (3.1,1.55) node[midway, right=3pt] {\footnotesize $a_3$};
+            \draw[decorate, decoration={brace, mirror, amplitude=3pt}] (4.1,1.55) -- (4.1,2.1) node[midway, right=3pt] {\footnotesize $a_4$};
+            % Dots
+            \foreach \x/\y in {1/0.5, 2/1.05, 3/1.55, 4/2.1, 5/2.6, 6/3.15} {
+                \fill (\x,\y) circle (2.5pt);
+            }
+            % Title
+            \node[below] at (3.5,-0.5) {Divergent: terms don't get smaller};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+
+    <example>
+      <title>Divergence of n/(2n+1)</title>
+      <p>
+        Consider the series,
+      </p>
+      <me>
+        \sum_{n=1}^{\infty} \frac{n}{2n + 1}
+      </me>
+      <p>
+        The terms do not approach zero, because,
+      </p>
+      <me>
+        \lim_{n \to \infty} \frac{n}{2n + 1} = \frac{1}{2} \neq 0
+      </me>
+      <p>
+        Therefore, by the <m>n</m>th term test, the series diverges. Intuitively, consider its partial sums: <url href="https://www.desmos.com/calculator/ydvvfpkrwq">Partial Sums of <m>\sum_{n=1}^{\infty} \frac{n}{2n + 1}</m></url>. Notice that the partial sums grow and grow, and don't approach a single number. Intuitively, since the terms approach <m>\frac{1}{2}</m>, the series is like adding a number close to <m>\frac{1}{2}</m> over and over again. Therefore, the series is going to diverge.
+      </p>
+    </example>
+
+    <example>
+      <title>Oscillating Series</title>
+      <p>
+        Consider the series,
+      </p>
+      <me>
+        \sum_{n=1}^{\infty} (-1)^{n+1} = 1 - 1 + 1 - 1 + \dots
+      </me>
+      <p>
+        This series diverges, because its partial sums will be,
+      </p>
+      <me>
+        1, 0, 1, 0, 1, 0, \dots
+      </me>
+      <p>
+        After we add 1, the sum becomes 1, and after we add -1, the sum becomes 0, and so on. In particular, we could say that the partial sums are given by,
+      </p>
+      <me>
+        s_n = \begin{cases} 1 \amp \text{$n$ is odd} \\ 0 \amp \text{$n$ is even} \end{cases}
+      </me>
+      <p>
+        The limit of the partial sums as <m>n \to \infty</m> does not exist, and therefore the sum diverges. Alternatively, we can use the <m>n</m>th term test. The limit <m>\lim_{n \to \infty} (-1)^{n+1}</m> does not exist, and so by the <m>n</m>th term test, the series diverges.
+      </p>
+    </example>
+
+    <example>
+      <title>Divergence of n^2/(n^2-1)</title>
+      <p>
+        Consider the series,
+      </p>
+      <me>
+        \sum_{n=2}^{\infty} \frac{n^2}{n^2 - 1}
+      </me>
+      <p>
+        As <m>n \to \infty</m>, <m>\frac{n^2}{n^2 - 1} \to 1</m>, and so by the <m>n</m>th term test, the series diverges.
+      </p>
+    </example>
+
+    <example>
+      <title>Divergence of cos(2/n)</title>
+      <p>
+        Consider the series
+      </p>
+      <me>
+        \sum_{n=1}^{\infty} \cos{\brac{\frac{2}{n}}}
+      </me>
+      <p>
+        We have
+      </p>
+      <md>
+        <mrow>\lim_{n \to \infty} \cos{\underbrace{\brac{\frac{2}{n}}}_{\to 0}} \amp= \cos{0}</mrow>
+        <mrow>\amp= 1 \neq 0</mrow>
+      </md>
+      <p>
+        Therefore, by the <m>n</m>th term test, the series diverges.
+      </p>
+    </example>
+
+    <p>
+      In summary,
+    </p>
+
+    <me>
+      \boxed{\text{If the terms don't approach 0, then the series diverges}}
+    </me>
+
+    <p>
+      In fact, the reverse direction (the converse) of this statement is not true, in that if the terms of a sequence become small (<m>\lim_{n \to \infty} a_n = 0</m>), it is not necessarily true that the <em>series</em> always converges. In other words, if the terms eventually become small, the <m>n</m>th term test is inconclusive.
+    </p>
+
+    <remark>
+      <p>The <term>nth term test</term> is also sometimes called the <term>divergence test</term>, because it can only be used to show a series diverges.</p>
+    </remark>
+  </introduction>
+
+  <subsection xml:id="subsec-harmonic-series">
+    <title>Harmonic Series</title>
+
+    <definition>
+      <title>Harmonic Series</title>
+      <statement>
+        <p>
+          The <term>harmonic series</term>, is the sum of the reciprocals of the natural numbers,
+        </p>
+        <me>
+          \sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \dots
+        </me>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>This series is called the harmonic series, because it is related to the harmonics of a vibrating string. The <m>n</m>th harmonic of a vibrating string is the frequency that is <m>n</m> times the fundamental frequency, and the amplitude of the <m>n</m>th harmonic is proportional to <m>\frac{1}{n}</m>.</p>
+    </remark>
+
+    <p>
+      In fact, the harmonic series diverges, even though its terms become small. Intuitively, consider its partial sums: <url href="https://www.desmos.com/calculator/lebo8fdyi3">Partial Sums of the Harmonic Series up to <m>N=200</m> terms</url>. Notice that the partial sums grow and grow, even if they grow slowly. You might recognize the pattern of partial sums looks like a logarithmic function (like <m>\ln{x}</m>), and indeed, the <m>n</m>th partial sum of the harmonic series is approximately <m>\ln{n}</m>, which goes to infinity as <m>n \to \infty</m>. Therefore, the harmonic series diverges.
+    </p>
+
+    <p>
+      In summary,
+    </p>
+
+    <me>
+      \boxed{\text{If } \lim_{n \to \infty} a_n = 0 \text{, then the } n \text{th term test is inconclusive}}
+    </me>
+
+    <example>
+      <title>Inconclusive Test for n/(n^2+1)</title>
+      <p>
+        Consider the series,
+      </p>
+      <me>
+        \sum_{n=1}^{\infty}\frac{n}{n^2+1}
+      </me>
+      <p>
+        As <m>n \to \infty</m>, <m>\frac{n}{n^2+1} \to 0</m>, and so by the <m>n</m>th term test, the test is inconclusive. In fact, this series diverges (we will see how to show this later on).
+      </p>
+    </example>
+
+    <example>
+      <title>Divergence of ln(1/n)</title>
+      <p>
+        Consider the series,
+      </p>
+      <me>
+        \sum_{n=1}^{\infty} \ln{\brac{\frac{1}{n}}}
+      </me>
+      <p>
+        As <m>n \to \infty</m>, <m>\frac{1}{n} \to 0+</m>, and so <m>\ln{(\frac{1}{n})} \to -\infty</m>, which is not 0. Therefore, by the <m>n</m>th term test, the series diverges.
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-nth-term-examples">
+    <title>Examples</title>
+
+    <project>
+      <title>nth Term Test (&#x2605;)</title>
+      <introduction><p>Use the <m>n</m>th term test to determine if each series diverges, or if the test is inconclusive.</p></introduction>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \frac{n}{n+1}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{n}{n+1} = 1 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty} \frac{6n^3}{4n^3 + 3}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{6n^3}{4n^3 + 3} = \frac{3}{2} \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty} \frac{5n^4}{6n^4 + 6}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{5n^4}{6n^4 + 6} = \frac{5}{6} \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\frac{n^3}{n^3+1}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{n^3}{n^3+1} = 1 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=0}^{\infty}\frac{1}{1000+n}</m></p></statement><answer><p>Inconclusive, because <m>\lim_{n \to \infty} \frac{1}{1000+n} = 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=4}^{\infty} \frac{e^n}{n^9}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{e^n}{n^9} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=2}^{\infty}\frac{n}{\ln n}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{n}{\ln n} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \frac{2^n}{n+1}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{2^n}{n+1} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \frac{n}{\sqrt{n^2+1}}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{n}{\sqrt{n^2+1}} = 1 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=4}^{\infty}\ln\frac{n}{2}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \ln\frac{n}{2} = \infty \neq 0</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>nth Term Test (&#x2605;&#x2605;)</title>
+      <introduction><p>Use the <m>n</m>th term test to determine if each series diverges, or if the test is inconclusive.</p></introduction>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\frac{\sqrt{n^2+1}}{n}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{\sqrt{n^2+1}}{n} = 1 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\frac{n}{\sqrt{3n^2+3}}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{n}{\sqrt{3n^2+3}} = \frac{1}{\sqrt{3}} \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=2}^\infty \frac{\sqrt{n}}{\ln n}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{\sqrt{n}}{\ln n} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=2}^{\infty}\frac{\sqrt{n}}{\ln^{10}n}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{\sqrt{n}}{\ln^{10}n} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \frac{3^n}{n^2+1}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{3^n}{n^2+1} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \frac{5^n}{4^n+3}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{5^n}{4^n+3} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\frac{4^{n+1}}{3^n-2}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{4^{n+1}}{3^n-2} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\frac{1+4^n}{1+3^n}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{1+4^n}{1+3^n} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\frac{n+3^n}{n+2^n}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{n+3^n}{n+2^n} = \infty \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\frac{n^2}{2^n}</m></p></statement><answer><p>Inconclusive, because <m>\lim_{n \to \infty} \frac{n^2}{2^n} = 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \sqrt{\frac{n+1}{n}}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \sqrt{\frac{n+1}{n}} = 1 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \frac{e^n}{10+e^n}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{e^n}{10+e^n} = 1 \neq 0</m></p></answer></task>
+    </project>
+
+    <project>
+      <title>nth Term Test (&#x2605;&#x2605;&#x2605;)</title>
+      <introduction><p>Use the <m>n</m>th term test to determine if each series diverges, or if the test is inconclusive.</p></introduction>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \ln\brac{\frac{2n^6}{1+n^6}}</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \ln\brac{\frac{2n^6}{1+n^6}} = \ln 2 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \brac{1+\frac{1}{n}}^n</m></p></statement><answer><p>Diverges, because <m>\lim_{n \to \infty} \brac{1+\frac{1}{n}}^n = e \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\frac{n^3}{n!}</m></p></statement><answer><p>Inconclusive, because <m>\lim_{n \to \infty} \frac{n^3}{n!} = 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty \brac{\frac{n+6}{n}}^n</m></p></statement><hint><p>Rewrite as <m>\brac{1+\frac{6}{n}}^n</m> and use <m>\lim_{n\to\infty}\brac{1+\frac{a}{n}}^n=e^a</m>.</p></hint><answer><p>Diverges, because <m>\lim_{n \to \infty} \brac{\frac{n+6}{n}}^n = e^6 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty n\sin\frac{1}{n}</m></p></statement><hint><p>Rewrite as <m>\frac{\sin(1/n)}{1/n}</m> and use <m>\lim_{x\to 0}\frac{\sin x}{x}=1</m>.</p></hint><answer><p>Diverges, because <m>\lim_{n \to \infty} n\sin\frac{1}{n} = 1 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty} n^{1/n}</m></p></statement><hint><p>Recall that <m>n^{1/n} \to 1</m>.</p></hint><answer><p>Diverges, because <m>\lim_{n \to \infty} n^{1/n} = 1 \neq 0</m></p></answer></task>
+    </project>
+  </subsection>
+
+  <subsection xml:id="subsec-nth-term-advanced">
+    <title>Advanced Examples</title>
+
+    <project>
+      <title>Advanced Examples (&#x2605;&#x2605;&#x2605;&#x2605;)</title>
+      <introduction><p>Use the <m>n</m>th term test to determine if each series diverges, or if the test is inconclusive.</p></introduction>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^\infty n\tan\frac{1}{n}</m></p></statement><hint><p>Rewrite as <m>\frac{\tan(1/n)}{1/n}</m> and use <m>\lim_{x\to 0}\frac{\tan x}{x}=1</m>, or rewrite as <m>\frac{\sin{(1/n)}}{n \cdot \cos{(1/n)}}</m> and use <m>\lim_{x\to 0}\frac{\sin x}{x}=1</m>.</p></hint><answer><p>Diverges, because <m>\lim_{n \to \infty} n\tan\frac{1}{n} = 1 \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty} 2n \sin{\brac{\frac{2}{n}}}</m></p></statement><hint><p><m>\lim_{n \to \infty} 2n \sin{\brac{\frac{2}{n}}} = 4</m></p></hint><answer><p>Diverges</p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty}\brac{\frac{n}{n+10}}^n</m></p></statement><hint><p>Rewrite as <m>\brac{\frac{1}{1+10/n}}^n=\brac{1+\frac{10}{n}}^{-n}</m> and use <m>\lim_{n\to\infty}\brac{1+\frac{a}{n}}^n=e^a</m>.</p></hint><answer><p>Diverges, because <m>\lim_{n \to \infty} \brac{\frac{n}{n+10}}^n = e^{-10} \neq 0</m></p></answer></task>
+      <task><statement><p><m>\displaystyle\sum_{n=1}^{\infty} \frac{n^n}{n!}</m></p></statement><hint><p>The numerator has <m>n</m> factors of <m>n</m>, while the denominator has <m>n</m> factors decreasing from <m>n</m> to 1, so the top grows faster. Or, rewrite as <m>\frac{n}{n}\cdot\frac{n}{n-1}\cdot\frac{n}{n-2}\cdots\frac{n}{1}</m> and notice every factor is at least 1, so the terms do not approach 0.</p></hint><answer><p>Diverges, because <m>\lim_{n \to \infty} \frac{n^n}{n!} \neq 0</m></p></answer></task>
+    </project>
+  </subsection>
+
+</section>
